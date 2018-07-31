@@ -10,22 +10,30 @@ import {
 } from 'serverless-design-system/src';
 
 const FooterList = ({ header, listItems }) => (
-  <Box color="gray.3" width="20%">
-    <Box color="white" pt="15px">{header}</Box>
+  <Box color="gray.3" width={['50%', '50%', '20%', '20%', '20%']}>
+    <Box>
+      <P color="white" pt="15px" fontSize="14px" lineHeight="1.14" letterSpacing="0.6px">
+        {header}
+      </P>
+    </Box>
+    <Box>
     {
       listItems.map((listItem) => (
-        <Box pt="15px">
+        <P pt="15px" fontSize="14px" lineHeight="1.14" letterSpacing="0.6px">
           {listItem}
-        </Box>
+        </P>  
       ))
     }
+    </Box>
   </Box>
 );
 
 const CompanyDetails = () => (
   <Flex>
-    <Box width="50%">
-      <P>Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand</P>
+    <Box width={['100%', '100%', '50%', '50%', '50%']}>
+      <P fontSize="12px" lineHeight="1.33" opacity="0.5" mb="1rem">
+        Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
+      </P>
     </Box>
     <Flex display="flex" alignItems="center">
       <Box>
@@ -46,16 +54,18 @@ const FooterWrapper = () => (
   >
     <Flex
       display="flex"
-      width="66%"
-      px="15"
+      width="100%"
+      px="15px"
       m="auto"
+      flexWrap="wrap"
     >
       <Flex
-        width="65%"
+        width={['100%', '100%', '65%', '65%', '65%']}
       >
         <Flex
           display="flex"
-          direction="row"
+          flexWrap="wrap"
+          mb="40px"
         >
           <FooterList
             header="platform"
@@ -80,7 +90,7 @@ const FooterWrapper = () => (
         </Flex>
         <CompanyDetails />
       </Flex>
-      <Flex width="30%">
+      <Flex width={['100%', '100%', '35%', '35%', '35%']} order="1">
         <Flex color="white">
           <Box>
             Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise

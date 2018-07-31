@@ -31,17 +31,17 @@ const FooterList = ({ header, listItems }) => (
 const CompanyDetails = () => (
   <Flex>
     <Box width={['100%', '100%', '50%', '50%', '50%']}>
-      <P fontSize="12px" lineHeight="1.33" opacity="0.5" mb="1rem">
+      <P fontSize="12px" lineHeight="1.33" opacity="0.5" m="0px">
         Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
       </P>
     </Box>
-    <Flex display="flex" alignItems="center">
+    <Flex display="flex" alignItems="center"  pt="40px">
       <Box>
-        <P>Serverless, Inc. © 2018</P>
+        <P m="0px" fontSize="12px">Serverless, Inc. © 2018</P>
       </Box>
       <Flex color="gray.3" display="flex" ml="25px">
-        <Box ml="25px">terms of service</Box>
-        <Box ml="25px">privacy policy</Box>
+        <Box ml="25px" fontSize="12px">terms of service</Box>
+        <Box ml="25px" fontSize="12px">privacy policy</Box>
       </Flex>
     </Flex>
   </Flex>
@@ -51,6 +51,7 @@ const CompanyDetails = () => (
 const FooterWrapper = () => (
   <Flex
     bg="black"
+    py="100px"
   >
     <Flex
       display="flex"

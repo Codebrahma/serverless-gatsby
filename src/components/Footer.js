@@ -4,9 +4,11 @@ import {
   Flex,
   Box,
   Button,
+  Heading,
   Image,
   P,
-  TextField
+  TextField,
+  TextWithIcon,
 } from 'serverless-design-system/src';
 
 const FooterList = ({ header, listItems }) => (
@@ -46,21 +48,51 @@ const FooterList = ({ header, listItems }) => (
 
 const CompanyDetails = () => (
   <Flex>
-    <Box width={['100%', '100%', '50%', '50%', '50%']}>
-      <P fontSize="12px" lineHeight="1.33" opacity="0.5" m="0px">
+    <Box
+      width={['100%', '100%', '50%', '50%', '50%']}
+    >
+      <P
+        fontSize="12px"
+        lineHeight="1.33"
+        opacity="0.5"
+        m="0px"
+      >
         Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
       </P>
     </Box>
-    <Flex display="flex" alignItems="center"  pt="40px">
+    <Flex
+      display="flex"
+      alignItems="center"
+      pt="40px"
+    >
       <Box>
-        <P m="0px" fontSize="12px">Serverless, Inc. © 2018</P>
+        <P
+          m="0px"
+          fontSize="12px"
+        >
+          Serverless, Inc. © 2018
+        </P>
       </Box>
-      <Flex color="gray.3" display="flex" ml="25px">
-        <Box ml="25px" fontSize="12px">
+      <Flex
+        color="gray.3"
+        display="flex"
+        ml="25px"
+      >
+        <Box
+          ml="25px"
+          fontSize="12px"
+        >
           <P fontSize="12px">terms of service</P>
         </Box>
-        <Box ml="25px" fontSize="12px">
-          <P fontSize="12px">privacy policy</P>
+        <Box
+          ml="25px"
+          fontSize="12px"
+        >
+          <P
+            fontSize="12px"
+          >
+            privacy policy
+          </P>
         </Box>
       </Flex>
     </Flex>
@@ -80,6 +112,60 @@ const FooterWrapper = () => (
       flexWrap="wrap"
       maxWidth="1260px"
     >
+    <Flex
+      bg="serverlessRed"
+      width="100%"
+      display="flex"
+      position="relative"
+      flexDirection="row"
+      top="-240px"
+    >
+      <Box
+        width="50%"
+        px="100px"
+        py="150px"
+      >
+      <TextWithIcon
+        iconSrc='https://serverless.com/_/src/assets/images/rectangle-19.a57a9c80ca655ee1f532968ba2b68a6b.png'
+        iconHeight="100px"
+        iconWidth="150px"
+        iconTop="-60%"
+        right="90%"
+        color="white"
+      >
+        <Heading.h1 color="white">Next Steps</Heading.h1>
+        <P color="white">
+          Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.
+        </P>
+        <P color="white">
+          Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.
+        </P>
+      </TextWithIcon>
+      </Box>
+      <Box
+        width="50%"
+        px="100px"
+        py="150px"
+        display="flex"
+        flexDirection="row"
+        flexWrap="wrap"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Button secondary color="white" border="2px solid">use cases</Button>
+        <Button secondary color="white" border="2px solid">comparisions</Button>
+      </Box>
+    </Flex>
+    <Box
+      pt="20px"
+      pb="100px"
+      width="100%"
+    >
+      <Image
+        width="138px"
+        src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
+      />
+    </Box>
       <Flex
         width={['100%', '100%', '65%', '65%', '65%']}
         order={['2', '2', '1', '1', '1']}
@@ -87,7 +173,7 @@ const FooterWrapper = () => (
         <Flex
           display="flex"
           flexWrap="wrap"
-          px={'12px', '12px', '', '', ''}
+          px={['12px', '12px', '0', '0', '0']}
           mb="40px"
         >
           <FooterList

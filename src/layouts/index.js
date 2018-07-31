@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled, { ThemeProvider } from 'styled-components';
+import theme from 'serverless-design-system/src/theme';
 
-import Header from '../components/header'
+import { Flex } from 'serverless-design-system/src';
+
+import Footer from '../components/Footer'
 
 const Layout = ({ children, data }) => (
-  <div>
+  <Flex>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -13,18 +17,13 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
+    <ThemeProvider theme={theme}>
+      <Flex>
+        {children()}
+        <Footer />
+      </Flex>
+    </ThemeProvider>
+  </Flex>
 )
 
 Layout.propTypes = {

@@ -4,7 +4,7 @@ import TrustedClients from '../components/TrustedClient';
 import { Flex } from 'serverless-design-system/src';
 
 const IndexPage = () => (
-  <Flex>
+  <Flex width="100%">
     <TrustedClients />
   </Flex>
 )

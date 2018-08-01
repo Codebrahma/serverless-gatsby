@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { Box, Logo } from 'serverless-design-system/src'
-import Navbar from './navbar'
+import Navbar from './Navbar'
+import NavButton from './NavButton';
 
 export default () => (
   <Box
@@ -12,7 +13,10 @@ export default () => (
     top={0}
     zIndex='999'
     bg='black'
-    py={[2, 2, 0, 0, 0]}>
+    py={[2, 2, 0, 0, 0]}
+    maxHeight='100%'
+    oy='scroll'
+  >
     <Box
       px='15px'
       m='auto'
@@ -29,6 +33,7 @@ export default () => (
         width="170px"
         alt="Serverless"
       />
+      <NavButton />
       <Navbar />
     </Box>
   </Box>

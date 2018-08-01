@@ -86,7 +86,7 @@ const DeveloperDetailedMenu = () => (
         </ListItem>
       </List>
     </Box>
-    <Box width="50%" display="inline-block">
+    <Box width={["100%", "100%", "50%"]} display="inline-block">
       <TextWithIcon
         iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="24px"
         iconWidth="30px"
@@ -109,7 +109,7 @@ const DeveloperDetailedMenu = () => (
         </ListItem>
       </List>
     </Box>
-    <Box width="50%" display="inline-block">
+    <Box width={["100%", "100%", "50%"]} display="inline-block">
       <TextWithIcon
         iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="24px"
         iconWidth="30px"

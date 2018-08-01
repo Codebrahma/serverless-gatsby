@@ -7,10 +7,10 @@ const MenuDescription = ({ wrapperStyles, children }) => (
     px={4}
     pt={3}
     pb={4}
-    position='absolute'
+    position={['relative', 'relative', 'absolute']}
     zIndex='999'
-    top='90px'
-    left='-50%'
+    top={['0', '0', '90px']}
+    left={['0', '0', '-50%']}
     bg='black'
     minWidth='225px'
     {...wrapperStyles}

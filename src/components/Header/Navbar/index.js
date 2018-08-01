@@ -20,7 +20,7 @@ const NavListItem = styled(ListItem)`
 `;
 
 const Navbar = () => (
-  <Box>
+  <Box width={[ '100%', '100%', 'auto' ]}>
     <List m='0' p='0'>
       {
         MenuList.map((MenuItem, index) => (

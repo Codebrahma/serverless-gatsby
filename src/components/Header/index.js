@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import NavButton from './NavButton';
 
 class Header extends React.Component {
-  state = { isNavbarActive: true };
+  state = { isNavbarActive: false };
 
   toggleNavbarVisibility = () => this.setState({ isNavbarActive:  !this.state.isNavbarActive })
 

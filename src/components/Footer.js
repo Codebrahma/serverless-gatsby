@@ -244,7 +244,8 @@ const FooterListItems = () => (
 const FooterWrapper = () => (
   <Flex
     bg="black"
-    py="100px"
+    pt={['0px', '0px', '100px']}
+    pb="100px"
   >
     <Flex
       display={['flex', 'flex', 'flex', 'flex', 'flex']}

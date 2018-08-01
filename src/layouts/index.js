@@ -2,11 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components';
-import theme from 'serverless-design-system/src/theme';
 
+import theme from 'serverless-design-system/src/theme';
 import { Flex, Box } from 'serverless-design-system/src';
 
-import { Header, Footer } from '../components/';
+import { Header, Footer } from '../components';
+
+import './index.css';
 
 const Layout = ({ children, data }) => (
   <Flex>

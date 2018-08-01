@@ -247,7 +247,7 @@ const FooterWrapper = () => (
     py="100px"
   >
     <Flex
-      display={['block', 'block', 'flex', 'flex', 'flex']}
+      display={['flex', 'flex', 'flex', 'flex', 'flex']}
       px="20px"
       m="auto"
       flexWrap="wrap"

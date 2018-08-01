@@ -107,7 +107,7 @@ const NextSteps = () => (
     flexDirection="row"
     mx={['-20px', '-20px', '0', '0', '0']}
     position="relative"
-    top="-240px"
+    top={['0', '0', '-240px', '-240px', '-240px']}
   >
     <Box
       width={['100%', '100%', '50%', '50%', '50%']}
@@ -147,10 +147,10 @@ const Subscribe = () => (
     order={['1', '1', '2', '2', '2']}
     pl={['', '', '35px', '35px', '35px']}
   >
-    <Flex color="white" mb="40px">
-      <Box>
+    <Flex mb="40px">
+      <P color="white">
         Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
-      </Box>
+      </P>
     </Flex>
     <Flex
       display={['block', 'block', 'flex', 'flex', 'flex']}
@@ -194,12 +194,12 @@ const Subscribe = () => (
 
 const FooterIcon = () => (
   <Box
-    pt="20px"
-    pb="100px"
+    pt={['0', '0', '20px', '20px', '20px']}
+    pb={['30px', '30px', '100px', '100px', '100px']}
     width="100%"
   >
     <Image
-      width="138px"
+      width={['0', '0', '138px', '138px', '138px']}
       src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
     />
   </Box>

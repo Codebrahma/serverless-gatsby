@@ -45,7 +45,7 @@ const Layout = ({ children, data }) => (
           m="auto"
           flexWrap="wrap"
           maxWidth="1260px"
-          mb="300px"
+          mb={['35px', '35px', '300px', '300px', '300px']}
         >
           {children()}
         </Box>

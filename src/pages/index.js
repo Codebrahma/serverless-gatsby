@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
-import { P } from 'serverless-design-system/src';
+import TrustedClients from '../components/TrustedClient';
+import { Flex } from 'serverless-design-system/src';
 
 const IndexPage = () => (
-  <P>
-    Page
-  </P>
+  <Flex>
+    <TrustedClients />
+  </Flex>
 )
 
 export default IndexPage

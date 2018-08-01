@@ -14,7 +14,7 @@ import {
 const PlatformMenu = () => (
   <Box>
     <MenuTitle name={'platform'} />
-    <MenuDescription>
+    <MenuDescription wrapperStyles={{ minWidth: '320px' }}>
       <PlatformDetailedMenu />
     </MenuDescription>
   </Box>

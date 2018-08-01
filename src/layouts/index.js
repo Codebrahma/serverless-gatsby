@@ -4,12 +4,12 @@ import Helmet from 'react-helmet'
 import styled, { ThemeProvider } from 'styled-components';
 import theme from 'serverless-design-system/src/theme';
 
-import { Flex } from 'serverless-design-system/src';
+import { Flex, Box } from 'serverless-design-system/src';
 
 import Footer from '../components/Footer'
 
 const Layout = ({ children, data }) => (
-  <Flex>
+  <Flex mt="200px">
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -19,7 +19,16 @@ const Layout = ({ children, data }) => (
     />
     <ThemeProvider theme={theme}>
       <Flex>
-        {children()}
+        <Box
+          display={['block', 'block', 'flex', 'flex', 'flex']}
+          px="20px"
+          m="auto"
+          flexWrap="wrap"
+          maxWidth="1260px"
+          mb="300px"
+        >
+          {children()}
+        </Box>
         <Footer />
       </Flex>
     </ThemeProvider>

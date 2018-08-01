@@ -105,24 +105,39 @@ const NextSteps = () => (
     width={['', '', '100%', '100%', '100%']}
     display={['block', 'block', 'flex', 'flex', 'flex']}
     flexDirection="row"
-    py={['60px', '60px', '150px', '150px', '150px']}
-    px={['60px', '30px', '100px', '100px', '100px']}
     mx={['-20px', '-20px', '0', '0', '0']}
     position="relative"
     top="-240px"
-
   >
     <Box
       width={['100%', '100%', '50%', '50%', '50%']}
+      py={['60px', '60px', '150px', '150px', '150px']}
+      px={['30px', '30px', '100px', '100px', '100px']}
+      boxSizing="border-box"
+      justifyContent="center"
+      flexDirection="column"
     >
       <Heading.h2>Next Steps</Heading.h2>
       <P color="white">Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</P>
       <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
     </Box>
-    <Box
+    <Flex
       width={['100%', '100%', '50%', '50%', '50%']}
+      py={['60px', '60px', '150px', '150px', '150px']}
+      px={['30px', '30px', '100px', '100px', '100px']}
+      boxSizing="border-box"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      flexDirection="column"
     >
-    </Box>
+      <Box pb="25px">
+        <Button width="230px" border="2">use cases</Button>
+      </Box>
+      <Box>
+        <Button width="230px" border="2">comparision</Button>
+      </Box>
+    </Flex>
   </Flex>
 );
 

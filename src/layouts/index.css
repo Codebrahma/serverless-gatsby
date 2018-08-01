@@ -57,7 +57,7 @@ video {
 }
 
 body {
-  font-size: $fontSize;
+  font-size: 10px;
   font-family: Avenir, sans-serif;
 }
 h1, h2, h3 {

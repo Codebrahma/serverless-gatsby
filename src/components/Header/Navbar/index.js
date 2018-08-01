@@ -4,14 +4,9 @@ import styled from 'styled-components';
 import { Box, List, ListItem } from 'serverless-design-system/src';
 import MenuList from './Menu/List';
 
-const NavList = styled(List).attrs({ m: 0, p: 0 });
-
-console.log(styled(List));
-const NavListItem = styled(ListItem).attrs({
-  position: 'relative',
-  display: [ 'block', 'block', 'inline-block' ]
-})`
+const NavListItem = styled(ListItem)`
   list-style-type: none;
+  position: relative;
 
   div > div:nth-child(2) {
     display: none;
@@ -24,18 +19,19 @@ const NavListItem = styled(ListItem).attrs({
   }
 `;
 
-
 const Navbar = () => (
   <Box>
-    <NavList>
+    <List m='0' p='0'>
       {
         MenuList.map((MenuItem, index) => (
-          <NavListItem key={index}>
+          <NavListItem
+            key={index}
+            display={[ 'block', 'block', 'inline-block' ]}>
             <MenuItem />
           </NavListItem>
         ))
       }
-    </NavList>
+    </List>
   </Box>
 )
 

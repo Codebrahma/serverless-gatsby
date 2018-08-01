@@ -71,9 +71,10 @@ const DeveloperDetailedMenu = () => (
   <Box>
     <Box>
       <TextWithIcon
-        iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="24px"
-        iconWidth="30px"
+        iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="20px"
+        iconWidth="25px"
         iconTop="-5px"
+        iconLeft="-10px"
       >
         <Text.h4 m={0} p={0} color={'white'}>documentation</Text.h4>
       </TextWithIcon>
@@ -88,9 +89,10 @@ const DeveloperDetailedMenu = () => (
     </Box>
     <Box width={[1, 1, 1/2]} display="inline-block">
       <TextWithIcon
-        iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="24px"
-        iconWidth="30px"
+        iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="20px"
+        iconWidth="25px"
         iconTop="-5px"
+        iconLeft="-10px"
       >
         <Text.h4 m={0} p={0} color={'white'}>quick starts</Text.h4>
       </TextWithIcon>
@@ -111,9 +113,10 @@ const DeveloperDetailedMenu = () => (
     </Box>
     <Box width={[1, 1, 1/2]} display="inline-block">
       <TextWithIcon
-        iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="24px"
-        iconWidth="30px"
+        iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="20px"
+        iconWidth="25px"
         iconTop="-5px"
+        iconLeft="-10px"
       >
         <Text.h4 m={0} p={0} color={'white'}>example & guides</Text.h4>
       </TextWithIcon>

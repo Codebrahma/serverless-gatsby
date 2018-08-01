@@ -1,23 +1,20 @@
-# gatsby-starter-default
-The default Gatsby starter.
-
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
-
-## Install
+## Setup
 
 Make sure that you have the Gatsby CLI program installed:
 ```sh
 npm install --global gatsby-cli
 ```
 
-And run from your CLI:
+Clone the repo
 ```sh
-gatsby new gatsby-example-site
-```
-
-Then you can run it by:
-```sh
-cd gatsby-example-site
+git clone git@github.com:Codebrahma/serverless-gatsby.git
+cd serverless-gatsby
+git submodule update --init --recursive
+git checkout header
+npm install
+cd serverless-design-system
+npm install
+cd ..
 gatsby develop
 ```
 

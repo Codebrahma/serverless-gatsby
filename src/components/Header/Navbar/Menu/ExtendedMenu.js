@@ -67,6 +67,15 @@ const PlatformDetailedMenu = () => (
   </List>
 )
 
+const MenuText = ({ children }) => (
+  <Text.h6
+    fontSize={'1.76rem'}
+    color='#aaaaaa'
+  >
+    {children}
+  </Text.h6>
+);
+
 const DeveloperDetailedMenu = () => (
   <Box>
     <Box>
@@ -78,12 +87,12 @@ const DeveloperDetailedMenu = () => (
       >
         <Text.h4 m={0} p={0} color={'white'}>documentation</Text.h4>
       </TextWithIcon>
-      <List m='0' p='0'>
+      <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>framework</Text.h6>
+          <MenuText>framework</MenuText>
         </ListItem>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>platform</Text.h6>
+          <MenuText>platform</MenuText>
         </ListItem>
       </List>
     </Box>
@@ -96,18 +105,18 @@ const DeveloperDetailedMenu = () => (
       >
         <Text.h4 m={0} p={0} color={'white'}>quick starts</Text.h4>
       </TextWithIcon>
-      <List m='0' p='0'>
+      <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>aws</Text.h6>
+          <MenuText>aws</MenuText>
         </ListItem>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>azure</Text.h6>
+          <MenuText>azure</MenuText>
         </ListItem>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>google cloud</Text.h6>
+          <MenuText>google cloud</MenuText>
         </ListItem>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>others</Text.h6>
+          <MenuText>others</MenuText>
         </ListItem>
       </List>
     </Box>
@@ -120,18 +129,18 @@ const DeveloperDetailedMenu = () => (
       >
         <Text.h4 m={0} p={0} color={'white'}>example & guides</Text.h4>
       </TextWithIcon>
-      <List m='0' p='0'>
+      <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>api's</Text.h6>
+          <MenuText>api's</MenuText>
         </ListItem>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>cron jobs</Text.h6>
+          <MenuText>cron jobs</MenuText>
         </ListItem>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>webhooks</Text.h6>
+          <MenuText>webhooks</MenuText>
         </ListItem>
         <ListItem>
-          <Text.h6 color='white' fontSize='2'>event processing</Text.h6>
+          <MenuText>event processing</MenuText>
         </ListItem>
       </List>
     </Box>
@@ -141,13 +150,13 @@ const DeveloperDetailedMenu = () => (
 const LearnDetailedMenu = () => (
   <List m='0' p='0'>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>why?</Text.h6>
+      <MenuText>why?</MenuText>
     </ListItem>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>use cases</Text.h6>
+      <MenuText>use cases</MenuText>
     </ListItem>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>comparisons</Text.h6>
+      <MenuText>comparisons</MenuText>
     </ListItem>
   </List>
 );
@@ -155,19 +164,19 @@ const LearnDetailedMenu = () => (
 const ResourceDetailedMenu = () => (
   <List m='0' p='0'>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>blog</Text.h6>
+      <MenuText>blog</MenuText>
     </ListItem>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>forum</Text.h6>
+      <MenuText>forum</MenuText>
     </ListItem>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>meetups</Text.h6>
+      <MenuText>meetups</MenuText>
     </ListItem>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>slack</Text.h6>
+      <MenuText>slack</MenuText>
     </ListItem>
     <ListItem>
-      <Text.h6 color='white' fontSize='2'>workshops</Text.h6>
+      <MenuText>workshops</MenuText>
     </ListItem>
   </List>
 )

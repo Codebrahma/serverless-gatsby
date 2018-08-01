@@ -99,156 +99,150 @@ const CompanyDetails = () => (
   </Flex>
 );
 
-// TODO: Move this to molecule
+const NextSteps = () => (
+  <Flex
+    bg="serverlessRed"
+    width={['', '', '100%', '100%', '100%']}
+    display={['block', 'block', 'flex', 'flex', 'flex']}
+    flexDirection="row"
+    py={['60px', '60px', '150px', '150px', '150px']}
+    px={['60px', '30px', '100px', '100px', '100px']}
+    mx={['-20px', '-20px', '0', '0', '0']}
+    position="relative"
+    top="-240px"
+
+  >
+    <Box
+      width={['100%', '100%', '50%', '50%', '50%']}
+    >
+      <Heading.h2>Next Steps</Heading.h2>
+      <P color="white">Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</P>
+      <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
+    </Box>
+    <Box
+      width={['100%', '100%', '50%', '50%', '50%']}
+    >
+    </Box>
+  </Flex>
+);
+
+const Subscribe = () => (
+  <Flex 
+    width={['100%', '100%', '28%', '28%', '30%']}
+    order={['1', '1', '2', '2', '2']}
+    pl={['', '', '35px', '35px', '35px']}
+  >
+    <Flex color="white" mb="40px">
+      <Box>
+        Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
+      </Box>
+    </Flex>
+    <Flex
+      display={['block', 'block', 'flex', 'flex', 'flex']}
+      flexDirection={['column', 'column', 'row', 'row', 'row']}
+      justifyContent="center"
+    >
+      <TextField
+        color="white"
+        bg="gray.3"
+        border="none"
+        fontSize={3}
+        letterSpacing="textField"
+        lineHeight={4}
+        opacity="0.2"
+        placeholder="email address"
+        px={['13px', '13px', '13px', '13px', '13px']}
+        py="22px"
+        width={['100%', '100%', '60%', '60%', '60%']}
+        boxSizing="border-box"
+      />
+      <Button
+        width={['35%%', '35%', '40%', '40%', '40%']}
+        pr={['7px', '10px', '10px', '12px', '15px']}
+        pl={['7px', '10px', '10px', '12px', '15px']}
+        py="22px"
+        textAlign="center"
+        fontSize="16px"
+      >
+        Sign up
+      </Button>
+    </Flex>
+    <Flex py="35px">
+      <Box>
+        <Image mr="33px" src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
+        <Image mr="33px" src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
+        <Image mr="33px" src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
+      </Box>
+    </Flex>
+  </Flex>
+);
+
+const FooterIcon = () => (
+  <Box
+    pt="20px"
+    pb="100px"
+    width="100%"
+  >
+    <Image
+      width="138px"
+      src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
+    />
+  </Box>
+);
+
+const FooterListItems = () => (
+  <Flex
+    width={['100%', '100%', '65%', '65%', '65%']}
+    order={['2', '2', '1', '1', '1']}
+  >
+    <Flex
+      display="flex"
+      flexWrap="wrap"
+      px={['12px', '12px', '0', '0', '0']}
+      mb="40px"
+    >
+      <FooterList
+        header="platform"
+        listItems={['framework', 'dashboard', 'event gateway', 'enterprise']}
+      />
+      <FooterList
+        header="developers"
+        listItems={['docs', 'quick starts', 'examples & guides']}
+      />
+      <FooterList
+        header="learn"
+        listItems={['why ?', 'use cases', 'comparisions']}
+      />
+      <FooterList
+        header="resources"
+        listItems={['blog', 'forum', 'meetups', 'slack', 'workshops']}
+      />
+      <FooterList
+        header="company"
+        listItems={['team', 'jobs', 'champions', 'contacts']}
+      />
+    </Flex>
+    <CompanyDetails />
+  </Flex>
+);
+
 const FooterWrapper = () => (
   <Flex
     bg="black"
     py="100px"
   >
     <Flex
-      display="flex"
+      display={['block', 'block', 'flex', 'flex', 'flex']}
       px="20px"
       m="auto"
       flexWrap="wrap"
       maxWidth="1260px"
     >
-    <Flex
-      bg="serverlessRed"
-      width="100%"
-      display="flex"
-      position="relative"
-      flexDirection="row"
-      top="-240px"
-    >
-      <Box
-        width="50%"
-        px="100px"
-        py="150px"
-      >
-      <TextWithIcon
-        iconSrc='https://serverless.com/_/src/assets/images/rectangle-19.a57a9c80ca655ee1f532968ba2b68a6b.png'
-        iconHeight="100px"
-        iconWidth="150px"
-        iconTop="-60%"
-        right="90%"
-        color="white"
-      >
-        <Heading.h1 color="white">Next Steps</Heading.h1>
-        <P color="white">
-          Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.
-        </P>
-        <P color="white">
-          Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.
-        </P>
-      </TextWithIcon>
-      </Box>
-      <Box
-        width="50%"
-        px="100px"
-        py="150px"
-        display="flex"
-        flexDirection="row"
-        flexWrap="wrap"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Button secondary color="white" border="2px solid">use cases</Button>
-        <Button secondary color="white" border="2px solid">comparisions</Button>
-      </Box>
+      <NextSteps />
+      <FooterIcon />
+      <FooterListItems />
+      <Subscribe />
     </Flex>
-    <Box
-      pt="20px"
-      pb="100px"
-      width="100%"
-    >
-      <Image
-        width="138px"
-        src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
-      />
-    </Box>
-      <Flex
-        width={['100%', '100%', '65%', '65%', '65%']}
-        order={['2', '2', '1', '1', '1']}
-      >
-        <Flex
-          display="flex"
-          flexWrap="wrap"
-          px={['12px', '12px', '0', '0', '0']}
-          mb="40px"
-        >
-          <FooterList
-            header="platform"
-            listItems={['framework', 'dashboard', 'event gateway', 'enterprise']}
-          />
-          <FooterList
-            header="developers"
-            listItems={['docs', 'quick starts', 'examples & guides']}
-          />
-          <FooterList
-            header="learn"
-            listItems={['why ?', 'use cases', 'comparisions']}
-          />
-          <FooterList
-            header="resources"
-            listItems={['blog', 'forum', 'meetups', 'slack', 'workshops']}
-          />
-          <FooterList
-            header="company"
-            listItems={['team', 'jobs', 'champions', 'contacts']}
-          />
-        </Flex>
-        <CompanyDetails />
-      </Flex>
-      <Flex 
-        width={['100%', '100%', '28%', '28%', '30%']}
-        order={['1', '1', '2', '2', '2']}
-        pl={['', '', '35px', '35px', '35px']}
-      >
-        <Flex color="white" mb="40px">
-          <Box>
-            Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
-          </Box>
-        </Flex>
-        <Flex
-          display={['block', 'block', 'flex', 'flex', 'flex']}
-          flexDirection={['column', 'column', 'row', 'row', 'row']}
-          justifyContent="center"
-        >
-          <TextField
-            color="white"
-            bg="gray.3"
-            border="none"
-            fontSize={3}
-            letterSpacing="textField"
-            lineHeight={4}
-            opacity="0.2"
-            placeholder="email address"
-            px={['0', '0', '13px', '13px', '13px']}
-            py="22px"
-            width={['100%', '100%', '60%', '60%', '60%']}
-            boxSizing="border-box"
-          />
-          <Button
-            width={['35%%', '35%', '40%', '40%', '40%']}
-            pr={['7px', '10px', '10px', '12px', '15px']}
-            pl={['7px', '10px', '10px', '12px', '15px']}
-            py="22px"
-            textAlign="center"
-            fontSize="16px"
-          >
-            Sign up
-          </Button>
-        </Flex>
-        <Flex py="35px">
-          <Box>
-            <Image mr="33px" src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
-            <Image mr="33px" src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
-            <Image mr="33px" src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
-          </Box>
-        </Flex>
-      </Flex>
-    </Flex>
-
   </Flex>
 );
 

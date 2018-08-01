@@ -11,6 +11,8 @@ import {
   ResourceDetailedMenu
 } from './ExtendedMenu';
 
+// TODO: REMOVE THE MIN WIDTH PASSED TO MENU DESCRIPTION
+// MAKE IT WORK VIA FLEX WRAP
 const PlatformMenu = () => (
   <Box>
     <MenuTitle name={'platform'} />

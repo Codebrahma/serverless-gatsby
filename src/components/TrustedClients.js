@@ -4,7 +4,7 @@ import { Flex, Box, P, Image } from 'serverless-design-system/src';
 
 const TrustedClient = () => (
   <Flex width="100%">
-    <Box px="15px">
+    <Box px="15px" width='100%'>
       <Flex
         display="flex"
         flexDirection="column"

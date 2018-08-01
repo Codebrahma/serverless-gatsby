@@ -19,8 +19,18 @@ const NavListItem = styled(ListItem)`
   }
 `;
 
-const Navbar = () => (
-  <Box width={[ '100%', '100%', 'auto' ]}>
+const smallScreenNavbarVisibility = (visibility) => (
+  visibility ? 'inline-block' : 'none'
+)
+
+const Navbar = ({ visibility }) => (
+  <Box
+    width={[ '100%', '100%', 'auto' ]}
+    display={[
+      smallScreenNavbarVisibility(visibility),
+      smallScreenNavbarVisibility(visibility),
+      'inline-block'
+    ]}>
     <List m='0' p='0'>
       {
         MenuList.map((MenuItem, index) => (

@@ -1,3 +1,6 @@
+// TODO: REFACTOR THIS FILE
+// MAKE THE UI & THEME CONSISTENT
+
 import React from 'react';
 import { Box, Image, List, ListItem, Text, TextWithIcon } from 'serverless-design-system/src';
 

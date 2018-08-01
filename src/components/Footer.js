@@ -12,13 +12,13 @@ import {
 } from 'serverless-design-system/src';
 
 const FooterList = ({ header, listItems }) => (
-  <Box 
+  <Box
     color="gray.3"
     width={['50%', '50%', '20%', '20%', '20%']}
     mb={['15px', '15px', '0', '0', '0']}
   >
     <Box>
-      <P 
+      <P
         color="white"
         fontSize="14px"
         lineHeight="1.14"
@@ -30,8 +30,9 @@ const FooterList = ({ header, listItems }) => (
     </Box>
     <Box>
     {
-      listItems.map((listItem) => (
+      listItems.map((listItem, index) => (
         <P
+          key={index}
           pt="15px"
           fontSize="14px"
           lineHeight="1.14"
@@ -39,7 +40,7 @@ const FooterList = ({ header, listItems }) => (
           m="0"
         >
           {listItem}
-        </P>  
+        </P>
       ))
     }
     </Box>
@@ -142,7 +143,7 @@ const NextSteps = () => (
 );
 
 const Subscribe = () => (
-  <Flex 
+  <Flex
     width={['100%', '100%', '28%', '28%', '30%']}
     order={['1', '1', '2', '2', '2']}
     pl={['', '', '35px', '35px', '35px']}

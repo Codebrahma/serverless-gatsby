@@ -57,7 +57,14 @@ const EnterpriseMenu = () => (
 
 const SignupMenu = () => (
   <Box>
-    <Button>signup</Button>
+    <Button
+      fontSize={'1.5rem'}
+      px={2}
+      py={2}
+      border={'0'}
+    >
+      sign up
+    </Button>
   </Box>
 )
 

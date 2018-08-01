@@ -50,7 +50,7 @@ const FooterList = ({ header, listItems }) => (
 const CompanyDetails = () => (
   <Flex>
     <Box
-      width={['100%', '100%', '50%', '50%', '50%']}
+      width={[1, 1, 1/2]}
     >
       <P
         fontSize="12px"
@@ -103,7 +103,7 @@ const CompanyDetails = () => (
 const NextSteps = () => (
   <Flex
     bg="serverlessRed"
-    width={['', '', '100%', '100%', '100%']}
+    width={['', '', 1, 1, 1]}
     display={['block', 'block', 'flex', 'flex', 'flex']}
     flexDirection="row"
     mx={['-20px', '-20px', '0', '0', '0']}
@@ -111,7 +111,7 @@ const NextSteps = () => (
     top={['0', '0', '-240px', '-240px', '-240px']}
   >
     <Box
-      width={['100%', '100%', '50%', '50%', '50%']}
+      width={[1, 1, 1/2]}
       py={['60px', '60px', '150px', '150px', '150px']}
       px={['30px', '30px', '100px', '100px', '100px']}
       boxSizing="border-box"
@@ -123,7 +123,7 @@ const NextSteps = () => (
       <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
     </Box>
     <Flex
-      width={['100%', '100%', '50%', '50%', '50%']}
+      width={[1, 1, 1/2]}
       py={['60px', '60px', '150px', '150px', '150px']}
       px={['30px', '30px', '100px', '100px', '100px']}
       boxSizing="border-box"
@@ -144,7 +144,7 @@ const NextSteps = () => (
 
 const Subscribe = () => (
   <Flex
-    width={['100%', '100%', '28%', '28%', '30%']}
+    width={[1, 1, '28%', '28%', '30%']}
     order={['1', '1', '2', '2', '2']}
     pl={['', '', '35px', '35px', '35px']}
   >
@@ -169,7 +169,7 @@ const Subscribe = () => (
         placeholder="email address"
         px={['13px', '13px', '13px', '13px', '13px']}
         py="22px"
-        width={['100%', '100%', '60%', '60%', '60%']}
+        width={[1, 1, '60%', '60%', '60%']}
         boxSizing="border-box"
       />
       <Button
@@ -197,7 +197,7 @@ const FooterIcon = () => (
   <Box
     pt={['0', '0', '20px', '20px', '20px']}
     pb={['30px', '30px', '100px', '100px', '100px']}
-    width="100%"
+    width={1}
   >
     <Image
       width={['0', '0', '138px', '138px', '138px']}
@@ -208,7 +208,7 @@ const FooterIcon = () => (
 
 const FooterListItems = () => (
   <Flex
-    width={['100%', '100%', '65%', '65%', '65%']}
+    width={[1, 1, '65%', '65%', '65%']}
     order={['2', '2', '1', '1', '1']}
   >
     <Flex

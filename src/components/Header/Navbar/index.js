@@ -25,7 +25,7 @@ const smallScreenNavbarVisibility = (visibility) => (
 
 const Navbar = ({ visibility }) => (
   <Box
-    width={[ '100%', '100%', 'auto' ]}
+    width={[ 1, 1, 'auto' ]}
     display={[
       smallScreenNavbarVisibility(visibility),
       smallScreenNavbarVisibility(visibility),

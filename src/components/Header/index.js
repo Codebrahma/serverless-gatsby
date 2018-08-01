@@ -9,6 +9,7 @@ export default () => (
     width={1}
     left={0}
     right={0}
+    top={0}
     zIndex='999'
     bg='black'
     py={[2, 2, 0, 0, 0]}>

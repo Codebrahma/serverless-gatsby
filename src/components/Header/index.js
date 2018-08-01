@@ -36,8 +36,8 @@ class Header extends React.Component {
         >
           <Logo
             src='https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png'
-            height="30px"
-            width="170px"
+            height={['22px', '22px', '22px', '30px']}
+            width={['125px', '125px', '125px', '170px']}
             alt="Serverless"
           />
           <NavButton

@@ -1,11 +1,14 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
-import { P } from 'serverless-design-system/src';
+import { Box, Flex } from 'serverless-design-system/src';
+import TrustedClients from '../components/TrustedClient';
 
 const IndexPage = () => (
-  <P>
-  </P>
+  <Box mt={'100px'}>
+    <Flex width="100%">
+      <TrustedClients />
+    </Flex>
+  </Box>
 )
 
 export default IndexPage

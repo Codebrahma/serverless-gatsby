@@ -22,7 +22,7 @@ class Header extends React.Component {
         bg='black'
         py={[2, 2, 0, 0, 0]}
         maxHeight='100%'
-        oy='scroll'
+        oy={['scroll', 'scroll', 'visible']}
       >
         <Box
           px='15px'

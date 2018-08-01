@@ -1,5 +1,7 @@
+// TODO: SPLIT & REFACTOR FOOTER CODE
+// FIX THEME CONSISTENCY ISSUES
+
 import React from 'react';
-import styled from 'styled-components';
 import {
   Flex,
   Box,
@@ -8,7 +10,6 @@ import {
   Image,
   P,
   TextField,
-  TextWithIcon,
 } from 'serverless-design-system/src';
 
 const FooterList = ({ header, listItems }) => (

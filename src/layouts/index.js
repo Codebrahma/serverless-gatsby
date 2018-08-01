@@ -6,10 +6,10 @@ import theme from 'serverless-design-system/src/theme';
 
 import { Flex, Box } from 'serverless-design-system/src';
 
-import Footer from '../components/Footer'
+import { Header, Footer } from '../components/';
 
 const Layout = ({ children, data }) => (
-  <Flex mt="200px">
+  <Flex>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -19,6 +19,7 @@ const Layout = ({ children, data }) => (
     />
     <ThemeProvider theme={theme}>
       <Flex>
+        <Header />
         <Box
           display={['block', 'block', 'flex', 'flex', 'flex']}
           px="20px"

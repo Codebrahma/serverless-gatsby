@@ -5,7 +5,6 @@ import { P } from 'serverless-design-system/src';
 
 const IndexPage = () => (
   <P>
-    Page
   </P>
 )
 

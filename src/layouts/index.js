@@ -1,12 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { injectGlobal } from 'styled-components';
 import styled, { ThemeProvider } from 'styled-components';
 import theme from 'serverless-design-system/src/theme';
 
 import { Flex, Box } from 'serverless-design-system/src';
+import serverless from '../components/assets/serverless.otf';
+import soleil from '../components/assets/soleil.otf';
+import soleilBk from '../components/assets/soleil-bk.otf';
+import soleilSb from '../components/assets/soleil-sb.otf';
 
 import Footer from '../components/Footer'
+
+injectGlobal`
+  @font-face {
+    font-family: Serverless;
+    src: url('${serverless}') format('opentype');
+  }
+  @font-face {
+    font-family: SolieSb;
+    src: url('${soleilSb}') format('opentype');
+  }
+  @font-face {
+    font-family: SolieBk;
+    src: url('${soleilBk}') format('opentype');
+  }
+`;
 
 const Layout = ({ children, data }) => (
   <Flex mt="200px">

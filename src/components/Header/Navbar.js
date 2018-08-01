@@ -49,7 +49,7 @@ const PlatformDetailedMenu = () => (
     zIndex='999'
     top='90px'
     left='-50%'
-    backgroundColor='black'
+    bg='black'
   >
     <List p={0} m={0}>
       {
@@ -127,8 +127,8 @@ const DeveloperDetailedMenu = () => (
     zIndex='999'
     top='90px'
     left='-50%'
-    backgroundColor='black'
-    minWidth='365px'
+    bg='black'
+    minWidth='380px'
   >
     <Box width="100%">
       <Box>
@@ -208,7 +208,7 @@ const LearnDetailedMenu = () => (
     zIndex='999'
     top='90px'
     left='-50%'
-    backgroundColor='black'
+    bg='black'
     minWidth='225px'
   >
     <List m='0' p='0'>
@@ -235,7 +235,7 @@ const ResourceDetailedMenu = () => (
     zIndex='999'
     top='90px'
     left='-50%'
-    backgroundColor='black'
+    bg='black'
     minWidth='225px'
   >
     <List m='0' p='0'>
@@ -258,25 +258,35 @@ const ResourceDetailedMenu = () => (
   </Box>
 )
 
-const Navbar = ({ menu }) => (
+const Navbar = () => (
   <Box>
     <List m='0' p='0'>
-      {
-        menu.map(({ name }) => (
-          <NavListItem
-            display={['block', 'block', 'inline-block']}
-            key={name}
-          >
-            <Box>
-              <MenuTitle name={name} />
-              <ResourceDetailedMenu />
-            </Box>
-          </NavListItem>
-        ))
-      }
+      <NavListItem display={['block', 'block', 'inline-block']}>
+        <Box>
+          <MenuTitle name={'platform'} />
+          <PlatformDetailedMenu />
+        </Box>
+      </NavListItem>
+      <NavListItem display={['block', 'block', 'inline-block']}>
+        <Box>
+          <MenuTitle name={'developers'} />
+          <DeveloperDetailedMenu />
+        </Box>
+      </NavListItem>
+      <NavListItem display={['block', 'block', 'inline-block']}>
+        <Box>
+          <MenuTitle name={'learn'} />
+          <LearnDetailedMenu />
+        </Box>
+      </NavListItem>
+      <NavListItem display={['block', 'block', 'inline-block']}>
+        <Box>
+          <MenuTitle name={'resources'} />
+          <ResourceDetailedMenu />
+        </Box>
+      </NavListItem>
       <NavListItem
         display={['block', 'block', 'inline-block']}
-        key={name}
       >
         <Box>
           <MenuTitle name={'enterprise'} />
@@ -284,7 +294,6 @@ const Navbar = ({ menu }) => (
       </NavListItem>
       <NavListItem
         display={['block', 'block', 'inline-block']}
-        key={name}
       >
         <Box>
           <Button>signup</Button>
@@ -293,9 +302,5 @@ const Navbar = ({ menu }) => (
     </List>
   </Box>
 )
-
-Navbar.defaultProps = {
-  menu: []
-}
 
 export default Navbar;

@@ -35,10 +35,7 @@ body {
 html {
   min-height: 100%;
   background: #fff;
-}
-
-body {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 /*
@@ -57,8 +54,8 @@ video {
 }
 
 body {
-  font-size: 10px;
-  font-family: Avenir, sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Serverless';
 }
 h1, h2, h3 {
   font-weight: 600;

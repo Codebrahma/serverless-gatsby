@@ -72,12 +72,8 @@ const Layout = ({ children, data }) => (
       <Flex>
         <Header />
         <Box
-          display={['block', 'block', 'flex', 'flex', 'flex']}
-          px="20px"
-          m="auto"
+          display={['block', 'block', 'flex']}
           flexWrap="wrap"
-          maxWidth="1260px"
-          mb={['35px', '35px', '300px', '300px', '300px']}
         >
           {children()}
         </Box>

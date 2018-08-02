@@ -3,7 +3,7 @@ import React from 'react';
 import { Flex, Box, P, Image } from 'serverless-design-system/src';
 
 const TrustedClient = () => (
-  <Flex width="100%">
+  <Flex width="100%" mb={'200px'}>
     <Box px="15px" width='100%'>
       <Flex
         display="flex"

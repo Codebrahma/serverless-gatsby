@@ -5,11 +5,12 @@ import { injectGlobal, ThemeProvider } from 'styled-components';
 
 import theme from 'serverless-design-system/src/theme';
 import { Flex, Box } from 'serverless-design-system/src';
+import { Header, Footer } from '../components';
 import serverless from '../components/assets/serverless.otf';
 import soleil from '../components/assets/soleil.otf';
 import soleilBk from '../components/assets/soleil-bk.otf';
 import soleilSb from '../components/assets/soleil-sb.otf';
-import { Header, Footer } from '../components';
+import soleilBkItalic from '../components/assets/soleil-bk-italic.otf';
 import './index.css';
 
 injectGlobal`
@@ -19,7 +20,7 @@ injectGlobal`
     font-style: normal;
     src: local("Serverless"),
     local("Serverless-Regular"),
-    url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/serverless.otf") format("opentype");
+    url('${serverless}') format("opentype");
   }
 
   @font-face {
@@ -28,7 +29,7 @@ injectGlobal`
     font-style: normal;
     src: local("SoleilBk"),
     local("Soleil-Book"),
-    url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil-bk.otf") format("opentype");
+    url('${soleilBk}') format("opentype");
   }
 
   @font-face {
@@ -37,7 +38,7 @@ injectGlobal`
     font-style: normal;
     src: local("SoleilSB"),
     local("Soleil-Small-Book"),
-    url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil-sb.otf") format("opentype");
+    url('${soleilSb}') format("opentype");
   }
 
   @font-face {
@@ -46,7 +47,7 @@ injectGlobal`
     font-style: normal;
     src: local("Soleil"),
     local("Soleil"),
-    url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil.otf") format("opentype");
+    url('${soleil}') format("opentype");
   }
 
   @font-face {
@@ -54,7 +55,7 @@ injectGlobal`
     font-weight: normal;
     font-style: normal;
     src: local("SoleilBk-Italic"),
-    url("https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/fonts/soleil-bk-italic.otf") format("opentype");
+    url('${soleilBkItalic}') format("opentype");
   }
 `;
 

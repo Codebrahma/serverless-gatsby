@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 import TrustedClients from '../components/TrustedClients';
 
 const IndexPage = () => (
-  <Box mt={'100px'} width={1}>
+  <Box mt={'90px'} width={1}>
     <Hero />
     <TrustedClients />
   </Box>

@@ -95,7 +95,7 @@ const DeveloperDetailedMenu = () => (
         iconTop="-5px"
         iconLeft="-10px"
       >
-        <Heading.h4 m={0} p={0} color={'white'}>documentation</Heading.h4>
+        <Heading.h5 m={0} p={0} color={'white'}>documentation</Heading.h5>
       </TextWithIcon>
       <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>
@@ -113,7 +113,7 @@ const DeveloperDetailedMenu = () => (
         iconTop="-5px"
         iconLeft="-10px"
       >
-        <Heading.h4 m={0} p={0} color={'white'}>quick starts</Heading.h4>
+        <Heading.h5 m={0} p={0} color={'white'}>quick starts</Heading.h5>
       </TextWithIcon>
       <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>
@@ -137,7 +137,7 @@ const DeveloperDetailedMenu = () => (
         iconTop="-5px"
         iconLeft="-10px"
       >
-        <Heading.h4 m={0} p={0} color={'white'}>example & guides</Heading.h4>
+        <Heading.h5 m={0} p={0} color={'white'}>example & guides</Heading.h5>
       </TextWithIcon>
       <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>

@@ -2,7 +2,14 @@
 // MAKE THE UI & THEME CONSISTENT
 
 import React from 'react';
-import { Box, Image, List, ListItem, Text, TextWithIcon } from 'serverless-design-system/src';
+import {
+  Box,
+  Heading,
+  Image,
+  List,
+  ListItem,
+  TextWithIcon
+} from 'serverless-design-system/src';
 
 const PlatformDetailedMenu = () => (
   <List p={0} m={0}>
@@ -42,7 +49,7 @@ const PlatformDetailedMenu = () => (
           >
             <Image {...imgProps} />
             <Box display='inline-block' minWidth="155px">
-              <Text.h6
+              <Heading.h6
                 fontFamily='Serverless'
                 fontSize='15px'
                 lineHeight={0.7}
@@ -51,8 +58,8 @@ const PlatformDetailedMenu = () => (
                 color={'white'}
               >
                 serverless
-              </Text.h6>
-              <Text.h6
+              </Heading.h6>
+              <Heading.h6
                 fontFamily='Serverless'
                 fontSize='20px'
                 lineHeight={1.7}
@@ -61,7 +68,7 @@ const PlatformDetailedMenu = () => (
                 color={'white'}
               >
                 {text}
-              </Text.h6>
+              </Heading.h6>
             </Box>
           </Box>
         </ListItem>
@@ -71,12 +78,12 @@ const PlatformDetailedMenu = () => (
 )
 
 const MenuText = ({ children }) => (
-  <Text.h6
+  <Heading.h6
     fontSize={'1.76rem'}
     color='#aaaaaa'
   >
     {children}
-  </Text.h6>
+  </Heading.h6>
 );
 
 const DeveloperDetailedMenu = () => (
@@ -88,7 +95,7 @@ const DeveloperDetailedMenu = () => (
         iconTop="-5px"
         iconLeft="-10px"
       >
-        <Text.h4 m={0} p={0} color={'white'}>documentation</Text.h4>
+        <Heading.h4 m={0} p={0} color={'white'}>documentation</Heading.h4>
       </TextWithIcon>
       <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>
@@ -106,7 +113,7 @@ const DeveloperDetailedMenu = () => (
         iconTop="-5px"
         iconLeft="-10px"
       >
-        <Text.h4 m={0} p={0} color={'white'}>quick starts</Text.h4>
+        <Heading.h4 m={0} p={0} color={'white'}>quick starts</Heading.h4>
       </TextWithIcon>
       <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>
@@ -130,7 +137,7 @@ const DeveloperDetailedMenu = () => (
         iconTop="-5px"
         iconLeft="-10px"
       >
-        <Text.h4 m={0} p={0} color={'white'}>example & guides</Text.h4>
+        <Heading.h4 m={0} p={0} color={'white'}>example & guides</Heading.h4>
       </TextWithIcon>
       <List m='0' p='0' mt='30px' mb='30px'>
         <ListItem>

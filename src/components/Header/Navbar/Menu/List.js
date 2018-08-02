@@ -25,7 +25,7 @@ const PlatformMenu = () => (
 const DeveloperMenu = () => (
   <Box>
     <MenuTitle name={'developers'} />
-    <MenuDescription wrapperStyles={{ minWidth: '380px' }}>
+    <MenuDescription wrapperStyles={{ minWidth: '430px' }}>
       <DeveloperDetailedMenu />
     </MenuDescription>
   </Box>

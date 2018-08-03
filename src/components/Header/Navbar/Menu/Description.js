@@ -11,8 +11,9 @@ const MenuDescription = ({ wrapperStyles, children }) => (
     zIndex='999'
     top={['0', '0', '90px']}
     left={['0', '0', '-50%']}
-    bg='black'
-    minWidth={[ 0, 0, '225px' ]}
+    background='linear-gradient(210deg, #000000 25%, #222222), linear-gradient(#000000, #000000)'
+    minWidth={[ 0, 0, '250px' ]}
+    boxShadow='0 10px 50px 0 rgba(0, 0, 0, 0.15)'
     {...wrapperStyles}
   >
     { children }

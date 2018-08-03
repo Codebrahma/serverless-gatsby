@@ -132,7 +132,7 @@ const NextSteps = () => (
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      bk="#fd5750 url(https://serverless.com/_/src/assets/images/pre-footer-bg-image.a8c67ce585f41329f72b928ddd55a4b0.png) no-repeat"
+      background="#fd5750 url(https://serverless.com/_/src/assets/images/pre-footer-bg-image.a8c67ce585f41329f72b928ddd55a4b0.png) no-repeat"
       backgroundSize="cover"
     >
       <Box pb={2}>

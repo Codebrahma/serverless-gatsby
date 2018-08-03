@@ -114,6 +114,7 @@ const NextSteps = () => (
         iconWidth="150px"
         iconTop="-30px"
         iconLeft='-80px'
+        backgroundSize={['0px', '0px', 'initial']}
       >
         <Heading.h2>Sample Heading</Heading.h2>
       </TextWithIcon>

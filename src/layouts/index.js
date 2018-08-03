@@ -74,6 +74,11 @@ const Layout = ({ children, data }) => (
         <Box
           display='block'
           width={1}
+          mt={[
+            theme.navbarHeights.mobile,
+            theme.navbarHeights.mobile,
+            theme.navbarHeights.desktop
+          ]}
         >
           {children()}
         </Box>

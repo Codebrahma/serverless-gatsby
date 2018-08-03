@@ -1,6 +1,11 @@
 // TODO: SPLIT & REFACTOR FOOTER CODE
 // FIX THEME CONSISTENCY ISSUES
 
+// 1. Rewrite flex component
+// 2. Rewrite layouts with arrays
+// 3. Make lengths more consistent
+// 4. Make image load faster
+// 5. Don't Use Width in %
 import React from 'react';
 import {
   Flex,
@@ -15,8 +20,8 @@ import {
 const FooterList = ({ header, listItems }) => (
   <Box
     color="gray.3"
-    width={['50%', '50%', '20%', '20%', '20%']}
-    mb={['15px', '15px', '0', '0', '0']}
+    width={['50%', '50%', '20%']}
+    mb={['15px', '15px', '0']}
   >
     <Box>
       <P
@@ -105,16 +110,16 @@ const NextSteps = () => (
   <Flex
     bg="serverlessRed"
     width={['', '', 1, 1, 1]}
-    display={['block', 'block', 'flex', 'flex', 'flex']}
+    display={['block', 'block', 'flex']}
     flexDirection="row"
-    mx={['-20px', '-20px', '0', '0', '0']}
+    mx={['-20px', '-20px', '0']}
     position="relative"
-    top={['0', '0', '-240px', '-240px', '-240px']}
+    top={['0', '0', '-240px']}
   >
     <Box
       width={[1, 1, 1/2]}
-      py={['60px', '60px', '150px', '150px', '150px']}
-      px={['30px', '30px', '100px', '100px', '100px']}
+      py={['60px', '60px', '150px']}
+      px={['30px', '30px', '100px']}
       boxSizing="border-box"
       justifyContent="center"
       flexDirection="column"
@@ -125,8 +130,8 @@ const NextSteps = () => (
     </Box>
     <Flex
       width={[1, 1, 1/2]}
-      py={['60px', '60px', '150px', '150px', '150px']}
-      px={['30px', '30px', '100px', '100px', '100px']}
+      py={['60px', '60px', '150px']}
+      px={['30px', '30px', '100px']}
       boxSizing="border-box"
       display="flex"
       alignItems="center"
@@ -145,9 +150,9 @@ const NextSteps = () => (
 
 const Subscribe = () => (
   <Flex
-    width={[1, 1, '28%', '28%', '30%']}
-    order={['1', '1', '2', '2', '2']}
-    pl={['', '', '35px', '35px', '35px']}
+    width={[1, 1, '28%']}
+    order={['1', '1', '2']}
+    pl={['', '', '35px']}
   >
     <Flex mb="40px">
       <P color="white">
@@ -155,8 +160,8 @@ const Subscribe = () => (
       </P>
     </Flex>
     <Flex
-      display={['block', 'block', 'flex', 'flex', 'flex']}
-      flexDirection={['column', 'column', 'row', 'row', 'row']}
+      display={['block', 'block', 'flex']}
+      flexDirection={['column', 'column', 'row']}
       justifyContent="center"
     >
       <TextField
@@ -168,15 +173,15 @@ const Subscribe = () => (
         lineHeight={4}
         opacity="0.2"
         placeholder="email address"
-        px={['13px', '13px', '13px', '13px', '13px']}
+        px={['13px', '13px', '13px']}
         py="22px"
-        width={[1, 1, '60%', '60%', '60%']}
+        width={[1, 1, '60%']}
         boxSizing="border-box"
       />
       <Button
-        width={['35%%', '35%', '40%', '40%', '40%']}
-        pr={['7px', '10px', '10px', '12px', '15px']}
-        pl={['7px', '10px', '10px', '12px', '15px']}
+        width={['35%%', '35%', '40%']}
+        pr={['7px', '10px', '10px']}
+        pl={['7px', '10px', '10px']}
         py="22px"
         textAlign="center"
         fontSize="16px"
@@ -196,12 +201,12 @@ const Subscribe = () => (
 
 const FooterIcon = () => (
   <Box
-    pt={['0', '0', '20px', '20px', '20px']}
-    pb={['30px', '30px', '100px', '100px', '100px']}
+    pt={['0', '0', '20px']}
+    pb={['30px', '30px']}
     width={1}
   >
     <Image
-      width={['0', '0', '138px', '138px', '138px']}
+      width={['0', '0', '138px']}
       src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
     />
   </Box>
@@ -209,13 +214,13 @@ const FooterIcon = () => (
 
 const FooterListItems = () => (
   <Flex
-    width={[1, 1, '65%', '65%', '65%']}
-    order={['2', '2', '1', '1', '1']}
+    width={[1, 1, '65%']}
+    order={['2', '2', '1']}
   >
     <Flex
       display="flex"
       flexWrap="wrap"
-      px={['12px', '12px', '0', '0', '0']}
+      px={['12px', '12px', '0']}
       mb="40px"
     >
       <FooterList
@@ -250,7 +255,7 @@ const FooterWrapper = () => (
     pb="100px"
   >
     <Flex
-      display={['flex', 'flex', 'flex', 'flex', 'flex']}
+      display="flex"
       px="20px"
       m="auto"
       flexWrap="wrap"

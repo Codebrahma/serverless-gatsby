@@ -26,10 +26,6 @@ class Header extends React.Component {
       >
         <Container>
           <Flex
-            maxWidth={1}
-            /* NEED TO REFACTOR FLEX COMPONENT */
-            display='flex'
-            flexDirection='row'
             flexWrap='wrap'
             alignItems='center'
             justifyContent='space-between'

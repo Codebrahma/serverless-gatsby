@@ -1,6 +1,3 @@
-// TODO: REFACTOR THIS FILE
-// MAKE THE UI & THEME CONSISTENT
-
 import React from 'react';
 import {
   Box,
@@ -53,7 +50,7 @@ const PlatformDetailedMenu = () => (
             <Box display='inline-block' minWidth="155px">
               <Heading.h6
                 fontFamily='Serverless'
-                fontSize='15px'
+                fontSize='1.5rem'
                 lineHeight={0.7}
                 letterSpacing='5'
                 m={0}
@@ -63,7 +60,7 @@ const PlatformDetailedMenu = () => (
               </Heading.h6>
               <Heading.h6
                 fontFamily='Serverless'
-                fontSize='20px'
+                fontSize='2rem'
                 lineHeight={1.7}
                 letterSpacing={0.8}
                 m={0}

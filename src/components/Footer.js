@@ -2,7 +2,7 @@
 // FIX THEME CONSISTENCY ISSUES
 
 // 1. Rewrite flex component
-// 2. Rewrite layouts with arrays
+// 2. Rewrite layouts with arrays .....
 // 3. Make lengths more consistent
 // 4. Make image load faster
 // 5. Don't Use Width in %
@@ -21,14 +21,14 @@ const FooterList = ({ header, listItems }) => (
   <Box
     color="gray.3"
     width={['50%', '50%', '20%']}
-    mb={['15px', '15px', '0']}
+    mb={[2, 2, 0]}
   >
     <Box>
       <P
         color="white"
-        fontSize="14px"
-        lineHeight="1.14"
-        letterSpacing="0.6px"
+        fontSize={1}
+        lineHeight={1}
+        letterSpacing="letterSpacings.text"
         m="0"
       >
         {header}
@@ -39,10 +39,10 @@ const FooterList = ({ header, listItems }) => (
       listItems.map((listItem, index) => (
         <P
           key={index}
-          pt="15px"
-          fontSize="14px"
-          lineHeight="1.14"
-          letterSpacing="0.6px"
+          pt={1}
+          fontSize={1}
+          lineHeight={1}
+          letterSpacing="letterSpacings.text"
           m="0"
         >
           {listItem}
@@ -59,10 +59,10 @@ const CompanyDetails = () => (
       width={[1, 1, 1/2]}
     >
       <P
-        fontSize="12px"
-        lineHeight="1.33"
+        fontSize={0}
+        lineHeight={3}
         opacity="0.5"
-        m="0px"
+        m={0}
       >
         Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
       </P>
@@ -70,12 +70,12 @@ const CompanyDetails = () => (
     <Flex
       display="flex"
       alignItems="center"
-      pt="40px"
+      pt={4}
     >
       <Box>
         <P
-          m="0px"
-          fontSize="12px"
+          m={0}
+          fontSize={0}
         >
           Serverless, Inc. © 2018
         </P>
@@ -83,20 +83,20 @@ const CompanyDetails = () => (
       <Flex
         color="gray.3"
         display="flex"
-        ml="25px"
+        ml={2}
       >
         <Box
-          ml="25px"
-          fontSize="12px"
+          ml={2}
+          fontSize={0}
         >
-          <P fontSize="12px">terms of service</P>
+          <P fontSize={0}>terms of service</P>
         </Box>
         <Box
-          ml="25px"
-          fontSize="12px"
+          ml={2}
+          fontSize={0}
         >
           <P
-            fontSize="12px"
+            fontSize={0}
           >
             privacy policy
           </P>
@@ -109,7 +109,7 @@ const CompanyDetails = () => (
 const NextSteps = () => (
   <Flex
     bg="serverlessRed"
-    width={['', '', 1, 1, 1]}
+    width={['', '', 1]}
     display={['block', 'block', 'flex']}
     flexDirection="row"
     mx={['-20px', '-20px', '0']}
@@ -118,8 +118,8 @@ const NextSteps = () => (
   >
     <Box
       width={[1, 1, 1/2]}
-      py={['60px', '60px', '150px']}
-      px={['30px', '30px', '100px']}
+      py={[3, 5, '150px']}
+      px={[3, 5, '100px']}
       boxSizing="border-box"
       justifyContent="center"
       flexDirection="column"

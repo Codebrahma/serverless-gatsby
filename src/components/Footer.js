@@ -1,11 +1,7 @@
 // TODO: SPLIT & REFACTOR FOOTER CODE
-// FIX THEME CONSISTENCY ISSUES
+// FIX THEME CONSISTENCY ISSUES (Only for px not in design + negative values)
+// Make image load faster
 
-// 1. Rewrite flex component
-// 2. Rewrite layouts with arrays .....
-// 3. Make lengths more consistent
-// 4. Make image load faster
-// 5. Don't Use Width in %
 import React from 'react';
 import {
   Flex,
@@ -67,37 +63,18 @@ const CompanyDetails = () => (
         Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
       </P>
     </Box>
-    <Flex
-      alignItems="center"
-      pt={4}
-    >
+    <Flex alignItems="center" pt={4}>
       <Box>
-        <P
-          m={0}
-          fontSize={0}
-        >
+        <P m={0} fontSize={0}>
           Serverless, Inc. © 2018
         </P>
       </Box>
-      <Flex
-        color="gray.3"
-
-        ml={2}
-      >
-        <Box
-          ml={2}
-          fontSize={0}
-        >
-          <P fontSize={0}>terms of service</P>
+      <Flex color="gray.3" ml={2} fontSize={0}>
+        <Box ml={2}>
+          <P>terms of service</P>
         </Box>
-        <Box
-          ml={2}
-          fontSize={0}
-        >
-          <P
-            fontSize={0}
-          >
-            privacy policy
+        <Box ml={2}>
+          <P>privacy policy
           </P>
         </Box>
       </Flex>
@@ -111,9 +88,9 @@ const NextSteps = () => (
     width={['', '', 1]}
     display={['block', 'block', 'flex']}
     flexDirection="row"
-    mx={['-20px', '-20px', '0']}
+    mx={['-20px', '-20px', 0]}
     position="relative"
-    top={['0', '0', '-240px']}
+    top={[0, 0, '-240px']}
   >
     <Box
       width={[1, 1, 1/2]}

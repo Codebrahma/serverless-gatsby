@@ -1,5 +1,5 @@
 // TODO: SPLIT & REFACTOR FOOTER CODE
-// FIX THEME CONSISTENCY ISSUES (Only for px not in design + negative values)
+// Refactor Next Steps
 // Make image load faster
 
 import React from 'react';
@@ -92,14 +92,12 @@ const CompanyDetails = () => (
 
 // Renders Next Steps Box
 const NextSteps = () => (
-  <Box
+  <Flex
     bg="serverlessRed"
-    width={[0, 0, 1]}
-    display={['block', 'block', 'flex']}
-    flexDirection="row"
+    flexDirection={['column', 'column', 'row']}
     mx={['-20px', '-20px', 0]}
     position="relative"
-    top={[0, 0, '-240px']}
+    top={[0, 0, '-50px']}
   >
     <Box
       width={[1, 1, 1/2]}
@@ -129,7 +127,7 @@ const NextSteps = () => (
         <Button width="230px" border={2}>comparision</Button>
       </Box>
     </Flex>
-  </Box>
+  </Flex>
 );
 
 // Renders the subscribe column
@@ -185,7 +183,7 @@ const Subscribe = () => (
 const FooterIcon = () => (
   <Box
     pt={[0, 0, 2]}
-    pb={[3, 3, 0]}
+    pb={[0, 0, '100px']}
     width={1}
   >
     <Image

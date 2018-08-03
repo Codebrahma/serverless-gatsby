@@ -11,6 +11,7 @@ import {
   Image,
   P,
   TextField,
+  TextWithIcon
 } from 'serverless-design-system/src';
 
 // Renders Each item in the footer list
@@ -95,9 +96,9 @@ const NextSteps = () => (
   <Flex
     bg="serverlessRed"
     flexDirection={['column', 'column', 'row']}
-    mx={['-20px', '-20px', 0]}
     position="relative"
-    top={[0, 0, '-50px']}
+    top="-180px"
+    mb="-140px"
   >
     <Box
       width={[1, 1, 1/2]}
@@ -107,7 +108,15 @@ const NextSteps = () => (
       justifyContent="center"
       flexDirection="column"
     >
-      <Heading.h2>Next Steps</Heading.h2>
+      <TextWithIcon
+        iconSrc='https://serverless.com/_/src/assets/images/rectangle-19.a57a9c80ca655ee1f532968ba2b68a6b.png'
+        iconHeight="100px"
+        iconWidth="150px"
+        iconTop="-30px"
+        iconLeft='-80px'
+      >
+        <Heading.h2>Sample Heading</Heading.h2>
+      </TextWithIcon>
       <P color="white">Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</P>
       <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
     </Box>
@@ -134,7 +143,7 @@ const NextSteps = () => (
 const Subscribe = () => (
   <Flex
     flexDirection="column"
-    width={[1, 1, 1/3]}
+    width={[1, 1, 0.28]}
     order={['1', '1', '2']}
     pl={[0, 0, 3]}
   >
@@ -196,7 +205,7 @@ const FooterIcon = () => (
 // Renders the entire footer list items
 const FooterListItems = () => (
   <Flex
-    width={[1, 1, '65%']}
+    width={[1, 1, 0.65]}
     flexDirection="column"
     order={['2', '2', '1']}
   >
@@ -240,15 +249,20 @@ const FooterWrapper = () => (
   >
     <Flex
       flexDirection="row"
-      px={2}
       m="auto"
       flexWrap="wrap"
       maxWidth={1}
     >
       <NextSteps />
       <FooterIcon />
-      <FooterListItems />
-      <Subscribe />
+      <Flex
+        width={1}
+        px={2}
+        flexWrap="wrap"
+      >
+        <FooterListItems />
+        <Subscribe />
+      </Flex>
     </Flex>
   </Box>
 );

@@ -69,7 +69,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <ThemeProvider theme={theme}>
-      <Flex>
+      <Flex flexDirection="column">
         <Header />
         <Box
           display={['block', 'block', 'flex']}

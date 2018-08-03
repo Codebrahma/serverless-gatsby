@@ -54,7 +54,7 @@ const FooterList = ({ header, listItems }) => (
 );
 
 const CompanyDetails = () => (
-  <Flex>
+  <Box>
     <Box
       width={[1, 1, 1/2]}
     >
@@ -68,7 +68,6 @@ const CompanyDetails = () => (
       </P>
     </Box>
     <Flex
-      display="flex"
       alignItems="center"
       pt={4}
     >
@@ -82,7 +81,7 @@ const CompanyDetails = () => (
       </Box>
       <Flex
         color="gray.3"
-        display="flex"
+
         ml={2}
       >
         <Box
@@ -103,11 +102,11 @@ const CompanyDetails = () => (
         </Box>
       </Flex>
     </Flex>
-  </Flex>
+  </Box>
 );
 
 const NextSteps = () => (
-  <Flex
+  <Box
     bg="serverlessRed"
     width={['', '', 1]}
     display={['block', 'block', 'flex']}
@@ -133,7 +132,6 @@ const NextSteps = () => (
       py={['60px', '60px', '150px']}
       px={['30px', '30px', '100px']}
       boxSizing="border-box"
-      display="flex"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
@@ -145,21 +143,21 @@ const NextSteps = () => (
         <Button width="230px" border="2">comparision</Button>
       </Box>
     </Flex>
-  </Flex>
+  </Box>
 );
 
 const Subscribe = () => (
-  <Flex
+  <Box
     width={[1, 1, '28%']}
     order={['1', '1', '2']}
     pl={['', '', '35px']}
   >
-    <Flex mb="40px">
+    <Box mb="40px">
       <P color="white">
         Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
       </P>
-    </Flex>
-    <Flex
+    </Box>
+    <Box
       display={['block', 'block', 'flex']}
       flexDirection={['column', 'column', 'row']}
       justifyContent="center"
@@ -188,15 +186,15 @@ const Subscribe = () => (
       >
         Sign up
       </Button>
-    </Flex>
-    <Flex py="35px">
+    </Box>
+    <Box py="35px">
       <Box>
         <Image mr="33px" src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
         <Image mr="33px" src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
         <Image mr="33px" src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
       </Box>
-    </Flex>
-  </Flex>
+    </Box>
+  </Box>
 );
 
 const FooterIcon = () => (
@@ -213,12 +211,11 @@ const FooterIcon = () => (
 );
 
 const FooterListItems = () => (
-  <Flex
+  <Box
     width={[1, 1, '65%']}
     order={['2', '2', '1']}
   >
     <Flex
-      display="flex"
       flexWrap="wrap"
       px={['12px', '12px', '0']}
       mb="40px"
@@ -245,17 +242,17 @@ const FooterListItems = () => (
       />
     </Flex>
     <CompanyDetails />
-  </Flex>
+  </Box>
 );
 
 const FooterWrapper = () => (
-  <Flex
+  <Box
     bg="black"
     pt={['0px', '0px', '100px']}
     pb="100px"
   >
     <Flex
-      display="flex"
+      flexDirection="row"
       px="20px"
       m="auto"
       flexWrap="wrap"
@@ -266,7 +263,7 @@ const FooterWrapper = () => (
       <FooterListItems />
       <Subscribe />
     </Flex>
-  </Flex>
+  </Box>
 );
 
 export default FooterWrapper;

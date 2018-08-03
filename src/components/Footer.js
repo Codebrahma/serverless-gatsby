@@ -57,7 +57,7 @@ const FooterListColumn = ({ header, listItems }) => (
 // Renders Company details
 const CompanyDetails = () => (
   <Box width={1}>
-    <Box width={[1, 1, 1/2]}>
+    <Box width={1/2}>
       <P
         fontSize={0}
         lineHeight={3}
@@ -67,14 +67,18 @@ const CompanyDetails = () => (
         Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
       </P>
     </Box>
-    <Flex alignItems="center" pt={4}>
-      <Box>
-        <P m={0} fontSize={0}>
+    <Flex
+      pt={4}
+      flexDirection={['column', 'column', 'row']}
+      alignItems={['left', 'left', 'center']}
+    >
+      <Box width={[1/2, 1/2, 1]}>
+        <P m={0} fontSize={0} >
           Serverless, Inc. © 2018
         </P>
       </Box>
-      <Flex color="gray.3" ml={2}>
-        <Box ml={2}>
+      <Flex color="gray.3" width={[1/2, 1/2, 1]}>
+        <Box>
           <P fontSize={0}>terms of service</P>
         </Box>
         <Box ml={2}>

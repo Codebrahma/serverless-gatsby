@@ -4,6 +4,8 @@ import { Box, Container, Flex, Logo } from 'serverless-design-system/src'
 import Navbar from './Navbar'
 import NavButton from './NavButton';
 
+import logo from '../../assets/images/logo.svg';
+
 class Header extends React.Component {
   state = { isNavbarActive: false };
 
@@ -34,7 +36,7 @@ class Header extends React.Component {
             px={15}
           >
             <Logo
-              src='https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png'
+              src={logo}
               height={['22px', '22px', '22px', '30px']}
               width={['125px', '125px', '125px', '170px']}
               alt="Serverless"

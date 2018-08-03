@@ -1,6 +1,8 @@
-// TODO: SPLIT & REFACTOR FOOTER CODE
-// Refactor Next Steps
+// TODO
+// Identify how to include hard coded values in theme
+// Negative pixel for icon top - possible to include in theme
 // Make image load faster
+
 
 import React from 'react';
 import {
@@ -23,7 +25,7 @@ const FooterListItem = ({ content, color, pt }) => (
       fontSize={1}
       lineHeight={1}
       letterSpacing="letterSpacings.text"
-      m="0"
+      m={0}
       pt={1}
     >
       {content}
@@ -117,7 +119,7 @@ const NextSteps = () => (
         iconLeft='-80px'
         backgroundSize={[0, 0, 'initial']}
       >
-        <Heading.h2>Next Section</Heading.h2>
+        <Heading.h2>Next Steps</Heading.h2>
       </TextWithIcon>
       <P color="white">Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</P>
       <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
@@ -134,10 +136,23 @@ const NextSteps = () => (
       backgroundSize="cover"
     >
       <Box pb={2}>
-        <Button width="230px" border={2}>use cases</Button>
+        <Button
+          width="230px"
+          border="2"
+          color="white"
+          >
+            use cases
+          </Button>
       </Box>
       <Box>
-        <Button width="230px" border={2}>comparision</Button>
+        <Button
+          width="230px"
+          border="2"
+          hoverColor="white"
+          color="white"
+        >
+          comparision
+        </Button>
       </Box>
     </Flex>
   </Flex>
@@ -244,7 +259,7 @@ const FooterListItems = () => (
   </Flex>
 );
 
-// Renders the footer wrapper
+// Self contained Root Renderer for footer
 const FooterWrapper = () => (
   <Box
     bg="black"

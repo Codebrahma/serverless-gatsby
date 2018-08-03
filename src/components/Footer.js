@@ -129,14 +129,14 @@ const NextSteps = () => (
     </Box>
     <Flex
       width={[1, 1, 1/2]}
-      py={['60px', '60px', '150px']}
-      px={['30px', '30px', '100px']}
+      py={[5, 5, '150px']}
+      px={[3, 3, '100px']}
       boxSizing="border-box"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
     >
-      <Box pb="25px">
+      <Box pb={2}>
         <Button width="230px" border="2">use cases</Button>
       </Box>
       <Box>
@@ -148,9 +148,9 @@ const NextSteps = () => (
 
 const Subscribe = () => (
   <Box
-    width={[1, 1, '28%']}
+    width={[1, 1, 1/3]}
     order={['1', '1', '2']}
-    pl={['', '', '35px']}
+    pl={['', '', 3]}
   >
     <Box mb="40px">
       <P color="white">
@@ -171,40 +171,37 @@ const Subscribe = () => (
         lineHeight={4}
         opacity="0.2"
         placeholder="email address"
-        px={['13px', '13px', '13px']}
-        py="22px"
-        width={[1, 1, '60%']}
+        px={[1, 1, 1]}
+        py={2}
+        width={[1, 1, 0.6]}
         boxSizing="border-box"
       />
       <Button
-        width={['35%%', '35%', '40%']}
-        pr={['7px', '10px', '10px']}
-        pl={['7px', '10px', '10px']}
-        py="22px"
+        width={['35%', '35%', '40%']}
+        px={[0, 0, 1]}
+        py={2}
         textAlign="center"
-        fontSize="16px"
+        fontSize={3}
       >
         Sign up
       </Button>
     </Box>
-    <Box py="35px">
-      <Box>
-        <Image mr="33px" src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
-        <Image mr="33px" src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
-        <Image mr="33px" src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
-      </Box>
+    <Box py={3}>
+      <Image mr={3} src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
+      <Image mr={3} src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
+      <Image mr={3} src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
     </Box>
   </Box>
 );
 
 const FooterIcon = () => (
   <Box
-    pt={['0', '0', '20px']}
-    pb={['30px', '30px']}
+    pt={[0, 0, 2]}
+    pb={[3, 3, 0]}
     width={1}
   >
     <Image
-      width={['0', '0', '138px']}
+      width={[0, 0, '138px']}
       src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
     />
   </Box>
@@ -217,8 +214,8 @@ const FooterListItems = () => (
   >
     <Flex
       flexWrap="wrap"
-      px={['12px', '12px', '0']}
-      mb="40px"
+      px={[1, 1, 0]}
+      mb={4}
     >
       <FooterList
         header="platform"
@@ -248,15 +245,15 @@ const FooterListItems = () => (
 const FooterWrapper = () => (
   <Box
     bg="black"
-    pt={['0px', '0px', '100px']}
+    pt={[0, 0, '100px']}
     pb="100px"
   >
     <Flex
       flexDirection="row"
-      px="20px"
+      px={2}
       m="auto"
       flexWrap="wrap"
-      maxWidth="1260px"
+      maxWidth={1}
     >
       <NextSteps />
       <FooterIcon />

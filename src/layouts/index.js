@@ -82,7 +82,6 @@ const Layout = ({ children, data }) => (
         >
           {children()}
         </Box>
-        <Footer />
       </Flex>
     </ThemeProvider>
   </Flex>

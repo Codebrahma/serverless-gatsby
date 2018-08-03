@@ -46,6 +46,7 @@ const FooterListColumn = ({ header, listItems }) => (
     {
       listItems.map((listItem, index) => (
         <FooterListItem
+          key={index}
           color="gray.3"
           content={listItem}
         />

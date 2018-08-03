@@ -13,47 +13,50 @@ import {
   TextField,
 } from 'serverless-design-system/src';
 
-const FooterList = ({ header, listItems }) => (
+// Renders Each item in the footer list
+const FooterListItem = ({ content, color, pt }) => (
+  <Box>
+    <P
+      color={color}
+      fontSize={1}
+      lineHeight={1}
+      letterSpacing="letterSpacings.text"
+      m="0"
+      pt={1}
+    >
+      {content}
+    </P>
+  </Box>
+);
+
+// Renders each column in the footer list
+const FooterListColumn = ({ header, listItems }) => (
   <Box
-    color="gray.3"
     width={['50%', '50%', '20%']}
     mb={[2, 2, 0]}
   >
-    <Box>
-      <P
-        color="white"
-        fontSize={1}
-        lineHeight={1}
-        letterSpacing="letterSpacings.text"
-        m="0"
-      >
-        {header}
-      </P>
-    </Box>
+    <FooterListItem 
+      color="white"
+      content={header}
+      pt={1}
+    />
     <Box>
     {
       listItems.map((listItem, index) => (
-        <P
-          key={index}
-          pt={1}
-          fontSize={1}
-          lineHeight={1}
-          letterSpacing="letterSpacings.text"
-          m="0"
-        >
-          {listItem}
-        </P>
+        <FooterListItem
+          color="gray.3"
+          content={listItem}
+        />
       ))
     }
     </Box>
   </Box>
 );
 
+// Renders Company details
 const CompanyDetails = () => (
   <Box>
-    <Box
-      width={[1, 1, 1/2]}
-    >
+    <Box width={[1, 1, 1/2]}>
       <P
         fontSize={0}
         lineHeight={3}
@@ -82,6 +85,7 @@ const CompanyDetails = () => (
   </Box>
 );
 
+// Renders Next Steps Box
 const NextSteps = () => (
   <Box
     bg="serverlessRed"
@@ -114,15 +118,16 @@ const NextSteps = () => (
       flexDirection="column"
     >
       <Box pb={2}>
-        <Button width="230px" border="2">use cases</Button>
+        <Button width="230px" border={2}>use cases</Button>
       </Box>
       <Box>
-        <Button width="230px" border="2">comparision</Button>
+        <Button width="230px" border={2}>comparision</Button>
       </Box>
     </Flex>
   </Box>
 );
 
+// Renders the subscribe column
 const Subscribe = () => (
   <Box
     width={[1, 1, 1/3]}
@@ -171,6 +176,7 @@ const Subscribe = () => (
   </Box>
 );
 
+// Renders the Footer Icon
 const FooterIcon = () => (
   <Box
     pt={[0, 0, 2]}
@@ -184,6 +190,7 @@ const FooterIcon = () => (
   </Box>
 );
 
+// Renders the entire footer list items
 const FooterListItems = () => (
   <Box
     width={[1, 1, '65%']}
@@ -194,23 +201,23 @@ const FooterListItems = () => (
       px={[1, 1, 0]}
       mb={4}
     >
-      <FooterList
+      <FooterListColumn
         header="platform"
         listItems={['framework', 'dashboard', 'event gateway', 'enterprise']}
       />
-      <FooterList
+      <FooterListColumn
         header="developers"
         listItems={['docs', 'quick starts', 'examples & guides']}
       />
-      <FooterList
+      <FooterListColumn
         header="learn"
         listItems={['why ?', 'use cases', 'comparisions']}
       />
-      <FooterList
+      <FooterListColumn
         header="resources"
         listItems={['blog', 'forum', 'meetups', 'slack', 'workshops']}
       />
-      <FooterList
+      <FooterListColumn
         header="company"
         listItems={['team', 'jobs', 'champions', 'contacts']}
       />
@@ -219,6 +226,7 @@ const FooterListItems = () => (
   </Box>
 );
 
+// Renders the footer wrapper
 const FooterWrapper = () => (
   <Box
     bg="black"

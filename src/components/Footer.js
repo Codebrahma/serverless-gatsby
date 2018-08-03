@@ -97,8 +97,8 @@ const NextSteps = () => (
     bg="serverlessRed"
     flexDirection={['column', 'column', 'row']}
     position="relative"
-    top="-180px"
-    mb="-140px"
+    top="-320px"
+    mb="-290px"
   >
     <Box
       width={[1, 1, 1/2]}
@@ -114,9 +114,9 @@ const NextSteps = () => (
         iconWidth="150px"
         iconTop="-30px"
         iconLeft='-80px'
-        backgroundSize={['0px', '0px', 'initial']}
+        backgroundSize={[0, 0, 'initial']}
       >
-        <Heading.h2>Sample Heading</Heading.h2>
+        <Heading.h2>Next Section</Heading.h2>
       </TextWithIcon>
       <P color="white">Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</P>
       <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
@@ -129,6 +129,8 @@ const NextSteps = () => (
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
+      bk="#fd5750 url(https://serverless.com/_/src/assets/images/pre-footer-bg-image.a8c67ce585f41329f72b928ddd55a4b0.png) no-repeat"
+      backgroundSize="cover"
     >
       <Box pb={2}>
         <Button width="230px" border={2}>use cases</Button>
@@ -254,8 +256,17 @@ const FooterWrapper = () => (
       flexWrap="wrap"
       maxWidth={1}
     >
-      <NextSteps />
-      <FooterIcon />
+      <Image
+        src="https://serverless.com/_/src/assets/images/glitch-effect.4b56a6820dd98967a1926d4eed0377f3.png"
+        mt="-20px"
+      />
+      <Box
+        width={1}
+        px={[0, 0, 2]}
+      >
+        <NextSteps />
+        <FooterIcon />
+      </Box>
       <Flex
         width={1}
         px={2}

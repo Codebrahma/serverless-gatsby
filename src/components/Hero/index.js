@@ -122,12 +122,13 @@ export default () => (
           display='flex'
           flexDirection={['column', 'column', 'row']}
           width={[1, 1, 3/4]}
+          alignItems='center'
           justifyContent='center'
           mx='auto'
-          my={4}
+          my={3}
         >
-          <Button mx={1} minWidth={'280px'} border={0}>sign up</Button>
-          <SecondaryButton mx={1} minWidth={'280px'}>enterprise demo</SecondaryButton>
+          <Button mx={1} my={1} px={'1.5rem'} width={[ 3/4, 3/5, 2/4, 3/8 ]} border={0}>sign up</Button>
+          <SecondaryButton mx={1} my={1} px={'1.5rem'} width={[ 3/4, 3/5, 2/4, 3/8 ]}>enterprise demo</SecondaryButton>
         </Flex>
         <Flex
           width={[ 1, 1, 3/4 ]}

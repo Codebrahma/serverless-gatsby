@@ -6,11 +6,11 @@ import { injectGlobal, ThemeProvider } from 'styled-components';
 import theme from 'serverless-design-system/src/theme';
 import { Flex, Box } from 'serverless-design-system/src';
 import { Header, Footer } from '../components';
-import serverless from '../assets/serverless.otf';
-import soleil from '../assets/soleil.otf';
-import soleilBk from '../assets/soleil-bk.otf';
-import soleilSb from '../assets/soleil-sb.otf';
-import soleilBkItalic from '../assets/soleil-bk-italic.otf';
+import serverless from '../assets/fonts/serverless.otf';
+import soleil from '../assets/fonts/soleil.otf';
+import soleilBk from '../assets/fonts/soleil-bk.otf';
+import soleilSb from '../assets/fonts/soleil-sb.otf';
+import soleilBkItalic from '../assets/fonts/soleil-bk-italic.otf';
 import './index.css';
 
 injectGlobal`

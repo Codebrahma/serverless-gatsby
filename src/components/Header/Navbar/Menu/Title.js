@@ -7,7 +7,7 @@ const MenuTitle = ({ name }) => (
     py={[ '20px', '20px', '35.5px' ]}>
     <Text.span
       fontFamily='Serverless'
-      fontSize={'16px'}
+      fontSize={2}
       color={'white'}
       letterSpacing={0.7}
     >

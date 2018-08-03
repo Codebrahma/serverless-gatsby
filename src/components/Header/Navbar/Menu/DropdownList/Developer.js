@@ -15,7 +15,7 @@ const SubMenu = ({ title, options }) => (
     <List m='0' p='0' mt={2}>
       {
         options.map((option) => (
-          <ListItem my={2}>
+          <ListItem my={2} key={option}>
             <SubMenuItem>{option}</SubMenuItem>
           </ListItem>
         ))

@@ -16,6 +16,14 @@ import {
   TextWithIcon
 } from 'serverless-design-system/src';
 
+import nextStepsBg from '../assets/images/nextStepsBg.png';
+import whiteRectangleDots from '../assets/images/whiteRectangleDots.png';
+import footerFb from '../assets/images/footerFb.png';
+import footerInsta from '../assets/images/footerInst.png';
+import footerTwitter from '../assets/images/footerTwitter.png';
+import logo from '../assets/images/logo.svg';
+import glitchEffect from '../assets/images/glitchEffect.png';
+
 // Renders Each item in the footer list
 // If used >= 3 move to molecules. (Currently 2)
 const FooterListItem = ({ content, color, pt }) => (
@@ -95,6 +103,8 @@ const CompanyDetails = () => (
 );
 
 // Renders Next Steps Box
+// TODO: Decide on how we can include hardcoded px outside the spaces array
+// TODO: Think how to remove hardcoded color from Background property
 const NextSteps = () => (
   <Flex
     bg="serverlessRed"
@@ -112,7 +122,7 @@ const NextSteps = () => (
       flexDirection="column"
     >
       <TextWithIcon
-        iconSrc='https://serverless.com/_/src/assets/images/rectangle-19.a57a9c80ca655ee1f532968ba2b68a6b.png'
+        iconSrc={whiteRectangleDots}
         iconHeight="100px"
         iconWidth="150px"
         iconTop="-30px"
@@ -132,7 +142,7 @@ const NextSteps = () => (
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
-      background="#fd5750 url(https://serverless.com/_/src/assets/images/pre-footer-bg-image.a8c67ce585f41329f72b928ddd55a4b0.png) no-repeat"
+      background={`#fd5750 url(${nextStepsBg}) no-repeat`}
       backgroundSize="cover"
     >
       <Box pb={2}>
@@ -166,7 +176,7 @@ const Subscribe = () => (
     order={['1', '1', '2']}
     pl={[0, 0, 3]}
   >
-    <Box mb="40px">
+    <Box mb={4}>
       <P color="white">
         Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
       </P>
@@ -200,9 +210,9 @@ const Subscribe = () => (
       </Button>
     </Flex>
     <Box py={3}>
-      <Image mr={3} src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
-      <Image mr={3} src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
-      <Image mr={3} src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
+      <Image mr={3} src={footerFb} />
+      <Image mr={3} src={footerInsta} />
+      <Image mr={3} src={footerTwitter} />
     </Box>
   </Flex>
 );
@@ -216,7 +226,7 @@ const FooterIcon = () => (
   >
     <Image
       width={[0, 0, '138px']}
-      src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
+      src={logo}
     />
   </Box>
 );
@@ -273,7 +283,7 @@ const FooterWrapper = () => (
       maxWidth={1}
     >
       <Image
-        src="https://serverless.com/_/src/assets/images/glitch-effect.4b56a6820dd98967a1926d4eed0377f3.png"
+        src={glitchEffect}
         mt="-20px"
       />
       <Box

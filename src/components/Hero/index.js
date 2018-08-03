@@ -37,7 +37,7 @@ const HeroImageWrapper = styled(Flex)`
 export default () => (
   <Box width={1}>
     <Box bg='black'>
-      <Container px={0} py={[0, 0, 4]}>
+      <Container px={0} py={4}>
         <Heading.h3 align='center' fontFamily='Serverless' color='white'>
           serverless
         </Heading.h3>

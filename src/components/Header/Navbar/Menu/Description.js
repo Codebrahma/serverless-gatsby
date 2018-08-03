@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Box } from 'serverless-design-system/src';
 
-const MenuDescription = ({ wrapperStyles, children }) => (
+const MenuDescription = ({ children }) => (
   <Box
     px={4}
     pt={3}
@@ -12,8 +12,6 @@ const MenuDescription = ({ wrapperStyles, children }) => (
     top={['0', '0', '90px']}
     left={['0', '0', '-50%']}
     bg='black'
-    minWidth='225px'
-    {...wrapperStyles}
   >
     { children }
   </Box>

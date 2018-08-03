@@ -57,7 +57,7 @@ const FooterListColumn = ({ header, listItems }) => (
 // Renders Company details
 const CompanyDetails = () => (
   <Box width={1}>
-    <Box width={1/2}>
+    <Box width={[1, 1, 1/2]}>
       <P
         fontSize={0}
         lineHeight={3}

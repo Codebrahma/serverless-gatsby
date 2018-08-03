@@ -4,6 +4,7 @@
 import React from 'react';
 import {
   Box,
+  Flex,
   Heading,
   Image,
   List,
@@ -42,10 +43,11 @@ const PlatformDetailedMenu = () => (
         }
       ].map(({ imgProps, text }) => (
         <ListItem key={text}>
-          <Box
-            display='flex'
+          <Flex
             mb={20}
             position='relative'
+            justifyContent='center'
+            alignItems='center'
           >
             <Image {...imgProps} />
             <Box display='inline-block' minWidth="155px">
@@ -70,7 +72,7 @@ const PlatformDetailedMenu = () => (
                 {text}
               </Heading.h6>
             </Box>
-          </Box>
+          </Flex>
         </ListItem>
       ))
     }
@@ -87,8 +89,8 @@ const MenuText = ({ children }) => (
 );
 
 const DeveloperDetailedMenu = () => (
-  <Box>
-    <Box>
+  <Flex flexWrap='wrap'>
+    <Box width={1}>
       <TextWithIcon
         iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="20px"
         iconWidth="25px"
@@ -106,7 +108,7 @@ const DeveloperDetailedMenu = () => (
         </ListItem>
       </List>
     </Box>
-    <Box width={[1, 1, 1/2]} display="inline-block">
+    <Box width={[1, 1, 1/2]}>
       <TextWithIcon
         iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="20px"
         iconWidth="25px"
@@ -130,7 +132,7 @@ const DeveloperDetailedMenu = () => (
         </ListItem>
       </List>
     </Box>
-    <Box width={[1, 1, 1/2]} display="inline-block">
+    <Box width={[1, 1, 1/2]}>
       <TextWithIcon
         iconSrc='https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png' iconHeight="20px"
         iconWidth="25px"
@@ -154,7 +156,7 @@ const DeveloperDetailedMenu = () => (
         </ListItem>
       </List>
     </Box>
-  </Box>
+  </Flex>
 );
 
 const LearnDetailedMenu = () => (

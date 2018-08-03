@@ -11,12 +11,10 @@ import {
   ResourceDetailedMenu
 } from './ExtendedMenu';
 
-// TODO: REMOVE THE MIN WIDTH PASSED TO MENU DESCRIPTION
-// MAKE IT WORK VIA FLEX WRAP
 const PlatformMenu = () => (
   <Box>
     <MenuTitle name={'platform'} />
-    <MenuDescription>
+    <MenuDescription wrapperStyles={{ minWidth: [ 0, 0, '320px'] }}>
       <PlatformDetailedMenu />
     </MenuDescription>
   </Box>
@@ -25,7 +23,7 @@ const PlatformMenu = () => (
 const DeveloperMenu = () => (
   <Box>
     <MenuTitle name={'developers'} />
-    <MenuDescription>
+    <MenuDescription wrapperStyles={{ minWidth: [ 0, 0, '430px' ] }}>
       <DeveloperDetailedMenu />
     </MenuDescription>
   </Box>

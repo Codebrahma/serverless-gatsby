@@ -4,8 +4,8 @@ import { Box } from 'serverless-design-system/src';
 
 const MenuDescription = ({ wrapperStyles, children }) => (
   <Box
-    px={4}
-    pt={3}
+    px={[1, 1, 4]}
+    pt={[1, 1, 3]}
     pb={4}
     position={['relative', 'relative', 'absolute']}
     zIndex='999'

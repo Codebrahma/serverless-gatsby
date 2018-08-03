@@ -60,7 +60,7 @@ injectGlobal`
 `;
 
 const Layout = ({ children, data }) => (
-  <Flex>
+  <Flex width={1}>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -69,7 +69,10 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <ThemeProvider theme={theme}>
-      <Flex flexDirection='column'>
+      <Flex
+        flexDirection='column'
+        width={1}
+      >
         <Header />
         <Box
           display='block'

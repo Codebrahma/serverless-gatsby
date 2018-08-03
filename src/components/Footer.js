@@ -56,7 +56,7 @@ const FooterListColumn = ({ header, listItems }) => (
 
 // Renders Company details
 const CompanyDetails = () => (
-  <Box>
+  <Box width={1}>
     <Box width={[1, 1, 1/2]}>
       <P
         fontSize={0}
@@ -73,12 +73,12 @@ const CompanyDetails = () => (
           Serverless, Inc. © 2018
         </P>
       </Box>
-      <Flex color="gray.3" ml={2} fontSize={0}>
+      <Flex color="gray.3" ml={2}>
         <Box ml={2}>
-          <P>terms of service</P>
+          <P fontSize={0}>terms of service</P>
         </Box>
         <Box ml={2}>
-          <P>privacy policy
+          <P fontSize={0}>privacy policy
           </P>
         </Box>
       </Flex>
@@ -90,7 +90,7 @@ const CompanyDetails = () => (
 const NextSteps = () => (
   <Box
     bg="serverlessRed"
-    width={['', '', 1]}
+    width={[0, 0, 1]}
     display={['block', 'block', 'flex']}
     flexDirection="row"
     mx={['-20px', '-20px', 0]}
@@ -130,18 +130,18 @@ const NextSteps = () => (
 
 // Renders the subscribe column
 const Subscribe = () => (
-  <Box
+  <Flex
+    flexDirection="column"
     width={[1, 1, 1/3]}
     order={['1', '1', '2']}
-    pl={['', '', 3]}
+    pl={[0, 0, 3]}
   >
     <Box mb="40px">
       <P color="white">
         Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
       </P>
     </Box>
-    <Box
-      display={['block', 'block', 'flex']}
+    <Flex
       flexDirection={['column', 'column', 'row']}
       justifyContent="center"
     >
@@ -168,13 +168,13 @@ const Subscribe = () => (
       >
         Sign up
       </Button>
-    </Box>
+    </Flex>
     <Box py={3}>
       <Image mr={3} src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
       <Image mr={3} src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
       <Image mr={3} src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
     </Box>
-  </Box>
+  </Flex>
 );
 
 // Renders the Footer Icon
@@ -193,11 +193,13 @@ const FooterIcon = () => (
 
 // Renders the entire footer list items
 const FooterListItems = () => (
-  <Box
+  <Flex
     width={[1, 1, '65%']}
+    flexDirection="column"
     order={['2', '2', '1']}
   >
     <Flex
+      width={1}
       flexWrap="wrap"
       px={[1, 1, 0]}
       mb={4}
@@ -224,7 +226,7 @@ const FooterListItems = () => (
       />
     </Flex>
     <CompanyDetails />
-  </Box>
+  </Flex>
 );
 
 // Renders the footer wrapper

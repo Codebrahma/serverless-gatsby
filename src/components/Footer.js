@@ -14,6 +14,7 @@ import {
 } from 'serverless-design-system/src';
 
 // Renders Each item in the footer list
+// If used >= 3 move to molecules. (Currently 2)
 const FooterListItem = ({ content, color, pt }) => (
   <Box>
     <P

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Flex, Heading, Image } from 'serverless-design-system/src';
+import { Flex, Heading, Image, withBeforeAfter } from 'serverless-design-system/src';
 import frameworkIcon from '../../../assets/images/bolt.png';
 import dashboardIcon from '../../../assets/images/icon-dashboard.png';
 import gatewayIcon from '../../../assets/images/group-6.png';
@@ -12,10 +12,23 @@ const bulletMarkerStyle = `
   content: " ";
   position: absolute;
   top: 50%;
-  margin-top: -1px;
   height: 20px;
   width: 180px;
+  margin-top: -1px;
   background-position: center center;
+  background-repeat: no-repeat;
+`;
+
+const beforeBlockStyle = `
+  ${bulletMarkerStyle}
+  right: 130%;
+  background-image: url(${bulletLeftMarker});
+`;
+
+const afterBlockStyle = `
+  ${bulletMarkerStyle}
+  left: 130%;
+  background-image: url(${bulletRightMarker});
 `;
 
 const HeroImageWrapper = styled(Flex)`
@@ -23,15 +36,10 @@ const HeroImageWrapper = styled(Flex)`
     position: relative;
 
     &:before {
-      ${bulletMarkerStyle}
-      right: 130%;
-      background: url(${bulletLeftMarker}) center center no-repeat;
+      ${beforeBlockStyle}
     }
-
     &:after {
-      ${bulletMarkerStyle}
-      left: 130%;
-      background: url(${bulletRightMarker}) center center no-repeat;
+      ${afterBlockStyle}
     }
   }
 `;
@@ -63,7 +71,6 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
 export default () => (
   <HeroImageWrapper
     flexDirection={['column', 'column', 'row']}
-    display='flex'
     width={[1, 1, 3/4]}
     mx='auto'
     my={5}

@@ -12,8 +12,6 @@ const bulletMarkerStyle = `
   content: " ";
   position: absolute;
   top: 50%;
-  height: 20px;
-  width: 180px;
   margin-top: -1px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -31,18 +29,12 @@ const afterBlockStyle = `
   background-image: url(${bulletRightMarker});
 `;
 
-const HeroImageWrapper = styled(Flex)`
-  & > ${Flex}:nth-child(2) > ${Flex} {
-    position: relative;
-
-    &:before {
-      ${beforeBlockStyle}
-    }
-    &:after {
-      ${afterBlockStyle}
-    }
-  }
-`;
+const HeroImageWrapper = withBeforeAfter(
+  Flex,
+  `& > div:nth-child(2) > div`,
+  beforeBlockStyle,
+  afterBlockStyle
+);
 
 const ImageSection = ({ imgSrc, title, subtitle }) => (
   <Flex
@@ -56,6 +48,7 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
       display='flex'
       alignItems='center'
       my='16px'
+      position='relative'
     >
       <Image
         src={imgSrc}
@@ -73,7 +66,12 @@ export default () => (
     flexDirection={['column', 'column', 'row']}
     width={[1, 1, 3/4]}
     mx='auto'
-    my={5}
+    my={[2, 2, 5]}
+    position='relative'
+    beforeBoxHeight={[ 0, 0, '20px' ]}
+    afterBoxHeight={[ 0, 0, '20px' ]}
+    beforeBoxWidth={[ 0, 0, '100px', '180px' ]}
+    afterBoxWidth={[ 0, 0, '100px', '180px' ]}
   >
     <ImageSection imgSrc={frameworkIcon} title='serverless' subtitle='framework' />
     <ImageSection imgSrc={dashboardIcon} title='serverless' subtitle='dashboard' />

@@ -6,7 +6,8 @@ const callToActionProps = {
   mx: 2,
   my: 1,
   px: 1,
-  width: [ 3/4, 3/5, 2/4, 3/10 ],
+  width: [ 7/10, 3/5, 2/4, 3/10 ],
+  minWidth: '260px'
 };
 
 export default () => (

@@ -16,7 +16,6 @@ export default () => (
     <Box bg='black'>
       <Container
         px={2}
-        mb="400px"
         maxWidth={1}
         width={1}
       >

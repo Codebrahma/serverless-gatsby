@@ -53,9 +53,13 @@ export default () => (
         >
         The Serverless Framework is an open-source CLI for building and deploying serverless applications. With over 6 million deployments handled, the Serverless Framework is the tool developers trust to build cloud applications.
         </P>
-        
+        <Flex justifyContent='center'>
+          <Image
+            src={frameworkIllustrator}
+            maxHeight="190px"
+          />
+        </Flex>
         <Flex
-          display='flex'
           flexDirection='row'
           width={[1, 1, 3/4]}
           justifyContent='center'

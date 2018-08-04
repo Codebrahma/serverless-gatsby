@@ -8,6 +8,8 @@ import {
 import Header from './Header';
 import HeroImage from './HeroImage';
 import Advantage from './Advantage';
+import Actions from './Actions';
+import CloudProviders from './CloudProviders';
 
 export default () => (
   <Box width={1}>
@@ -22,6 +24,8 @@ export default () => (
           <Header />
           <HeroImage />
           <Advantage />
+          <Actions />
+          <CloudProviders />
         </Flex>
       </Container>    
     </Box>

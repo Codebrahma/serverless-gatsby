@@ -13,7 +13,7 @@ import dataProcessing from '../../../assets/images/dataProcessing.png';
 import easyAutomation from '../../../assets/images/easyAutomation.png';
 
 const UseCase = () => (
-  <Flex flexDirection="column" justifyContent="center" mb={400}>
+  <Flex flexDirection="column" justifyContent="center">
     <Box>
       <P align="center" fontSize={5} color="black">Serverless Framework Use Cases</P>
       <P align="center">These are the 3 main use cases for the Serverless Framework that you should know about.</P>

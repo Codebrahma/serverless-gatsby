@@ -10,7 +10,7 @@ import frameworkIllustrator from '../../../assets/images/frameworkIllustration.p
 export default () => (
   <Box width={1}>
     <Box bg='black'>
-      <Container px={0} py={4} mb="400px" maxWidth="800px">
+      <Container px={2} py={4} mb="400px" maxWidth="800px">
         <Flex
           height='86px'
           display='flex'

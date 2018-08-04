@@ -7,6 +7,7 @@ import {
 
 import Header from './Header';
 import HeroImage from './HeroImage';
+import Advantage from './Advantage';
 
 export default () => (
   <Box width={1}>
@@ -20,6 +21,7 @@ export default () => (
         <Flex flexDirection="column" justifyContent="center">
           <Header />
           <HeroImage />
+          <Advantage />
         </Flex>
       </Container>    
     </Box>

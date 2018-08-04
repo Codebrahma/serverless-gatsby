@@ -8,7 +8,7 @@ import {
 import frameworkIllustrator from '../../../assets/images/frameworkIllustration.png';
 
 const HeroImage = () => (
-  <Flex justifyContent="center" py={2}>
+  <Flex justifyContent="center" py={[0, 0, 3]} height={[0, 0, '100%']}>
     <Box width={[0, 0, 0.6]}>
       <Image
         src={frameworkIllustrator}

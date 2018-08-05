@@ -13,7 +13,7 @@ const TrustedClient = () => (
     width={1}
     backgroundImage={`url(${backgroundImage})`}
     py={5}
-    px={[ 0, 0, 1, 4, 8 ]}
+    px={[ 0, 0, 2, 6, 8 ]}
   >
     <Container>
       <Flex

@@ -14,6 +14,7 @@ import cloudAgnostic from '../../../assets/images/cloudAgnostic.png';
 import appLifecycleManagement from '../../../assets/images/appLifecycleManagement.png';
 import streamingLogs from '../../../assets/images/streamingLogs.png';
 
+// TODO: Add counter based number for each image
 const FeatureItem = ({ header, img, content }) => (
   <Box width={[1, 1, 0.5]} pr={100} pb={70}>
     <img src={img} mb={2}/>
@@ -59,7 +60,15 @@ const Features = () => (
   <Flex flexDirection="column" px={50} mt={3}>
     <Heading.h3 align="center">Features</Heading.h3>
     <Flex flexDirection="row" flexWrap="wrap" mt={3}>
-      {featureItemsData.map(({ header, img, content }) => (<FeatureItem header={header} content={content} img={img} />))}  
+      {
+        featureItemsData.map(({ header, img, content }) => (
+          <FeatureItem
+            header={header}
+            content={content}
+            img={img}
+          />
+        ))
+      }  
     </Flex>
   </Flex>
 );

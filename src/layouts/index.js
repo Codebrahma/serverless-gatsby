@@ -6,11 +6,11 @@ import { injectGlobal, ThemeProvider } from 'styled-components';
 import theme from 'serverless-design-system/src/theme';
 import { Flex, Box } from 'serverless-design-system/src';
 import { Header, Footer } from '../components';
-import serverless from '../assets/serverless.otf';
-import soleil from '../assets/soleil.otf';
-import soleilBk from '../assets/soleil-bk.otf';
-import soleilSb from '../assets/soleil-sb.otf';
-import soleilBkItalic from '../assets/soleil-bk-italic.otf';
+import serverless from '../assets/fonts/serverless.otf';
+import soleil from '../assets/fonts/soleil.otf';
+import soleilBk from '../assets/fonts/soleil-bk.otf';
+import soleilSb from '../assets/fonts/soleil-sb.otf';
+import soleilBkItalic from '../assets/fonts/soleil-bk-italic.otf';
 import './index.css';
 
 injectGlobal`
@@ -59,8 +59,8 @@ injectGlobal`
   }
 `;
 
-const Layout = ({ children, data }) => (
-  <Flex>
+const Layout = ({ children, data, location }) => (
+  <Flex width={1}>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -69,15 +69,23 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <ThemeProvider theme={theme}>
-      <Flex flexDirection="column">
+      <Flex
+        flexDirection='column'
+        width={1}
+      >
         <Header />
         <Box
-          display={['block', 'block', 'flex']}
-          flexWrap="wrap"
+          display='block'
+          width={1}
+          mt={[
+            theme.navbarHeights.mobile,
+            theme.navbarHeights.mobile,
+            theme.navbarHeights.desktop
+          ]}
         >
           {children()}
+          <Footer path={location.pathname} />
         </Box>
-        <Footer />
       </Flex>
     </ThemeProvider>
   </Flex>

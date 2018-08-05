@@ -4,10 +4,14 @@ import { Box, Container, Flex, Logo } from 'serverless-design-system/src'
 import Navbar from './Navbar'
 import NavButton from './NavButton';
 
+import logo from '../../assets/images/logo.svg';
+
 class Header extends React.Component {
   state = { isNavbarActive: false };
 
-  toggleNavbarVisibility = () => this.setState({ isNavbarActive:  !this.state.isNavbarActive })
+  toggleNavbarVisibility = () => this.setState((prevState) => {
+    return { isNavbarActive:  !prevState.isNavbarActive };
+  });
 
   render() {
     const { isNavbarActive } = this.state;
@@ -26,17 +30,13 @@ class Header extends React.Component {
       >
         <Container>
           <Flex
-            maxWidth={1}
-            /* NEED TO REFACTOR FLEX COMPONENT */
-            display='flex'
-            flexDirection='row'
             flexWrap='wrap'
             alignItems='center'
             justifyContent='space-between'
             px={15}
           >
             <Logo
-              src='https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png'
+              src={logo}
               height={['22px', '22px', '22px', '30px']}
               width={['125px', '125px', '125px', '170px']}
               alt="Serverless"

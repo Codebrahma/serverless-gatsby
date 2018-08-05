@@ -12,19 +12,24 @@ import gatewayIllustration1 from '../../../assets/images/gateway-illustration1.p
 import gatewayIllustration2 from '../../../assets/images/gateway-illustration2.png';
 import gatewayIllustration3 from '../../../assets/images/gateway-illustration3.png';
 
-const UseCase = ({ title, description, imgSrc }) => (
+const UseCase = ({ title, description, imgSrc, reverse }) => (
   <Flex flexDirection={['column', 'column', 'row']} py={[3, 3, 5]}>
     <Flex
       width={[1, 1, 0.5]}
       mb={2}
       pr={[0, 0, 55, 110]}
-      order={[2, 2, 1]}
+      order={reverse ? [1, 1, 2] : [2, 2, 1]}
       flexDirection="column"
     >
       <Heading.h3 fontFamily="SoleilBk">{title}</Heading.h3>
       <P>{ description }</P>
     </Flex>
-    <Flex width={[1, 1, 0.5]} mb={2} justifyContent="center" order={[1, 1, 2]}>
+    <Flex
+      width={[1, 1, 0.5]}
+      mb={2}
+      justifyContent="center"
+      order={reverse ? [2, 2, 1] : [1, 1, 2]}
+    >
       <Image
         src={imgSrc}
         alt={title}
@@ -54,6 +59,7 @@ const UseCases = () => (
       title='Subscribe functions to webhooks'
       description='The Event Gateway makes it dead simple to wire functions to any customer event, including webhooks'
       imgSrc={gatewayIllustration2}
+      reverse
     />
     <UseCase
       title='Multi-provider service'

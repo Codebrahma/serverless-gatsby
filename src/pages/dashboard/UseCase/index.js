@@ -12,19 +12,24 @@ import dashboardIllustration1 from '../../../assets/images/illustration-use-case
 import dashboardIllustration2 from '../../../assets/images/illustration-use-case-2.png';
 import dashboardIllustration3 from '../../../assets/images/illustration-use-case-3.png';
 
-const UseCase = ({ title, description, imgSrc }) => (
+const UseCase = ({ title, description, imgSrc, reverse }) => (
   <Flex flexDirection={['column', 'column', 'row']} py={[3, 3, 5]}>
     <Flex
       width={[1, 1, 0.5]}
       mb={2}
       pr={[0, 0, 55, 110]}
-      order={[2, 2, 1]}
+      order={reverse ? [1, 1, 2] : [2, 2, 1]}
       flexDirection="column"
     >
       <Heading.h3 fontFamily="SoleilBk">{title}</Heading.h3>
       <P>{ description }</P>
     </Flex>
-    <Flex width={[1, 1, 0.5]} mb={2} justifyContent="center" order={[1, 1, 2]}>
+    <Flex
+      width={[1, 1, 0.5]}
+      mb={2}
+      justifyContent="center"
+      order={reverse ? [2, 2, 1] : [1, 1, 2]}
+    >
       <Image
         src={imgSrc}
         alt={title}
@@ -56,6 +61,7 @@ const UseCases = () => (
       title='Operating at scale'
       description='The Serverless Dashboard provides the tools you need to build, deploy, and operate Servleress applications at scale. Logging, metrics, and deep observability help you accomplish more with serverless technology.'
       imgSrc={dashboardIllustration2}
+      reverse
     />
     <UseCase
       title='Operate applications, not infrastructure'

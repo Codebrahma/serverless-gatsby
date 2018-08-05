@@ -59,7 +59,7 @@ injectGlobal`
   }
 `;
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <Flex width={1}>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -84,6 +84,7 @@ const Layout = ({ children, data }) => (
           ]}
         >
           {children()}
+          <Footer path={location.pathname} />
         </Box>
       </Flex>
     </ThemeProvider>

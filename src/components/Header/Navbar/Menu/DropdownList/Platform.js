@@ -34,7 +34,7 @@ const platformMenuConfig = [
     text: 'event gateway',
     to: platform.eventGateway,
     crossDomain: false,
-    completed: false,
+    completed: true,
   },
   {
     imgProps: {
@@ -45,7 +45,7 @@ const platformMenuConfig = [
     text: 'dashboard',
     to: platform.dashboard,
     crossDomain: false,
-    completed: false,
+    completed: true,
   }
 ];
 

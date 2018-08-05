@@ -4,10 +4,12 @@ import RightBoxBg from '../../../assets/images/footerRightBoxBg.png';
 
 import * as HomeRenderer from './HomeRenderer';
 import * as FrameworkRenderer from './FrameworkRenderer';
+import * as EventGatewayRenderer from './EventGatewayRenderer';
 
 const routes = {
   home: '/',
   framework: '/framework',
+  eventGateway: '/event-gateway',
 }
 
 const renderContent = (path) => {
@@ -17,6 +19,9 @@ const renderContent = (path) => {
     }
     case routes.framework: {
       return FrameworkRenderer
+    }
+    case routes.eventGateway: {
+      return EventGatewayRenderer
     }
     default:
       return HomeRenderer;
@@ -31,7 +36,7 @@ const DynamicInfo = ({ path }) => {
     LeftRenderer,
     RightRenderer,
   } = renderContent(path);
-  
+
   return (
     <Flex
       bg="serverlessRed"

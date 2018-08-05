@@ -22,10 +22,10 @@ const renderContent = (path) => {
       return HomeRenderer;
   }
 }
+
 // Renders Next Steps Box
 // TODO: Decide on how we can include hardcoded px outside the spaces array
 // TODO: Think how to remove hardcoded color from Background property
-// TODO: Custom renderer based on route
 const DynamicInfo = ({ path }) => {
   const {
     LeftRenderer,

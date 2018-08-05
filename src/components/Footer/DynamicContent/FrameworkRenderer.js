@@ -32,26 +32,27 @@ const RightRenderer = () => (
   <Flex flexDirection="column">
     <Box pb={2}>
       <Button
-        width="230px"
+        width="280px"
         border="2"
         color="white"
         >
           documentation
         </Button>
     </Box>
-    <Box>
+    <Box pb={2}>
       <Button
-        width="230px"
+        width="280px"
         border="2"
         hoverColor="white"
         color="white"
+        px={1}
       >
         serverless example
       </Button>
     </Box>
     <Box>
       <Button
-        width="230px"
+        width="280px"
         border="2"
         hoverColor="white"
         color="white"

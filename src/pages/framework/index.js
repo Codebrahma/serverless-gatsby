@@ -10,7 +10,7 @@ const FrameWorks = () => (
     <Hero />
     <Box px={2}>
       <UseCase />
-      <Testimonial />
+      {/*<Testimonial />*/}
       <Features />
     </Box>
   </Box>

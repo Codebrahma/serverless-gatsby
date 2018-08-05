@@ -6,7 +6,7 @@ import Hero from './Hero';
 import UseCase from './UseCase';
 import Features from './Features';
 
-const EventGateway = () => (
+const Dashboard = () => (
   <Box width={1} mb={200}>
     <Hero />
     <Box px={2}>
@@ -17,4 +17,4 @@ const EventGateway = () => (
   </Box>
 );
 
-export default EventGateway;
+export default Dashboard;

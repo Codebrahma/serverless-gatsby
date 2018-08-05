@@ -5,11 +5,13 @@ import RightBoxBg from '../../../assets/images/footerRightBoxBg.png';
 import * as HomeRenderer from './HomeRenderer';
 import * as FrameworkRenderer from './FrameworkRenderer';
 import * as EventGatewayRenderer from './EventGatewayRenderer';
+import * as DashboardRenderer from './DashboardRenderer';
 
 const routes = {
   home: '/',
   framework: '/framework',
   eventGateway: '/event-gateway',
+  dashboard: 'dashboard',
 }
 
 const renderContent = (path) => {
@@ -22,6 +24,9 @@ const renderContent = (path) => {
     }
     case routes.eventGateway: {
       return EventGatewayRenderer
+    }
+    case routes.dashboard: {
+      return DashboardRenderer
     }
     default:
       return HomeRenderer;

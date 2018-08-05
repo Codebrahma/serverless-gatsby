@@ -4,6 +4,7 @@ import { Box } from 'serverless-design-system/src';
 import Hero from './Hero';
 import Benefits from './Benefits';
 import Testimonial from './Testimonial';
+import PlatformFeatures from './PlatformFeatures';
 import TrustedClients from '../../components/TrustedClients';
 
 export default () => (
@@ -11,6 +12,7 @@ export default () => (
     <Hero />
     <Benefits />
     <Testimonial />
+    <PlatformFeatures />
     <TrustedClients />
   </Box>
 );

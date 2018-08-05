@@ -7,7 +7,7 @@ import {
   P
 } from 'serverless-design-system/src';
 
-export default ({ img, title, description }) => (
+export default ({ img, title, description, children }) => (
   <Box
     px={[2, 3, 4]}
     py={[2, 2, 4]}
@@ -38,5 +38,6 @@ export default ({ img, title, description }) => (
       {description}
     </P>
 
+    { children }
   </Box>
 );

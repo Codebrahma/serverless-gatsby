@@ -11,6 +11,9 @@ import {
   ResourceDropdownList
 } from './DropdownList';
 
+import NavLink from './DropdownList/NavLink';
+import { enterprise } from './DropdownList/navigationPath';
+
 const PlatformMenu = () => (
   <Box>
     <MenuTitle name={'platform'} />
@@ -52,7 +55,9 @@ const ResourcesMenu = () => (
 
 const EnterpriseMenu = () => (
   <Box>
-    <MenuTitle name={'enterprise'} />
+    <NavLink to={enterprise}>
+      <MenuTitle name={'enterprise'} />
+    </NavLink>
   </Box>
 )
 

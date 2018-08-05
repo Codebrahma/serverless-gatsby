@@ -10,7 +10,7 @@ import footerTwitter from '../../assets/images/footerTwitter.png';
 const Subscribe = () => (
   <Flex
     flexDirection="column"
-    width={[1, 1, 0.28]}
+    width={[1, 1, 0.35]}
     order={['1', '1', '2']}
     pl={[0, 0, 3]}
   >
@@ -42,7 +42,8 @@ const Subscribe = () => (
         px={[0, 0, 1]}
         py={2}
         textAlign="center"
-        fontSize={3}
+        border={0}
+        fontSize={2}
       >
         Sign up
       </Button>

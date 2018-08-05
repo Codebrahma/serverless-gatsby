@@ -8,10 +8,11 @@ const FooterListItem = ({ content, color, pt }) => (
   <Box>
     <P
       color={color}
+      fontFamily={'Serverless'}
       fontSize={1}
       lineHeight={1}
       letterSpacing="letterSpacings.text"
-      m={0}
+      my={'5px'}
       pt={1}
     >
       {content}

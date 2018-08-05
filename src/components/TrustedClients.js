@@ -8,12 +8,23 @@ import nordstromLogo from '../assets/images/nordstrom-logo.png';
 import expediaLogo from '../assets/images/expedia-logo.png';
 import reutersLogo from '../assets/images/reuters-logo.png';
 
-const TrustedClient = () => (
+const TrustedClientLogo = ({ src: logo, altText }) => (
+  <Image
+    src={logo}
+    alt={altText}
+    maxHeight={['41px', '41px', '41px', '60px']}
+    maxWidth={[ '80%', '80%', '60%', '80%', '100%' ]}
+    my={2}
+  />
+)
+
+const TrustedClients = () => (
   <Box
     width={1}
     backgroundImage={`url(${backgroundImage})`}
     py={5}
     px={[ 0, 0, 2, 6, 8 ]}
+    mb={6}
   >
     <Container>
       <Flex
@@ -22,44 +33,14 @@ const TrustedClient = () => (
         flexDirection={['column', 'column', 'row']}
         width={1}
       >
-        <Image
-          src={eaLogo}
-          alt='EA'
-          maxHeight={['41px', '41px', '41px', '60px']}
-          maxWidth={[ '80%', '80%', '60%', '80%', '100%' ]}
-          my={2}
-        />
-        <Image
-          src={cocacolaLogo}
-          alt='Coca Cola'
-          maxHeight={['41px', '41px', '41px', '60px']}
-          maxWidth={[ '80%', '80%', '60%', '80%', '100%' ]}
-          my={2}
-        />
-        <Image
-          src={nordstromLogo}
-          alt='Nordstrom'
-          maxHeight={['41px', '41px', '41px', '60px']}
-          maxWidth={[ '80%', '80%', '60%', '80%', '100%' ]}
-          my={2}
-        />
-        <Image
-          src={expediaLogo}
-          alt='Expedia'
-          maxHeight={['41px', '41px', '41px', '60px']}
-          maxWidth={[ '80%', '80%', '60%', '80%', '100%' ]}
-          my={2}
-        />
-        <Image
-          src={reutersLogo}
-          alt='Reuters'
-          maxHeight={['41px', '41px', '41px', '60px']}
-          maxWidth={[ '80%', '80%', '60%', '80%', '100%' ]}
-          my={2}
-        />
+        <TrustedClientLogo src={eaLogo} altText='EA' />
+        <TrustedClientLogo src={cocacolaLogo} altText='Coca Cola' />
+        <TrustedClientLogo src={nordstromLogo} altText='Nordstrom' />
+        <TrustedClientLogo src={expediaLogo} altText='Expedia' />
+        <TrustedClientLogo src={reutersLogo} altText='Reuters' />
       </Flex>
     </Container>
   </Box>
 );
 
-export default TrustedClient;
+export default TrustedClients;

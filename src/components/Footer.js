@@ -1,5 +1,6 @@
 // TODO: SPLIT & REFACTOR FOOTER CODE
-// FIX THEME CONSISTENCY ISSUES
+// Refactor Next Steps
+// Make image load faster
 
 import React from 'react';
 import {
@@ -10,153 +11,149 @@ import {
   Image,
   P,
   TextField,
+  TextWithIcon
 } from 'serverless-design-system/src';
 
-const FooterList = ({ header, listItems }) => (
+// Renders Each item in the footer list
+// If used >= 3 move to molecules. (Currently 2)
+const FooterListItem = ({ content, color, pt }) => (
+  <Box>
+    <P
+      color={color}
+      fontSize={1}
+      lineHeight={1}
+      letterSpacing="letterSpacings.text"
+      m="0"
+      pt={1}
+    >
+      {content}
+    </P>
+  </Box>
+);
+
+// Renders each column in the footer list
+const FooterListColumn = ({ header, listItems }) => (
   <Box
-    color="gray.3"
-    width={['50%', '50%', '20%', '20%', '20%']}
-    mb={['15px', '15px', '0', '0', '0']}
+    width={['50%', '50%', '20%']}
+    mb={[2, 2, 0]}
   >
-    <Box>
-      <P
-        color="white"
-        fontSize="14px"
-        lineHeight="1.14"
-        letterSpacing="0.6px"
-        m="0"
-      >
-        {header}
-      </P>
-    </Box>
+    <FooterListItem 
+      color="white"
+      content={header}
+      pt={1}
+    />
     <Box>
     {
       listItems.map((listItem, index) => (
-        <P
-          key={index}
-          pt="15px"
-          fontSize="14px"
-          lineHeight="1.14"
-          letterSpacing="0.6px"
-          m="0"
-        >
-          {listItem}
-        </P>
+        <FooterListItem
+          color="gray.3"
+          content={listItem}
+        />
       ))
     }
     </Box>
   </Box>
 );
 
+// Renders Company details
 const CompanyDetails = () => (
-  <Flex>
-    <Box
-      width={[1, 1, 1/2]}
-    >
+  <Box width={1}>
+    <Box width={[1, 1, 1/2]}>
       <P
-        fontSize="12px"
-        lineHeight="1.33"
+        fontSize={0}
+        lineHeight={3}
         opacity="0.5"
-        m="0px"
+        m={0}
       >
         Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
       </P>
     </Box>
     <Flex
-      display="flex"
-      alignItems="center"
-      pt="40px"
+      pt={4}
+      flexDirection={['column', 'column', 'row']}
+      alignItems={['left', 'left', 'center']}
     >
-      <Box>
-        <P
-          m="0px"
-          fontSize="12px"
-        >
+      <Box width={[1/2, 1/2, 1]}>
+        <P m={0} fontSize={0} >
           Serverless, Inc. © 2018
         </P>
       </Box>
-      <Flex
-        color="gray.3"
-        display="flex"
-        ml="25px"
-      >
-        <Box
-          ml="25px"
-          fontSize="12px"
-        >
-          <P fontSize="12px">terms of service</P>
+      <Flex color="gray.3" width={[1/2, 1/2, 1]}>
+        <Box>
+          <P fontSize={0}>terms of service</P>
         </Box>
-        <Box
-          ml="25px"
-          fontSize="12px"
-        >
-          <P
-            fontSize="12px"
-          >
-            privacy policy
+        <Box ml={2}>
+          <P fontSize={0}>privacy policy
           </P>
         </Box>
       </Flex>
     </Flex>
-  </Flex>
+  </Box>
 );
 
+// Renders Next Steps Box
 const NextSteps = () => (
   <Flex
     bg="serverlessRed"
-    width={['', '', 1, 1, 1]}
-    display={['block', 'block', 'flex', 'flex', 'flex']}
-    flexDirection="row"
-    mx={['-20px', '-20px', '0', '0', '0']}
+    flexDirection={['column', 'column', 'row']}
     position="relative"
-    top={['0', '0', '-240px', '-240px', '-240px']}
+    top="-180px"
+    mb="-140px"
   >
     <Box
       width={[1, 1, 1/2]}
-      py={['60px', '60px', '150px', '150px', '150px']}
-      px={['30px', '30px', '100px', '100px', '100px']}
+      py={[3, 5, '150px']}
+      px={[3, 5, '100px']}
       boxSizing="border-box"
       justifyContent="center"
       flexDirection="column"
     >
-      <Heading.h2>Next Steps</Heading.h2>
+      <TextWithIcon
+        iconSrc='https://serverless.com/_/src/assets/images/rectangle-19.a57a9c80ca655ee1f532968ba2b68a6b.png'
+        iconHeight="100px"
+        iconWidth="150px"
+        iconTop="-30px"
+        iconLeft='-80px'
+      >
+        <Heading.h2>Sample Heading</Heading.h2>
+      </TextWithIcon>
       <P color="white">Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</P>
       <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
     </Box>
     <Flex
       width={[1, 1, 1/2]}
-      py={['60px', '60px', '150px', '150px', '150px']}
-      px={['30px', '30px', '100px', '100px', '100px']}
+      py={[5, 5, '150px']}
+      px={[3, 3, '100px']}
       boxSizing="border-box"
-      display="flex"
       alignItems="center"
       justifyContent="center"
       flexDirection="column"
     >
-      <Box pb="25px">
-        <Button width="230px" border="2">use cases</Button>
+      <Box pb={2}>
+        <Button width="230px" border={2}>use cases</Button>
       </Box>
       <Box>
-        <Button width="230px" border="2">comparision</Button>
+        <Button width="230px" border={2}>comparision</Button>
       </Box>
     </Flex>
   </Flex>
 );
 
+// Renders the subscribe column
 const Subscribe = () => (
   <Flex
-    width={[1, 1, '28%', '28%', '30%']}
-    order={['1', '1', '2', '2', '2']}
-    pl={['', '', '35px', '35px', '35px']}
+    flexDirection="column"
+    width={[1, 1, 0.28]}
+    order={['1', '1', '2']}
+    pl={[0, 0, 3]}
   >
-    <Flex mb="40px">
+    <Box mb="40px">
       <P color="white">
         Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
       </P>
-    </Flex>
+    </Box>
     <Flex
-      display={['block', 'block', 'flex', 'flex', 'flex']}
-      flexDirection={['column', 'column', 'row', 'row', 'row']}
+      flexDirection={['column', 'column', 'row']}
       justifyContent="center"
     >
       <TextField
@@ -168,73 +165,73 @@ const Subscribe = () => (
         lineHeight={4}
         opacity="0.2"
         placeholder="email address"
-        px={['13px', '13px', '13px', '13px', '13px']}
-        py="22px"
-        width={[1, 1, '60%', '60%', '60%']}
+        px={[1, 1, 1]}
+        py={2}
+        width={[1, 1, 0.6]}
         boxSizing="border-box"
       />
       <Button
-        width={['35%%', '35%', '40%', '40%', '40%']}
-        pr={['7px', '10px', '10px', '12px', '15px']}
-        pl={['7px', '10px', '10px', '12px', '15px']}
-        py="22px"
+        width={['35%', '35%', '40%']}
+        px={[0, 0, 1]}
+        py={2}
         textAlign="center"
-        fontSize="16px"
+        fontSize={3}
       >
         Sign up
       </Button>
     </Flex>
-    <Flex py="35px">
-      <Box>
-        <Image mr="33px" src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
-        <Image mr="33px" src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
-        <Image mr="33px" src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
-      </Box>
-    </Flex>
+    <Box py={3}>
+      <Image mr={3} src="https://serverless.com/_/src/assets/images/facebook.122045691ad327ec8d9806837bcb915d.png" />
+      <Image mr={3} src="https://serverless.com/_/src/assets/images/instagram.695101eb8303515c136199da23982dd8.png" />
+      <Image mr={3} src="https://serverless.com/_/src/assets/images/twitter.9da0b7cc2b72560a3cbfd4c1c92bbb42.png" />
+    </Box>
   </Flex>
 );
 
+// Renders the Footer Icon
 const FooterIcon = () => (
   <Box
-    pt={['0', '0', '20px', '20px', '20px']}
-    pb={['30px', '30px', '100px', '100px', '100px']}
+    pt={[0, 0, 2]}
+    pb={[0, 0, '100px']}
     width={1}
   >
     <Image
-      width={['0', '0', '138px', '138px', '138px']}
+      width={[0, 0, '138px']}
       src="https://serverless.com/_/src/assets/images/logo.ce91bef30d19103f7a9be878a9b44465.png"
     />
   </Box>
 );
 
+// Renders the entire footer list items
 const FooterListItems = () => (
   <Flex
-    width={[1, 1, '65%', '65%', '65%']}
-    order={['2', '2', '1', '1', '1']}
+    width={[1, 1, 0.65]}
+    flexDirection="column"
+    order={['2', '2', '1']}
   >
     <Flex
-      display="flex"
+      width={1}
       flexWrap="wrap"
-      px={['12px', '12px', '0', '0', '0']}
-      mb="40px"
+      px={[1, 1, 0]}
+      mb={4}
     >
-      <FooterList
+      <FooterListColumn
         header="platform"
         listItems={['framework', 'dashboard', 'event gateway', 'enterprise']}
       />
-      <FooterList
+      <FooterListColumn
         header="developers"
         listItems={['docs', 'quick starts', 'examples & guides']}
       />
-      <FooterList
+      <FooterListColumn
         header="learn"
         listItems={['why ?', 'use cases', 'comparisions']}
       />
-      <FooterList
+      <FooterListColumn
         header="resources"
         listItems={['blog', 'forum', 'meetups', 'slack', 'workshops']}
       />
-      <FooterList
+      <FooterListColumn
         header="company"
         listItems={['team', 'jobs', 'champions', 'contacts']}
       />
@@ -243,25 +240,31 @@ const FooterListItems = () => (
   </Flex>
 );
 
+// Renders the footer wrapper
 const FooterWrapper = () => (
-  <Flex
+  <Box
     bg="black"
-    pt={['0px', '0px', '100px']}
+    pt={[0, 0, '100px']}
     pb="100px"
   >
     <Flex
-      display={['flex', 'flex', 'flex', 'flex', 'flex']}
-      px="20px"
+      flexDirection="row"
       m="auto"
       flexWrap="wrap"
-      maxWidth="1260px"
+      maxWidth={1}
     >
       <NextSteps />
       <FooterIcon />
-      <FooterListItems />
-      <Subscribe />
+      <Flex
+        width={1}
+        px={2}
+        flexWrap="wrap"
+      >
+        <FooterListItems />
+        <Subscribe />
+      </Flex>
     </Flex>
-  </Flex>
+  </Box>
 );
 
 export default FooterWrapper;

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Box, Container, Testimonial, withBeforeAfter } from 'serverless-design-system/src';
+import { Box, Container, withBeforeAfter } from 'serverless-design-system/src';
+import Testimonial from '../../components/Testimonial';
 import testimonialBackground from '../../assets/images/glitch-effect.png';
 import cocaColaLogo from '../../assets/images/cocacola-logo.png';
 

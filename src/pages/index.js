@@ -1,10 +1,10 @@
 import React from 'react'
 
 import { Box } from 'serverless-design-system/src';
-import Hero from './Home/Hero';
-import Benefits from './Home/Benefits';
-import Testimonial from './Home/Testimonial';
-import PlatformFeatures from './Home/PlatformFeatures';
+import Hero from './home/Hero';
+import Benefits from './home/Benefits';
+import Testimonial from './home/Testimonial';
+import PlatformFeatures from './home/PlatformFeatures';
 import TrustedClients from '../components/TrustedClients';
 
 export default () => (

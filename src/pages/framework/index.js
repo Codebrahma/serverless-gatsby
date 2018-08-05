@@ -1,8 +1,9 @@
 import React from 'react';
 import { Box } from 'serverless-design-system/src';
+
+import Testimonial from './Testimonial';
 import Hero from './Hero';
 import UseCase from './UseCase';
-import Testimonial from './Testimonial';
 import Features from './Features';
 
 const FrameWorks = () => (
@@ -10,7 +11,7 @@ const FrameWorks = () => (
     <Hero />
     <Box px={2}>
       <UseCase />
-      {/*<Testimonial />*/}
+      <Testimonial />
       <Features />
     </Box>
   </Box>

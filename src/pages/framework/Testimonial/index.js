@@ -1,16 +1,42 @@
 import React from 'react';
 
-import { Testimonial } from 'serverless-design-system/src';
+import { Box, Container, withBeforeAfter } from 'serverless-design-system/src';
+import Testimonial from '../../../components/Testimonial';
+import testimonialBackground from '../../../assets/images/glitch-effect.png';
+import cocaColaLogo from '../../../assets/images/cocacola-logo.png';
 
-const FrameworkTestimonial = () => (
-  <Testimonial
-    img="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/icons/cocacola-logo.png"
-    name="Patrick Brandt"
-    designation="Solutions Architect at The Coca Cola Company"
-    alt="Coca Cola"
-  >
-  "The Serverless Framework is a core component of The Coca-Cola Company's initiative to reduce IT operational costs and deploy services faster."
-  </Testimonial>
+const TestimonialWrapper = withBeforeAfter(
+  Box,
+  `& > ${Box}`,
+  `
+    content: " ";
+    height: 80px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    margin-top: -40px;
+    background: transparent url(${testimonialBackground});
+    opacity: 0.05;
+  `,
+  ''
 );
 
-export default FrameworkTestimonial;
+export default () => (
+  <TestimonialWrapper position='relative'>
+    <Box mx={3} my={4}>
+      <Container>
+        <Testimonial
+          img={cocaColaLogo}
+          name="Patrick Brandt"
+          designation="Solutions Architect at The Coca Cola Company"
+          alt="Coca Cola"
+        >
+          "The Serverless Framework is a core component of The Coca-Cola Company's initiative to reduce IT operational costs and deploy services faster."
+        </Testimonial>
+      </Container>
+    </Box>
+  </TestimonialWrapper>
+);

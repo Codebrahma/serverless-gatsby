@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
   Flex,
   Box,
   Heading,
@@ -18,7 +18,7 @@ import streamingLogs from '../../../assets/images/streamingLogs.png';
 const FeatureItem = ({ header, img, content }) => (
   <Box width={[1, 1, 0.5]} pr={100} pb={70}>
     <img src={img} mb={2}/>
-    <Heading.h3>{header}</Heading.h3>
+    <Heading.h3 fontFamily="SoleilBk">{header}</Heading.h3>
     <P>{content}</P>
   </Box>
 );
@@ -57,8 +57,8 @@ const featureItemsData = [
 ];
 
 const Features = () => (
-  <Flex flexDirection="column" px={50} mt={3}>
-    <Heading.h3 align="center">Features</Heading.h3>
+  <Flex flexDirection="column" px={50} mt={6}>
+    <Heading.h2 align="center" fontFamily="SoleilSb" my={4}>Features</Heading.h2>
     <Flex flexDirection="row" flexWrap="wrap" mt={3}>
       {
         featureItemsData.map(({ header, img, content }) => (
@@ -68,7 +68,7 @@ const Features = () => (
             img={img}
           />
         ))
-      }  
+      }
     </Flex>
   </Flex>
 );

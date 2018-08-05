@@ -22,9 +22,9 @@ const TrustedClients = () => (
   <Box
     width={1}
     backgroundImage={`url(${backgroundImage})`}
-    py={5}
     px={[ 0, 0, 2, 6, 8 ]}
-    mb={6}
+    pt={5}
+    pb={['300px', '300px', '250px']}
   >
     <Container>
       <Flex

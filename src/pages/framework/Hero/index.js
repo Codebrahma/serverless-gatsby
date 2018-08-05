@@ -19,14 +19,18 @@ export default () => (
         maxWidth={1}
         width={1}
       >
-        <Flex flexDirection="column" justifyContent="center">
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          py={[3, 3, 3, 5]}
+        >
           <Header />
           <HeroImage />
           <Advantage />
           <Actions />
           <CloudProviders />
         </Flex>
-      </Container>    
+      </Container>
     </Box>
   </Box>
 );

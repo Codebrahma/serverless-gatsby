@@ -8,11 +8,12 @@ const Actions = () => (
     flexDirection={['column', 'column', 'row']}
     width={0.5}
     justifyContent='center'
+    alignItems='center'
     mx='auto'
-    my={4}
+    my={3}
   >
-    <Button mx={1} width={'280px'} border={0}>quick start</Button>
-    <SecondaryButton mx={1} width={'280px'}>login</SecondaryButton>
+    <Button mx={1} my={1} width={'280px'} border={0}>quick start</Button>
+    <SecondaryButton mx={1} my={1} width={'280px'}>login</SecondaryButton>
   </Flex>
 );
 

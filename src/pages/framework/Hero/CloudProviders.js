@@ -35,8 +35,8 @@ const CloudProviders = () => (
         alignItems="center"
       >
         <Box>
-          <P fontSize={3} color="gray.3">
-            Top Cloud Providers
+          <P fontSize={2} color="gray.3">
+            Supports Top Cloud Providers
           </P>
         </Box>
         <Flex

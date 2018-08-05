@@ -34,7 +34,7 @@ const Header = () => (
     >
       serverless
     </Heading.h2>
-    <Heading.h1 
+    <Heading.h1
       align='center'
       fontFamily='Serverless'
       color='white'
@@ -57,7 +57,7 @@ const Header = () => (
     </Flex>
     <Flex
       justifyContent="center"
-      px={[2, 2, '10%']}
+      px={[2, 2, 5, '18%']}
       pb={1}
     >
       <P

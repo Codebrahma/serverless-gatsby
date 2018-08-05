@@ -17,6 +17,7 @@ import FooterIcon from './FooterIcon';
 import FooterListItems from './FooterListItems';
 import Subscribe from './Subscribe';
 
+// TODO: Dynamic Footer. NextSteps component should be a custom renderer.
 // Self contained Root Renderer for footer
 const FooterWrapper = () => (
   <Box

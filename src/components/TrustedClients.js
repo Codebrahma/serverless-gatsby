@@ -28,6 +28,7 @@ const trustedClientImages = [
 ];
 
 // TODO: Decide on how we can include hardcoded px outside the spaces array
+// TODO: Sharing with /framework cloud providers content. Need to convert this to a molecule
 const TrustedClients = () => (
   <Box width={1} mb={['300px', '300px', '200px']}>
     <Box px={15} width={1}>

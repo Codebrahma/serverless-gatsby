@@ -9,6 +9,7 @@ import {
 
 import serverlessBolt from '../../../assets/images/serverlessBolt.png';
 
+// TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
   <Flex flexDirection="column" justifyContent="center" mb={2}>
     <Flex

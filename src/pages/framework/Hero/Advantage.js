@@ -11,6 +11,7 @@ import {
 
 import redRectangleDots from '../../../assets/images/redRectangleDots.png';
 
+// TODO: Remove any hardcoded pixels
 const Advantage = () => (
   <Flex flexDirection={['column', 'column', 'row']} flexWrap="wrap">
     <Box width={[1, 1, 0.33]} px={4} mt={2}>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Flex, Button, SecondaryButton } from 'serverless-design-system/src';
 
+// TODO: Remove hardcoded pixels
 const Actions = () => (
   <Flex
     flexDirection={['column', 'column', 'row']}

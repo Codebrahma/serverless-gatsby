@@ -15,9 +15,9 @@ import gatewayIllustration3 from '../../../assets/images/gateway-illustration3.p
 const UseCase = ({ title, description, imgSrc, reverse }) => (
   <Flex flexDirection={['column', 'column', 'row']} py={[3, 3, 5]}>
     <Flex
-      width={[1, 1, 0.5]}
+      width={[1, 1, 5/10]}
       mb={2}
-      pr={[0, 0, 55, 110]}
+      pr={[0, 0, '55px', '110px']}
       order={reverse ? [1, 1, 2] : [2, 2, 1]}
       flexDirection="column"
     >
@@ -25,7 +25,7 @@ const UseCase = ({ title, description, imgSrc, reverse }) => (
       <P>{ description }</P>
     </Flex>
     <Flex
-      width={[1, 1, 0.5]}
+      width={[1, 1, 5/10]}
       mb={2}
       justifyContent="center"
       order={reverse ? [2, 2, 1] : [1, 1, 2]}
@@ -35,7 +35,7 @@ const UseCase = ({ title, description, imgSrc, reverse }) => (
         alt={title}
         maxWidth={1}
         width={0.6}
-        maxHeight={240}
+        maxHeight="240px"
         my="auto"
       />
     </Flex>

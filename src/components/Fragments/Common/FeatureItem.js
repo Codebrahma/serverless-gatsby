@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import {
   Box,
   Heading,
-  P
+  P,
+  Image,
 } from 'serverless-design-system/src';
 
 // TODO: Add counter based number for each image
 const FeatureItem = ({ header, img, content }) => (
   <Box width={[1, 1, 1/2]} pr="100px" pb="70px">
-    <img src={img} />
+    <Image src={img} />
     <Heading.h3 fontFamily="SoleilBk">{header}</Heading.h3>
     <P>{content}</P>
   </Box>

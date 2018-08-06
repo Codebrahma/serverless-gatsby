@@ -21,14 +21,11 @@ import TrustedClients from '../components/TrustedClients';
  }
 
 export default Home;
-
-// TODO: Pass down all images from each route page.
-// Bolt image is shared as example.
 export const pageQuery = graphql`
 query HeaderImageQuery {
-  headerImage: imageSharp(id: { regex: "/bolt/" }) {
-    sizes(maxWidth: 1240 ) {
-      ...GatsbyImageSharpSizes
+  imageSharp(id: { regex: "/bolt/" }) {
+    resolutions(width: 200) {
+      src
     }
   }
 }

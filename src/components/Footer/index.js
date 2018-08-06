@@ -33,7 +33,7 @@ const FooterWrapper = ({ prefooter }) => (
     >
       <Image src={glitchEffect} mt="-20px"/>
       <Box width={1} px={[0, 0, 2]}>
-        { prefooter() }
+        {  prefooter ? prefooter() : null }
         <FooterIcon />
       </Box>
       <Flex width={1} px={2} flexWrap="wrap">

@@ -12,7 +12,6 @@ const EventGateway = () => (
     <Hero />
     <Box px={2}>
       <UseCase />
-      <Testimonial />
       <Features />
     </Box>
   </DefaultLayout>

@@ -9,7 +9,7 @@ import {
 import SubMenuTitle from './SubMenuTitle';
 import SubMenuItem from './SubMenuItem';
 
-import NavLink from './NavLink';
+import NavLink from '../../../../Fragments/Common/NavLink';
 import { developers } from './navigationPath';
 
 const SubMenu = ({ title, options }) => (

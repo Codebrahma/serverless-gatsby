@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
@@ -27,5 +28,17 @@ const NavLink = ({ to, crossDomain, children, completed }) => {
     )
   }
 }
+
+NavLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  crossDomain: PropTypes.bool,
+  completed: PropTypes.bool,
+};
+
+NavLink.defaultProps = {
+  crossDomain: false,
+  completed: false,
+};
 
 export default NavLink;

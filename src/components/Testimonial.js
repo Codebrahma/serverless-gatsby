@@ -76,7 +76,7 @@ const comp = ({
 };
 
 comp.propTypes = {
-  img: PropTypes.object.isRequired,
+  img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   designation: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,

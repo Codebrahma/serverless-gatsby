@@ -5,7 +5,7 @@ import {
 } from 'serverless-design-system/src';
 
 import SubMenuItem from './SubMenuItem';
-import NavLink from './NavLink';
+import NavLink from '../../../../Fragments/Common/NavLink';
 import { resources } from './navigationPath';
 
 export default () => (

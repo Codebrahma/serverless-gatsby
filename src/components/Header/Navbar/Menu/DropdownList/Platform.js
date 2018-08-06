@@ -9,7 +9,7 @@ import {
   ListItem,
 } from 'serverless-design-system/src';
 
-import NavLink from './NavLink';
+import NavLink from '../../../../Fragments/Common/NavLink';
 import { platform } from './navigationPath';
 
 const platformMenuConfig = [

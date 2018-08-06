@@ -7,21 +7,14 @@ import {
   P
 } from 'serverless-design-system/src';
 
+import FeatureItem from '../../../components/Fragments/Common/FeatureItem';
+
 import minimumConfiguration from '../../../assets/images/minimumConfiguration.png';
 import robustEcosystem from '../../../assets/images/robustEcosystem.png';
 import multiLingual from '../../../assets/images/multiLingual.png';
 import cloudAgnostic from '../../../assets/images/cloudAgnostic.png';
 import appLifecycleManagement from '../../../assets/images/appLifecycleManagement.png';
 import streamingLogs from '../../../assets/images/streamingLogs.png';
-
-// TODO: Add counter based number for each image
-const FeatureItem = ({ header, img, content }) => (
-  <Box width={[1, 1, 0.5]} pr={100} pb={70}>
-    <img src={img} mb={2}/>
-    <Heading.h3 fontFamily="SoleilBk">{header}</Heading.h3>
-    <P>{content}</P>
-  </Box>
-);
 
 const featureItemsData = [
   {
@@ -57,12 +50,13 @@ const featureItemsData = [
 ];
 
 const Features = () => (
-  <Flex flexDirection="column" px={50} mt={6}>
+  <Flex flexDirection="column" px="50px" mt={6}>
     <Heading.h2 align="center" fontFamily="SoleilSb" my={4}>Features</Heading.h2>
     <Flex flexDirection="row" flexWrap="wrap" mt={3}>
       {
         featureItemsData.map(({ header, img, content }) => (
           <FeatureItem
+            key={header}
             header={header}
             content={content}
             img={img}

@@ -26,6 +26,8 @@ const cases = [
 const UseCaseWrapper = () => (
   <UseCases
     cases={cases}
+    useCaseHeader="Serverless Dashboard Use Cases"
+    useCaseSubHeader="These are the 3 main use cases for the Serverless Dashboard that you should know about."
   />
 );
 

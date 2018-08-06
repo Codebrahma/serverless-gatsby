@@ -26,6 +26,8 @@ const cases = [
 const UseCaseWrapper = () => (
   <UseCases
     cases={cases}
+    useCaseHeader="Event Gateway Use Cases"
+    useCaseSubHeader="These are the 3 main use cases for Event Gateway that you should know about."
   />
 );
 

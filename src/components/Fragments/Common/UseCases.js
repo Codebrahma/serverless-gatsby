@@ -8,13 +8,13 @@ import {
   P,
 } from 'serverless-design-system/src';
 
-const UseCase = ({ title, description, imgSrc, index }) => (
+const UseCase = ({ title, description, imgSrc, index, evenIndex }) => (
   <Flex flexDirection={['column', 'column', 'row']} py={[3, 3, 5]}>
     <Flex
       width={[1, 1, 5/10]}
       mb={2}
       pr={[0, 0, '55px', '110px']}
-      order={index % 2 === 0 ? [1, 1, 2] : [2, 2, 1]}
+      order={evenIndex ? [1, 1, 2] : [2, 2, 1]}
       flexDirection="column"
     >
       <Heading.h3 fontFamily="SoleilBk">{title}</Heading.h3>
@@ -24,7 +24,7 @@ const UseCase = ({ title, description, imgSrc, index }) => (
       width={[1, 1, 5/10]}
       mb={2}
       justifyContent="center"
-      order={index % 2 === 0 ? [2, 2, 1] : [1, 1, 2]}
+      order={evenIndex ? [2, 2, 1] : [1, 1, 2]}
     >
       <Image
         src={imgSrc}
@@ -38,22 +38,22 @@ const UseCase = ({ title, description, imgSrc, index }) => (
   </Flex>
 );
 
-const UseCases = ({ cases }) => {
+const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
   return (
     <Flex flexDirection="column" justifyContent="center">
       <Box mt={[5, 5, 8]}>
         <P align="center" fontSize={6} color="black" m={1}>
-          Serverless Dashboard Use Cases
+          {useCaseHeader}
         </P>
         <P align="center" fontSize={0}>
-          These are the 3 main use cases for the Serverless Dashboard that you should know about.
+          {useCaseSubHeader}
         </P>
       </Box>
       {
         cases.map(({ title, description, imgSrc }, index) => (
           <UseCase
             key={title}
-            index={index}
+            evenIndex={index % 2 === 1}
             title={title}
             description={description}
             imgSrc={imgSrc}

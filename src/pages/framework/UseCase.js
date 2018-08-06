@@ -27,6 +27,8 @@ const cases = [
 const UseCaseWrapper = () => (
   <UseCases
     cases={cases}
+    useCaseHeader="Serverless Framework Use Cases"
+    useCaseSubHeader="These are the 3 main use cases for the Serverless Framework that you should know about."
   />
 );
 

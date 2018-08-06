@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from 'gatsby-link';
 import { Box, Container, Flex, Logo } from 'serverless-design-system/src'
 import Navbar from './Navbar'
 import NavButton from './NavButton';
@@ -35,12 +35,14 @@ class Header extends React.Component {
             justifyContent='space-between'
             px={15}
           >
-            <Logo
-              src={logo}
-              height={['22px', '22px', '22px', '30px']}
-              width={['125px', '125px', '125px', '170px']}
-              alt="Serverless"
-            />
+            <Link to='/'>
+              <Logo
+                src={logo}
+                height={['22px', '22px', '22px', '30px']}
+                width={['125px', '125px', '125px', '170px']}
+                alt="Serverless"
+              />
+            </Link>
             <NavButton
               onClick={this.toggleNavbarVisibility}
               active={isNavbarActive}

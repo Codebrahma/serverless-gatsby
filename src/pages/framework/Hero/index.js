@@ -8,8 +8,9 @@ import {
 import Header from './Header';
 import HeroImage from './HeroImage';
 import Advantage from './Advantage';
-import Actions from './Actions';
 import CloudProviders from './CloudProviders';
+
+import HeroActions from '../../../components/Fragments/Common/HeroAction';
 
 export default () => (
   <Box width={1}>
@@ -27,7 +28,10 @@ export default () => (
           <Header />
           <HeroImage />
           <Advantage />
-          <Actions />
+          <HeroActions
+            firstBtn={{ name: 'quick start', to: '/framework/docs/getting-started/', completed: false }}
+            secondBtn={{ name: 'sign up', to: 'https://dashboard.serverless.com/', crossDomain: true, completed: false }}
+          />
           <CloudProviders />
         </Flex>
       </Container>

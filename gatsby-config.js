@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/assets/images/favicon.png",
+        logo: "./src/assets/images/favicon.ico",
         appName: 'Serverless',
         dir: 'auto',
         lang: 'en-US',

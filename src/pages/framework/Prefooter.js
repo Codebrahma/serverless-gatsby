@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { Flex, Box, TextWithIcon, Heading, Button, P } from 'serverless-design-system/src';
+import createPrefooter from '../../components/Prefooter';
+import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 
-import whiteRectangleDots from '../../../assets/images/whiteRectangleDots.png';
-
-const LeftRenderer = () => (
+const LeftColumn = () => (
   <Box
     width={[1, 1, 1/2]}
     py={[3, 5, '150px']}
@@ -21,26 +21,22 @@ const LeftRenderer = () => (
       iconLeft='-80px'
       backgroundSize={[0, 0, 'initial']}
     >
-      <Heading.h2 color="white">
-        Ready to get started?
-      </Heading.h2>
+      <Heading.h2 color="white">New to serverless?</Heading.h2>
     </TextWithIcon>
-    <P color="white">
-      Dig deeper into Event Gateway use cases, or check out the examples in our open source repo.
-    </P>
+    <P color="white">To get started, pop open your terminal & run</P>
+    <P color="white">npm install serverless -g</P>
   </Box>
 );
 
-const RightRenderer = () => (
+const RightColumn = () => (
   <Flex flexDirection="column">
     <Box pb={2}>
       <Button
         width="280px"
         border="2"
         color="white"
-        px='2.5rem'
-      >
-          getting started
+        >
+          documentation
         </Button>
     </Box>
     <Box pb={2}>
@@ -51,7 +47,7 @@ const RightRenderer = () => (
         color="white"
         px={1}
       >
-        learn more
+        serverless example
       </Button>
     </Box>
     <Box>
@@ -61,13 +57,10 @@ const RightRenderer = () => (
         hoverColor="white"
         color="white"
       >
-        examples
+        github repo
       </Button>
     </Box>
   </Flex>
 );
 
-export default {
-  LeftRenderer,
-  RightRenderer,
-}
+export default createPrefooter(LeftColumn, RightColumn);

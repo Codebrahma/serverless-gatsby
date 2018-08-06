@@ -1,22 +1,22 @@
 import React from 'react'
 
-import { Box } from 'serverless-design-system/src';
 import Hero from './home/Hero';
 import Benefits from './home/Benefits';
 import Testimonial from './home/Testimonial';
 import PlatformFeatures from './home/PlatformFeatures';
+import Prefooter from './home/Prefooter';
 import TrustedClients from '../components/TrustedClients';
+import DefaultLayout from '../layouts/Default';
 
-
- const Home = ({ data }) => {
+const Home = () => {
    return (
-    <Box width={1}>
+    <DefaultLayout prefooter={Prefooter}>
       <Hero />
       <Benefits />
       <Testimonial />
       <PlatformFeatures />
       <TrustedClients />
-    </Box>
+    </DefaultLayout>
   );
  }
 

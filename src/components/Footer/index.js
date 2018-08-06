@@ -12,18 +12,18 @@ import {
 } from 'serverless-design-system/src';
 
 import glitchEffect from '../../assets/images/glitchEffect.png';
-import DynamicContent from './DynamicContent';
 import FooterIcon from './FooterIcon';
 import FooterListItems from './FooterListItems';
 import Subscribe from './Subscribe';
 
 // TODO: Dynamic Footer. NextSteps component should be a custom renderer.
 // Self contained Root Renderer for footer
-const FooterWrapper = ({ path }) => (
+const FooterWrapper = ({ prefooter }) => (
   <Box
     bg="black"
     pt={[0, 0, '100px']}
     pb="100px"
+    mt={ prefooter ? [ '250px', '250px', '115px' ] : 0 }
   >
     <Flex
       flexDirection="row"
@@ -33,7 +33,7 @@ const FooterWrapper = ({ path }) => (
     >
       <Image src={glitchEffect} mt="-20px"/>
       <Box width={1} px={[0, 0, 2]}>
-        <DynamicContent path={path}/>
+        { prefooter() }
         <FooterIcon />
       </Box>
       <Flex width={1} px={2} flexWrap="wrap">

@@ -5,16 +5,18 @@ import Testimonial from './Testimonial';
 import Hero from './Hero';
 import UseCase from './UseCase';
 import Features from './Features';
+import Prefooter from './Prefooter';
+import DefaultLayout from '../../layouts/Default';
 
 const FrameWorks = () => (
-  <Box width={1} mb={200}>
+  <DefaultLayout prefooter={Prefooter}>
     <Hero />
     <Box px={2}>
       <UseCase />
       <Testimonial />
       <Features />
     </Box>
-  </Box>
+  </DefaultLayout>
 );
 
 export default FrameWorks;

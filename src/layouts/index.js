@@ -4,8 +4,7 @@ import Helmet from 'react-helmet'
 import { injectGlobal, ThemeProvider } from 'styled-components';
 
 import theme from 'serverless-design-system/src/theme';
-import { Flex, Box } from 'serverless-design-system/src';
-import { Header, Footer } from '../components';
+import { Flex } from 'serverless-design-system/src';
 import serverless from '../assets/fonts/serverless.otf';
 import soleil from '../assets/fonts/soleil.otf';
 import soleilBk from '../assets/fonts/soleil-bk.otf';
@@ -59,7 +58,7 @@ injectGlobal`
   }
 `;
 
-const Layout = ({ children, data, location }) => (
+const Layout = ({ children, data }) => (
   <Flex width={1}>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -69,24 +68,7 @@ const Layout = ({ children, data, location }) => (
       ]}
     />
     <ThemeProvider theme={theme}>
-      <Flex
-        flexDirection='column'
-        width={1}
-      >
-        <Header />
-        <Box
-          display='block'
-          width={1}
-          mt={[
-            theme.navbarHeights.mobile,
-            theme.navbarHeights.mobile,
-            theme.navbarHeights.desktop
-          ]}
-        >
-          {children()}
-          <Footer path={location.pathname} />
-        </Box>
-      </Flex>
+      { children() }
     </ThemeProvider>
   </Flex>
 )

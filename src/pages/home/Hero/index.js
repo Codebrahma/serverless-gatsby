@@ -1,20 +1,21 @@
 import React from 'react';
-import { Box, Container } from 'serverless-design-system/src';
 
+import HeroWrapper from '../../../components/HeroWrapper';
 import HeroHeader from './Header';
 import HeroImage from './Image';
 import HeroActions from './Actions';
 import HeroFooter from './Footer';
 
+import HomePageHeroSectionBackground from '../../../assets/images/home.png';
+
 export default () => (
-  <Box width={1}>
-    <Box bg='black'>
-      <Container px={0} py={4}>
-        <HeroHeader />
-        <HeroImage />
-        <HeroActions />
-        <HeroFooter />
-      </Container>
-    </Box>
-  </Box>
+  <HeroWrapper
+    backgroundImage={`url(${HomePageHeroSectionBackground})`}
+    backgroundSize="contain"
+  >
+    <HeroHeader />
+    <HeroImage />
+    <HeroActions />
+    <HeroFooter />
+  </HeroWrapper>
 );

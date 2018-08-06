@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from "gatsby-image";
+
 import { Box } from 'serverless-design-system/src';
 import Hero from './home/Hero';
 import Benefits from './home/Benefits';
@@ -21,12 +21,3 @@ import TrustedClients from '../components/TrustedClients';
  }
 
 export default Home;
-export const pageQuery = graphql`
-query HeaderImageQuery {
-  imageSharp(id: { regex: "/bolt/" }) {
-    resolutions(width: 200) {
-      src
-    }
-  }
-}
-`

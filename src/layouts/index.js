@@ -64,8 +64,8 @@ const Layout = ({ children, data, location }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Serverless' },
+        { name: 'keywords', content: 'serverless, AWS Lambda' },
       ]}
     />
     <ThemeProvider theme={theme}>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Serverless - The serverless application framework powered by AWS Lambda, API gateway and more',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -7,21 +7,14 @@ import {
   P
 } from 'serverless-design-system/src';
 
+import FeatureItem from '../../../components/Fragments/Common/FeatureItem';
+
 import gatewayFeature1 from '../../../assets/images/event-gateway-feature1.png';
 import gatewayFeature2 from '../../../assets/images/event-gateway-feature2.png';
 import gatewayFeature3 from '../../../assets/images/event-gateway-feature3.png';
 import gatewayFeature4 from '../../../assets/images/event-gateway-feature4.png';
 import gatewayFeature5 from '../../../assets/images/event-gateway-feature5.png';
 import gatewayFeature6 from '../../../assets/images/event-gateway-feature6.png';
-
-// TODO: Add counter based number for each image
-const FeatureItem = ({ header, img, content }) => (
-  <Box width={[1, 1, 1/2]} pr="100px" pb="70px">
-    <img src={img} mb={2}/>
-    <Heading.h3 fontFamily="SoleilBk">{header}</Heading.h3>
-    <P>{content}</P>
-  </Box>
-);
 
 const featureItemsData = [
   {

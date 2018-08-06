@@ -7,21 +7,14 @@ import {
   P
 } from 'serverless-design-system/src';
 
+import FeatureItem from '../../../components/Fragments/Common/FeatureItem';
+
 import minimumConfiguration from '../../../assets/images/minimumConfiguration.png';
 import robustEcosystem from '../../../assets/images/robustEcosystem.png';
 import multiLingual from '../../../assets/images/multiLingual.png';
 import cloudAgnostic from '../../../assets/images/cloudAgnostic.png';
 import appLifecycleManagement from '../../../assets/images/appLifecycleManagement.png';
 import streamingLogs from '../../../assets/images/streamingLogs.png';
-
-// TODO: Add counter based number for each image
-const FeatureItem = ({ header, img, content }) => (
-  <Box width={[1, 1, 1/2]} pr="100px" pb="70px">
-    <img src={img} mb={2}/>
-    <Heading.h3 fontFamily="SoleilBk">{header}</Heading.h3>
-    <P>{content}</P>
-  </Box>
-);
 
 const featureItemsData = [
   {

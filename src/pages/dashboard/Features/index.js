@@ -2,10 +2,10 @@ import React from 'react';
 
 import {
   Flex,
-  Box,
   Heading,
-  P
 } from 'serverless-design-system/src';
+
+import FeatureItem from '../../../components/Fragments/Common/FeatureItem';
 
 import dashboardFeature1 from '../../../assets/images/dashboard-feature-1.png';
 import dashboardFeature2 from '../../../assets/images/dashboard-feature-2.png';
@@ -13,15 +13,6 @@ import dashboardFeature3 from '../../../assets/images/dashboard-feature-3.png';
 import dashboardFeature4 from '../../../assets/images/dashboard-feature-4.png';
 import dashboardFeature5 from '../../../assets/images/dashboard-feature-5.png';
 import dashboardFeature6 from '../../../assets/images/dashboard-feature-6.png';
-
-// TODO: Add counter based number for each image
-const FeatureItem = ({ header, img, content }) => (
-  <Box width={[1, 1, 1/2]} pr="100px" pb="70px">
-    <img src={img} mb={2}/>
-    <Heading.h3 fontFamily="SoleilBk">{header}</Heading.h3>
-    <P>{content}</P>
-  </Box>
-);
 
 const featureItemsData = [
   {

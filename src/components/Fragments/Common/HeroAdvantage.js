@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import {
   Flex,
   Box,
@@ -41,5 +41,10 @@ const HeroAdvantage = ({ title, description }) => (
     </P>
   </Flex>
 );
+
+HeroAdvantage.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default HeroAdvantage;

@@ -1,5 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
+import PropTypes from 'prop-types';
 import { Flex, Button, SecondaryButton } from 'serverless-design-system/src';
 
 const HeroActions = ({
@@ -32,4 +33,8 @@ const HeroActions = ({
   </Flex>
 );
 
+HeroActions.PropTypes = {
+  firstBtn: PropTypes.object.isRequired,
+  secondBtn: PropTypes.object.isRequired,
+}
 export default HeroActions;

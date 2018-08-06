@@ -56,6 +56,7 @@ const Features = () => (
       {
         featureItemsData.map(({ header, img, content }) => (
           <FeatureItem
+            key={header}
             header={header}
             content={content}
             img={img}

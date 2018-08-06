@@ -13,7 +13,7 @@ import redRectangleDots from '../../../assets/images/redRectangleDots.png';
 // TODO: Remove any hardcoded pixels
 const Advantage = ({ title, description }) => (
   <Flex
-    width={[1, 1, 0.33]}
+    width={[1, 1, 1/3]}
     px={2}
     mt={2}
     flexDirection="column"

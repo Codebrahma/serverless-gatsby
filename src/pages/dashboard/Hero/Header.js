@@ -15,7 +15,7 @@ const Header = () => (
     <Flex
       height='86px'
       justifyContent="center"
-      my='16px'
+      my={2}
     >
       <Image
         src={dashboardIcon}

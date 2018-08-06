@@ -16,7 +16,7 @@ import gatewayFeature6 from '../../../assets/images/event-gateway-feature6.png';
 
 // TODO: Add counter based number for each image
 const FeatureItem = ({ header, img, content }) => (
-  <Box width={[1, 1, 0.5]} pr={100} pb={70}>
+  <Box width={[1, 1, 1/2]} pr="100px" pb="70px">
     <img src={img} mb={2}/>
     <Heading.h3 fontFamily="SoleilBk">{header}</Heading.h3>
     <P>{content}</P>

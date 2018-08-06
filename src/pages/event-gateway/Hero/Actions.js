@@ -12,8 +12,8 @@ const Actions = () => (
     mx='auto'
     my={3}
   >
-    <Button mx={1} my={1} width={'280px'} border={0}>sign up</Button>
-    <SecondaryButton mx={1} my={1} width={'280px'}>contact sales</SecondaryButton>
+    <Button mx={1} my={1} width="280px" border={0}>sign up</Button>
+    <SecondaryButton mx={1} my={1} width="280px">contact sales</SecondaryButton>
   </Flex>
 );
 

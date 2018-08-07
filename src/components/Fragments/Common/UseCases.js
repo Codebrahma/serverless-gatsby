@@ -1,15 +1,19 @@
 import React from 'react';
 
 import {
-  Flex,
   Box,
+  Container,
+  Flex,
   Heading,
   Image,
   P,
 } from 'serverless-design-system/src';
 
 const UseCase = ({ title, description, imgSrc, index, evenIndex }) => (
-  <Flex flexDirection={['column', 'column', 'row']} py={[3, 3, 5]}>
+  <Flex
+    flexDirection={['column', 'column', 'row']}
+    py={[3, 3, 5]}
+  >
     <Flex
       width={[1, 1, 5/10]}
       mb={2}
@@ -17,8 +21,10 @@ const UseCase = ({ title, description, imgSrc, index, evenIndex }) => (
       order={evenIndex ? [1, 1, 2] : [2, 2, 1]}
       flexDirection="column"
     >
-      <Heading.h3 fontFamily="SoleilBk">{title}</Heading.h3>
-      <P>{ description }</P>
+      <Heading.h3 fontFamily="SoleilBk">
+        {title}
+      </Heading.h3>
+      <P>{description}</P>
     </Flex>
     <Flex
       width={[1, 1, 5/10]}
@@ -40,27 +46,40 @@ const UseCase = ({ title, description, imgSrc, index, evenIndex }) => (
 
 const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
   return (
-    <Flex flexDirection="column" justifyContent="center">
-      <Box mt={[5, 5, 8]}>
-        <P align="center" fontSize={6} color="black" m={1}>
-          {useCaseHeader}
-        </P>
-        <P align="center" fontSize={0}>
-          {useCaseSubHeader}
-        </P>
-      </Box>
-      {
-        cases.map(({ title, description, imgSrc }, index) => (
-          <UseCase
-            key={title}
-            evenIndex={index % 2 === 1}
-            title={title}
-            description={description}
-            imgSrc={imgSrc}
-          />
-        ))
-      }
-    </Flex>
+    <Container px={2}>
+      <Flex
+        flexDirection="column"
+        justifyContent="center"
+      >
+        <Box mt={[5, 5, 8]}>
+          <P
+            align="center"
+            fontSize={6}
+            color="black"
+            m={1}
+          >
+            {useCaseHeader}
+          </P>
+          <P
+            align="center"
+            fontSize={0}
+          >
+            {useCaseSubHeader}
+          </P>
+        </Box>
+        {
+          cases.map(({ title, description, imgSrc }, index) => (
+            <UseCase
+              key={title}
+              evenIndex={index % 2 === 1}
+              title={title}
+              description={description}
+              imgSrc={imgSrc}
+            />
+          ))
+        }
+      </Flex>
+    </Container>
   );
 }
 

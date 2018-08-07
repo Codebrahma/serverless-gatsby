@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-  Flex,
-  Heading,
-} from 'serverless-design-system/src';
-
-import FeatureItem from '../../../components/Fragments/Common/FeatureItem';
-
+import Features from '../../../components/Fragments/Common/Features';
 import dashboardFeature1 from '../../../assets/images/dashboard-feature-1.png';
 import dashboardFeature2 from '../../../assets/images/dashboard-feature-2.png';
 import dashboardFeature3 from '../../../assets/images/dashboard-feature-3.png';
@@ -47,22 +41,6 @@ const featureItemsData = [
   },
 ];
 
-const Features = () => (
-  <Flex flexDirection="column" px={50} mt={6}>
-    <Heading.h2 align="center" fontFamily="SoleilSb" my={4}>Features</Heading.h2>
-    <Flex flexDirection="row" flexWrap="wrap" mt={3}>
-      {
-        featureItemsData.map(({ header, img, content }) => (
-          <FeatureItem
-            key={header}
-            header={header}
-            content={content}
-            img={img}
-          />
-        ))
-      }
-    </Flex>
-  </Flex>
+export default () => (
+  <Features features={featureItemsData} />
 );
-
-export default Features;

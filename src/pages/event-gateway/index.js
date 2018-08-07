@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box } from 'serverless-design-system/src';
 
 import Hero from './Hero';
 import UseCase from './UseCase';
@@ -13,10 +12,8 @@ const EventGateway = () => (
     transparentHeader
   >
     <Hero />
-    <Box px={2}>
-      <UseCase />
-      <Features />
-    </Box>
+    <UseCase />
+    <Features />
   </DefaultLayout>
 );
 

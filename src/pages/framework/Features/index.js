@@ -1,14 +1,6 @@
 import React from 'react';
 
-import {
-  Flex,
-  Box,
-  Heading,
-  P
-} from 'serverless-design-system/src';
-
-import FeatureItem from '../../../components/Fragments/Common/FeatureItem';
-
+import Features from '../../../components/Fragments/Common/Features';
 import minimumConfiguration from '../../../assets/images/minimumConfiguration.png';
 import robustEcosystem from '../../../assets/images/robustEcosystem.png';
 import multiLingual from '../../../assets/images/multiLingual.png';
@@ -44,27 +36,11 @@ const featureItemsData = [
   },
   {
     header: 'Streaming Logs',
-    img: appLifecycleManagement,
+    img: streamingLogs,
     content: 'Streaming logs from your functions directly in to your CLI, making it easy to rapidly redug and troubleshoot.',
   },
 ];
 
-const Features = () => (
-  <Flex flexDirection="column" px="50px" mt={6}>
-    <Heading.h2 align="center" fontFamily="SoleilSb" my={4}>Features</Heading.h2>
-    <Flex flexDirection="row" flexWrap="wrap" mt={3}>
-      {
-        featureItemsData.map(({ header, img, content }) => (
-          <FeatureItem
-            key={header}
-            header={header}
-            content={content}
-            img={img}
-          />
-        ))
-      }
-    </Flex>
-  </Flex>
+export default () => (
+  <Features features={featureItemsData} />
 );
-
-export default Features;

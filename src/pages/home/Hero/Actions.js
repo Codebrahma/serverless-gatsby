@@ -12,7 +12,6 @@ const callToActionProps = {
 
 export default () => (
   <Flex
-    display='flex'
     flexDirection={['column', 'column', 'row']}
     width={[1, 1, 3/4]}
     alignItems='center'

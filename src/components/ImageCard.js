@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
   Box,
+  Flex,
   Heading,
   Image as Img,
   P
@@ -12,16 +13,14 @@ export default ({ img, title, description, children }) => (
     px={[2, 3, 4]}
     py={[2, 2, 4]}
   >
-    <Box
-      display="flex"
-    >
+    <Flex>
       <Img
         height="100%"
         src={img}
         alt={title}
         mx="auto"
       />
-    </Box>
+    </Flex>
 
     <Heading.h3
       align="center"

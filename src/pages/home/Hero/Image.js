@@ -43,7 +43,6 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
   >
     <Flex.relative
       height='86px'
-      display='flex'
       alignItems='center'
       my='16px'
     >

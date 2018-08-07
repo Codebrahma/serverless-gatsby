@@ -27,8 +27,7 @@ const TrustedClients = () => (
     pb={[6, 6, 9, 12]}
   >
     <Container>
-      <Flex
-        alignItems='center'
+      <Flex.verticallyCenter
         justifyContent='space-between'
         flexDirection={['column', 'column', 'row']}
         width={1}
@@ -38,7 +37,7 @@ const TrustedClients = () => (
         <TrustedClientLogo src={nordstromLogo} altText='Nordstrom' />
         <TrustedClientLogo src={expediaLogo} altText='Expedia' />
         <TrustedClientLogo src={reutersLogo} altText='Reuters' />
-      </Flex>
+      </Flex.verticallyCenter>
     </Container>
   </Box>
 );

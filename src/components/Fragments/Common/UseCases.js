@@ -26,10 +26,9 @@ const UseCase = ({ title, description, imgSrc, index, evenIndex }) => (
       </Heading.h3>
       <P>{description}</P>
     </Flex>
-    <Flex
+    <Flex.horizontallyCenter
       width={[1, 1, 5/10]}
       mb={2}
-      justifyContent="center"
       order={evenIndex ? [2, 2, 1] : [1, 1, 2]}
     >
       <Image
@@ -40,17 +39,14 @@ const UseCase = ({ title, description, imgSrc, index, evenIndex }) => (
         maxHeight="240px"
         my="auto"
       />
-    </Flex>
+    </Flex.horizontallyCenter>
   </Flex>
 );
 
 const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
   return (
     <Container px={2}>
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-      >
+      <Flex.horizontallyCenter flexDirection="column">
         <Box mt={[5, 5, 8]}>
           <P
             align="center"
@@ -78,7 +74,7 @@ const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
             />
           ))
         }
-      </Flex>
+      </Flex.horizontallyCenter>
     </Container>
   );
 }

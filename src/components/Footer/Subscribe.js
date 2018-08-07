@@ -19,9 +19,8 @@ const Subscribe = () => (
         Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
       </P>
     </Box>
-    <Flex
+    <Flex.horizontallyCenter
       flexDirection={['column', 'column', 'row']}
-      justifyContent="center"
     >
       <TextField
         color="white"
@@ -47,7 +46,7 @@ const Subscribe = () => (
       >
         Sign up
       </Button>
-    </Flex>
+    </Flex.horizontallyCenter>
     <Box py={3}>
       <Image mr={3} src={footerFb} />
       <Image mr={3} src={footerInsta} />

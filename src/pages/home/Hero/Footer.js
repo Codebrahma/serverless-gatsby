@@ -11,13 +11,11 @@ const StyledLink = styled(Link)`
 
 export default () => (
   <StyledLink to='/overview-video'>
-    <Flex
+    <Flex.center
       width={[ 1, 1, 3/4 ]}
       my={[2, 4, 5]}
       mx={'auto'}
       flexDirection='row'
-      justifyContent='center'
-      alignItems='center'
     >
       <Image
         src={videoIcon}
@@ -35,6 +33,6 @@ export default () => (
       >
         watch the video to learn more
       </Heading.h4>
-    </Flex>
+    </Flex.center>
   </StyledLink>
 );

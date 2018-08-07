@@ -11,17 +11,19 @@ import dashboardIcon from '../../../assets/images/icon-platform-dash.png';
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
-  <Flex flexDirection="column" justifyContent="center" mb={2}>
-    <Flex
+  <Flex.horizontallyCenter
+    flexDirection="column"
+    mb={2}
+  >
+    <Flex.horizontallyCenter
       height='86px'
-      justifyContent="center"
       my={2}
     >
       <Image
         src={dashboardIcon}
         maxHeight='67px'
       />
-    </Flex>
+    </Flex.horizontallyCenter>
     <Heading.h2
       align='center'
       fontFamily='Serverless'
@@ -40,8 +42,7 @@ const Header = () => (
     >
       dashboard
     </Heading.h1>
-    <Flex
-      justifyContent="center"
+    <Flex.horizontallyCenter
       px={[2, 2, 0]}
       pb={1}
     >
@@ -54,8 +55,8 @@ const Header = () => (
       >
         Visualize, monitor & collaborate on serverless applications
       </P>
-    </Flex>
-  </Flex>
+    </Flex.horizontallyCenter>
+  </Flex.horizontallyCenter>
 );
 
 export default Header;

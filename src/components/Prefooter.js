@@ -12,19 +12,17 @@ export default (LeftColumn, RightColumn) => (
       mb="-290px"
     >
       <LeftColumn />
-      <Flex
+      <Flex.center
         width={[1, 1, 1/2]}
         py={[5, 5, '150px']}
         px={[3, 3, '100px']}
         boxSizing="border-box"
-        alignItems="center"
-        justifyContent="center"
         flexDirection="column"
         background={`#fd5750 url(${RightBoxBg}) no-repeat`}
         backgroundSize="cover"
       >
         <RightColumn />
-      </Flex>
+      </Flex.center>
     </Flex.relative>
   )
 );

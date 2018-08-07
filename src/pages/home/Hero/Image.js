@@ -36,10 +36,9 @@ const HeroImageWrapper = withBeforeAfter(
 );
 
 const ImageSection = ({ imgSrc, title, subtitle }) => (
-  <Flex
+  <Flex.verticallyCenter
     flexDirection='column'
     width={[1, 1, 1/3]}
-    alignItems='center'
   >
     <Flex.relative
       height='86px'
@@ -54,7 +53,7 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
     </Flex.relative>
     <Heading.h5 color='white'>{title}</Heading.h5>
     <Heading.h4 color='white' fontWeight='bold'>{subtitle}</Heading.h4>
-  </Flex>
+  </Flex.verticallyCenter>
 );
 
 export default () => (

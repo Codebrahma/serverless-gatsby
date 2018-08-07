@@ -11,11 +11,9 @@ const callToActionProps = {
 };
 
 export default () => (
-  <Flex
+  <Flex.center
     flexDirection={['column', 'column', 'row']}
     width={[1, 1, 3/4]}
-    alignItems='center'
-    justifyContent='center'
     mx='auto'
     my={3}
   >
@@ -28,5 +26,5 @@ export default () => (
     <SecondaryButton {...callToActionProps}>
       enterprise demo
     </SecondaryButton>
-  </Flex>
+  </Flex.center>
 );

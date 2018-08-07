@@ -26,9 +26,9 @@ export default () => (
           title='Automatic Scaling'
           description='Forget about provisioning & managing your server fleet. Serverless applications scale with demand'
         >
-          <Flex justifyContent='center'>
+          <Flex.horizontallyCenter>
             <Button border='0'>learn more</Button>
-          </Flex>
+          </Flex.horizontallyCenter>
         </ImageCard>
       </Box>
       <Box width={[1, 1, 1/3]} my={2}>
@@ -37,9 +37,9 @@ export default () => (
           title='Pay-per execution'
           description='Never pay for idle. Serverless applications charge you only when they run the service.'
         >
-          <Flex justifyContent='center'>
+          <Flex.horizontallyCenter>
             <Button border='0'>learn more</Button>
-          </Flex>
+          </Flex.horizontallyCenter>
         </ImageCard>
       </Box>
       <Box width={[1, 1, 1/3]} my={2}>
@@ -48,9 +48,9 @@ export default () => (
           title='Low Overhead'
           description='Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.'
         >
-          <Flex justifyContent='center'>
+          <Flex.horizontallyCenter>
             <Button border='0'>learn more</Button>
-          </Flex>
+          </Flex.horizontallyCenter>
         </ImageCard>
       </Box>
     </Flex>

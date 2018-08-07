@@ -68,9 +68,8 @@ class Header extends React.Component {
         ]}
       >
         <Container>
-          <Flex
+          <Flex.verticallyCenter
             flexWrap='wrap'
-            alignItems='center'
             justifyContent='space-between'
             px={15}
           >
@@ -86,7 +85,7 @@ class Header extends React.Component {
               <NavButton />
               <Navbar />
             </NavbarContext.Provider>
-          </Flex>
+          </Flex.verticallyCenter>
         </Container>
       </Box.fixed>
     );

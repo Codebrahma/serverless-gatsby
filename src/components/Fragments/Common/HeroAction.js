@@ -17,11 +17,9 @@ const HeroActions = ({
     completed: sCompleted = false,
   }
 }) => (
-  <Flex
+  <Flex.center
     flexDirection={['column', 'column', 'row']}
     width={0.5}
-    justifyContent='center'
-    alignItems='center'
     mx='auto'
   >
     <NavLink to={firstLink} completed={fCompleted} crossDomain={fcrossDomain}>
@@ -30,7 +28,7 @@ const HeroActions = ({
     <NavLink to={secondLink} completed={sCompleted} crossDomain={scrossDomain}>
       <SecondaryButton mx={1} my={1} width="280px" border={0}>{sName}</SecondaryButton>
     </NavLink>
-  </Flex>
+  </Flex.center>
 );
 
 HeroActions.propTypes = {

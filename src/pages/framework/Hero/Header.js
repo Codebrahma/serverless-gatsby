@@ -11,10 +11,12 @@ import serverlessBolt from '../../../assets/images/serverlessBolt.png';
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
-  <Flex flexDirection="column" justifyContent="center" mb={2}>
-    <Flex
+  <Flex.horizontallyCenter
+    flexDirection="column"
+    mb={2}
+  >
+    <Flex.horizontallyCenter
       height='86px'
-      justifyContent="center"
       my={2}
     >
       <Image
@@ -22,7 +24,7 @@ const Header = () => (
         maxHeight='67px'
         maxWidth='70px'
       />
-    </Flex>
+    </Flex.horizontallyCenter>
     <Heading.h2
       align='center'
       fontFamily='Serverless'
@@ -41,8 +43,7 @@ const Header = () => (
     >
       framework
     </Heading.h1>
-    <Flex
-      justifyContent="center"
+    <Flex.horizontallyCenter
       px={[2, 2, 0]}
       pb={1}
     >
@@ -54,9 +55,8 @@ const Header = () => (
       >
         The easy, open way to build serverless applications
       </P>
-    </Flex>
-    <Flex
-      justifyContent="center"
+    </Flex.horizontallyCenter>
+    <Flex.horizontallyCenter
       px={[2, 2, 5, '18%']}
       pb={1}
     >
@@ -66,8 +66,8 @@ const Header = () => (
       >
         The Serverless Framework is an open-source CLI for building and deploying serverless applications. With over 6 million deployments handled, the Serverless Framework is the tool developers trust to build cloud applications.
       </P>
-    </Flex>
-  </Flex>
+    </Flex.horizontallyCenter>
+  </Flex.horizontallyCenter>
 );
 
 export default Header;

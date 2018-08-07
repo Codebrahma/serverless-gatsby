@@ -5,12 +5,11 @@ import createPrefooter from '../../components/Prefooter';
 import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 
 const LeftItem = () => (
-  <Box
+  <Flex.horizontallyCenter
     width={[1, 1, 1/2]}
     py={[3, 5, '150px']}
     px={[3, 5, '80px']}
     boxSizing="border-box"
-    justifyContent="center"
     flexDirection="column"
   >
     <TextWithIcon
@@ -28,7 +27,7 @@ const LeftItem = () => (
     <P color="white">
       Dig deeper into Event Gateway use cases, or check out the examples in our open source repo.
     </P>
-  </Box>
+  </Flex.horizontallyCenter>
 );
 
 const RightItem = () => (

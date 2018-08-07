@@ -5,12 +5,11 @@ import createPrefooter from '../../components/Prefooter';
 import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 
 const LeftColumn = () => (
-  <Box
+  <Flex.horizontallyCenter
     width={[1, 1, 1/2]}
     py={[3, 5, '150px']}
     px={[3, 5, '80px']}
     boxSizing="border-box"
-    justifyContent="center"
     flexDirection="column"
   >
     <TextWithIcon
@@ -25,7 +24,7 @@ const LeftColumn = () => (
     </TextWithIcon>
     <P color="white">To get started, pop open your terminal & run</P>
     <P color="white">npm install serverless -g</P>
-  </Box>
+  </Flex.horizontallyCenter>
 );
 
 const RightColumn = () => (

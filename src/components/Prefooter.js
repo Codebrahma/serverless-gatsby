@@ -8,7 +8,6 @@ export default (LeftColumn, RightColumn) => (
     <Flex
       bg="serverlessRed"
       flexDirection={['column', 'column', 'row']}
-      position="relative"
       top="-320px"
       mb="-290px"
     >

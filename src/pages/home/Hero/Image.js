@@ -48,7 +48,6 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
       display='flex'
       alignItems='center'
       my='16px'
-      position='relative'
     >
       <Image
         src={imgSrc}
@@ -67,7 +66,6 @@ export default () => (
     width={[1, 1, 3/4]}
     mx='auto'
     my={[2, 2, 5]}
-    position='relative'
     beforeBoxHeight={[ 0, 0, '20px' ]}
     afterBoxHeight={[ 0, 0, '20px' ]}
     beforeBoxWidth={[ 0, 0, '100px', '180px' ]}

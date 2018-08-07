@@ -57,7 +57,6 @@ export default () => (
           <ListItem key={text}>
             <Flex
               mb={(platformMenuConfig.length - 1 === index) ? 0 : 2}
-              position='relative'
               justifyContent='center'
             >
               <Image {...imgProps} />

@@ -43,7 +43,7 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
     <Flex.relative
       height='86px'
       alignItems='center'
-      my='16px'
+      my={2}
     >
       <Image
         src={imgSrc}
@@ -61,7 +61,7 @@ export default () => (
     flexDirection={['column', 'column', 'row']}
     width={[1, 1, 3/4]}
     mx='auto'
-    my={[2, 2, 5]}
+    mb={[2, 2, 4]}
     beforeBoxHeight={[ 0, 0, '20px' ]}
     afterBoxHeight={[ 0, 0, '20px' ]}
     beforeBoxWidth={[ 0, 0, '100px', '180px' ]}

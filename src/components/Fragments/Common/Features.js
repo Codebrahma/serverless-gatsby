@@ -35,8 +35,8 @@ export default ({ features }) => (
   <Container px={2}>
     <Flex
       flexDirection="column"
-      px={50}
-      mt={6}
+      px={5}
+      mt={5}
     >
       <Heading.h2
         align="center"

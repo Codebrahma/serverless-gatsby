@@ -21,6 +21,7 @@ const HeroActions = ({
     flexDirection={['column', 'column', 'row']}
     width={0.5}
     mx='auto'
+    my={2}
   >
     <NavLink to={firstLink} completed={fCompleted} crossDomain={fcrossDomain}>
       <Button mx={1} my={1} width="280px" border={0}>{fName}</Button>

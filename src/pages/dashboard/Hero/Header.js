@@ -9,7 +9,6 @@ import {
 
 import dashboardIcon from '../../../assets/images/icon-platform-dash.png';
 
-// TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
   <Flex.horizontallyCenter
     flexDirection="column"

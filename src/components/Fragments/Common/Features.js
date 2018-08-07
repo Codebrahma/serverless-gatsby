@@ -8,19 +8,41 @@ import {
   Heading,
   P,
   Image,
+  withBeforeAfter,
 } from 'serverless-design-system/src';
 
-// TODO: Add counter based number for each image
-const FeatureItem = ({ header, img, content }) => (
+const HeaderWithCount = withBeforeAfter(
+  Heading.h3,
+  `&`,
+  `
+    content: counter(step-counter, decimal-leading-zero);
+    position: absolute;
+    color: #fd5750;
+    font-family: 'Soleil';
+    font-size: 160px;
+    font-size: 10rem;
+    line-height: 1;
+    z-index: -1;
+    opacity: 0.2;
+    top: 7.5rem;
+    left: -5rem;
+  `,
+  null
+);
+
+const FeatureItem = ({ header, img, content, rightAligned }) => (
   <Box
-    width={[1, 1, 1/2]}
-    pr={7}
+    width={[1, 1, 4/10]}
+    mr={[0, 0, rightAligned ? '10%' : 0]}
+    ml={[0, 0, rightAligned ? 0 : '10%' ]}
     pb={6}
+    position='relative'
+    style={{ counterIncrement: 'step-counter' }}
   >
-    <Image src={img} />
-    <Heading.h3 fontFamily="SoleilBk">
+    <Image src={img} mb={25} />
+    <HeaderWithCount fontFamily="SoleilBk">
       {header}
-    </Heading.h3>
+    </HeaderWithCount>
     <P>{content}</P>
   </Box>
 );
@@ -51,12 +73,13 @@ export default ({ features }) => (
         mt={3}
       >
         {
-          features.map(({ header, img, content }) => (
+          features.map(({ header, img, content }, index) => (
             <FeatureItem
               key={header}
               header={header}
               content={content}
               img={img}
+              rightAligned={index % 2 === 0}
             />
           ))
         }

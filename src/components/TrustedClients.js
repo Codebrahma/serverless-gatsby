@@ -24,7 +24,7 @@ const TrustedClients = () => (
     backgroundImage={`url(${backgroundImage})`}
     px={[ 0, 0, 2, 6, 8 ]}
     pt={5}
-    pb={['300px', '300px', '250px']}
+    pb={[6, 6, 9, 12]}
   >
     <Container>
       <Flex

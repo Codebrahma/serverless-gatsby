@@ -33,7 +33,7 @@ const HeroActions = ({
   </Flex>
 );
 
-HeroActions.PropTypes = {
+HeroActions.propTypes = {
   firstBtn: PropTypes.object.isRequired,
   secondBtn: PropTypes.object.isRequired,
 }

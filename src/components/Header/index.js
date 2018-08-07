@@ -7,14 +7,36 @@ import NavButton from './NavButton';
 import logo from '../../assets/images/logo.svg';
 
 class Header extends React.Component {
-  state = { isNavbarActive: false };
+  state = { isNavbarActive: false, isNavbarShrinked: false };
 
-  toggleNavbarVisibility = () => this.setState((prevState) => {
-    return { isNavbarActive:  !prevState.isNavbarActive };
-  });
+  scrollHandler = () => {
+    const { isNavbarShrinked } = this.state;
+    if (window.scrollY > 34) {
+      if (isNavbarShrinked) { return; }
+      this.setState({ isNavbarShrinked: true });
+    } else if (isNavbarShrinked) {
+      this.setState({ isNavbarShrinked: false });
+    }
+  }
+
+  componentDidMount() {
+    if (this.props.transparent) {
+      document.addEventListener('scroll', this.scrollHandler);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.props.transparent) {
+      document.removeEventListener('scroll', this.scrollHandler);
+    }
+  }
+
+  toggleNavbarVisibility = () => this.setState((prevState) => (
+    { isNavbarActive: !prevState.isNavbarActive }
+  ));
 
   render() {
-    const { isNavbarActive } = this.state;
+    const { isNavbarActive, isNavbarShrinked } = this.state;
     return (
       <Box
         position='fixed'
@@ -23,10 +45,14 @@ class Header extends React.Component {
         right={0}
         top={0}
         zIndex='999'
-        bg='black'
         py={[2, 2, 0, 0, 0]}
         maxHeight='100%'
         oy={['scroll', 'scroll', 'visible']}
+        bg={[
+          'black',
+          'black',
+          isNavbarShrinked ? 'black' : 'transparent'
+        ]}
       >
         <Container>
           <Flex
@@ -47,7 +73,9 @@ class Header extends React.Component {
               onClick={this.toggleNavbarVisibility}
               active={isNavbarActive}
             />
-            <Navbar visibility={isNavbarActive} />
+            <Navbar
+              visibility={isNavbarActive}
+              isNavbarShrinked={isNavbarShrinked} />
           </Flex>
         </Container>
       </Box>

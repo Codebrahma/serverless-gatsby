@@ -8,7 +8,7 @@ export default ({ children, prefooter }) => (
     flexDirection='column'
     width={1}
   >
-    <Header />
+    <Header transparent />
     <Box width={1}>
       { children }
     </Box>

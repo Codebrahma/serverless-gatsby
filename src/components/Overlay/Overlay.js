@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import Portal from '../Portal/Portal'
 
-import { Absolute, Flex } from 'serverless-design-system/src';
+import { Box, Flex } from 'serverless-design-system/src';
 
 const OverlayWrapper = styled(Flex)`
   position: fixed;
@@ -18,7 +18,7 @@ const OverlayWrapper = styled(Flex)`
   pointer-events: ${({ invisible }) => invisible ? 'none' : 'all'};
 `;
 
-const Backdrop = styled(Absolute)`
+const Backdrop = styled(Box.absolute)`
   top: 0;
   left: 0;
   width: 100%;

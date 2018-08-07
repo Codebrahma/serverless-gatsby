@@ -55,7 +55,7 @@ export default () => (
       platformMenuConfig.map(({ imgProps, text, to, crossDomain, completed }, index) => (
         <NavLink key={index} to={to} crossDomain={crossDomain} completed={completed}>
           <ListItem key={text}>
-            <Flex
+            <Flex.relative
               mb={(platformMenuConfig.length - 1 === index) ? 0 : 2}
               justifyContent='center'
             >
@@ -82,7 +82,7 @@ export default () => (
                   {text}
                 </Heading.h6>
               </Box>
-            </Flex>
+            </Flex.relative>
           </ListItem>
         </NavLink>
       ))

@@ -5,7 +5,7 @@ import RightBoxBg from '../assets/images/footerRightBoxBg.png';
 
 export default (LeftColumn, RightColumn) => (
   () => (
-    <Flex
+    <Flex.relative
       bg="serverlessRed"
       flexDirection={['column', 'column', 'row']}
       top="-320px"
@@ -25,6 +25,6 @@ export default (LeftColumn, RightColumn) => (
       >
         <RightColumn />
       </Flex>
-    </Flex>
+    </Flex.relative>
   )
 );

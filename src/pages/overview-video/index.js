@@ -14,7 +14,6 @@ const VideoPlayer = styled.iframe`
 `;
 
 export default class OverviewVideo extends React.Component {
-
   loadHome = () => push('/');
 
   render() {

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Box, List, ListItem } from 'serverless-design-system/src';
+import NavbarContext from './../NavbarContext';
 import MenuList from './Menu/List';
 
 const NavListItem = styled(ListItem)`
@@ -19,30 +20,37 @@ const NavListItem = styled(ListItem)`
   }
 `;
 
-const smallScreenNavbarVisibility = (visibility) => (
-  visibility ? 'inline-block' : 'none'
+const smallScreenNavbarVisibility = (active) => (
+  active ? 'inline-block' : 'none'
 )
 
-const Navbar = ({ visibility }) => (
-  <Box
-    width={[ 1, 1, 'auto' ]}
-    display={[
-      smallScreenNavbarVisibility(visibility),
-      smallScreenNavbarVisibility(visibility),
-      'inline-block'
-    ]}>
-    <List m='0' p='0'>
-      {
-        MenuList.map((MenuItem, index) => (
-          <NavListItem
-            key={index}
-            display={[ 'block', 'block', 'inline-block' ]}>
-            <MenuItem />
-          </NavListItem>
-        ))
-      }
-    </List>
-  </Box>
+const Navbar = () => (
+  <NavbarContext.Consumer>
+    {
+      ({ isNavbarActive }) => (
+        <Box
+          width={[ 1, 1, 'auto' ]}
+          display={[
+            smallScreenNavbarVisibility(isNavbarActive),
+            smallScreenNavbarVisibility(isNavbarActive),
+            'inline-block'
+          ]}>
+          <List m='0' p='0'>
+            {
+              MenuList.map((MenuItem, index) => (
+                <NavListItem
+                  key={index}
+                  display={[ 'block', 'block', 'inline-block' ]}
+                >
+                  <MenuItem />
+                </NavListItem>
+              ))
+            }
+          </List>
+        </Box>
+      )
+    }
+  </NavbarContext.Consumer>
 )
 
 export default Navbar;

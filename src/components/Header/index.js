@@ -1,20 +1,56 @@
 import React from 'react'
 import Link from 'gatsby-link';
 import { Box, Container, Flex, Logo } from 'serverless-design-system/src'
+
 import Navbar from './Navbar'
 import NavButton from './NavButton';
+import NavbarContext from './NavbarContext';
 
 import logo from '../../assets/images/logo.svg';
 
 class Header extends React.Component {
-  state = { isNavbarActive: false };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isNavbarActive: false,
+      isNavbarShrinked: false,
+      toggleNavbarActiveness: this.toggleNavbarActiveness
+    };
+  }
 
-  toggleNavbarVisibility = () => this.setState((prevState) => {
-    return { isNavbarActive:  !prevState.isNavbarActive };
-  });
+  scrollHandler = () => {
+    const { isNavbarShrinked } = this.state;
+    if (window.scrollY > 34) {
+      if (isNavbarShrinked) { return; }
+      this.toggleNavbarShrinkness();
+    } else if (isNavbarShrinked) {
+      this.toggleNavbarShrinkness();
+    }
+  }
+
+  componentDidMount() {
+    if (this.props.transparent) {
+      document.addEventListener('scroll', this.scrollHandler);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.props.transparent) {
+      document.removeEventListener('scroll', this.scrollHandler);
+    }
+  }
+
+  toggleNavbarShrinkness = () => this.setState((prevState) => (
+    { isNavbarShrinked: !prevState.isNavbarShrinked }
+  ));
+
+  toggleNavbarActiveness = () => {
+    this.setState((prevState) => (
+      { isNavbarActive: !prevState.isNavbarActive }
+    ));
+  }
 
   render() {
-    const { isNavbarActive } = this.state;
     return (
       <Box
         position='fixed'
@@ -23,10 +59,14 @@ class Header extends React.Component {
         right={0}
         top={0}
         zIndex='999'
-        bg='black'
         py={[2, 2, 0, 0, 0]}
         maxHeight='100%'
         oy={['scroll', 'scroll', 'visible']}
+        bg={[
+          'black',
+          'black',
+          this.state.isNavbarShrinked ? 'black' : 'transparent'
+        ]}
       >
         <Container>
           <Flex
@@ -43,11 +83,10 @@ class Header extends React.Component {
                 alt="Serverless"
               />
             </Link>
-            <NavButton
-              onClick={this.toggleNavbarVisibility}
-              active={isNavbarActive}
-            />
-            <Navbar visibility={isNavbarActive} />
+            <NavbarContext.Provider value={this.state}>
+              <NavButton />
+              <Navbar />
+            </NavbarContext.Provider>
           </Flex>
         </Container>
       </Box>

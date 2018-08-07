@@ -1,19 +1,17 @@
 import React from 'react'
-import Link from 'gatsby-link';
-import { Box, Container, Flex, Logo } from 'serverless-design-system/src'
+import { Box, Container, Flex } from 'serverless-design-system/src'
 
+import Logo from './Logo';
 import Navbar from './Navbar'
 import NavButton from './NavButton';
 import NavbarContext from './NavbarContext';
-
-import logo from '../../assets/images/logo.svg';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isNavbarActive: false,
-      isNavbarShrinked: props.transparent,
+      isNavbarShrinked: !props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness
     };
   }
@@ -58,7 +56,7 @@ class Header extends React.Component {
         right={0}
         top={0}
         zIndex='999'
-        py={[2, 2, 0, 0, 0]}
+        py={[2, 2, 0]}
         maxHeight='100%'
         oy={['scroll', 'scroll', 'visible']}
         bg={[
@@ -73,14 +71,7 @@ class Header extends React.Component {
             justifyContent='space-between'
             px={15}
           >
-            <Link to='/'>
-              <Logo
-                src={logo}
-                height={['22px', '22px', '22px', '30px']}
-                width={['125px', '125px', '125px', '170px']}
-                alt="Serverless"
-              />
-            </Link>
+            <Logo />
             <NavbarContext.Provider value={this.state}>
               <NavButton />
               <Navbar />

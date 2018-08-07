@@ -19,10 +19,7 @@ export default () => (
     <Heading.h4 fontFamily={'SoleilBk'} align='center' my={[3, 3, 5]} fontSize={[ 2, 2, 4 ]}>
       The benefits of serverless technology
     </Heading.h4>
-    <Flex
-      flexDirection={['column', 'column', 'row']}
-      justifyContent='space-between'
-    >
+    <Flex.spaceBetween flexDirection={['column', 'column', 'row']}>
       <Box width={[1, 1, 1/3]}>
         <ImageCard
           img={autoScalingIcon}
@@ -44,6 +41,6 @@ export default () => (
           description='Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.'
         />
       </Box>
-    </Flex>
+    </Flex.spaceBetween>
   </Container>
 )

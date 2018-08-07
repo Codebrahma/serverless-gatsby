@@ -15,9 +15,8 @@ export default () => (
         Serverless Platform empowers developers to build & deploy serverless applications, on any provider.
       </Heading.h2>
     </Box>
-    <Flex
+    <Flex.spaceBetween
       flexDirection={['column', 'column', 'row']}
-      justifyContent='space-between'
       my={6}
     >
       <Box width={[1, 1, 1/3]} my={2}>
@@ -53,6 +52,6 @@ export default () => (
           </Flex.horizontallyCenter>
         </ImageCard>
       </Box>
-    </Flex>
+    </Flex.spaceBetween>
   </Container>
 );

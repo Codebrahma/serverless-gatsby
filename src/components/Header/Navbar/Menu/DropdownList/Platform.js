@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import {
   Box,
   Flex,
@@ -12,10 +11,14 @@ import {
 import NavLink from '../../../../Fragments/Common/NavLink';
 import { platform } from './navigationPath';
 
+import frameworkIcon from '../../../../../assets/images/bolt.png';
+import gatewayIcon from '../../../../../assets/images/group-6.png';
+import dashboardIcon from '../../../../../assets/images/icon-dashboard.png';
+
 const platformMenuConfig = [
   {
     imgProps: {
-      src: 'https://serverless.com/_/src/assets/images/bolt.be31a2cb237f3c0d40581ecba9efa8d3.png',
+      src: frameworkIcon,
       maxHeight: '52px',
       ml: '8px',
       mr: '43px',
@@ -27,7 +30,7 @@ const platformMenuConfig = [
   },
   {
     imgProps: {
-      src: 'https://serverless.com/_/src/assets/images/group-6.42d1cd534252f3f9b17e6f4d3e3ac818.png',
+      src: gatewayIcon,
       maxHeight: '40px',
       mr: '30px'
     },
@@ -38,7 +41,7 @@ const platformMenuConfig = [
   },
   {
     imgProps: {
-      src: 'https://serverless.com/_/src/assets/images/icon-dashboard.670198be7530974cf50d17671215f69f.png',
+      src: dashboardIcon,
       maxHeight: '40px',
       mr: '30px'
     },

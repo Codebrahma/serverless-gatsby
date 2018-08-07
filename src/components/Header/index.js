@@ -13,7 +13,7 @@ class Header extends React.Component {
     super(props);
     this.state = {
       isNavbarActive: false,
-      isNavbarShrinked: false,
+      isNavbarShrinked: props.transparent,
       toggleNavbarActiveness: this.toggleNavbarActiveness
     };
   }
@@ -93,5 +93,7 @@ class Header extends React.Component {
     );
   }
 }
+
+Header.defaultProps = { transparent: false };
 
 export default Header;

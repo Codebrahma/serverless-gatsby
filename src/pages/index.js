@@ -10,7 +10,10 @@ import DefaultLayout from '../layouts/Default';
 
 const Home = () => {
    return (
-    <DefaultLayout prefooter={Prefooter}>
+    <DefaultLayout
+      prefooter={Prefooter}
+      transparentHeader
+    >
       <Hero />
       <Benefits />
       <Testimonial />

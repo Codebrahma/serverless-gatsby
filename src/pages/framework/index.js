@@ -9,7 +9,10 @@ import Prefooter from './Prefooter';
 import DefaultLayout from '../../layouts/Default';
 
 const FrameWorks = () => (
-  <DefaultLayout prefooter={Prefooter}>
+  <DefaultLayout
+    prefooter={Prefooter}
+    transparentHeader
+  >
     <Hero />
     <Box px={2}>
       <UseCase />

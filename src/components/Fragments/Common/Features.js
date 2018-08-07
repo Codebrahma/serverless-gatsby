@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  Box,
+  Relative,
   Container,
   Flex,
   Heading,
@@ -31,12 +31,11 @@ const HeaderWithCount = withBeforeAfter(
 );
 
 const FeatureItem = ({ header, img, content, rightAligned }) => (
-  <Box
+  <Relative
     width={[1, 1, 4/10]}
     mr={[0, 0, rightAligned ? '10%' : 0]}
     ml={[0, 0, rightAligned ? 0 : '10%' ]}
     pb={6}
-    position='relative'
     style={{ counterIncrement: 'step-counter' }}
   >
     <Image src={img} mb={25} />
@@ -44,7 +43,7 @@ const FeatureItem = ({ header, img, content, rightAligned }) => (
       {header}
     </HeaderWithCount>
     <P>{content}</P>
-  </Box>
+  </Relative>
 );
 
 FeatureItem.propTypes = {

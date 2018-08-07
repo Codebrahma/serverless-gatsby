@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Box, Container, withBeforeAfter } from 'serverless-design-system/src';
+import { Relative, Container, withBeforeAfter } from 'serverless-design-system/src';
 import Testimonial from '../../components/Testimonial';
 import testimonialBackground from '../../assets/images/glitch-effect.png';
 import cocaColaLogo from '../../assets/images/cocacola-logo.png';
 
 const TestimonialWrapper = withBeforeAfter(
-  Box,
-  `& > ${Box}`,
+  Relative,
+  `& > ${Relative}`,
   `
     content: " ";
     height: 80px;
@@ -25,8 +25,8 @@ const TestimonialWrapper = withBeforeAfter(
 );
 
 export default () => (
-  <TestimonialWrapper position='relative'>
-    <Box mx={3} my={4}>
+  <TestimonialWrapper>
+    <Relative mx={3} my={4}>
       <Container>
         <Testimonial
           img={cocaColaLogo}
@@ -37,6 +37,6 @@ export default () => (
           "The Serverless Framework is a core component of The Coca-Cola Company's initiative to reduce IT operational costs and deploy services faster."
         </Testimonial>
       </Container>
-    </Box>
+    </Relative>
   </TestimonialWrapper>
 );

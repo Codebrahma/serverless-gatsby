@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link';
-import { Box, Container, Flex, Logo } from 'serverless-design-system/src'
+import { Fixed, Container, Flex, Logo } from 'serverless-design-system/src'
 
 import Navbar from './Navbar'
 import NavButton from './NavButton';
@@ -52,8 +52,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <Box
-        position='fixed'
+      <Fixed
         width={1}
         left={0}
         right={0}
@@ -89,7 +88,7 @@ class Header extends React.Component {
             </NavbarContext.Provider>
           </Flex>
         </Container>
-      </Box>
+      </Fixed>
     );
   }
 }

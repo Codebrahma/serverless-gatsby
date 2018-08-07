@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-  Box,
   Flex,
   Heading,
   Image,
+  InlineBlock,
   List,
   ListItem,
 } from 'serverless-design-system/src';
@@ -63,14 +63,13 @@ export default () => (
               justifyContent='center'
             >
               <Image {...imgProps} />
-              <Box display='inline-block' minWidth="155px">
+              <InlineBlock minWidth="155px">
                 <Heading.h6
                   fontFamily='Serverless'
                   fontSize='1.5rem'
                   lineHeight={0.7}
                   letterSpacing='5'
                   m={0}
-                  color={'white'}
                 >
                   serverless
                 </Heading.h6>
@@ -80,11 +79,10 @@ export default () => (
                   lineHeight={1.7}
                   letterSpacing={0.8}
                   m={0}
-                  color={'white'}
                 >
                   {text}
                 </Heading.h6>
-              </Box>
+              </InlineBlock>
             </Flex.relative>
           </ListItem>
         </NavLink>

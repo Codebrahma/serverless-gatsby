@@ -7,6 +7,7 @@ import {
   Heading,
   Image,
   P,
+  Stack
 } from 'serverless-design-system/src';
 
 const UseCase = ({ title, description, imgSrc, evenIndex }) => {
@@ -15,8 +16,7 @@ const UseCase = ({ title, description, imgSrc, evenIndex }) => {
   };
 
   return (
-    <Flex
-      flexDirection={['column', 'column', 'row']}
+    <Stack
       py={[0, 0, 4]}
     >
       <Flex.horizontallyCenter
@@ -46,7 +46,7 @@ const UseCase = ({ title, description, imgSrc, evenIndex }) => {
           my="auto"
         />
       </Flex.horizontallyCenter>
-    </Flex>
+    </Stack>
   );
 }
 

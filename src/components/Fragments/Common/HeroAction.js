@@ -1,7 +1,7 @@
 import React from 'react';
 import NavLink from './NavLink';
 import PropTypes from 'prop-types';
-import { Flex, Button, SecondaryButton } from 'serverless-design-system/src';
+import { Flex, Button, SecondaryButton, Stack } from 'serverless-design-system/src';
 
 const HeroActions = ({
   firstBtn: {
@@ -17,8 +17,7 @@ const HeroActions = ({
     completed: sCompleted = false,
   }
 }) => (
-  <Flex.center
-    flexDirection={['column', 'column', 'row']}
+  <Stack.center
     width={0.5}
     mx='auto'
     my={2}
@@ -29,7 +28,7 @@ const HeroActions = ({
     <NavLink to={secondLink} completed={sCompleted} crossDomain={scrossDomain}>
       <SecondaryButton mx={1} my={1} width="280px" border={0}>{sName}</SecondaryButton>
     </NavLink>
-  </Flex.center>
+  </Stack.center>
 );
 
 HeroActions.propTypes = {

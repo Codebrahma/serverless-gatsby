@@ -7,11 +7,14 @@ import dashboardImage from '../../../assets/images/illustration-2.png';
 import gatewayImage from '../../../assets/images/illustration-3.png';
 
 export default () => (
-  <Container mt='100px'>
+  <Container mt={7}>
     <Box mx={2}>
-      <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[ 5, 5, 6 ]} lineHeight={[
-        1, 1, 4
-      ]}>
+      <Heading.h2
+        fontFamily='SoleilSb'
+        align='center'
+        fontSize={[ 5, 5, 6 ]}
+        lineHeight={[ 1, 1, 4 ]}
+      >
         Serverless Platform empowers developers to build & deploy serverless applications, on any provider.
       </Heading.h2>
     </Box>
@@ -19,25 +22,35 @@ export default () => (
       flexDirection={['column', 'column', 'row']}
       my={6}
     >
-      <Box width={[1, 1, 1/3]} my={2}>
+      <Box
+        width={[1, 1, 1/3]}
+        my={2}
+      >
         <ImageCard
           img={frameworkImage}
           title='Automatic Scaling'
           description='Forget about provisioning & managing your server fleet. Serverless applications scale with demand'
         >
           <Flex.horizontallyCenter>
-            <Button border='0'>learn more</Button>
+            <Button>
+              learn more
+            </Button>
           </Flex.horizontallyCenter>
         </ImageCard>
       </Box>
-      <Box width={[1, 1, 1/3]} my={2}>
+      <Box
+        width={[1, 1, 1/3]}
+        my={2}
+      >
         <ImageCard
           img={dashboardImage}
           title='Pay-per execution'
           description='Never pay for idle. Serverless applications charge you only when they run the service.'
         >
           <Flex.horizontallyCenter>
-            <Button border='0'>learn more</Button>
+            <Button>
+              learn more
+            </Button>
           </Flex.horizontallyCenter>
         </ImageCard>
       </Box>
@@ -48,7 +61,9 @@ export default () => (
           description='Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.'
         >
           <Flex.horizontallyCenter>
-            <Button border='0'>learn more</Button>
+            <Button>
+              learn more
+            </Button>
           </Flex.horizontallyCenter>
         </ImageCard>
       </Box>

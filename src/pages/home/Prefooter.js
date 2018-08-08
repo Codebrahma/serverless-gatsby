@@ -20,25 +20,31 @@ const LeftColumn = () => (
       iconLeft='-80px'
       backgroundSize={[0, 0, 'initial']}
     >
-      <Heading.h2 color="white">Next Steps</Heading.h2>
+      <Heading.h2 color="white">
+        Next Steps
+      </Heading.h2>
     </TextWithIcon>
-    <P color="white">Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.</P>
-    <P color="white">Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.</P>
+    <P color="white">
+      Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.
+    </P>
+    <P color="white">
+      Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.
+    </P>
   </Flex.horizontallyCenter>
 );
 
 const RightColumn = () => (
   <Flex flexDirection="column">
-    <Box pb={2}>
+    <Box m={1}>
       <Button
         width="230px"
         border="2"
         color="white"
-        >
-          use cases
-        </Button>
+      >
+        use cases
+      </Button>
     </Box>
-    <Box>
+    <Box m={1}>
       <Button
         width="230px"
         border="2"

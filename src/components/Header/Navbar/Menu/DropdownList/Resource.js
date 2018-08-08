@@ -9,7 +9,7 @@ import { resources } from './navigationPath';
 
 export default () => (
   <List m='0' p='0'>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: resources.blog,
@@ -19,7 +19,7 @@ export default () => (
         blog
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: resources.forum,
@@ -30,7 +30,7 @@ export default () => (
         forum
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: resources.meetups,
@@ -40,7 +40,7 @@ export default () => (
         meetups
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: resources.slack,
@@ -51,7 +51,7 @@ export default () => (
         slack
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: resources.workshops,

@@ -9,7 +9,7 @@ import { learn } from './navigationPath';
 
 export default () => (
   <List m='0' p='0'>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: learn.why,
@@ -19,7 +19,7 @@ export default () => (
         why?
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
           to: learn.useCases,
@@ -29,7 +29,7 @@ export default () => (
         use cases
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType my={2}>
+    <ListItem.noStyleType>
       <SubMenuItem
         navProps={{
           to: learn.comparisions,

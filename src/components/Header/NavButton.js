@@ -11,8 +11,8 @@ const NavButton = () => (
     {
       ({ isNavbarActive, toggleNavbarActiveness }) => (
         <Box
-          height='16px'
-          width='16px'
+          height='26px'
+          width='26px'
           lineHeight='100%'
           display={['flex', 'flex', 'none']}
           onClick={toggleNavbarActiveness}

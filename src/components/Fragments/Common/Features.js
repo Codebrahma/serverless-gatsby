@@ -15,7 +15,6 @@ const HeaderWithCount = withBeforeAfter(
   Heading.h3,
   `&`,
   `
-    content: counter(step-counter, decimal-leading-zero);
     position: absolute;
     color: #fd5750;
     font-family: 'Soleil';
@@ -32,14 +31,21 @@ const HeaderWithCount = withBeforeAfter(
 
 const FeatureItem = ({ header, img, content, rightAligned }) => (
   <Box.relative
-    width={[1, 1, 4/10]}
-    mr={[0, 0, rightAligned ? '10%' : 0]}
-    ml={[0, 0, rightAligned ? 0 : '10%' ]}
-    pb={6}
+    width={[1, 1, 3/7, 4/10]}
+    mr={[0, 0, 2, rightAligned ? '10%' : 0]}
+    ml={[0, 0, 2, rightAligned ? 0 : '10%' ]}
+    pb={[4, 4, 6]}
     style={{ counterIncrement: 'step-counter' }}
   >
     <Image src={img} mb={25} />
-    <HeaderWithCount fontFamily="SoleilBk">
+    <HeaderWithCount
+      fontFamily="SoleilBk"
+      beforeBoxContent={[
+        'none',
+        'none',
+        "counter(step-counter, decimal-leading-zero)"
+      ]}
+    >
       {header}
     </HeaderWithCount>
     <P>{content}</P>
@@ -56,7 +62,7 @@ export default ({ features }) => (
   <Container px={2}>
     <Flex
       flexDirection="column"
-      px={5}
+      px={[0, 0, 2, 5]}
       mt={5}
     >
       <Heading.h2

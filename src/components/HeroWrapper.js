@@ -10,6 +10,7 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
       theme.navbarHeights.mobile,
       theme.navbarHeights.desktop
     ]}
+    background="black"
     {...otherProps}
   >
     <Container px={0} py={4}>

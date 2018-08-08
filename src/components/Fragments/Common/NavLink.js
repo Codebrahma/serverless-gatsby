@@ -1,28 +1,57 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-const A = styled.a`
+import dotGridBacground from '../../../assets/images/dot-grid.png';
+
+const getLinkStyle = ({ backgroundOnHover }) => `
+  position: relative;
   text-decoration: none;
-  list-style-type: none;
+
+  ${
+    backgroundOnHover ? `
+      &:before {
+        content: " ";
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        left: -10px;
+        top: -5px;
+        z-index: -1;
+        background: url(${dotGridBacground});
+        background-size: cover;
+        display: none;
+      }
+
+      &:hover {
+        &:before {
+          display: inline-block;
+        }
+      }
+    ` : null
+  }
 `;
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  list-style-type: none;
-`;
+const A = styled.a`${getLinkStyle}`;
+const StyledLink = styled(Link)`${getLinkStyle}`;
 
-const NavLink = ({ to, crossDomain, children, completed }) => {
+const NavLink = ({ to, crossDomain, children, completed, backgroundOnHover }) => {
   if (!completed) {
     return (
-      <A href={crossDomain ? to : `https://serverless.com${to}`}>
+      <A
+        href={crossDomain ? to : `https://serverless.com${to}`}
+        backgroundOnHover={backgroundOnHover}
+      >
         {children}
       </A>
     )
   } else {
     return (
-      <StyledLink to={to}>
+      <StyledLink
+        to={to}
+        backgroundOnHover={backgroundOnHover}
+      >
         {children}
       </StyledLink>
     )
@@ -39,6 +68,7 @@ NavLink.propTypes = {
 NavLink.defaultProps = {
   crossDomain: false,
   completed: false,
+  backgroundOnHover: false,
 };
 
 export default NavLink;

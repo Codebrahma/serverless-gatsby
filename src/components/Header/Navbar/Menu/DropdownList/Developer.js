@@ -8,21 +8,21 @@ import {
 
 import SubMenuTitle from './SubMenuTitle';
 import SubMenuItem from './SubMenuItem';
-
-import NavLink from '../../../../Fragments/Common/NavLink';
 import { developers } from './navigationPath';
 
 const SubMenu = ({ title, options }) => (
   <Box>
-    <SubMenuTitle>{title}</SubMenuTitle>
+    <SubMenuTitle>
+      {title}
+    </SubMenuTitle>
     <List m='0' p='0' mt={2}>
       {
         options.map(({ name, to, crossDomain, completed }) => (
-          <NavLink key={name} to={to} crossDomain={crossDomain} completed={completed}>
-            <ListItem my={2}>
-              <SubMenuItem>{name}</SubMenuItem>
-            </ListItem>
-          </NavLink>
+          <ListItem.noStyleType my={2} key={name}>
+            <SubMenuItem navProps={{ to, crossDomain, completed }}>
+              {name}
+            </SubMenuItem>
+          </ListItem.noStyleType>
         ))
       }
     </List>

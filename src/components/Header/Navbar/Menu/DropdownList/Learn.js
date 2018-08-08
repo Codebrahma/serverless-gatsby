@@ -5,25 +5,39 @@ import {
 } from 'serverless-design-system/src';
 
 import SubMenuItem from './SubMenuItem';
-import NavLink from '../../../../Fragments/Common/NavLink';
 import { learn } from './navigationPath';
 
 export default () => (
   <List m='0' p='0'>
-    <NavLink to={learn.useCases}>
-      <ListItem my={2}>  
-        <SubMenuItem>why?</SubMenuItem>
-      </ListItem>
-    </NavLink>
-    <NavLink to={learn.why}>
-      <ListItem my={2}>
-        <SubMenuItem>use cases</SubMenuItem>
-      </ListItem>
-    </NavLink>
-    <NavLink to={learn.comparisions}>
-      <ListItem my={2}>
-        <SubMenuItem>comparisons</SubMenuItem>
-      </ListItem>
-    </NavLink>
+    <ListItem.noStyleType my={2}>
+      <SubMenuItem
+        navProps={{
+          to: learn.why,
+          backgroundOnHover: true,
+        }}
+      >
+        why?
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType my={2}>
+      <SubMenuItem
+        navProps={{
+          to: learn.useCases,
+          backgroundOnHover: true,
+        }}
+      >
+        use cases
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType my={2}>
+      <SubMenuItem
+        navProps={{
+          to: learn.comparisions,
+          backgroundOnHover: true,
+        }}
+      >
+        comparisons
+      </SubMenuItem>
+    </ListItem.noStyleType>
   </List>
 );

@@ -16,13 +16,20 @@ const LeftColumn = () => (
       iconSrc={whiteRectangleDots}
       iconHeight="100px"
       iconWidth="150px"
-      iconTop="-30px"
-      iconLeft='-80px'
+      iconTop="-62px"
+      iconLeft="-115px"
       backgroundSize={[0, 0, 'initial']}
     >
-      <Heading.h2 color="white">New to serverless?</Heading.h2>
+      <Heading.h2
+        color="white"
+        fontFamily="SoleilBk"
+      >
+        New to serverless?
+      </Heading.h2>
     </TextWithIcon>
-    <P color="white">To get started, pop open your terminal & run</P>
+    <P color="white" m={0}>
+      To get started, pop open your terminal &amp; run
+    </P>
     <P color="white">npm install serverless -g</P>
   </Flex.horizontallyCenter>
 );

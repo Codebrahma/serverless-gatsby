@@ -16,11 +16,14 @@ const LeftItem = () => (
       iconSrc={whiteRectangleDots}
       iconHeight="100px"
       iconWidth="150px"
-      iconTop="-30px"
-      iconLeft='-80px'
+      iconTop="-62px"
+      iconLeft="-115px"
       backgroundSize={[0, 0, 'initial']}
     >
-      <Heading.h2 color="white">
+      <Heading.h2
+        color="white"
+        fontFamily="SoleilBk"
+      >
         Ready to get started?
       </Heading.h2>
     </TextWithIcon>

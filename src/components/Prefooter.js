@@ -10,6 +10,7 @@ export default (LeftColumn, RightColumn) => (
       flexDirection={['column', 'column', 'row']}
       top="-320px"
       mb="-290px"
+      o="hidden"
     >
       <LeftColumn />
       <Flex.center

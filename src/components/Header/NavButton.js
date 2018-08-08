@@ -3,6 +3,9 @@ import React from 'react';
 import { Box, Image } from 'serverless-design-system/src';
 import NavbarContext from './NavbarContext';
 
+import closeIcon from '../../assets/images/icon-close.png';
+import mobileMenuIcon from '../../assets/images/icon-mobile-menu.png';
+
 const NavButton = () => (
   <NavbarContext.Consumer>
     {
@@ -15,7 +18,7 @@ const NavButton = () => (
           onClick={toggleNavbarActiveness}
         >
           <Image
-            src={ isNavbarActive ? 'https://serverless.com/_/src/assets/images/icon-close.7b5e69727b7d98f818b8c5a3e59ab59f.png' : 'https://serverless.com/_/src/assets/images/icon-mobile-menu.ed479af87f4e20db7c06a04a19115b38.png' }
+            src={ isNavbarActive ? closeIcon : mobileMenuIcon }
             m='auto'
           />
         </Box>

@@ -4,9 +4,11 @@ import {
   TextWithIcon
 } from 'serverless-design-system/src';
 
+import dotGridBackground from '../../../../../assets/images/dot-grid.png';
+
 export default ({ children }) => (
   <TextWithIcon
-    iconSrc={'https://serverless.com/_/src/assets/images/dot-grid.ab343e1fdd716b7b80c667bc9eaeeb0d.png'}
+    iconSrc={dotGridBackground}
     iconHeight="20px"
     iconWidth="25px"
     iconTop="-2px"

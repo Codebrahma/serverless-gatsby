@@ -10,16 +10,16 @@ const headingProps = {
 
 export default () => (
   <Flex flexDirection='column'>
-    <Heading.h3
+    <Heading.h2
+      lineHeight={0}
+      letterSpacing="-1.1px"
+      fontSize={5}
+      mb={1}
       {...headingProps}
-      fontSize={[4, 4, 5]}
     >
       serverless
-    </Heading.h3>
-    <Heading.h1
-      {...headingProps}
-      fontSize={[5, 5, 6]}
-    >
+    </Heading.h2>
+    <Heading.h1 {...headingProps}>
       platform
     </Heading.h1>
     <Heading.h3

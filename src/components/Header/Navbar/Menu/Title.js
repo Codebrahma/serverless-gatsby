@@ -1,5 +1,6 @@
+// TODO: REFACTOR THIS COMPONENT.
+
 import React from 'react';
-import styled from 'styled-components';
 import { Box, Text, withBeforeAfter } from 'serverless-design-system/src';
 import NavbarContext from '../../NavbarContext';
 

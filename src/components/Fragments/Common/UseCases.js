@@ -9,39 +9,46 @@ import {
   P,
 } from 'serverless-design-system/src';
 
-const UseCase = ({ title, description, imgSrc, index, evenIndex }) => (
-  <Flex
-    flexDirection={['column', 'column', 'row']}
-    py={[3, 3, 5]}
-  >
+const UseCase = ({ title, description, imgSrc, evenIndex }) => {
+  const headerPadding = {
+    [ evenIndex ? 'pl' : 'pr' ] : [ 0, 0, '55px', '110px' ]
+  };
+
+  return (
     <Flex
-      width={[1, 1, 5/10]}
-      mb={2}
-      pr={[0, 0, '55px', '110px']}
-      order={evenIndex ? [1, 1, 2] : [2, 2, 1]}
-      flexDirection="column"
+      flexDirection={['column', 'column', 'row']}
+      py={[0, 0, 4]}
     >
-      <Heading.h3 fontFamily="SoleilBk">
-        {title}
-      </Heading.h3>
-      <P>{description}</P>
+      <Flex.horizontallyCenter
+        flexDirection="column"
+        width={[1, 1, 5/10]}
+        mb={2}
+        order={evenIndex ? [2, 2, 2] : [2, 2, 1]}
+        { ...headerPadding }
+      >
+        <Heading.h3 fontFamily="SoleilBk">
+          {title}
+        </Heading.h3>
+        <P>
+          {description}
+        </P>
+      </Flex.horizontallyCenter>
+      <Flex.horizontallyCenter
+        width={[1, 1, 5/10]}
+        mb={2}
+        order={evenIndex ? [1, 1, 1] : [1, 1, 2]}
+      >
+        <Image
+          src={imgSrc}
+          alt={title}
+          maxWidth={1}
+          width={[ '100%', '80%', '60%', '80%' ]}
+          my="auto"
+        />
+      </Flex.horizontallyCenter>
     </Flex>
-    <Flex.horizontallyCenter
-      width={[1, 1, 5/10]}
-      mb={2}
-      order={evenIndex ? [2, 2, 1] : [1, 1, 2]}
-    >
-      <Image
-        src={imgSrc}
-        alt={title}
-        maxWidth={1}
-        width={0.6}
-        maxHeight="240px"
-        my="auto"
-      />
-    </Flex.horizontallyCenter>
-  </Flex>
-);
+  );
+}
 
 const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
   return (

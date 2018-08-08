@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { Flex } from 'serverless-design-system/src';
+import { Flex, Stack } from 'serverless-design-system/src';
 import RightBoxBg from '../assets/images/footerRightBoxBg.png';
 
 export default (LeftColumn, RightColumn) => (
   () => (
-    <Flex.relative
+    <Stack.relative
       bg="serverlessRed"
-      flexDirection={['column', 'column', 'row']}
       top="-320px"
       mb="-290px"
       o="hidden"
@@ -24,6 +23,6 @@ export default (LeftColumn, RightColumn) => (
       >
         <RightColumn />
       </Flex.center>
-    </Flex.relative>
+    </Stack.relative>
   )
 );

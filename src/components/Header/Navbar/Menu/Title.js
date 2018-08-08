@@ -8,11 +8,7 @@ export default ({ name }) => (
       ({ isNavbarShrinked }) => (
         <Box
           px={[ 1, 1, '8px', '25px' ]}
-          py={[
-            2,
-            2,
-            isNavbarShrinked ? '27.5px' : '35.5px'
-          ]}
+          py={[ 2, 2, isNavbarShrinked ? '27.5px' : '35.5px' ]}
           transition={[
             'none',
             'none',

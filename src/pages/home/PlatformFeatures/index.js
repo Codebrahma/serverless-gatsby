@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import { Box, Button, Container, Flex, Heading } from 'serverless-design-system/src';
+import { Box, Button, Container, Flex, Heading, Stack } from 'serverless-design-system/src';
 import ImageCard from '../../../components/ImageCard';
 import frameworkImage from '../../../assets/images/illustration-1.png';
 import dashboardImage from '../../../assets/images/illustration-2.png';
@@ -45,7 +45,7 @@ export default () => (
         Serverless Platform empowers developers to build & deploy serverless applications, on any provider.
       </Heading.h2>
     </Box>
-    <Flex.spaceBetween
+    <Stack.spaceBetween
       flexDirection={['column', 'column', 'row']}
       my={6}
     >
@@ -67,6 +67,6 @@ export default () => (
         description='Integrate serverless & legacy applications via event-driven extensibility.'
         learnMoreLink='/event-gateway'
       />
-    </Flex.spaceBetween>
+    </Stack.spaceBetween>
   </Container>
 );

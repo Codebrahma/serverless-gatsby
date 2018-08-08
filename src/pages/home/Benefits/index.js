@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Heading, Box, Flex } from 'serverless-design-system/src';
+import { Container, Heading, Box, Flex, Stack } from 'serverless-design-system/src';
 import ImageCard from '../../../components/ImageCard';
 import autoScalingIcon from '../../../assets/images/icon-vol.png';
 import payPerExecutionIcon from '../../../assets/images/icon-graph.png';
@@ -19,7 +19,7 @@ export default () => (
     <Heading.h4 fontFamily={'SoleilBk'} align='center' my={[3, 3, 5]} fontSize={[ 2, 2, 4 ]}>
       The benefits of serverless technology
     </Heading.h4>
-    <Flex.spaceBetween flexDirection={['column', 'column', 'row']}>
+    <Stack.spaceBetween>
       <Box width={[1, 1, 1/3]}>
         <ImageCard
           img={autoScalingIcon}
@@ -41,6 +41,6 @@ export default () => (
           description='Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.'
         />
       </Box>
-    </Flex.spaceBetween>
+    </Stack.spaceBetween>
   </Container>
 )

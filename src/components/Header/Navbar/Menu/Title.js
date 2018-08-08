@@ -1,33 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Text } from 'serverless-design-system/src';
+import { Box, Text, withBeforeAfter } from 'serverless-design-system/src';
 import NavbarContext from '../../NavbarContext';
 
-const TitleWrapperWithLeadingSlash = styled(Box.relative)`
-  &:before {
+const TitleWrapperWithLeadingSlash = withBeforeAfter(
+  Box.relative,
+  `&`,
+  `
     position: absolute;
     content: ' ';
     width: 0;
     height: 0;
-    left: 0;
     opacity: 0;
-    background: ${(props) => props.theme.colors.serverlessRed}
     margin-top: -12.5px;
     top: 50%;
     transition: all .2s;
     transition-property: height, width;
-  }
-
-  &:hover {
-    &:before {
-      opacity: 1;
-      left: 5px;
-      height: 25px;
-      width: 5px;
-      transform: rotateZ(200deg);
+  `,
+  ``,
+  `
+    &:hover {
+      &:before {
+        opacity: 1;
+        height: 25px;
+        width: 5px;
+        transform: rotateZ(200deg);
+      }
     }
-  }
-`;
+  `
+);
 
 export default ({ name }) => (
   <NavbarContext.Consumer>
@@ -41,6 +42,8 @@ export default ({ name }) => (
             'none',
             isNavbarShrinked ? 'padding 0.5s' : 'none'
           ]}
+          beforeBoxBackgroundColor={[ 'transparent', 'transparent', 'primaryColor' ]}
+          beforeBoxLeft={[ 0, 0, '-1px', '8px' ]}
         >
           <Text.span
             fontFamily='Serverless'

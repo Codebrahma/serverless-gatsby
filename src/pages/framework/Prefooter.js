@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Flex, Box, TextWithIcon, Heading, Button, P } from 'serverless-design-system/src';
+import { Flex, Box, TextWithIcon, Heading, P } from 'serverless-design-system/src';
 import createPrefooter from '../../components/Prefooter';
+import WhiteButton from '../../components/Fragments/Common/WhiteButton';
 import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 
 const LeftColumn = () => (
@@ -37,34 +38,19 @@ const LeftColumn = () => (
 const RightColumn = () => (
   <Flex flexDirection="column">
     <Box pb={2}>
-      <Button
-        width="280px"
-        border="2"
-        color="white"
-        >
-          documentation
-        </Button>
+      <WhiteButton>
+        documentation
+      </WhiteButton>
     </Box>
     <Box pb={2}>
-      <Button
-        width="280px"
-        border="2"
-        hoverColor="white"
-        color="white"
-        px={1}
-      >
+      <WhiteButton>
         serverless example
-      </Button>
+      </WhiteButton>
     </Box>
     <Box>
-      <Button
-        width="280px"
-        border="2"
-        hoverColor="white"
-        color="white"
-      >
+      <WhiteButton>
         github repo
-      </Button>
+      </WhiteButton>
     </Box>
   </Flex>
 );

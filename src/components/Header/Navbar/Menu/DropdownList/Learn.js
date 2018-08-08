@@ -8,7 +8,11 @@ import SubMenuItem from './SubMenuItem';
 import { learn } from './navigationPath';
 
 export default () => (
-  <List m='0' p='0'>
+  <List
+    m={0}
+    ml={[ 4, 4, 0 ]}
+    p={0}
+  >
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{

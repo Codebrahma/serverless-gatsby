@@ -53,7 +53,11 @@ const platformMenuConfig = [
 ];
 
 export default () => (
-  <List p={0} m={0}>
+  <List
+    m={0}
+    ml={[ 4, 4, 0 ]}
+    p={0}
+  >
     {
       platformMenuConfig.map(({ imgProps, text, to, crossDomain, completed }, index) => (
         <NavLink key={index} to={to} crossDomain={crossDomain} completed={completed}>

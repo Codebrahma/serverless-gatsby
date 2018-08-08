@@ -68,6 +68,7 @@ const SignupMenu = () => (
       px={2}
       py={'16px'}
       border={'0'}
+      width='auto'
     >
       sign up
     </Button>

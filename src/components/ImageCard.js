@@ -8,10 +8,10 @@ import {
   P
 } from 'serverless-design-system/src';
 
-export default ({ img, title, description, children }) => (
+export default ({ img, imgProps, title, description, children }) => (
   <Box
-    px={[2, 3, 4]}
-    py={[2, 2, 4]}
+    px={[2, 3, 2]}
+    py={[2, 2, 2]}
   >
     <Flex>
       <Img
@@ -19,6 +19,7 @@ export default ({ img, title, description, children }) => (
         src={img}
         alt={title}
         mx="auto"
+        {...imgProps}
       />
     </Flex>
 

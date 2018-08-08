@@ -1,10 +1,37 @@
 import React from 'react';
+import Link from 'gatsby-link';
 
 import { Box, Button, Container, Flex, Heading } from 'serverless-design-system/src';
 import ImageCard from '../../../components/ImageCard';
 import frameworkImage from '../../../assets/images/illustration-1.png';
 import dashboardImage from '../../../assets/images/illustration-2.png';
 import gatewayImage from '../../../assets/images/illustration-3.png';
+
+const LearnMoreButton = ({ to }) => (
+  <Flex.horizontallyCenter>
+    <Link to={to}>
+      <Button>
+        learn more
+      </Button>
+    </Link>
+  </Flex.horizontallyCenter>
+)
+
+const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
+  <Box
+    width={[1, 1, 1/3]}
+    my={2}
+  >
+    <ImageCard
+      img={image}
+      imgProps={{ height: [ '200px', '200px', '175px', '245px' ] }}
+      title={title}
+      description={description}
+    >
+      <LearnMoreButton to={learnMoreLink} />
+    </ImageCard>
+  </Box>
+);
 
 export default () => (
   <Container mt={7}>
@@ -22,51 +49,24 @@ export default () => (
       flexDirection={['column', 'column', 'row']}
       my={6}
     >
-      <Box
-        width={[1, 1, 1/3]}
-        my={2}
-      >
-        <ImageCard
-          img={frameworkImage}
-          title='Automatic Scaling'
-          description='Forget about provisioning & managing your server fleet. Serverless applications scale with demand'
-        >
-          <Flex.horizontallyCenter>
-            <Button>
-              learn more
-            </Button>
-          </Flex.horizontallyCenter>
-        </ImageCard>
-      </Box>
-      <Box
-        width={[1, 1, 1/3]}
-        my={2}
-      >
-        <ImageCard
-          img={dashboardImage}
-          title='Pay-per execution'
-          description='Never pay for idle. Serverless applications charge you only when they run the service.'
-        >
-          <Flex.horizontallyCenter>
-            <Button>
-              learn more
-            </Button>
-          </Flex.horizontallyCenter>
-        </ImageCard>
-      </Box>
-      <Box width={[1, 1, 1/3]} my={2}>
-        <ImageCard
-          img={gatewayImage}
-          title='Low Overhead'
-          description='Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.'
-        >
-          <Flex.horizontallyCenter>
-            <Button>
-              learn more
-            </Button>
-          </Flex.horizontallyCenter>
-        </ImageCard>
-      </Box>
+      <PlatformFeature
+        image={frameworkImage}
+        title='Serverless Framework'
+        description='Build serverless applications quickly on any vendor.'
+        learnMoreLink='/framework'
+      />
+      <PlatformFeature
+        image={dashboardImage}
+        title='Serverless Dashboard'
+        description='Observe and monitor your functions in action.'
+        learnMoreLink='/dashboard'
+      />
+      <PlatformFeature
+        image={gatewayImage}
+        title='Event Gateway'
+        description='Integrate serverless & legacy applications via event-driven extensibility.'
+        learnMoreLink='/event-gateway'
+      />
     </Flex.spaceBetween>
   </Container>
 );

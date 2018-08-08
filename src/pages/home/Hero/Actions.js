@@ -2,14 +2,6 @@ import React from 'react';
 
 import { Flex, Button, SecondaryButton } from 'serverless-design-system/src';
 
-const callToActionProps = {
-  mx: 2,
-  my: 1,
-  px: 1,
-  width: [ 7/10, 3/5, 2/4, 3/10 ],
-  minWidth: '260px'
-};
-
 export default () => (
   <Flex.center
     flexDirection={['column', 'column', 'row']}
@@ -17,13 +9,10 @@ export default () => (
     mx='auto'
     my={3}
   >
-    <Button
-      border={0}
-      {...callToActionProps}
-    >
+    <Button mx={2} my={1}>
       sign up
     </Button>
-    <SecondaryButton {...callToActionProps}>
+    <SecondaryButton mx={2} my={1}>
       enterprise demo
     </SecondaryButton>
   </Flex.center>

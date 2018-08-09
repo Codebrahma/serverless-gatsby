@@ -40,12 +40,13 @@ const LeftColumn = ({ heading, sentences }) => (
       </Heading.h2>
     </TextWithIcon>
     {
-      sentences.map((sentence) => (
+      sentences.map((sentence, index) => (
         <P
           color="white"
           mt={0}
+          key={index}
         >
-          {sentence}
+          { sentence }
         </P>
       ))
     }
@@ -55,8 +56,8 @@ const LeftColumn = ({ heading, sentences }) => (
 const RightColumn = ({ actions }) => (
   <Flex flexDirection="column">
     {
-      actions.map(({ name, navProps }) => (
-        <Box m={1}>
+      actions.map(({ name, navProps }, index) => (
+        <Box m={1} key={index}>
           <NavLink {...navProps}>
             <WhiteButton>
               { name }

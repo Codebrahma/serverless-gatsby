@@ -6,6 +6,9 @@ import UseCase from './UseCase';
 import Features from './Features';
 import Prefooter from './Prefooter';
 
+// Images can be queried from graphQL layer only from top level components
+// So we should get all the images here and pass down to components
+// TODO: Think of React.Context for images
 const Dashboard = ({ data }) => (
   <DefaultLayout
     prefooter={Prefooter}

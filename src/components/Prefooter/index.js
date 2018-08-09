@@ -17,8 +17,8 @@ import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 const LeftColumn = ({ heading, sentences }) => (
   <Flex.horizontallyCenter
     width={[1, 1, 1/2]}
-    py={[3, 5, '125px']}
-    px={[3, 5, 6]}
+    py={[3, 5, 8]}
+    px={[2, 4, 6]}
     boxSizing="border-box"
     flexDirection="column"
   >

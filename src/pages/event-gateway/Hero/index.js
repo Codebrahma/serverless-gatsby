@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Header';
 import HeroImage from './HeroImage';
 import Advantage from './Advantage';
-import HeroWrapper from '../../../components/HeroWrapper';
+import HeroWrapper from '../../../components/Fragments/Common/HeroWrapper';
 import HeroActions from '../../../components/Fragments/Common/HeroAction';
 import GatewayPageHeroSectionBackground from '../../../assets/images/gateway.png';
 

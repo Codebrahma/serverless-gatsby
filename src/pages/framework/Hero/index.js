@@ -4,7 +4,7 @@ import Header from './Header';
 import HeroImage from './HeroImage';
 import Advantage from './Advantage';
 import CloudProviders from './CloudProviders';
-import HeroWrapper from '../../../components/HeroWrapper';
+import HeroWrapper from '../../../components/Fragments/Common/HeroWrapper';
 import HeroActions from '../../../components/Fragments/Common/HeroAction';
 import FrameworkPageHeroSectionBackground from '../../../assets/images/framework.png';
 

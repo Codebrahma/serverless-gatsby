@@ -12,7 +12,7 @@ import {
 } from './DropdownList';
 
 import NavLink from '../../../NavLink';
-import { enterprise } from './DropdownList/navigationPath';
+import { enterprise, signup } from './DropdownList/navigationPath';
 
 const PlatformMenu = () => (
   <Box>
@@ -63,15 +63,19 @@ const EnterpriseMenu = () => (
 
 const SignupMenu = () => (
   <Box>
-    <Button
-      fontSize={'1.5rem'}
-      px={2}
-      py={'16px'}
-      border={'0'}
-      width='auto'
+    <NavLink
+      to={signup}
+      crossDomain
     >
-      sign up
-    </Button>
+      <Button
+        fontSize={'1.5rem'}
+        px={2}
+        py={'16px'}
+        width='auto'
+      >
+        sign up
+      </Button>
+    </NavLink>
   </Box>
 )
 

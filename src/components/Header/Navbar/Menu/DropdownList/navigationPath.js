@@ -31,4 +31,5 @@ export default {
     workshops: '/workshops',
   },
   enterprise: '/enterprise',
+  signup: 'https://dashboard.serverless.com/',
 }

@@ -45,10 +45,7 @@ export default () => (
         Serverless Platform empowers developers to build & deploy serverless applications, on any provider.
       </Heading.h2>
     </Box>
-    <ResponsiveStack.spaceBetween
-      flexDirection={['column', 'column', 'row']}
-      my={6}
-    >
+    <ResponsiveStack.spaceBetween my={6}>
       <PlatformFeature
         image={frameworkImage}
         title='Serverless Framework'

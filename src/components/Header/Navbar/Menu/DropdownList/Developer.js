@@ -15,11 +15,20 @@ const SubMenu = ({ title, options }) => (
     <SubMenuTitle>
       {title}
     </SubMenuTitle>
-    <List m='0' p='0' mt={2}>
+    <List
+      m='0'
+      p='0'
+      mt={2}
+    >
       {
         options.map(({ name, to, crossDomain, completed }) => (
-          <ListItem.noStyleType my={2} key={name}>
-            <SubMenuItem navProps={{ to, crossDomain, completed }}>
+          <ListItem.noStyleType
+            my={2}
+            key={name}
+          >
+            <SubMenuItem
+              navProps={{ to, crossDomain, completed }}
+            >
               {name}
             </SubMenuItem>
           </ListItem.noStyleType>
@@ -50,7 +59,10 @@ const examplesOptions = [
 
 export default () => (
   <Flex flexWrap='wrap'>
-    <Box width={1} mb={3}>
+    <Box
+      width={1}
+      mb={3}
+    >
       <SubMenu
         title='documentation'
         options={documentationOptions}

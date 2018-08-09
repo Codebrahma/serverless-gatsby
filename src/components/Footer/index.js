@@ -24,8 +24,8 @@ const FooterWrapper = ({ prefooter }) => (
     />
     <Box
       bg="black"
-      pt={[0, 0, '100px']}
-      pb="100px"
+      pt={[0, 0, 7]}
+      pb={7}
     >
       <Flex
         flexDirection="row"

@@ -23,20 +23,33 @@ const CompanyDetails = () => (
       alignItems={['left', 'left', 'center']}
     >
       <Box width={[1/2, 1/2, 1]}>
-        <P m={0} fontSize={0} >
+        <P
+          m={0}
+          fontSize={0}
+        >
           Serverless, Inc. © 2018
         </P>
       </Box>
-      <Flex color="gray.3" width={[1/2, 1/2, 1]}>
+
+      <Flex
+        color="gray.3"
+        width={[1/2, 1/2, 1]}
+      >
         <Box>
-          <NavLink to={termsOfService} crossDomain>
+          <NavLink
+            to={termsOfService}
+            crossDomain
+          >
             <P fontSize={0}>
               terms of service
             </P>
           </NavLink>
         </Box>
         <Box ml={2}>
-          <NavLink to={privacyPolicy} crossDomain>
+          <NavLink
+            to={privacyPolicy}
+            crossDomain
+          >
             <P fontSize={0}>
               privacy policy
             </P>

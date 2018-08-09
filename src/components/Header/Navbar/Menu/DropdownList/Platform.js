@@ -8,7 +8,7 @@ import {
   ListItem,
 } from 'serverless-design-system/src';
 
-import NavLink from '../../../../Fragments/Common/NavLink';
+import NavLink from '../../../../NavLink';
 import { platform } from './navigationPath';
 
 import frameworkIcon from '../../../../../assets/images/bolt.png';

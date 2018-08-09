@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Button, SecondaryButton, ResponsiveStack } from 'serverless-design-system/src';
-import NavLink from './NavLink';
+import NavLink from '../components/NavLink';
 
 const HeroActions = ({
   firstBtn: {

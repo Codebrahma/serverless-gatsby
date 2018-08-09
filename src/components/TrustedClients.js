@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Box, Container, P, Image } from 'serverless-design-system/src';
+import { Box, Container, P, Image, ResponsiveStack } from 'serverless-design-system/src';
 import backgroundImage from '../assets/images/rectangle-19.png';
 import eaLogo from '../assets/images/ea-logo.png';
 import cocacolaLogo from '../assets/images/cocacola-logo.png';
@@ -27,9 +27,8 @@ const TrustedClients = () => (
     pb={[6, 6, 9, 12]}
   >
     <Container>
-      <Flex.verticallyCenter
+      <ResponsiveStack.verticallyCenter
         justifyContent='space-between'
-        flexDirection={['column', 'column', 'row']}
         width={1}
       >
         <TrustedClientLogo src={eaLogo} altText='EA' />
@@ -37,7 +36,7 @@ const TrustedClients = () => (
         <TrustedClientLogo src={nordstromLogo} altText='Nordstrom' />
         <TrustedClientLogo src={expediaLogo} altText='Expedia' />
         <TrustedClientLogo src={reutersLogo} altText='Reuters' />
-      </Flex.verticallyCenter>
+      </ResponsiveStack.verticallyCenter>
     </Container>
   </Box>
 );

@@ -1,8 +1,6 @@
 import React from 'react';
 
-import {
-  Flex,
-} from 'serverless-design-system/src';
+import { ResponsiveStack } from 'serverless-design-system/src';
 
 import HeroAdvantage from '../../../components/Fragments/Common/HeroAdvantage';
 
@@ -13,17 +11,17 @@ const advantages = [
 ];
 
 const Advantages = () => (
-  <Flex flexDirection={['column', 'column', 'row']} flexWrap="wrap">
+  <ResponsiveStack flexWrap="wrap">
     {
       advantages.map(({ title, description }) => (
-        <HeroAdvantage 
-          key={title} 
-          title={title} 
-          description={description} 
+        <HeroAdvantage
+          key={title}
+          title={title}
+          description={description}
         />
       ))
     }
-  </Flex>
+  </ResponsiveStack>
 )
 
 export default Advantages;

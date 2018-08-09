@@ -7,6 +7,7 @@ import {
   Heading,
   Image,
   P,
+  ResponsiveStack
 } from 'serverless-design-system/src';
 
 const UseCase = ({ title, description, imgSrc, evenIndex }) => {
@@ -15,10 +16,7 @@ const UseCase = ({ title, description, imgSrc, evenIndex }) => {
   };
 
   return (
-    <Flex
-      flexDirection={['column', 'column', 'row']}
-      py={[0, 0, 4]}
-    >
+    <ResponsiveStack py={[0, 0, 4]}>
       <Flex.horizontallyCenter
         flexDirection="column"
         width={[1, 1, 5/10]}
@@ -46,7 +44,7 @@ const UseCase = ({ title, description, imgSrc, evenIndex }) => {
           my="auto"
         />
       </Flex.horizontallyCenter>
-    </Flex>
+    </ResponsiveStack>
   );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Box, TextField, Button, Image, P } from 'serverless-design-system/src';
+import { Flex, Box, TextField, Button, Image, P, ResponsiveStack } from 'serverless-design-system/src';
 
 import footerFb from '../../assets/images/footerFb.png';
 import footerInsta from '../../assets/images/footerInst.png';
@@ -19,9 +19,7 @@ const Subscribe = () => (
         Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
       </P>
     </Box>
-    <Flex.horizontallyCenter
-      flexDirection={['column', 'column', 'row']}
-    >
+    <ResponsiveStack.horizontallyCenter>
       <TextField
         color="white"
         bg="gray.3"
@@ -46,7 +44,7 @@ const Subscribe = () => (
       >
         Sign up
       </Button>
-    </Flex.horizontallyCenter>
+    </ResponsiveStack.horizontallyCenter>
     <Box py={3}>
       <Image mr={3} src={footerFb} />
       <Image mr={3} src={footerInsta} />

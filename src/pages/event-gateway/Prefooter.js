@@ -1,7 +1,14 @@
 import React from 'react';
 
-import { Flex, Box, TextWithIcon, Heading, Button, P } from 'serverless-design-system/src';
+import {
+  Flex,
+  Box,
+  TextWithIcon,
+  Heading,
+  P
+} from 'serverless-design-system/src';
 import createPrefooter from '../../components/Prefooter';
+import WhiteButton from '../../components/Fragments/Common/WhiteButton';
 import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 
 const LeftItem = () => (
@@ -36,35 +43,13 @@ const LeftItem = () => (
 const RightItem = () => (
   <Flex flexDirection="column">
     <Box pb={2}>
-      <Button
-        width="280px"
-        border="2"
-        color="white"
-        px='2.5rem'
-      >
-          getting started
-        </Button>
+      <WhiteButton>getting started</WhiteButton>
     </Box>
     <Box pb={2}>
-      <Button
-        width="280px"
-        border="2"
-        hoverColor="white"
-        color="white"
-        px={1}
-      >
-        learn more
-      </Button>
+      <WhiteButton>learn more</WhiteButton>
     </Box>
     <Box>
-      <Button
-        width="280px"
-        border="2"
-        hoverColor="white"
-        color="white"
-      >
-        examples
-      </Button>
+      <WhiteButton>examples</WhiteButton>
     </Box>
   </Flex>
 );

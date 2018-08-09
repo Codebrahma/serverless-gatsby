@@ -8,7 +8,7 @@ import {
   P
 } from 'serverless-design-system/src';
 import createPrefooter from '../../components/Prefooter';
-import WhiteButton from '../../components/Fragments/Common/WhiteButton';
+import WhiteButton from '../../fragments/WhiteButton';
 import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 
 const LeftItem = () => (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Features from '../../../components/Fragments/Common/Features';
+import Features from '../../../fragments/Features';
 
 import gatewayFeature1 from '../../../assets/images/event-gateway-feature1.png';
 import gatewayFeature2 from '../../../assets/images/event-gateway-feature2.png';

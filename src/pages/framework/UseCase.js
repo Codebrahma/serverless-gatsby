@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UseCases from '../../components/Fragments/Common/UseCases';
+import UseCases from '../../fragments/UseCases';
 
 import scaleableAPI from '../../assets/images/scalableAPI.png';
 import dataProcessing from '../../assets/images/dataProcessing.png';

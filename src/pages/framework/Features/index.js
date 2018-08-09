@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Features from '../../../components/Fragments/Common/Features';
+import Features from '../../../fragments/Features';
 import minimumConfiguration from '../../../assets/images/minimumConfiguration.png';
 import robustEcosystem from '../../../assets/images/robustEcosystem.png';
 import multiLingual from '../../../assets/images/multiLingual.png';

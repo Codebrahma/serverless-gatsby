@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Features from '../../../components/Fragments/Common/Features';
+import Features from '../../../fragments/Features';
 import dashboardFeature1 from '../../../assets/images/dashboard-feature-1.png';
 import dashboardFeature2 from '../../../assets/images/dashboard-feature-2.png';
 import dashboardFeature3 from '../../../assets/images/dashboard-feature-3.png';

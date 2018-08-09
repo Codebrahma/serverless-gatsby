@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { Box, Container, withBeforeAfter, Testimonial } from 'serverless-design-system/src';
-import testimonialBackground from './../../../assets/images/glitch-effect.png';
-import cocaColaLogo from './../../../assets/images/cocacola-logo.png';
+import testimonialBackground from '../assets/images/glitch-effect.png';
+import cocaColaLogo from '../assets/images/cocacola-logo.png';
 
 const TestimonialWrapper = withBeforeAfter(
   Box.relative,

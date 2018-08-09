@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UseCases from '../../components/Fragments/Common/UseCases';
+import UseCases from '../../fragments/UseCases';
 import gatewayIllustration1 from '../../assets/images/gateway-illustration1.png';
 import gatewayIllustration2 from '../../assets/images/gateway-illustration2.png';
 import gatewayIllustration3 from '../../assets/images/gateway-illustration3.png';

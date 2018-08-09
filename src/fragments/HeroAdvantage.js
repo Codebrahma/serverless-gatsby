@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import {
   Flex,
   P,
   TextWithIcon,
   Text
 } from 'serverless-design-system/src';
-
-import redRectangleDots from '../../../assets/images/redRectangleDots.png';
+import redRectangleDots from '../assets/images/redRectangleDots.png';
 
 const HeroAdvantage = ({ title, description }) => (
   <Flex

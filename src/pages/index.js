@@ -5,7 +5,7 @@ import Benefits from './home/Benefits';
 import PlatformFeatures from './home/PlatformFeatures';
 import Prefooter from './home/Prefooter';
 import TrustedClients from './home/TrustedClients';
-import Testimonial from './../components/Fragments/Common/Testimonial';
+import Testimonial from './../fragments/Testimonial';
 import DefaultLayout from '../layouts/Default';
 
 const Home = () => {

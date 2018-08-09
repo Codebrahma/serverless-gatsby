@@ -4,7 +4,7 @@ import Hero from './Hero';
 import UseCase from './UseCase';
 import Features from './Features';
 import Prefooter from './Prefooter';
-import Testimonial from './../../components/Fragments/Common/Testimonial';
+import Testimonial from './../../fragments/Testimonial';
 import DefaultLayout from '../../layouts/Default';
 
 const FrameWorks = () => (

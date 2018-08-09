@@ -22,7 +22,7 @@ const Dialog = styled(Flex)`
   flex-direction: column;
   vertical-align: middle;
   align-items: center;
-  background-color: #000000;
+  background-color: ${(props) => props.theme.colors.black};
   border-radius: 0;
   opacity: ${(props) => props.active ? 1 : 0} ;
   text-align: center;
@@ -35,7 +35,7 @@ const Dialog = styled(Flex)`
   ${getDimensions}
 
   a {
-    color: #000;
+    color: ${(props) => props.theme.colors.black};
     text-decoration: none;
     border-bottom: 1px solid rgba(0,0,0,0.5);
   }

@@ -81,8 +81,8 @@ export default ({ heading, sentences, actions }) => (
     />
     <Flex.center
       width={[1, 1, 1/2]}
-      py={[5, 5, '150px']}
-      px={[3, 3, '100px']}
+      py={[5, 5, 8]}
+      px={[3, 3, 7]}
       boxSizing="border-box"
       flexDirection="column"
       background={`#fd5750 url(${RightBoxBg}) no-repeat`}

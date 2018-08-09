@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, P } from 'serverless-design-system/src';
-import NavLink from '../../../NavLink';
+import NavLink from 'src/components/NavLink';
 
 // Renders Each item in the footer list
 // If used >= 3 move to molecules. (Currently 2)

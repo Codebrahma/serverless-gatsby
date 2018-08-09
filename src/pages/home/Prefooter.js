@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Prefooter from '../../components/Prefooter';
+import Prefooter from 'src/components/Prefooter';
 
 const sentences = [
   'Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.',

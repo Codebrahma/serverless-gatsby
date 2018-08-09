@@ -11,8 +11,8 @@ import {
 
 import NavLink from '../NavLink';
 import WhiteButton from '../WhiteButton';
-import RightBoxBg from '../../assets/images/footerRightBoxBg.png';
-import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
+import RightBoxBg from 'src/assets/images/footerRightBoxBg.png';
+import whiteRectangleDots from 'src/assets/images/whiteRectangleDots.png';
 
 const LeftColumn = ({ heading, sentences }) => (
   <Flex.horizontallyCenter

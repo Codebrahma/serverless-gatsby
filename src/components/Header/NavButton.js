@@ -3,8 +3,8 @@ import React from 'react';
 import { Box, Image } from 'serverless-design-system/src';
 import NavbarContext from './NavbarContext';
 
-import closeIcon from '../../assets/images/icon-close.png';
-import mobileMenuIcon from '../../assets/images/icon-mobile-menu.png';
+import closeIcon from 'src/assets/images/icon-close.png';
+import mobileMenuIcon from 'src/assets/images/icon-mobile-menu.png';
 
 const NavButton = () => (
   <NavbarContext.Consumer>

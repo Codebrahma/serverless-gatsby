@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading } from 'serverless-design-system/src';
-import NavLink from '../../../../NavLink';
+import NavLink from 'src/components/NavLink';
 
 export default ({ children, navProps }) => (
   <NavLink {...navProps}>

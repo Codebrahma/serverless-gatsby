@@ -11,7 +11,7 @@ import {
   ResourceDropdownList
 } from './DropdownList';
 
-import NavLink from '../../../NavLink';
+import NavLink from 'src/components/NavLink';
 import { enterprise, signup } from './DropdownList/navigationPath';
 
 const PlatformMenu = () => (

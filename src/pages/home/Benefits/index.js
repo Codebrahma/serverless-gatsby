@@ -7,9 +7,9 @@ import {
   ImageCard,
   ResponsiveStack
 } from 'serverless-design-system/src';
-import autoScalingIcon from '../../../assets/images/icon-vol.png';
-import payPerExecutionIcon from '../../../assets/images/icon-graph.png';
-import lowOverheadIcon from '../../../assets/images/icon-dash.png';
+import autoScalingIcon from 'src/assets/images/icon-vol.png';
+import payPerExecutionIcon from 'src/assets/images/icon-graph.png';
+import lowOverheadIcon from 'src/assets/images/icon-dash.png';
 
 export default () => (
   <Container mt='100px'>

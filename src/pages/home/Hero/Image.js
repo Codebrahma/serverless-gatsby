@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { Flex, Heading, Image, withBeforeAfter } from 'serverless-design-system/src';
-import frameworkIcon from '../../../assets/images/bolt.png';
-import dashboardIcon from '../../../assets/images/icon-dashboard.png';
-import gatewayIcon from '../../../assets/images/group-6.png';
-import bulletLeftMarker from '../../../assets/images/bullet-left-marker.png';
-import bulletRightMarker from '../../../assets/images/bullet-right-marker.png';
+import frameworkIcon from 'src/assets/images/bolt.png';
+import dashboardIcon from 'src/assets/images/icon-dashboard.png';
+import gatewayIcon from 'src/assets/images/group-6.png';
+import bulletLeftMarker from 'src/assets/images/bullet-left-marker.png';
+import bulletRightMarker from 'src/assets/images/bullet-right-marker.png';
 
 const bulletMarkerStyle = `
   content: " ";

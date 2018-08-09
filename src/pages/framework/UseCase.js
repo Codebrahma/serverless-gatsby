@@ -1,10 +1,9 @@
 import React from 'react';
 
-import UseCases from '../../fragments/UseCases';
-
-import scaleableAPI from '../../assets/images/scalableAPI.png';
-import dataProcessing from '../../assets/images/dataProcessing.png';
-import easyAutomation from '../../assets/images/easyAutomation.png';
+import UseCases from 'src/fragments/UseCases';
+import scaleableAPI from 'src/assets/images/scalableAPI.png';
+import dataProcessing from 'src/assets/images/dataProcessing.png';
+import easyAutomation from 'src/assets/images/easyAutomation.png';
 
 const cases = [
   {

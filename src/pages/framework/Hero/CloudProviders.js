@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Flex, Box, P, Image, ResponsiveStack } from 'serverless-design-system/src';
 
-import google from  '../../../assets/images/cloudGoogle.png';
-import azure from  '../../../assets/images/cloudAzure.png';
-import aws from  '../../../assets/images/cloudAWS.png';
-import ibm from  '../../../assets/images/cloudIBM.png';
-import kubernetes from  '../../../assets/images/cloudKubernetes.png';
+import google from  'src/assets/images/cloudGoogle.png';
+import azure from  'src/assets/images/cloudAzure.png';
+import aws from  'src/assets/images/cloudAWS.png';
+import ibm from  'src/assets/images/cloudIBM.png';
+import kubernetes from  'src/assets/images/cloudKubernetes.png';
 
 const CloudProvider = ({ imgSrc }) => (
   <Box mb={2}>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Prefooter from '../../components/Prefooter';
+import Prefooter from 'src/components/Prefooter';
 
 const sentences = [
   'To get started, pop open your terminal & run:',

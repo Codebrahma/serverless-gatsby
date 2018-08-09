@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 
 import { Logo } from 'serverless-design-system/src';
-import logo from '../../assets/images/logo.svg';
+import logo from 'src/assets/images/logo.svg';
 
 export default () => (
   <Link to='/'>

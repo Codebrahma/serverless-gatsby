@@ -1,10 +1,10 @@
 import React from 'react';
 
+import DefaultLayout from 'src/layouts/Default';
 import Hero from './Hero';
 import UseCase from './UseCase';
 import Features from './Features';
 import Prefooter from './Prefooter';
-import DefaultLayout from '../../layouts/Default';
 
 const EventGateway = () => (
   <DefaultLayout

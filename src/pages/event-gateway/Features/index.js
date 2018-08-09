@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Features from '../../../fragments/Features';
+import Features from 'src/fragments/Features';
 
-import gatewayFeature1 from '../../../assets/images/event-gateway-feature1.png';
-import gatewayFeature2 from '../../../assets/images/event-gateway-feature2.png';
-import gatewayFeature3 from '../../../assets/images/event-gateway-feature3.png';
-import gatewayFeature4 from '../../../assets/images/event-gateway-feature4.png';
-import gatewayFeature5 from '../../../assets/images/event-gateway-feature5.png';
-import gatewayFeature6 from '../../../assets/images/event-gateway-feature6.png';
+import gatewayFeature1 from 'src/assets/images/event-gateway-feature1.png';
+import gatewayFeature2 from 'src/assets/images/event-gateway-feature2.png';
+import gatewayFeature3 from 'src/assets/images/event-gateway-feature3.png';
+import gatewayFeature4 from 'src/assets/images/event-gateway-feature4.png';
+import gatewayFeature5 from 'src/assets/images/event-gateway-feature5.png';
+import gatewayFeature6 from 'src/assets/images/event-gateway-feature6.png';
 
 const featureItemsData = [
   {

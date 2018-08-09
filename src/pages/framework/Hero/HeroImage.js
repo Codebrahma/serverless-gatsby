@@ -5,7 +5,7 @@ import {
   Image,
 } from 'serverless-design-system/src';
 
-import frameworkIllustrator from '../../../assets/images/frameworkIllustration.png';
+import frameworkIllustrator from 'src/assets/images/frameworkIllustration.png';
 
 const HeroImage = () => (
   <Flex.horizontallyCenter

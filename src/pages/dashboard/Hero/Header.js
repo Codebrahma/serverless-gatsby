@@ -7,7 +7,7 @@ import {
   P
 } from 'serverless-design-system/src';
 
-import dashboardIcon from '../../../assets/images/icon-platform-dash.png';
+import dashboardIcon from 'src/assets/images/icon-platform-dash.png';
 
 const Header = () => (
   <Flex.horizontallyCenter

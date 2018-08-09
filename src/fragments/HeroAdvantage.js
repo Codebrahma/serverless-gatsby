@@ -7,7 +7,7 @@ import {
   TextWithIcon,
   Text
 } from 'serverless-design-system/src';
-import redRectangleDots from '../assets/images/redRectangleDots.png';
+import redRectangleDots from 'src/assets/images/redRectangleDots.png';
 
 const HeroAdvantage = ({ title, description }) => (
   <Flex

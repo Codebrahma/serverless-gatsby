@@ -1,13 +1,12 @@
 import React from 'react';
 import {
   Flex,
-  Box,
   Heading,
   Image,
   P
 } from 'serverless-design-system/src';
 
-import serverlessBolt from '../../../assets/images/serverlessBolt.png';
+import serverlessBolt from 'src/assets/images/serverlessBolt.png';
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (

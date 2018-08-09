@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { Box, Container } from 'serverless-design-system/src';
-import TrustedClients from '../../fragments/TrustedClients';
+import TrustedClients from 'src/fragments/TrustedClients';
 
-import backgroundImage from '../../assets/images/rectangle-19.png';
+import backgroundImage from 'src/assets/images/rectangle-19.png';
 
 export default () => (
   <Box

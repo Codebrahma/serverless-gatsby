@@ -5,7 +5,7 @@ import {
   Image,
 } from 'serverless-design-system/src';
 
-import gatewayIllustration from '../../../assets/images/gateway-illustration.png';
+import gatewayIllustration from 'src/assets/images/gateway-illustration.png';
 
 const HeroImage = () => (
   <Flex.horizontallyCenter

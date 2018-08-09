@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 
 import { Flex, Image, Heading } from 'serverless-design-system/src';
-import videoIcon from '../../../assets/images/video.png';
+import videoIcon from 'src/assets/images/video.png';
 
 const StyledLink = styled(Link)`
   text-decoration: none;

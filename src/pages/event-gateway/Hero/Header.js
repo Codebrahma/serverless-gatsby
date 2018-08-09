@@ -7,7 +7,7 @@ import {
   P
 } from 'serverless-design-system/src';
 
-import serverlessBolt from '../../../assets/images/group-6.png';
+import serverlessBolt from 'src/assets/images/group-6.png';
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (

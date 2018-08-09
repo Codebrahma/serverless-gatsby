@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Box, Flex } from 'serverless-design-system/src';
-import { Header, Footer } from '../components';
+import { Header, Footer } from 'src/components';
 
 export default ({ children, prefooter, transparentHeader }) => (
   <Flex

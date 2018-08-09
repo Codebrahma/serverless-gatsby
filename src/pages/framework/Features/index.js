@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Features from '../../../fragments/Features';
-import minimumConfiguration from '../../../assets/images/minimumConfiguration.png';
-import robustEcosystem from '../../../assets/images/robustEcosystem.png';
-import multiLingual from '../../../assets/images/multiLingual.png';
-import cloudAgnostic from '../../../assets/images/cloudAgnostic.png';
-import appLifecycleManagement from '../../../assets/images/appLifecycleManagement.png';
-import streamingLogs from '../../../assets/images/streamingLogs.png';
+import Features from 'src/fragments/Features';
+import minimumConfiguration from 'src/assets/images/minimumConfiguration.png';
+import robustEcosystem from 'src/assets/images/robustEcosystem.png';
+import multiLingual from 'src/assets/images/multiLingual.png';
+import cloudAgnostic from 'src/assets/images/cloudAgnostic.png';
+import appLifecycleManagement from 'src/assets/images/appLifecycleManagement.png';
+import streamingLogs from 'src/assets/images/streamingLogs.png';
 
 const featureItemsData = [
   {

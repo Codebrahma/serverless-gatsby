@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { push } from 'gatsby-link';
 
-import DefaultLayout from '../../layouts/Default';
-import Modal from './../../components/Modal/Modal';
+import DefaultLayout from 'src/layouts/Default';
+import Modal from 'src/components/Modal/Modal';
 
 const VideoPlayer = styled.iframe`
   position: absolute;

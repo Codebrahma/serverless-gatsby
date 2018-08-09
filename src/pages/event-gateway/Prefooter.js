@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Prefooter from '../../components/Prefooter';
+import Prefooter from 'src/components/Prefooter';
 
 const sentences = [
   'Dig deeper into Event Gateway use cases, or check out the examples in our open source repo.',

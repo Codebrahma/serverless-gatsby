@@ -1,11 +1,11 @@
 import React from 'react';
 
+import Testimonial from 'src/fragments/Testimonial';
+import DefaultLayout from 'src/layouts/Default';
 import Hero from './Hero';
 import UseCase from './UseCase';
 import Features from './Features';
 import Prefooter from './Prefooter';
-import Testimonial from './../../fragments/Testimonial';
-import DefaultLayout from '../../layouts/Default';
 
 const FrameWorks = () => (
   <DefaultLayout

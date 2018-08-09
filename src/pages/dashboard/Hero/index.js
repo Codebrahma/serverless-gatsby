@@ -1,11 +1,11 @@
 import React from 'react';
 
+import HeroWrapper from 'src/fragments/HeroWrapper';
+import DashboardPageHeroSectionBackground from 'src/assets/images/dashboard.png';
 import Header from './Header';
 import HeroImage from './HeroImage';
 import Advantage from './Advantage';
 import Actions from './Actions';
-import HeroWrapper from '../../../fragments/HeroWrapper';
-import DashboardPageHeroSectionBackground from '../../../assets/images/dashboard.png';
 
 export default () => (
   <HeroWrapper

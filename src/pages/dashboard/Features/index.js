@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Features from '../../../fragments/Features';
-import dashboardFeature1 from '../../../assets/images/dashboard-feature-1.png';
-import dashboardFeature2 from '../../../assets/images/dashboard-feature-2.png';
-import dashboardFeature3 from '../../../assets/images/dashboard-feature-3.png';
-import dashboardFeature4 from '../../../assets/images/dashboard-feature-4.png';
-import dashboardFeature5 from '../../../assets/images/dashboard-feature-5.png';
-import dashboardFeature6 from '../../../assets/images/dashboard-feature-6.png';
+import Features from 'src/fragments/Features';
+import dashboardFeature1 from 'src/assets/images/dashboard-feature-1.png';
+import dashboardFeature2 from 'src/assets/images/dashboard-feature-2.png';
+import dashboardFeature3 from 'src/assets/images/dashboard-feature-3.png';
+import dashboardFeature4 from 'src/assets/images/dashboard-feature-4.png';
+import dashboardFeature5 from 'src/assets/images/dashboard-feature-5.png';
+import dashboardFeature6 from 'src/assets/images/dashboard-feature-6.png';
 
 const featureItemsData = [
   {

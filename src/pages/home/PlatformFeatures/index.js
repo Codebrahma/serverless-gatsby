@@ -10,9 +10,9 @@ import {
   ImageCard,
   ResponsiveStack
 } from 'serverless-design-system/src';
-import frameworkImage from '../../../assets/images/illustration-1.png';
-import dashboardImage from '../../../assets/images/illustration-2.png';
-import gatewayImage from '../../../assets/images/illustration-3.png';
+import frameworkImage from 'src/assets/images/illustration-1.png';
+import dashboardImage from 'src/assets/images/illustration-2.png';
+import gatewayImage from 'src/assets/images/illustration-3.png';
 
 const LearnMoreButton = ({ to }) => (
   <Flex.horizontallyCenter>

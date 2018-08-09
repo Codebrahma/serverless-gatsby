@@ -161,3 +161,47 @@ tfoot td {
   font-style: italic;
   color: #8a97a0;
 }
+
+@font-face {
+  font-family: "Serverless";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Serverless"),
+  local("Serverless-Regular"),
+  url('../assets/fonts/serverless.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SoleilBk";
+  font-weight: normal;
+  font-style: normal;
+  src: local("SoleilBk"),
+  local("Soleil-Book"),
+  url('../assets/fonts/soleil-bk.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SoleilSb";
+  font-weight: normal;
+  font-style: normal;
+  src: local("SoleilSB"),
+  local("Soleil-Small-Book"),
+  url('../assets/fonts/soleil-sb.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Soleil";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Soleil"),
+  local("Soleil"),
+  url('../assets/fonts/soleil.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "SoleilBk-Italic";
+  font-weight: normal;
+  font-style: normal;
+  src: local("SoleilBk-Italic"),
+  url('../assets/fonts/soleil-bk-italic.otf') format("opentype");
+}

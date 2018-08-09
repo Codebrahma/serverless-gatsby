@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Flex, Button, SecondaryButton, Stack } from 'serverless-design-system/src';
+import { Button, SecondaryButton, ResponsiveStack } from 'serverless-design-system/src';
 
 export default () => (
-  <Stack.center
+  <ResponsiveStack.center
     width={[1, 1, 3/4]}
     mx='auto'
     my={3}
@@ -14,5 +14,5 @@ export default () => (
     <SecondaryButton mx={2} my={1}>
       enterprise demo
     </SecondaryButton>
-  </Stack.center>
+  </ResponsiveStack.center>
 );

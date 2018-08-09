@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Box, P, Stack } from 'serverless-design-system/src';
+import { Flex, Box, P, ResponsiveStack } from 'serverless-design-system/src';
 
 // Renders Company details
 const CompanyDetails = () => (
@@ -15,7 +15,7 @@ const CompanyDetails = () => (
         Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
       </P>
     </Box>
-    <Stack
+    <ResponsiveStack
       pt={4}
       alignItems={['left', 'left', 'center']}
     >
@@ -33,7 +33,7 @@ const CompanyDetails = () => (
           </P>
         </Box>
       </Flex>
-    </Stack>
+    </ResponsiveStack>
   </Box>
 );
 

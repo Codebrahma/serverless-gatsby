@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Flex, Box, P, Image, Stack } from 'serverless-design-system/src';
+import { Flex, Box, P, Image, ResponsiveStack } from 'serverless-design-system/src';
 
 import google from  '../../../assets/images/cloudGoogle.png';
 import azure from  '../../../assets/images/cloudAzure.png';
@@ -38,7 +38,7 @@ const CloudProviders = () => (
             Supports Top Cloud Providers
           </P>
         </Box>
-        <Stack.verticallyCenter
+        <ResponsiveStack.verticallyCenter
           justifyContent="space-between"
           width={1}
           px="5%"
@@ -46,7 +46,7 @@ const CloudProviders = () => (
           boxSizing="border-box"
         >
           {cloudProviderImages.map(imgSrc => <CloudProvider key={imgSrc} imgSrc={imgSrc} />)}
-        </Stack.verticallyCenter>
+        </ResponsiveStack.verticallyCenter>
       </Flex.verticallyCenter>
     </Box>
   </Box>

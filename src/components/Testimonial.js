@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Flex, Text, Image as Img, Stack } from 'serverless-design-system/src';
+import { Flex, Text, Image as Img, ResponsiveStack } from 'serverless-design-system/src';
 
 const comp = ({
   img, children, name, designation, alt,
@@ -30,7 +30,7 @@ const comp = ({
         {testimonial}
       </Text>
 
-      <Stack width={1}>
+      <ResponsiveStack width={1}>
         <Flex
           width={[1, 1, 4 / 10]}
           order={[ '0', '0', '1' ]}
@@ -67,7 +67,7 @@ const comp = ({
             {designation}
           </Text>
         </Flex>
-      </Stack>
+      </ResponsiveStack>
     </Flex>
   );
 };

@@ -1,7 +1,12 @@
 import React from 'react';
 
-import { Container, Heading, Box, ResponsiveStack } from 'serverless-design-system/src';
-import ImageCard from '../../../components/ImageCard';
+import {
+  Box,
+  Container,
+  Heading,
+  ImageCard,
+  ResponsiveStack
+} from 'serverless-design-system/src';
 import autoScalingIcon from '../../../assets/images/icon-vol.png';
 import payPerExecutionIcon from '../../../assets/images/icon-graph.png';
 import lowOverheadIcon from '../../../assets/images/icon-dash.png';
@@ -9,14 +14,27 @@ import lowOverheadIcon from '../../../assets/images/icon-dash.png';
 export default () => (
   <Container mt='100px'>
     <Box mx={2}>
-      <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[ 5, 5, 6 ]}>
+      <Heading.h2
+        fontFamily={'SoleilSb'}
+        align='center'
+        fontSize={[ 5, 5, 6 ]}
+      >
         Build more, manage less.
       </Heading.h2>
-      <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[ 5, 5, 6 ]}>
+      <Heading.h2
+        fontFamily={'SoleilSb'}
+        align='center'
+        fontSize={[ 5, 5, 6 ]}
+      >
         Serverless lets you focus on driving business value.
       </Heading.h2>
     </Box>
-    <Heading.h4 fontFamily={'SoleilBk'} align='center' my={[3, 3, 5]} fontSize={[ 2, 2, 4 ]}>
+    <Heading.h4
+      fontFamily={'SoleilBk'}
+      align='center'
+      my={[3, 3, 5]}
+      fontSize={[ 2, 2, 4 ]}
+    >
       The benefits of serverless technology
     </Heading.h4>
     <ResponsiveStack.spaceBetween>

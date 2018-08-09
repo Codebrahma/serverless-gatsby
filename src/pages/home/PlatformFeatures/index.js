@@ -1,8 +1,15 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-import { Box, Button, Container, Flex, Heading, ResponsiveStack } from 'serverless-design-system/src';
-import ImageCard from '../../../components/ImageCard';
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  ImageCard,
+  ResponsiveStack
+} from 'serverless-design-system/src';
 import frameworkImage from '../../../assets/images/illustration-1.png';
 import dashboardImage from '../../../assets/images/illustration-2.png';
 import gatewayImage from '../../../assets/images/illustration-3.png';

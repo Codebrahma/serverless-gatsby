@@ -1,14 +1,15 @@
 import React from 'react';
 
 import { Features } from 'src/fragments';
-import dashboardFeature1 from 'src/assets/images/dashboard-feature-1.png';
-import dashboardFeature2 from 'src/assets/images/dashboard-feature-2.png';
-import dashboardFeature3 from 'src/assets/images/dashboard-feature-3.png';
-import dashboardFeature4 from 'src/assets/images/dashboard-feature-4.png';
-import dashboardFeature5 from 'src/assets/images/dashboard-feature-5.png';
-import dashboardFeature6 from 'src/assets/images/dashboard-feature-6.png';
 
-const featureItemsData = [
+const featureItemsData = (
+  dashboardFeature1,
+  dashboardFeature2,
+  dashboardFeature3,
+  dashboardFeature4,
+  dashboardFeature5,
+  dashboardFeature6,
+) => [
   {
     header: 'Architecture Visualization',
     img: dashboardFeature1,
@@ -41,6 +42,17 @@ const featureItemsData = [
   },
 ];
 
-export default () => (
-  <Features features={featureItemsData} />
+const FeatureList = ({
+  dashboardFeature1,
+  dashboardFeature2,
+  dashboardFeature3,
+  dashboardFeature4,
+  dashboardFeature5,
+  dashboardFeature6,
+}) => (
+  <Features 
+    features={featureItemsData(dashboardFeature1, dashboardFeature2, dashboardFeature3, dashboardFeature4, dashboardFeature5, dashboardFeature6)} 
+  />
 );
+
+export default FeatureList;

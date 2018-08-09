@@ -5,11 +5,9 @@ import {
   Container,
   Flex,
   Heading,
-  Image,
+  GatsbyImg,
   P,
 } from 'serverless-design-system/src';
-
-import Img from "gatsby-image";
 
 const UseCase = ({ title, description, imgSrc, evenIndex }) => {
   const headerPadding = {
@@ -42,8 +40,7 @@ const UseCase = ({ title, description, imgSrc, evenIndex }) => {
         flexDirection="column"
         order={evenIndex ? [1, 1, 1] : [1, 1, 2]}
       >
-        <Img
-          title={title}
+        <GatsbyImg
           alt={title}
           sizes={imgSrc.sizes}
         />

@@ -10,7 +10,7 @@ import {
 } from 'serverless-design-system/src';
 
 import NavLink from '../NavLink';
-import WhiteButton from '../../fragments/WhiteButton';
+import WhiteButton from '../WhiteButton';
 import RightBoxBg from '../../assets/images/footerRightBoxBg.png';
 import whiteRectangleDots from '../../assets/images/whiteRectangleDots.png';
 

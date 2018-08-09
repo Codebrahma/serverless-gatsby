@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { Flex, Box, P, ResponsiveStack } from 'serverless-design-system/src';
+import NavLink from '../../../components/NavLink';
+import { termsOfService, privacyPolicy } from '../navigationPath';
 
 // Renders Company details
 const CompanyDetails = () => (
@@ -8,11 +10,12 @@ const CompanyDetails = () => (
     <Box width={[1, 1, 1/2]}>
       <P
         fontSize={0}
+        fontFamily={"Soleil"}
         lineHeight={3}
         opacity="0.5"
         m={0}
       >
-        Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska & Thailand
+        Made with love in San Francisco + Atlanta, Austria, Germany, Pakistan, Poland, Nebraska &amp; Thailand
       </P>
     </Box>
     <ResponsiveStack
@@ -26,11 +29,18 @@ const CompanyDetails = () => (
       </Box>
       <Flex color="gray.3" width={[1/2, 1/2, 1]}>
         <Box>
-          <P fontSize={0}>terms of service</P>
+          <NavLink to={termsOfService} crossDomain>
+            <P fontSize={0}>
+              terms of service
+            </P>
+          </NavLink>
         </Box>
         <Box ml={2}>
-          <P fontSize={0}>privacy policy
-          </P>
+          <NavLink to={privacyPolicy} crossDomain>
+            <P fontSize={0}>
+              privacy policy
+            </P>
+          </NavLink>
         </Box>
       </Flex>
     </ResponsiveStack>

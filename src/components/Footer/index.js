@@ -9,10 +9,11 @@ import {
   Box,
 } from 'serverless-design-system/src';
 
-import glitchEffect from '../../assets/images/glitchEffect.png';
 import FooterIcon from './FooterIcon';
-import FooterListItems from './FooterListItems';
-import Subscribe from './Subscribe';
+import LeftSection from './LeftSection';
+import RightSection from './RightSection';
+
+import glitchEffect from '../../assets/images/glitchEffect.png';
 
 // Self contained Root Renderer for footer
 const FooterWrapper = ({ prefooter }) => (
@@ -45,8 +46,8 @@ const FooterWrapper = ({ prefooter }) => (
           px={2}
           flexWrap="wrap"
         >
-          <FooterListItems />
-          <Subscribe />
+          <LeftSection />
+          <RightSection />
         </Flex>
       </Flex>
     </Box>

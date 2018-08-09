@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box } from 'serverless-design-system/src';
-import FooterListItem from './FooterListItem';
+import { Box, P } from 'serverless-design-system/src';
+import FooterListItem from './Item';
 
 // Renders each column in the footer list
 const FooterListColumn = ({ header, listItems }) => (
@@ -9,11 +9,17 @@ const FooterListColumn = ({ header, listItems }) => (
     width={['50%', '50%', '20%']}
     mb={[2, 2, 0]}
   >
-    <FooterListItem 
-      color="white"
-      content={header}
-      pt={1}
-    />
+    <P
+      color={'white'}
+      fontFamily={'Serverless'}
+      fontSize={1}
+      lineHeight={1}
+      letterSpacing="letterSpacings.text"
+      my={'5px'}
+      py={1}
+    >
+      {header}
+    </P>
     <Box>
     {
       listItems.map((listItem, index) => (

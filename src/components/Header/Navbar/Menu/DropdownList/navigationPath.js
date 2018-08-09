@@ -32,4 +32,4 @@ export default {
   },
   enterprise: '/enterprise',
   signup: 'https://dashboard.serverless.com/',
-}
+};

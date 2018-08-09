@@ -1,7 +1,21 @@
 import React from 'react';
 
-import { Flex, Box, TextField, Button, Image, P, ResponsiveStack } from 'serverless-design-system/src';
+import {
+  Flex,
+  Box,
+  TextField,
+  Button,
+  Image,
+  P,
+  ResponsiveStack
+} from 'serverless-design-system/src';
 
+import NavLink from '../NavLink';
+import {
+  facebookHandle,
+  instagramHandle,
+  twitterHandle
+} from './navigationPath';
 import footerFb from '../../assets/images/footerFb.png';
 import footerInsta from '../../assets/images/footerInst.png';
 import footerTwitter from '../../assets/images/footerTwitter.png';
@@ -46,9 +60,15 @@ const Subscribe = () => (
       </Button>
     </ResponsiveStack.horizontallyCenter>
     <Box py={3}>
-      <Image mr={3} src={footerFb} />
-      <Image mr={3} src={footerInsta} />
-      <Image mr={3} src={footerTwitter} />
+      <NavLink to={facebookHandle} crossDomain>
+        <Image mr={3} src={footerFb} />
+      </NavLink>
+      <NavLink to={instagramHandle} crossDomain>
+        <Image mr={3} src={footerInsta} />
+      </NavLink>
+      <NavLink to={twitterHandle} crossDomain>
+        <Image mr={3} src={footerTwitter} />
+      </NavLink>
     </Box>
   </Flex>
 );

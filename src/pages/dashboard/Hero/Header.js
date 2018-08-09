@@ -14,6 +14,7 @@ import {
   HeroInlineDescription
 } from 'src/fragments';
 
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
 const Header = ({ dashboardIcon }) => (
   <Flex.horizontallyCenter
@@ -42,4 +43,4 @@ const Header = ({ dashboardIcon }) => (
   </Flex.horizontallyCenter>
 );
 
-export default Header;
+export default ImageContextHOC(Header, ['dashboardIcon']);

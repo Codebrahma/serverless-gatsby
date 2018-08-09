@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { UseCases } from 'src/fragments';
+import ImageContextHOC from '../../components/ImageContextHOC';
 
 const cases = (useCase1, useCase2, useCase3) => [
   {
@@ -28,4 +29,6 @@ const UseCaseWrapper = ({ useCase1, useCase2, useCase3 }) => (
   />
 );
 
-export default UseCaseWrapper;
+const ImageContext = React.createContext();
+
+export default ImageContextHOC(UseCaseWrapper, ['useCase1', 'useCase2', 'useCase3']);

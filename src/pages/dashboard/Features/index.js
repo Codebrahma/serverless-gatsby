@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Features } from 'src/fragments';
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
 const featureItemsData = (
   dashboardFeature1,
@@ -55,4 +56,4 @@ const FeatureList = ({
   />
 );
 
-export default FeatureList;
+export default ImageContextHOC(FeatureList, ['dashboardFeature1', 'dashboardFeature2', 'dashboardFeature3', 'dashboardFeature4', 'dashboardFeature5', 'dashboardFeature6']);

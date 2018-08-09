@@ -4,6 +4,7 @@ import {
   Box,
   GatsbyImg,
 } from 'serverless-design-system/src';
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
 const HeroImage = ({ dashboardIllustration }) => (
   <Flex.horizontallyCenter
@@ -20,4 +21,4 @@ const HeroImage = ({ dashboardIllustration }) => (
   </Flex.horizontallyCenter>
 );
 
-export default HeroImage;
+export default ImageContextHOC(HeroImage, ['dashboardIllustration']);

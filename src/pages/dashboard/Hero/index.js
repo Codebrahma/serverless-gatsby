@@ -7,7 +7,7 @@ import HeroImage from './HeroImage';
 import Advantage from './Advantage';
 import Actions from './Actions';
 
-export default ({ dashboardIllustration, dashboardIcon }) => (
+export default () => (
   <HeroWrapper
     backgroundImage={`url(${DashboardPageHeroSectionBackground})`}
     backgroundSize="contain"

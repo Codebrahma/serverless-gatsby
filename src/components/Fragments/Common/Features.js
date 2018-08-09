@@ -59,7 +59,7 @@ FeatureItem.propTypes = {
 };
 
 export default ({ features }) => (
-  <Container px={2}>
+  <Container px={2} pb={[300, 300, 10, 10]}>
     <Flex
       flexDirection="column"
       px={[0, 0, 2, 5]}

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Box, Container, P, Image, ResponsiveStack } from 'serverless-design-system/src';
-import backgroundImage from '../assets/images/rectangle-19.png';
+import { Image, ResponsiveStack } from 'serverless-design-system/src';
+
 import eaLogo from '../assets/images/ea-logo.png';
 import cocacolaLogo from '../assets/images/cocacola-logo.png';
 import nordstromLogo from '../assets/images/nordstrom-logo.png';
@@ -19,26 +19,16 @@ const TrustedClientLogo = ({ src: logo, altText }) => (
 )
 
 const TrustedClients = () => (
-  <Box
+  <ResponsiveStack.verticallyCenter
+    justifyContent='space-between'
     width={1}
-    backgroundImage={`url(${backgroundImage})`}
-    px={[ 0, 0, 2, 6, 8 ]}
-    pt={5}
-    pb={[300, 300, 12, 12]}
   >
-    <Container>
-      <ResponsiveStack.verticallyCenter
-        justifyContent='space-between'
-        width={1}
-      >
-        <TrustedClientLogo src={eaLogo} altText='EA' />
-        <TrustedClientLogo src={cocacolaLogo} altText='Coca Cola' />
-        <TrustedClientLogo src={nordstromLogo} altText='Nordstrom' />
-        <TrustedClientLogo src={expediaLogo} altText='Expedia' />
-        <TrustedClientLogo src={reutersLogo} altText='Reuters' />
-      </ResponsiveStack.verticallyCenter>
-    </Container>
-  </Box>
+    <TrustedClientLogo src={eaLogo} altText='EA' />
+    <TrustedClientLogo src={cocacolaLogo} altText='Coca Cola' />
+    <TrustedClientLogo src={nordstromLogo} altText='Nordstrom' />
+    <TrustedClientLogo src={expediaLogo} altText='Expedia' />
+    <TrustedClientLogo src={reutersLogo} altText='Reuters' />
+  </ResponsiveStack.verticallyCenter>
 );
 
 export default TrustedClients;

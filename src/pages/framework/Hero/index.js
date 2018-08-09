@@ -2,10 +2,10 @@ import React from 'react';
 
 import Header from './Header';
 import HeroImage from './HeroImage';
+import Actions from './Actions';
 import Advantage from './Advantage';
 import CloudProviders from './CloudProviders';
 import HeroWrapper from '../../../components/Fragments/Common/HeroWrapper';
-import HeroActions from '../../../components/Fragments/Common/HeroAction';
 import FrameworkPageHeroSectionBackground from '../../../assets/images/framework.png';
 
 export default () => (
@@ -16,10 +16,7 @@ export default () => (
     <Header />
     <HeroImage />
     <Advantage />
-    <HeroActions
-      firstBtn={{ name: 'quick start', to: '/framework/docs/getting-started/', completed: false }}
-      secondBtn={{ name: 'sign up', to: 'https://dashboard.serverless.com/', crossDomain: true, completed: false }}
-    />
+    <Actions />
     <CloudProviders />
   </HeroWrapper>
 );

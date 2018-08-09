@@ -18,16 +18,20 @@ const HeroActions = ({
   }
 }) => (
   <ResponsiveStack.center
-    width={0.5}
+    width={[1, 1, 3/4]}
     mx='auto'
-    my={2}
+    my={3}
   >
     <NavLink
       to={firstLink}
       completed={fCompleted}
       crossDomain={fcrossDomain}
     >
-      <Button m={1}>
+      <Button
+        mx={2}
+        my={1}
+        border={'2.5px solid'}
+      >
         {fName}
       </Button>
     </NavLink>
@@ -36,7 +40,11 @@ const HeroActions = ({
       completed={sCompleted}
       crossDomain={scrossDomain}
     >
-      <SecondaryButton m={1}>
+      <SecondaryButton
+        mx={2}
+        my={1}
+        borderWidth={'2.5px'}
+      >
         {sName}
       </SecondaryButton>
     </NavLink>

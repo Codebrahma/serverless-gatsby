@@ -1,19 +1,18 @@
 import React from 'react';
-
 import HeroActions from '../../../components/Fragments/Common/HeroActions';
 
 export default () => (
   <HeroActions
     firstBtn={{
-      name: 'sign up',
-      to: 'https://dashboard.serverless.com/',
-      crossDomain: true,
+      name: 'quick start',
+      to: '/framework/docs/getting-started/',
       completed: false,
     }}
     secondBtn={{
-      name: 'enterprise demo',
-      to: '/enterprise/',
-      completed: false,
+      name: 'sign up',
+      to: 'https://dashboard.serverless.com/',
+      crossDomain: true,
+      completed: false
     }}
   />
 );

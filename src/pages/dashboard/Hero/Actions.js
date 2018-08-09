@@ -1,5 +1,4 @@
 import React from 'react';
-
 import HeroActions from '../../../components/Fragments/Common/HeroActions';
 
 export default () => (
@@ -11,7 +10,7 @@ export default () => (
       completed: false,
     }}
     secondBtn={{
-      name: 'enterprise demo',
+      name: 'contact sales',
       to: '/enterprise/',
       completed: false,
     }}

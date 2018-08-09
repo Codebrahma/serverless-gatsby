@@ -10,7 +10,7 @@ import gatewayImage from '../../../assets/images/illustration-3.png';
 const LearnMoreButton = ({ to }) => (
   <Flex.horizontallyCenter>
     <Link to={to}>
-      <Button>
+      <Button width={[ '280px', '280px', '245px', '280px' ]}>
         learn more
       </Button>
     </Link>

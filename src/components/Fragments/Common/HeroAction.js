@@ -22,11 +22,23 @@ const HeroActions = ({
     mx='auto'
     my={2}
   >
-    <NavLink to={firstLink} completed={fCompleted} crossDomain={fcrossDomain}>
-      <Button mx={1} my={1} width="280px" border={0}>{fName}</Button>
+    <NavLink
+      to={firstLink}
+      completed={fCompleted}
+      crossDomain={fcrossDomain}
+    >
+      <Button m={1}>
+        {fName}
+      </Button>
     </NavLink>
-    <NavLink to={secondLink} completed={sCompleted} crossDomain={scrossDomain}>
-      <SecondaryButton mx={1} my={1} width="280px" border={0}>{sName}</SecondaryButton>
+    <NavLink
+      to={secondLink}
+      completed={sCompleted}
+      crossDomain={scrossDomain}
+    >
+      <SecondaryButton m={1}>
+        {sName}
+      </SecondaryButton>
     </NavLink>
   </ResponsiveStack.center>
 );

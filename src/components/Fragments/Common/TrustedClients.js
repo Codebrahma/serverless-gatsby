@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Image, ResponsiveStack } from 'serverless-design-system/src';
 
-import eaLogo from '../assets/images/ea-logo.png';
-import cocacolaLogo from '../assets/images/cocacola-logo.png';
-import nordstromLogo from '../assets/images/nordstrom-logo.png';
-import expediaLogo from '../assets/images/expedia-logo.png';
-import reutersLogo from '../assets/images/reuters-logo.png';
+import eaLogo from './../../../assets/images/ea-logo.png';
+import cocacolaLogo from './../../../assets/images/cocacola-logo.png';
+import nordstromLogo from './../../../assets/images/nordstrom-logo.png';
+import expediaLogo from './../../../assets/images/expedia-logo.png';
+import reutersLogo from './../../../assets/images/reuters-logo.png';
 
 const TrustedClientLogo = ({ src: logo, altText }) => (
   <Image

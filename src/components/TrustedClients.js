@@ -24,7 +24,7 @@ const TrustedClients = () => (
     backgroundImage={`url(${backgroundImage})`}
     px={[ 0, 0, 2, 6, 8 ]}
     pt={5}
-    pb={[6, 6, 9, 12]}
+    pb={[300, 300, 12, 12]}
   >
     <Container>
       <ResponsiveStack.verticallyCenter

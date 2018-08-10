@@ -21,7 +21,7 @@ export default () => (
       },
       {
         name: 'contacts',
-        navProps: { to: company.contacts, crossDomain: true },
+        navProps: { to: company.contact, crossDomain: true },
       },
     ]}
   />

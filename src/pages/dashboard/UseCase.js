@@ -29,6 +29,4 @@ const UseCaseWrapper = ({ useCase1, useCase2, useCase3 }) => (
   />
 );
 
-const ImageContext = React.createContext();
-
 export default ImageContextHOC(UseCaseWrapper, ['useCase1', 'useCase2', 'useCase3']);

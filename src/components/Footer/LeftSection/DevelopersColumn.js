@@ -11,7 +11,7 @@ const {
 
 export default () => (
   <FooterListColumn
-    header="developers"
+    header='developers'
     listItems={[
       {
         name: 'docs',

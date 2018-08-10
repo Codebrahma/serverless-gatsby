@@ -50,7 +50,7 @@ export default ({ name }) => (
         beforeBoxLeft={[0, 0, '-1px', '8px']}
       >
         <Text.span
-          fontFamily="Serverless"
+          fontFamily='Serverless'
           fontSize={2}
           color={'white'}
           letterSpacing={0.7}

@@ -11,7 +11,7 @@ import HomePageHeroSectionBackground from 'src/assets/images/home.png'
 export default () => (
   <HeroWrapper
     backgroundImage={`url(${HomePageHeroSectionBackground})`}
-    backgroundSize="contain"
+    backgroundSize='contain'
   >
     <HeroHeader />
     <HeroImage />

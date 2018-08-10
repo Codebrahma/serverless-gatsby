@@ -19,7 +19,7 @@ const FooterListColumn = ({ header, listItems }) => (
     </P>
     <Box>
       {listItems.map((listItem, index) => (
-        <FooterListItem key={index} color="gray.3" content={listItem} />
+        <FooterListItem key={index} color='gray.3' content={listItem} />
       ))}
     </Box>
   </Box>

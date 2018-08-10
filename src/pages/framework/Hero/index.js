@@ -11,7 +11,7 @@ import CloudProviders from './CloudProviders';
 export default () => (
   <HeroWrapper
     backgroundImage={`url(${FrameworkPageHeroSectionBackground})`}
-    backgroundSize="contain"
+    backgroundSize='contain'
   >
     <Header />
     <HeroImage />

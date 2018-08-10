@@ -5,7 +5,7 @@ import { learn } from 'src/constants/urls';
 
 export default () => (
   <FooterListColumn
-    header="learn"
+    header='learn'
     listItems={[
       {
         name: 'why?',

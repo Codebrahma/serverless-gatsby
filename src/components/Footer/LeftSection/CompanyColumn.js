@@ -5,7 +5,7 @@ import { company } from 'src/constants/urls';
 
 export default () => (
   <FooterListColumn
-    header="company"
+    header='company'
     listItems={[
       {
         name: 'team',

@@ -10,7 +10,7 @@ import Actions from './Actions';
 export default () => (
   <HeroWrapper
     backgroundImage={`url(${DashboardPageHeroSectionBackground})`}
-    backgroundSize="contain"
+    backgroundSize='contain'
   >
     <Header />
     <Actions />

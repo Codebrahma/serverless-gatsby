@@ -1,12 +1,7 @@
 import React from 'react'
 
-<<<<<<< HEAD
 import { Box, Container } from 'serverless-design-system/src';
 import { TrustedClients } from 'src/fragments';
-=======
-import { Box, Container } from 'serverless-design-system/src'
-import TrustedClients from 'src/fragments/TrustedClients'
->>>>>>> run prettier
 
 import backgroundImage from 'src/assets/images/rectangle-19.png'
 

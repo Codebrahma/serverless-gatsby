@@ -9,9 +9,9 @@ import {
 import dashboardIcon from 'src/assets/images/icon-platform-dash.png';
 
 const Header = () => (
-  <Flex.horizontallyCenter flexDirection="column" mb={2}>
-    <Flex.horizontallyCenter height="86px" my={2}>
-      <Image src={dashboardIcon} maxHeight="67px" />
+  <Flex.horizontallyCenter flexDirection='column' mb={2}>
+    <Flex.horizontallyCenter height='86px' my={2}>
+      <Image src={dashboardIcon} maxHeight='67px' />
     </Flex.horizontallyCenter>
     <HeroTitle>
       serverless

@@ -33,7 +33,7 @@ const Navbar = () => (
           'inline-block',
         ]}
       >
-        <List p="0" mt={[4, 3, 0]} ml={[4, 3, 0]} mr={0} mb={0}>
+        <List p='0' mt={[4, 3, 0]} ml={[4, 3, 0]} mr={0} mb={0}>
           {MenuList.map((MenuItem, index) => (
             <NavListItem
               key={index}

@@ -11,9 +11,9 @@ import serverlessBolt from 'src/assets/images/serverlessBolt.png';
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
-  <Flex.horizontallyCenter flexDirection="column" mb={2}>
-    <Flex.horizontallyCenter height="86px" my={2}>
-      <Image src={serverlessBolt} maxHeight="67px" maxWidth="70px" />
+  <Flex.horizontallyCenter flexDirection='column' mb={2}>
+    <Flex.horizontallyCenter height='86px' my={2}>
+      <Image src={serverlessBolt} maxHeight='67px' maxWidth='70px' />
     </Flex.horizontallyCenter>
     <HeroTitle>
       serverless

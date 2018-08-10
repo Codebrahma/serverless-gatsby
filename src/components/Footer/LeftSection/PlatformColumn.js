@@ -5,7 +5,7 @@ import { platform, enterprise } from 'src/constants/urls';
 
 export default () => (
   <FooterListColumn
-    header="platform"
+    header='platform'
     listItems={[
       {
         name: 'framework',

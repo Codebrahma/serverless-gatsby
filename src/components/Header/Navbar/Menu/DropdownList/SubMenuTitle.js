@@ -6,10 +6,10 @@ import dotGridBackground from 'src/assets/images/dot-grid.png'
 export default ({ children }) => (
   <TextWithIcon
     iconSrc={dotGridBackground}
-    iconHeight="20px"
-    iconWidth="25px"
-    iconTop="-2px"
-    iconLeft="-10px"
+    iconHeight='20px'
+    iconWidth='25px'
+    iconTop='-2px'
+    iconLeft='-10px'
   >
     <Heading.h5
       m={0}

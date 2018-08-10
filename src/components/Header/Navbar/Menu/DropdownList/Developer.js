@@ -8,7 +8,7 @@ import { developers } from 'src/constants/urls';
 const SubMenu = ({ title, options }) => (
   <Box>
     <SubMenuTitle>{title}</SubMenuTitle>
-    <List m="0" p="0" mt={2}>
+    <List m='0' p='0' mt={2}>
       {options.map(({ name, to, crossDomain, completed }) => (
         <ListItem.noStyleType my={2} key={name}>
           <SubMenuItem navProps={{ to, crossDomain, completed }}>
@@ -90,15 +90,15 @@ const examplesOptions = [
 ]
 
 export default () => (
-  <Flex flexWrap="wrap">
+  <Flex flexWrap='wrap'>
     <Box width={1} mb={3}>
-      <SubMenu title="documentation" options={documentationOptions} />
+      <SubMenu title='documentation' options={documentationOptions} />
     </Box>
     <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title="quick starts" options={quickStartOptions} />
+      <SubMenu title='quick starts' options={quickStartOptions} />
     </Box>
     <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title="example & guides" options={examplesOptions} />
+      <SubMenu title='example & guides' options={examplesOptions} />
     </Box>
   </Flex>
 )

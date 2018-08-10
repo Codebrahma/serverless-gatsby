@@ -10,13 +10,13 @@ const NavButton = () => (
   <NavbarContext.Consumer>
     {({ isNavbarActive, toggleNavbarActiveness }) => (
       <Box
-        height="26px"
-        width="26px"
-        lineHeight="100%"
+        height='26px'
+        width='26px'
+        lineHeight='100%'
         display={['flex', 'flex', 'none']}
         onClick={toggleNavbarActiveness}
       >
-        <Image src={isNavbarActive ? closeIcon : mobileMenuIcon} m="auto" />
+        <Image src={isNavbarActive ? closeIcon : mobileMenuIcon} m='auto' />
       </Box>
     )}
   </NavbarContext.Consumer>

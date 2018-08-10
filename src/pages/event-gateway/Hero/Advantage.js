@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { ResponsiveStack } from 'serverless-design-system/src';
-
-import HeroAdvantage from 'src/fragments/HeroAdvantage';
+import { HeroAdvantage } from 'src/fragments';
 
 const advantages = [
   { title: 'Simplify API development', description: 'Simplify API The Event Gateway is the simplest developer experience for wiring Serverless functions to http endpoints.' },

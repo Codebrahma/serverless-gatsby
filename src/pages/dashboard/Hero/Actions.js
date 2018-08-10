@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroActions from 'src/fragments/HeroActions';
+import { HeroActions } from 'src/fragments';
 
 export default () => (
   <HeroActions

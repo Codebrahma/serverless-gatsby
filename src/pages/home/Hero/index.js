@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeroWrapper from 'src/fragments/HeroWrapper';
+import { HeroWrapper } from 'src/fragments';
 import HeroHeader from './Header';
 import HeroImage from './Image';
 import HeroActions from './Actions';

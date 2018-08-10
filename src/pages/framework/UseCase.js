@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UseCases from 'src/fragments/UseCases';
+import { UseCases } from 'src/fragments';
 import scaleableAPI from 'src/assets/images/scalableAPI.png';
 import dataProcessing from 'src/assets/images/dataProcessing.png';
 import easyAutomation from 'src/assets/images/easyAutomation.png';

@@ -1,12 +1,12 @@
 import React from 'react';
-import {
-  Flex,
-  Image,
-  P
-} from 'serverless-design-system/src';
+import { Flex, Image, P } from 'serverless-design-system/src';
 
-import HeroTitle from 'src/fragments/HeroTitle';
-import HeroMainTitle from 'src/fragments/HeroMainTitle';
+import {
+  HeroTitle,
+  HeroMainTitle,
+  HeroDescription,
+  HeroInlineDescription
+} from 'src/fragments';
 import serverlessBolt from 'src/assets/images/serverlessBolt.png';
 
 // TODO: Remove hardcoded pixels wherever possible
@@ -31,30 +31,12 @@ const Header = () => (
     <HeroMainTitle>
       framework
     </HeroMainTitle>
-    <Flex.horizontallyCenter
-      px={[2, 2, 0]}
-      pb={1}
-    >
-      <P
-        fontSize={3}
-        lineHeight={3}
-        color="white"
-        align="center"
-      >
-        The easy, open way to build serverless applications
-      </P>
-    </Flex.horizontallyCenter>
-    <Flex.horizontallyCenter
-      px={[2, 2, 5, '18%']}
-      pb={1}
-    >
-      <P
-        lineHeight={3}
-        align="center"
-      >
-        The Serverless Framework is an open-source CLI for building and deploying serverless applications. With over 6 million deployments handled, the Serverless Framework is the tool developers trust to build cloud applications.
-      </P>
-    </Flex.horizontallyCenter>
+    <HeroInlineDescription>
+      The easy, open way to build serverless applications
+    </HeroInlineDescription>
+    <HeroDescription>
+      The Serverless Framework is an open-source CLI for building and deploying serverless applications. With over 6 million deployments handled, the Serverless Framework is the tool developers trust to build cloud applications.
+    </HeroDescription>
   </Flex.horizontallyCenter>
 );
 

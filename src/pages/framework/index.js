@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Testimonial from 'src/fragments/Testimonial';
+import { Testimonial } from 'src/fragments';
 import DefaultLayout from 'src/layouts/Default';
 import Hero from './Hero';
 import UseCase from './UseCase';

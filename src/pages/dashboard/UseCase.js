@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UseCases from 'src/fragments/UseCases';
+import { UseCases } from 'src/fragments';
 import dashboardIllustration1 from 'src/assets/images/illustration-use-case-1.png';
 import dashboardIllustration2 from 'src/assets/images/illustration-use-case-2.png';
 import dashboardIllustration3 from 'src/assets/images/illustration-use-case-3.png';

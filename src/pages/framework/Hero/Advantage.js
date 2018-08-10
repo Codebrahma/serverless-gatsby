@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ResponsiveStack } from 'serverless-design-system/src';
-import HeroAdvantage from 'src/fragments/HeroAdvantage';
+import { HeroAdvantage } from 'src/fragments';
 
 const advantages = [
   { title: 'Infrastructure as Code', description: 'With the Serverless Framework you can define your entire Serverless application, utlizing popular Serverless technologies like AWS Lambda, with a simple yaml configuration file.' },

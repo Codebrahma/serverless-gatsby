@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { ResponsiveStack } from 'serverless-design-system/src';
-
-import HeroAdvantage from 'src/fragments/HeroAdvantage';
+import { HeroAdvantage } from 'src/fragments';
 
 const advantages = [
   { title: 'Visualize Your Applications', description: 'The Serverless Dashboard gives your team a shared overview of the functions, events, and subscriptions that make up your serverless application.' },

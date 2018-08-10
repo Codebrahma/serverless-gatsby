@@ -1,31 +1,22 @@
 import React from 'react';
 
 import { Flex, Heading } from 'serverless-design-system/src';
-
-const headingProps = {
-  fontFamily: 'Serverless',
-  align: 'center',
-  color: 'white',
-};
+import HeroTitle from 'src/fragments/HeroTitle';
+import HeroMainTitle from 'src/fragments/HeroMainTitle';
 
 export default () => (
   <Flex flexDirection='column'>
-    <Heading.h2
-      lineHeight={0}
-      letterSpacing="-1.1px"
-      fontSize={5}
-      mb={1}
-      {...headingProps}
-    >
+    <HeroTitle>
       serverless
-    </Heading.h2>
-    <Heading.h1 {...headingProps}>
+    </HeroTitle>
+    <HeroMainTitle>
       platform
-    </Heading.h1>
+    </HeroMainTitle>
     <Heading.h3
-      {...headingProps}
       fontSize={[3, 3, 5]}
-      fontFamily='SoleilBk'
+      align="center"
+      color="white"
+      fontFamily="SoleilBk"
       mx={2}
       my={[2, 2, 4]}
     >

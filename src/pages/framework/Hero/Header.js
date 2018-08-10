@@ -1,11 +1,12 @@
 import React from 'react';
 import {
   Flex,
-  Heading,
   Image,
   P
 } from 'serverless-design-system/src';
 
+import HeroTitle from 'src/fragments/HeroTitle';
+import HeroMainTitle from 'src/fragments/HeroMainTitle';
 import serverlessBolt from 'src/assets/images/serverlessBolt.png';
 
 // TODO: Remove hardcoded pixels wherever possible
@@ -24,24 +25,12 @@ const Header = () => (
         maxWidth='70px'
       />
     </Flex.horizontallyCenter>
-    <Heading.h2
-      align='center'
-      fontFamily='Serverless'
-      color='white'
-      lineHeight={0}
-      letterSpacing="-1.1px"
-      fontSize={5}
-      mb={0}
-    >
+    <HeroTitle>
       serverless
-    </Heading.h2>
-    <Heading.h1
-      align='center'
-      fontFamily='Serverless'
-      color='white'
-    >
+    </HeroTitle>
+    <HeroMainTitle>
       framework
-    </Heading.h1>
+    </HeroMainTitle>
     <Flex.horizontallyCenter
       px={[2, 2, 0]}
       pb={1}

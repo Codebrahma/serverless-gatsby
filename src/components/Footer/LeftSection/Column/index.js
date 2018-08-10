@@ -14,7 +14,7 @@ const FooterListColumn = ({ header, listItems }) => (
       fontFamily={'Serverless'}
       fontSize={1}
       lineHeight={1}
-      letterSpacing="letterSpacings.text"
+      letterSpacing="text"
       my={'5px'}
       py={1}
     >

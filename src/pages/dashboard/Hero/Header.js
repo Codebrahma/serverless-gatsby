@@ -7,6 +7,8 @@ import {
   P
 } from 'serverless-design-system/src';
 
+import HeroTitle from 'src/fragments/HeroTitle';
+import HeroMainTitle from 'src/fragments/HeroMainTitle';
 import dashboardIcon from 'src/assets/images/icon-platform-dash.png';
 
 const Header = () => (
@@ -23,24 +25,12 @@ const Header = () => (
         maxHeight='67px'
       />
     </Flex.horizontallyCenter>
-    <Heading.h2
-      align='center'
-      fontFamily='Serverless'
-      color='white'
-      lineHeight={0}
-      letterSpacing="-1.1px"
-      fontSize={5}
-      mb={0}
-    >
+    <HeroTitle>
       serverless
-    </Heading.h2>
-    <Heading.h1
-      align='center'
-      fontFamily='Serverless'
-      color='white'
-    >
+    </HeroTitle>
+    <HeroMainTitle>
       dashboard
-    </Heading.h1>
+    </HeroMainTitle>
     <Flex.horizontallyCenter
       px={[2, 2, 0]}
       pb={1}

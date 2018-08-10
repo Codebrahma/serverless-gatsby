@@ -19,7 +19,7 @@ export default ({ children }) => (
       p={0}
       color={'white'}
       fontSize={'1.9rem'}
-      letterSpacing={'0.6px'}
+      letterSpacing={'text'}
     >
       {children}
     </Heading.h5>

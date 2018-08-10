@@ -9,15 +9,15 @@ export default () => (
     listItems={[
       {
         name: 'framework',
-        navProps: { to: platform.framework },
+        navProps: { to: platform.framework, completed: true },
       },
       {
         name: 'dashboard',
-        navProps: { to: platform.dashboard },
+        navProps: { to: platform.dashboard, completed: true },
       },
       {
         name: 'event gateway',
-        navProps: { to: platform.eventGateway },
+        navProps: { to: platform.eventGateway, completed: true },
       },
       {
         name: 'enterprise',

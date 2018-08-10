@@ -42,6 +42,7 @@ const NavLink = ({ to, crossDomain, children, completed, backgroundOnHover }) =>
       <A
         href={crossDomain ? to : `https://serverless.com${to}`}
         backgroundOnHover={backgroundOnHover}
+        target='_blank' // open incomplete and cross domain links in new page
       >
         {children}
       </A>

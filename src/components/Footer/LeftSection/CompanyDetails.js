@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Flex, Box, P, ResponsiveStack } from 'serverless-design-system/src';
 import NavLink from 'src/components/NavLink';
-import { termsOfService, privacyPolicy } from '../navigationPath';
+import { termsOfService, privacyPolicy } from 'src/constants/urls';
 
 // Renders Company details
 const CompanyDetails = () => (

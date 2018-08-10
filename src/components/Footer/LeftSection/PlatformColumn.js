@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FooterListColumn from './Column';
-import { platform } from './../navigationPath';
+import { platform, enterprise } from 'src/constants/urls';
 
 export default () => (
   <FooterListColumn
@@ -21,7 +21,7 @@ export default () => (
       },
       {
         name: 'enterprise',
-        navProps: { to: platform.enterprise, completed: false },
+        navProps: { to: enterprise, completed: false },
       }
     ]}
   />

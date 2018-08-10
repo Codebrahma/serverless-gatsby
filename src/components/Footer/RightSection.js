@@ -15,10 +15,10 @@ import {
   facebookHandle,
   instagramHandle,
   twitterHandle
-} from './navigationPath';
-import footerFb from '../../assets/images/footerFb.png';
-import footerInsta from '../../assets/images/footerInst.png';
-import footerTwitter from '../../assets/images/footerTwitter.png';
+} from 'src/constants/urls';
+import footerFb from 'src/assets/images/footerFb.png';
+import footerInsta from 'src/assets/images/footerInst.png';
+import footerTwitter from 'src/assets/images/footerTwitter.png';
 
 // Renders the subscribe column
 const Subscribe = () => (

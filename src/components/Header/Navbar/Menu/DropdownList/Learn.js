@@ -5,7 +5,7 @@ import {
 } from 'serverless-design-system/src';
 
 import SubMenuItem from './SubMenuItem';
-import { learn } from './navigationPath';
+import { learn } from 'src/constants/urls';
 
 export default () => (
   <List

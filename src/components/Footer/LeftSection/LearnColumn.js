@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FooterListColumn from './Column';
-import { learn } from './../navigationPath';
+import { learn } from 'src/constants/urls';
 
 export default () => (
   <FooterListColumn

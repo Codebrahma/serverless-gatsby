@@ -8,7 +8,7 @@ import {
 
 import SubMenuTitle from './SubMenuTitle';
 import SubMenuItem from './SubMenuItem';
-import { developers } from './navigationPath';
+import { developers } from 'src/constants/urls';
 
 const SubMenu = ({ title, options }) => (
   <Box>

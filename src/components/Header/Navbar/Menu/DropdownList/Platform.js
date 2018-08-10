@@ -9,8 +9,7 @@ import {
 } from 'serverless-design-system/src';
 
 import NavLink from 'src/components/NavLink';
-import { platform } from './navigationPath';
-
+import { platform } from 'src/constants/urls';
 import frameworkIcon from 'src/assets/images/bolt.png';
 import gatewayIcon from 'src/assets/images/group-6.png';
 import dashboardIcon from 'src/assets/images/icon-dashboard.png';

@@ -9,9 +9,9 @@ import PlatformFeatures from './home/PlatformFeatures';
 import Prefooter from './home/Prefooter';
 import TrustedClients from './home/TrustedClients';
 import DefaultLayout from '../layouts/Default';
-import { ImageContext } from '../../components/ImageContextHOC';
+import { ImageContext } from '../components/ImageContextHOC';
 
-const Home = () => {
+const Home = ({ data }) => {
    return (
      <ImageContext.Provider value={{...data}}>
       <DefaultLayout

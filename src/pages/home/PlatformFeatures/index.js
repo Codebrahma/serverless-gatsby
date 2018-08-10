@@ -6,13 +6,13 @@ import {
   Button,
   Container,
   Flex,
+  GatsbyImgCard,
   Heading,
   ImageCard,
   ResponsiveStack
 } from 'serverless-design-system/src';
-import frameworkImage from 'src/assets/images/illustration-1.png';
-import dashboardImage from 'src/assets/images/illustration-2.png';
-import gatewayImage from 'src/assets/images/illustration-3.png';
+
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
 const LearnMoreButton = ({ to }) => (
   <Flex.horizontallyCenter>
@@ -29,18 +29,18 @@ const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
     width={[1, 1, 1/3]}
     my={2}
   >
-    <ImageCard
+    <GatsbyImgCard
       img={image}
-      imgProps={{ height: [ '200px', '200px', '175px', '245px' ] }}
       title={title}
+      alt={title}
       description={description}
     >
       <LearnMoreButton to={learnMoreLink} />
-    </ImageCard>
+    </GatsbyImgCard>
   </Box>
 );
 
-export default () => (
+const PlatformFeatures = ({ frameworkImage, dashboardImage, gatewayImage }) => (
   <Container mt={7}>
     <Box mx={2}>
       <Heading.h2
@@ -74,3 +74,5 @@ export default () => (
     </ResponsiveStack.spaceBetween>
   </Container>
 );
+
+export default ImageContextHOC(PlatformFeatures, ['frameworkImage', 'dashboardImage', 'gatewayImage']);

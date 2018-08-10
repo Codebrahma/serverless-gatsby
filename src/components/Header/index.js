@@ -16,18 +16,6 @@ class Header extends React.Component {
     }
   }
 
-  scrollHandler = () => {
-    const { isNavbarShrinked } = this.state
-    if (window.scrollY > 34) {
-      if (isNavbarShrinked) {
-        return
-      }
-      this.toggleNavbarShrinkness()
-    } else if (isNavbarShrinked) {
-      this.toggleNavbarShrinkness()
-    }
-  }
-
   componentDidMount() {
     if (this.props.transparent) {
       document.addEventListener('scroll', this.scrollHandler)
@@ -37,6 +25,18 @@ class Header extends React.Component {
   componentWillUnmount() {
     if (this.props.transparent) {
       document.removeEventListener('scroll', this.scrollHandler)
+    }
+  }
+  
+  scrollHandler = () => {
+    const { isNavbarShrinked } = this.state
+    if (window.scrollY > 34) {
+      if (isNavbarShrinked) {
+        return
+      }
+      this.toggleNavbarShrinkness()
+    } else if (isNavbarShrinked) {
+      this.toggleNavbarShrinkness()
     }
   }
 

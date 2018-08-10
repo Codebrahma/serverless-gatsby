@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { Testimonial } from 'src/fragments';
 import DefaultLayout from 'src/layouts/Default';
@@ -8,15 +8,12 @@ import Features from './Features';
 import Prefooter from './Prefooter';
 
 const FrameWorks = () => (
-  <DefaultLayout
-    prefooter={Prefooter}
-    transparentHeader
-  >
+  <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero />
     <UseCase />
     <Testimonial />
     <Features />
   </DefaultLayout>
-);
+)
 
-export default FrameWorks;
+export default FrameWorks

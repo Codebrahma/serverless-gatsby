@@ -1,38 +1,32 @@
-import React from 'react';
+import React from 'react'
 
-import { Flex, Box, P, Image, ResponsiveStack } from 'serverless-design-system/src';
+import {
+  Flex,
+  Box,
+  P,
+  Image,
+  ResponsiveStack,
+} from 'serverless-design-system/src'
 
-import google from  'src/assets/images/cloudGoogle.png';
-import azure from  'src/assets/images/cloudAzure.png';
-import aws from  'src/assets/images/cloudAWS.png';
-import ibm from  'src/assets/images/cloudIBM.png';
-import kubernetes from  'src/assets/images/cloudKubernetes.png';
+import google from 'src/assets/images/cloudGoogle.png'
+import azure from 'src/assets/images/cloudAzure.png'
+import aws from 'src/assets/images/cloudAWS.png'
+import ibm from 'src/assets/images/cloudIBM.png'
+import kubernetes from 'src/assets/images/cloudKubernetes.png'
 
 const CloudProvider = ({ imgSrc }) => (
   <Box mb={2}>
-    <Image
-      key={imgSrc}
-      src={imgSrc}
-      width={1}
-    />
+    <Image key={imgSrc} src={imgSrc} width={1} />
   </Box>
-);
+)
 
-const cloudProviderImages = [
-  google,
-  azure,
-  aws,
-  ibm,
-  kubernetes,
-];
+const cloudProviderImages = [google, azure, aws, ibm, kubernetes]
 
 // TODO: Decide on how we can include hardcoded px outside the spaces array
 const CloudProviders = () => (
   <Box width={1}>
     <Box px={15} width={1}>
-      <Flex.verticallyCenter
-        flexDirection="column"
-      >
+      <Flex.verticallyCenter flexDirection="column">
         <Box>
           <P fontSize={2} color="gray.3">
             Supports Top Cloud Providers
@@ -45,11 +39,13 @@ const CloudProviders = () => (
           py="2%"
           boxSizing="border-box"
         >
-          {cloudProviderImages.map(imgSrc => <CloudProvider key={imgSrc} imgSrc={imgSrc} />)}
+          {cloudProviderImages.map(imgSrc => (
+            <CloudProvider key={imgSrc} imgSrc={imgSrc} />
+          ))}
         </ResponsiveStack.verticallyCenter>
       </Flex.verticallyCenter>
     </Box>
   </Box>
-);
+)
 
-export default CloudProviders;
+export default CloudProviders

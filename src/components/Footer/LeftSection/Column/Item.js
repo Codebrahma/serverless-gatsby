@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import { Box, P } from 'serverless-design-system/src';
-import NavLink from 'src/components/NavLink';
+import { Box, P } from 'serverless-design-system/src'
+import NavLink from 'src/components/NavLink'
 
 // Renders Each item in the footer list
 // If used >= 3 move to molecules. (Currently 2)
@@ -21,6 +21,6 @@ const FooterListItem = ({ content, color, pt }) => (
       </P>
     </NavLink>
   </Box>
-);
+)
 
-export default FooterListItem;
+export default FooterListItem

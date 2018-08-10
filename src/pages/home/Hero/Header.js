@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { Flex, Heading } from 'serverless-design-system/src';
 import { HeroTitle, HeroMainTitle } from 'src/fragments';
@@ -22,4 +22,4 @@ export default () => (
       Everything you need to operationalize serverless development
     </Heading.h3>
   </Flex>
-);
+)

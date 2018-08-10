@@ -11,18 +11,9 @@ import {
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
-  <Flex.horizontallyCenter
-    flexDirection="column"
-    mb={2}
-  >
-    <Flex.horizontallyCenter
-      height='86px'
-      my={2}
-    >
-      <Image
-        src={serverlessBolt}
-        maxHeight='67px'
-      />
+  <Flex.horizontallyCenter flexDirection="column" mb={2}>
+    <Flex.horizontallyCenter height="86px" my={2}>
+      <Image src={serverlessBolt} maxHeight="67px" />
     </Flex.horizontallyCenter>
     <HeroTitle>
       serverless
@@ -37,6 +28,6 @@ const Header = () => (
       The Event Gateway is an event router designed for event-driven, serverless architectures. It makes it easy to wire functions to http endpoints, react to business events with serverless functions, and to share event subscriptions with others.
     </HeroDescription>
   </Flex.horizontallyCenter>
-);
+)
 
-export default Header;
+export default Header

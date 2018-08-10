@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import FooterListColumn from './Column';
 import { platform, enterprise } from 'src/constants/urls';
@@ -25,4 +25,4 @@ export default () => (
       }
     ]}
   />
-);
+)

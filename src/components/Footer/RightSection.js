@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Flex,
@@ -7,10 +7,10 @@ import {
   Button,
   Image,
   P,
-  ResponsiveStack
-} from 'serverless-design-system/src';
+  ResponsiveStack,
+} from 'serverless-design-system/src'
 
-import NavLink from '../NavLink';
+import NavLink from '../NavLink'
 import {
   facebookHandle,
   instagramHandle,
@@ -30,7 +30,8 @@ const Subscribe = () => (
   >
     <Box mb={4}>
       <P color="white">
-        Join our newsletter and get the latest news about Serverless products and happenings. #noSpamWePromise
+        Join our newsletter and get the latest news about Serverless products
+        and happenings. #noSpamWePromise
       </P>
     </Box>
     <ResponsiveStack.horizontallyCenter>
@@ -71,6 +72,6 @@ const Subscribe = () => (
       </NavLink>
     </Box>
   </Flex>
-);
+)
 
-export default Subscribe;
+export default Subscribe

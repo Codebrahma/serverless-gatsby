@@ -1,51 +1,52 @@
 import React from 'react'
 import { Box, Container, Flex } from 'serverless-design-system/src'
 
-import Logo from './Logo';
+import Logo from './Logo'
 import Navbar from './Navbar'
-import NavButton from './NavButton';
-import NavbarContext from './NavbarContext';
+import NavButton from './NavButton'
+import NavbarContext from './NavbarContext'
 
 class Header extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       isNavbarActive: false,
       isNavbarShrinked: !props.transparent,
-      toggleNavbarActiveness: this.toggleNavbarActiveness
-    };
+      toggleNavbarActiveness: this.toggleNavbarActiveness,
+    }
   }
 
   scrollHandler = () => {
-    const { isNavbarShrinked } = this.state;
+    const { isNavbarShrinked } = this.state
     if (window.scrollY > 34) {
-      if (isNavbarShrinked) { return; }
-      this.toggleNavbarShrinkness();
+      if (isNavbarShrinked) {
+        return
+      }
+      this.toggleNavbarShrinkness()
     } else if (isNavbarShrinked) {
-      this.toggleNavbarShrinkness();
+      this.toggleNavbarShrinkness()
     }
   }
 
   componentDidMount() {
     if (this.props.transparent) {
-      document.addEventListener('scroll', this.scrollHandler);
+      document.addEventListener('scroll', this.scrollHandler)
     }
   }
 
   componentWillUnmount() {
     if (this.props.transparent) {
-      document.removeEventListener('scroll', this.scrollHandler);
+      document.removeEventListener('scroll', this.scrollHandler)
     }
   }
 
-  toggleNavbarShrinkness = () => this.setState((prevState) => (
-    { isNavbarShrinked: !prevState.isNavbarShrinked }
-  ));
+  toggleNavbarShrinkness = () =>
+    this.setState(prevState => ({
+      isNavbarShrinked: !prevState.isNavbarShrinked,
+    }))
 
   toggleNavbarActiveness = () => {
-    this.setState((prevState) => (
-      { isNavbarActive: !prevState.isNavbarActive }
-    ));
+    this.setState(prevState => ({ isNavbarActive: !prevState.isNavbarActive }))
   }
 
   render() {
@@ -55,20 +56,20 @@ class Header extends React.Component {
         left={0}
         right={0}
         top={0}
-        zIndex='999'
+        zIndex="999"
         py={[2, 2, 0]}
-        maxHeight='100%'
+        maxHeight="100%"
         oy={['scroll', 'scroll', 'visible']}
         bg={[
           'black',
           'black',
-          this.state.isNavbarShrinked ? 'black' : 'transparent'
+          this.state.isNavbarShrinked ? 'black' : 'transparent',
         ]}
       >
         <Container>
           <Flex.verticallyCenter
-            flexWrap='wrap'
-            justifyContent='space-between'
+            flexWrap="wrap"
+            justifyContent="space-between"
             px={15}
           >
             <Logo />
@@ -79,10 +80,10 @@ class Header extends React.Component {
           </Flex.verticallyCenter>
         </Container>
       </Box.fixed>
-    );
+    )
   }
 }
 
-Header.defaultProps = { transparent: false };
+Header.defaultProps = { transparent: false }
 
-export default Header;
+export default Header

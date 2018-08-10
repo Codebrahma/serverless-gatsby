@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import { Box, Button } from 'serverless-design-system/src';
+import { Box, Button } from 'serverless-design-system/src'
 
-import MenuTitle from './Title';
-import MenuDescription from './Description';
+import MenuTitle from './Title'
+import MenuDescription from './Description'
 import {
   PlatformDropdownList,
   DeveloperDropdownList,
@@ -16,21 +16,21 @@ import { enterprise, signup } from 'src/constants/urls';
 const PlatformMenu = () => (
   <Box>
     <MenuTitle name={'platform'} />
-    <MenuDescription
-      wrapperStyles={{ minWidth: [ 0, 0, '320px'] }}
-    >
+    <MenuDescription wrapperStyles={{ minWidth: [0, 0, '320px'] }}>
       <PlatformDropdownList />
     </MenuDescription>
   </Box>
-);
+)
 
 const DeveloperMenu = () => (
   <Box>
     <MenuTitle name={'developers'} />
-    <MenuDescription wrapperStyles={{
-      minWidth: [ 0, 0, '475px' ],
-      px: 5
-    }}>
+    <MenuDescription
+      wrapperStyles={{
+        minWidth: [0, 0, '475px'],
+        px: 5,
+      }}
+    >
       <DeveloperDropdownList />
     </MenuDescription>
   </Box>
@@ -43,7 +43,7 @@ const LearnMenu = () => (
       <LearnDropdownList />
     </MenuDescription>
   </Box>
-);
+)
 
 const ResourcesMenu = () => (
   <Box>
@@ -64,16 +64,8 @@ const EnterpriseMenu = () => (
 
 const SignupMenu = () => (
   <Box>
-    <NavLink
-      to={signup}
-      crossDomain
-    >
-      <Button
-        fontSize={'1.5rem'}
-        px={2}
-        py={'16px'}
-        width='auto'
-      >
+    <NavLink to={signup} crossDomain>
+      <Button fontSize={'1.5rem'} px={2} py={'16px'} width="auto">
         sign up
       </Button>
     </NavLink>
@@ -86,5 +78,5 @@ export default [
   LearnMenu,
   ResourcesMenu,
   EnterpriseMenu,
-  SignupMenu
-];
+  SignupMenu,
+]

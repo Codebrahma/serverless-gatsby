@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { HeroActions } from 'src/fragments';
 
@@ -16,4 +16,4 @@ export default () => (
       completed: false,
     }}
   />
-);
+)

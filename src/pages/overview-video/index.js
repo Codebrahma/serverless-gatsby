@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { push } from 'gatsby-link';
+import React from 'react'
+import styled from 'styled-components'
+import { push } from 'gatsby-link'
 
-import DefaultLayout from 'src/layouts/Default';
-import Modal from 'src/components/Modal/Modal';
+import DefaultLayout from 'src/layouts/Default'
+import Modal from 'src/components/Modal/Modal'
 
 const VideoPlayer = styled.iframe`
   position: absolute;
@@ -11,10 +11,10 @@ const VideoPlayer = styled.iframe`
   width: 100%;
   left: 0;
   top: 0;
-`;
+`
 
 export default class OverviewVideo extends React.Component {
-  loadHome = () => push('/');
+  loadHome = () => push('/')
 
   render() {
     return (
@@ -33,6 +33,6 @@ export default class OverviewVideo extends React.Component {
           />
         </Modal>
       </DefaultLayout>
-    );
+    )
   }
 }

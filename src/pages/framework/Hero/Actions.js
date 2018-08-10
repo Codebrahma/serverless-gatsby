@@ -12,7 +12,7 @@ export default () => (
       name: 'sign up',
       to: 'https://dashboard.serverless.com/',
       crossDomain: true,
-      completed: false
+      completed: false,
     }}
   />
-);
+)

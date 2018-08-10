@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Flex,
   Heading,
@@ -6,7 +6,7 @@ import {
   InlineBlock,
   List,
   ListItem,
-} from 'serverless-design-system/src';
+} from 'serverless-design-system/src'
 
 import NavLink from 'src/components/NavLink';
 import { platform } from 'src/constants/urls';
@@ -31,7 +31,7 @@ const platformMenuConfig = [
     imgProps: {
       src: gatewayIcon,
       maxHeight: '40px',
-      mr: '30px'
+      mr: '30px',
     },
     text: 'event gateway',
     to: platform.eventGateway,
@@ -42,43 +42,44 @@ const platformMenuConfig = [
     imgProps: {
       src: dashboardIcon,
       maxHeight: '40px',
-      mr: '30px'
+      mr: '30px',
     },
     text: 'dashboard',
     to: platform.dashboard,
     crossDomain: false,
     completed: true,
-  }
-];
+  },
+]
 
 export default () => (
-  <List
-    m={0}
-    ml={[ 4, 4, 0 ]}
-    p={0}
-  >
-    {
-      platformMenuConfig.map(({ imgProps, text, to, crossDomain, completed }, index) => (
-        <NavLink key={index} to={to} crossDomain={crossDomain} completed={completed}>
+  <List m={0} ml={[4, 4, 0]} p={0}>
+    {platformMenuConfig.map(
+      ({ imgProps, text, to, crossDomain, completed }, index) => (
+        <NavLink
+          key={index}
+          to={to}
+          crossDomain={crossDomain}
+          completed={completed}
+        >
           <ListItem.noStyleType key={text}>
             <Flex.relative
-              mb={(platformMenuConfig.length - 1 === index) ? 0 : 2}
-              justifyContent='center'
+              mb={platformMenuConfig.length - 1 === index ? 0 : 2}
+              justifyContent="center"
             >
               <Image {...imgProps} />
               <InlineBlock minWidth="155px">
                 <Heading.h6
-                  fontFamily='Serverless'
-                  fontSize='1.5rem'
+                  fontFamily="Serverless"
+                  fontSize="1.5rem"
                   lineHeight={0.7}
-                  letterSpacing='5'
+                  letterSpacing="5"
                   m={0}
                 >
                   serverless
                 </Heading.h6>
                 <Heading.h6
-                  fontFamily='Serverless'
-                  fontSize='2rem'
+                  fontFamily="Serverless"
+                  fontSize="2rem"
                   lineHeight={1.7}
                   letterSpacing={0.8}
                   m={0}
@@ -89,7 +90,7 @@ export default () => (
             </Flex.relative>
           </ListItem.noStyleType>
         </NavLink>
-      ))
-    }
+      )
+    )}
   </List>
 )

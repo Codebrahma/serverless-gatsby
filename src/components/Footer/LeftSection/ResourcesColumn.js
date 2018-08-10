@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import FooterListColumn from './Column';
 import { resources } from 'src/constants/urls';
@@ -9,7 +9,7 @@ export default () => (
     listItems={[
       {
         name: 'blog',
-        navProps: { to:  resources.blog, completed: true },
+        navProps: { to: resources.blog, completed: true },
       },
       {
         name: 'forum',
@@ -29,4 +29,4 @@ export default () => (
       },
     ]}
   />
-);
+)

@@ -1,8 +1,8 @@
 // TODO: REFACTOR THIS COMPONENT.
 
-import React from 'react';
-import { Box, Text, withBeforeAfter } from 'serverless-design-system/src';
-import NavbarContext from '../../NavbarContext';
+import React from 'react'
+import { Box, Text, withBeforeAfter } from 'serverless-design-system/src'
+import NavbarContext from '../../NavbarContext'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
   Box.relative,
@@ -29,33 +29,35 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
       }
     }
   `
-);
+)
 
 export default ({ name }) => (
   <NavbarContext.Consumer>
-    {
-      ({ isNavbarShrinked }) => (
-        <TitleWrapperWithLeadingSlash
-          px={[ 1, 1, '8px', '25px' ]}
-          py={[ 2, 2, isNavbarShrinked ? '27.5px' : '35.5px' ]}
-          transition={[
-            'none',
-            'none',
-            isNavbarShrinked ? 'padding 0.5s' : 'none'
-          ]}
-          beforeBoxBackgroundColor={[ 'transparent', 'transparent', 'primaryColor' ]}
-          beforeBoxLeft={[ 0, 0, '-1px', '8px' ]}
+    {({ isNavbarShrinked }) => (
+      <TitleWrapperWithLeadingSlash
+        px={[1, 1, '8px', '25px']}
+        py={[2, 2, isNavbarShrinked ? '27.5px' : '35.5px']}
+        transition={[
+          'none',
+          'none',
+          isNavbarShrinked ? 'padding 0.5s' : 'none',
+        ]}
+        beforeBoxBackgroundColor={[
+          'transparent',
+          'transparent',
+          'primaryColor',
+        ]}
+        beforeBoxLeft={[0, 0, '-1px', '8px']}
+      >
+        <Text.span
+          fontFamily="Serverless"
+          fontSize={2}
+          color={'white'}
+          letterSpacing={0.7}
         >
-          <Text.span
-            fontFamily='Serverless'
-            fontSize={2}
-            color={'white'}
-            letterSpacing={0.7}
-          >
-            {name}
-          </Text.span>
-        </TitleWrapperWithLeadingSlash>
-      )
-    }
+          {name}
+        </Text.span>
+      </TitleWrapperWithLeadingSlash>
+    )}
   </NavbarContext.Consumer>
-);
+)

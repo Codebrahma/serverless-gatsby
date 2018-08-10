@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import FooterListColumn from './Column';
 import { developers } from 'src/constants/urls';
@@ -27,4 +27,4 @@ export default () => (
       }
     ]}
   />
-);
+)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { HeroWrapper } from 'src/fragments';
 import DashboardPageHeroSectionBackground from 'src/assets/images/dashboard.png';
@@ -17,4 +17,4 @@ export default () => (
     <HeroImage />
     <Advantage />
   </HeroWrapper>
-);
+)

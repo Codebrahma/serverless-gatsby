@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Box,
@@ -6,17 +6,17 @@ import {
   Heading,
   TextWithIcon,
   ResponsiveStack,
-  P
-} from 'serverless-design-system/src';
+  P,
+} from 'serverless-design-system/src'
 
-import NavLink from '../NavLink';
-import WhiteButton from '../WhiteButton';
-import RightBoxBg from 'src/assets/images/footerRightBoxBg.png';
-import whiteRectangleDots from 'src/assets/images/whiteRectangleDots.png';
+import NavLink from '../NavLink'
+import WhiteButton from '../WhiteButton'
+import RightBoxBg from 'src/assets/images/footerRightBoxBg.png'
+import whiteRectangleDots from 'src/assets/images/whiteRectangleDots.png'
 
 const LeftColumn = ({ heading, sentences }) => (
   <Flex.horizontallyCenter
-    width={[1, 1, 1/2]}
+    width={[1, 1, 1 / 2]}
     py={[3, 5, 8]}
     px={[2, 4, 6]}
     boxSizing="border-box"
@@ -27,7 +27,7 @@ const LeftColumn = ({ heading, sentences }) => (
       iconHeight="100px"
       iconWidth="150px"
       iconTop="-20px"
-      iconLeft='-100px'
+      iconLeft="-100px"
       backgroundSize={[0, 0, 'initial']}
     >
       <Heading.h2
@@ -36,38 +36,28 @@ const LeftColumn = ({ heading, sentences }) => (
         fontSize={7}
         letterSpacing={0}
       >
-        { heading }
+        {heading}
       </Heading.h2>
     </TextWithIcon>
-    {
-      sentences.map((sentence, index) => (
-        <P
-          color="white"
-          mt={0}
-          key={index}
-        >
-          { sentence }
-        </P>
-      ))
-    }
+    {sentences.map((sentence, index) => (
+      <P color="white" mt={0} key={index}>
+        {sentence}
+      </P>
+    ))}
   </Flex.horizontallyCenter>
-);
+)
 
 const RightColumn = ({ actions }) => (
   <Flex flexDirection="column">
-    {
-      actions.map(({ name, navProps }, index) => (
-        <Box m={1} key={index}>
-          <NavLink {...navProps}>
-            <WhiteButton>
-              { name }
-            </WhiteButton>
-          </NavLink>
-        </Box>
-      ))
-    }
+    {actions.map(({ name, navProps }, index) => (
+      <Box m={1} key={index}>
+        <NavLink {...navProps}>
+          <WhiteButton>{name}</WhiteButton>
+        </NavLink>
+      </Box>
+    ))}
   </Flex>
-);
+)
 
 export default ({ heading, sentences, actions }) => (
   <ResponsiveStack.relative
@@ -76,12 +66,9 @@ export default ({ heading, sentences, actions }) => (
     mb="-290px"
     o="hidden"
   >
-    <LeftColumn
-      heading={heading}
-      sentences={sentences}
-    />
+    <LeftColumn heading={heading} sentences={sentences} />
     <Flex.center
-      width={[1, 1, 1/2]}
+      width={[1, 1, 1 / 2]}
       py={[5, 5, 8]}
       px={[3, 3, 7]}
       boxSizing="border-box"
@@ -89,9 +76,7 @@ export default ({ heading, sentences, actions }) => (
       background={`#fd5750 url(${RightBoxBg}) no-repeat`}
       backgroundSize="cover"
     >
-      <RightColumn
-        actions={actions}
-      />
+      <RightColumn actions={actions} />
     </Flex.center>
   </ResponsiveStack.relative>
-);
+)

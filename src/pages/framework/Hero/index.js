@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { HeroWrapper } from 'src/fragments';
 import FrameworkPageHeroSectionBackground from 'src/assets/images/framework.png';
@@ -19,4 +19,4 @@ export default () => (
     <Actions />
     <CloudProviders />
   </HeroWrapper>
-);
+)

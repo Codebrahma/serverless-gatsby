@@ -31,21 +31,51 @@ const Home = ({ data }) => {
 export default Home;
 
 export const query = graphql`
-  query HomeImgQuery {
-    frameworkImage: imageSharp(id: { regex: "/illustration-1/" }) {
-      resolutions(height: 86) {
-        ...GatsbyImageSharpResolutions
-      }
-    }
-    dashboardImage: imageSharp(id: { regex: "/illustration-2/" }) {
-      resolutions(width: 70) {
-        ...GatsbyImageSharpResolutions
-      }
-    }
-    gatewayImage: imageSharp(id: { regex: "/illustration-3/" }) {
-      resolutions(width: 70) {
-        ...GatsbyImageSharpResolutions
-      }
+query HomeImgQuery {
+  featureFrameworkImage: imageSharp(id: { regex: "/illustration-1/" }) {
+    sizes(maxWidth: 293, quality: 100) {
+      ...GatsbyImageSharpSizes_tracedSVG
     }
   }
+  featureDashboardImage: imageSharp(id: { regex: "/illustration-2/" }) {
+    sizes(maxWidth: 293, quality: 100) {
+      ...GatsbyImageSharpSizes_tracedSVG
+    }
+  }
+  featureGatewayImage: imageSharp(id: { regex: "/illustration-3/" }) {
+    sizes(maxWidth: 293, quality: 100) {
+      ...GatsbyImageSharpSizes_tracedSVG
+    }
+  }
+  frameworkIcon: imageSharp(id: { regex: "/bolt/" }) {
+    resolutions(width: 56, quality: 100) {
+      ...GatsbyImageSharpResolutions
+    }
+  }
+  dashboardIcon: imageSharp(id: { regex: "/icon-dashboard/" }) {
+    resolutions(width: 70, quality: 100) {
+      ...GatsbyImageSharpResolutions
+    }
+  }
+  gatewayIcon: imageSharp(id: { regex: "/group-6/" }) {
+    resolutions(width: 70, quality: 100) {
+      ...GatsbyImageSharpResolutions
+    }
+  }
+  autoScalingIcon: imageSharp(id: { regex: "/icon-vol/" }) {
+    resolutions(width: 128, quality: 100) {
+      ...GatsbyImageSharpResolutions_tracedSVG
+    }
+  }
+  payPerExecutionIcon: imageSharp(id: { regex: "/icon-graph/" }) {
+    resolutions(width: 128, quality: 100) {
+      ...GatsbyImageSharpResolutions_tracedSVG
+    }
+  }
+  lowOverheadIcon: imageSharp(id: { regex: "/icon-dash/" }) {
+    resolutions(width: 128, quality: 100) {
+      ...GatsbyImageSharpResolutions_tracedSVG
+    }
+  }
+}
 `;

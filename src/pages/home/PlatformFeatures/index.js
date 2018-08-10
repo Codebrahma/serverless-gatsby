@@ -40,7 +40,11 @@ const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
   </Box>
 );
 
-const PlatformFeatures = ({ frameworkImage, dashboardImage, gatewayImage }) => (
+const PlatformFeatures = ({ 
+  featureFrameworkImage, 
+  featureDashboardImage, 
+  featureGatewayImage 
+}) => (
   <Container mt={7}>
     <Box mx={2}>
       <Heading.h2
@@ -54,19 +58,19 @@ const PlatformFeatures = ({ frameworkImage, dashboardImage, gatewayImage }) => (
     </Box>
     <ResponsiveStack.spaceBetween my={6}>
       <PlatformFeature
-        image={frameworkImage}
+        image={featureFrameworkImage}
         title='Serverless Framework'
         description='Build serverless applications quickly on any vendor.'
         learnMoreLink='/framework'
       />
       <PlatformFeature
-        image={dashboardImage}
+        image={featureDashboardImage}
         title='Serverless Dashboard'
         description='Observe and monitor your functions in action.'
         learnMoreLink='/dashboard'
       />
       <PlatformFeature
-        image={gatewayImage}
+        image={featureGatewayImage}
         title='Event Gateway'
         description='Integrate serverless & legacy applications via event-driven extensibility.'
         learnMoreLink='/event-gateway'
@@ -75,4 +79,4 @@ const PlatformFeatures = ({ frameworkImage, dashboardImage, gatewayImage }) => (
   </Container>
 );
 
-export default ImageContextHOC(PlatformFeatures, ['frameworkImage', 'dashboardImage', 'gatewayImage']);
+export default ImageContextHOC(PlatformFeatures, ['featureFrameworkImage', 'featureDashboardImage', 'featureGatewayImage']);

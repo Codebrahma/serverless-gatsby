@@ -2,14 +2,16 @@ import React from 'react';
 
 import { Features } from 'src/fragments';
 
-import gatewayFeature1 from 'src/assets/images/event-gateway-feature1.png';
-import gatewayFeature2 from 'src/assets/images/event-gateway-feature2.png';
-import gatewayFeature3 from 'src/assets/images/event-gateway-feature3.png';
-import gatewayFeature4 from 'src/assets/images/event-gateway-feature4.png';
-import gatewayFeature5 from 'src/assets/images/event-gateway-feature5.png';
-import gatewayFeature6 from 'src/assets/images/event-gateway-feature6.png';
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
-const featureItemsData = [
+const featureItemsData = (
+  gatewayFeature1,
+  gatewayFeature2,
+  gatewayFeature3,
+  gatewayFeature4,
+  gatewayFeature5,
+  gatewayFeature6,
+) => [
   {
     header: 'API Gateway',
     img: gatewayFeature1,
@@ -42,6 +44,25 @@ const featureItemsData = [
   },
 ];
 
-export default () => (
-  <Features features={featureItemsData} />
+const gatewayFeatures = ({
+  gatewayFeature1,
+  gatewayFeature2,
+  gatewayFeature3,
+  gatewayFeature4,
+  gatewayFeature5,
+  gatewayFeature6,
+}) => (
+  <Features
+    features={featureItemsData(gatewayFeature1, gatewayFeature2, gatewayFeature3, gatewayFeature4, gatewayFeature5, gatewayFeature6)}
+  />
 );
+
+
+export default ImageContextHOC(gatewayFeatures, [
+  'gatewayFeature1', 
+  'gatewayFeature2', 
+  'gatewayFeature3',
+  'gatewayFeature4', 
+  'gatewayFeature5', 
+  'gatewayFeature6',
+]);

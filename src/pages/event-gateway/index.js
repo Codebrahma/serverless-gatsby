@@ -16,12 +16,7 @@ const EventGateway = ({ data }) => (
     >  
       <Hero />
       <UseCase />
-      {
-        /*
-        
-        <Features /> 
-        */
-      }
+      <Features />
     </DefaultLayout>
   </ImageContext.Provider>
 );
@@ -55,5 +50,35 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
+    gatewayFeature1: imageSharp(id: { regex: "/event-gateway-feature1.png/" }) {
+      resolutions(width: 128) {
+        ...GatsbyImageSharpResolutions_tracedSVG
+      }
+    }
+    gatewayFeature2: imageSharp(id: { regex: "/event-gateway-feature2.png/" }) {
+      resolutions(width: 128) {
+        ...GatsbyImageSharpResolutions_tracedSVG
+      }
+    }
+    gatewayFeature3: imageSharp(id: { regex: "/event-gateway-feature3.png/" }) {
+      resolutions(width: 128) {
+        ...GatsbyImageSharpResolutions_tracedSVG
+      }
+    }
+    gatewayFeature4: imageSharp(id: { regex: "/event-gateway-feature4.png/" }) {
+      resolutions(width: 128) {
+        ...GatsbyImageSharpResolutions_tracedSVG
+      }
+    }
+    gatewayFeature5: imageSharp(id: { regex: "/event-gateway-feature5.png/" }) {
+      resolutions(width: 128) {
+        ...GatsbyImageSharpResolutions_tracedSVG
+      }
+    }
+    gatewayFeature6: imageSharp(id: { regex: "/event-gateway-feature6.png/" }) {
+      resolutions(width: 128) {
+        ...GatsbyImageSharpResolutions_tracedSVG
+      }
+    }  
   }
 `;

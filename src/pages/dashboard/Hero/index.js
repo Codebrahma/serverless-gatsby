@@ -5,7 +5,7 @@ import DashboardPageHeroSectionBackground from 'src/assets/images/dashboard.png'
 import Header from './Header';
 import HeroImage from './HeroImage';
 import Advantage from './Advantage';
-import Actions from './Actions';
+import HeroActions from './Actions';
 
 export default () => (
   <HeroWrapper

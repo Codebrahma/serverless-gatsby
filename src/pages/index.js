@@ -8,7 +8,6 @@ import Benefits from './home/Benefits';
 import PlatformFeatures from './home/PlatformFeatures';
 import Prefooter from './home/Prefooter';
 import TrustedClients from './home/TrustedClients';
-import DefaultLayout from '../layouts/Default';
 import { ImageContext } from '../components/ImageContextHOC';
 
 const Home = ({ data }) => {

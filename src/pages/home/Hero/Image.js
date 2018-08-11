@@ -6,6 +6,7 @@ import dashboardIcon from 'src/assets/images/icon-dashboard.png';
 import gatewayIcon from 'src/assets/images/group-6.png';
 import bulletLeftMarker from 'src/assets/images/bullet-left-marker.png';
 import bulletRightMarker from 'src/assets/images/bullet-right-marker.png';
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
 const bulletMarkerStyle = `
   content: " ";

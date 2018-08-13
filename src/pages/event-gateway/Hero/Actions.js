@@ -1,7 +1,7 @@
-import React from 'react';
-import { HeroActions } from 'src/fragments';
+import React from 'react'
+import { HeroActions } from 'src/fragments'
 
-export default () => (
+const EventGatewayActions = () => (
   <HeroActions
     firstBtn={{
       name: 'sign up',
@@ -15,4 +15,6 @@ export default () => (
       completed: false,
     }}
   />
-);
+)
+
+export default EventGatewayActions

@@ -1,29 +1,23 @@
-import React from 'react';
-import styled from 'styled-components';
-import Link from 'gatsby-link';
+import React from 'react'
+import styled from 'styled-components'
+import Link from 'gatsby-link'
 
-import { Flex, Image, Heading } from 'serverless-design-system/src';
-import videoIcon from 'src/assets/images/video.png';
+import { Flex, Image, Heading } from 'serverless-design-system/src'
+import videoIcon from 'src/assets/images/video.png'
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-`;
+`
 
-export default () => (
+const HomeHeroFooter = () => (
   <StyledLink to='/overview-video'>
     <Flex.center
-      width={[ 1, 1, 3/4 ]}
+      width={[1, 1, 3 / 4]}
       my={[2, 4, 5]}
       mx={'auto'}
       flexDirection='row'
     >
-      <Image
-        src={videoIcon}
-        height='50px'
-        width='auto'
-        ml={1}
-        mr={[0, 0, 2]}
-      />
+      <Image src={videoIcon} height='50px' width='auto' ml={1} mr={[0, 0, 2]} />
       <Heading.h4
         color='white'
         fontSize={[3, 3, 4]}
@@ -35,4 +29,6 @@ export default () => (
       </Heading.h4>
     </Flex.center>
   </StyledLink>
-);
+)
+
+export default HomeHeroFooter

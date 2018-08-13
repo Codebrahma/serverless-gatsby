@@ -1,7 +1,7 @@
-import React from 'react';
-import { HeroActions } from 'src/fragments';
+import React from 'react'
+import { HeroActions } from 'src/fragments'
 
-export default () => (
+const FrameworkHeroActions = () => (
   <HeroActions
     firstBtn={{
       name: 'quick start',
@@ -12,7 +12,9 @@ export default () => (
       name: 'sign up',
       to: 'https://dashboard.serverless.com/',
       crossDomain: true,
-      completed: false
+      completed: false,
     }}
   />
-);
+)
+
+export default FrameworkHeroActions

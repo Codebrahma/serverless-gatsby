@@ -1,18 +1,11 @@
-import React from 'react';
-import {
-  List,
-  ListItem,
-} from 'serverless-design-system/src';
+import React from 'react'
+import { List, ListItem } from 'serverless-design-system/src'
 
-import SubMenuItem from './SubMenuItem';
-import { resources } from 'src/constants/urls';
+import SubMenuItem from './SubMenuItem'
+import { resources } from 'src/constants/urls'
 
-export default () => (
-  <List
-    m={0}
-    ml={[ 4, 4, 0 ]}
-    p={0}
-  >
+const Resource = () => (
+  <List m={0} ml={[4, 4, 0]} p={0}>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
@@ -67,3 +60,5 @@ export default () => (
     </ListItem.noStyleType>
   </List>
 )
+
+export default Resource

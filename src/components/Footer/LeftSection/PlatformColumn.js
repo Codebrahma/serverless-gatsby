@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import FooterListColumn from './Column';
-import { platform, enterprise } from 'src/constants/urls';
+import FooterListColumn from './Column'
+import { platform, enterprise } from 'src/constants/urls'
 
-export default () => (
+const PlatformColumn = () => (
   <FooterListColumn
-    header="platform"
+    header='platform'
     listItems={[
       {
         name: 'framework',
@@ -22,7 +22,9 @@ export default () => (
       {
         name: 'enterprise',
         navProps: { to: enterprise, completed: false },
-      }
+      },
     ]}
   />
-);
+)
+
+export default PlatformColumn

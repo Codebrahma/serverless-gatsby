@@ -1,7 +1,7 @@
-import React from 'react';
-import { withTheme } from 'styled-components';
+import React from 'react'
+import { withTheme } from 'styled-components'
 
-import { Box, Container } from 'serverless-design-system/src';
+import { Box, Container } from 'serverless-design-system/src'
 
 const HeroWrapper = ({ children, theme, ...otherProps }) => (
   <Box
@@ -9,15 +9,15 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
     pt={[
       theme.navbarHeights.mobile,
       theme.navbarHeights.mobile,
-      theme.navbarHeights.desktop
+      theme.navbarHeights.desktop,
     ]}
-    background="black"
+    background='black'
     {...otherProps}
   >
     <Container px={0} py={4}>
-      { children }
+      {children}
     </Container>
   </Box>
-);
+)
 
-export default withTheme(HeroWrapper);
+export default withTheme(HeroWrapper)

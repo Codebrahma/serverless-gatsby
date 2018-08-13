@@ -1,27 +1,21 @@
+// TODO: MOVE ALL THE LINKS TO SINGLE FILE
+// CURRENTLY TWO FILE HAS LINKS. (i.e one in header, another in footer)
+
 export default {
   platform: {
     framework: '/framework',
     eventGateway: '/event-gateway',
     dashboard: '/dashboard',
+    enterprise: '/enterprise',
   },
   developers: {
-    documentation: {
-      framework: '/framework/docs/',
-      platform: 'https://github.com/serverless/platform/tree/master/docs',
-      gettingStarted: '/framework/docs/getting-started/',
-      examplesAndGuides: '/framework/docs/providers/aws/examples/',
-    },
-    quickStart: {
-      aws: '/framework/docs/providers/aws/guide/quick-start/',
-      azure: '/framework/docs/providers/azure/guide/quick-start/',
-      google: '/framework/docs/providers/google/guide/quick-start/',
-      others: '/framework/docs/',
-    },
-    examples: 'https://github.com/serverless/examples',
+    docs: '/framework/docs/',
+    quickStarts: '/framework/docs/getting-started/',
+    examplesAndGuides: '/framework/docs/providers/aws/examples/',
   },
   learn: {
-    useCases: '/learn/',
     why: '/learn/use-cases/',
+    useCases: '/learn/',
     comparisions: '/learn/comparisons/',
   },
   resources: {
@@ -43,6 +37,4 @@ export default {
   facebookHandle: 'https://www.facebook.com/serverless/',
   instagramHandle: 'https://www.instagram.com/serverlessinc/',
   twitterHandle: 'https://twitter.com/goserverless/',
-  enterprise: '/enterprise',
-  signup: 'https://dashboard.serverless.com/',
 }

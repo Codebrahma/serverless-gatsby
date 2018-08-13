@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import { HeroActions } from 'src/fragments';
+import { HeroActions } from 'src/fragments'
 
-export default () => (
+const HomeActions = () => (
   <HeroActions
     firstBtn={{
       name: 'sign up',
@@ -16,4 +16,6 @@ export default () => (
       completed: false,
     }}
   />
-);
+)
+
+export default HomeActions

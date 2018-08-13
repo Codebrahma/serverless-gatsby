@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-import FooterListColumn from './Column';
-import { developers } from 'src/constants/urls';
+import FooterListColumn from './Column'
+import { developers } from 'src/constants/urls'
 
 const {
   framework: docs,
   gettingStarted: quickStarts,
-  examplesAndGuides
-} = developers.documentation;
+  examplesAndGuides,
+} = developers.documentation
 
-export default () => (
+const DevelopersColumn = () => (
   <FooterListColumn
-    header="developers"
+    header='developers'
     listItems={[
       {
         name: 'docs',
@@ -24,7 +24,9 @@ export default () => (
       {
         name: 'examples & guides',
         navProps: { to: examplesAndGuides, completed: false },
-      }
+      },
     ]}
   />
-);
+)
+
+export default DevelopersColumn

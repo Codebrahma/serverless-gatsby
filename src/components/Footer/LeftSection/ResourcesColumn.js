@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import FooterListColumn from './Column';
-import { resources } from 'src/constants/urls';
+import FooterListColumn from './Column'
+import { resources } from 'src/constants/urls'
 
-export default () => (
+const ResourceColumn = () => (
   <FooterListColumn
-    header="resources"
+    header='resources'
     listItems={[
       {
         name: 'blog',
-        navProps: { to:  resources.blog, completed: true },
+        navProps: { to: resources.blog, completed: true },
       },
       {
         name: 'forum',
@@ -29,4 +29,6 @@ export default () => (
       },
     ]}
   />
-);
+)
+
+export default ResourceColumn

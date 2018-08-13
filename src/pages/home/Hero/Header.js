@@ -1,25 +1,23 @@
-import React from 'react';
+import React from 'react'
 
-import { Flex, Heading } from 'serverless-design-system/src';
-import { HeroTitle, HeroMainTitle } from 'src/fragments';
+import { Flex, Heading } from 'serverless-design-system/src'
+import { HeroTitle, HeroMainTitle } from 'src/fragments'
 
-export default () => (
+const HeroHeader = () => (
   <Flex flexDirection='column'>
-    <HeroTitle>
-      serverless
-    </HeroTitle>
-    <HeroMainTitle>
-      platform
-    </HeroMainTitle>
+    <HeroTitle>serverless</HeroTitle>
+    <HeroMainTitle>platform</HeroMainTitle>
     <Heading.h3
       fontSize={[3, 3, 5]}
-      align="center"
-      color="white"
-      fontFamily="SoleilBk"
+      align='center'
+      color='white'
+      fontFamily='SoleilBk'
       mx={2}
       my={[2, 2, 4]}
     >
       Everything you need to operationalize serverless development
     </Heading.h3>
   </Flex>
-);
+)
+
+export default HeroHeader

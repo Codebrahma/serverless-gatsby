@@ -3,13 +3,15 @@
 *
 * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
-html { box-sizing: border-box; }
+html {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 62.5%; /* html is set to 62.5% so that all the REM measurements throughout  are based on 10px sizing. So basically 1.5rem = 15px :) */
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" on;
+  -moz-font-feature-settings: 'liga' on;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -65,29 +67,62 @@ body {
   font-size: 1.6rem;
   font-family: 'Serverless';
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 600;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 2rem;
 }
-h1 { font-size: 3.0rem; line-height: 1.2; letter-spacing: -.05rem;}
-h2 { font-size: 2.5rem; line-height: 1.25; letter-spacing: -.03rem; }
-h3 { font-size: 2.0rem; line-height: 1.3;  letter-spacing: -.025rem; }
-h4 { font-size: 1.8rem; line-height: 1.35; letter-spacing: -.02rem; }
-h5 { font-size: 1.6rem; line-height: 1.5;  letter-spacing: -.02rem; }
-h6 { font-size: 1.2rem; line-height: 1.6;  letter-spacing: 0; }
-p {  letter-spacing: 0; }
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+}
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.03rem;
+}
+h3 {
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: -0.025rem;
+}
+h4 {
+  font-size: 1.8rem;
+  line-height: 1.35;
+  letter-spacing: -0.02rem;
+}
+h5 {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.02rem;
+}
+h6 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+p {
+  letter-spacing: 0;
+}
 
 img {
   max-width: 100%;
 }
 
-img[align="left"] {
+img[align='left'] {
   margin-right: 20px;
 }
-img[align="right"] {
+img[align='right'] {
   margin-left: 20px;
 }
 
@@ -125,12 +160,12 @@ caption {
 thead th {
   font-weight: 400;
   background: #828282;
-  color: #FFF;
+  color: #fff;
 }
 
 tr {
   background: #e3e3e3;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #fff;
   margin-bottom: 5px;
 }
 
@@ -138,7 +173,8 @@ tr:nth-child(even) {
   background: #f3f3f3;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 10px;
 }
@@ -163,45 +199,41 @@ tfoot td {
 }
 
 @font-face {
-  font-family: "Serverless";
+  font-family: 'Serverless';
   font-weight: normal;
   font-style: normal;
-  src: local("Serverless"),
-  local("Serverless-Regular"),
-  url('../assets/fonts/serverless.otf') format("opentype");
+  src: local('Serverless'), local('Serverless-Regular'),
+    url('../assets/fonts/serverless.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "SoleilBk";
+  font-family: 'SoleilBk';
   font-weight: normal;
   font-style: normal;
-  src: local("SoleilBk"),
-  local("Soleil-Book"),
-  url('../assets/fonts/soleil-bk.otf') format("opentype");
+  src: local('SoleilBk'), local('Soleil-Book'),
+    url('../assets/fonts/soleil-bk.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "SoleilSb";
+  font-family: 'SoleilSb';
   font-weight: normal;
   font-style: normal;
-  src: local("SoleilSB"),
-  local("Soleil-Small-Book"),
-  url('../assets/fonts/soleil-sb.otf') format("opentype");
+  src: local('SoleilSB'), local('Soleil-Small-Book'),
+    url('../assets/fonts/soleil-sb.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "Soleil";
+  font-family: 'Soleil';
   font-weight: normal;
   font-style: normal;
-  src: local("Soleil"),
-  local("Soleil"),
-  url('../assets/fonts/soleil.otf') format("opentype");
+  src: local('Soleil'), local('Soleil'),
+    url('../assets/fonts/soleil.otf') format('opentype');
 }
 
 @font-face {
-  font-family: "SoleilBk-Italic";
+  font-family: 'SoleilBk-Italic';
   font-weight: normal;
   font-style: normal;
-  src: local("SoleilBk-Italic"),
-  url('../assets/fonts/soleil-bk-italic.otf') format("opentype");
+  src: local('SoleilBk-Italic'),
+    url('../assets/fonts/soleil-bk-italic.otf') format('opentype');
 }

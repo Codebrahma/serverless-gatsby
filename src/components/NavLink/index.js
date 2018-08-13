@@ -1,16 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'gatsby-link'
 
-import styled from 'styled-components';
-import dotGridBacground from 'src/assets/images/dot-grid.png';
+import styled from 'styled-components'
+import dotGridBacground from 'src/assets/images/dot-grid.png'
 
 const getLinkStyle = ({ backgroundOnHover }) => `
   position: relative;
   text-decoration: none;
 
   ${
-    backgroundOnHover ? `
+    backgroundOnHover
+      ? `
       &:before {
         content: " ";
         width: 25px;
@@ -29,14 +30,25 @@ const getLinkStyle = ({ backgroundOnHover }) => `
           display: inline-block;
         }
       }
-    ` : null
+    `
+      : null
   }
-`;
+`
 
-const A = styled.a`${getLinkStyle}`;
-const StyledLink = styled(Link)`${getLinkStyle}`;
+const A = styled.a`
+  ${getLinkStyle};
+`
+const StyledLink = styled(Link)`
+  ${getLinkStyle};
+`
 
-const NavLink = ({ to, crossDomain, children, completed, backgroundOnHover }) => {
+const NavLink = ({
+  to,
+  crossDomain,
+  children,
+  completed,
+  backgroundOnHover,
+}) => {
   if (!completed) {
     return (
       <A
@@ -49,10 +61,7 @@ const NavLink = ({ to, crossDomain, children, completed, backgroundOnHover }) =>
     )
   } else {
     return (
-      <StyledLink
-        to={to}
-        backgroundOnHover={backgroundOnHover}
-      >
+      <StyledLink to={to} backgroundOnHover={backgroundOnHover}>
         {children}
       </StyledLink>
     )
@@ -64,12 +73,12 @@ NavLink.propTypes = {
   children: PropTypes.node.isRequired,
   crossDomain: PropTypes.bool,
   completed: PropTypes.bool,
-};
+}
 
 NavLink.defaultProps = {
   crossDomain: false,
   completed: false,
   backgroundOnHover: false,
-};
+}
 
-export default NavLink;
+export default NavLink

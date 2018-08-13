@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import Prefooter from 'src/components/Prefooter';
+import Prefooter from 'src/components/Prefooter'
 
 const sentences = [
   'To get started, pop open your terminal & run:',
   'npm install serverless -g',
-];
+]
 
 const actions = [
   {
@@ -13,14 +13,14 @@ const actions = [
     navProps: {
       to: '/framework/docs',
       completed: false,
-    }
+    },
   },
   {
     name: 'serverless example',
     navProps: {
       to: '/framework/docs/providers/aws/examples/',
       completed: false,
-    }
+    },
   },
   {
     name: 'github repo',
@@ -30,12 +30,14 @@ const actions = [
       completed: false,
     },
   },
-];
+]
 
-export default () => (
+const FrameworkPrefooter = () => (
   <Prefooter
     heading='New to serverless?'
     sentences={sentences}
     actions={actions}
   />
-);
+)
+
+export default FrameworkPrefooter

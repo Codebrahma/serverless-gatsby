@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Flex,
   Heading,
@@ -6,13 +6,13 @@ import {
   InlineBlock,
   List,
   ListItem,
-} from 'serverless-design-system/src';
+} from 'serverless-design-system/src'
 
-import NavLink from 'src/components/NavLink';
-import { platform } from 'src/constants/urls';
-import frameworkIcon from 'src/assets/images/bolt.png';
-import gatewayIcon from 'src/assets/images/group-6.png';
-import dashboardIcon from 'src/assets/images/icon-dashboard.png';
+import NavLink from 'src/components/NavLink'
+import { platform } from 'src/constants/urls'
+import frameworkIcon from 'src/assets/images/bolt.png'
+import gatewayIcon from 'src/assets/images/group-6.png'
+import dashboardIcon from 'src/assets/images/icon-dashboard.png'
 
 const platformMenuConfig = [
   {
@@ -31,7 +31,7 @@ const platformMenuConfig = [
     imgProps: {
       src: gatewayIcon,
       maxHeight: '40px',
-      mr: '30px'
+      mr: '30px',
     },
     text: 'event gateway',
     to: platform.eventGateway,
@@ -42,31 +42,32 @@ const platformMenuConfig = [
     imgProps: {
       src: dashboardIcon,
       maxHeight: '40px',
-      mr: '30px'
+      mr: '30px',
     },
     text: 'dashboard',
     to: platform.dashboard,
     crossDomain: false,
     completed: true,
-  }
-];
+  },
+]
 
-export default () => (
-  <List
-    m={0}
-    ml={[ 4, 4, 0 ]}
-    p={0}
-  >
-    {
-      platformMenuConfig.map(({ imgProps, text, to, crossDomain, completed }, index) => (
-        <NavLink key={index} to={to} crossDomain={crossDomain} completed={completed}>
+const Platform = () => (
+  <List m={0} ml={[4, 4, 0]} p={0}>
+    {platformMenuConfig.map(
+      ({ imgProps, text, to, crossDomain, completed }, index) => (
+        <NavLink
+          key={index}
+          to={to}
+          crossDomain={crossDomain}
+          completed={completed}
+        >
           <ListItem.noStyleType key={text}>
             <Flex.relative
-              mb={(platformMenuConfig.length - 1 === index) ? 0 : 2}
+              mb={platformMenuConfig.length - 1 === index ? 0 : 2}
               justifyContent='center'
             >
               <Image {...imgProps} />
-              <InlineBlock minWidth="155px">
+              <InlineBlock minWidth='155px'>
                 <Heading.h6
                   fontFamily='Serverless'
                   fontSize='1.5rem'
@@ -89,7 +90,9 @@ export default () => (
             </Flex.relative>
           </ListItem.noStyleType>
         </NavLink>
-      ))
-    }
+      )
+    )}
   </List>
 )
+
+export default Platform

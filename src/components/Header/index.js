@@ -1,51 +1,52 @@
 import React from 'react'
 import { Box, Container, Flex } from 'serverless-design-system/src'
 
-import Logo from './Logo';
+import Logo from './Logo'
 import Navbar from './Navbar'
-import NavButton from './NavButton';
-import NavbarContext from './NavbarContext';
+import NavButton from './NavButton'
+import NavbarContext from './NavbarContext'
 
 class Header extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       isNavbarActive: false,
       isNavbarShrinked: !props.transparent,
-      toggleNavbarActiveness: this.toggleNavbarActiveness
-    };
-  }
-
-  scrollHandler = () => {
-    const { isNavbarShrinked } = this.state;
-    if (window.scrollY > 34) {
-      if (isNavbarShrinked) { return; }
-      this.toggleNavbarShrinkness();
-    } else if (isNavbarShrinked) {
-      this.toggleNavbarShrinkness();
+      toggleNavbarActiveness: this.toggleNavbarActiveness,
     }
   }
 
   componentDidMount() {
     if (this.props.transparent) {
-      document.addEventListener('scroll', this.scrollHandler);
+      document.addEventListener('scroll', this.scrollHandler)
     }
   }
 
   componentWillUnmount() {
     if (this.props.transparent) {
-      document.removeEventListener('scroll', this.scrollHandler);
+      document.removeEventListener('scroll', this.scrollHandler)
     }
   }
 
-  toggleNavbarShrinkness = () => this.setState((prevState) => (
-    { isNavbarShrinked: !prevState.isNavbarShrinked }
-  ));
+  scrollHandler = () => {
+    const { isNavbarShrinked } = this.state
+    if (window.scrollY > 34) {
+      if (isNavbarShrinked) {
+        return
+      }
+      this.toggleNavbarShrinkness()
+    } else if (isNavbarShrinked) {
+      this.toggleNavbarShrinkness()
+    }
+  }
+
+  toggleNavbarShrinkness = () =>
+    this.setState(prevState => ({
+      isNavbarShrinked: !prevState.isNavbarShrinked,
+    }))
 
   toggleNavbarActiveness = () => {
-    this.setState((prevState) => (
-      { isNavbarActive: !prevState.isNavbarActive }
-    ));
+    this.setState(prevState => ({ isNavbarActive: !prevState.isNavbarActive }))
   }
 
   render() {
@@ -62,7 +63,7 @@ class Header extends React.Component {
         bg={[
           'black',
           'black',
-          this.state.isNavbarShrinked ? 'black' : 'transparent'
+          this.state.isNavbarShrinked ? 'black' : 'transparent',
         ]}
       >
         <Container>
@@ -79,10 +80,10 @@ class Header extends React.Component {
           </Flex.verticallyCenter>
         </Container>
       </Box.fixed>
-    );
+    )
   }
 }
 
-Header.defaultProps = { transparent: false };
+Header.defaultProps = { transparent: false }
 
-export default Header;
+export default Header

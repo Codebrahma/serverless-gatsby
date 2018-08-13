@@ -10,7 +10,7 @@ Clone the repo
 git clone git@github.com:Codebrahma/serverless-gatsby.git
 cd serverless-gatsby
 git submodule update --init --recursive
-git checkout header
+git checkout master
 npm install
 cd serverless-design-system
 npm install

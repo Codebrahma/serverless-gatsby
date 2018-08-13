@@ -11,13 +11,40 @@ import autoScalingIcon from 'src/assets/images/icon-vol.png'
 import payPerExecutionIcon from 'src/assets/images/icon-graph.png'
 import lowOverheadIcon from 'src/assets/images/icon-dash.png'
 
+const cardList = [
+  {
+    img: autoScalingIcon,
+    title: 'Automatic Scaling',
+    description: 'Forget about provisioning & managing your server fleet. Serverless applications scale with demand',
+  },
+  {
+    img: payPerExecutionIcon,
+    title: 'Pay-per execution',
+    description: 'Never pay for idle. Serverless applications charge you only when they run the service.',
+  },
+  {
+    img: lowOverheadIcon,
+    title: 'Low Overhead',
+    description: 'Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.',
+  },
+];
+
+const EachBenefit = ({ img, title, description }) => (
+  <Box width={[1, 1, 1 / 3]}>
+    <ImageCard
+      img={img}
+      title={title}
+      description={description}
+    />
+  </Box>
+)
+
 const HomeBenefits = () => (
   <Container mt='100px'>
     <Box mx={2}>
       <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[5, 5, 6]}>
         Build more, manage less.
-      </Heading.h2>
-      <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[5, 5, 6]}>
+        <br /><br />
         Serverless lets you focus on driving business value.
       </Heading.h2>
     </Box>
@@ -30,27 +57,16 @@ const HomeBenefits = () => (
       The benefits of serverless technology
     </Heading.h4>
     <ResponsiveStack.spaceBetween>
-      <Box width={[1, 1, 1 / 3]}>
-        <ImageCard
-          img={autoScalingIcon}
-          title='Automatic Scaling'
-          description='Forget about provisioning & managing your server fleet. Serverless applications scale with demand'
-        />
-      </Box>
-      <Box width={[1, 1, 1 / 3]}>
-        <ImageCard
-          img={payPerExecutionIcon}
-          title='Pay-per execution'
-          description='Never pay for idle. Serverless applications charge you only when they run the service.'
-        />
-      </Box>
-      <Box width={[1, 1, 1 / 3]}>
-        <ImageCard
-          img={lowOverheadIcon}
-          title='Low Overhead'
-          description='Serverless teams prototype faster, get to market faster, and spend more time working on new ideas.'
-        />
-      </Box>
+      {
+        cardList.map((benefit) => (
+          <EachBenefit
+            key={benefit.title}
+            img={benefit.img}
+            title={benefit.title}
+            description={benefit.description}
+          />
+        ))
+      }
     </ResponsiveStack.spaceBetween>
   </Container>
 )

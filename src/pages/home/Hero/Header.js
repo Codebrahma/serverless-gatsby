@@ -1,16 +1,12 @@
 import React from 'react'
 
-import { Flex, Heading } from 'serverless-design-system/src';
-import { HeroTitle, HeroMainTitle } from 'src/fragments';
+import { Flex, Heading } from 'serverless-design-system/src'
+import { HeroTitle, HeroMainTitle } from 'src/fragments'
 
 export default () => (
-  <Flex flexDirection='column'>
-    <HeroTitle>
-      serverless
-    </HeroTitle>
-    <HeroMainTitle>
-      platform
-    </HeroMainTitle>
+  <Flex flexDirection="column">
+    <HeroTitle>serverless</HeroTitle>
+    <HeroMainTitle>platform</HeroMainTitle>
     <Heading.h3
       fontSize={[3, 3, 5]}
       align="center"

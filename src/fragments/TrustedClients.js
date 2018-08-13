@@ -18,12 +18,12 @@ const TrustedClientLogo = ({ src: logo, altText }) => (
 )
 
 const TrustedClients = () => (
-  <ResponsiveStack.verticallyCenter justifyContent='space-between' width={1}>
-    <TrustedClientLogo src={eaLogo} altText='EA' />
-    <TrustedClientLogo src={cocacolaLogo} altText='Coca Cola' />
-    <TrustedClientLogo src={nordstromLogo} altText='Nordstrom' />
-    <TrustedClientLogo src={expediaLogo} altText='Expedia' />
-    <TrustedClientLogo src={reutersLogo} altText='Reuters' />
+  <ResponsiveStack.verticallyCenter justifyContent="space-between" width={1}>
+    <TrustedClientLogo src={eaLogo} altText="EA" />
+    <TrustedClientLogo src={cocacolaLogo} altText="Coca Cola" />
+    <TrustedClientLogo src={nordstromLogo} altText="Nordstrom" />
+    <TrustedClientLogo src={expediaLogo} altText="Expedia" />
+    <TrustedClientLogo src={reutersLogo} altText="Reuters" />
   </ResponsiveStack.verticallyCenter>
 )
 

@@ -5,12 +5,12 @@ import { Logo } from 'serverless-design-system/src'
 import logo from 'src/assets/images/logo.svg'
 
 export default () => (
-  <Link to='/'>
+  <Link to="/">
     <Logo
       src={logo}
       height={['22px', '22px', '22px', '30px']}
       width={['125px', '125px', '125px', '170px']}
-      alt='Serverless'
+      alt="Serverless"
     />
   </Link>
 )

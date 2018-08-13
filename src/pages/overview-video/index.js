@@ -25,11 +25,11 @@ export default class OverviewVideo extends React.Component {
           onOverlayClick={this.loadHome}
         >
           <VideoPlayer
-            src='https://player.vimeo.com/video/282028201?autoplay=1&color=f15953&title=0&byline=0&portrait=0'
-            frameBorder='0'
+            src="https://player.vimeo.com/video/282028201?autoplay=1&color=f15953&title=0&byline=0&portrait=0"
+            frameBorder="0"
             allowFullScreen
-            webkitallowfullscreen='true'
-            mozallowfullscreen='true'
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
           />
         </Modal>
       </DefaultLayout>

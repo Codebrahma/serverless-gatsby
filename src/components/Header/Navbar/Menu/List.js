@@ -8,10 +8,10 @@ import {
   PlatformDropdownList,
   DeveloperDropdownList,
   LearnDropdownList,
-  ResourceDropdownList
-} from './DropdownList';
-import NavLink from 'src/components/NavLink';
-import { enterprise, signup } from 'src/constants/urls';
+  ResourceDropdownList,
+} from './DropdownList'
+import NavLink from 'src/components/NavLink'
+import { enterprise, signup } from 'src/constants/urls'
 
 const PlatformMenu = () => (
   <Box>
@@ -65,7 +65,7 @@ const EnterpriseMenu = () => (
 const SignupMenu = () => (
   <Box>
     <NavLink to={signup} crossDomain>
-      <Button fontSize={'1.5rem'} px={2} py={'16px'} width='auto'>
+      <Button fontSize={'1.5rem'} px={2} py={'16px'} width="auto">
         sign up
       </Button>
     </NavLink>

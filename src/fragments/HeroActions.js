@@ -22,7 +22,7 @@ const HeroActions = ({
     completed: sCompleted = false,
   },
 }) => (
-  <ResponsiveStack.center width={[1, 1, 3 / 4]} mx='auto' my={3}>
+  <ResponsiveStack.center width={[1, 1, 3 / 4]} mx="auto" my={3}>
     <NavLink to={firstLink} completed={fCompleted} crossDomain={fcrossDomain}>
       <Button mx={2} my={1} border={'2.5px solid'}>
         {fName}

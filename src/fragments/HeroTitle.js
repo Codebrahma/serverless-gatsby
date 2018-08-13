@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Heading } from 'serverless-design-system/src';
+import { Heading } from 'serverless-design-system/src'
 
 export default ({ children }) => (
   <Heading.h2
@@ -12,6 +12,6 @@ export default ({ children }) => (
     align="center"
     color="white"
   >
-    { children }
+    {children}
   </Heading.h2>
-);
+)

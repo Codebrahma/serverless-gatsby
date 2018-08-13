@@ -28,8 +28,8 @@ const MenuDescription = ({ wrapperStyles, children }) => (
         px={[1, 1, 4]}
         pt={[1, 1, 3]}
         pb={4}
-        zIndex='999'
-        boxShadow='0 10px 50px 0 rgba(0, 0, 0, 0.15)'
+        zIndex="999"
+        boxShadow="0 10px 50px 0 rgba(0, 0, 0, 0.15)"
         position={['relative', 'relative', 'absolute']}
         top={['0', '0', isNavbarShrinked ? '72px' : '90px']}
         left={['0', '0', '-50%']}

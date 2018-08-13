@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { UseCases } from 'src/fragments';
-import dashboardIllustration1 from 'src/assets/images/illustration-use-case-1.png';
-import dashboardIllustration2 from 'src/assets/images/illustration-use-case-2.png';
-import dashboardIllustration3 from 'src/assets/images/illustration-use-case-3.png';
+import { UseCases } from 'src/fragments'
+import dashboardIllustration1 from 'src/assets/images/illustration-use-case-1.png'
+import dashboardIllustration2 from 'src/assets/images/illustration-use-case-2.png'
+import dashboardIllustration3 from 'src/assets/images/illustration-use-case-3.png'
 
 const cases = [
   {
@@ -29,8 +29,8 @@ const cases = [
 const UseCaseWrapper = () => (
   <UseCases
     cases={cases}
-    useCaseHeader='Serverless Dashboard Use Cases'
-    useCaseSubHeader='These are the 3 main use cases for the Serverless Dashboard that you should know about.'
+    useCaseHeader="Serverless Dashboard Use Cases"
+    useCaseSubHeader="These are the 3 main use cases for the Serverless Dashboard that you should know about."
   />
 )
 

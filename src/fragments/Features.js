@@ -9,11 +9,11 @@ import {
 
 export default ({ features }) => (
   <Container px={2} pb={[300, 300, 10, 10]}>
-    <Flex flexDirection='column' px={[0, 0, 2, 5]} mt={5}>
-      <Heading.h2 align='center' fontFamily='SoleilSb' my={4}>
+    <Flex flexDirection="column" px={[0, 0, 2, 5]} mt={5}>
+      <Heading.h2 align="center" fontFamily="SoleilSb" my={4}>
         Features
       </Heading.h2>
-      <Flex flexDirection='row' flexWrap='wrap' mt={3}>
+      <Flex flexDirection="row" flexWrap="wrap" mt={3}>
         {features.map(({ header, img, content }, index) => (
           <FeatureItem
             key={header}

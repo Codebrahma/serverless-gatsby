@@ -32,7 +32,7 @@ const actions = [
 
 export default () => (
   <Prefooter
-    heading='Ready to get started?'
+    heading="Ready to get started?"
     sentences={sentences}
     actions={actions}
   />

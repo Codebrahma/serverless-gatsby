@@ -34,7 +34,7 @@ const actions = [
 
 export default () => (
   <Prefooter
-    heading='New to serverless?'
+    heading="New to serverless?"
     sentences={sentences}
     actions={actions}
   />

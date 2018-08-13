@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ResponsiveStack } from 'serverless-design-system/src';
-import { HeroAdvantage } from 'src/fragments';
+import { ResponsiveStack } from 'serverless-design-system/src'
+import { HeroAdvantage } from 'src/fragments'
 
 const advantages = [
   {
@@ -22,7 +22,7 @@ const advantages = [
 ]
 
 const Advantages = () => (
-  <ResponsiveStack flexWrap='wrap'>
+  <ResponsiveStack flexWrap="wrap">
     {advantages.map(({ title, description }) => (
       <HeroAdvantage key={title} title={title} description={description} />
     ))}

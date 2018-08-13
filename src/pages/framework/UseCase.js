@@ -1,9 +1,9 @@
 import React from 'react'
 
-import { UseCases } from 'src/fragments';
-import scaleableAPI from 'src/assets/images/scalableAPI.png';
-import dataProcessing from 'src/assets/images/dataProcessing.png';
-import easyAutomation from 'src/assets/images/easyAutomation.png';
+import { UseCases } from 'src/fragments'
+import scaleableAPI from 'src/assets/images/scalableAPI.png'
+import dataProcessing from 'src/assets/images/dataProcessing.png'
+import easyAutomation from 'src/assets/images/easyAutomation.png'
 
 const cases = [
   {
@@ -29,8 +29,8 @@ const cases = [
 const UseCaseWrapper = () => (
   <UseCases
     cases={cases}
-    useCaseHeader='Serverless Framework Use Cases'
-    useCaseSubHeader='These are the 3 main use cases for the Serverless Framework that you should know about.'
+    useCaseHeader="Serverless Framework Use Cases"
+    useCaseSubHeader="These are the 3 main use cases for the Serverless Framework that you should know about."
   />
 )
 

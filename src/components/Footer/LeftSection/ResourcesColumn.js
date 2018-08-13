@@ -1,11 +1,11 @@
 import React from 'react'
 
-import FooterListColumn from './Column';
-import { resources } from 'src/constants/urls';
+import FooterListColumn from './Column'
+import { resources } from 'src/constants/urls'
 
 export default () => (
   <FooterListColumn
-    header='resources'
+    header="resources"
     listItems={[
       {
         name: 'blog',

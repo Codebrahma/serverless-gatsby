@@ -11,7 +11,7 @@ import CompanyColumn from './CompanyColumn'
 
 // Renders the entire footer list items
 const LeftSection = () => (
-  <Flex width={[1, 1, 0.65]} flexDirection='column' order={['2', '2', '1']}>
+  <Flex.column width={[1, 1, 0.65]} order={['2', '2', '1']}>
     <Flex width={1} flexWrap='wrap' px={[1, 1, 0]} mb={4}>
       <PlatformColumn />
       <DevelopersColumn />
@@ -20,7 +20,7 @@ const LeftSection = () => (
       <CompanyColumn />
     </Flex>
     <CompanyDetails />
-  </Flex>
+  </Flex.column>
 )
 
 export default LeftSection

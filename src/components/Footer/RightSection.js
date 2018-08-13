@@ -22,8 +22,7 @@ import footerTwitter from 'src/assets/images/footerTwitter.png'
 
 // Renders the subscribe column
 const Subscribe = () => (
-  <Flex
-    flexDirection='column'
+  <Flex.column
     width={[1, 1, 0.35]}
     order={['1', '1', '2']}
     pl={[0, 0, 3]}
@@ -71,7 +70,7 @@ const Subscribe = () => (
         <Image mr={3} src={footerTwitter} />
       </NavLink>
     </Box>
-  </Flex>
+  </Flex.column>
 )
 
 export default Subscribe

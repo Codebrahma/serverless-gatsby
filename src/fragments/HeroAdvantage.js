@@ -5,7 +5,7 @@ import { Flex, P, TextWithIcon, Text } from 'serverless-design-system/src'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 
 const HeroAdvantage = ({ title, description }) => (
-  <Flex width={[1, 1, 1 / 3]} px={2} mt={2} flexDirection='column'>
+  <Flex.column width={[1, 1, 1 / 3]} px={2} mt={2}>
     <Flex justifyContent={['center', 'center', 'left']}>
       <TextWithIcon
         iconSrc={redRectangleDots}
@@ -26,7 +26,7 @@ const HeroAdvantage = ({ title, description }) => (
       </TextWithIcon>
     </Flex>
     <P color='gray.3'>{description}</P>
-  </Flex>
+  </Flex.column>
 )
 
 HeroAdvantage.propTypes = {

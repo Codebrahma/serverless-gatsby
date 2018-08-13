@@ -19,19 +19,19 @@ const LeftColumn = ({ heading, sentences }) => (
     width={[1, 1, 1 / 2]}
     py={[3, 5, 8]}
     px={[2, 4, 6]}
-    boxSizing="border-box"
-    flexDirection="column"
+    boxSizing='border-box'
+    flexDirection='column'
   >
     <TextWithIcon
       iconSrc={whiteRectangleDots}
-      iconHeight="100px"
-      iconWidth="150px"
-      iconTop="-20px"
-      iconLeft="-100px"
+      iconHeight='100px'
+      iconWidth='150px'
+      iconTop='-20px'
+      iconLeft='-100px'
       backgroundSize={[0, 0, 'initial']}
     >
       <Heading.h2
-        color="white"
+        color='white'
         fontFamily={'SoleilBk'}
         fontSize={7}
         letterSpacing={0}
@@ -40,7 +40,7 @@ const LeftColumn = ({ heading, sentences }) => (
       </Heading.h2>
     </TextWithIcon>
     {sentences.map((sentence, index) => (
-      <P color="white" mt={0} key={index}>
+      <P color='white' mt={0} key={index}>
         {sentence}
       </P>
     ))}
@@ -48,7 +48,7 @@ const LeftColumn = ({ heading, sentences }) => (
 )
 
 const RightColumn = ({ actions }) => (
-  <Flex flexDirection="column">
+  <Flex flexDirection='column'>
     {actions.map(({ name, navProps }, index) => (
       <Box m={1} key={index}>
         <NavLink {...navProps}>
@@ -59,24 +59,26 @@ const RightColumn = ({ actions }) => (
   </Flex>
 )
 
-export default ({ heading, sentences, actions }) => (
+const Prefooter = ({ heading, sentences, actions }) => (
   <ResponsiveStack.relative
-    bg="serverlessRed"
-    top="-320px"
-    mb="-290px"
-    o="hidden"
+    bg='serverlessRed'
+    top='-320px'
+    mb='-290px'
+    o='hidden'
   >
     <LeftColumn heading={heading} sentences={sentences} />
     <Flex.center
       width={[1, 1, 1 / 2]}
       py={[5, 5, 8]}
       px={[3, 3, 7]}
-      boxSizing="border-box"
-      flexDirection="column"
+      boxSizing='border-box'
+      flexDirection='column'
       background={`#fd5750 url(${RightBoxBg}) no-repeat`}
-      backgroundSize="cover"
+      backgroundSize='cover'
     >
       <RightColumn actions={actions} />
     </Flex.center>
   </ResponsiveStack.relative>
 )
+
+export default Prefooter

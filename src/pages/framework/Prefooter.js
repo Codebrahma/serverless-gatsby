@@ -32,10 +32,12 @@ const actions = [
   },
 ]
 
-export default () => (
+const FrameworkPrefooter = () => (
   <Prefooter
-    heading="New to serverless?"
+    heading='New to serverless?'
     sentences={sentences}
     actions={actions}
   />
 )
+
+export default FrameworkPrefooter

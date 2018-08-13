@@ -9,9 +9,9 @@ const {
   examplesAndGuides,
 } = developers.documentation
 
-export default () => (
+const DevelopersColumn = () => (
   <FooterListColumn
-    header="developers"
+    header='developers'
     listItems={[
       {
         name: 'docs',
@@ -28,3 +28,5 @@ export default () => (
     ]}
   />
 )
+
+export default DevelopersColumn

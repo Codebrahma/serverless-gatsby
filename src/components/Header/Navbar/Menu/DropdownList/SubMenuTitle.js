@@ -3,13 +3,13 @@ import { Heading, TextWithIcon } from 'serverless-design-system/src'
 
 import dotGridBackground from 'src/assets/images/dot-grid.png'
 
-export default ({ children }) => (
+const SubMenuTitle = ({ children }) => (
   <TextWithIcon
     iconSrc={dotGridBackground}
-    iconHeight="20px"
-    iconWidth="25px"
-    iconTop="-2px"
-    iconLeft="-10px"
+    iconHeight='20px'
+    iconWidth='25px'
+    iconTop='-2px'
+    iconLeft='-10px'
   >
     <Heading.h5
       m={0}
@@ -22,3 +22,5 @@ export default ({ children }) => (
     </Heading.h5>
   </TextWithIcon>
 )
+
+export default SubMenuTitle

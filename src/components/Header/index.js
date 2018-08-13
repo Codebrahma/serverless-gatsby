@@ -56,9 +56,9 @@ class Header extends React.Component {
         left={0}
         right={0}
         top={0}
-        zIndex="999"
+        zIndex='999'
         py={[2, 2, 0]}
-        maxHeight="100%"
+        maxHeight='100%'
         oy={['scroll', 'scroll', 'visible']}
         bg={[
           'black',
@@ -68,8 +68,8 @@ class Header extends React.Component {
       >
         <Container>
           <Flex.verticallyCenter
-            flexWrap="wrap"
-            justifyContent="space-between"
+            flexWrap='wrap'
+            justifyContent='space-between'
             px={15}
           >
             <Logo />

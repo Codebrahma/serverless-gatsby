@@ -4,7 +4,7 @@ import { List, ListItem } from 'serverless-design-system/src'
 import SubMenuItem from './SubMenuItem'
 import { learn } from 'src/constants/urls'
 
-export default () => (
+const Learn = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
@@ -38,3 +38,5 @@ export default () => (
     </ListItem.noStyleType>
   </List>
 )
+
+export default Learn

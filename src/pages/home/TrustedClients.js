@@ -5,7 +5,7 @@ import { TrustedClients } from 'src/fragments'
 
 import backgroundImage from 'src/assets/images/rectangle-19.png'
 
-export default () => (
+const HomeTrustedClients = () => (
   <Box
     width={1}
     backgroundImage={`url(${backgroundImage})`}
@@ -18,3 +18,5 @@ export default () => (
     </Container>
   </Box>
 )
+
+export default HomeTrustedClients

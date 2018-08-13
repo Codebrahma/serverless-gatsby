@@ -30,10 +30,12 @@ const actions = [
   },
 ]
 
-export default () => (
+const EventGatewayPrefooter = () => (
   <Prefooter
-    heading="Ready to get started?"
+    heading='Ready to get started?'
     sentences={sentences}
     actions={actions}
   />
 )
+
+export default EventGatewayPrefooter

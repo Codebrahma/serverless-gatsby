@@ -13,7 +13,7 @@ const FooterListItem = ({ content, color, pt }) => (
         fontFamily={'Serverless'}
         fontSize={1}
         lineHeight={1}
-        letterSpacing="text"
+        letterSpacing='text'
         my={'5px'}
         pt={1}
       >

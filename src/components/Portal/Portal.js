@@ -6,7 +6,7 @@ const getContainer = container => {
   return ReactDOM.findDOMNode(_container) || document.body // eslint-disable-line
 }
 
-export default class Portal extends Component {
+class Portal extends Component {
   static defaultProps = {
     lockBody: true,
   }
@@ -99,3 +99,5 @@ export default class Portal extends Component {
     return null
   }
 }
+
+export default Portal

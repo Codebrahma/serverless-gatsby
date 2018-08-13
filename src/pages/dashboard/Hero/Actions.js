@@ -1,7 +1,7 @@
 import React from 'react'
 import { HeroActions } from 'src/fragments'
 
-export default () => (
+const DashboardHeroActions = () => (
   <HeroActions
     firstBtn={{
       name: 'sign up',
@@ -16,3 +16,5 @@ export default () => (
     }}
   />
 )
+
+export default DashboardHeroActions

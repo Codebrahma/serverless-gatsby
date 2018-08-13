@@ -47,4 +47,6 @@ const featureItemsData = [
   },
 ]
 
-export default () => <Features features={featureItemsData} />
+const FrameworkFeatures = () => <Features features={featureItemsData} />
+
+export default FrameworkFeatures

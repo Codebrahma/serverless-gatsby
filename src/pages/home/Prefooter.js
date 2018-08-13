@@ -15,6 +15,8 @@ const actions = [
   },
 ]
 
-export default () => (
-  <Prefooter heading="Next Steps" sentences={sentences} actions={actions} />
+const HomePrefooter = () => (
+  <Prefooter heading='Next Steps' sentences={sentences} actions={actions} />
 )
+
+export default HomePrefooter

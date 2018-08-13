@@ -27,15 +27,15 @@ const TestimonialWrapper = withBeforeAfter(
   `
 )
 
-export default () => (
+const TestimonialComponent = () => (
   <TestimonialWrapper>
     <Box.relative mx={3} my={4}>
       <Container>
         <Testimonial
           img={cocaColaLogo}
-          name="Patrick Brandt"
-          designation="Solutions Architect at The Coca Cola Company"
-          alt="Coca Cola"
+          name='Patrick Brandt'
+          designation='Solutions Architect at The Coca Cola Company'
+          alt='Coca Cola'
         >
           "The Serverless Framework is a core component of The Coca-Cola
           Company's initiative to reduce IT operational costs and deploy
@@ -45,3 +45,5 @@ export default () => (
     </Box.relative>
   </TestimonialWrapper>
 )
+
+export default TestimonialComponent

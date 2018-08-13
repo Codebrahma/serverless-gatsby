@@ -51,7 +51,7 @@ const platformMenuConfig = [
   },
 ]
 
-export default () => (
+const Platform = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
     {platformMenuConfig.map(
       ({ imgProps, text, to, crossDomain, completed }, index) => (
@@ -64,22 +64,22 @@ export default () => (
           <ListItem.noStyleType key={text}>
             <Flex.relative
               mb={platformMenuConfig.length - 1 === index ? 0 : 2}
-              justifyContent="center"
+              justifyContent='center'
             >
               <Image {...imgProps} />
-              <InlineBlock minWidth="155px">
+              <InlineBlock minWidth='155px'>
                 <Heading.h6
-                  fontFamily="Serverless"
-                  fontSize="1.5rem"
+                  fontFamily='Serverless'
+                  fontSize='1.5rem'
                   lineHeight={0.7}
-                  letterSpacing="5"
+                  letterSpacing='5'
                   m={0}
                 >
                   serverless
                 </Heading.h6>
                 <Heading.h6
-                  fontFamily="Serverless"
-                  fontSize="2rem"
+                  fontFamily='Serverless'
+                  fontSize='2rem'
                   lineHeight={1.7}
                   letterSpacing={0.8}
                   m={0}
@@ -94,3 +94,5 @@ export default () => (
     )}
   </List>
 )
+
+export default Platform

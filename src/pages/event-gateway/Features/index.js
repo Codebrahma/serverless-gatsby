@@ -48,4 +48,6 @@ const featureItemsData = [
   },
 ]
 
-export default () => <Features features={featureItemsData} />
+const EventGatewayFeatures = () => <Features features={featureItemsData} />
+
+export default EventGatewayFeatures

@@ -35,12 +35,12 @@ const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
   </Box>
 )
 
-export default () => (
+const PlatformFeatures = () => (
   <Container mt={7}>
     <Box mx={2}>
       <Heading.h2
-        fontFamily="SoleilSb"
-        align="center"
+        fontFamily='SoleilSb'
+        align='center'
         fontSize={[5, 5, 6]}
         lineHeight={[1, 1, 4]}
       >
@@ -51,22 +51,24 @@ export default () => (
     <ResponsiveStack.spaceBetween my={6}>
       <PlatformFeature
         image={frameworkImage}
-        title="Serverless Framework"
-        description="Build serverless applications quickly on any vendor."
-        learnMoreLink="/framework"
+        title='Serverless Framework'
+        description='Build serverless applications quickly on any vendor.'
+        learnMoreLink='/framework'
       />
       <PlatformFeature
         image={dashboardImage}
-        title="Serverless Dashboard"
-        description="Observe and monitor your functions in action."
-        learnMoreLink="/dashboard"
+        title='Serverless Dashboard'
+        description='Observe and monitor your functions in action.'
+        learnMoreLink='/dashboard'
       />
       <PlatformFeature
         image={gatewayImage}
-        title="Event Gateway"
-        description="Integrate serverless & legacy applications via event-driven extensibility."
-        learnMoreLink="/event-gateway"
+        title='Event Gateway'
+        description='Integrate serverless & legacy applications via event-driven extensibility.'
+        learnMoreLink='/event-gateway'
       />
     </ResponsiveStack.spaceBetween>
   </Container>
 )
+
+export default PlatformFeatures

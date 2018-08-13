@@ -22,7 +22,7 @@ const advantages = [
 ]
 
 const Advantages = () => (
-  <ResponsiveStack flexWrap="wrap">
+  <ResponsiveStack flexWrap='wrap'>
     {advantages.map(({ title, description }) => (
       <HeroAdvantage key={title} title={title} description={description} />
     ))}

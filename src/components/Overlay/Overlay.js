@@ -31,7 +31,7 @@ const Backdrop = styled(Box.absolute)`
   pointer-events: ${({ invisible }) => (invisible ? 'none' : 'all')};
 `
 
-export default class Overlay extends Component {
+class Overlay extends Component {
   static defaultProps = {
     invisible: false,
   }
@@ -46,8 +46,6 @@ export default class Overlay extends Component {
   }
 
   componentWillUpdate(nextProps) {
-    if (nextProps.active && !this.props.active) {
-    }
     if (!nextProps.active && this.props.active) {
       this.enableScroll()
     }
@@ -121,3 +119,5 @@ export default class Overlay extends Component {
     )
   }
 }
+
+export default Overlay

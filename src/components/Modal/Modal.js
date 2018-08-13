@@ -51,7 +51,7 @@ const factory = Overlay => {
         onMouseUp={props.onOverlayMouseUp}
       >
         <Dialog active={props.active} type={props.type}>
-          <Box role="dialog">
+          <Box role='dialog'>
             {props.title ? <h2>{props.title}</h2> : null}
             {props.children}
           </Box>

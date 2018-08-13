@@ -1,7 +1,7 @@
 import React from 'react'
 import { HeroActions } from 'src/fragments'
 
-export default () => (
+const FrameworkHeroActions = () => (
   <HeroActions
     firstBtn={{
       name: 'quick start',
@@ -16,3 +16,5 @@ export default () => (
     }}
   />
 )
+
+export default FrameworkHeroActions

@@ -8,10 +8,10 @@ import HeroFooter from './Footer'
 
 import HomePageHeroSectionBackground from 'src/assets/images/home.png'
 
-export default () => (
+const HomeHeroComponent = () => (
   <HeroWrapper
     backgroundImage={`url(${HomePageHeroSectionBackground})`}
-    backgroundSize="contain"
+    backgroundSize='contain'
   >
     <HeroHeader />
     <HeroImage />
@@ -19,3 +19,5 @@ export default () => (
     <HeroFooter />
   </HeroWrapper>
 )
+
+export default HomeHeroComponent

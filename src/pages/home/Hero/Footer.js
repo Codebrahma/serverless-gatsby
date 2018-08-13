@@ -9,24 +9,26 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-export default () => (
-  <StyledLink to="/overview-video">
+const HomeHeroFooter = () => (
+  <StyledLink to='/overview-video'>
     <Flex.center
       width={[1, 1, 3 / 4]}
       my={[2, 4, 5]}
       mx={'auto'}
-      flexDirection="row"
+      flexDirection='row'
     >
-      <Image src={videoIcon} height="50px" width="auto" ml={1} mr={[0, 0, 2]} />
+      <Image src={videoIcon} height='50px' width='auto' ml={1} mr={[0, 0, 2]} />
       <Heading.h4
-        color="white"
+        color='white'
         fontSize={[3, 3, 4]}
         mx={1}
         mb={0}
-        align="center"
+        align='center'
       >
         watch the video to learn more
       </Heading.h4>
     </Flex.center>
   </StyledLink>
 )
+
+export default HomeHeroFooter

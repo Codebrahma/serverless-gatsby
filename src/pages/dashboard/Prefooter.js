@@ -32,10 +32,12 @@ const actions = [
   },
 ]
 
-export default () => (
+const DashboardPrefooter = () => (
   <Prefooter
-    heading="New to serverless?"
+    heading='New to serverless?'
     sentences={sentences}
     actions={actions}
   />
 )
+
+export default DashboardPrefooter

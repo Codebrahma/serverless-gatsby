@@ -8,10 +8,10 @@ import Actions from './Actions'
 import Advantage from './Advantage'
 import CloudProviders from './CloudProviders'
 
-export default () => (
+const FrameworkHero = () => (
   <HeroWrapper
     backgroundImage={`url(${FrameworkPageHeroSectionBackground})`}
-    backgroundSize="contain"
+    backgroundSize='contain'
   >
     <Header />
     <HeroImage />
@@ -20,3 +20,5 @@ export default () => (
     <CloudProviders />
   </HeroWrapper>
 )
+
+export default FrameworkHero

@@ -26,18 +26,18 @@ const cloudProviderImages = [google, azure, aws, ibm, kubernetes]
 const CloudProviders = () => (
   <Box width={1}>
     <Box px={15} width={1}>
-      <Flex.verticallyCenter flexDirection="column">
+      <Flex.verticallyCenter flexDirection='column'>
         <Box>
-          <P fontSize={2} color="gray.3">
+          <P fontSize={2} color='gray.3'>
             Supports Top Cloud Providers
           </P>
         </Box>
         <ResponsiveStack.verticallyCenter
-          justifyContent="space-between"
+          justifyContent='space-between'
           width={1}
-          px="5%"
-          py="2%"
-          boxSizing="border-box"
+          px='5%'
+          py='2%'
+          boxSizing='border-box'
         >
           {cloudProviderImages.map(imgSrc => (
             <CloudProvider key={imgSrc} imgSrc={imgSrc} />

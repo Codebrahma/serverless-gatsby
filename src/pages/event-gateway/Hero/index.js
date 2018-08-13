@@ -7,10 +7,10 @@ import HeroImage from './HeroImage'
 import Advantage from './Advantage'
 import Actions from './Actions'
 
-export default () => (
+const EventGatewayHero = () => (
   <HeroWrapper
     backgroundImage={`url(${GatewayPageHeroSectionBackground})`}
-    backgroundSize="contain"
+    backgroundSize='contain'
   >
     <Header />
     <HeroImage />
@@ -18,3 +18,5 @@ export default () => (
     <Actions />
   </HeroWrapper>
 )
+
+export default EventGatewayHero

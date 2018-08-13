@@ -11,9 +11,9 @@ import {
 
 // TODO: Remove hardcoded pixels wherever possible
 const Header = () => (
-  <Flex.horizontallyCenter flexDirection="column" mb={2}>
-    <Flex.horizontallyCenter height="86px" my={2}>
-      <Image src={serverlessBolt} maxHeight="67px" />
+  <Flex.horizontallyCenter flexDirection='column' mb={2}>
+    <Flex.horizontallyCenter height='86px' my={2}>
+      <Image src={serverlessBolt} maxHeight='67px' />
     </Flex.horizontallyCenter>
     <HeroTitle>serverless</HeroTitle>
     <HeroMainTitle>event gateway</HeroMainTitle>

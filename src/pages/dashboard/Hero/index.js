@@ -7,10 +7,10 @@ import HeroImage from './HeroImage'
 import Advantage from './Advantage'
 import Actions from './Actions'
 
-export default () => (
+const DashboardHero = () => (
   <HeroWrapper
     backgroundImage={`url(${DashboardPageHeroSectionBackground})`}
-    backgroundSize="contain"
+    backgroundSize='contain'
   >
     <Header />
     <Actions />
@@ -18,3 +18,5 @@ export default () => (
     <Advantage />
   </HeroWrapper>
 )
+
+export default DashboardHero

@@ -31,7 +31,7 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
   `
 )
 
-export default ({ name }) => (
+const Title = ({ name }) => (
   <NavbarContext.Consumer>
     {({ isNavbarShrinked }) => (
       <TitleWrapperWithLeadingSlash
@@ -50,7 +50,7 @@ export default ({ name }) => (
         beforeBoxLeft={[0, 0, '-1px', '8px']}
       >
         <Text.span
-          fontFamily="Serverless"
+          fontFamily='Serverless'
           fontSize={2}
           color={'white'}
           letterSpacing={0.7}
@@ -61,3 +61,5 @@ export default ({ name }) => (
     )}
   </NavbarContext.Consumer>
 )
+
+export default Title

@@ -41,22 +41,22 @@ const HeroImageWrapper = withBeforeAfter(
 )
 
 const ImageSection = ({ imgSrc, title, subtitle }) => (
-  <Flex.verticallyCenter flexDirection="column" width={[1, 1, 1 / 3]}>
-    <Flex.relative height="86px" alignItems="center" my={2}>
-      <Image src={imgSrc} maxHeight="86px" maxWidth="70px" />
+  <Flex.verticallyCenter flexDirection='column' width={[1, 1, 1 / 3]}>
+    <Flex.relative height='86px' alignItems='center' my={2}>
+      <Image src={imgSrc} maxHeight='86px' maxWidth='70px' />
     </Flex.relative>
-    <Heading.h5 color="white">{title}</Heading.h5>
-    <Heading.h4 color="white" fontWeight="bold">
+    <Heading.h5 color='white'>{title}</Heading.h5>
+    <Heading.h4 color='white' fontWeight='bold'>
       {subtitle}
     </Heading.h4>
   </Flex.verticallyCenter>
 )
 
-export default () => (
+const HomeHeroImage = () => (
   <HeroImageWrapper
     flexDirection={['column', 'column', 'row']}
     width={[1, 1, 3 / 4]}
-    mx="auto"
+    mx='auto'
     mb={[2, 2, 4]}
     beforeBoxHeight={[0, 0, '20px']}
     afterBoxHeight={[0, 0, '20px']}
@@ -65,14 +65,16 @@ export default () => (
   >
     <ImageSection
       imgSrc={frameworkIcon}
-      title="serverless"
-      subtitle="framework"
+      title='serverless'
+      subtitle='framework'
     />
     <ImageSection
       imgSrc={dashboardIcon}
-      title="serverless"
-      subtitle="dashboard"
+      title='serverless'
+      subtitle='dashboard'
     />
-    <ImageSection imgSrc={gatewayIcon} title="event" subtitle="gateway" />
+    <ImageSection imgSrc={gatewayIcon} title='event' subtitle='gateway' />
   </HeroImageWrapper>
 )
+
+export default HomeHeroImage

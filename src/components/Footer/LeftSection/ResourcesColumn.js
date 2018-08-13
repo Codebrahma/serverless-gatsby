@@ -3,9 +3,9 @@ import React from 'react'
 import FooterListColumn from './Column'
 import { resources } from 'src/constants/urls'
 
-export default () => (
+const ResourceColumn = () => (
   <FooterListColumn
-    header="resources"
+    header='resources'
     listItems={[
       {
         name: 'blog',
@@ -30,3 +30,5 @@ export default () => (
     ]}
   />
 )
+
+export default ResourceColumn

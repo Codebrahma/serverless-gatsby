@@ -1,9 +1,11 @@
 // TODO: MAKE THIS CLASS READABLE
 import React from 'react'
 
+import { withTheme } from 'styled-components';
 import { Box, withBeforeAfter } from 'serverless-design-system/src'
 import NavbarContext from './../../NavbarContext'
 
+// TODO: remove hardcoded color
 const MenuWrapper = withBeforeAfter(
   Box,
   `&`,
@@ -21,7 +23,7 @@ const MenuWrapper = withBeforeAfter(
   ``
 )
 
-const MenuDescription = ({ wrapperStyles, children }) => (
+const MenuDescription = ({ wrapperStyles, theme, children }) => (
   <NavbarContext.Consumer>
     {({ isNavbarShrinked }) => (
       <MenuWrapper
@@ -36,7 +38,7 @@ const MenuDescription = ({ wrapperStyles, children }) => (
         background={[
           'none',
           'none',
-          'linear-gradient(210deg, #000000 25%, #222222), linear-gradient(#000000, #000000)',
+          `linear-gradient(210deg, ${theme.colors.black} 25%, ${theme.colors.gradient.black1}), linear-gradient(${theme.colors.black}, ${theme.colors.black})`,
         ]}
         minWidth={[0, 0, '250px']}
         beforeBoxBorderWidth={[0, 0, '0 7.5px 13.0px 7.5px']}
@@ -48,4 +50,4 @@ const MenuDescription = ({ wrapperStyles, children }) => (
   </NavbarContext.Consumer>
 )
 
-export default MenuDescription
+export default withTheme(MenuDescription)

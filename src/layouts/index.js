@@ -1,30 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { ThemeProvider } from 'styled-components'
 
-import Header from '../components/header'
+import theme from 'serverless-design-system/src/theme'
+import { Flex } from 'serverless-design-system/src'
+import './index.css'
 
 const Layout = ({ children, data }) => (
-  <div>
+  <Flex width={1}>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Serverless' },
+        { name: 'keywords', content: 'serverless, AWS Lambda' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
+    <ThemeProvider theme={theme}>{children()}</ThemeProvider>
+  </Flex>
 )
 
 Layout.propTypes = {
@@ -33,6 +26,7 @@ Layout.propTypes = {
 
 export default Layout
 
+// eslint-disable-next-line
 export const query = graphql`
   query SiteTitleQuery {
     site {

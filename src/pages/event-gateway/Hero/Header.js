@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Image, P } from 'serverless-design-system/src'
+import { Flex, Image } from 'serverless-design-system/src'
 
 import serverlessBolt from 'src/assets/images/group-6.png'
 import {

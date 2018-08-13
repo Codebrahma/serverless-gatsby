@@ -58,12 +58,12 @@ const HomeBenefits = () => (
     </Heading.h4>
     <ResponsiveStack.spaceBetween>
       {
-        cardList.map((list) => (
+        cardList.map((benefit) => (
           <EachBenefit
-            key={list.title}
-            img={list.img}
-            title={list.title}
-            description={list.description}
+            key={benefit.title}
+            img={benefit.img}
+            title={benefit.title}
+            description={benefit.description}
           />
         ))
       }

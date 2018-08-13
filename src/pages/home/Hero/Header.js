@@ -3,7 +3,7 @@ import React from 'react'
 import { Flex, Heading, HeroTitle, HeroMainTitle } from 'serverless-design-system/src'
 
 const HeroHeader = () => (
-  <Flex flexDirection='column'>
+  <Flex.column>
     <HeroTitle>serverless</HeroTitle>
     <HeroMainTitle>platform</HeroMainTitle>
     <Heading.h3
@@ -16,7 +16,7 @@ const HeroHeader = () => (
     >
       Everything you need to operationalize serverless development
     </Heading.h3>
-  </Flex>
+  </Flex.column>
 )
 
 export default HeroHeader

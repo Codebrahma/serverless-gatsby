@@ -14,10 +14,10 @@ import glitchEffect from '../../assets/images/glitchEffect.png'
 
 // Self contained Root Renderer for footer
 const FooterWrapper = ({ prefooter }) => (
-  <Flex flexDirection='column'>
+  <Flex.column>
     <Box height={75} backgroundImage={`url(${glitchEffect})`} />
     <Box bg='black' pt={[0, 0, 7]} pb={7}>
-      <Flex flexDirection='row' m='auto' flexWrap='wrap' maxWidth={1}>
+      <Flex.row m='auto' flexWrap='wrap' maxWidth={1}>
         <Box width={1} px={[0, 0, 2]}>
           {prefooter ? prefooter() : null}
           <FooterIcon />
@@ -27,9 +27,9 @@ const FooterWrapper = ({ prefooter }) => (
           <LeftSection />
           <RightSection />
         </Flex>
-      </Flex>
+      </Flex.row>
     </Box>
-  </Flex>
+  </Flex.column>
 )
 
 export default FooterWrapper

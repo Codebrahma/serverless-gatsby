@@ -48,7 +48,7 @@ const LeftColumn = ({ heading, sentences }) => (
 )
 
 const RightColumn = ({ actions }) => (
-  <Flex flexDirection='column'>
+  <Flex.column>
     {actions.map(({ name, navProps }, index) => (
       <Box m={1} key={index}>
         <NavLink {...navProps}>
@@ -56,7 +56,7 @@ const RightColumn = ({ actions }) => (
         </NavLink>
       </Box>
     ))}
-  </Flex>
+  </Flex.column>
 )
 
 const Prefooter = ({ heading, sentences, actions }) => (

@@ -3,7 +3,7 @@ import React from 'react'
 import { Flex, Heading, HeroTitle, HeroMainTitle } from 'serverless-design-system/src'
 
 const HeroHeader = () => (
-  <Flex.column>
+  <Flex.column mt={2}>
     <HeroTitle>serverless</HeroTitle>
     <HeroMainTitle>platform</HeroMainTitle>
     <Heading.h3

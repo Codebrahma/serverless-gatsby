@@ -46,7 +46,12 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
       <Image src={imgSrc} maxHeight='86px' maxWidth='70px' />
     </Flex.relative>
     <Heading.h5 color='white'>{title}</Heading.h5>
-    <Heading.h4 color='white' fontWeight='bold'>
+    <Heading.h4
+      color='white'
+      fontWeight='bold'
+      lineHeight={0}
+      letterSpacing={"0.13rem"}
+    >
       {subtitle}
     </Heading.h4>
   </Flex.verticallyCenter>

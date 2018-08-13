@@ -1,7 +1,12 @@
 import React from 'react'
-import { Flex, Image } from 'serverless-design-system/src'
+import {
+  Flex,
+  Image,
+  HeroTitle,
+  HeroMainTitle,
+  HeroInlineDescription,
+} from 'serverless-design-system/src'
 
-import { HeroTitle, HeroMainTitle, HeroInlineDescription } from 'src/fragments'
 import dashboardIcon from 'src/assets/images/icon-platform-dash.png'
 
 const Header = () => (

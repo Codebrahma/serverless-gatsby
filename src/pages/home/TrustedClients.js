@@ -16,7 +16,7 @@ const TrustedClientList = [
   { src: nordstromLogo, altText: 'NordStrom' },
   { src: expediaLogo, altText: 'Expedia' },
   { src: reutersLogo, altText: 'Reuters' },
-];
+]
 
 const HomeTrustedClients = () => (
   <Box

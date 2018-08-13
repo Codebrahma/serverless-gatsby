@@ -4,8 +4,8 @@ import {
   Flex,
   Box,
   P,
-  Image,
   ResponsiveStack,
+  ImageList,
 } from 'serverless-design-system/src'
 
 import google from 'src/assets/images/cloudGoogle.png'
@@ -14,15 +14,14 @@ import aws from 'src/assets/images/cloudAWS.png'
 import ibm from 'src/assets/images/cloudIBM.png'
 import kubernetes from 'src/assets/images/cloudKubernetes.png'
 
-const CloudProvider = ({ imgSrc }) => (
-  <Box mb={2}>
-    <Image key={imgSrc} src={imgSrc} width={1} />
-  </Box>
-)
+const CloudProvidersList = [
+  { src: google, altText: 'google' },
+  { src: azure, altText: 'azure' },
+  { src: aws, altText: 'aws' },
+  { src: ibm, altText: 'ibm' },
+  { src: kubernetes, altText: 'kubernetes' },
+]
 
-const cloudProviderImages = [google, azure, aws, ibm, kubernetes]
-
-// TODO: Decide on how we can include hardcoded px outside the spaces array
 const CloudProviders = () => (
   <Box width={1}>
     <Box px={15} width={1}>
@@ -39,9 +38,11 @@ const CloudProviders = () => (
           py='2%'
           boxSizing='border-box'
         >
-          {cloudProviderImages.map(imgSrc => (
-            <CloudProvider key={imgSrc} imgSrc={imgSrc} />
-          ))}
+          <ImageList
+            maxHeight={['41px', '41px', '41px', '60px']}
+            maxWidth={['80%', '80%', '60%', '80%', '100%']}
+            list={CloudProvidersList}
+          />
         </ResponsiveStack.verticallyCenter>
       </Flex.verticallyCenter>
     </Box>

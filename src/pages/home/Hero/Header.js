@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Flex, Heading } from 'serverless-design-system/src'
-import { HeroTitle, HeroMainTitle } from 'src/fragments'
+import { Flex, Heading, HeroTitle, HeroMainTitle } from 'serverless-design-system/src'
 
 const HeroHeader = () => (
   <Flex flexDirection='column'>

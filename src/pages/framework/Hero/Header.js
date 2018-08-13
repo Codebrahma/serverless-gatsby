@@ -1,12 +1,13 @@
 import React from 'react'
-import { Flex, Image } from 'serverless-design-system/src'
-
-import {
+import { 
+  Flex, 
+  Image,
   HeroTitle,
   HeroMainTitle,
   HeroDescription,
-  HeroInlineDescription,
-} from 'src/fragments'
+  HeroInlineDescription, 
+} from 'serverless-design-system/src'
+
 import serverlessBolt from 'src/assets/images/serverlessBolt.png'
 
 // TODO: Remove hardcoded pixels wherever possible

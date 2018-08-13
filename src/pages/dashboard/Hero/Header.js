@@ -1,14 +1,22 @@
 import React from 'react';
-import { Flex, Image } from 'serverless-design-system/src';
+import {
+  Flex,
+  Box,
+  Image,
+  Heading,
+  GatsbyImg,
+  P
+} from 'serverless-design-system/src';
 
 import {
   HeroTitle,
   HeroMainTitle,
   HeroInlineDescription
 } from 'src/fragments';
-import dashboardIcon from 'src/assets/images/icon-platform-dash.png';
 
-const Header = () => (
+import ImageContextHOC from '../../../components/ImageContextHOC';
+
+const Header = ({ dashboardIcon }) => (
   <Flex.horizontallyCenter
     flexDirection="column"
     mb={2}
@@ -17,9 +25,10 @@ const Header = () => (
       height='86px'
       my={2}
     >
-      <Image
-        src={dashboardIcon}
-        maxHeight='67px'
+      <GatsbyImg
+        title="dashboardIcon"
+        alt="dashboardIcon"
+        resolutions={dashboardIcon.resolutions}
       />
     </Flex.horizontallyCenter>
     <HeroTitle>
@@ -34,4 +43,4 @@ const Header = () => (
   </Flex.horizontallyCenter>
 );
 
-export default Header;
+export default ImageContextHOC(Header, ['dashboardIcon']);

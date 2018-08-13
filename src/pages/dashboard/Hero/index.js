@@ -5,7 +5,7 @@ import DashboardPageHeroSectionBackground from 'src/assets/images/dashboard.png'
 import Header from './Header';
 import HeroImage from './HeroImage';
 import Advantage from './Advantage';
-import Actions from './Actions';
+import HeroActions from './Actions';
 
 export default () => (
   <HeroWrapper
@@ -13,8 +13,11 @@ export default () => (
     backgroundSize="contain"
   >
     <Header />
-    <Actions />
-    <HeroImage />
+    <HeroActions
+      firstBtn={{ name: 'sign up', to: 'https://dashboard.serverless.com/', crossDomain: true, completed: false }}
+      secondBtn={{ name: 'contact sales', to: '/enterprise/', completed: false }}
+    />
+    <HeroImage />    
     <Advantage />
   </HeroWrapper>
 );

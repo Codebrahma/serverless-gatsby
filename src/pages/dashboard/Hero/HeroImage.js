@@ -2,20 +2,23 @@ import React from 'react';
 import {
   Flex,
   Box,
-  Image,
+  GatsbyImg,
 } from 'serverless-design-system/src';
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
-import dashboardIllustration from 'src/assets/images/dashboard-illustration.png';
-
-const HeroImage = () => (
+const HeroImage = ({ dashboardIllustration }) => (
   <Flex.horizontallyCenter
     py={[0, 0, 3]}
     height={[0, 0, '100%']}
   >
     <Box width={[0, 0, 6/10]}>
-      <Image src={dashboardIllustration} />
+      <GatsbyImg
+        title="dashboard-illustration"
+        alt="dashboard-illustration"
+        sizes={dashboardIllustration.sizes}
+      />
     </Box>
   </Flex.horizontallyCenter>
 );
 
-export default HeroImage;
+export default ImageContextHOC(HeroImage, ['dashboardIllustration']);

@@ -1,16 +1,24 @@
 import React from 'react';
-import { Flex, Image, P } from 'serverless-design-system/src';
 
-import serverlessBolt from 'src/assets/images/group-6.png';
 import {
   HeroTitle,
   HeroMainTitle,
   HeroDescription,
   HeroInlineDescription
 } from 'src/fragments';
+import {
+  Flex,
+  Box,
+  Heading,
+  GatsbyImg,
+  Image,
+  P
+} from 'serverless-design-system/src';
+
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
 // TODO: Remove hardcoded pixels wherever possible
-const Header = () => (
+const Header = ({ gatewayIcon }) => (
   <Flex.horizontallyCenter
     flexDirection="column"
     mb={2}
@@ -19,9 +27,10 @@ const Header = () => (
       height='86px'
       my={2}
     >
-      <Image
-        src={serverlessBolt}
-        maxHeight='67px'
+      <GatsbyImg
+        title="gatewayIcon"
+        description="gatewayIcon"
+        resolutions={gatewayIcon.resolutions}
       />
     </Flex.horizontallyCenter>
     <HeroTitle>
@@ -39,4 +48,4 @@ const Header = () => (
   </Flex.horizontallyCenter>
 );
 
-export default Header;
+export default ImageContextHOC(Header, ['gatewayIcon']);

@@ -3,19 +3,20 @@ import {
   Flex,
   Box,
   Image,
+  GatsbyImg
 } from 'serverless-design-system/src';
 
-import gatewayIllustration from 'src/assets/images/gateway-illustration.png';
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
-const HeroImage = () => (
-  <Flex.horizontallyCenter
+const HeroImage = ({ gatewayIllustration }) => (
+<Flex.horizontallyCenter
     py={[0, 0, 3]}
     height={[0, 0, '100%']}
   >
     <Box width={[0, 0, 6/10]}>
-      <Image src={gatewayIllustration} />
+      <GatsbyImg title="gatewayIllustration" sizes={gatewayIllustration.sizes} />
     </Box>
   </Flex.horizontallyCenter>
 );
 
-export default HeroImage;
+export default ImageContextHOC(HeroImage, ['gatewayIllustration']);

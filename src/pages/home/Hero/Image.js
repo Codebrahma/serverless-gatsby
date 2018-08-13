@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Flex, Heading, Image, withBeforeAfter } from 'serverless-design-system/src';
+import { Flex, Heading, Image, withBeforeAfter, GatsbyImg } from 'serverless-design-system/src';
 import frameworkIcon from 'src/assets/images/bolt.png';
 import dashboardIcon from 'src/assets/images/icon-dashboard.png';
 import gatewayIcon from 'src/assets/images/group-6.png';
 import bulletLeftMarker from 'src/assets/images/bullet-left-marker.png';
 import bulletRightMarker from 'src/assets/images/bullet-right-marker.png';
+import ImageContextHOC from '../../../components/ImageContextHOC';
 
 const bulletMarkerStyle = `
   content: " ";
@@ -45,10 +46,8 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
       alignItems='center'
       my={2}
     >
-      <Image
-        src={imgSrc}
-        maxHeight='86px'
-        maxWidth='70px'
+      <GatsbyImg
+        resolutions={imgSrc.resolutions}
       />
     </Flex.relative>
     <Heading.h5 color='white'>{title}</Heading.h5>
@@ -56,7 +55,7 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
   </Flex.verticallyCenter>
 );
 
-export default () => (
+const HeroImage = ({ frameworkIcon, dashboardIcon, gatewayIcon }) => (
   <HeroImageWrapper
     flexDirection={['column', 'column', 'row']}
     width={[1, 1, 3/4]}
@@ -72,3 +71,6 @@ export default () => (
     <ImageSection imgSrc={gatewayIcon} title='event' subtitle='gateway' />
   </HeroImageWrapper>
 );
+
+export default ImageContextHOC(HeroImage, ['frameworkIcon', 'dashboardIcon', 'gatewayIcon']);
+

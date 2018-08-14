@@ -1,21 +1,20 @@
 import React from 'react'
 
-import { Box } from 'serverless-design-system/src'
+import { Flex, Box } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
-
-import DashboardPageHeroSectionBackground from 'src/assets/images/dashboard.png'
+import HeroLeftSection from './LeftSection'
+import HeroRightSection from './RightSection'
+import LearnOverviewBg from '../../../../assets/images/learnOverviewBg.png'
 
 const DashboardHero = () => (
   <HeroWrapper
-    backgroundImage={`url(${DashboardPageHeroSectionBackground})`}
+    backgroundImage={`url(${LearnOverviewBg})`}
     backgroundSize='contain'
   >
-  <Box mt={3}>Hello</Box>
-  <Box mt={3}>Hello</Box>
-  <Box mt={3}>Hello</Box>
-  <Box mt={3}>Hello</Box>
-  <Box mt={3}>Hello</Box>
-
+    <Flex flexDirection={['column', 'column', 'row']} mb='200px'>
+      <HeroLeftSection />
+      <HeroRightSection />
+    </Flex>
   </HeroWrapper>
 )
 

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Box, Flex } from 'serverless-design-system/src'
 
+import Label from './Label'
 import TextField from './TextField'
 import SubTitle from './../Pros/SubTitle'
 
@@ -30,6 +31,12 @@ export default () => (
 
     <Box my={2}>
       <TextField placeholder="Company Name" />
+    </Box>
+
+    <Box my={2}>
+      <Label>
+        How is your company currently using the Serverless Framework?
+      </Label>
     </Box>
   </Flex.column>
 );

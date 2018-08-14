@@ -12,7 +12,7 @@ const EventGatewayActions = () => (
     secondBtn={{
       name: 'contact sales',
       to: '/enterprise/',
-      completed: false,
+      completed: true,
     }}
   />
 )

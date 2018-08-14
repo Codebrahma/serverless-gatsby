@@ -24,7 +24,9 @@ const FeatureItem = ({ header, img, content, rightAligned }) => (
     pb={[4, 4, 6]}
     style={{ counterIncrement: 'step-counter' }}
   >
-    <GatsbyImg resolutions={img.resolutions} mb={25} />
+    {
+      img && <GatsbyImg resolutions={img.resolutions} mb={25} />
+    }
       {header}
     <P>{content}</P>
   </Box.relative>

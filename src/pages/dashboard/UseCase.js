@@ -36,13 +36,15 @@ const UseCase = ({ title, description, imgSrc, imageFirst }) => {
         order={imageFirst ? [1, 1, 1] : [1, 1, 2]}
         flexDirection='column'
       >
-        <GatsbyImg
+        {
+          imgSrc && <GatsbyImg
           sizes={imgSrc.sizes}
           // alt={title}
           // maxWidth={1}
           // width={[ '100%', '80%', '60%', '80%' ]}
           // my="auto"
         />
+        }
       </Flex.horizontallyCenter>
     </ResponsiveStack>
   );

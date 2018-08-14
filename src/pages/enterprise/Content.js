@@ -13,10 +13,10 @@ const Content = ({ theme }) => (
     ]}
   >
     <Flex.spaceBetween my={[2, 2, 3, 6]}>
-      <Box width={[1, 1, 48/100]}>
+      <Box width={[1, 1, 2/5]}>
         <Pros />
       </Box>
-      <Box width={[1, 1, 48/100]}>
+      <Box width={[1, 1, 1/2]}>
       </Box>
     </Flex.spaceBetween>
   </Container>

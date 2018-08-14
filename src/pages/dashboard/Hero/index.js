@@ -1,11 +1,13 @@
 import React from 'react'
 
 import { HeroWrapper } from 'src/fragments'
-import DashboardPageHeroSectionBackground from 'src/assets/images/dashboard.png'
 import Header from './Header'
 import HeroImage from './HeroImage'
 import Advantage from './Advantage'
 import Actions from './Actions'
+
+// This image will load by normal image tag
+import DashboardPageHeroSectionBackground from 'src/assets/images/dashboard.png'
 
 const DashboardHero = () => (
   <HeroWrapper

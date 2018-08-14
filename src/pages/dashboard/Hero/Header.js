@@ -7,6 +7,7 @@ import {
   HeroInlineDescription,
 } from 'serverless-design-system/src'
 
+// This image will load by normal image tag
 import dashboardIcon from 'src/assets/images/icon-platform-dash.png'
 
 const Header = () => (

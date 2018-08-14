@@ -1,35 +1,24 @@
 import React from 'react'
 
-import {
-  Box,
-  Heading,
-  TextWithIcon,
-} from 'serverless-design-system/src'
+import { Box } from 'serverless-design-system/src'
 
-import Advantage from './Advantage'
 import Description from './Description'
-import Pros from './data';
-import dotGridBackground from 'src/assets/images/dot-grid.png'
+import Pros from './data'
+import SubTitle from './SubTitle';
+import Title from './Title'
+
+const Advantage = ({ title, description }) => (
+  <Box my={4}>
+    <SubTitle>{ title }</SubTitle>
+    <Description>{ description }</Description>
+  </Box>
+);
 
 export default () => (
   <Box>
-    <TextWithIcon
-      iconSrc={dotGridBackground}
-      iconHeight='35px'
-      iconWidth='60px'
-      iconTop='-8px'
-      iconLeft='-12px'
-    >
-      <Heading.h1
-        fontFamily="SoleilBk"
-        fontWeight="normal"
-        lineHeight={0}
-        letterSpacing={'h2'}
-      >
-        Move fast, safely
-      </Heading.h1>
-    </TextWithIcon>
-
+    <Title>
+      Move fast, safely
+    </Title>
     <Description>
       The Serverless Enterprise Platform gives you everything you need to operationalize Serverless development.
     </Description>

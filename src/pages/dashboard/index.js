@@ -24,57 +24,57 @@ export const query = graphql`
 query DashboardImgQuery {
   dashboardIcon: imageSharp(id: { regex: "/icon-platform-dash/" }) {
     resolutions(width: 86) {
-      ...GatsbyImageSharpResolutions_tracedSVG
+      ...GatsbyImageSharpResolutions
     }
   }
   useCaseImg1: imageSharp(id: { regex: "/use-case-1/" }) {
     sizes(maxWidth: 360) {
-      ...GatsbyImageSharpSizes_tracedSVG
+      ...GatsbyImageSharpSizes
     }
   }
   useCaseImg2: imageSharp(id: { regex: "/use-case-2/" }) {
     sizes(maxWidth: 360) {
-      ...GatsbyImageSharpSizes_tracedSVG
+      ...GatsbyImageSharpSizes
     }
   }
   useCaseImg3: imageSharp(id: { regex: "/use-case-3/" }) {
     sizes(maxWidth: 360) {
-      ...GatsbyImageSharpSizes_tracedSVG
+      ...GatsbyImageSharpSizes
     }
   }
   dashboardIllustration: imageSharp(id: { regex: "/dashboard-illustration/" }) {
     sizes(maxWidth: 744) {
-      ...GatsbyImageSharpSizes_tracedSVG
+      ...GatsbyImageSharpSizes
     }
   }
   dashboardFeature1: imageSharp(id: { regex: "/dashboard-feature-1/" }) {
     resolutions(width: 128) {
-      ...GatsbyImageSharpResolutions_tracedSVG
+      ...GatsbyImageSharpResolutions
     }
   }
   dashboardFeature2: imageSharp(id: { regex: "/dashboard-feature-2/" }) {
     resolutions(width: 128) {
-      ...GatsbyImageSharpResolutions_tracedSVG
+      ...GatsbyImageSharpResolutions
     }
   }
   dashboardFeature3: imageSharp(id: { regex: "/dashboard-feature-3/" }) {
     resolutions(width: 128) {
-      ...GatsbyImageSharpResolutions_tracedSVG
+      ...GatsbyImageSharpResolutions
     }
   }
   dashboardFeature4: imageSharp(id: { regex: "/dashboard-feature-4/" }) {
     resolutions(width: 128) {
-      ...GatsbyImageSharpResolutions_tracedSVG
+      ...GatsbyImageSharpResolutions
     }
   }
   dashboardFeature5: imageSharp(id: { regex: "/dashboard-feature-5/" }) {
     resolutions(width: 128) {
-      ...GatsbyImageSharpResolutions_tracedSVG
+      ...GatsbyImageSharpResolutions
     }
   }
   dashboardFeature6: imageSharp(id: { regex: "/dashboard-feature-6/" }) {
     resolutions(width: 128) {
-      ...GatsbyImageSharpResolutions_tracedSVG
+      ...GatsbyImageSharpResolutions
     }
   }
 }

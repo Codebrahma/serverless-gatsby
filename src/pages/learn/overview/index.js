@@ -5,14 +5,16 @@ import DefaultLayout from 'src/layouts/Default'
 
 import Prefooter from './Prefooter'
 import Hero from './Hero'
+import UseCase from './UseCase'
+import ServerlessAppBenefits from './ServerlessAppBenefits'
+import ServerlessFrameworkBenefits from './ServerlessFrameworkBenefits'
 
 const Overview = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero />
-    <Box mb={3}>
-      Content
-    </Box>
-    Learn Overview screen
+    <UseCase />
+    <ServerlessAppBenefits />
+    <ServerlessFrameworkBenefits />
   </DefaultLayout>
 )
 

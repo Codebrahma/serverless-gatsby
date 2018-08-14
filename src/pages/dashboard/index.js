@@ -27,17 +27,17 @@ query DashboardImgQuery {
       ...GatsbyImageSharpResolutions_tracedSVG
     }
   }
-  useCase1: imageSharp(id: { regex: "/use-case-1/" }) {
+  useCaseImg1: imageSharp(id: { regex: "/use-case-1/" }) {
     sizes(maxWidth: 360) {
       ...GatsbyImageSharpSizes_tracedSVG
     }
   }
-  useCase2: imageSharp(id: { regex: "/use-case-2/" }) {
+  useCaseImg2: imageSharp(id: { regex: "/use-case-2/" }) {
     sizes(maxWidth: 360) {
       ...GatsbyImageSharpSizes_tracedSVG
     }
   }
-  useCase3: imageSharp(id: { regex: "/use-case-3/" }) {
+  useCaseImg3: imageSharp(id: { regex: "/use-case-3/" }) {
     sizes(maxWidth: 360) {
       ...GatsbyImageSharpSizes_tracedSVG
     }

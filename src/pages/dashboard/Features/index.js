@@ -1,14 +1,65 @@
 import React from 'react'
 
-import { Features } from 'src/fragments'
-import dashboardFeature1 from 'src/assets/images/dashboard-feature-1.png'
-import dashboardFeature2 from 'src/assets/images/dashboard-feature-2.png'
-import dashboardFeature3 from 'src/assets/images/dashboard-feature-3.png'
-import dashboardFeature4 from 'src/assets/images/dashboard-feature-4.png'
-import dashboardFeature5 from 'src/assets/images/dashboard-feature-5.png'
-import dashboardFeature6 from 'src/assets/images/dashboard-feature-6.png'
 
-const featureItemsData = [
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  GatsbyImg,
+  P
+} from 'serverless-design-system/src'
+
+import PickImgFromContext from '../../../components/HOC/ImageContext'
+
+// This is replaced by local Features component since this breaks in netlify
+// import { Features } from 'src/fragments'
+
+/* Local Temporary Feature component without Counter logic */
+const FeatureItem = ({ header, img, content, rightAligned }) => (
+  <Box.relative
+    width={[1, 1, 3/7, 4/10]}
+    mr={[0, 0, 2, rightAligned ? '10%' : 0]}
+    ml={[0, 0, 2, rightAligned ? 0 : '10%' ]}
+    pb={[4, 4, 6]}
+    style={{ counterIncrement: 'step-counter' }}
+  >
+    <GatsbyImg resolutions={img.resolutions} mb={25} />
+      {header}
+    <P>{content}</P>
+  </Box.relative>
+)
+
+/* Local Temporary Features component */
+const Features = ({ features }) => (
+  <Container px={2} pb={[300, 300, 10, 10]}>
+    <Flex.column px={[0, 0, 2, 5]} mt={5}>
+      <Heading.h2 align='center' fontFamily='SoleilSb' my={4}>
+        Features
+      </Heading.h2>
+      <Flex.row flexWrap='wrap' mt={3}>
+        {features.map(({ header, img, content }, index) => (
+          <FeatureItem
+            key={header}
+            header={header}
+            content={content}
+            img={img}
+            rightAligned={index % 2 === 0}
+          />
+        ))}
+      </Flex.row>
+    </Flex.column>
+  </Container>
+)
+
+const featureItemsData = (
+  dashboardFeature1,
+  dashboardFeature2,
+  dashboardFeature3,
+  dashboardFeature4,
+  dashboardFeature5,
+  dashboardFeature6
+) => [
   {
     header: 'Architecture Visualization',
     img: dashboardFeature1,
@@ -47,6 +98,13 @@ const featureItemsData = [
   },
 ]
 
-const DashboardFeatures = () => <Features features={featureItemsData} />
+const DashboardFeatures = ({
+  dashboardFeature1,
+  dashboardFeature2,
+  dashboardFeature3,
+  dashboardFeature4,
+  dashboardFeature5,
+  dashboardFeature6,
+}) => <Features features={featureItemsData(dashboardFeature1, dashboardFeature2, dashboardFeature3, dashboardFeature4, dashboardFeature5, dashboardFeature6)} />
 
-export default DashboardFeatures
+export default PickImgFromContext(DashboardFeatures, ['dashboardFeature1', 'dashboardFeature2', 'dashboardFeature3', 'dashboardFeature4', 'dashboardFeature5', 'dashboardFeature6'])

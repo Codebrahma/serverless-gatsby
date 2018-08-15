@@ -1,9 +1,12 @@
 import React from 'react'
+import { Flex, Box } from 'serverless-design-system/src'
 
-import { Box } from 'serverless-design-system/src'
-import ComparisionListItem from './ComparisionListItem'
+import {
+  UseCasesList,
+  UseCasesSelector,
+} from '../../../fragments'
 
-const ComparisionListItems = [
+const comparisionData = [
   {
     title: 'Auto-scaling Websites and APIs',
     contents: [
@@ -56,18 +59,11 @@ const ComparisionListItems = [
   },
 ]
 
-const ComparisionList = () => (
-  <Box width={[1, 1, 2/3]}>
-    {
-      ComparisionListItems.map((item, index) => (
-        <ComparisionListItem
-          key={index}
-          title={item.title}
-          contents={item.contents}
-        />
-      ))
-    }
-  </Box>
+const UseCaseScrollList = () => (
+  <Flex flexDirection={['column', 'column', 'row']}>
+    <UseCasesSelector comparisionData={comparisionData} />
+    <UseCasesList comparisionData={comparisionData} />
+  </Flex>
 )
 
-export default ComparisionList
+export default UseCaseScrollList

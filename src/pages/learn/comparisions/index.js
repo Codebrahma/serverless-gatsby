@@ -8,6 +8,15 @@ import Hero from './Hero'
 import ComparisionList from './ComparisionList'
 import ComparisionSelector from './ComparisionSelector'
 
+// import comparisionCloudFormation from './comparisionCloudFormation'
+// import comparisionCustomTooling from './comparisionCustomTooling'
+// import comparisionDocker from './comparisionDocker'
+// import comparisionHeroku from './comparisionHeroku'
+// import comparisionSAM from './comparisionSAM'
+// import comparisionCloudFormation from './comparisionCloudFormation'
+// import comparisionTerraForm from './comparisionTerraForm'
+// import comparisionZampa from './comparisionZampa'
+
 const Comparisions = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero />

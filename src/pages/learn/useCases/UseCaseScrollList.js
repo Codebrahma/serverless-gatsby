@@ -76,7 +76,6 @@ const comparisonData = [
 
 const UseCaseScrollList = () => (
   <Flex flexDirection={['column', 'column', 'row']} mt={8} mb={9}>
-    <AutoScrollMenu listData={comparisonData} />
     <AutoScrollList listData={comparisonData} />
   </Flex>
 )

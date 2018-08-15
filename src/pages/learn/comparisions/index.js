@@ -5,25 +5,12 @@ import DefaultLayout from 'src/layouts/Default'
 
 import Prefooter from './Prefooter'
 import Hero from './Hero'
-import ComparisionList from './ComparisionList'
-import ComparisionSelector from './ComparisionSelector'
-
-// import comparisionCloudFormation from './comparisionCloudFormation'
-// import comparisionCustomTooling from './comparisionCustomTooling'
-// import comparisionDocker from './comparisionDocker'
-// import comparisionHeroku from './comparisionHeroku'
-// import comparisionSAM from './comparisionSAM'
-// import comparisionCloudFormation from './comparisionCloudFormation'
-// import comparisionTerraForm from './comparisionTerraForm'
-// import comparisionZampa from './comparisionZampa'
+import ComparisonScrollList from './comparisonScrollList'
 
 const Comparisions = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero />
-    <Flex flexDirection={['column', 'column', 'row']}>
-      <ComparisionSelector />
-      <ComparisionList />
-    </Flex>
+    <ComparisonScrollList />
   </DefaultLayout>
 )
 

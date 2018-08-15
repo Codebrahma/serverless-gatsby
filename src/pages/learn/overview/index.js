@@ -13,12 +13,12 @@ import GetStarted from './GetStarterd'
 
 const Overview = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
-    <Hero />
+    <Hero/>
     <UseCase />
     <GetStarted />
     <ServerlessAppBenefits />
     <AboutServerlessFramework />
-    <ServerlessFrameworkBenefits />
+    <ServerlessFrameworkBenefits/>
   </DefaultLayout>
 )
 

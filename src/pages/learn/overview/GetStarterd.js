@@ -11,7 +11,7 @@ const GetStarted = () => (
     alignItem='center'
   >
     <P align='center' color='white' fontSize={5} mx={3}>focus on your business logic, not on your servers</P>
-    <SecondaryButton margin='auto'>get started</SecondaryButton>
+    <SecondaryButton mx='auto' background='white'>get started</SecondaryButton>
   </Flex.column>
 )
 

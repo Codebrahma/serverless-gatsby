@@ -4,6 +4,9 @@ import { UseCases } from 'src/fragments'
 import learnOverviewUsecase1 from 'src/assets/images/learnOverviewUsecase1.png'
 import learnOverviewUsecase2 from 'src/assets/images/learnOverviewUsecase2.png'
 
+import dataProcessing from 'src/assets/images/dataProcessing.png'
+import easyAutomation from 'src/assets/images/easyAutomation.png'
+
 const cases = [
   {
     title: 'The serverless movement',
@@ -15,7 +18,7 @@ const cases = [
     title: 'What makes an application serverless?',
     description:
       'The serverless movement started with release of AWS Lambda, a Function-as-a-Service (FaaS) compute service. But serverless is much more than just FaaS. Ultimately, serverless is about focusing your efforts on what provides value to your users. This means using managed services for databases, search indexes, queues, SMS messaging, and email delivery. It means trying these services together using stateless, ephemeral compute like the various Faas offerings. Upgrading your Linux distro does not provide value for your users. MAnaging your RabbitMQ servers does not provide value to your users. Shipping product provides value to your users.',
-    imgSrc: learnOverviewUsecase2,
+    imgSrc: easyAutomation,
   },
 ]
 

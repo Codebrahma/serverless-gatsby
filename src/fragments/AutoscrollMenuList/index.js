@@ -1,2 +1,7 @@
-export { default as AutoScrollList } from './AutoScrollList'
-export { default as AutoScrollMenu } from './AutoScrollMenu'
+import { default as AutoScrollList } from './AutoScrollList'
+import { default as AutoScrollMenu } from './AutoScrollMenu'
+
+export default {
+  AutoScrollList,
+  AutoScrollMenu
+}

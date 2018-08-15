@@ -5,8 +5,11 @@ import DefaultLayout from 'src/layouts/Default'
 
 import Prefooter from './Prefooter'
 import Hero from './Hero'
-import UseCasesList from './UseCasesList'
-import UseCasesSelector from './UseCasesSelector'
+
+import {
+  UseCasesList,
+  UseCasesSelector,
+} from '../../../fragments'
 
 const UseCases = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 import styled from 'styled-components'
-import dotGridBacground from 'src/assets/images/dot-grid.png'
+import dotGridBackground from 'src/assets/images/dot-grid.png'
 
 const getLinkStyle = ({ backgroundOnHover }) => `
   position: relative;
@@ -20,7 +20,7 @@ const getLinkStyle = ({ backgroundOnHover }) => `
         left: -10px;
         top: -5px;
         z-index: -1;
-        background: url(${dotGridBacground});
+        background: url(${dotGridBackground});
         background-size: cover;
         display: none;
       }

@@ -11,7 +11,7 @@ const DashboardHero = () => (
           fontFamily='SoleilSb' 
           align={['center', 'center', 'left']}
           color='white'
-          fontSize={8}
+          fontSize={9}
         >
           Use Cases
         </Heading.h1>

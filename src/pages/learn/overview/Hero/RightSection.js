@@ -6,7 +6,7 @@ import {
 
 const RightSection = () => (
   <Flex.column
-    width={[1, 1, 1/2]}
+    width={[1, 1, 7/20]}
     alignItems='center'
     justifyContent='flex-end'
     py={3}

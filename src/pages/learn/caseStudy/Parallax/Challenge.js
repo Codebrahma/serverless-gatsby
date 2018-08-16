@@ -15,8 +15,8 @@ const Challenge = () => (
         iconSrc={RedRectangleDots}
         iconHeight='32px'
         iconWidth='50px'
-        iconTop='20px'
-        iconLeft='0'
+        iconTop='10px'
+        iconLeft='-10px'
       >
         <Heading.h1>The Challenge</Heading.h1>
       </TextWithIcon>

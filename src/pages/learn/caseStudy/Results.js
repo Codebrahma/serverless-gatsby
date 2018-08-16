@@ -4,14 +4,14 @@ import { TextWithIcon, Flex, Heading, Box, P } from 'serverless-design-system/sr
 import RedRectangleDots from '../../../assets/images/redRectangleDots.png'
 
 const Results = () => (
-  <Flex.column>
+  <Flex.column mt={6}>
     <Flex justifyContent='center'>
       <TextWithIcon
         iconSrc={RedRectangleDots} 
         iconHeight='32px'
         iconWidth='50px'
-        iconTop='20px'
-        iconLeft='0'
+        iconTop='10px'
+        iconLeft='-10px'
       >
         <Heading.h1>The Results</Heading.h1>
       </TextWithIcon>

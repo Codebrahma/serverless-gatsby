@@ -9,7 +9,7 @@ class AutoScrollListItem extends React.Component {
     const { title, contents, image } = this.props
     
     return (
-      <Flex.column mb={5}>
+      <Flex.column mb={5} px={3}>
         <Box mb={5}>
           <TextWithIcon
             iconSrc={RedRectangleDots}
@@ -24,11 +24,12 @@ class AutoScrollListItem extends React.Component {
         <Image
           src={image}
           alt={title}
-          width='800px'
+          mx='auto'
+          width={['640px', '480px', '640px', '640px', '800px']}
         />
         {
           contents.map((content, index) => (
-            <P key={index} mb={2}>
+            <P key={index} mt={3}>
               {content}
             </P>
           ))

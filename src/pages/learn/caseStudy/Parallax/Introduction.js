@@ -3,7 +3,7 @@ import React from 'react'
 import { Flex, Box, P } from 'serverless-design-system/src'
 
 const Introduction = () => (
-  <Flex flexDirection={['column', 'column', 'row']} mt={10}>
+  <Flex flexDirection={['column', 'column', 'row']} mt={10} px={[4, 4, 0]}>
     <Box width={[1, 1, 3/10]}>
       <P>PARALLAX</P>
       <P>Visit parall.ax</P>

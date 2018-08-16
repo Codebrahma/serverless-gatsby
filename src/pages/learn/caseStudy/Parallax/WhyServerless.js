@@ -6,8 +6,8 @@ import JamesHall from '../../../../assets/images/JamesHall.png'
 import RedRectangleDots from '../../../../assets/images/redRectangleDots.png'
 
 const WhyServerless = () => (
-  <Flex flexDirection={['column', 'column', 'row']} mt={8}>
-    <Box width={[1, 1, 5/10]} px={7}>
+  <Flex flexDirection={['column', 'column', 'row']} mt={8} px={3}>
+    <Box width={[1, 1, 5/10]} pr={7}>
       <TextWithIcon
         iconSrc={RedRectangleDots}
         iconHeight='32px'
@@ -23,19 +23,19 @@ const WhyServerless = () => (
       <P>Thanks to Node.js they were able to reuse the validation code across the frontend and backend. They could also check the proof-of-concept,and do some load testing, for free as part of the the Amazon Web Services 1 million request/month free usage tier. This meant they could play around until everything was exactly how they needed it to be.</P>
     </Box>
     <Flex.column
-      width={[1, 1, 5/10]}
-      alignItems='center'
+      alignItems={['center', 'center', 'flex-end', 'flex-end', 'flex-end']}
       pt={3}
+      width={[5/10, 5/10, 7/10, 5/10, 5/10]}
     >
       <Flex
         background={`url(${JamesHall})}`}
         backgroundStyle='contain'
         px={3}
         height='581px'
-        width={[1, 1, 6/10]}
         alignItems='flex-end'
+        width={[1, 1, 6/10, 6/10, 6/10]}
       >
-        <P fontSize={4} color='white'>
+        <P fontSize={[4, 4, 3, 3, 4]} color='white'>
           Going serverless allowed us to concentrate on writing the features without worrying about how to scale it. The Serverless Framework allowed us to stop worrying about the underlying architecture, but was flexible enough to dip into if needed.
         </P>
       </Flex>

@@ -6,11 +6,15 @@ import Parallax from '../../../../assets/images/parallax.png'
 import RedRectangleDots from '../../../../assets/images/redRectangleDots.png'
 
 const Challenge = () => (
-  <Flex flexDirection={['column', 'column', 'row']} mt={8}>
+  <Flex flexDirection={['column', 'column', 'row']} mt={8} px={3}>
     <Box width={[1, 1, 5/10]}>
-      <Image src={Parallax} alt='parallax' width='592px' height='384px'/>
+      <Image
+        src={Parallax}
+        alt='parallax' 
+        width={[1, 1, 1]}
+      />
     </Box>
-    <Box width={[1, 1, 5/10]} px={7}>
+    <Box width={[1, 1, 5/10]} pl={5}>
       <TextWithIcon
         iconSrc={RedRectangleDots}
         iconHeight='32px'

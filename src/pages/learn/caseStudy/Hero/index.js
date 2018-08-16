@@ -5,7 +5,7 @@ import { HeroWrapper } from 'src/fragments'
 
 const DashboardHero = () => (
   <HeroWrapper>
-    <Flex mb='200px'>
+    <Flex mb={7}>
       <Box width={1} pl='5%' pr={['5%', '5%', '20%']}>
         <Heading.h1
           fontSize={8}

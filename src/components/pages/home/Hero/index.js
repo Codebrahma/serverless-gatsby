@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Wrapper } from 'serverless-design-system/src'
+import { Wrapper, Box } from 'serverless-design-system/src'
 import HeroHeader from './Header'
 import HeroImage from './Image'
 import HeroActions from './Actions'
@@ -13,12 +13,17 @@ const HomeHeroComponent = () => (
     backgroundImage={`url(${HomePageHeroSectionBackground})`}
     backgroundSize='contain'
     background='black'
-    pt={['62px','62px','90px']}
+    maxWidth={1260}
   >
-    <HeroHeader />
-    <HeroImage />
-    <HeroActions />
-    <HeroFooter />
+    <Box
+      pt={['62px','62px','90px']}
+      pb={1}
+    >
+      <HeroHeader />
+      <HeroImage />
+      <HeroActions />
+      <HeroFooter />
+    </Box>
   </Wrapper>
 )
 

@@ -2,6 +2,7 @@ import React from 'react'
 
 import { ResponsiveStack, HeroAdvantage } from 'serverless-design-system/src'
 
+// This image will load by normal image tag
 import RedRectangeDots from '../../../assets/images/redRectangleDots.png'
 
 const advantages = [

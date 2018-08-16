@@ -5,9 +5,9 @@ import { Flex, Box, Heading, P } from 'serverless-design-system/src'
 
 const OverviewHero = () => (
   <HeroWrapper>
-    <Flex flexDirection={['column', 'column', 'row']} mb='400px'>
-      <Flex width={[1, 1, 1/2]} justifyContent={['center', 'center', 'flex-start']}>
-        <Heading.h1 fontSize={[7, 7, 8]} color='white'>
+    <Flex flexDirection={['column', 'column', 'row']} mb='100px'>
+      <Flex width={[1, 1, 1/2]} justifyContent={['center', 'center', 'flex-start']} alignItems='center'>
+        <Heading.h1 fontSize={[7, 7, 7, 8]} color='white' px={2}>
           Resources
         </Heading.h1>
       </Flex>

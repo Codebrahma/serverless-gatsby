@@ -78,7 +78,11 @@ const HomeHeroImage = () => (
       title='serverless'
       subtitle='dashboard'
     />
-    <ImageSection imgSrc={gatewayIcon} title='event' subtitle='gateway' />
+    <ImageSection 
+      imgSrc={gatewayIcon} 
+      title='event' 
+      subtitle='gateway'
+    />
   </HeroImageWrapper>
 )
 

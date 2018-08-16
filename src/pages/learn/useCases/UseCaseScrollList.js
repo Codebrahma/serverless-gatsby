@@ -1,9 +1,11 @@
 import React from 'react'
-import { Flex, Box } from 'serverless-design-system/src'
+import { 
+  Flex,
+  Container,
+} from 'serverless-design-system/src'
 
 import {
   AutoScrollList,
-  AutoScrollMenu,
 } from '../../../fragments'
 
 import LearnUsecase01 from '../../../assets/images/LearnUsecase01.png'
@@ -75,9 +77,11 @@ const comparisonData = [
 ]
 
 const UseCaseScrollList = () => (
-  <Flex flexDirection={['column', 'column', 'row']} mt={8} mb={9}>
-    <AutoScrollList listData={comparisonData} />
-  </Flex>
+  <Container maxWidth={1}>
+    <Flex flexDirection={['column', 'column', 'row']} mt={8} mb={9}>
+      <AutoScrollList listData={comparisonData} />
+    </Flex>
+  </Container>
 )
 
 export default UseCaseScrollList

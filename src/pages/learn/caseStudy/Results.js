@@ -5,7 +5,7 @@ import RedRectangleDots from '../../../assets/images/redRectangleDots.png'
 import learnCasestudyResults from '../../../assets/images/learnCasestudyResults.png'
 
 const Results = () => (
-  <Flex.column mt={6}>
+  <Flex.column mt={6} px={3}>
     <Flex justifyContent='center'>
       <TextWithIcon
         iconSrc={RedRectangleDots} 

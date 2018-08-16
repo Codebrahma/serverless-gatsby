@@ -17,7 +17,7 @@ const actions = [
   },
 ]
 
-const DashboardPrefooter = () => (
+const CaseStudyPrefooter = () => (
   <Prefooter
     heading='See For Yourself'
     sentences={sentences}
@@ -25,4 +25,4 @@ const DashboardPrefooter = () => (
   />
 )
 
-export default DashboardPrefooter
+export default CaseStudyPrefooter

@@ -8,7 +8,7 @@ import Hero from './Hero'
 import Parallax from './Parallax'
 import Results from './Results'
 
-const Overview = () => (
+const CaseStudy = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero />
     <Parallax />
@@ -16,4 +16,4 @@ const Overview = () => (
   </DefaultLayout>
 )
 
-export default Overview
+export default CaseStudy

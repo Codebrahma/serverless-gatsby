@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Flex, Box, P, Image, TextWithIcon, Heading } from 'serverless-design-system/src'
+import { Flex, P, Image, TextWithIcon, Heading } from 'serverless-design-system/src'
 
 import Parallax from '../../../../assets/images/parallax.png'
 import RedRectangleDots from '../../../../assets/images/redRectangleDots.png'

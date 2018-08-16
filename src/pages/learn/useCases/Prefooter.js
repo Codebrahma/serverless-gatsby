@@ -32,7 +32,7 @@ const actions = [
   },
 ]
 
-const FrameworkPrefooter = () => (
+const UseCasesPrefooter = () => (
   <Prefooter
     heading='New to serverless?'
     sentences={sentences}
@@ -40,4 +40,4 @@ const FrameworkPrefooter = () => (
   />
 )
 
-export default FrameworkPrefooter
+export default UseCasesPrefooter

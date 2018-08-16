@@ -3,7 +3,7 @@ import React from 'react'
 import { Flex, Box, P, Heading } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
 
-const DashboardHero = () => (
+const ComparisionsHero = () => (
   <HeroWrapper>
     <Flex mb='100px' flexDirection={['column', 'column', 'row']}>
       <Box width={[1, 1, 1/2]}>
@@ -25,4 +25,4 @@ const DashboardHero = () => (
   </HeroWrapper>
 )
 
-export default DashboardHero
+export default ComparisionsHero

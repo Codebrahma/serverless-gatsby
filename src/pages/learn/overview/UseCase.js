@@ -4,9 +4,6 @@ import { UseCases } from 'src/fragments'
 import learnOverviewUsecase1 from 'src/assets/images/learnOverviewUsecase1.png'
 import learnOverviewUsecase2 from 'src/assets/images/learnOverviewUsecase2.png'
 
-import dataProcessing from 'src/assets/images/dataProcessing.png'
-import easyAutomation from 'src/assets/images/easyAutomation.png'
-
 const cases = [
   {
     title: 'The serverless movement',

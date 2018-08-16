@@ -32,7 +32,7 @@ const actions = [
   },
 ]
 
-const DashboardPrefooter = () => (
+const OverviewPrefooter = () => (
   <Prefooter
     heading='New to serverless?'
     sentences={sentences}
@@ -40,4 +40,4 @@ const DashboardPrefooter = () => (
   />
 )
 
-export default DashboardPrefooter
+export default OverviewPrefooter

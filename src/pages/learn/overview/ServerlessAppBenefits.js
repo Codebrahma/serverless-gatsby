@@ -5,8 +5,6 @@ import minimumConfiguration from 'src/assets/images/minimumConfiguration.png'
 import robustEcosystem from 'src/assets/images/robustEcosystem.png'
 import multiLingual from 'src/assets/images/multiLingual.png'
 import cloudAgnostic from 'src/assets/images/cloudAgnostic.png'
-import appLifecycleManagement from 'src/assets/images/appLifecycleManagement.png'
-import streamingLogs from 'src/assets/images/streamingLogs.png'
 
 const featureItemsData = [
   {
@@ -35,6 +33,6 @@ const featureItemsData = [
   },
 ]
 
-const FrameworkFeatures = () => <Features features={featureItemsData} />
+const OverviewFeatures = () => <Features features={featureItemsData} />
 
-export default FrameworkFeatures
+export default OverviewFeatures

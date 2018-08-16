@@ -82,7 +82,7 @@ const comparisonData = [
   }
 ]
 
-const UseCaseScrollList = () => (
+const ComparisionsScrollList = () => (
   <Container maxWidth={1}>
     <Flex flexDirection={['column', 'column', 'row']} mt={8} mb={9}>
       <AutoScrollList listData={comparisonData} />
@@ -90,4 +90,4 @@ const UseCaseScrollList = () => (
   </Container>
 )
 
-export default UseCaseScrollList
+export default ComparisionsScrollList

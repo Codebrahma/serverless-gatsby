@@ -3,11 +3,11 @@ import React from 'react'
 import Testimonial from 'src/fragments/Testimonial'
 import DefaultLayout from 'src/layouts/Default'
 
-import Hero from './home/Hero'
-import Benefits from './home/Benefits'
-import PlatformFeatures from './home/PlatformFeatures'
-import Prefooter from './home/Prefooter'
-import TrustedClients from './home/TrustedClients'
+import Hero from 'src/components/pages/home/Hero'
+import Benefits from 'src/components/pages/home/Benefits'
+import PlatformFeatures from 'src/components/pages/home/PlatformFeatures'
+import Prefooter from 'src/components/pages/home/Prefooter'
+import TrustedClients from 'src/components/pages/home/TrustedClients'
 
 const Home = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Flex, Box, TextWithIcon, Heading, P, Image, Container } from 'serverless-design-system/src'
-import redRectangleDots from '../../../assets/images/redRectangleDots.png'
-import learnDashboardAboutFramework from '../../../assets/images/learnDashboardAboutFramework.png'
+import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
+import learnDashboardAboutFramework from '../../../../assets/images/learnDashboardAboutFramework.png'
 
 const AboutServerlessFramework = () => (
   <Container maxWidth={1}>

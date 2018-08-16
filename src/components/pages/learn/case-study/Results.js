@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { TextWithIcon, Flex, Heading, Box, P, Image } from 'serverless-design-system/src'
-import RedRectangleDots from '../../../assets/images/redRectangleDots.png'
-import learnCasestudyResults from '../../../assets/images/learnCasestudyResults.png'
+import RedRectangleDots from '../../../../assets/images/redRectangleDots.png'
+import learnCasestudyResults from '../../../../assets/images/learnCasestudyResults.png'
 
 const Results = () => (
   <Flex.column mt={6} px={3}>

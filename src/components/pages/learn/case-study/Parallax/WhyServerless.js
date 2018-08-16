@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Flex, Box, P, Image, TextWithIcon, Heading } from 'serverless-design-system/src'
 
-import JamesHall from '../../../../assets/images/JamesHall.png'
-import RedRectangleDots from '../../../../assets/images/redRectangleDots.png'
+import JamesHall from '../../../../../assets/images/JamesHall.png'
+import RedRectangleDots from '../../../../../assets/images/redRectangleDots.png'
 
 const WhyServerless = () => (
   <Flex flexDirection={['column', 'column', 'row']} mt={8} px={3}>

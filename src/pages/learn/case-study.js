@@ -3,10 +3,10 @@ import { Box } from 'serverless-design-system/src'
 
 import DefaultLayout from 'src/layouts/Default'
 
-import Prefooter from './Prefooter'
-import Hero from './Hero'
-import Parallax from './Parallax'
-import Results from './Results'
+import Prefooter from 'src/components/pages/learn/case-study/Prefooter'
+import Hero from 'src/components/pages/learn/case-study/Hero'
+import Parallax from 'src/components/pages/learn/case-study/Parallax'
+import Results from 'src/components/pages/learn/case-study/Results'
 
 const CaseStudy = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>

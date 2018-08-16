@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Flex, SecondaryButton, P, Container } from 'serverless-design-system/src'
-import learnOverviewGetStartedBg from '../../../assets/images/learnOverviewGetStarted.png'  
+import learnOverviewGetStartedBg from '../../../../assets/images/learnOverviewGetStarted.png'  
 const GetStarted = () => (
   <Container maxWidth={1}>
     <Flex.column

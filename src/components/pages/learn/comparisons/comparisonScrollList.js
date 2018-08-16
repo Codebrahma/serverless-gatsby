@@ -7,15 +7,15 @@ import {
 
 import {
   AutoScrollList,
-} from '../../../fragments'
+} from 'src/fragments'
 
-import comparisionCloudFormation from '../../../assets/images/comparisionCloudFormation.png'
-import comparisionCustomTooling from '../../../assets/images/comparisionCustomTooling.png'
-import comparisionDocker from '../../../assets/images/comparisionDocker.png'
-import comparisionHeroku from '../../../assets/images/comparisionHeroku.png'
-import comparisionSAM from '../../../assets/images/comparisionSAM.png'
-import comparisionTerraForm from '../../../assets/images/comparisionTerraForm.png'
-import comparisionZampa from '../../../assets/images/comparisionZampa.png'
+import comparisionCloudFormation from '../../../../assets/images/comparisionCloudFormation.png'
+import comparisionCustomTooling from '../../../../assets/images/comparisionCustomTooling.png'
+import comparisionDocker from '../../../../assets/images/comparisionDocker.png'
+import comparisionHeroku from '../../../../assets/images/comparisionHeroku.png'
+import comparisionSAM from '../../../../assets/images/comparisionSAM.png'
+import comparisionTerraForm from '../../../../assets/images/comparisionTerraForm.png'
+import comparisionZampa from '../../../../assets/images/comparisionZampa.png'
 
 const comparisonData = [
   {

@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Flex, P, Image, TextWithIcon, Heading } from 'serverless-design-system/src'
 
-import Parallax from '../../../../assets/images/parallax.png'
-import RedRectangleDots from '../../../../assets/images/redRectangleDots.png'
+import Parallax from '../../../../../assets/images/parallax.png'
+import RedRectangleDots from '../../../../../assets/images/redRectangleDots.png'
 
 const Challenge = () => (
   <Flex flexDirection={['column', 'column', 'row']} mt={8} px={3}>

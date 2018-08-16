@@ -6,15 +6,15 @@ import {
 
 import {
   AutoScrollList,
-} from '../../../fragments'
+} from 'src/fragments'
 
-import LearnUsecase01 from '../../../assets/images/LearnUsecase01.png'
-import LearnUsecase02 from '../../../assets/images/LearnUsecase02.png'
-import LearnUsecase03 from '../../../assets/images/LearnUsecase03.png'
-import LearnUsecase04 from '../../../assets/images/LearnUsecase04.png'
-import LearnUsecase05 from '../../../assets/images/LearnUsecase05.png'
-import LearnUsecase06 from '../../../assets/images/LearnUsecase06.png'
-import LearnUsecase07 from '../../../assets/images/LearnUsecase07.png'
+import LearnUsecase01 from '../../../../assets/images/LearnUsecase01.png'
+import LearnUsecase02 from '../../../../assets/images/LearnUsecase02.png'
+import LearnUsecase03 from '../../../../assets/images/LearnUsecase03.png'
+import LearnUsecase04 from '../../../../assets/images/LearnUsecase04.png'
+import LearnUsecase05 from '../../../../assets/images/LearnUsecase05.png'
+import LearnUsecase06 from '../../../../assets/images/LearnUsecase06.png'
+import LearnUsecase07 from '../../../../assets/images/LearnUsecase07.png'
 
 const comparisonData = [
   {

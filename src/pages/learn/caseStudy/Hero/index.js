@@ -7,9 +7,12 @@ const DashboardHero = () => (
   <HeroWrapper>
     <Flex mb='200px'>
       <Box width={1} pl='5%' pr={['5%', '5%', '20%']}>
-        <Heading.h1 
+        <Heading.h1
+          fontSize={8}
           fontFamily='SoleilSb' 
-          align={['center', 'center', 'left']} color='white'>
+          align={['center', 'center', 'left']}
+          color='white'
+        >
           Scaling to millions of requests with the Serverless Framework
         </Heading.h1>
       </Box>

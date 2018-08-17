@@ -1,10 +1,10 @@
 import React from 'react'
 
 import DefaultLayout from 'src/layouts/Default'
-import Hero from './Hero'
-import WorkshopList from './WorkshopList'
 
-import Prefooter from './Prefooter'
+import Hero from 'src/components/pages/resources/workshops/Hero'
+import WorkshopList from 'src/components/pages/resources/workshops/WorkshopList'
+import Prefooter from 'src/components/pages/resources/workshops/Prefooter'
 
 const ResourcesWorkshops = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>

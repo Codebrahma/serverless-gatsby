@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Flex, Box, Heading, P, SecondaryButton, Container } from 'serverless-design-system/src'
-import resourceWorkshopSanFrancisco from '../../../assets/images/resourceWorkshopSanFrancisco.png'
+import resourceWorkshopSanFrancisco from '../../../../assets/images/resourceWorkshopSanFrancisco.png'
 
 const workshopList = [
   {

@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Features } from 'src/fragments'
 
-import resourcesOverviewBlog from '../../../assets/images/resourcesOverviewBlog.png'
-import resourcesOverviewForum from '../../../assets/images/resourcesOverviewForum.png'
-import resourcesOverviewMeetup from '../../../assets/images/resourcesOverviewMeetup.png'
-import resourcesOverviewWorkshop from '../../../assets/images/resourcesOverviewWorkshop.png'
+import resourcesOverviewBlog from '../../../../assets/images/resourcesOverviewBlog.png'
+import resourcesOverviewForum from '../../../../assets/images/resourcesOverviewForum.png'
+import resourcesOverviewMeetup from '../../../../assets/images/resourcesOverviewMeetup.png'
+import resourcesOverviewWorkshop from '../../../../assets/images/resourcesOverviewWorkshop.png'
 
 const featureItemsData = [
   {

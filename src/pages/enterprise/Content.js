@@ -12,8 +12,12 @@ const Content = ({ theme }) => (
       theme.navbarHeights.mobile,
       theme.navbarHeights.desktop,
     ]}
+    px={'15px'}
   >
-    <Flex.spaceBetween my={[2, 2, 3, 6]}>
+    <Flex.spaceBetween
+      flexDirection={['column', 'column', 'row']}
+      my={[2, 2, 5, 6]}
+    >
       <Box width={[1, 1, 2/5]}>
         <Pros />
       </Box>

@@ -55,7 +55,8 @@ const UpcomingMeetups = () => (
       >
         <Heading.h3>Upcoming Meetups</Heading.h3>
       </TextWithIcon>
-      <Flex flexDirection={['column', 'column', 'row']}>
+      <Flex flexDirection={['column', 'column', 'row']}
+        flexWrap='wrap' justifyContent='center'>
         {
           meetupData.map(({ title, schedule, address, attending}) => (
             <MeetupCard

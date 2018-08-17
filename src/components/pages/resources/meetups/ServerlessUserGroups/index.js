@@ -7,6 +7,7 @@ import meetupMember12 from '../../../../../assets/images/meetupMember12.png'
 import meetupMember13 from '../../../../../assets/images/meetupMember13.png'
 import meetupMember14 from '../../../../../assets/images/meetupMember14.png'
 import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
+import verticalRedRectangleDots from '../../../../../assets/images/verticalRedRectangleDots.png'
 
 const meetupData = [
   {
@@ -44,7 +45,10 @@ const meetupData = [
 // Hardcoded color
 const MeetupCard = ({ title, schedule, address, attending }) => (
   <Flex minHeight='384px' width='384px' mx={2} mt={3}>
-    <Box width={1} boxShadow='2px 2px 8px 0 #dfe5e6' px={3} py={3}>
+    <Box.relative width={1} boxShadow='2px 2px 8px 0 #dfe5e6' px={3} py={3}>
+      <Box.absolute top='30px' left='-10px'>
+        <Image src={verticalRedRectangleDots} />
+      </Box.absolute>
       <Heading.h4 fontSize={4} fontFamily='SoleilBk'>
         {title}
       </Heading.h4>
@@ -80,7 +84,7 @@ const MeetupCard = ({ title, schedule, address, attending }) => (
           </Flex>
         </React.Fragment>
       </Flex>
-    </Box>
+    </Box.relative>
   </Flex>
 )
 

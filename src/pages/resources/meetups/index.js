@@ -12,8 +12,8 @@ const ResourcesMeetups = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero />
     <Introduction />
-    <ServerlessUserGroups />
     <UpcomingMeetups />
+    <ServerlessUserGroups />
   </DefaultLayout>
 )
 

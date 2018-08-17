@@ -64,14 +64,21 @@ const MeetupCard = ({ title, schedule, address, attending }) => (
         Attending:
       </P>
       <Flex>
-        {attending.memberImages.map(imgSrc => (
-          <Image
-            key={imgSrc}
-            src={imgSrc}
-            width='32px'
-            height='32px'
-          />
-        ))}
+        <React.Fragment>
+          {attending.memberImages.map(imgSrc => (
+            <Image
+              key={imgSrc}
+              src={imgSrc}
+              width='32px'
+              height='32px'
+            />
+          ))}
+          <Flex bg='gray.1' width='32px' height='32px' alignItems='center' justifyContent='center'>
+            <P fontSize={0} color='gray.2' fontWeight='bold'>
+              {`${attending.plusCount}+`}
+            </P>
+          </Flex>
+        </React.Fragment>
       </Flex>
     </Box>
   </Flex>

@@ -6,8 +6,8 @@ import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
 import investorTrinity from '../../../../assets/images/investorTrinity.png'
 import investorHeavyBit from '../../../../assets/images/investorHeavyBit.png'
 
-const OurTeam= () => (
-  <Container width={1} mb='400px' mt={4}>
+const OurInvestors= () => (
+  <Container width={1} mt={8}>
     <Flex flexDirection='column' px={3}>
       <Flex justifyContent='center'>
         <TextWithIcon
@@ -20,7 +20,7 @@ const OurTeam= () => (
           <Heading.h1>Our Investors</Heading.h1>
         </TextWithIcon> 
       </Flex>
-      <Flex flexDirection={['column', 'row']}flexWrap='wrap' justifyContent='center' mt={4}>
+      <Flex flexDirection={['column', 'row']} flexWrap='wrap' justifyContent='center' mt={4}>
         <Image src={investorTrinity} alt='trinity' mx={8}/>
         <Image src={investorHeavyBit} alt='heavybit-industries' mx={8}/>
       </Flex>
@@ -28,4 +28,4 @@ const OurTeam= () => (
   </Container>
 )
 
-export default OurTeam
+export default OurInvestors

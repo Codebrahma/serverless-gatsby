@@ -30,7 +30,7 @@ const teamMembers = [
 ]
 
 const OurTeam= () => (
-  <Container width={1} mb='400px' mt={4}>
+  <Container width={1} mt={4}>
     <Flex flexDirection='column' px={3}>
       <Flex justifyContent='center'>
         <TextWithIcon

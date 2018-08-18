@@ -5,7 +5,7 @@ import { Container, Flex, Box, P, TextWithIcon, Heading } from 'serverless-desig
 import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
 
 const OurStory = () => (
-  <Container width={1} mb='400px' mt={4}>
+  <Container width={1} mt={4}>
     <Flex flexDirection={['column', 'column', 'row']} px={3}>
       <Box width={[1, 1, 1/3]}>
         <TextWithIcon

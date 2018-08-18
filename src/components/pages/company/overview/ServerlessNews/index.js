@@ -4,7 +4,7 @@ import { Container, Flex, P, Heading, Box } from 'serverless-design-system/src'
 
 import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
 import investorTrinity from '../../../../../assets/images/investorTrinity.png'
-import investorHeavyBit from '../../../../../assets/images/investorHeavyBit.png'
+import investorHeavyBit from '../../../../../assets/images/investorHeavybit.png'
 
 const newsList = [
   { title: 'The Promise or Peril of the New Cloud Technology', publisher: `Barron's Magazine` },

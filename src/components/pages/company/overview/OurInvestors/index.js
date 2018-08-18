@@ -4,7 +4,7 @@ import { Container, Flex, TextWithIcon, Heading, Image } from 'serverless-design
 
 import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
 import investorTrinity from '../../../../../assets/images/investorTrinity.png'
-import investorHeavyBit from '../../../../../assets/images/investorHeavyBit.png'
+import investorHeavyBit from '../../../../../assets/images/investorHeavybit.png'
 
 const OurInvestors= () => (
   <Container width={1} mt={8}>

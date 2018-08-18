@@ -2,7 +2,7 @@ import React from 'react'
 
 import DefaultLayout from 'src/layouts/Default'
 
-import Hero from 'src/components/pages/company/Hero'
+import Hero from 'src/components/pages/company/overview/Hero'
 
 import OurStory from 'src/components/pages/company/overview/OurStory'
 import OurTeam from 'src/components/pages/company/overview/OurTeam'

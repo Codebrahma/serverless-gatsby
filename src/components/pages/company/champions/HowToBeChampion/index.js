@@ -25,7 +25,7 @@ const memberReceivals = [
 
 // TODO: SDS should have withespace property
 const HowToBeChampion = () => (
-  <Container width={1} mt={6} mb='400px'>
+  <Container width={1} mt={6}>
     <Flex.column px={3}>
       <TextWithIcon
         iconSrc={redRectangleDots}

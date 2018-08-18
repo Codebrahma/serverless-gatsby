@@ -20,7 +20,7 @@ const HorizontalLine = styled.hr`
 
 // TODO: Add the non importable image in front of each benefit
 const HowWeOperate = () => (
-  <Container width={1} mt={6} px={3} mb='400px'>
+  <Container width={1} mt={6} px={3}>
     <Flex.column>
       <TextWithIcon
         iconSrc={redRectangleDots}

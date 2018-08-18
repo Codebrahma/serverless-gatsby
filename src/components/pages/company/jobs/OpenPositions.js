@@ -32,7 +32,7 @@ const OpenPositionCard = ({ type, title, location, duration }) => (
 
 
 const OpenPositions = () => (
-  <Container maxWidth={1} mt={8} mb='400px'>
+  <Container maxWidth={1} mt={8}>
     <Flex.column>
       <Flex justifyContent='center'>
         <Heading.h3 fontFamily='SoleilSb'>Open Positions</Heading.h3>

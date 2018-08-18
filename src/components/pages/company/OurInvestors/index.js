@@ -20,9 +20,17 @@ const OurInvestors= () => (
           <Heading.h1>Our Investors</Heading.h1>
         </TextWithIcon> 
       </Flex>
-      <Flex flexDirection={['column', 'row']} flexWrap='wrap' justifyContent='center' mt={4}>
-        <Image src={investorTrinity} alt='trinity' mx={8}/>
-        <Image src={investorHeavyBit} alt='heavybit-industries' mx={8}/>
+      <Flex justifyContent='center'>
+        <Flex 
+          flexDirection={['column', 'row', 'row']}
+          flexWrap='wrap'
+          justifyContent='center'
+          mt={4}
+          width={[1, 7/10]}
+        >
+          <Image src={investorTrinity} alt='trinity' height='63px' m={4} />
+          <Image src={investorHeavyBit} alt='heavybit-industries' height='75px' m={4} />
+        </Flex>
       </Flex>
     </Flex>
   </Container>

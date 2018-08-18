@@ -17,8 +17,9 @@ const NewsCard = ({ news: { title, publisher } }) => (
   <Box
     width={[1, 4/10, 3/10]}
     boxShadow='2px 2px 8px 0 #eaeaea'
-    p={2} 
-    mx={2}
+    p={2}
+    m={2}
+    minWidth={[7/10, '300px']}
   >
     <Heading.h3 fontFamily='SoleilBk' fontSize={4}>{title}</Heading.h3>
     <P fontSize={0}>{publisher}</P>
@@ -26,10 +27,10 @@ const NewsCard = ({ news: { title, publisher } }) => (
 )
 
 const OurTeam= () => (
-  <Container width={1} mt={8} mb='400px'>
+  <Container width={1} mt={8}>
     <Flex flexDirection='column' px={3}>
       <Heading.h2 fontFamily='SoleilBk' align='center'>Serverless in The news</Heading.h2>
-      <Flex flexWrap='wrap' justifyContent='center' mt={4}>
+      <Flex flexDirection={['column', 'row']} flexWrap='wrap' justifyContent='center' alignItems={['center', 'left']} mt={4}>
         {newsList.map((news, index) => <NewsCard key={index} news={news} /> )}        
       </Flex>
     </Flex>

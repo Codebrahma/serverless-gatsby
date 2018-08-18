@@ -1,9 +1,31 @@
 import React from 'react'
 
-const OurInvestors = () => (
-  <div>
-    Our Investors
-  </div>
+import { Container, Flex, TextWithIcon, Heading, Image } from 'serverless-design-system/src'
+
+import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
+import investorTrinity from '../../../../assets/images/investorTrinity.png'
+import investorHeavyBit from '../../../../assets/images/investorHeavyBit.png'
+
+const OurTeam= () => (
+  <Container width={1} mb='400px' mt={4}>
+    <Flex flexDirection='column' px={3}>
+      <Flex justifyContent='center'>
+        <TextWithIcon
+          iconSrc={redRectangleDots}
+          iconHeight='32px'
+          iconWidth='50px'
+          iconTop='10px'
+          iconLeft='-10px'
+        >
+          <Heading.h1>Our Investors</Heading.h1>
+        </TextWithIcon> 
+      </Flex>
+      <Flex flexDirection={['column', 'row']}flexWrap='wrap' justifyContent='center' mt={4}>
+        <Image src={investorTrinity} alt='trinity' mx={8}/>
+        <Image src={investorHeavyBit} alt='heavybit-industries' mx={8}/>
+      </Flex>
+    </Flex>
+  </Container>
 )
 
-export default OurInvestors
+export default OurTeam

@@ -3,8 +3,8 @@ import React from 'react'
 import { Container, Flex, TextWithIcon, Heading } from 'serverless-design-system/src'
 
 import { TeamMemberImageCard } from 'src/fragments'
-import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
-import teamMember01 from '../../../../assets/images/teamMember01.png'
+import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
+import teamMember01 from '../../../../../assets/images/teamMember01.png'
 
 const teamMembers = [
   { image: teamMember01, name: 'Austen Collins', position: 'Founder & CEO' },

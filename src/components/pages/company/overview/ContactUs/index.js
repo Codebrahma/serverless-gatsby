@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container, Flex, Box, TextWithIcon, Heading, P } from 'serverless-design-system/src'
 
-import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
+import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
 
 const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com'] },

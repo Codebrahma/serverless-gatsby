@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container, Flex, Box, P, TextWithIcon, Heading } from 'serverless-design-system/src'
 
-import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
+import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
 
 const OurStory = () => (
   <Container width={1} mt={4}>

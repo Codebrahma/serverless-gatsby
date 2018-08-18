@@ -37,7 +37,7 @@ const HowWeOperate = () => (
           <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</P>
         </Box>
          <Flex justifyContent='flex-end' width={[1, 1, 0.5]}>
-          <Box width={[1, 1, 9/10, 9/10, 7/10]} boxShadow='2px 2px 8px 0 #eaeaea' px={4} py={3}>
+          <Box width={[1, 1, 9/10, 9/10, 7/10]} boxShadow='2px 2px 8px 0 #eaeaea' border='1px solid #eaeaea' px={4} py={3}>
             <Heading.h4 fontSize={3} fontFamily='SoleilBk'>Our Benefits</Heading.h4>
             <HorizontalLine />
             {benefitList.map((benefit, index) => <P key={index} mt={4} fontFamily='Soleilbk'>{benefit}</P>)}

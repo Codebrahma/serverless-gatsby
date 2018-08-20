@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Fixed, Flex } from 'serverless-design-system/src'
+import { Background, Container, Fixed, Flex } from 'serverless-design-system/src'
 
 import Logo from './Logo'
 import Navbar from './Navbar'
@@ -60,25 +60,28 @@ class Header extends React.Component {
         py={[2, 2, 0]}
         maxHeight='100%'
         oy={['scroll', 'scroll', 'visible']}
-        bg={[
-          'black',
-          'black',
-          this.state.isNavbarShrinked ? 'black' : 'transparent',
-        ]}
       >
-        <Container>
-          <Flex.verticallyCenter
-            flexWrap='wrap'
-            justifyContent='space-between'
-            px={15}
-          >
-            <Logo />
-            <NavbarContext.Provider value={this.state}>
-              <NavButton />
-              <Navbar />
-            </NavbarContext.Provider>
-          </Flex.verticallyCenter>
-        </Container>
+        <Background
+          background={[
+            'black',
+            'black',
+            this.state.isNavbarShrinked ? 'black' : 'transparent',
+          ]}
+        >
+          <Container>
+            <Flex.verticallyCenter
+              flexWrap='wrap'
+              justifyContent='space-between'
+              px={15}
+            >
+              <Logo />
+              <NavbarContext.Provider value={this.state}>
+                <NavButton />
+                <Navbar />
+              </NavbarContext.Provider>
+            </Flex.verticallyCenter>
+          </Container>
+        </Background>
       </Fixed>
     )
   }

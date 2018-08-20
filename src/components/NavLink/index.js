@@ -35,10 +35,10 @@ const getLinkStyle = ({ backgroundOnHover }) => `
   }
 `
 
-const A = styled.a`
+const A = styled(({ backgroundOnHover, ...props }) => (<a {...props} />))`
   ${getLinkStyle};
 `
-const StyledLink = styled(Link)`
+const StyledLink = styled(({ backgroundOnHover, ...props }) => (<Link {...props} />))`
   ${getLinkStyle};
 `
 

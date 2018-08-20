@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Box, Container, ImageList } from 'serverless-design-system/src'
+import { Background, Box, Container, ImageList } from 'serverless-design-system/src'
 
 import eaLogo from 'src/assets/images/ea-logo.png'
 import cocacolaLogo from 'src/assets/images/cocacola-logo.png'
@@ -19,21 +19,22 @@ const TrustedClientList = [
 ]
 
 const HomeTrustedClients = () => (
-  <Box
-    width={1}
-    backgroundImage={`url(${backgroundImage})`}
-    px={[0, 0, 2, 6, 8]}
-    pt={5}
-    pb={[300, 300, 12, 12]}
-  >
-    <Container>
-      <ImageList
-        maxHeight={['41px', '41px', '41px', '60px']}
-        maxWidth={['80%', '80%', '60%', '80%', '100%']}
-        list={TrustedClientList}
-      />
-    </Container>
-  </Box>
+  <Background backgroundImage={`url(${backgroundImage})`}>
+    <Box
+      width={1}
+      px={[0, 0, 2, 6, 8]}
+      pt={5}
+      pb={[300, 300, 12, 12]}
+    >
+      <Container>
+        <ImageList
+          maxHeight={['41px', '41px', '41px', '60px']}
+          maxWidth={['80%', '80%', '60%', '80%', '100%']}
+          list={TrustedClientList}
+        />
+      </Container>
+    </Box>
+  </Background>
 )
 
 export default HomeTrustedClients

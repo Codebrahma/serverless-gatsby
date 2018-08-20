@@ -1,6 +1,7 @@
 import React from 'react'
 
 import {
+  Background,
   Box,
   Flex,
   Heading,
@@ -75,10 +76,13 @@ const Prefooter = ({ heading, sentences, actions }) => (
         px={[3, 3, 7]}
         boxSizing='border-box'
         flexDirection='column'
-        background={`#fd5750 url(${RightBoxBg}) no-repeat`}
-        backgroundSize='cover'
       >
-        <RightColumn actions={actions} />
+        <Background
+          background={`#fd5750 url(${RightBoxBg}) no-repeat`}
+          backgroundSize='cover'
+        >
+          <RightColumn actions={actions} />
+        </Background>
       </Flex.center>
     </ResponsiveStack>
   </Relative>

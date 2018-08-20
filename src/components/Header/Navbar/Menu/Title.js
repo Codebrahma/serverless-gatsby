@@ -1,11 +1,11 @@
 // TODO: REFACTOR THIS COMPONENT.
 
 import React from 'react'
-import { Box, Text, withBeforeAfter } from 'serverless-design-system/src'
+import { Relative, Text, withBeforeAfter } from 'serverless-design-system/src'
 import NavbarContext from '../../NavbarContext'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
-  Box.relative,
+  Relative,
   `&`,
   `
     position: absolute;

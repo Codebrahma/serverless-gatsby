@@ -5,6 +5,7 @@ import {
   Flex,
   Heading,
   TextWithIcon,
+  Relative,
   ResponsiveStack,
   P,
 } from 'serverless-design-system/src'
@@ -60,25 +61,27 @@ const RightColumn = ({ actions }) => (
 )
 
 const Prefooter = ({ heading, sentences, actions }) => (
-  <ResponsiveStack.relative
-    bg='serverlessRed'
-    top='-320px'
-    mb='-290px'
-    o='hidden'
-  >
-    <LeftColumn heading={heading} sentences={sentences} />
-    <Flex.center
-      width={[1, 1, 1 / 2]}
-      py={[5, 5, 8]}
-      px={[3, 3, 7]}
-      boxSizing='border-box'
-      flexDirection='column'
-      background={`#fd5750 url(${RightBoxBg}) no-repeat`}
-      backgroundSize='cover'
+  <Relative>
+    <ResponsiveStack
+      bg='serverlessRed'
+      top='-320px'
+      mb='-290px'
+      o='hidden'
     >
-      <RightColumn actions={actions} />
-    </Flex.center>
-  </ResponsiveStack.relative>
+      <LeftColumn heading={heading} sentences={sentences} />
+      <Flex.center
+        width={[1, 1, 1 / 2]}
+        py={[5, 5, 8]}
+        px={[3, 3, 7]}
+        boxSizing='border-box'
+        flexDirection='column'
+        background={`#fd5750 url(${RightBoxBg}) no-repeat`}
+        backgroundSize='cover'
+      >
+        <RightColumn actions={actions} />
+      </Flex.center>
+    </ResponsiveStack>
+  </Relative>
 )
 
 export default Prefooter

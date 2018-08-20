@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Flex } from 'serverless-design-system/src'
+import { Container, Fixed, Flex } from 'serverless-design-system/src'
 
 import Logo from './Logo'
 import Navbar from './Navbar'
@@ -51,7 +51,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <Box.fixed
+      <Fixed
         width={1}
         left={0}
         right={0}
@@ -79,7 +79,7 @@ class Header extends React.Component {
             </NavbarContext.Provider>
           </Flex.verticallyCenter>
         </Container>
-      </Box.fixed>
+      </Fixed>
     )
   }
 }

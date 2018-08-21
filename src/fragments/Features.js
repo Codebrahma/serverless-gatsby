@@ -5,8 +5,8 @@ import {
   Column,
   Container,
   Feature as FeatureItem,
-  Flex,
   Heading,
+  Row,
 } from 'serverless-design-system/src'
 
 const Features = ({ features }) => (
@@ -16,7 +16,7 @@ const Features = ({ features }) => (
         <Heading.h2 align='center' fontFamily='SoleilSb' my={4}>
           Features
         </Heading.h2>
-        <Flex.row flexWrap='wrap' mt={3}>
+        <Row flexWrap='wrap' mt={3}>
           {features.map(({ header, img, content }, index) => (
             <FeatureItem
               key={header}
@@ -26,7 +26,7 @@ const Features = ({ features }) => (
               rightAligned={index % 2 === 0}
             />
           ))}
-        </Flex.row>
+        </Row>
       </Column>
     </Box>
   </Container>

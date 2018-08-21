@@ -4,7 +4,7 @@
 // Make image load faster
 
 import React from 'react'
-import { Background, Box, Column, Flex } from 'serverless-design-system/src'
+import { Background, Box, Column, Row } from 'serverless-design-system/src'
 
 import FooterIcon from './FooterIcon'
 import LeftSection from './LeftSection'
@@ -21,17 +21,17 @@ const FooterWrapper = ({ prefooter }) => (
     />
     <Background background='black'>
       <Box pt={[0, 0, 7]} pb={7}>
-        <Flex.row m='auto' flexWrap='wrap' maxWidth={1}>
+        <Row m='auto' flexWrap='wrap' maxWidth={1}>
           <Box width={1} px={[0, 0, 2]}>
             {prefooter ? prefooter() : null}
             <FooterIcon />
           </Box>
 
-          <Flex width={1} px={2} flexWrap='wrap'>
+          <Row width={1} px={2} flexWrap='wrap'>
             <LeftSection />
             <RightSection />
-          </Flex>
-        </Flex.row>
+          </Row>
+        </Row>
       </Box>
     </Background>
   </Column>

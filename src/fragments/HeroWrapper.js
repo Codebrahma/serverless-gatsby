@@ -16,8 +16,10 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
         theme.navbarHeights.desktop,
       ]}
     >
-      <Container px={0} py={4}>
-        {children}
+      <Container>
+        <Box py={4}>
+          {children}
+        </Box>
       </Container>
     </Box>
   </Background>

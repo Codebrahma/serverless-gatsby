@@ -3,6 +3,7 @@ import React from 'react'
 import {
   Background,
   Box,
+  Column,
   Flex,
   Heading,
   Overflow,
@@ -56,7 +57,7 @@ const LeftColumn = ({ heading, sentences }) => (
 )
 
 const RightColumn = ({ actions }) => (
-  <Flex.column>
+  <Column>
     {actions.map(({ name, navProps }, index) => (
       <Box m={1} key={index}>
         <NavLink {...navProps}>
@@ -64,7 +65,7 @@ const RightColumn = ({ actions }) => (
         </NavLink>
       </Box>
     ))}
-  </Flex.column>
+  </Column>
 )
 
 const Prefooter = ({ heading, sentences, actions }) => (

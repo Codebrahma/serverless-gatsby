@@ -4,7 +4,7 @@
 // Make image load faster
 
 import React from 'react'
-import { Background, Box, Flex } from 'serverless-design-system/src'
+import { Background, Box, Column, Flex } from 'serverless-design-system/src'
 
 import FooterIcon from './FooterIcon'
 import LeftSection from './LeftSection'
@@ -14,7 +14,7 @@ import glitchEffect from '../../assets/images/glitchEffect.png'
 
 // Self contained Root Renderer for footer
 const FooterWrapper = ({ prefooter }) => (
-  <Flex.column>
+  <Column>
     <Background
       height={75}
       backgroundImage={`url(${glitchEffect})`}
@@ -34,7 +34,7 @@ const FooterWrapper = ({ prefooter }) => (
         </Flex.row>
       </Box>
     </Background>
-  </Flex.column>
+  </Column>
 )
 
 export default FooterWrapper

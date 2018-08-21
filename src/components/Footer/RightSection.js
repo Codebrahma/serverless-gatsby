@@ -1,8 +1,8 @@
 import React from 'react'
 
 import {
-  Flex,
   Box,
+  Column,
   InlineBlock,
   TextField,
   Button,
@@ -23,7 +23,7 @@ import footerTwitter from 'src/assets/images/footerTwitter.png'
 
 // Renders the subscribe column
 const Subscribe = () => (
-  <Flex.column
+  <Column
     width={[1, 1, 0.35]}
     order={['1', '1', '2']}
     pl={[0, 0, 3]}
@@ -77,7 +77,7 @@ const Subscribe = () => (
         </InlineBlock>
       </NavLink>
     </Box>
-  </Flex.column>
+  </Column>
 )
 
 export default Subscribe

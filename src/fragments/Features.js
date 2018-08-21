@@ -2,6 +2,7 @@ import React from 'react'
 
 import {
   Box,
+  Column,
   Container,
   Feature as FeatureItem,
   Flex,
@@ -11,7 +12,7 @@ import {
 const Features = ({ features }) => (
   <Container>
     <Box px={2} pb={[300, 300, 10, 10]}>
-      <Flex.column px={[0, 0, 2, 5]} mt={5}>
+      <Column px={[0, 0, 2, 5]} mt={5}>
         <Heading.h2 align='center' fontFamily='SoleilSb' my={4}>
           Features
         </Heading.h2>
@@ -26,7 +27,7 @@ const Features = ({ features }) => (
             />
           ))}
         </Flex.row>
-      </Flex.column>
+      </Column>
     </Box>
   </Container>
 )

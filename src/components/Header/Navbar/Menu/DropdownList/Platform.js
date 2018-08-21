@@ -55,7 +55,7 @@ const platformMenuConfig = [
 const Platform = () => (
   <List m={0} ml={[4, 4, 0]} p={0}>
     {platformMenuConfig.map(
-      ({ imgProps, text, to, crossDomain, completed }, index) => (
+      ({ imgProps: { src, ...imgContainerProps }, text, to, crossDomain, completed }, index) => (
         <NavLink
           key={index}
           to={to}
@@ -67,7 +67,9 @@ const Platform = () => (
               <Flex.horizontallyCenter
                 mb={platformMenuConfig.length - 1 === index ? 0 : 2}
               >
-                <Image {...imgProps} />
+                <InlineBlock {...imgContainerProps}>
+                  <Image src={src} />
+                </InlineBlock>
                 <InlineBlock minWidth='155px'>
                   <Heading.h6
                     fontFamily='Serverless'

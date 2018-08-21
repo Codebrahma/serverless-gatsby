@@ -1,10 +1,11 @@
 import React from 'react'
-import { Background, Container, Fixed, Flex } from 'serverless-design-system/src'
+import { Background, Box, Container, Flex } from 'serverless-design-system/src'
 
 import Logo from './Logo'
 import Navbar from './Navbar'
 import NavButton from './NavButton'
 import NavbarContext from './NavbarContext'
+import HeaderWrapper from './Wrapper'
 
 class Header extends React.Component {
   constructor(props) {
@@ -51,13 +52,8 @@ class Header extends React.Component {
 
   render() {
     return (
-      <Fixed
+      <HeaderWrapper
         width={1}
-        left={0}
-        right={0}
-        top={0}
-        zIndex='999'
-        py={[2, 2, 0]}
         maxHeight='100%'
         oy={['scroll', 'scroll', 'visible']}
       >
@@ -68,21 +64,23 @@ class Header extends React.Component {
             this.state.isNavbarShrinked ? 'black' : 'transparent',
           ]}
         >
-          <Container>
-            <Flex.verticallyCenter
-              flexWrap='wrap'
-              justifyContent='space-between'
-              px={15}
-            >
-              <Logo />
-              <NavbarContext.Provider value={this.state}>
-                <NavButton />
-                <Navbar />
-              </NavbarContext.Provider>
-            </Flex.verticallyCenter>
-          </Container>
+          <Box py={[2, 2, 0]}>
+            <Container>
+              <Flex.verticallyCenter
+                flexWrap='wrap'
+                justifyContent='space-between'
+                px={15}
+              >
+                <Logo />
+                <NavbarContext.Provider value={this.state}>
+                  <NavButton />
+                  <Navbar />
+                </NavbarContext.Provider>
+              </Flex.verticallyCenter>
+            </Container>
+          </Box>
         </Background>
-      </Fixed>
+      </HeaderWrapper>
     )
   }
 }

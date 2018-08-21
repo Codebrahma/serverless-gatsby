@@ -29,7 +29,7 @@ const HomeTrustedClients = () => (
       <Container>
         <ImageList
           maxHeight={['41px', '41px', '41px', '60px']}
-          maxWidth={['80%', '80%', '60%', '80%', '100%']}
+          maxWidth={['100%', '100%', '90%', '80%', '100%']}
           list={TrustedClientList}
         />
       </Container>

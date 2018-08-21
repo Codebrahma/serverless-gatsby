@@ -3,6 +3,7 @@ import React from 'react'
 import {
   Flex,
   Box,
+  InlineBlock,
   TextField,
   Button,
   Image,
@@ -61,13 +62,19 @@ const Subscribe = () => (
     </ResponsiveStack.horizontallyCenter>
     <Box py={3}>
       <NavLink to={facebookHandle} crossDomain>
-        <Image mr={3} src={footerFb} />
+        <InlineBlock mr={3}>
+          <Image src={footerFb} />
+        </InlineBlock>
       </NavLink>
       <NavLink to={instagramHandle} crossDomain>
-        <Image mr={3} src={footerInsta} />
+        <InlineBlock mr={3}>
+          <Image src={footerInsta} />
+        </InlineBlock>
       </NavLink>
       <NavLink to={twitterHandle} crossDomain>
-        <Image mr={3} src={footerTwitter} />
+        <InlineBlock mr={3}>
+          <Image src={footerTwitter} />
+        </InlineBlock>
       </NavLink>
     </Box>
   </Flex.column>

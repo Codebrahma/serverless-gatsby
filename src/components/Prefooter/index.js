@@ -62,28 +62,32 @@ const RightColumn = ({ actions }) => (
 )
 
 const Prefooter = ({ heading, sentences, actions }) => (
-  <Relative>
+  <Relative
+    top='-320px'
+    mb='-290px'
+  >
     <ResponsiveStack
       bg='serverlessRed'
-      top='-320px'
-      mb='-290px'
       o='hidden'
     >
       <LeftColumn heading={heading} sentences={sentences} />
-      <Flex.center
-        width={[1, 1, 1 / 2]}
-        py={[5, 5, 8]}
-        px={[3, 3, 7]}
-        boxSizing='border-box'
-        flexDirection='column'
-      >
+      <Box width={[1, 1, 1 / 2]}>
         <Background
+          width={1}
+          height="fullHeight"
           background={`#fd5750 url(${RightBoxBg}) no-repeat`}
           backgroundSize='cover'
         >
-          <RightColumn actions={actions} />
+          <Flex.center
+            flexDirection="column"
+            height="fullHeight"
+            py={[5, 5, 8]}
+            px={[3, 3, 7]}
+          >
+            <RightColumn actions={actions} />
+          </Flex.center>
         </Background>
-      </Flex.center>
+      </Box>
     </ResponsiveStack>
   </Relative>
 )

@@ -9,8 +9,8 @@ export default ({ children }) => (
     iconSrc={dotGridBackground}
     iconHeight='35px'
     iconWidth='60px'
-    iconTop='-8px'
-    iconLeft='-12px'
+    iconTop='-10px'
+    iconLeft='-10px'
   >
     <Heading.h1
       fontFamily="SoleilBk"

@@ -2,7 +2,7 @@ import React from 'react';
 import { DropDown } from 'serverless-design-system/src';
 
 const optionProps = {
-  bg: 'rgba(39, 39, 39, .05)',
+  background: 'rgba(39, 39, 39, .05)',
   border: 'none',
   color: '#8c8c8c',
 };

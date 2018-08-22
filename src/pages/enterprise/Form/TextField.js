@@ -21,7 +21,13 @@ export default (props) => (
     placeholderFontWeight="normal"
     placeholderLineHeight={4}
     placeholderLetterSpacing={"h2"}
+    fontFamily="Serverless"
+    fontSize={2}
+    fontWeight="normal"
+    lineHeight={4}
+    letterSpacing={"h2"}
     height="50px"
+    color="gray.2"
     {...props}
   />
 )

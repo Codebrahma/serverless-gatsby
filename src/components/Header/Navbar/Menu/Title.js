@@ -1,11 +1,11 @@
 // TODO: REFACTOR THIS COMPONENT.
 
 import React from 'react'
-import { Box, Text, withBeforeAfter } from 'serverless-design-system/src'
+import { Transition, Text, withBeforeAfter } from 'serverless-design-system/src'
 import NavbarContext from '../../NavbarContext'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
-  Box.relative,
+  Transition,
   `&`,
   `
     position: absolute;
@@ -20,6 +20,8 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
   `,
   ``,
   `
+    position: relative;
+
     &:hover {
       &:before {
         opacity: 1;

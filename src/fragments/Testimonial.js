@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {
-  Box,
+  Relative,
   Container,
   withBeforeAfter,
   Testimonial,
@@ -10,8 +10,8 @@ import testimonialBackground from 'src/assets/images/glitch-effect.png'
 import cocaColaLogo from 'src/assets/images/cocacola-logo.png'
 
 const TestimonialWrapper = withBeforeAfter(
-  Box.relative,
-  `& > ${Box}`,
+  Relative,
+  `& > ${Relative}`,
   `
     content: " ";
     height: 80px;
@@ -29,7 +29,7 @@ const TestimonialWrapper = withBeforeAfter(
 
 const TestimonialComponent = () => (
   <TestimonialWrapper>
-    <Box.relative mx={3} my={4}>
+    <Relative mx={3} my={4}>
       <Container>
         <Testimonial
           img={cocaColaLogo}
@@ -42,7 +42,7 @@ const TestimonialComponent = () => (
           services faster."
         </Testimonial>
       </Container>
-    </Box.relative>
+    </Relative>
   </TestimonialWrapper>
 )
 

@@ -1,8 +1,9 @@
 import React from 'react'
 
 import {
-  Flex,
   Box,
+  Column,
+  InlineBlock,
   TextField,
   Button,
   Image,
@@ -22,7 +23,7 @@ import footerTwitter from 'src/assets/images/footerTwitter.png'
 
 // Renders the subscribe column
 const Subscribe = () => (
-  <Flex.column
+  <Column
     width={[1, 1, 0.35]}
     order={['1', '1', '2']}
     pl={[0, 0, 3]}
@@ -61,16 +62,22 @@ const Subscribe = () => (
     </ResponsiveStack.horizontallyCenter>
     <Box py={3}>
       <NavLink to={facebookHandle} crossDomain>
-        <Image mr={3} src={footerFb} />
+        <InlineBlock mr={3}>
+          <Image src={footerFb} />
+        </InlineBlock>
       </NavLink>
       <NavLink to={instagramHandle} crossDomain>
-        <Image mr={3} src={footerInsta} />
+        <InlineBlock mr={3}>
+          <Image src={footerInsta} />
+        </InlineBlock>
       </NavLink>
       <NavLink to={twitterHandle} crossDomain>
-        <Image mr={3} src={footerTwitter} />
+        <InlineBlock mr={3}>
+          <Image src={footerTwitter} />
+        </InlineBlock>
       </NavLink>
     </Box>
-  </Flex.column>
+  </Column>
 )
 
 export default Subscribe

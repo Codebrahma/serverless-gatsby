@@ -56,7 +56,7 @@ const ResourcesMenu = () => (
 
 const EnterpriseMenu = () => (
   <Box>
-    <NavLink to={enterprise}>
+    <NavLink to={enterprise} completed>
       <MenuTitle name={'enterprise'} />
     </NavLink>
   </Box>

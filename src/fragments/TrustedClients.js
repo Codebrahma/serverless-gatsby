@@ -24,8 +24,8 @@ const TrustedClientList = [
   { src: reutersLogo, altText: 'Reuters' },
 ]
 
-const HomeTrustedClients = () => (
-  <Background backgroundImage={`url(${backgroundImage})`}>
+const TrustedClients = () => (
+  <Background backgroundImage={['', '', `url(${backgroundImage})`]}>
     <Container>
       <Box
         width={1}
@@ -53,4 +53,4 @@ const HomeTrustedClients = () => (
   </Background>
 )
 
-export default HomeTrustedClients
+export default TrustedClients

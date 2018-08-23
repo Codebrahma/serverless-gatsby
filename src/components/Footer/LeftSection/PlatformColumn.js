@@ -21,7 +21,7 @@ const PlatformColumn = () => (
       },
       {
         name: 'enterprise',
-        navProps: { to: enterprise, completed: false },
+        navProps: { to: enterprise, completed: true },
       },
     ]}
   />

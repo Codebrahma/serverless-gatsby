@@ -11,7 +11,11 @@ const DashboardHero = () => (
     backgroundImage={`url(${LearnOverviewBg})`}
     backgroundSize='contain'
   >
-    <Flex flexDirection={['column', 'column', 'row']} mb='200px'>
+    <Flex
+      flexDirection={['column', 'column', 'row']}
+      mb={[5, 5, 6, 9]}
+      px={[3, 3, 2]}
+    >
       <HeroLeftSection />
       <HeroRightSection />
     </Flex>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { 
+import {
   Flex,
   Container,
 } from 'serverless-design-system/src'
@@ -53,7 +53,7 @@ const comparisonData = [
     title: 'Hybrid Cloud Applications',
     image: LearnUsecase05,
     contents: [
-      'Individual cloud providers often don’t meet every business requirement on their own. Teams choose to utilize the strongest features from each vendor, requiring them to deploy services to multiple providers inside a single application. But the cloud providers themselves do not make it easy to do this.',      
+      'Individual cloud providers often don’t meet every business requirement on their own. Teams choose to utilize the strongest features from each vendor, requiring them to deploy services to multiple providers inside a single application. But the cloud providers themselves do not make it easy to do this.',
       'Our tooling abstracts away any necessary tweaking required to get functions to fit cloud vendors’ unique formats. This lets you easily deploy to any cloud provider you choose, thus maximizing the efficacy of your application and utilizing the best each cloud vendor has to offer.'
     ]
   },
@@ -66,7 +66,7 @@ const comparisonData = [
     ]
   },
   {
-    title: 'Continuous Inegration and Continuous Deployment(CI/CD)',
+    title: 'Continuous Integration and Continuous Deployment (CI/CD)',
     image: LearnUsecase07,
     contents: [
       'The ability to rapidly iterate software is more important than it has ever been. CI/CD pipelines allow you to ship code in small increments, so that bug fixes and other updates can be shipped on a daily basis.',

@@ -1,30 +1,61 @@
 import React from 'react'
 
-import { Flex, Box, P, Heading } from 'serverless-design-system/src'
+import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
+import HeroTabs from '../../HeroTabs'
+import background from 'src/assets/images/use-cases-background.jpg'
 
 const UseCasesHero = () => (
-  <HeroWrapper>
-    <Flex mb='100px' flexDirection={['column', 'column', 'row']}>
+  <HeroWrapper
+    background={`url(${background})`}
+    backgroundSize="contain"
+  >
+    <Box mb={[2, 2, 5]}>
+      <HeroTabs />
+    </Box>
+
+    <ResponsiveStack
+      mb={5}
+      color="white"
+    >
       <Box width={[1, 1, 1/2]}>
-        <Heading.h1 
-          fontFamily='SoleilSb' 
-          align={['center', 'center', 'left']}
-          color='white'
-          fontSize={[7, 7, 8]}
+        <Text.p
+          fontSize={[7, 7, 7, 8]}
+          fontFamily="Soleil"
+          lineHeight={1}
+          letterSpacing={'-0.2'}
+          m={0}
         >
           Use Cases
-        </Heading.h1>
+        </Text.p>
       </Box>
-      <Box width={[1, 1, 1/2]} pl='3%' pr={['5%', '5%', '5%']}>
-        <P align={['center', 'center', 'left']} color='white' fontSize={[2, 2, 4]}>
+      <Box
+        width={[1, 1, 1/2]}
+        pl={[0, 0, 4]}
+        pr={[0, 0, 6]}
+      >
+        <Text.p
+          fontSize={[2, 2, 4]}
+          fontFamily="SoleilLt"
+          lineHeight={3}
+          letterSpacing={0}
+          mt={[3, 3, 1]}
+          mb={3}
+        >
           More and more developers are moving to Serverless as a way to increase velocity and decrease monotony.
-        </P>
-        <P align={['center', 'center', 'left']} color='white' fontSize={[2, 2, 4]}>
+        </Text.p>
+        <Text.p
+          fontSize={[2, 2, 4]}
+          fontFamily="SoleilLt"
+          lineHeight={3}
+          letterSpacing={0}
+          mt={[3, 3, 5]}
+          mb={3}
+        >
           Here we describe some core use cases for serverless, though we encourage you to think beyond them. Serverless is incredibly flexible and can be used to address a wide variety of application problems. It is also extensible, making it easy to build in use cases that are not currently supported.
-        </P>
+        </Text.p>
       </Box>
-    </Flex>
+    </ResponsiveStack>
   </HeroWrapper>
 )
 

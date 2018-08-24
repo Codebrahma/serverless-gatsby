@@ -4,17 +4,15 @@ import {
   Container,
 } from 'serverless-design-system/src'
 
-import {
-  AutoScrollList,
-} from 'src/fragments'
+import { AutoScrollList } from 'src/fragments'
 
-import LearnUsecase01 from '../../../../assets/images/learnUsecase01.png'
-import LearnUsecase02 from '../../../../assets/images/learnUsecase02.png'
-import LearnUsecase03 from '../../../../assets/images/learnUsecase03.png'
-import LearnUsecase04 from '../../../../assets/images/learnUsecase04.png'
-import LearnUsecase05 from '../../../../assets/images/learnUsecase05.png'
-import LearnUsecase06 from '../../../../assets/images/learnUsecase06.png'
-import LearnUsecase07 from '../../../../assets/images/learnUsecase07.png'
+import LearnUsecase01 from 'src/assets/images/learnUsecase01.png'
+import LearnUsecase02 from 'src/assets/images/learnUsecase02.png'
+import LearnUsecase03 from 'src/assets/images/learnUsecase03.png'
+import LearnUsecase04 from 'src/assets/images/learnUsecase04.png'
+import LearnUsecase05 from 'src/assets/images/learnUsecase05.png'
+import LearnUsecase06 from 'src/assets/images/learnUsecase06.png'
+import LearnUsecase07 from 'src/assets/images/learnUsecase07.png'
 
 const comparisonData = [
   {

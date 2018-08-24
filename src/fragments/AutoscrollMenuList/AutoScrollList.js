@@ -7,25 +7,36 @@ class AutoScrollListItem extends React.Component {
   state = {}
   render() {
     const { title, contents, image } = this.props
-    
+
     return (
-      <Flex.column mb={5} px={3}>
+      <Flex.column
+        mb={[5, 5, 7, 8]}
+        px={3}
+      >
         <Box mb={5}>
           <TextWithIcon
             iconSrc={RedRectangleDots}
-            iconHeight='32px'
-            iconWidth='50px'
-            iconTop='10px'
-            iconLeft='-20px'
+            iconHeight="30px"
+            iconWidth="70px"
+            iconTop="-5px"
+            iconLeft="-15px"
+            backgroundSize="auto"
           >
-            <Heading.h1>{title}</Heading.h1>
+            <Heading.h2
+              fontFamily="SoleilBk"
+              fontSize={[5, 5, 5, 7]}
+              lineHeight={0}
+              letterSpacing="0.5px"
+            >
+              {title}
+            </Heading.h2>
           </TextWithIcon>
         </Box>
         <Image
           src={image}
           alt={title}
-          mx='auto'
-          width={['640px', '480px', '640px', '640px', '800px']}
+          width={1}
+          height='auto'
         />
         {
           contents.map((content, index) => (
@@ -54,7 +65,7 @@ class AutoScrollList extends React.Component {
         <Box width={[1, 1, 1/3]}>
           <List>
             {listData.map(({ title }, index) => (
-              <ListItem 
+              <ListItem
                 key={title}
                 m={2}
                 styleType='none' onClick={() => this.scrollToListItem(index)}

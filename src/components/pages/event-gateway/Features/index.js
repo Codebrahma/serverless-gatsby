@@ -1,7 +1,6 @@
 import React from 'react'
-
+import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
-
 import gatewayFeature1 from 'src/assets/images/event-gateway-feature1.png'
 import gatewayFeature2 from 'src/assets/images/event-gateway-feature2.png'
 import gatewayFeature3 from 'src/assets/images/event-gateway-feature3.png'
@@ -48,6 +47,13 @@ const featureItemsData = [
   },
 ]
 
-const EventGatewayFeatures = () => <Features features={featureItemsData} />
+const EventGatewayFeatures = () => (
+  <Box
+    pb={[12, 12, 10]}
+    mb={[4, 4, 0]}
+  >
+    <Features features={featureItemsData} />
+  </Box>
+)
 
 export default EventGatewayFeatures

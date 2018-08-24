@@ -19,6 +19,7 @@ const GetStarted = () => (
         justifyContent='center'
         alignItems='center'
         minHeight="280px"
+        pb={4}
       >
         <Text.p
           align='center'
@@ -26,14 +27,12 @@ const GetStarted = () => (
           fontSize={5}
           lineHeight={4}
           letterSpacing={"0.3px"}
-          my={2}
+          mt={3}
+          mb={4}
         >
           focus on your business logic, not on your servers.
         </Text.p>
-        <SecondaryButton
-          background='white'
-          my={1}
-        >
+        <SecondaryButton background='white'>
           get started
         </SecondaryButton>
       </Column>

@@ -19,7 +19,7 @@ const DashboardHero = () => (
 
       <Flex
         flexDirection={['column', 'column', 'row']}
-        mb={[5, 5, 6, 9]}
+        mb={[5, 5, 6]}
       >
         <Description />
         <Actions />

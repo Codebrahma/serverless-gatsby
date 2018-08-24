@@ -33,6 +33,13 @@ const featureItemsData = [
   },
 ]
 
-const OverviewFeatures = () => <Features features={featureItemsData} />
+const OverviewFeatures = () => (
+  <Features
+    title="Benefits of the Serverless Framework"
+    description="These are the 4 core benefits of the Serverless Framework you should know about"
+    features={featureItemsData}
+    leadingNumber={false}
+  />
+)
 
 export default OverviewFeatures

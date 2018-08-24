@@ -1,8 +1,14 @@
 import React from 'react'
 import {
+  Box,
+  Card,
   Container,
+  Flex,
+  HorizontalRule,
+  Image,
   P,
   ResponsiveStack,
+  Text,
 } from 'serverless-design-system/src'
 
 import { AutoScrollList } from 'src/fragments'
@@ -14,6 +20,12 @@ import LearnUsecase04 from 'src/assets/images/learnUsecase04.png'
 import LearnUsecase05 from 'src/assets/images/learnUsecase05.png'
 import LearnUsecase06 from 'src/assets/images/learnUsecase06.png'
 import LearnUsecase07 from 'src/assets/images/learnUsecase07.png'
+
+import nodeJSImage from 'src/assets/images/nodejs.png'
+import expressImage from 'src/assets/images/express.png'
+import pythonImage from 'src/assets/images/python.png'
+import flaskImage from 'src/assets/images/flask.png'
+import graphqlImage from 'src/assets/images/graphql.png'
 
 const renderContents = (contents) => (
   <React.Fragment>
@@ -31,9 +43,125 @@ const comparisonData = [
   {
     title: 'Auto-scaling Websites and APIs',
     image: LearnUsecase01,
-    body: renderContents([
-      'Serverless websites and applications can be written and deployed without the front-work of setting up infrastructure. As such, it is possible to launch a fully-functional site in days. The best part is that serverless backends scale automatically with demand. No need to fear crashing when you get sudden surges of traffic.'
-    ])
+    body: (
+      <React.Fragment>
+        {
+          renderContents([
+            'Serverless websites and applications can be written and deployed without the front-work of setting up infrastructure. As such, it is possible to launch a fully-functional site in days. The best part is that serverless backends scale automatically with demand. No need to fear crashing when you get sudden surges of traffic.'
+          ])
+        }
+        <Box>
+          <Text.p
+            color="black"
+            fontFamily="SoleilBk"
+            fontSize={3}
+            lineHeight={3}
+            letterSpacing="h6"
+          >
+            Want to get started? Check out these walkthroughs:
+          </Text.p>
+          <ResponsiveStack
+            alignItems={[ "center", "center", "left" ]}>
+            <Card
+              width={[ 1, 1, 1/3 ]}
+              maxWidth="250px"
+              height="176px"
+              my={[1, 1, 0]}
+              mr={2}
+              boxShadow="2px 2px 8px 0 #dfe5e6"
+              border="solid 1px #dfe5e6"
+            >
+              <Flex.center
+                flexDirection="column"
+                width={1}
+                height="fullHeight"
+                px={3}
+              >
+                <Image
+                  src={nodeJSImage}
+                  maxHeight="30px"
+                  maxWidth="100px"
+                />
+                <Box
+                  py={2}
+                  width={1}
+                >
+                  <HorizontalRule
+                    height="1px"
+                    color="#d8d8d8"
+                  />
+                </Box>
+                <Image
+                  src={expressImage}
+                  maxHeight="30px"
+                  maxWidth="100px"
+                />
+              </Flex.center>
+            </Card>
+
+            <Card
+              width={[ 1, 1, 1/3 ]}
+              maxWidth="250px"
+              height="176px"
+              my={[1, 1, 0]}
+              mr={2}
+              boxShadow="2px 2px 8px 0 #dfe5e6"
+              border="solid 1px #dfe5e6"
+            >
+              <Flex.center
+                flexDirection="column"
+                width={1}
+                height="fullHeight"
+                px={3}
+              >
+                <Image
+                  src={pythonImage}
+                  maxHeight="30px"
+                  maxWidth="100px"
+                />
+                <Box
+                  py={2}
+                  width={1}
+                >
+                  <HorizontalRule
+                    height="1px"
+                    color="#d8d8d8"
+                  />
+                </Box>
+                <Image
+                  src={flaskImage}
+                  maxHeight="30px"
+                  maxWidth="100px"
+                />
+              </Flex.center>
+            </Card>
+
+            <Card
+              width={[ 1, 1, 1/3 ]}
+              maxWidth="250px"
+              height="176px"
+              my={[1, 1, 0]}
+              mr={2}
+              boxShadow="2px 2px 8px 0 #dfe5e6"
+              border="solid 1px #dfe5e6"
+            >
+              <Flex.center
+                flexDirection="column"
+                width={1}
+                height="fullHeight"
+                px={3}
+              >
+                <Image
+                  src={graphqlImage}
+                  maxHeight="30px"
+                  maxWidth="100px"
+                />
+              </Flex.center>
+            </Card>
+          </ResponsiveStack>
+        </Box>
+      </React.Fragment>
+    )
   },
   {
     title: 'Event streaming',

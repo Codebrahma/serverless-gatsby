@@ -3,7 +3,7 @@ import React from 'react'
 import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
-import background from 'src/assets/images/use-cases-background.jpg'
+import background from 'src/assets/images/use-cases-background.png'
 
 const UseCasesHero = () => (
   <HeroWrapper

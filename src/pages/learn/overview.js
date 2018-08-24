@@ -8,7 +8,7 @@ import UseCase from 'src/components/pages/learn/overview/UseCase'
 import ServerlessAppBenefits from 'src/components/pages/learn/overview/ServerlessAppBenefits'
 import ServerlessFrameworkBenefits from 'src/components/pages/learn/overview/ServerlessFrameworkBenefits'
 import AboutServerlessFramework from 'src/components/pages/learn/overview/AboutServerlessFramework'
-import GetStarted from 'src/components/pages/learn/overview/GetStarterd'
+import GetStarted from 'src/components/pages/learn/overview/GetStarted'
 
 const Overview = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>

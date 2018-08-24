@@ -20,7 +20,7 @@ const featureItemsData = [
     header: 'Pub/Sub',
     img: gatewayFeature2,
     content:
-      'Take advantage of pub/sun functionality but utilizing custom events. This allows you to process the same event with multiple systems.',
+      'Take advantage of pub/sub functionality but utilizing custom events. This allows you to process the same event with multiple systems.',
   },
   {
     header: 'Connector Functions',

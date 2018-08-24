@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Box, Card, DropDown } from 'serverless-design-system/src'
 import Tabs from 'src/components/Tabs'
+import selectedTabBackground from 'src/assets/images/active-marker.png'
 
 const data = [
   { label: 'overview', value: 'overview' },
@@ -31,7 +32,8 @@ export default () => (
             py: '16px'
           }}
           selectedTabContainerStyle={{
-            background: `rgba(255, 255, 255, 0.3)`
+            background: `url(${selectedTabBackground})`,
+            backgroundSize: 'cover'
           }}
           selectedValue='overview'
           onClick={console.log}

@@ -4,6 +4,7 @@ import { InlineFlex, Column, Text } from 'serverless-design-system/src'
 
 const TabWrapper = styled(Column)`
   background: ${({ background }) => (background)};
+  background-size: ${({ backgroundSize }) => (backgroundSize)};
   cursor: pointer;
 `;
 

@@ -53,8 +53,6 @@ class AutoScrollListItem extends React.Component {
 }
 
 class AutoScrollList extends React.Component {
-  state = {}
-
   scrollToListItem = (scrollToIndex) => {
     const domNode = ReactDOM.findDOMNode(this[scrollToIndex])
     window.scrollTo(0, domNode.offsetTop - 100)

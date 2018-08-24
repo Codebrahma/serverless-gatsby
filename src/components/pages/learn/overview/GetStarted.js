@@ -13,7 +13,7 @@ const GetStarted = () => (
   <Container>
     <Background
       backgroundImage={`url(${learnOverviewGetStartedBg})`}
-      backgroundSize='contain'
+      backgroundSize='cover'
     >
       <Column
         justifyContent='center'

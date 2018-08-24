@@ -5,16 +5,28 @@ import RedRectangleDots from '../../../../assets/images/redRectangleDots.png'
 import learnCasestudyResults from '../../../../assets/images/learnCasestudyResults.png'
 
 const Results = () => (
-  <Flex.column mt={6} px={3}>
+  <Flex.column
+    mt={[4, 4, 6]}
+    mb={[4, 4, 11]}
+    px={3}
+  >
     <Flex justifyContent={['left', 'left', 'center']}>
-      <TextWithIcon
-        iconSrc={RedRectangleDots} 
-        iconHeight='32px'
-        iconWidth='50px'
-        iconTop='10px'
-        iconLeft='-10px'
+    <TextWithIcon
+        iconSrc={RedRectangleDots}
+        iconHeight="30px"
+        iconWidth="70px"
+        iconTop="-5px"
+        iconLeft="-15px"
+        backgroundSize="auto"
       >
-        <Heading.h1>The Results</Heading.h1>
+        <Heading.h2
+          fontFamily="SoleilBk"
+          fontSize={[5, 5, 5, 7]}
+          lineHeight={0}
+          letterSpacing="0.5px"
+        >
+          The Results
+        </Heading.h2>
       </TextWithIcon>
     </Flex>
     <Box maxWidth='800px' mx='auto'>

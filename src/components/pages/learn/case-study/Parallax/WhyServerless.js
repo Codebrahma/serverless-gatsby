@@ -1,46 +1,123 @@
 import React from 'react'
 
-import { Flex, Box, P, Image, TextWithIcon, Heading } from 'serverless-design-system/src'
+import {
+  Absolute,
+  Background,
+  Column,
+  Flex,
+  Box,
+  P,
+  Text,
+  TextWithIcon,
+  Heading,
+  Relative,
+  ResponsiveStack,
+} from 'serverless-design-system/src'
 
-import JamesHall from '../../../../../assets/images/JamesHall.png'
-import RedRectangleDots from '../../../../../assets/images/redRectangleDots.png'
+import JamesHall from 'src/assets/images/JamesHall.png'
+import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
+import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const WhyServerless = () => (
-  <Flex flexDirection={['column', 'column', 'row']} mt={8} px={3}>
-    <Box width={[1, 1, 5/10]} pr={7}>
+  <ResponsiveStack mt={6} px={3}>
+    <Box width={[1, 1, 5/10]}>
       <TextWithIcon
         iconSrc={RedRectangleDots}
-        iconHeight='32px'
-        iconWidth='50px'
-        iconTop='10px'
-        iconLeft='-10px'
+        iconHeight="30px"
+        iconWidth="70px"
+        iconTop="-5px"
+        iconLeft="-15px"
+        backgroundSize="auto"
       >
-        <Heading.h1>Why Serverless</Heading.h1>
+        <Heading.h2
+          fontFamily="SoleilBk"
+          fontSize={[5, 5, 5, 7]}
+          lineHeight={0}
+          letterSpacing="0.5px"
+        >
+          Why Serverless
+        </Heading.h2>
       </TextWithIcon>
-      <P>Parallax’s regular stack is LAMP, built on top of CloudFront, Elastic Load Balancers and EC2 nodes. In order to accomplish their goal with this stack they would have to build a queueing system for the image generation, then spin up EC2 nodes dedicated to generating those images based on the throughput.</P>  
-      <P>After thinking it through, the team decided that they could accomplish the same goal much more simply using a serverless architecture on AWS Lambda. This would allow them to focus on writing the business logic in a simple Lambda function and letting Amazon do all the hard work of scaling to meet demand.</P>
-      <P>They settled on using the Serverless Framework and CloudFormation to orchestrate the entire platform in code, building a completely scaleable architecture. Development took around six or seven weeks in total, though there was plenty of research and prototyping done beforehand to determine the correct architecture design.</P>
-      <P>Thanks to Node.js they were able to reuse the validation code across the frontend and backend. They could also check the proof-of-concept,and do some load testing, for free as part of the the Amazon Web Services 1 million request/month free usage tier. This meant they could play around until everything was exactly how they needed it to be.</P>
+      <Box pt={2} />
+      <P>
+        Parallax’s regular stack is LAMP, built on top of CloudFront, Elastic Load Balancers and EC2 nodes. In order to accomplish their goal with this stack they would have to build a queueing system for the image generation, then spin up EC2 nodes dedicated to generating those images based on the throughput.
+      </P>
+      <P>
+        After thinking it through, the team decided that they could accomplish the same goal much more simply using a serverless architecture on AWS Lambda. This would allow them to focus on writing the business logic in a simple Lambda function and letting Amazon do all the hard work of scaling to meet demand.
+      </P>
+      <P>
+        They settled on using the Serverless Framework and CloudFormation to orchestrate the entire platform in code, building a completely scaleable architecture. Development took around six or seven weeks in total, though there was plenty of research and prototyping done beforehand to determine the correct architecture design.
+      </P>
+      <P>
+        Thanks to Node.js they were able to reuse the validation code across the frontend and backend. They could also check the proof-of-concept,and do some load testing, for free as part of the the Amazon Web Services 1 million request/month free usage tier. This meant they could play around until everything was exactly how they needed it to be.
+      </P>
     </Box>
-    <Flex.column
-      alignItems={['center', 'center', 'flex-end', 'flex-end', 'flex-end']}
+    <Column
+      alignItems={['center', 'center', 'flex-end']}
       pt={3}
-      width={[5/10, 5/10, 7/10, 5/10, 5/10]}
+      width={[1, 1, 5/10]}
     >
-      <Flex
+      <Background
+        height={[ "50%", "50%", "50%", "70%", "90%" ]}
+        width={[1, 1, 8/10, 8/10, 6/10]}
         background={`url(${JamesHall})}`}
-        backgroundStyle='contain'
-        px={3}
-        height='581px'
-        alignItems='flex-end'
-        width={[1, 1, 6/10, 6/10, 6/10]}
+        backgroundSize="cover"
+        backgroundPosition="center"
+        minHeight="350px"
       >
-        <P fontSize={[4, 4, 3, 3, 4]} color='white'>
-          Going serverless allowed us to concentrate on writing the features without worrying about how to scale it. The Serverless Framework allowed us to stop worrying about the underlying architecture, but was flexible enough to dip into if needed.
-        </P>
-      </Flex>
-    </Flex.column>
-  </Flex>
+        <Relative>
+          <Flex
+            p={3}
+            height="fullHeight"
+            alignItems='flex-end'
+          >
+            <Text.p
+              fontFamily="SoleilLt"
+              fontSize={[4, 4, 3, 3, 4]}
+              lineHeight={3}
+              color='white'
+            >
+              Going serverless allowed us to concentrate on writing the features without worrying about how to scale it. The Serverless Framework allowed us to stop worrying about the underlying architecture, but was flexible enough to dip into if needed.
+            </Text.p>
+          </Flex>
+          <Absolute
+            left="10%"
+            bottom={["-115px", "-115px", "-225px", "-325px", "-150px"]}
+          >
+            <Background
+              background={`url(${dotGridVertical})`}
+              backgroundSize="contain"
+              height="152px"
+              width="80px"
+            >
+            </Background>
+          </Absolute>
+        </Relative>
+      </Background>
+      <Column
+        p={4}
+        width={1}
+      >
+        <Heading.h5
+          align="right"
+          fontFamily="SoleilBk"
+          fontSize={4}
+          lineHeight={3}
+        >
+          James Hall
+        </Heading.h5>
+        <Text.span
+          align="right"
+          fontFamily="SoleilBk"
+          fontSize={2}
+          lineHeight={3}
+          color="gray.3"
+        >
+          Director at Parallax
+        </Text.span>
+      </Column>
+    </Column>
+  </ResponsiveStack>
 )
 
 export default WhyServerless

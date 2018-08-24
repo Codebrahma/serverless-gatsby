@@ -1,12 +1,25 @@
 import React from 'react'
 
-import { Flex, Box, P } from 'serverless-design-system/src'
+import { Flex, Box, Image, P, Text } from 'serverless-design-system/src'
+import parallaxLogo from 'src/assets/images/parallax-logo.png'
 
 const Introduction = () => (
   <Flex flexDirection={['column', 'column', 'row']} mt={10} px={[4, 4, 0]}>
     <Box width={[1, 1, 3/10]}>
-      <P>PARALLAX</P>
-      <P>Visit parall.ax</P>
+      <Image
+        src={parallaxLogo}
+        height="41px"
+        width="auto"
+      />
+      <Box mt={[2, 2, 3, 4]}>
+        <Text.span
+          fontSize={1}
+          lineHeight={1}
+          letterSpacing="text"
+        >
+          Visit parall.ax
+        </Text.span>
+      </Box>
     </Box>
     <Box width={[1, 1, 7/10]}>
       <P>

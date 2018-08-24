@@ -10,12 +10,15 @@ import ServerlessFrameworkBenefits from 'src/components/pages/learn/overview/Fra
 import AboutServerlessFramework from 'src/components/pages/learn/overview/AboutServerlessFramework'
 import GetStarted from 'src/components/pages/learn/overview/GetStarted'
 
+import { Divider } from 'src/fragments'
+
 const Overview = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero/>
     <UseCase />
     <GetStarted />
     <ServerlessAppBenefits />
+    <Divider />
     <AboutServerlessFramework />
     <ServerlessFrameworkBenefits/>
   </DefaultLayout>

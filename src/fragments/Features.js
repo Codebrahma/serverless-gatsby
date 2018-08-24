@@ -12,7 +12,7 @@ import {
 
 const Features = ({ title, description, features, leadingNumber }) => (
   <Container>
-    <Box px={2} pb={[300, 300, 10, 10]}>
+    <Box px={2}>
       <Column px={[0, 0, 2, 5]} mt={5}>
         <Box my={4}>
           <Heading.h2

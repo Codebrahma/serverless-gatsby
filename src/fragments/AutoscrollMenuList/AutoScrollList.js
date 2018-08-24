@@ -1,6 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Box, Flex, TextWithIcon, P, Heading, Image, List, ListItem } from 'serverless-design-system/src'
+import {
+  Box,
+  Flex,
+  TextWithIcon,
+  Heading,
+  Image,
+  List,
+  ListItem,
+  Text
+} from 'serverless-design-system/src'
 import RedRectangleDots from '../../assets/images/redRectangleDots.png'
 
 class AutoScrollListItem extends React.Component {
@@ -56,16 +65,23 @@ class AutoScrollList extends React.Component {
     return (
       <React.Fragment>
         <Box width={[1, 1, 1/3]}>
-          <List>
+          <List m={0}>
             {
               listData.map(({ title }, index) => (
                 <ListItem
                   key={title}
-                  m={2}
+                  pb={2}
+                  px={3}
                   styleType='none'
                   onClick={() => this.scrollToListItem(index)}
                 >
-                  {title}
+                  <Text.span
+                    fontSize={1}
+                    lineHeight={1}
+                    letterSpacing="0.6px"
+                  >
+                    {title}
+                  </Text.span>
                 </ListItem>
               ))
             }

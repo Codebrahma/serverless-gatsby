@@ -1,28 +1,52 @@
 import React from 'react'
 
-import { Flex, Box, P, Heading } from 'serverless-design-system/src'
+import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
+import HeroTabs from '../../HeroTabs'
+import background from 'src/assets/images/comparisons-background.png'
 
-const ComparisionsHero = () => (
-  <HeroWrapper>
-    <Flex mb='100px' flexDirection={['column', 'column', 'row']}>
+const UseCasesHero = () => (
+  <HeroWrapper
+    background={`url(${background})`}
+    backgroundSize="contain"
+  >
+    <Box mb={[2, 2, 5]}>
+      <HeroTabs />
+    </Box>
+
+    <ResponsiveStack
+      mb={9}
+      color="white"
+    >
       <Box width={[1, 1, 1/2]}>
-        <Heading.h1 
-          fontFamily='SoleilSb'
-          fontSize={[7, 7, 8]}
-          align={['center', 'center', 'left']}
-          color='white'
+        <Text.p
+          fontSize={[7, 7, 7, 8]}
+          fontFamily="Soleil"
+          lineHeight={1}
+          letterSpacing={'-0.2'}
+          m={0}
         >
-          Comparisions
-        </Heading.h1>
+          Comparisons
+        </Text.p>
       </Box>
-      <Box width={[1, 1, 1/2]} px={2}>
-        <P align={['center', 'center', 'left']} color='white' fontSize={[2, 2, 4]}>
-          Serverless Architectures are enabling a wide range of use cases, but they're not right for every situation. 
-        </P>
+      <Box
+        width={[1, 1, 1/2]}
+        pl={[0, 0, 4]}
+        pr={[0, 0, 6]}
+      >
+        <Text.p
+          fontSize={[2, 2, 4]}
+          fontFamily="SoleilLt"
+          lineHeight={3}
+          letterSpacing={0}
+          mt={[3, 3, 1]}
+          mb={3}
+        >
+          Serverless Architectures are enabling a wide range of use cases, but they're not right for every situation.
+        </Text.p>
       </Box>
-    </Flex>
+    </ResponsiveStack>
   </HeroWrapper>
 )
 
-export default ComparisionsHero
+export default UseCasesHero

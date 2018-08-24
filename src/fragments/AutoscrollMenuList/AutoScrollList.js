@@ -4,9 +4,8 @@ import { Box, Flex, TextWithIcon, P, Heading, Image, List, ListItem } from 'serv
 import RedRectangleDots from '../../assets/images/redRectangleDots.png'
 
 class AutoScrollListItem extends React.Component {
-  state = {}
   render() {
-    const { title, contents, image } = this.props
+    const { title, body, image } = this.props
 
     return (
       <Flex.column
@@ -38,13 +37,7 @@ class AutoScrollListItem extends React.Component {
           width={1}
           height='auto'
         />
-        {
-          contents.map((content, index) => (
-            <P key={index} mt={3}>
-              {content}
-            </P>
-          ))
-        }
+        { body }
       </Flex.column>
     )
   }
@@ -84,7 +77,7 @@ class AutoScrollList extends React.Component {
               <AutoScrollListItem
                 key={index}
                 title={item.title}
-                contents={item.contents}
+                body={item.body}
                 image={item.image}
                 scrollToListItem={this.scrollToListItem}
                 ref={ ref => { this[index] = ref } }

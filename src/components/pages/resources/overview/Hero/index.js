@@ -5,7 +5,7 @@ import { HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../../learn/HeroTabs'
 import background from 'src/assets/images/resources-overview-background.png'
 
-const UseCasesHero = () => (
+const OverviewHero = () => (
   <HeroWrapper
     background={`url(${background})`}
     backgroundSize="contain"
@@ -49,4 +49,4 @@ const UseCasesHero = () => (
   </HeroWrapper>
 )
 
-export default UseCasesHero
+export default OverviewHero

@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Container, Flex, TextWithIcon, Heading, Image } from 'serverless-design-system/src'
 
-import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
-import investorTrinity from '../../../../../assets/images/investorTrinity.png'
-import investorHeavyBit from '../../../../../assets/images/investorHeavybit.png'
+import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import investorTrinity from 'src/assets/images/investorTrinity.png'
+import investorHeavyBit from 'src/assets/images/investorHeavybit.png'
 
 const OurInvestors= () => (
   <Container width={1} mt={8}>
@@ -18,10 +18,10 @@ const OurInvestors= () => (
           iconLeft='-10px'
         >
           <Heading.h1>Our Investors</Heading.h1>
-        </TextWithIcon> 
+        </TextWithIcon>
       </Flex>
       <Flex justifyContent='center'>
-        <Flex 
+        <Flex
           flexDirection={['column', 'row', 'row']}
           flexWrap='wrap'
           justifyContent='center'

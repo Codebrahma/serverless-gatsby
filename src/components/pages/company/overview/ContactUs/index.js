@@ -1,8 +1,16 @@
 import React from 'react'
 
-import { Container, Flex, Box, TextWithIcon, Heading, P } from 'serverless-design-system/src'
-
-import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
+import {
+  Box,
+  Container,
+  Column,
+  TextWithIcon,
+  Heading,
+  P,
+  ResponsiveStack,
+  Text,
+} from 'serverless-design-system/src'
+import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 
 const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com'] },
@@ -11,33 +19,58 @@ const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com', '325 9th Street', 'San Francisco, CA 94013']  }
 ]
 
-// P Tag not aligning left
 const ContactSection = ({ title, contents }) => (
-  <Flex.column width={[1, 1, 4/10, 22/100]} my={2} mx={1} alignItems={['center', 'center', 'left']}>
-    <Heading.h4 fontSize={4} align='left'>{title}</Heading.h4>
+  <Column
+    width={[1, 1, 4/10, 22/100]}
+    my={2}
+    mx={1}
+    alignItems={['center', 'center', 'flex-start']}
+  >
+    <Heading.h4
+      fontFamily="SoleilBk"
+      align='left'
+      lineHeight={4}
+    >
+      {title}:
+    </Heading.h4>
     {contents.map(content => <P key={title} fontSize={0} m={0} align='left'>{content}</P>)}
-  </Flex.column>
+  </Column>
 )
 
 const OurStory = () => (
-  <Container width={1} mt={8} mb='400px'>
-    <Flex.column px={3}>
-      <Flex justifyContent='center'>
+  <Container>
+    <Column px={3} pt={8} pb={12}>
+      <Box>
         <TextWithIcon
           iconSrc={redRectangleDots}
-          iconHeight='32px'
-          iconWidth='50px'
-          iconTop='10px'
-          iconLeft='-10px'
+          iconHeight="32px"
+          iconWidth="52px"
+          iconTop="5px"
+          iconLeft="-10px"
+          backgroundSize="contain"
         >
-          <Heading.h1>Contact Us</Heading.h1>
+          <Heading.h1
+            fontFamily="SoleilBk"
+            lineHeight={0}
+            letterSpacing="h2"
+            mt={1}
+          >
+            Contact Us
+          </Heading.h1>
         </TextWithIcon>
-      </Flex>
-      <Flex flexDirection={['column', 'column', 'row']}
-        flexWrap='wrap'
-        justifyContent='center'
-        alignItems='center'
-      >
+      </Box>
+      <Box>
+        <Text.p
+          fontFamily="SoleilLt"
+          fontSize={4}
+          lineHeight={4}
+        >
+          We’d love to hear from you.
+          <br />
+          Please feel free to contact us via the following channels:
+        </Text.p>
+      </Box>
+      <ResponsiveStack flexWrap='wrap'>
         {
           contactUsContent.map(({ title, contents }) => (
             <ContactSection
@@ -47,9 +80,9 @@ const OurStory = () => (
             />
           ))
         }
-      </Flex>
-    </Flex.column>
+      </ResponsiveStack>
+    </Column>
   </Container>
 )
 
-export default OurStory 
+export default OurStory

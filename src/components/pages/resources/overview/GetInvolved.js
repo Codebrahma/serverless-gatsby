@@ -1,11 +1,10 @@
 import React from 'react'
-
+import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
-
-import resourcesOverviewBlog from '../../../../assets/images/resourcesOverviewBlog.png'
-import resourcesOverviewForum from '../../../../assets/images/resourcesOverviewForum.png'
-import resourcesOverviewMeetup from '../../../../assets/images/resourcesOverviewMeetup.png'
-import resourcesOverviewWorkshop from '../../../../assets/images/resourcesOverviewWorkshop.png'
+import resourcesOverviewBlog from 'src/assets/images/resourcesOverviewBlog.png'
+import resourcesOverviewForum from 'src/assets/images/resourcesOverviewForum.png'
+import resourcesOverviewMeetup from 'src/assets/images/resourcesOverviewMeetup.png'
+import resourcesOverviewWorkshop from 'src/assets/images/resourcesOverviewWorkshop.png'
 
 const featureItemsData = [
   {
@@ -34,6 +33,18 @@ const featureItemsData = [
   },
 ]
 
-const FrameworkFeatures = () => <Features features={featureItemsData} />
+const FrameworkFeatures = () => (
+  <Box
+    pb={[12, 12, 10]}
+    mb={[4, 4, 0]}
+  >
+    <Features
+      features={featureItemsData}
+      title="Get involed in the Serverless Community"
+      description="by a community of productivity-minded, user-centric developers all over the world."
+      leadingNumber={false}
+    />
+  </Box>
+)
 
 export default FrameworkFeatures

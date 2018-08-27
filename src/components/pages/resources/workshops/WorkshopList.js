@@ -1,50 +1,55 @@
 import React from 'react'
 
 import { Flex, Box, Heading, P, SecondaryButton, Container } from 'serverless-design-system/src'
-import resourceWorkshopSanFrancisco from '../../../../assets/images/resourceWorkshopSanFrancisco.png'
+import SanFranciscoImage from 'src/assets/images/san-francisco.png'
+import SeattleImage from 'src/assets/images/seattle.png'
+import NewYorkImage from 'src/assets/images/new-york.png'
+import AtlantaImage from 'src/assets/images/atlanda.png'
+import LondonImage from 'src/assets/images/london.png'
+import PrivateWorkshopImage from 'src/assets/images/private-workshop.png'
 
 const workshopList = [
   {
     title: 'SanFrancisco',
     cost: '$1095/person',
-    img: resourceWorkshopSanFrancisco,
+    img: SanFranciscoImage,
     isAvailable: false,
   },
   {
     title: 'Seattle',
     cost: '$1095/person',
-    img: resourceWorkshopSanFrancisco,
+    img: SeattleImage,
     isAvailable: false,
   },
   {
     title: 'New York',
     cost: '$1095/person',
-    img: resourceWorkshopSanFrancisco,
+    img: NewYorkImage,
     isAvailable: false,
   },
   {
     title: 'Atlanta',
     cost: '$1095/person',
-    img: resourceWorkshopSanFrancisco,
+    img: AtlantaImage,
     isAvailable: false,
   },
   {
     title: 'London',
     cost: '$1095/person',
-    img: resourceWorkshopSanFrancisco,
+    img: LondonImage,
     isAvailable: false,
   },
   {
     title: 'Private Workshop',
     cost: '$1095/person',
-    img: resourceWorkshopSanFrancisco,
+    img: PrivateWorkshopImage,
     isAvailable: true,
   },
 ]
 
 const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
   <Flex.column
-    background={`url(${resourceWorkshopSanFrancisco})`}
+    background={`url(${img})`}
     minHeight='400px'
     maxWidth='384px'
     justifyContent='space-between'

@@ -50,8 +50,8 @@ const meetupData = [
 ]
 
 const UpcomingMeetups = () => (
-  <Container maxWidth={1} mb={8} mt={4} px={3}>
-    <Column alignItems='center'>
+  <Container>
+    <Column alignItems='center' py={5}>
       <TextWithIcon
         iconSrc={redRectangleDots}
         iconHeight='32px'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Column, Heading, P } from 'serverless-design-system/src'
+import { Background, Card, Column, Heading, P } from 'serverless-design-system/src'
 import Masonry from 'react-masonry-css'
 import styled from 'styled-components'
 
@@ -24,7 +24,6 @@ const FlexedMasonry = styled(Masonry)`
   justify-content: center;
 `
 
-// Todo: Hard coded color
 const ServerlessUserGroupStack = ({ items }) => (
   <FlexedMasonry
     breakpointCols={breakpointCols}
@@ -39,27 +38,29 @@ const ServerlessUserGroupStack = ({ items }) => (
           minHeight='128px'
           justifyContent='center'
         >
-          <Card
-            boxShadow='2px 2px 8px 0 #eaeaea'
-            border='1px solid #eaeaea'
-            p={[2, 2, 3]}
-          >
-            <Heading.h5
-              fontFamily="SoleilBk"
-              fontSize={[2, 2, 4]}
-              m={0}
-              color="black"
+          <Background background="white">
+            <Card
+              boxShadow='2px 2px 8px 0 #eaeaea'
+              border='1px solid #eaeaea'
+              p={[2, 2, 3]}
             >
-              {title}
-            </Heading.h5>
-            <P
-              fontSize={[0, 0, 2]}
-              mt={1}
-              mb={0}
-            >
-              {location}
-            </P>
-          </Card>
+              <Heading.h5
+                fontFamily="SoleilBk"
+                fontSize={[2, 2, 4]}
+                m={0}
+                color="black"
+              >
+                {title}
+              </Heading.h5>
+              <P
+                fontSize={[0, 0, 2]}
+                mt={1}
+                mb={0}
+              >
+                {location}
+              </P>
+            </Card>
+          </Background>
         </Column>
       ))
     }

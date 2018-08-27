@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Box, Container } from 'serverless-design-system/src'
+import { Background, Box, Container, Heading } from 'serverless-design-system/src'
 import { ServerlessUserGroupStack } from 'src/fragments'
+import dotsBackground from 'src/assets/images/dots-background.png'
 
 const items = [
   { title: 'Triangle Serverless', location: 'Raleigh, NC' },
@@ -26,14 +27,25 @@ const items = [
 ]
 
 const ServerlessUserGroups = () => (
-  <Container>
-    <Box
-      mb={13}
-      mt={4}
-    >
-      <ServerlessUserGroupStack items={items} />
-    </Box>
-  </Container>
+  <Background
+    background={`url(${dotsBackground})`}
+    backgroundSize="cover"
+  >
+    <Container>
+      <Box pb={13}>
+        <Heading.h4
+          fontFamily="SoleilBk"
+          fontSize={[4, 4, 5]}
+          pt={5}
+          pb={2}
+          align="center"
+        >
+          Serverless User Groups
+        </Heading.h4>
+        <ServerlessUserGroupStack items={items} />
+      </Box>
+    </Container>
+  </Background>
 )
 
 export default ServerlessUserGroups

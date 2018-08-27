@@ -1,15 +1,15 @@
 import React from 'react'
-import { Flex, Box, Heading, P, Image } from 'serverless-design-system/src'
+import { Flex, Absolute, Relative, Heading, P, Image } from 'serverless-design-system/src'
 
 import verticalRedRectangleDots from '../assets/images/verticalRedRectangleDots.png'
 
 // Hardcoded color
 const MeetupCard = ({ title, schedule, address, attending }) => (
   <Flex minHeight='384px' width='350px' mx={2} mt={3}>
-    <Box.relative width={1} boxShadow='2px 2px 8px 0 #dfe5e6' px={3} py={3}>
-      <Box.absolute top='30px' left='-10px'>
+    <Relative width={1} boxShadow='2px 2px 8px 0 #dfe5e6' px={3} py={3}>
+      <Absolute top='30px' left='-10px'>
         <Image src={verticalRedRectangleDots} />
-      </Box.absolute>
+      </Absolute>
       <Heading.h4 fontSize={4} fontFamily='SoleilBk'>
         {title}
       </Heading.h4>
@@ -45,7 +45,7 @@ const MeetupCard = ({ title, schedule, address, attending }) => (
           </Flex>
         </React.Fragment>
       </Flex>
-    </Box.relative>
+    </Relative>
   </Flex>
 )
 

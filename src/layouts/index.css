@@ -237,3 +237,12 @@ tfoot td {
   src: local('SoleilBk-Italic'),
     url('../assets/fonts/soleil-bk-italic.otf') format('opentype');
 }
+
+@font-face {
+  font-family: "SoleilLt";
+  font-weight: normal;
+  font-style: normal;
+  src: local("SoleilLt"),
+  local("Soleil-Light"),
+  url('../assets/fonts/soleil-lt.otf') format("opentype");
+}

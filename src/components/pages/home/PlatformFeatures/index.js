@@ -36,8 +36,8 @@ const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
 )
 
 const PlatformFeatures = () => (
-  <Container mt={7}>
-    <Box mx={2}>
+  <Container>
+    <Box mx={2} mt={7}>
       <Heading.h2
         fontFamily='SoleilSb'
         align='center'

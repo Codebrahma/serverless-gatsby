@@ -1,23 +1,52 @@
 import React from 'react'
 
+import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
-import { Flex, Box, Heading, P } from 'serverless-design-system/src'
+import HeroTabs from '../../../learn/HeroTabs'
+import background from 'src/assets/images/resources-overview-background.png'
 
-const OverviewHero = () => (
-  <HeroWrapper>
-    <Flex flexDirection={['column', 'column', 'row']} mb='100px'>
-      <Flex width={[1, 1, 1/2]} justifyContent={['center', 'center', 'flex-start']} alignItems='center'>
-        <Heading.h1 fontSize={[7, 7, 7, 8]} color='white' px={2}>
+const UseCasesHero = () => (
+  <HeroWrapper
+    background={`url(${background})`}
+    backgroundSize="contain"
+  >
+    <Box mb={[2, 2, 5]}>
+      <HeroTabs />
+    </Box>
+
+    <ResponsiveStack
+      mb={9}
+      color="white"
+    >
+      <Box width={[1, 1, 1/2]}>
+        <Text.p
+          fontSize={[7, 7, 7, 8]}
+          fontFamily="Soleil"
+          lineHeight={1}
+          letterSpacing={'-0.2'}
+          m={0}
+        >
           Resources
-        </Heading.h1>
-      </Flex>
-      <Box width={[1, 1, 1, 1/2]} px={2}>
-        <P fontSize={[2, 2, 4]} color='white'>
-          The serverless movement is fueled by a community of productivity-minded, user-centric developers all over the world. There are tons of ways—big and small—you can contribute and get involved.
-        </P>
+        </Text.p>
       </Box>
-    </Flex>
+      <Box
+        width={[1, 1, 1/2]}
+        pl={[0, 0, 4]}
+        pr={[0, 0, 6]}
+      >
+        <Text.p
+          fontSize={[2, 2, 4]}
+          fontFamily="SoleilLt"
+          lineHeight={3}
+          letterSpacing={0}
+          mt={[3, 3, 1]}
+          mb={3}
+        >
+          The serverless movement is fueled by a community of productivity-minded, user-centric developers all over the world. There are tons of ways—big and small—you can contribute and get involved.
+        </Text.p>
+      </Box>
+    </ResponsiveStack>
   </HeroWrapper>
 )
 
-export default OverviewHero
+export default UseCasesHero

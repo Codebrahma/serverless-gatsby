@@ -4,6 +4,7 @@ import {
   Flex,
   Heading,
   Image,
+  Relative,
   withBeforeAfter,
 } from 'serverless-design-system/src'
 import frameworkIcon from 'src/assets/images/bolt.png'
@@ -42,9 +43,11 @@ const HeroImageWrapper = withBeforeAfter(
 
 const ImageSection = ({ imgSrc, title, subtitle }) => (
   <Flex.verticallyCenter flexDirection='column' width={[1, 1, 1 / 3]}>
-    <Flex.relative height='86px' alignItems='center' my={2}>
-      <Image src={imgSrc} maxHeight='86px' maxWidth='70px' />
-    </Flex.relative>
+    <Relative>
+      <Flex.verticallyCenter height='86px' my={2}>
+        <Image src={imgSrc} maxHeight='86px' maxWidth='70px' />
+      </Flex.verticallyCenter>
+    </Relative>
     <Heading.h5 color='white'>{title}</Heading.h5>
     <Heading.h4
       color='white'

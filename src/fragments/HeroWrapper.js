@@ -1,23 +1,28 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
 
-import { Box, Container } from 'serverless-design-system/src'
+import { Background, Box, Container } from 'serverless-design-system/src'
 
 const HeroWrapper = ({ children, theme, ...otherProps }) => (
-  <Box
-    width={1}
-    pt={[
-      theme.navbarHeights.mobile,
-      theme.navbarHeights.mobile,
-      theme.navbarHeights.desktop,
-    ]}
+  <Background
     background='black'
     {...otherProps}
   >
-    <Container px={0} py={4}>
-      {children}
-    </Container>
-  </Box>
+    <Box
+      width={1}
+      pt={[
+        theme.navbarHeights.mobile,
+        theme.navbarHeights.mobile,
+        theme.navbarHeights.desktop,
+      ]}
+    >
+      <Container>
+        <Box py={4}>
+          {children}
+        </Box>
+      </Container>
+    </Box>
+  </Background>
 )
 
 export default withTheme(HeroWrapper)

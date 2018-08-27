@@ -12,7 +12,7 @@ const DashboardHeroActions = () => (
     secondBtn={{
       name: 'contact sales',
       to: '/enterprise/',
-      completed: false,
+      completed: true,
     }}
   />
 )

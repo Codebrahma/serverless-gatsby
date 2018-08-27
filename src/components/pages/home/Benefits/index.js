@@ -40,8 +40,8 @@ const EachBenefit = ({ img, title, description }) => (
 )
 
 const HomeBenefits = () => (
-  <Container mt='100px'>
-    <Box mx={2}>
+  <Container>
+    <Box mx={2} mt={7}>
       <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[5, 5, 6]}>
         Build more, manage less.
         <br /><br />

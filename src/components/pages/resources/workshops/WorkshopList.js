@@ -1,13 +1,14 @@
 import React from 'react'
 
 import {
+  Absolute,
   Background,
-  Box,
   Column,
   Heading,
   P,
   SecondaryButton,
   Container,
+  Relative,
   ResponsiveStack,
   Text,
 } from 'serverless-design-system/src'
@@ -17,6 +18,7 @@ import NewYorkImage from 'src/assets/images/new-york.png'
 import AtlantaImage from 'src/assets/images/atlanda.png'
 import LondonImage from 'src/assets/images/london.png'
 import PrivateWorkshopImage from 'src/assets/images/private-workshop.png'
+import verticalDotImage from 'src/assets/images/white-dots-grid-vertical.png'
 
 const workshopList = [
   {
@@ -58,19 +60,33 @@ const workshopList = [
 ]
 
 const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
-  <Box p="16px" width={[1, 1, 1/2, 0.33]}>
+  <Relative
+    p="16px"
+    width={[1, 1, 1/2, 0.33]}
+  >
     <Background
       background={`url(${img})`}
       backgroundSize="cover"
       height="400px"
-      minHeight="350px"
+      minHeight="300px"
     >
+      <Absolute
+        right="-5px"
+        top="-5px"
+      >
+        <Background
+          height="200px"
+          width="64px"
+          background={`url(${verticalDotImage})`}
+          backgroundSize="cover"
+        />
+      </Absolute>
       <Column
         height="fullHeight"
         justifyContent="space-between"
         p={[2, 2, 4]}
       >
-        <Box>
+        <Relative>
           <Heading.h3
             fontFamily="SoleilBk"
             font
@@ -88,8 +104,8 @@ const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
           >
             {cost}
           </Text.p>
-        </Box>
-        <Box>
+        </Relative>
+        <Relative>
           <P fontSize={0} color='white'>
             {
               isAvailable ?
@@ -101,15 +117,16 @@ const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
           <SecondaryButton background='white' width={1}>
             {isAvailable ? 'contact us' : 'join waitlist'}
           </SecondaryButton>
-        </Box>
+        </Relative>
       </Column>
     </Background>
-  </Box>
+  </Relative>
 )
 
 const WorkshopList = () => (
   <Container>
     <ResponsiveStack
+      mt={[5, 5, 5, 5, 8]}
       mb={12}
       flexWrap="wrap"
       alignItems="center"

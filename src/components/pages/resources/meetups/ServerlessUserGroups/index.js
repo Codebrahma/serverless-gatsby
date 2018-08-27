@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Container } from 'serverless-design-system/src'
+import { Box, Container } from 'serverless-design-system/src'
 import { ServerlessUserGroupStack } from 'src/fragments'
 
 const items = [
@@ -26,8 +26,13 @@ const items = [
 ]
 
 const ServerlessUserGroups = () => (
-  <Container maxWidth={1} mb='400px' mt={4} px={3}>
-    <ServerlessUserGroupStack items={items} />
+  <Container>
+    <Box
+      mb={13}
+      mt={4}
+    >
+      <ServerlessUserGroupStack items={items} />
+    </Box>
   </Container>
 )
 

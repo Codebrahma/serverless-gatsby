@@ -1,14 +1,20 @@
 import React from 'react'
 
-import { Container, Flex, Heading, TextWithIcon } from 'serverless-design-system/src'
+import {
+  Container,
+  Column,
+  ResponsiveStack,
+  Heading,
+  TextWithIcon
+} from 'serverless-design-system/src'
 
 import MeetupCard from 'src/fragments/UpcomingMeetupCard'
 
-import meetupMember11 from '../../../../../assets/images/meetupMember11.png'
-import meetupMember12 from '../../../../../assets/images/meetupMember12.png'
-import meetupMember13 from '../../../../../assets/images/meetupMember13.png'
-import meetupMember14 from '../../../../../assets/images/meetupMember14.png'
-import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
+import meetupMember11 from 'src/assets/images/meetupMember11.png'
+import meetupMember12 from 'src/assets/images/meetupMember12.png'
+import meetupMember13 from 'src/assets/images/meetupMember13.png'
+import meetupMember14 from 'src/assets/images/meetupMember14.png'
+import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 
 const meetupData = [
   {
@@ -45,18 +51,26 @@ const meetupData = [
 
 const UpcomingMeetups = () => (
   <Container maxWidth={1} mb={8} mt={4} px={3}>
-    <Flex flexDirection='column' alignItems='center'>
+    <Column alignItems='center'>
       <TextWithIcon
         iconSrc={redRectangleDots}
         iconHeight='32px'
-        iconWidth='50px'
+        iconWidth='70px'
         iconTop='-5px'
         iconLeft='-20px'
       >
-        <Heading.h3>Upcoming Meetups</Heading.h3>
+        <Heading.h1
+          fontFamily="SoleilBk"
+          lineHeight={0}
+          letterSpacing="h2"
+        >
+          Upcoming Meetups
+        </Heading.h1>
       </TextWithIcon>
-      <Flex flexDirection={['column', 'column', 'row']}
-        flexWrap='wrap' justifyContent='center'>
+      <ResponsiveStack
+        flexWrap='wrap'
+        justifyContent='center'
+      >
         {
           meetupData.map(({ title, schedule, address, attending}) => (
             <MeetupCard
@@ -68,8 +82,8 @@ const UpcomingMeetups = () => (
             />
           ))
         }
-      </Flex>
-    </Flex>
+      </ResponsiveStack>
+    </Column>
   </Container>
 )
 

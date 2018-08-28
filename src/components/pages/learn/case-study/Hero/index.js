@@ -10,28 +10,26 @@ const UseCasesHero = () => (
     background={`url(${background})`}
     backgroundSize="contain"
   >
-    <Box px={[3, 3, 2]}>
-      <Box mb={5}>
-        <HeroTabs />
-      </Box>
-
-      <ResponsiveStack
-        mb={[6, 6, 7]}
-        color="white"
-      >
-        <Box width={[1, 1, 10/12, 11/12]}>
-          <Text.p
-            fontSize={[7, 7, 7, 8]}
-            fontFamily="Soleil"
-            lineHeight={1}
-            letterSpacing={'-0.2'}
-            m={0}
-          >
-            Scaling to millions of requests with the Serverless Framework
-          </Text.p>
-        </Box>
-      </ResponsiveStack>
+    <Box mb={5}>
+      <HeroTabs />
     </Box>
+
+    <ResponsiveStack
+      mb={[6, 6, 7]}
+      color="white"
+    >
+      <Box width={[1, 1, 10/12, 11/12]}>
+        <Text.p
+          fontSize={[7, 7, 7, 8]}
+          fontFamily="Soleil"
+          lineHeight={1}
+          letterSpacing={'-0.2'}
+          m={0}
+        >
+          Scaling to millions of requests with the Serverless Framework
+        </Text.p>
+      </Box>
+    </ResponsiveStack>
   </HeroWrapper>
 )
 

@@ -12,19 +12,17 @@ const DashboardHero = () => (
     backgroundImage={`url(${LearnOverviewBg})`}
     backgroundSize='contain'
   >
-    <Box px={[3, 3, 2]}>
-      <Box mb={[2, 2, 5]}>
-        <HeroTabs />
-      </Box>
-
-      <Flex
-        flexDirection={['column', 'column', 'row']}
-        mb={[5, 5, 6]}
-      >
-        <Description />
-        <Actions />
-      </Flex>
+    <Box mb={[2, 2, 5]}>
+      <HeroTabs />
     </Box>
+
+    <Flex
+      flexDirection={['column', 'column', 'row']}
+      mb={[5, 5, 6]}
+    >
+      <Description />
+      <Actions />
+    </Flex>
   </HeroWrapper>
 )
 

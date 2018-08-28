@@ -1,6 +1,8 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-import { Background, Box, Container } from 'serverless-design-system/src'
+import { Background, Box } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 
 const HeroWrapper = ({ children, theme, ...otherProps }) => (
   <Background
@@ -15,11 +17,11 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
         theme.navbarHeights.desktop,
       ]}
     >
-      <Container>
+      <AppContainer>
         <Box py={4}>
           {children}
         </Box>
-      </Container>
+      </AppContainer>
     </Box>
   </Background>
 )

@@ -33,7 +33,7 @@ const ServerlessUserGroups = () => (
     backgroundSize="cover"
   >
     <AppContainer>
-      <Box pb={13}>
+      <Box pb={[300, 300, 13]}>
         <Heading.h4
           fontFamily="SoleilBk"
           fontSize={[4, 4, 5]}

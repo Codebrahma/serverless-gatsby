@@ -132,7 +132,7 @@ const WorkshopList = () => (
   <AppContainer>
     <ResponsiveStack
       mt={[5, 5, 5, 5, 8]}
-      mb={12}
+      mb={[300, 300, 12]}
       flexWrap="wrap"
       alignItems="center"
       justifyContent="center"

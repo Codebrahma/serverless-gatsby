@@ -1,26 +1,56 @@
 import React from 'react'
 
+import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
-import { Flex, Box, Heading, P } from 'serverless-design-system/src'
+import HeroTabs from '../../../learn/HeroTabs'
+import background from 'src/assets/images/company-overview-background.png'
 
-const MeetupHero = () => (
-  <HeroWrapper>
-    <Flex flexDirection={['column', 'column', 'row']} mb='100px'>
-      <Flex width={[1, 1, 1/2]} justifyContent={['center', 'center', 'flex-start']} alignItems='center'>
-        <Heading.h1 fontSize={[7, 7, 7, 8]} color='white' px={2} fontFamily='Soleil'>
+const ChampionsHero = () => (
+  <HeroWrapper
+    background={`url(${background})`}
+    backgroundSize="contain"
+  >
+    <Box mb={[2, 2, 5]}>
+      <HeroTabs />
+    </Box>
+
+    <ResponsiveStack
+      mb={9}
+      color="white"
+    >
+      <Box width={[1, 1, 1/2]}>
+        <Text.p
+          fontSize={[7, 7, 7, 8]}
+          fontFamily="Soleil"
+          lineHeight={1}
+          letterSpacing={'-0.2'}
+          m={0}
+        >
           Champions
-        </Heading.h1>
-      </Flex>
-      <Box width={[1, 1, 1, 1/2]} px={2}>
-        <P fontSize={[2, 2, 4]} color='white' fontFamily='SoleilSt'>
-          At Serverless, we value open source. We are incredibly proud of the way the Serverless community steps up to the plate on a daily basis to contribute to the project and help guide newcomers.
-        </P>
-        <P fontSize={[2, 2, 4]} color='white' fontFamily='SoleilSt'>
-          To recognize our community superstars, we established The Serverless Champions program.
-        </P>
+        </Text.p>
       </Box>
-    </Flex>
+      <Box
+        width={[1, 1, 1/2]}
+        pl={[0, 0, 4]}
+        pr={[0, 0, 6]}
+      >
+        <Text.p
+          fontSize={[2, 2, 4]}
+          fontFamily="SoleilLt"
+          lineHeight={3}
+          letterSpacing={0}
+          mt={[3, 3, 1]}
+          mb={3}
+        >
+          At Serverless, we value open source. We are incredibly proud of the way the Serverless community steps up to the plate on a daily basis to contribute to the project and help guide newcomers.
+          <br />
+          <br />
+          <br />
+          To recognize our community superstars, we established The Serverless Champions program.
+        </Text.p>
+      </Box>
+    </ResponsiveStack>
   </HeroWrapper>
 )
 
-export default MeetupHero
+export default ChampionsHero

@@ -1,8 +1,22 @@
 import React from 'react'
 
-import { Container, Flex, Box, TextWithIcon, Heading, P } from 'serverless-design-system/src'
+import {
+  Card,
+  Container,
+  Flex,
+  Box,
+  TextWithIcon,
+  Heading,
+  P,
+  Row,
+  InlineBlock,
+  Image,
+  HorizontalRule,
+} from 'serverless-design-system/src'
 
-import redRectangleDots from '../../../../../assets/images/redRectangleDots.png'
+import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import checkmarkIcon from 'src/assets/images/ok-icon.png'
+import lionIcon from 'src/assets/images/lion-icon.png'
 
 const serverlessChampions = [
   'Heroes in the serverless community',
@@ -25,28 +39,94 @@ const memberReceivals = [
 
 // TODO: SDS should have withespace property
 const HowToBeChampion = () => (
-  <Container width={1} mt={6}>
-    <Flex.column px={3}>
-      <TextWithIcon
-        iconSrc={redRectangleDots}
-        iconHeight='32px'
-        iconWidth='50px'
-        iconTop='10px'
-        iconLeft='-10px'
-      >
-        <Heading.h1>What does it take to become a Serverless Champion?</Heading.h1>
-      </TextWithIcon>
+  <Container>
+    <Flex.column pt={5}>
       <Flex flexDirection={['column', 'column', 'row']}>
-        <Box width={[1, 1, 1/2]} px={2}>
-          <Heading.h4>Our Serverless Champions are</Heading.h4>
-          {serverlessChampions.map(champion => <P key={champion} mt={3}>{champion}</P>)}
+        <Box width={[1, 1, 0.65]} px={2}>
+          <TextWithIcon
+            iconSrc={redRectangleDots}
+            iconHeight="32px"
+            iconWidth="52px"
+            iconTop="5px"
+            iconLeft="-10px"
+            backgroundSize="contain"
+          >
+            <Heading.h1
+              fontFamily="SoleilBk"
+              lineHeight={0}
+              letterSpacing="h2"
+              mt={1}
+            >
+              What does it take to become a Serverless Champion?
+            </Heading.h1>
+          </TextWithIcon>
+          <Heading.h4 fontFamily="SoleilBk">
+            Our Serverless Champions are:
+          </Heading.h4>
+          {
+            serverlessChampions.map((champion, index) => (
+              <Row
+                mt={3}
+                key={index}
+                alignItems="center"
+              >
+                <InlineBlock mr={2}>
+                  <Image src={checkmarkIcon} height="20px" width="20px" />
+                </InlineBlock>
+                <P
+                  key={index}
+                  my={0}
+                  fontFamily='Soleilbk'
+                >
+                  {champion}
+                </P>
+              </Row>
+            ))
+          }
         </Box>
-        <Flex justifyContent='flex-end' width={[1, 1, 0.5]}>
-          <Box width={[1, 1, 9/10, 8/10, 7/10]} boxShadow='2px 2px 8px 0 #eaeaea' border='1px solid #eaeaea' px={4} py={3}>
-            <Heading.h4 fontSize={3} fontFamily='SoleilBk'>Our Benefits</Heading.h4>
-            {memberReceivals.map((receival, index) => <P key={index} mt={4} fontFamily='Soleilbk'>{receival}</P>)}
-          </Box>
-        </Flex>
+
+        <Box
+          width={[1, 1, 0.35]}
+          mt={[2, 2, 6, 8]}>
+          <Card
+            width={1}
+            boxShadow='2px 2px 8px 0 #eaeaea'
+            border='1px solid #eaeaea'
+            px={4}
+            py={3}
+          >
+            <Heading.h4
+              fontSize={3}
+              fontFamily='SoleilBk'
+            >
+              Our Benefits
+            </Heading.h4>
+            <HorizontalRule
+              height="1px"
+              color="#eaeaea"
+            />
+
+            {
+              memberReceivals.map((benefit, index) => (
+                <Row
+                  mt={3}
+                  alignItems="center"
+                >
+                  <Box mr={2}>
+                    <Image src={lionIcon} height="40px" minWidth="40px" />
+                  </Box>
+                  <P
+                    key={index}
+                    my={0}
+                    fontFamily='Soleilbk'
+                  >
+                    {benefit}
+                  </P>
+                </Row>
+              ))
+            }
+          </Card>
+        </Box>
       </Flex>
     </Flex.column>
   </Container>

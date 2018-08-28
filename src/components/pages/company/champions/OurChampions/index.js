@@ -1,8 +1,23 @@
 import React from 'react'
 
-import { Flex, Box, Container, Image, P, Heading } from 'serverless-design-system/src'
+import {
+  Absolute,
+  Background,
+  Flex,
+  Box,
+  Container,
+  Image,
+  P,
+  Heading,
+  Text,
+  Relative,
+  ResponsiveStack
+} from 'serverless-design-system/src'
 
-import Champion1 from '../../../../../assets/images/champion1.png'
+import Champion1 from 'src/assets/images/champion1.png'
+import Champion2 from 'src/assets/images/champion2.png'
+import Champion3 from 'src/assets/images/champion3.png'
+import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const champions = [
   {
@@ -12,20 +27,39 @@ const champions = [
   },
   {
     name: 'Marcia Villalba',
-    image: Champion1,
+    image: Champion2,
     position: 'Senior Full-stack Developer Rovio'
   },
   {
     name: 'Ryan Scott Brown',
-    image: Champion1,
+    image: Champion3,
     position: 'Senior Software Engineer Ansible by Red Hat'
   },
-
 ]
 
 const ChampionCard = ({ name, image, position }) => (
-  <Box width={3/10} mx={2}>
-    <Image src={image} alt={name} width='384px' height='384px' />
+  <Relative
+    width={3/10}
+    mx={2}
+  >
+    <Image
+      src={image}
+      alt={name}
+      width={1}
+      maxHeight="384px"
+    />
+    <Absolute
+      bottom="15px"
+      left="25px"
+      zIndex={1}
+    >
+      <Background
+        background={`url(${dotGridVertical})`}
+        height="152px"
+        width="80px"
+        backgroundSize="cover"
+      />
+    </Absolute>
     <Flex>
       <Box width={4/10}></Box>
       <Box width={6/10}>
@@ -33,15 +67,33 @@ const ChampionCard = ({ name, image, position }) => (
         <P>{position}</P>
       </Box>
     </Flex>
-  </Box>
+  </Relative>
 )
 
 const OurChampions = () => (
-  <Container width={1} mt={8} mb='400px'>
-    <Flex alignItems='center' justifyContent='center'>
-      <Heading.h2>Our Serverless Champions</Heading.h2>
-    </Flex>
-    <Flex flexDirection={['column', 'column', 'row']} mt={3}>
+  <Container>
+    <Box my={4}>
+      <Heading.h2
+        align="center"
+        fontFamily="SoleilSb"
+        lineHeight="1.4"
+        my={1}
+      >
+        Our Serverless Champions
+      </Heading.h2>
+      {
+        <Text.p
+          align="center"
+          fontFamily="Soleil"
+          fontSize={1}
+          lineHeight={3}
+          color="gray.2"
+        >
+          Community ambassadors handpicked by us.
+        </Text.p>
+      }
+    </Box>
+    <ResponsiveStack mt={3} my={12}>
       {
         champions.map(({ name, image, position }) => (
           <ChampionCard
@@ -52,7 +104,7 @@ const OurChampions = () => (
           />
         ))
       }
-    </Flex>
+    </ResponsiveStack>
   </Container>
 )
 

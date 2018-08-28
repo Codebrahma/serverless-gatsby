@@ -17,7 +17,7 @@ const HomeHeroFooter = () => (
       mx={'auto'}
       flexDirection='row'
     >
-      <InlineBlock ml={1} mr={[0, 0, 2]}>
+      <InlineBlock ml={[0, 0, 1]} mr={[0, 0, 2]}>
         <Image src={videoIcon} height='50px' width='auto' />
       </InlineBlock>
       <Heading.h4

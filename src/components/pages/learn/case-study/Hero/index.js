@@ -10,12 +10,12 @@ const UseCasesHero = () => (
     background={`url(${background})`}
     backgroundSize="contain"
   >
-    <Box mb={5}>
+    <Box mb={[2, 2, 7]}>
       <HeroTabs selected="case-studies" />
     </Box>
 
     <ResponsiveStack
-      mb={[6, 6, 7]}
+      mb={6}
       color="white"
     >
       <Box width={[1, 1, 10/12, 11/12]}>

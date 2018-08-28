@@ -10,7 +10,7 @@ const UseCasesHero = () => (
     background={`url(${background})`}
     backgroundSize="contain"
   >
-    <Box mb={[2, 2, 5]}>
+    <Box mb={[2, 2, 7]}>
       <HeroTabs selected="use-cases" />
     </Box>
 

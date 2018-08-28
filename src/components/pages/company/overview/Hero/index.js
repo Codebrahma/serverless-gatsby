@@ -10,12 +10,12 @@ const CompanyOverviewHero = () => (
     background={`url(${background})`}
     backgroundSize="contain"
   >
-    <Box mb={[2, 2, 5]}>
+    <Box mb={[2, 2, 7]}>
       <HeroTabs selected="overview" />
     </Box>
 
     <ResponsiveStack
-      mb={9}
+      mb={7}
       color="white"
     >
       <Box width={[1, 1, 1/2]}>

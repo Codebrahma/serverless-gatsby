@@ -12,7 +12,7 @@ const DashboardHero = () => (
     backgroundImage={`url(${LearnOverviewBg})`}
     backgroundSize='contain'
   >
-    <Box mb={[2, 2, 5]}>
+    <Box mb={[2, 2, 6]}>
       <HeroTabs selected="overview" />
     </Box>
 

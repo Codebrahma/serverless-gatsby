@@ -41,6 +41,7 @@ const ChampionCard = ({ name, image, position }) => (
   <Relative
     width={[1, 1, 3/10]}
     px={2}
+    py={[2, 2, 2, 0]}
   >
     <Image
       src={image}
@@ -72,43 +73,45 @@ const ChampionCard = ({ name, image, position }) => (
 
 const OurChampions = () => (
   <AppContainer>
-    <Box my={[1, 1, 2, 4]}>
-      <Heading.h2
-        align="center"
-        fontFamily="SoleilSb"
-        lineHeight="1.4"
-        my={1}
-      >
-        Our Serverless Champions
-      </Heading.h2>
-      {
-        <Text.p
+    <Box py={[5, 5, 6]}>
+      <Box my={[1, 2, 3, 4]}>
+        <Heading.h2
           align="center"
-          fontFamily="Soleil"
-          fontSize={1}
-          lineHeight={3}
-          color="gray.2"
+          fontFamily="SoleilSb"
+          lineHeight="1.4"
+          my={1}
         >
-          Community ambassadors handpicked by us.
-        </Text.p>
-      }
+          Our Serverless Champions
+        </Heading.h2>
+        {
+          <Text.p
+            align="center"
+            fontFamily="Soleil"
+            fontSize={1}
+            lineHeight={3}
+            color="gray.2"
+          >
+            Community ambassadors handpicked by us.
+          </Text.p>
+        }
+      </Box>
+      <ResponsiveStack
+        justifyContent="center"
+        mt={[1, 2, 2, 3]}
+        my={12}
+      >
+        {
+          champions.map(({ name, image, position }) => (
+            <ChampionCard
+              key={name}
+              name={name}
+              image={image}
+              position={position}
+            />
+          ))
+        }
+      </ResponsiveStack>
     </Box>
-    <ResponsiveStack
-      justifyContent="center"
-      mt={[1, 2, 2, 3]}
-      my={12}
-    >
-      {
-        champions.map(({ name, image, position }) => (
-          <ChampionCard
-            key={name}
-            name={name}
-            image={image}
-            position={position}
-          />
-        ))
-      }
-    </ResponsiveStack>
   </AppContainer>
 )
 

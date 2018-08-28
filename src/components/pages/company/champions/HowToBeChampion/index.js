@@ -86,7 +86,9 @@ const HowToBeChampion = () => (
 
         <Box
           width={[1, 1, 0.35]}
-          mt={[2, 2, 6, 8]}>
+          mt={[5, 5, 6, 8]}
+          mb={[5, 5, 6, 0]}
+        >
           <Card
             width={1}
             boxShadow='2px 2px 8px 0 #eaeaea'

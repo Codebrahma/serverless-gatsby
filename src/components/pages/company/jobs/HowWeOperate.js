@@ -38,6 +38,7 @@ const HowWeOperate = () => (
         backgroundSize="contain"
       >
         <Heading.h1
+          fontSize={[6, 6, 6, 7]}
           fontFamily="SoleilBk"
           lineHeight={0}
           letterSpacing="h2"

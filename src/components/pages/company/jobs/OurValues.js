@@ -10,7 +10,7 @@ const ourValuesContent = [
 ]
 
 const OurValues = () => (
-  <Box mb={[ 4, 4, 8 ]}>
+  <Box pb={[ 300, 300, 12 ]}>
     <Features
       features={ourValuesContent}
       title="Our Values"

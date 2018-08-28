@@ -45,7 +45,7 @@ const jobs = [
 
 const OpenPositions = () => (
   <AppContainer>
-    <Column>
+    <Column my={5}>
       <Flex justifyContent='center'>
         <Heading.h2 fontFamily='SoleilSb'>
           Open Positions

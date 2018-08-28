@@ -11,6 +11,7 @@ const Resource = () => (
         navProps={{
           to: resources.blog,
           backgroundOnHover: true,
+          completed: true,
         }}
       >
         blog
@@ -32,6 +33,7 @@ const Resource = () => (
         navProps={{
           to: resources.meetups,
           backgroundOnHover: true,
+          completed: true,
         }}
       >
         meetups
@@ -53,6 +55,7 @@ const Resource = () => (
         navProps={{
           to: resources.workshops,
           backgroundOnHover: true,
+          completed: true,
         }}
       >
         workshops

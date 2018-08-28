@@ -26,6 +26,7 @@ export default {
     caseStudy: '/learn/case-study/',
   },
   resources: {
+    overview: '/resources/overview',
     blog: '/blog',
     forum: 'https://forum.serverless.com/',
     meetups: '/resources/meetups/',

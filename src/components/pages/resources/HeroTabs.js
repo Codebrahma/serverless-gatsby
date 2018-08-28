@@ -36,6 +36,6 @@ const data = [
   },
 ]
 
-export default () => (
-  <HeroTabs data={data} />
+export default ({ selected }) => (
+  <HeroTabs data={data} selected={selected} />
 );

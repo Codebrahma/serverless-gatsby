@@ -16,7 +16,7 @@ const Results = () => (
   <AppContainer>
     <Flex.column
       mt={[4, 4, 6]}
-      mb={[4, 4, 14]}
+      mb={[300, 300, 14]}
     >
       <Flex justifyContent={['left', 'left', 'center']}>
         <TextWithIcon

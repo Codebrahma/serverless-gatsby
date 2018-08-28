@@ -5,7 +5,7 @@ import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
 import learnDashboardAboutFramework from '../../../../assets/images/learnDashboardAboutFramework.png'
 
 const AboutServerlessFramework = () => (
-  <Container maxWidth={1}>
+  <Container>
     <Flex flexDirection={['column', 'column', 'row']} px={3}>
       <Box width={[1, 1, 1/2]}>
         <TextWithIcon

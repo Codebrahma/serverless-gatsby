@@ -94,7 +94,7 @@ const comparisonData = [
 ]
 
 const ComparisionsScrollList = () => (
-  <Container maxWidth={1}>
+  <Container>
     <ResponsiveStack
       mt={8}
       mb={9}

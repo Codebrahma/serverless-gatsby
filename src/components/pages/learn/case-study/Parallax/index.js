@@ -7,7 +7,7 @@ import Challenge from './Challenge'
 import WhyServerless from './WhyServerless'
 
 const Parallax = () => (
-  <Container maxWidth={1}>
+  <Container>
     <Flex.column>
       <Introduction />
       <Challenge />

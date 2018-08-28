@@ -22,7 +22,7 @@ export default {
   learn: {
     useCases: '/learn/use-cases/',
     why: '/learn/overview',
-    comparisions: '/learn/comparisons/',
+    comparisons: '/learn/comparisons/',
     caseStudy: '/learn/case-study/',
   },
   resources: {

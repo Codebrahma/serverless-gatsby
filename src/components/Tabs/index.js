@@ -6,9 +6,10 @@ const TabWrapper = styled(Column)`
   background: ${({ background }) => (background)};
   background-size: ${({ backgroundSize }) => (backgroundSize)};
   cursor: pointer;
+  margin: 2px;
 `;
 
-const Tab = ({ label, value, onClick, selected, ...styles }) => {
+const Tab = ({ datum, onClick, selected, ...styles }) => {
   const containerStyles = !selected ? styles.tabContainerStyle : {
     ...styles.tabContainerStyle,
     ...styles.selectedTabContainerStyle,
@@ -21,11 +22,11 @@ const Tab = ({ label, value, onClick, selected, ...styles }) => {
 
   return (
     <TabWrapper
-      onClick={() => onClick(value, label)}
+      onClick={() => onClick(datum)}
       { ...containerStyles }
     >
       <Text.span {...labelStyles}>
-        {label}
+        {datum.label}
       </Text.span>
     </TabWrapper>
   );
@@ -34,20 +35,17 @@ const Tab = ({ label, value, onClick, selected, ...styles }) => {
 export default ({
   data,
   selectedValue,
-  onTabClick,
+  onTabSelect,
   ...styleProps
 }) => (
-  <InlineFlex
-    flexDirection={['column', 'column', 'row']}
-  >
+  <InlineFlex flexDirection={['column', 'column', 'row']}>
     {
-      data.map(({ label, value }) => (
+      data.map((datum) => (
         <Tab
-          label={label}
-          value={value}
-          key={value}
-          selected={value === selectedValue}
-          onClick={onTabClick}
+          datum={datum}
+          key={datum.value}
+          selected={datum.value === selectedValue}
+          onClick={onTabSelect}
           { ...styleProps }
         />
       ))

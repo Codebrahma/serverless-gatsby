@@ -11,7 +11,7 @@ const UseCasesHero = () => (
     backgroundSize="contain"
   >
     <Box mb={5}>
-      <HeroTabs />
+      <HeroTabs selected="case-studies" />
     </Box>
 
     <ResponsiveStack

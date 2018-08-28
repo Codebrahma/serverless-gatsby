@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
-import HeroTabs from '../../../learn/HeroTabs'
+import HeroTabs from '../../HeroTabs'
 import background from 'src/assets/images/meetups-background.png'
 
 const MeetupsHero = () => (
@@ -11,7 +11,7 @@ const MeetupsHero = () => (
     backgroundSize="contain"
   >
     <Box mb={[2, 2, 5]}>
-      <HeroTabs />
+      <HeroTabs selected="meetups" />
     </Box>
 
     <ResponsiveStack

@@ -11,7 +11,7 @@ const UseCasesHero = () => (
     backgroundSize="contain"
   >
     <Box mb={[2, 2, 5]}>
-      <HeroTabs />
+      <HeroTabs selected="comparisons" />
     </Box>
 
     <ResponsiveStack

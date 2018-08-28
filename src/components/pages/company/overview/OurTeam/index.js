@@ -19,12 +19,13 @@ import jeremy from 'src/assets/images/team/jeremy.png'
 import raees from 'src/assets/images/team/raees.png'
 import steve from 'src/assets/images/team/steve.png'
 import sebastian from 'src/assets/images/team/sebastian.png'
+import jonathan from 'src/assets/images/team/jonathan.png'
 import andrea from 'src/assets/images/team/andrea.png'
 import andre from 'src/assets/images/team/andre.png'
 import thom from 'src/assets/images/team/thom.png'
 import eric from 'src/assets/images/team/eric.png'
 import charmmie from 'src/assets/images/team/charmmie.png'
-import bumper from 'src/assets/images/team/andre.png'
+import bumper from 'src/assets/images/team/bumper.png'
 
 const teamMembers = [
   { image: austin, name: 'Austen Collins', position: 'Founder & CEO' },
@@ -41,6 +42,7 @@ const teamMembers = [
   { image: raees, name: 'Raees Iqbal', position: 'Software engineer' },
   { image: steve, name: 'Steve Westergaard', position: 'Software engineer' },
   { image: sebastian, name: 'Sebastian Borza', position: 'Founder engineer' },
+  { image: jonathan, name: 'Jonathan Lucas', position: 'Software engineer' },
   { image: andrea, name: 'Andrea Passwater', position: 'Lead Content Strategist' },
   { image: andre, name: 'André Pires', position: 'Lead Growth Designer' },
   { image: thom, name: 'Thom Crowe', position: 'Community manager' },
@@ -51,7 +53,7 @@ const teamMembers = [
 
 const OurTeam= () => (
   <AppContainer>
-    <Flex flexDirection='column' px={3}>
+    <Flex flexDirection='column'>
       <Flex justifyContent='center'>
         <TextWithIcon
           iconSrc={redRectangleDots}

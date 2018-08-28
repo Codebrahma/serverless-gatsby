@@ -17,7 +17,7 @@ const LearnColumn = () => (
       },
       {
         name: 'comparisions',
-        navProps: { to: learn.comparisions, completed: true },
+        navProps: { to: learn.comparisons, completed: true },
       },
       {
         name: 'case studies',

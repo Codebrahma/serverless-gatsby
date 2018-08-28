@@ -31,7 +31,7 @@ const Learn = () => (
     <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: learn.comparisions,
+          to: learn.comparisons,
           backgroundOnHover: true,
           completed: true,
         }}

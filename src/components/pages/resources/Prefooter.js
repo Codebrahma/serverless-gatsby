@@ -16,14 +16,14 @@ const actions = [
     },
   },
   {
-    name: 'serverless example',
+    name: 'serverless examples',
     navProps: {
       to: '/framework/docs/providers/aws/examples/',
       completed: false,
     },
   },
   {
-    name: 'github repo',
+    name: 'serverless plugins',
     navProps: {
       to: 'https://github.com/serverless/serverless',
       crossDomain: true,
@@ -32,7 +32,7 @@ const actions = [
   },
 ]
 
-const FrameworkPrefooter = () => (
+const ResourcesPrefooter = () => (
   <Prefooter
     heading='New to serverless?'
     sentences={sentences}
@@ -40,4 +40,4 @@ const FrameworkPrefooter = () => (
   />
 )
 
-export default FrameworkPrefooter
+export default ResourcesPrefooter

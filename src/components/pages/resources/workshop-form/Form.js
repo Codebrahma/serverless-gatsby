@@ -24,7 +24,7 @@ export default () => (
       mt={5}
       mb={[300, 300, 14]}
     >
-      <Row p={1}>
+      <Row>
         <TextWithIcon
           iconSrc={dotGridGrey}
           iconHeight="35px"
@@ -39,31 +39,25 @@ export default () => (
           </Heading.h4>
         </TextWithIcon>
       </Row>
-      <ResponsiveStack>
-        <Column
-          width={[1, 1, 1, 1/3]}
-          p={1}
-        >
+      <ResponsiveStack
+        justifyContent="space-between"
+        py={1}
+      >
+        <Column width={[1, 1, 3/10]} py={1}>
           <TextField placeholder="full name" />
         </Column>
-        <Column
-          width={[1, 1, 1, 1/3]}
-          p={1}
-        >
+        <Column width={[1, 1, 3/10]} py={1}>
           <TextField placeholder="email address" />
         </Column>
-        <Column
-          width={[1, 1, 1, 1/3]}
-          p={1}
-        >
+        <Column width={[1, 1, 3/10]} py={1}>
           <TextField placeholder="company" />
         </Column>
       </ResponsiveStack>
-      <ResponsiveStack>
-        <Column
-          width={[1, 1, 1, 1/3]}
-          p={1}
-        >
+      <ResponsiveStack
+        justifyContent="space-between"
+        py={1}
+      >
+        <Column width={[1, 1, 3/10]} py={1}>
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
@@ -98,10 +92,7 @@ export default () => (
             </Label>
           </Box>
         </Column>
-        <Column
-          width={[1, 1, 1, 1/3]}
-          p={1}
-        >
+        <Column width={[1, 1, 3/10]} py={1}>
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
@@ -136,10 +127,7 @@ export default () => (
             </Label>
           </Box>
         </Column>
-        <Column
-          width={[1, 1, 1, 1/3]}
-          p={1}
-        >
+        <Column width={[1, 1, 3/10]} py={1}>
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
@@ -194,7 +182,10 @@ export default () => (
         </Column>
       </ResponsiveStack>
 
-      <ResponsiveStack>
+      <ResponsiveStack
+        justifyContent="space-between"
+        py={1}
+      >
         <Column width={1}>
           <TextWithIcon
             iconSrc={dotGridGrey}

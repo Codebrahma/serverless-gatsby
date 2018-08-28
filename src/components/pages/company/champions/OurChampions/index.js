@@ -39,8 +39,8 @@ const champions = [
 
 const ChampionCard = ({ name, image, position }) => (
   <Relative
-    width={3/10}
-    mx={2}
+    width={[1, 1, 3/10]}
+    px={2}
   >
     <Image
       src={image}
@@ -72,7 +72,7 @@ const ChampionCard = ({ name, image, position }) => (
 
 const OurChampions = () => (
   <Container>
-    <Box my={4}>
+    <Box my={[1, 1, 2, 4]}>
       <Heading.h2
         align="center"
         fontFamily="SoleilSb"
@@ -93,7 +93,7 @@ const OurChampions = () => (
         </Text.p>
       }
     </Box>
-    <ResponsiveStack mt={3} my={12}>
+    <ResponsiveStack mt={[1, 2, 2, 3]} my={12}>
       {
         champions.map(({ name, image, position }) => (
           <ChampionCard

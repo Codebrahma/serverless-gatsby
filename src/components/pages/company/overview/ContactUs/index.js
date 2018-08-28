@@ -40,7 +40,7 @@ const ContactSection = ({ title, contents }) => (
 
 const OurStory = () => (
   <AppContainer>
-    <Column px={3} pt={8} pb={12}>
+    <Column px={3} pt={8} pb={[300, 300, 14]}>
       <Box>
         <TextWithIcon
           iconSrc={redRectangleDots}

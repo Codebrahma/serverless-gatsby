@@ -5,7 +5,7 @@ import glitchDivider from '../assets/images/glitch-divider.png'
 export default () => (
   <Box
     width={1}
-    py={8}
+    py={4}
     display={['none', 'none', 'block']}
   >
     <Image

@@ -7,6 +7,7 @@ import {
   InlineBlock,
   Button,
   Row,
+  ResponsiveStack,
   TextWithIcon,
 } from 'serverless-design-system/src'
 
@@ -19,48 +20,55 @@ import TextArea from '../../enterprise/Form/TextArea'
 
 export default () => (
   <AppContainer>
-    <Box mt={5} mb={[8, 8, 13]}>
-      <TextWithIcon
-        iconSrc={dotGridGrey}
-        iconHeight="35px"
-        iconWidth="45px"
-      >
-        <Heading.h4
-          fontFamily="SoleilBk"
-          lineHeight={3}
+    <Box
+      mt={5}
+      mb={[300, 300, 14]}
+    >
+      <Row p={1}>
+        <TextWithIcon
+          iconSrc={dotGridGrey}
+          iconHeight="35px"
+          iconWidth="45px"
+          backgroundSize="contain"
         >
-          Contact Information
-        </Heading.h4>
-      </TextWithIcon>
-      <Row>
+          <Heading.h4
+            fontFamily="SoleilBk"
+            lineHeight={3}
+          >
+            Contact Information
+          </Heading.h4>
+        </TextWithIcon>
+      </Row>
+      <ResponsiveStack>
         <Column
-          width={[1, 1, 1/3]}
+          width={[1, 1, 1, 1/3]}
           p={1}
         >
           <TextField placeholder="full name" />
         </Column>
         <Column
-          width={[1, 1, 1/3]}
+          width={[1, 1, 1, 1/3]}
           p={1}
         >
           <TextField placeholder="email address" />
         </Column>
         <Column
-          width={[1, 1, 1/3]}
+          width={[1, 1, 1, 1/3]}
           p={1}
         >
           <TextField placeholder="company" />
         </Column>
-      </Row>
-      <Row>
+      </ResponsiveStack>
+      <ResponsiveStack>
         <Column
-          width={[1, 1, 1/3]}
+          width={[1, 1, 1, 1/3]}
           p={1}
         >
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
             iconWidth="45px"
+            backgroundSize="contain"
           >
             <Heading.h4
               fontFamily="SoleilBk"
@@ -91,13 +99,14 @@ export default () => (
           </Box>
         </Column>
         <Column
-          width={[1, 1, 1/3]}
+          width={[1, 1, 1, 1/3]}
           p={1}
         >
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
             iconWidth="45px"
+            backgroundSize="contain"
           >
             <Heading.h4
               fontFamily="SoleilBk"
@@ -128,13 +137,14 @@ export default () => (
           </Box>
         </Column>
         <Column
-          width={[1, 1, 1/3]}
+          width={[1, 1, 1, 1/3]}
           p={1}
         >
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
             iconWidth="45px"
+            backgroundSize="contain"
           >
             <Heading.h4
               fontFamily="SoleilBk"
@@ -182,14 +192,15 @@ export default () => (
             </Label>
           </Box>
         </Column>
-      </Row>
+      </ResponsiveStack>
 
-      <Row>
+      <ResponsiveStack>
         <Column width={1}>
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
             iconWidth="45px"
+            backgroundSize="contain"
           >
             <Heading.h4
               fontFamily="SoleilBk"
@@ -203,11 +214,11 @@ export default () => (
             width={1}
           />
         </Column>
-      </Row>
+      </ResponsiveStack>
 
       <Row>
         <Column
-          mt={8}
+          mt={5}
           alignItems="center"
           width={1}
         >

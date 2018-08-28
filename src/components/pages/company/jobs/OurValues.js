@@ -1,16 +1,21 @@
 import React from 'react'
-
+import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
 
 const ourValuesContent = [
-  { header: 'Radical Candor', content: 'We have the courage to give and receive clear and constructive feedback that challenges us to do better, but also shows that we care.' },
-  { header: 'Camaraderie', content: 'We are a close-knit team that respects and supports each other. We celebrate our successes and have fun together.' },
-  { header: 'Collaboration', content: 'We know that it takes the whole team to succeed and when one of us wins we all win. We offer to help each other and strive to remove any roadblocks slowing our teammates down. We communicate expectations clearly through asynchronous communication and ask for help when we need it.' },
-  { header: 'Simplicity is King', content: 'It’s each to overly complicate language, code, and projects. We strive to create the most simple and elegant solutions. When communicating we ask, “How can I say this in five words instead of ten?”' },
+  { header: 'Radical Candor', content: 'We have the courage to give and receive constructive feedback that challenges us to do better, but also shows that we care.' },
+  { header: 'Freedom with accountability', content: 'We thrive in a state of freedom and autonomy. We own our outcomes, share the credit, and shoulder the responsibility.' },
+  { header: 'Futurew minded creativity', content: 'We make forward-thinking decisions for the long-term, not based on what others are doing right now. We identify root causes instead of treating symptoms.' },
+  { header: 'Integrity', content: 'We treat everyone with respect. Our team is incredibly diverse: in nationality, country of residence, and background, and we believe this diversity makes our team better. More than that, it’s necessary for our team to do the creative thinking required to be a market leader.”' },
 ]
 
 const OurValues = () => (
-  <Features features={ourValuesContent} />
+  <Box mb={[ 4, 4, 8 ]}>
+    <Features
+      features={ourValuesContent}
+      title="Our Values"
+    />
+  </Box>
 )
 
 export default OurValues

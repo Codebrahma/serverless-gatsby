@@ -1,4 +1,5 @@
 import React from 'react'
+import { push } from 'gatsby-link'
 import {
   Absolute,
   Background,
@@ -114,7 +115,11 @@ const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
                 `Dates for this workshop have not been finalized. Join the waitlist to get notified as soon as the dates are set.`
             }
           </P>
-          <SecondaryButton background='white' width={1}>
+          <SecondaryButton
+            background='white'
+            width={1}
+            onClick={() => push('/resources/workshops/form')}
+          >
             {isAvailable ? 'contact us' : 'join waitlist'}
           </SecondaryButton>
         </Relative>

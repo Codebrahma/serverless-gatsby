@@ -93,7 +93,11 @@ const OurChampions = () => (
         </Text.p>
       }
     </Box>
-    <ResponsiveStack mt={[1, 2, 2, 3]} my={12}>
+    <ResponsiveStack
+      justifyContent="center"
+      mt={[1, 2, 2, 3]}
+      my={12}
+    >
       {
         champions.map(({ name, image, position }) => (
           <ChampionCard

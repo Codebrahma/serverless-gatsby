@@ -1,8 +1,6 @@
 import React from 'react'
-
 import {
   Card,
-  Container,
   Flex,
   Box,
   TextWithIcon,
@@ -14,6 +12,7 @@ import {
   HorizontalRule,
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 import lionIcon from 'src/assets/images/lion-icon.png'
@@ -39,7 +38,7 @@ const memberReceivals = [
 
 // TODO: SDS should have withespace property
 const HowToBeChampion = () => (
-  <Container>
+  <AppContainer>
     <Flex.column pt={5}>
       <Flex flexDirection={['column', 'column', 'row']}>
         <Box width={[1, 1, 0.65]} px={2}>
@@ -129,7 +128,7 @@ const HowToBeChampion = () => (
         </Box>
       </Flex>
     </Flex.column>
-  </Container>
+  </AppContainer>
 )
 
 export default HowToBeChampion

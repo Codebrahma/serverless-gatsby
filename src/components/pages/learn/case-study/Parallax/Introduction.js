@@ -4,7 +4,7 @@ import { Flex, Box, Image, P, Text } from 'serverless-design-system/src'
 import parallaxLogo from 'src/assets/images/parallax-logo.png'
 
 const Introduction = () => (
-  <Flex flexDirection={['column', 'column', 'row']} mt={10} px={[4, 4, 0]}>
+  <Flex flexDirection={['column', 'column', 'row']} mt={[5, 5, 10]}>
     <Box width={[1, 1, 3/10]}>
       <Image
         src={parallaxLogo}

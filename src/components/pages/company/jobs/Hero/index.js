@@ -10,42 +10,44 @@ const JobsHero = () => (
     background={`url(${background})`}
     backgroundSize="contain"
   >
-    <Box mb={[2, 2, 5]}>
-      <HeroTabs />
-    </Box>
+    <Box px={[3, 3, 2]}>
+      <Box mb={[2, 2, 5]}>
+        <HeroTabs />
+      </Box>
 
-    <ResponsiveStack
-      mb={9}
-      color="white"
-    >
-      <Box width={[1, 1, 1/2]}>
-        <Text.p
-          fontSize={[7, 7, 7, 8]}
-          fontFamily="Soleil"
-          lineHeight={1}
-          letterSpacing={'-0.2'}
-          m={0}
-        >
-          Jobs
-        </Text.p>
-      </Box>
-      <Box
-        width={[1, 1, 1/2]}
-        pl={[0, 0, 4]}
-        pr={[0, 0, 6]}
+      <ResponsiveStack
+        mb={9}
+        color="white"
       >
-        <Text.p
-          fontSize={[2, 2, 4]}
-          fontFamily="SoleilLt"
-          lineHeight={3}
-          letterSpacing={0}
-          mt={[3, 3, 1]}
-          mb={3}
+        <Box width={[1, 1, 1/2]}>
+          <Text.p
+            fontSize={[7, 7, 7, 8]}
+            fontFamily="Soleil"
+            lineHeight={1}
+            letterSpacing={'-0.2'}
+            m={0}
+          >
+            Jobs
+          </Text.p>
+        </Box>
+        <Box
+          width={[1, 1, 1/2]}
+          pl={[0, 0, 4]}
+          pr={[0, 0, 6]}
         >
-          We empower developers to do more with less. Working at Serverless means that you’ll be surrounded by team members who are passionate about democratizing the serverless movement.
-        </Text.p>
-      </Box>
-    </ResponsiveStack>
+          <Text.p
+            fontSize={[2, 2, 4]}
+            fontFamily="SoleilLt"
+            lineHeight={3}
+            letterSpacing={0}
+            mt={[3, 3, 1]}
+            mb={3}
+          >
+            We empower developers to do more with less. Working at Serverless means that you’ll be surrounded by team members who are passionate about democratizing the serverless movement.
+          </Text.p>
+        </Box>
+      </ResponsiveStack>
+    </Box>
   </HeroWrapper>
 )
 

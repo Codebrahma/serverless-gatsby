@@ -1,6 +1,5 @@
 import React from 'react'
 import { withTheme } from 'styled-components'
-
 import { Background, Box, Container } from 'serverless-design-system/src'
 
 const HeroWrapper = ({ children, theme, ...otherProps }) => (

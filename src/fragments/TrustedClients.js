@@ -29,9 +29,9 @@ const TrustedClients = () => (
     <Container>
       <Box
         width={1}
-        pt={5}
+        pt={[0, 0, 5]}
         pb={[300, 300, 12, 12]}
-        px={[0, 0, 2, 6, 8]}
+        px={[15, 15, 2, 6, 8]}
       >
         <Heading.h5
           align="center"

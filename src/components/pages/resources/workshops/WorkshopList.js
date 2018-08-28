@@ -1,5 +1,4 @@
 import React from 'react'
-
 import {
   Absolute,
   Background,
@@ -7,11 +6,12 @@ import {
   Heading,
   P,
   SecondaryButton,
-  Container,
   Relative,
   ResponsiveStack,
   Text,
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import SanFranciscoImage from 'src/assets/images/san-francisco.png'
 import SeattleImage from 'src/assets/images/seattle.png'
 import NewYorkImage from 'src/assets/images/new-york.png'
@@ -124,7 +124,7 @@ const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
 )
 
 const WorkshopList = () => (
-  <Container>
+  <AppContainer>
     <ResponsiveStack
       mt={[5, 5, 5, 5, 8]}
       mb={12}
@@ -144,7 +144,7 @@ const WorkshopList = () => (
         ))
       }
     </ResponsiveStack>
-  </Container>
+  </AppContainer>
 )
 
 export default WorkshopList

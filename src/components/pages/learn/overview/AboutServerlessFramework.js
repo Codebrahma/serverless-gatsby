@@ -1,12 +1,20 @@
 import React from 'react'
+import {
+  Flex,
+  Box,
+  TextWithIcon,
+  Heading,
+  P,
+  Image
+} from 'serverless-design-system/src'
 
-import { Flex, Box, TextWithIcon, Heading, P, Image, Container } from 'serverless-design-system/src'
-import redRectangleDots from '../../../../assets/images/redRectangleDots.png'
-import learnDashboardAboutFramework from '../../../../assets/images/learnDashboardAboutFramework.png'
+import { AppContainer } from 'src/components'
+import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import learnDashboardAboutFramework from 'src/assets/images/learnDashboardAboutFramework.png'
 
 const AboutServerlessFramework = () => (
-  <Container>
-    <Flex flexDirection={['column', 'column', 'row']} px={3}>
+  <AppContainer>
+    <Flex flexDirection={['column', 'column', 'row']}>
       <Box width={[1, 1, 1/2]}>
         <TextWithIcon
           iconSrc={redRectangleDots}
@@ -26,7 +34,7 @@ const AboutServerlessFramework = () => (
           <Image src={learnDashboardAboutFramework} alt='about-serverless-framework' />
         </Box>
     </Flex>
-  </Container>
+  </AppContainer>
 )
 
 export default AboutServerlessFramework

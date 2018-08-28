@@ -1,7 +1,6 @@
 import React from 'react'
 
 import {
-  Container,
   Column,
   Flex,
   TextWithIcon,
@@ -10,12 +9,13 @@ import {
   ResponsiveStack
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 import investorTrinity from 'src/assets/images/trinity.png'
 import investorHeavyBit from 'src/assets/images/heavybit.png'
 
 const OurInvestors= () => (
-  <Container>
+  <AppContainer>
     <Column px={3}>
       <Flex.center>
         <TextWithIcon
@@ -53,7 +53,7 @@ const OurInvestors= () => (
         </ResponsiveStack>
       </Flex.center>
     </Column>
-  </Container>
+  </AppContainer>
 )
 
 export default OurInvestors

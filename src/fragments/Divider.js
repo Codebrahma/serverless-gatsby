@@ -10,6 +10,7 @@ export default () => (
   >
     <Image
       src={glitchDivider}
+      width={1}
       height="160px"
     />
   </Box>

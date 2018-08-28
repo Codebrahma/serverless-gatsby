@@ -1,19 +1,20 @@
 import React from 'react'
 
-import { Container, Flex } from 'serverless-design-system/src'
+import { Flex } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import Introduction from './Introduction'
 import Challenge from './Challenge'
 import WhyServerless from './WhyServerless'
 
 const Parallax = () => (
-  <Container>
+  <AppContainer>
     <Flex.column>
       <Introduction />
       <Challenge />
       <WhyServerless />
     </Flex.column>
-  </Container>
+  </AppContainer>
 )
 
 export default Parallax

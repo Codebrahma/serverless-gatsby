@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Box,
   Card,
-  Container,
   Flex,
   HorizontalRule,
   Image,
@@ -11,8 +10,8 @@ import {
   Text,
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import { AutoScrollList } from 'src/fragments'
-
 import LearnUsecase01 from 'src/assets/images/learnUsecase01.png'
 import LearnUsecase02 from 'src/assets/images/learnUsecase02.png'
 import LearnUsecase03 from 'src/assets/images/learnUsecase03.png'
@@ -216,11 +215,11 @@ const comparisonData = [
 ]
 
 const UseCaseScrollList = () => (
-  <Container>
+  <AppContainer>
     <ResponsiveStack my={[4, 4, 7, 8]}>
       <AutoScrollList listData={comparisonData} />
     </ResponsiveStack>
-  </Container>
+  </AppContainer>
 )
 
 export default UseCaseScrollList

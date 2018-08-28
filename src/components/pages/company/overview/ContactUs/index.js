@@ -2,7 +2,6 @@ import React from 'react'
 
 import {
   Box,
-  Container,
   Column,
   TextWithIcon,
   Heading,
@@ -10,6 +9,8 @@ import {
   ResponsiveStack,
   Text,
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 
 const contactUsContent = [
@@ -38,7 +39,7 @@ const ContactSection = ({ title, contents }) => (
 )
 
 const OurStory = () => (
-  <Container>
+  <AppContainer>
     <Column px={3} pt={8} pb={12}>
       <Box>
         <TextWithIcon
@@ -82,7 +83,7 @@ const OurStory = () => (
         }
       </ResponsiveStack>
     </Column>
-  </Container>
+  </AppContainer>
 )
 
 export default OurStory

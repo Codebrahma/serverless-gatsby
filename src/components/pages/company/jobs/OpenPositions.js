@@ -1,14 +1,13 @@
 import React from 'react'
 
 import {
-  Box,
   Column,
   Flex,
-  Container,
   Heading,
-  P,
   ResponsiveStack
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'
 
 const jobs = [
@@ -45,7 +44,7 @@ const jobs = [
 ]
 
 const OpenPositions = () => (
-  <Container>
+  <AppContainer>
     <Column>
       <Flex justifyContent='center'>
         <Heading.h2 fontFamily='SoleilSb'>
@@ -60,7 +59,7 @@ const OpenPositions = () => (
         <ServerlessUserGroupStack items={jobs} />
       </ResponsiveStack>
     </Column>
-  </Container>
+  </AppContainer>
 )
 
 export default OpenPositions

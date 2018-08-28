@@ -1,5 +1,4 @@
 import React from 'react'
-
 import {
   Box,
   Flex,
@@ -7,10 +6,11 @@ import {
   Heading,
   InlineBlock,
   Button,
-  Container,
   Row,
   TextWithIcon,
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import dotGridGrey from 'src/assets/images/dot-grid-grey.png'
 import TextField from '../../enterprise/Form/TextField'
 import Checkbox from '../../enterprise/Form/Checkbox'
@@ -18,7 +18,7 @@ import Label from '../../enterprise/Form/Label'
 import TextArea from '../../enterprise/Form/TextArea'
 
 export default () => (
-  <Container>
+  <AppContainer>
     <Box mt={5} mb={[8, 8, 13]}>
       <TextWithIcon
         iconSrc={dotGridGrey}
@@ -215,5 +215,5 @@ export default () => (
         </Column>
       </Row>
     </Box>
-  </Container>
+  </AppContainer>
 )

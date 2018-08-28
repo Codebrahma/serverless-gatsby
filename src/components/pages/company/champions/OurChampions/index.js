@@ -5,7 +5,6 @@ import {
   Background,
   Flex,
   Box,
-  Container,
   Image,
   P,
   Heading,
@@ -14,6 +13,7 @@ import {
   ResponsiveStack
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import Champion1 from 'src/assets/images/champion1.png'
 import Champion2 from 'src/assets/images/champion2.png'
 import Champion3 from 'src/assets/images/champion3.png'
@@ -71,7 +71,7 @@ const ChampionCard = ({ name, image, position }) => (
 )
 
 const OurChampions = () => (
-  <Container>
+  <AppContainer>
     <Box my={[1, 1, 2, 4]}>
       <Heading.h2
         align="center"
@@ -105,7 +105,7 @@ const OurChampions = () => (
         ))
       }
     </ResponsiveStack>
-  </Container>
+  </AppContainer>
 )
 
 export default OurChampions

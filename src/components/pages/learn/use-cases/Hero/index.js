@@ -10,52 +10,54 @@ const UseCasesHero = () => (
     background={`url(${background})`}
     backgroundSize="contain"
   >
-    <Box mb={[2, 2, 5]}>
-      <HeroTabs />
-    </Box>
+    <Box px={[3, 3, 2]}>
+      <Box mb={[2, 2, 5]}>
+        <HeroTabs />
+      </Box>
 
-    <ResponsiveStack
-      mb={5}
-      color="white"
-    >
-      <Box width={[1, 1, 1/2]}>
-        <Text.p
-          fontSize={[7, 7, 7, 8]}
-          fontFamily="Soleil"
-          lineHeight={1}
-          letterSpacing={'-0.2'}
-          m={0}
-        >
-          Use Cases
-        </Text.p>
-      </Box>
-      <Box
-        width={[1, 1, 1/2]}
-        pl={[0, 0, 4]}
-        pr={[0, 0, 6]}
+      <ResponsiveStack
+        mb={5}
+        color="white"
       >
-        <Text.p
-          fontSize={[2, 2, 4]}
-          fontFamily="SoleilLt"
-          lineHeight={3}
-          letterSpacing={0}
-          mt={[3, 3, 1]}
-          mb={3}
+        <Box width={[1, 1, 1/2]}>
+          <Text.p
+            fontSize={[7, 7, 7, 8]}
+            fontFamily="Soleil"
+            lineHeight={1}
+            letterSpacing={'-0.2'}
+            m={0}
+          >
+            Use Cases
+          </Text.p>
+        </Box>
+        <Box
+          width={[1, 1, 1/2]}
+          pl={[0, 0, 4]}
+          pr={[0, 0, 6]}
         >
-          More and more developers are moving to Serverless as a way to increase velocity and decrease monotony.
-        </Text.p>
-        <Text.p
-          fontSize={[2, 2, 4]}
-          fontFamily="SoleilLt"
-          lineHeight={3}
-          letterSpacing={0}
-          mt={[3, 3, 5]}
-          mb={3}
-        >
-          Here we describe some core use cases for serverless, though we encourage you to think beyond them. Serverless is incredibly flexible and can be used to address a wide variety of application problems. It is also extensible, making it easy to build in use cases that are not currently supported.
-        </Text.p>
-      </Box>
-    </ResponsiveStack>
+          <Text.p
+            fontSize={[2, 2, 4]}
+            fontFamily="SoleilLt"
+            lineHeight={3}
+            letterSpacing={0}
+            mt={[3, 3, 1]}
+            mb={3}
+          >
+            More and more developers are moving to Serverless as a way to increase velocity and decrease monotony.
+          </Text.p>
+          <Text.p
+            fontSize={[2, 2, 4]}
+            fontFamily="SoleilLt"
+            lineHeight={3}
+            letterSpacing={0}
+            mt={[3, 3, 5]}
+            mb={3}
+          >
+            Here we describe some core use cases for serverless, though we encourage you to think beyond them. Serverless is incredibly flexible and can be used to address a wide variety of application problems. It is also extensible, making it easy to build in use cases that are not currently supported.
+          </Text.p>
+        </Box>
+      </ResponsiveStack>
+    </Box>
   </HeroWrapper>
 )
 

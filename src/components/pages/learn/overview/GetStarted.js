@@ -1,42 +1,46 @@
 import React from 'react'
-
 import {
+  Box,
   Background,
   Column,
+  Container,
   SecondaryButton,
   Text,
-  Container,
 } from 'serverless-design-system/src'
+
 import learnOverviewGetStartedBg from 'src/assets/images/learnOverviewGetStarted.png'
 
 const GetStarted = () => (
   <Container>
-    <Background
-      backgroundImage={`url(${learnOverviewGetStartedBg})`}
-      backgroundSize='cover'
-    >
-      <Column
-        justifyContent='center'
-        alignItems='center'
-        minHeight="280px"
-        pb={4}
+    <Box px={[0, 0, 15]}>
+      <Background
+        backgroundImage={`url(${learnOverviewGetStartedBg})`}
+        backgroundSize='cover'
       >
-        <Text.p
-          align='center'
-          color='white'
-          fontSize={5}
-          lineHeight={4}
-          letterSpacing={"0.3px"}
-          mt={3}
-          mb={4}
+        <Column
+          justifyContent='center'
+          alignItems='center'
+          minHeight="280px"
+          px={25}
+          pb={4}
         >
-          focus on your business logic, not on your servers.
-        </Text.p>
-        <SecondaryButton background='white'>
-          get started
-        </SecondaryButton>
-      </Column>
-    </Background>
+          <Text.p
+            align='center'
+            color='white'
+            fontSize={5}
+            lineHeight={4}
+            letterSpacing={"0.3px"}
+            mt={3}
+            mb={4}
+          >
+            focus on your business logic, not on your servers.
+          </Text.p>
+          <SecondaryButton background='white'>
+            get started
+          </SecondaryButton>
+        </Column>
+      </Background>
+    </Box>
   </Container>
 )
 

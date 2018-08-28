@@ -4,11 +4,11 @@ import {
   Background,
   Box,
   Column,
-  Container,
   Heading,
   Image,
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import resourcesMeetupMap from 'src/assets/images/resourcesMeetupMap.png'
 import glitchDivider from 'src/assets/images/glitch-divider.png'
 
@@ -37,14 +37,14 @@ const Introduction = () => (
         backgroundRepeat="no-repeat"
         width={1}
       >
-        <Container>
+        <AppContainer>
           <Column alignItems="center">
             <Image
               src={resourcesMeetupMap}
               alt="resources-map"
             />
           </Column>
-        </Container>
+        </AppContainer>
       </Background>
     </Box>
   </Column>

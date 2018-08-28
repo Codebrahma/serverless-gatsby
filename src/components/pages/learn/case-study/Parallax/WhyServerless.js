@@ -19,7 +19,7 @@ import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
 import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const WhyServerless = () => (
-  <ResponsiveStack mt={6} px={3}>
+  <ResponsiveStack mt={6}>
     <Box width={[1, 1, 5/10]}>
       <TextWithIcon
         iconSrc={RedRectangleDots}

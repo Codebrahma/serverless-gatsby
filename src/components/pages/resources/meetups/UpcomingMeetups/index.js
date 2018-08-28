@@ -1,13 +1,12 @@
 import React from 'react'
-
 import {
-  Container,
   Column,
   ResponsiveStack,
   Heading,
   TextWithIcon
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import MeetupCard from 'src/fragments/UpcomingMeetupCard'
 
 import meetupMember11 from 'src/assets/images/meetupMember11.png'
@@ -50,7 +49,7 @@ const meetupData = [
 ]
 
 const UpcomingMeetups = () => (
-  <Container>
+  <AppContainer>
     <Column alignItems='center' py={5}>
       <TextWithIcon
         iconSrc={redRectangleDots}
@@ -84,7 +83,7 @@ const UpcomingMeetups = () => (
         }
       </ResponsiveStack>
     </Column>
-  </Container>
+  </AppContainer>
 )
 
 export default UpcomingMeetups

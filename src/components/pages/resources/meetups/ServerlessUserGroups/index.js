@@ -1,6 +1,7 @@
 import React from 'react'
+import { Background, Box, Heading } from 'serverless-design-system/src'
 
-import { Background, Box, Container, Heading } from 'serverless-design-system/src'
+import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'
 import dotsBackground from 'src/assets/images/dots-background.png'
 
@@ -31,7 +32,7 @@ const ServerlessUserGroups = () => (
     background={`url(${dotsBackground})`}
     backgroundSize="cover"
   >
-    <Container>
+    <AppContainer>
       <Box pb={13}>
         <Heading.h4
           fontFamily="SoleilBk"
@@ -44,7 +45,7 @@ const ServerlessUserGroups = () => (
         </Heading.h4>
         <ServerlessUserGroupStack items={items} />
       </Box>
-    </Container>
+    </AppContainer>
   </Background>
 )
 

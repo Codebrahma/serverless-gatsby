@@ -10,42 +10,44 @@ const UseCasesHero = () => (
     background={`url(${background})`}
     backgroundSize="contain"
   >
-    <Box mb={[2, 2, 5]}>
-      <HeroTabs />
-    </Box>
+    <Box px={[3, 3, 2]}>
+      <Box mb={[2, 2, 5]}>
+        <HeroTabs />
+      </Box>
 
-    <ResponsiveStack
-      mb={9}
-      color="white"
-    >
-      <Box width={[1, 1, 1/2]}>
-        <Text.p
-          fontSize={[7, 7, 7, 8]}
-          fontFamily="Soleil"
-          lineHeight={1}
-          letterSpacing={'-0.2'}
-          m={0}
-        >
-          Workshops
-        </Text.p>
-      </Box>
-      <Box
-        width={[1, 1, 1/2]}
-        pl={[0, 0, 4]}
-        pr={[0, 0, 6]}
+      <ResponsiveStack
+        mb={9}
+        color="white"
       >
-        <Text.p
-          fontSize={[2, 2, 4]}
-          fontFamily="SoleilLt"
-          lineHeight={3}
-          letterSpacing={0}
-          mt={[3, 3, 1]}
-          mb={3}
+        <Box width={[1, 1, 1/2]}>
+          <Text.p
+            fontSize={[7, 7, 7, 8]}
+            fontFamily="Soleil"
+            lineHeight={1}
+            letterSpacing={'-0.2'}
+            m={0}
+          >
+            Workshops
+          </Text.p>
+        </Box>
+        <Box
+          width={[1, 1, 1/2]}
+          pl={[0, 0, 4]}
+          pr={[0, 0, 6]}
         >
-          Serverless Developer Workshops are a full day focused on training for serverless development. Learn about testing, security and operations. These workshops will empower developers and technology leaders to operationalize serverless across their organization.
-        </Text.p>
-      </Box>
-    </ResponsiveStack>
+          <Text.p
+            fontSize={[2, 2, 4]}
+            fontFamily="SoleilLt"
+            lineHeight={3}
+            letterSpacing={0}
+            mt={[3, 3, 1]}
+            mb={3}
+          >
+            Serverless Developer Workshops are a full day focused on training for serverless development. Learn about testing, security and operations. These workshops will empower developers and technology leaders to operationalize serverless across their organization.
+          </Text.p>
+        </Box>
+      </ResponsiveStack>
+    </Box>
   </HeroWrapper>
 )
 

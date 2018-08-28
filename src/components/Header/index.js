@@ -1,6 +1,7 @@
 import React from 'react'
-import { Background, Box, Container, Flex } from 'serverless-design-system/src'
+import { Background, Box, Flex } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import Logo from './Logo'
 import Navbar from './Navbar'
 import NavButton from './NavButton'
@@ -65,11 +66,10 @@ class Header extends React.Component {
           ]}
         >
           <Box py={[2, 2, 0]}>
-            <Container>
+            <AppContainer>
               <Flex.verticallyCenter
                 flexWrap='wrap'
                 justifyContent='space-between'
-                px={15}
               >
                 <Logo />
                 <NavbarContext.Provider value={this.state}>
@@ -77,7 +77,7 @@ class Header extends React.Component {
                   <Navbar />
                 </NavbarContext.Provider>
               </Flex.verticallyCenter>
-            </Container>
+            </AppContainer>
           </Box>
         </Background>
       </HeaderWrapper>

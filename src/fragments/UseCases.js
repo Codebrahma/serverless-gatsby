@@ -1,14 +1,12 @@
 import React from 'react'
+import { Box, Flex, P, UseCase } from 'serverless-design-system/src'
 
-import { Box, Container, Flex, P, UseCase } from 'serverless-design-system/src'
+import { AppContainer } from 'src/components'
 
 const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
   return (
-    <Container>
-      <Flex.horizontallyCenter
-        flexDirection='column'
-        px={2}
-      >
+    <AppContainer>
+      <Flex.horizontallyCenter flexDirection='column'>
         <Box mt={[5, 5, 8]} mb={2}>
           <P
             align={['left', 'left', 'center']}
@@ -22,19 +20,21 @@ const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
             {useCaseSubHeader}
           </P>
         </Box>
-        <Box mx={1}>
-          {cases.map(({ title, description, imgSrc }, index) => (
-            <UseCase
-              key={title}
-              title={title}
-              description={description}
-              imgSrc={imgSrc}
-              imageFirst={index % 2 === 1}
-            />
-          ))}
+        <Box>
+          {
+            cases.map(({ title, description, imgSrc }, index) => (
+              <UseCase
+                key={title}
+                title={title}
+                description={description}
+                imgSrc={imgSrc}
+                imageFirst={index % 2 === 1}
+              />
+            ))
+          }
         </Box>
       </Flex.horizontallyCenter>
-    </Container>
+    </AppContainer>
   )
 }
 

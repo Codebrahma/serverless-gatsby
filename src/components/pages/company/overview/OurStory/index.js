@@ -1,7 +1,6 @@
 import React from 'react'
 
 import {
-  Container,
   Column,
   P,
   TextWithIcon,
@@ -9,10 +8,11 @@ import {
   ResponsiveStack,
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 
 const OurStory = () => (
-  <Container>
+  <AppContainer>
     <ResponsiveStack
       px={3}
       my={4}
@@ -54,7 +54,7 @@ const OurStory = () => (
         </P>
       </Column>
     </ResponsiveStack>
-  </Container>
+  </AppContainer>
 )
 
 export default OurStory

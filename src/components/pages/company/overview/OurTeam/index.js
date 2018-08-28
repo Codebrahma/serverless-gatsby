@@ -1,7 +1,8 @@
 import React from 'react'
 
-import { Container, Flex, TextWithIcon, Heading } from 'serverless-design-system/src'
+import { Flex, TextWithIcon, Heading } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import { TeamMemberImageCard } from 'src/fragments'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 import austin from 'src/assets/images/team/austin.png'
@@ -49,7 +50,7 @@ const teamMembers = [
 ]
 
 const OurTeam= () => (
-  <Container>
+  <AppContainer>
     <Flex flexDirection='column' px={3}>
       <Flex justifyContent='center'>
         <TextWithIcon
@@ -83,7 +84,7 @@ const OurTeam= () => (
         }
       </Flex>
     </Flex>
-  </Container>
+  </AppContainer>
 )
 
 export default OurTeam

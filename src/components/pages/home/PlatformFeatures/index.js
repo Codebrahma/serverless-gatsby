@@ -1,15 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
 import {
   Box,
   Button,
-  Container,
   Flex,
   Heading,
   ImageCard,
   ResponsiveStack,
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import frameworkImage from 'src/assets/images/illustration-1.png'
 import dashboardImage from 'src/assets/images/illustration-2.png'
 import gatewayImage from 'src/assets/images/illustration-3.png'
@@ -36,7 +36,7 @@ const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
 )
 
 const PlatformFeatures = () => (
-  <Container>
+  <AppContainer>
     <Box mx={2} mt={7}>
       <Heading.h2
         fontFamily='SoleilSb'
@@ -48,7 +48,9 @@ const PlatformFeatures = () => (
         applications, on any provider.
       </Heading.h2>
     </Box>
-    <ResponsiveStack.spaceBetween my={6}>
+    <ResponsiveStack.spaceBetween
+      my={[5, 5, 5, 6]}
+    >
       <PlatformFeature
         image={frameworkImage}
         title='Serverless Framework'
@@ -68,7 +70,7 @@ const PlatformFeatures = () => (
         learnMoreLink='/event-gateway'
       />
     </ResponsiveStack.spaceBetween>
-  </Container>
+  </AppContainer>
 )
 
 export default PlatformFeatures

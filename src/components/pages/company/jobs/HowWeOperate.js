@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   Card,
-  Container,
   Column,
   Box,
   P,
@@ -14,6 +13,7 @@ import {
   ResponsiveStack,
 } from 'serverless-design-system/src'
 
+import { AppContainer } from 'src/components'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 import team from 'src/assets/images/team.png'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
@@ -27,7 +27,7 @@ const benefitList = [
 ]
 
 const HowWeOperate = () => (
-  <Container>
+  <AppContainer>
     <Column>
       <TextWithIcon
         iconSrc={redRectangleDots}
@@ -111,7 +111,7 @@ const HowWeOperate = () => (
         <Image src={team} width={1} mt={4} />
       </Box>
     </Column>
-  </Container>
+  </AppContainer>
 )
 
 export default HowWeOperate

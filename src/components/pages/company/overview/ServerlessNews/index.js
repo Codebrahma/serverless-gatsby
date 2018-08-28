@@ -2,12 +2,13 @@ import React from 'react'
 
 import {
   Background,
-  Container,
   Column,
   P,
   Heading,
   Box
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'
 import dotsBackground from 'src/assets/images/dots-background.png'
 
@@ -31,7 +32,7 @@ const NewsCard = ({ news: { title, publisher } }) => (
 )
 
 const OurTeam= () => (
-  <Container>
+  <AppContainer>
     <Background
       background={`url(${dotsBackground})`}
       backgroundSize="cover"
@@ -43,7 +44,7 @@ const OurTeam= () => (
         <ServerlessUserGroupStack items={newsList} />
       </Column>
     </Background>
-  </Container>
+  </AppContainer>
 )
 
 export default OurTeam

@@ -19,7 +19,7 @@ class AutoScrollListItem extends React.Component {
     return (
       <Flex.column
         mb={[5, 5, 7, 8]}
-        px={3}
+        px={[0, 0, 3]}
       >
         <Box mb={5}>
           <TextWithIcon

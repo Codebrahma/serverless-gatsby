@@ -7,19 +7,23 @@ const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
   return (
     <AppContainer>
       <Flex.horizontallyCenter flexDirection='column'>
-        <Box mt={[5, 5, 8]} mb={2}>
-          <P
-            align={['left', 'left', 'center']}
-            fontSize={6}
-            color='black'
-            m={1}
-          >
-            {useCaseHeader}
-          </P>
-          <P align='center' fontSize={0}>
-            {useCaseSubHeader}
-          </P>
-        </Box>
+        {
+          ( useCaseHeader || useCaseSubHeader ) && (
+            <Box mt={[5, 5, 8]} mb={2}>
+              <P
+                align={['left', 'left', 'center']}
+                fontSize={6}
+                color='black'
+                m={1}
+              >
+                {useCaseHeader}
+              </P>
+              <P align='center' fontSize={0}>
+                {useCaseSubHeader}
+              </P>
+            </Box>
+          )
+        }
         <Box>
           {
             cases.map(({ title, description, imgSrc }, index) => (

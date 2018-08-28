@@ -6,7 +6,7 @@ import learnOverviewUsecase2 from 'src/assets/images/learnOverviewUsecase2.png'
 
 const cases = [
   {
-    title: 'The serverless movement',
+    title: 'The Serverless Movement',
     description:
       'Serverless has become a movement about developer empowerment. As a technology, it abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding. What this means is that you, the developer, can rapidly build apps that handle production-ready traffic. You dont have to actively manage scaling for your applications. You dont have to provision servers, or pay for resources that go unused. The technology is still early, but thousands of developers are already proving that serverless can enavle them to launch applications at record speed and cost.',
     imgSrc: learnOverviewUsecase1,
@@ -20,9 +20,7 @@ const cases = [
 ]
 
 const UseCaseWrapper = () => (
-  <UseCases
-    cases={cases}
-  />
+  <UseCases cases={cases} />
 )
 
 export default UseCaseWrapper

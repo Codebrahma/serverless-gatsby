@@ -29,7 +29,7 @@ const ServerlessUserGroupStack = ({ items }) => (
     breakpointCols={breakpointCols}
   >
     {
-      items.map(({ title, location }, index) => (
+      items.map(({ heading, title, location }, index) => (
         <Column
           key={`${title}-${index}`}
           width={['90%', '90%', '90%']}
@@ -44,6 +44,17 @@ const ServerlessUserGroupStack = ({ items }) => (
               border='1px solid #eaeaea'
               p={[2, 2, 3]}
             >
+              {
+                heading ? (
+                  <Heading.h6
+                    fontFamily="Soleil"
+                    fontSize={0}
+                    color="gray.3"
+                  >
+                    { heading }
+                  </Heading.h6>
+                ) : null
+              }
               <Heading.h5
                 fontFamily="SoleilBk"
                 fontSize={[2, 2, 4]}

@@ -8,9 +8,41 @@ import {
   Image,
   List,
   ListItem,
-  Text
+  Text,
+  Transition,
+  withBeforeAfter,
 } from 'serverless-design-system/src'
-import RedRectangleDots from '../../assets/images/redRectangleDots.png'
+import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
+
+const TitleWrapperWithLeadingSlash = withBeforeAfter(
+  Transition,
+  `&`,
+  `
+    position: absolute;
+    content: ' ';
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin-top: -12.5px;
+    top: 50%;
+    transition: all .2s;
+    transition-property: height, width;
+  `,
+  ``,
+  `
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        height: 25px;
+        width: 5px;
+        transform: rotateZ(200deg);
+      }
+    }
+  `
+)
 
 class AutoScrollListItem extends React.Component {
   render() {
@@ -80,13 +112,29 @@ class AutoScrollList extends React.Component {
                   styleType='none'
                   onClick={() => this.scrollToListItem(index)}
                 >
-                  <Text.span
-                    fontSize={1}
-                    lineHeight={1}
-                    letterSpacing="0.6px"
+                  <TitleWrapperWithLeadingSlash
+                    transition={[
+                      'none',
+                      'none',
+                      'none',
+                      'padding 0.5s',
+                    ]}
+                    beforeBoxBackgroundColor={[
+                      'transparent',
+                      'transparent',
+                      'transparent',
+                      'primaryColor',
+                    ]}
+                    beforeBoxLeft={[0, 0, 0, '-10px']}
                   >
-                    {title}
-                  </Text.span>
+                    <Text.span
+                      fontSize={1}
+                      lineHeight={1}
+                      letterSpacing="0.6px"
+                    >
+                      {title}
+                    </Text.span>
+                  </TitleWrapperWithLeadingSlash>
                 </ListItem>
               ))
             }

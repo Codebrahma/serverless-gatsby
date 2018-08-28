@@ -3,27 +3,27 @@ import React from 'react'
 import Prefooter from 'src/components/Prefooter'
 
 const sentences = [
-  'To get started, pop open your terminal & run:',
-  'npm install serverless -g',
+  `Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.`,
+  `Or if you’re ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.`
 ]
 
 const actions = [
   {
-    name: 'documentation',
+    name: 'use cases',
     navProps: {
       to: '/framework/docs',
       completed: false,
     },
   },
   {
-    name: 'serverless example',
+    name: 'comparisons',
     navProps: {
       to: '/framework/docs/providers/aws/examples/',
       completed: false,
     },
   },
   {
-    name: 'github repo',
+    name: 'case studies',
     navProps: {
       to: 'https://github.com/serverless/serverless',
       crossDomain: true,
@@ -34,7 +34,7 @@ const actions = [
 
 const OverviewPrefooter = () => (
   <Prefooter
-    heading='New to serverless?'
+    heading='Next Steps'
     sentences={sentences}
     actions={actions}
   />

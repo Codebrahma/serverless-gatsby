@@ -1,9 +1,7 @@
 import React from 'react'
-import { Flex, Box } from 'serverless-design-system/src'
 
 import DefaultLayout from 'src/layouts/Default'
-
-import Prefooter from 'src/components/pages/learn/comparisons/Prefooter'
+import Prefooter from 'src/components/pages/learn/Prefooter'
 import Hero from 'src/components/pages/learn/comparisons/Hero'
 import ComparisonScrollList from 'src/components/pages/learn/comparisons/comparisonScrollList'
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 import DefaultLayout from 'src/layouts/Default'
 
-import Prefooter from 'src/components/pages/learn/overview/Prefooter'
+import Prefooter from 'src/components/pages/learn/Prefooter'
 import Hero from 'src/components/pages/learn/overview/Hero'
 import UseCase from 'src/components/pages/learn/overview/UseCase'
 import ServerlessAppBenefits from 'src/components/pages/learn/overview/AppBenefits'

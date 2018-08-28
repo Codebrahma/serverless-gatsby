@@ -62,14 +62,21 @@ class AutoScrollList extends React.Component {
     const { listData } = this.props
     return (
       <React.Fragment>
-        <Box width={[1, 1, 1/3]}>
-          <List m={0}>
+        <Box
+          display={['none', 'none', 'none', 'block']}
+          width={1/3}
+          pr={8}
+        >
+          <List
+            m={0}
+            p={0}
+          >
             {
               listData.map(({ title }, index) => (
                 <ListItem
                   key={title}
                   pb={2}
-                  px={3}
+                  px={0}
                   styleType='none'
                   onClick={() => this.scrollToListItem(index)}
                 >
@@ -85,7 +92,7 @@ class AutoScrollList extends React.Component {
             }
           </List>
         </Box>
-        <Box width={[1, 1, 2/3]}>
+        <Box width={[1, 1, 1, 2/3]}>
           {
             listData.map((item, index) => (
               <AutoScrollListItem

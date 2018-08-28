@@ -19,9 +19,9 @@ const platformMenuConfig = [
   {
     imgProps: {
       src: frameworkIcon,
-      maxHeight: '52px',
+      height: '52px',
       ml: '8px',
-      mr: '43px',
+      mr: ['15px', '15px', '15px', '30px'],
     },
     text: 'framework',
     to: platform.framework,
@@ -31,8 +31,8 @@ const platformMenuConfig = [
   {
     imgProps: {
       src: gatewayIcon,
-      maxHeight: '40px',
-      mr: '30px',
+      height: '40px',
+      mr: ['15px', '15px', '15px', '30px'],
     },
     text: 'event gateway',
     to: platform.eventGateway,
@@ -42,8 +42,8 @@ const platformMenuConfig = [
   {
     imgProps: {
       src: dashboardIcon,
-      maxHeight: '40px',
-      mr: '30px',
+      height: '40px',
+      mr: ['15px', '15px', '15px', '30px'],
     },
     text: 'dashboard',
     to: platform.dashboard,
@@ -53,9 +53,9 @@ const platformMenuConfig = [
 ]
 
 const Platform = () => (
-  <List m={0} ml={[4, 4, 0]} p={0}>
+  <List m={0} ml={[2, 2, 0]} p={0}>
     {platformMenuConfig.map(
-      ({ imgProps: { src, maxHeight, ...imgContainerProps }, text, to, crossDomain, completed }, index) => (
+      ({ imgProps: { src, height, ...imgContainerProps }, text, to, crossDomain, completed }, index) => (
         <NavLink
           key={index}
           to={to}
@@ -70,7 +70,8 @@ const Platform = () => (
                 <InlineBlock {...imgContainerProps}>
                   <Image
                     src={src}
-                    maxHeight={maxHeight}
+                    height={height}
+                    width="auto"
                   />
                 </InlineBlock>
                 <InlineBlock minWidth='155px'>

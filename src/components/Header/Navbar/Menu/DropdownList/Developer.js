@@ -64,7 +64,7 @@ const quickStartOptions = [
 
 const examplesOptions = [
   {
-    name: `api's`,
+    name: `APIs`,
     to: developers.examples,
     crossDomain: false,
     completed: false,

@@ -44,9 +44,19 @@ export default ({ data, selected }) => (
     <Box display={[ 'block', 'block', 'none' ]}>
       <DropDown
         options={data}
-        value='overview'
-        fieldContainerProps={{ background: 'transparent' }}
+        value={selected}
+        fieldContainerProps={{
+          background: `url(${selectedTabBackground})`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+        }}
         placeholderProps={{ color: 'white' }}
+        onChange={({ value }) => (
+          data.every((tabData) => {
+            if (value !== tabData.value) { return true }
+            onTabSelect(tabData)
+          })
+        )}
       />
     </Box>
   </Box>

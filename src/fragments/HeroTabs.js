@@ -27,7 +27,7 @@ export default ({ data, selected }) => (
             align: 'center',
           }}
           tabContainerStyle={{
-            minWidth: '140px',
+            minWidth: '120px',
             px: 2,
             py: '16px',
           }}

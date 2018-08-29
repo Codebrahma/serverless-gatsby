@@ -1,18 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
+  Absolute,
   Box,
+  Background,
   Flex,
   TextWithIcon,
   Heading,
   Image,
   List,
   ListItem,
+  Relative,
+  ResponsiveStack,
   Text,
   Transition,
   withBeforeAfter,
 } from 'serverless-design-system/src'
 import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
+import sidebarBackground from 'src/assets/images/sidebar-background.png'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
   Transition,
@@ -53,7 +58,7 @@ class AutoScrollListItem extends React.Component {
         mb={[5, 5, 7, 8]}
         px={[0, 0, 3]}
       >
-        <Box mb={5}>
+        <Relative mb={5}>
           <TextWithIcon
             iconSrc={RedRectangleDots}
             iconHeight="30px"
@@ -71,7 +76,7 @@ class AutoScrollListItem extends React.Component {
               {title}
             </Heading.h2>
           </TextWithIcon>
-        </Box>
+        </Relative>
         <Image
           src={image}
           alt={title}
@@ -87,20 +92,34 @@ class AutoScrollListItem extends React.Component {
 class AutoScrollList extends React.Component {
   scrollToListItem = (scrollToIndex) => {
     const domNode = ReactDOM.findDOMNode(this[scrollToIndex])
+    console.log(domNode.offsetTop - 100)
     window.scrollTo(0, domNode.offsetTop - 100)
   }
 
   render() {
     const { listData } = this.props
     return (
-      <React.Fragment>
-        <Box
+      <ResponsiveStack>
+        <Relative
           display={['none', 'none', 'none', 'block']}
           width={1/3}
           pr={8}
         >
+          <Absolute
+            height="fullHeight"
+            width={1}
+            left={-25}
+          >
+            <Background
+              height="fullHeight"
+              width={1}
+              background={`url(${sidebarBackground})`}
+              backgroundSize="cover"
+            />
+          </Absolute>
           <List
-            m={0}
+            my={[4, 4, 6, 8]}
+            mx={0}
             p={0}
           >
             {
@@ -139,8 +158,11 @@ class AutoScrollList extends React.Component {
               ))
             }
           </List>
-        </Box>
-        <Box width={[1, 1, 1, 2/3]}>
+        </Relative>
+        <Box
+          width={[1, 1, 1, 2/3]}
+          py={[4, 4, 6, 8]}
+        >
           {
             listData.map((item, index) => (
               <AutoScrollListItem
@@ -148,13 +170,12 @@ class AutoScrollList extends React.Component {
                 title={item.title}
                 body={item.body}
                 image={item.image}
-                scrollToListItem={this.scrollToListItem}
                 ref={ ref => { this[index] = ref } }
               />
             ))
           }
         </Box>
-      </React.Fragment>
+      </ResponsiveStack>
     )
   }
 }

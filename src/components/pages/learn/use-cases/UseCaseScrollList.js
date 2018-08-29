@@ -216,9 +216,7 @@ const comparisonData = [
 
 const UseCaseScrollList = () => (
   <AppContainer>
-    <ResponsiveStack my={[4, 4, 7, 8]}>
-      <AutoScrollList listData={comparisonData} />
-    </ResponsiveStack>
+    <AutoScrollList listData={comparisonData} />
   </AppContainer>
 )
 

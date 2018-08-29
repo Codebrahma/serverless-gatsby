@@ -91,12 +91,7 @@ const comparisonData = [
 
 const ComparisionsScrollList = () => (
   <AppContainer>
-    <ResponsiveStack
-      mt={8}
-      mb={9}
-    >
-      <AutoScrollList listData={comparisonData} />
-    </ResponsiveStack>
+    <AutoScrollList listData={comparisonData} />
   </AppContainer>
 )
 

@@ -4,7 +4,7 @@ import DefaultLayout from 'src/layouts/Default'
 
 import Prefooter from 'src/components/pages/learn/Prefooter'
 import Hero from 'src/components/pages/learn/overview/Hero'
-import UseCase from 'src/components/pages/learn/overview/UseCase'
+import Explanation from 'src/components/pages/learn/overview/Explanation'
 import ServerlessAppBenefits from 'src/components/pages/learn/overview/AppBenefits'
 import ServerlessFrameworkBenefits from 'src/components/pages/learn/overview/FrameworkBenefits'
 import AboutServerlessFramework from 'src/components/pages/learn/overview/AboutServerlessFramework'
@@ -15,7 +15,7 @@ import { Divider } from 'src/fragments'
 const Overview = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Hero/>
-    <UseCase />
+    <Explanation />
     <GetStarted />
     <ServerlessAppBenefits />
     <Divider />

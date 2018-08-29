@@ -12,7 +12,7 @@ import learnOverviewGetStartedBg from 'src/assets/images/learnOverviewGetStarted
 
 const GetStarted = () => (
   <Container>
-    <Box px={[0, 0, 15]}>
+    <Box py={4} px={[0, 0, 15]}>
       <Background
         backgroundImage={`url(${learnOverviewGetStartedBg})`}
         backgroundSize='cover'

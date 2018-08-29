@@ -10,7 +10,6 @@ import {
   Text,
 } from 'serverless-design-system/src'
 
-import { AppContainer } from 'src/components'
 import { AutoScrollList } from 'src/fragments'
 import LearnUsecase01 from 'src/assets/images/learnUsecase01.png'
 import LearnUsecase02 from 'src/assets/images/learnUsecase02.png'
@@ -215,9 +214,7 @@ const comparisonData = [
 ]
 
 const UseCaseScrollList = () => (
-  <AppContainer>
-    <AutoScrollList listData={comparisonData} />
-  </AppContainer>
+  <AutoScrollList listData={comparisonData} />
 )
 
 export default UseCaseScrollList

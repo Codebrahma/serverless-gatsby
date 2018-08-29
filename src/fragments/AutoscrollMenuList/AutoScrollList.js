@@ -16,6 +16,8 @@ import {
   Transition,
   withBeforeAfter,
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
 import sidebarBackground from 'src/assets/images/sidebar-background.png'
 
@@ -58,7 +60,7 @@ class AutoScrollListItem extends React.Component {
         mb={[5, 5, 7, 8]}
         px={[0, 0, 3]}
       >
-        <Relative mb={5}>
+        <Box mb={5}>
           <TextWithIcon
             iconSrc={RedRectangleDots}
             iconHeight="30px"
@@ -76,7 +78,7 @@ class AutoScrollListItem extends React.Component {
               {title}
             </Heading.h2>
           </TextWithIcon>
-        </Relative>
+        </Box>
         <Image
           src={image}
           alt={title}
@@ -91,91 +93,96 @@ class AutoScrollListItem extends React.Component {
 
 class AutoScrollList extends React.Component {
   scrollToListItem = (scrollToIndex) => {
-    const domNode = ReactDOM.findDOMNode(this[scrollToIndex])
-    console.log(domNode.offsetTop - 100)
-    window.scrollTo(0, domNode.offsetTop - 100)
+    const { offsetTop: containerOffset } = ReactDOM.findDOMNode(this.container)
+    const { offsetTop: topicOffset } = ReactDOM.findDOMNode(this[scrollToIndex])
+    window.scrollTo(0, containerOffset + topicOffset - 100)
   }
 
   render() {
     const { listData } = this.props
     return (
-      <ResponsiveStack>
-        <Relative
-          display={['none', 'none', 'none', 'block']}
-          width={1/3}
-          pr={8}
+      <Relative width={1} ref={(ref) => { this.container = ref }}>
+        <Absolute
+          height="fullHeight"
+          width={[0, 0, 0, 1/3]}
+          left={-25}
         >
-          <Absolute
+          <Background
             height="fullHeight"
             width={1}
-            left={-25}
-          >
-            <Background
-              height="fullHeight"
-              width={1}
-              background={`url(${sidebarBackground})`}
-              backgroundSize="cover"
-            />
-          </Absolute>
-          <List
-            my={[4, 4, 6, 8]}
-            mx={0}
-            p={0}
-          >
-            {
-              listData.map(({ title }, index) => (
-                <ListItem
-                  key={title}
-                  pb={2}
-                  px={0}
-                  styleType='none'
-                  onClick={() => this.scrollToListItem(index)}
-                >
-                  <TitleWrapperWithLeadingSlash
-                    transition={[
-                      'none',
-                      'none',
-                      'none',
-                      'padding 0.5s',
-                    ]}
-                    beforeBoxBackgroundColor={[
-                      'transparent',
-                      'transparent',
-                      'transparent',
-                      'primaryColor',
-                    ]}
-                    beforeBoxLeft={[0, 0, 0, '-10px']}
-                  >
-                    <Text.span
-                      fontSize={1}
-                      lineHeight={1}
-                      letterSpacing="0.6px"
+            background={`url(${sidebarBackground})`}
+            backgroundSize="cover"
+          />
+        </Absolute>
+
+        <AppContainer>
+          <ResponsiveStack>
+            <Box
+              display={['none', 'none', 'none', 'block']}
+              width={1/3}
+              pr={8}
+            >
+              <List
+                my={[4, 4, 6, 8]}
+                mx={0}
+                p={0}
+              >
+                {
+                  listData.map(({ title }, index) => (
+                    <ListItem
+                      key={title}
+                      pb={2}
+                      px={0}
+                      styleType='none'
+                      onClick={() => this.scrollToListItem(index)}
                     >
-                      {title}
-                    </Text.span>
-                  </TitleWrapperWithLeadingSlash>
-                </ListItem>
-              ))
-            }
-          </List>
-        </Relative>
-        <Box
-          width={[1, 1, 1, 2/3]}
-          py={[4, 4, 6, 8]}
-        >
-          {
-            listData.map((item, index) => (
-              <AutoScrollListItem
-                key={index}
-                title={item.title}
-                body={item.body}
-                image={item.image}
-                ref={ ref => { this[index] = ref } }
-              />
-            ))
-          }
-        </Box>
-      </ResponsiveStack>
+                      <TitleWrapperWithLeadingSlash
+                        transition={[
+                          'none',
+                          'none',
+                          'none',
+                          'padding 0.5s',
+                        ]}
+                        beforeBoxBackgroundColor={[
+                          'transparent',
+                          'transparent',
+                          'transparent',
+                          'primaryColor',
+                        ]}
+                        beforeBoxLeft={[0, 0, 0, '-10px']}
+                      >
+                        <Text.span
+                          fontSize={1}
+                          lineHeight={1}
+                          letterSpacing="0.6px"
+                        >
+                          {title}
+                        </Text.span>
+                      </TitleWrapperWithLeadingSlash>
+                    </ListItem>
+                  ))
+                }
+              </List>
+            </Box>
+            <Box
+              width={[1, 1, 1, 2/3]}
+              py={[4, 4, 6, 8]}
+            >
+              {
+                listData.map((item, index) => (
+                  <AutoScrollListItem
+                    key={index}
+                    title={item.title}
+                    body={item.body}
+                    image={item.image}
+                    ref={ ref => { this[index] = ref } }
+                  />
+                ))
+              }
+            </Box>
+          </ResponsiveStack>
+        </AppContainer>
+      </Relative>
     )
   }
 }

@@ -1,8 +1,6 @@
 import React from 'react'
+import { P } from 'serverless-design-system/src'
 
-import { ResponsiveStack, P } from 'serverless-design-system/src'
-
-import { AppContainer } from 'src/components'
 import { AutoScrollList } from 'src/fragments'
 import comparisionCloudFormation from 'src/assets/images/comparisionCloudFormation.png'
 import comparisionCustomTooling from 'src/assets/images/comparisionCustomTooling.png'
@@ -90,9 +88,7 @@ const comparisonData = [
 ]
 
 const ComparisionsScrollList = () => (
-  <AppContainer>
-    <AutoScrollList listData={comparisonData} />
-  </AppContainer>
+  <AutoScrollList listData={comparisonData} />
 )
 
 export default ComparisionsScrollList

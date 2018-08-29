@@ -26,8 +26,8 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
         >
           <Box
             width={[1, 1, 0.45]}
-            pb={[6, 6, 2, 8]}
-            pt={['95%', '95%', 2, 8]}
+            pb={[6, 6, 2, 8, 14]}
+            pt={['95%', '95%', 2, 8, 14]}
           >
             <Box mb={5}>
               <TextWithIcon

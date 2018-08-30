@@ -95,8 +95,10 @@ const WhyServerless = () => (
         </Relative>
       </Background>
       <Column
-        p={4}
-        width={1}
+        pl={['50%', '50%', '60%', '30%']}
+        py={[2, 2, 2, 4]}
+        width={[1, 1, 1, 0.6]}
+        alignItems="flex-start"
       >
         <Heading.h5
           align="right"

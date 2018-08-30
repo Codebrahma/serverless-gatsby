@@ -97,10 +97,11 @@ class AutoScrollList extends React.Component {
   }
 
   fixSidebar = () => {
-    const { offsetTop: containerOffset } = ReactDOM.findDOMNode(this.container)
-    const sidebarNode = ReactDOM.findDOMNode(this.sidebar)
-
-    sidebarNode.style.position = (containerOffset < window.pageYOffset) ? 'fixed' : 'relative'
+    const container = ReactDOM.findDOMNode(this.container)
+    if (container) {
+      const sidebarNode = ReactDOM.findDOMNode(this.sidebar)
+      sidebarNode.style.position = (container.offsetTop < window.pageYOffset) ? 'fixed' : 'relative'
+    }
   }
 
   scrollToListItem = (scrollToIndex) => {

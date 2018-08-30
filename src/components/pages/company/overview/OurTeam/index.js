@@ -41,7 +41,7 @@ const teamMembers = [
   { image: jeremy, name: 'Jeremy Coffield', position: 'Platform Architect' },
   { image: raees, name: 'Raees Iqbal', position: 'Software engineer' },
   { image: steve, name: 'Steve Westergaard', position: 'Software engineer' },
-  { image: sebastian, name: 'Sebastian Borza', position: 'Founder engineer' },
+  { image: sebastian, name: 'Sebastian Borza', position: 'Software engineer' },
   { image: jonathan, name: 'Jonathan Lucas', position: 'Software engineer' },
   { image: andrea, name: 'Andrea Passwater', position: 'Lead Content Strategist' },
   { image: andre, name: 'André Pires', position: 'Lead Growth Designer' },

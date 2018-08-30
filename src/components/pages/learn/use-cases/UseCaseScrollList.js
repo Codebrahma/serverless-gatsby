@@ -37,6 +37,63 @@ const renderContents = (contents) => (
   </React.Fragment>
 )
 
+const TechBox = ({ upperImage, lowerImage }) => (
+  <Card
+    width={[ 1, 1, 1/3 ]}
+    maxWidth="250px"
+    height="176px"
+    my={[1, 1, 0]}
+    mr={2}
+    boxShadow="2px 2px 8px 0 #dfe5e6"
+    border="solid 1px #dfe5e6"
+  >
+    <Flex.center
+      flexDirection="column"
+      width={1}
+      height="fullHeight"
+      px={3}
+    >
+      <Flex.column
+        height="50px"
+        justifyContent="flex-end"
+      >
+        <Image
+          src={upperImage}
+          maxHeight="48px"
+          maxWidth="150px"
+          objectFit="contain"
+        />
+      </Flex.column>
+      {
+        lowerImage && (
+          <React.Fragment>
+            <Box
+              py={2}
+              width={1}
+            >
+              <HorizontalRule
+                height="1px"
+                color="#d8d8d8"
+              />
+            </Box>
+            <Flex.column
+              height="50px"
+              justifyContent="flex-start"
+            >
+              <Image
+                src={lowerImage}
+                maxHeight="48px"
+                maxWidth="150px"
+                objectFit="contain"
+              />
+            </Flex.column>
+          </React.Fragment>
+        )
+      }
+    </Flex.center>
+  </Card>
+)
+
 const comparisonData = [
   {
     title: 'Auto-scaling Websites and APIs',
@@ -60,102 +117,9 @@ const comparisonData = [
           </Text.p>
           <ResponsiveStack
             alignItems={[ "center", "center", "left" ]}>
-            <Card
-              width={[ 1, 1, 1/3 ]}
-              maxWidth="250px"
-              height="176px"
-              my={[1, 1, 0]}
-              mr={2}
-              boxShadow="2px 2px 8px 0 #dfe5e6"
-              border="solid 1px #dfe5e6"
-            >
-              <Flex.center
-                flexDirection="column"
-                width={1}
-                height="fullHeight"
-                px={3}
-              >
-                <Image
-                  src={nodeJSImage}
-                  maxHeight="30px"
-                  maxWidth="100px"
-                />
-                <Box
-                  py={2}
-                  width={1}
-                >
-                  <HorizontalRule
-                    height="1px"
-                    color="#d8d8d8"
-                  />
-                </Box>
-                <Image
-                  src={expressImage}
-                  maxHeight="30px"
-                  maxWidth="100px"
-                />
-              </Flex.center>
-            </Card>
-
-            <Card
-              width={[ 1, 1, 1/3 ]}
-              maxWidth="250px"
-              height="176px"
-              my={[1, 1, 0]}
-              mr={2}
-              boxShadow="2px 2px 8px 0 #dfe5e6"
-              border="solid 1px #dfe5e6"
-            >
-              <Flex.center
-                flexDirection="column"
-                width={1}
-                height="fullHeight"
-                px={3}
-              >
-                <Image
-                  src={pythonImage}
-                  maxHeight="30px"
-                  maxWidth="100px"
-                />
-                <Box
-                  py={2}
-                  width={1}
-                >
-                  <HorizontalRule
-                    height="1px"
-                    color="#d8d8d8"
-                  />
-                </Box>
-                <Image
-                  src={flaskImage}
-                  maxHeight="30px"
-                  maxWidth="100px"
-                />
-              </Flex.center>
-            </Card>
-
-            <Card
-              width={[ 1, 1, 1/3 ]}
-              maxWidth="250px"
-              height="176px"
-              my={[1, 1, 0]}
-              mr={2}
-              boxShadow="2px 2px 8px 0 #dfe5e6"
-              border="solid 1px #dfe5e6"
-            >
-              <Flex.center
-                flexDirection="column"
-                width={1}
-                height="fullHeight"
-                px={3}
-              >
-                <Image
-                  src={graphqlImage}
-                  maxHeight="30px"
-                  maxWidth="100px"
-                />
-              </Flex.center>
-            </Card>
+            <TechBox upperImage={nodeJSImage} lowerImage={expressImage} />
+            <TechBox upperImage={pythonImage} lowerImage={flaskImage} />
+            <TechBox upperImage={graphqlImage} />
           </ResponsiveStack>
         </Box>
       </React.Fragment>

@@ -44,8 +44,10 @@ const TrustedClients = () => (
           Serverless Platform is trusted by
         </Heading.h5>
         <ImageList
-          maxHeight={['41px', '41px', '41px', '60px']}
+          maxHeight={['41px', '41px', '41px', '50px']}
           maxWidth={['100%', '100%', '90%', '80%', '100%']}
+          objectFit='contain'
+          containerProps={{ maxWidth: '200px' }}
           list={TrustedClientList}
         />
       </Box>

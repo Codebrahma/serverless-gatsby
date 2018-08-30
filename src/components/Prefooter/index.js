@@ -16,7 +16,7 @@ import {
 import NavLink from '../NavLink'
 import WhiteButton from '../WhiteButton'
 import RightBoxBg from 'src/assets/images/footerRightBoxBg.png'
-import whiteRectangleDots from 'src/assets/images/whiteRectangleDots.png'
+import greyDotsSquare from 'src/assets/images/dot-grid-grey-square.png'
 
 const LeftColumn = ({ heading, sentences }) => (
   <Flex.horizontallyCenter
@@ -30,28 +30,32 @@ const LeftColumn = ({ heading, sentences }) => (
       py={[3, 5, 8]}
       px={[2, 4, 6]}
     >
-      <TextWithIcon
-        iconSrc={whiteRectangleDots}
-        iconHeight='100px'
-        iconWidth='150px'
-        iconTop='-20px'
-        iconLeft='-100px'
-        backgroundSize={[0, 0, 'initial']}
-      >
-        <Heading.h2
-          color='white'
-          fontFamily={'SoleilBk'}
-          fontSize={7}
-          letterSpacing={0}
+      <Relative zIndex={1}>
+        <TextWithIcon
+          iconSrc={greyDotsSquare}
+          iconHeight='100px'
+          iconWidth='118px'
+          iconTop='-20px'
+          iconLeft='-80px'
+          backgroundSize={[0, 0, 'contain']}
         >
-          {heading}
-        </Heading.h2>
-      </TextWithIcon>
-      {sentences.map((sentence, index) => (
-        <P color='white' mt={0} key={index}>
-          {sentence}
-        </P>
-      ))}
+          <Heading.h2
+            color='white'
+            fontFamily={'SoleilBk'}
+            fontSize={7}
+            letterSpacing={0}
+          >
+            {heading}
+          </Heading.h2>
+        </TextWithIcon>
+        {
+          sentences.map((sentence, index) => (
+            <P color='white' mt={0} key={index}>
+              {sentence}
+            </P>
+          ))
+        }
+      </Relative>
     </Overflow>
   </Flex.horizontallyCenter>
 )

@@ -15,7 +15,6 @@ const renderContents = (contents) => (
     {
       contents.map((content, index) => (
         <P key={index} mt={3}>
-          { console.log(typeof content) }
           {content}
         </P>
       ))

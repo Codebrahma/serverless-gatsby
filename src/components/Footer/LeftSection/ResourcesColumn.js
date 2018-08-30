@@ -8,6 +8,10 @@ const ResourceColumn = () => (
     header='resources'
     listItems={[
       {
+        name: 'overview',
+        navProps: { to: resources.overview, completed: true },
+      },
+      {
         name: 'blog',
         navProps: { to: resources.blog, completed: true },
       },

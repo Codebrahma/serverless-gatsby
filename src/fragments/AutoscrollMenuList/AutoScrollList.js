@@ -124,7 +124,7 @@ class AutoScrollList extends React.Component {
             >
               <List
                 my={[4, 4, 6, 8]}
-                mx={0}
+                mx={2}
                 p={0}
               >
                 {
@@ -149,7 +149,7 @@ class AutoScrollList extends React.Component {
                           'transparent',
                           'primaryColor',
                         ]}
-                        beforeBoxLeft={[0, 0, 0, '-10px']}
+                        beforeBoxLeft={[0, 0, 0, '-18px']}
                       >
                         <Text.span
                           fontSize={1}

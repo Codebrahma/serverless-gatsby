@@ -30,32 +30,30 @@ const LeftColumn = ({ heading, sentences }) => (
       py={[3, 5, 8]}
       px={[2, 4, 6]}
     >
-      <Relative zIndex={1}>
-        <TextWithIcon
-          iconSrc={greyDotsSquare}
-          iconHeight='100px'
-          iconWidth='118px'
-          iconTop='-20px'
-          iconLeft='-80px'
-          backgroundSize={[0, 0, 'contain']}
+      <TextWithIcon
+        iconSrc={greyDotsSquare}
+        iconHeight='100px'
+        iconWidth='118px'
+        iconTop='-20px'
+        iconLeft='-80px'
+        backgroundSize={[0, 0, 'contain']}
+      >
+        <Heading.h2
+          color='white'
+          fontFamily={'SoleilBk'}
+          fontSize={7}
+          letterSpacing={0}
         >
-          <Heading.h2
-            color='white'
-            fontFamily={'SoleilBk'}
-            fontSize={7}
-            letterSpacing={0}
-          >
-            {heading}
-          </Heading.h2>
-        </TextWithIcon>
-        {
-          sentences.map((sentence, index) => (
-            <P color='white' mt={0} key={index}>
-              {sentence}
-            </P>
-          ))
-        }
-      </Relative>
+          {heading}
+        </Heading.h2>
+      </TextWithIcon>
+      {
+        sentences.map((sentence, index) => (
+          <P color='white' mt={0} key={index}>
+            {sentence}
+          </P>
+        ))
+      }
     </Overflow>
   </Flex.horizontallyCenter>
 )

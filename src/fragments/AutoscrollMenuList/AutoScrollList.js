@@ -92,6 +92,17 @@ class AutoScrollListItem extends React.Component {
 }
 
 class AutoScrollList extends React.Component {
+  componentDidMount() {
+    document.onscroll = this.fixSidebar
+  }
+
+  fixSidebar = () => {
+    const { offsetTop, offsetBottom } = ReactDOM.findDOMNode(this.container)
+    const sidebarNode = ReactDOM.findDOMNode(this.sidebar)
+
+    sidebarNode.style.position = (offsetTop < window.pageYOffset) ? 'fixed' : 'relative'
+  }
+
   scrollToListItem = (scrollToIndex) => {
     const { offsetTop: containerOffset } = ReactDOM.findDOMNode(this.container)
     const { offsetTop: topicOffset } = ReactDOM.findDOMNode(this[scrollToIndex])
@@ -104,7 +115,7 @@ class AutoScrollList extends React.Component {
       <Relative width={1} ref={(ref) => { this.container = ref }}>
         <Absolute
           height="fullHeight"
-          width={[0, 0, 0, 1/3]}
+          width={[0, 0, 0, 0.36]}
           left={-25}
         >
           <Background
@@ -120,49 +131,56 @@ class AutoScrollList extends React.Component {
             <Box
               display={['none', 'none', 'none', 'block']}
               width={1/3}
-              pr={8}
+              pr={6}
             >
-              <List
-                my={[4, 4, 6, 8]}
-                mx={2}
-                p={0}
+              <Relative
+                width={1}
+                top={0}
+                maxWidth="300px"
+                ref={(ref) => { this.sidebar = ref }}
               >
-                {
-                  listData.map(({ title }, index) => (
-                    <ListItem
-                      key={title}
-                      pb={2}
-                      px={0}
-                      styleType='none'
-                      onClick={() => this.scrollToListItem(index)}
-                    >
-                      <TitleWrapperWithLeadingSlash
-                        transition={[
-                          'none',
-                          'none',
-                          'none',
-                          'padding 0.5s',
-                        ]}
-                        beforeBoxBackgroundColor={[
-                          'transparent',
-                          'transparent',
-                          'transparent',
-                          'primaryColor',
-                        ]}
-                        beforeBoxLeft={[0, 0, 0, '-18px']}
+                <List
+                  my={[4, 4, 6, 8]}
+                  mx={2}
+                  p={0}
+                >
+                  {
+                    listData.map(({ title }, index) => (
+                      <ListItem
+                        key={title}
+                        pb={2}
+                        px={0}
+                        styleType='none'
+                        onClick={() => this.scrollToListItem(index)}
                       >
-                        <Text.span
-                          fontSize={1}
-                          lineHeight={1}
-                          letterSpacing="0.6px"
+                        <TitleWrapperWithLeadingSlash
+                          transition={[
+                            'none',
+                            'none',
+                            'none',
+                            'padding 0.5s',
+                          ]}
+                          beforeBoxBackgroundColor={[
+                            'transparent',
+                            'transparent',
+                            'transparent',
+                            'primaryColor',
+                          ]}
+                          beforeBoxLeft={[0, 0, 0, '-18px']}
                         >
-                          {title}
-                        </Text.span>
-                      </TitleWrapperWithLeadingSlash>
-                    </ListItem>
-                  ))
-                }
-              </List>
+                          <Text.span
+                            fontSize={1}
+                            lineHeight={1}
+                            letterSpacing="0.6px"
+                          >
+                            {title}
+                          </Text.span>
+                        </TitleWrapperWithLeadingSlash>
+                      </ListItem>
+                    ))
+                  }
+                </List>
+              </Relative>
             </Box>
             <Box
               width={[1, 1, 1, 2/3]}

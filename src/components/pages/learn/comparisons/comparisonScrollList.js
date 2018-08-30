@@ -1,5 +1,5 @@
 import React from 'react'
-import { P } from 'serverless-design-system/src'
+import { P, HyperLink } from 'serverless-design-system/src'
 
 import { AutoScrollList } from 'src/fragments'
 import comparisionCloudFormation from 'src/assets/images/comparisionCloudFormation.png'
@@ -15,6 +15,7 @@ const renderContents = (contents) => (
     {
       contents.map((content, index) => (
         <P key={index} mt={3}>
+          { console.log(typeof content) }
           {content}
         </P>
       ))
@@ -53,8 +54,13 @@ const comparisonData = [
   {
     title: 'Zappa, Claudia JS, etc',
     image: comparisionZampa,
-    body: renderContents([
-      `There are a number of deployment tools for serverless applications, including Zappa for Python web applications or ClaudiaJS for Node web applications. These tools are purpose-built for their particular use cases. If they fit the use case you're looking for and you prefer their design, you should use them!`,
+    body:
+    renderContents([
+      (
+        <React.Fragment>
+          There are a number of deployment tools for serverless applications, including <HyperLink href="https://www.zappa.io/" textDecoration="none"  textDecoration="none" borderBottom="1px solid #55bbfe" hoverColor="#55bbfe" target="_blank">Zappa</HyperLink> for Python web applications or <HyperLink href="https://claudiajs.com/" textDecoration="none"  textDecoration="none" borderBottom="1px solid red" hoverColor="red" target="_blank">ClaudiaJS</HyperLink> for Node web applications. These tools are purpose-built for their particular use cases. If they fit the use case you're looking for and you prefer their design, you should use them!
+        </React.Fragment>
+      ),
       'The Serverless Framework is a more general purpose tool for deploying and managing serverless applications. You can deploy Python or Node web applications while also provisioning the infrastructure that your application needs, such as databases, queues, and object storage. Further, you can use the Framework to build multiple types of applications, including event streaming, image manipulation, and more.'
     ])
   },

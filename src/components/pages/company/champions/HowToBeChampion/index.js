@@ -1,5 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
 import {
+  Absolute,
+  Background,
   Card,
   Flex,
   Box,
@@ -14,6 +17,11 @@ import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 import lionIcon from 'src/assets/images/lion-icon.png'
+import benefitsBackground from 'src/assets/images/benefits-dots-background.png'
+
+const RelativeCard = styled(Card)`
+  position: relative;
+`;
 
 const serverlessChampions = [
   'Heroes in the serverless community',
@@ -40,9 +48,11 @@ const HowToBeChampion = () => (
     <Flex.column pt={5}>
       <Flex flexDirection={['column', 'column', 'row']}>
         <Box width={[1, 1, 0.65]} px={2}>
-          <TitleWithIcon>
-            What does it take to become a Serverless Champion?
-          </TitleWithIcon>
+          <Box mb={[2, 2, 3, 5]}>
+            <TitleWithIcon>
+              What does it take to become a Serverless Champion?
+            </TitleWithIcon>
+          </Box>
           <Heading.h4 fontFamily="SoleilBk">
             Our Serverless Champions are:
           </Heading.h4>
@@ -73,13 +83,27 @@ const HowToBeChampion = () => (
           mt={[5, 5, 6, 8]}
           mb={[5, 5, 6, 0]}
         >
-          <Card
+          <RelativeCard
             width={1}
             boxShadow='2px 2px 8px 0 #eaeaea'
             border='1px solid #eaeaea'
             px={4}
             py={3}
+            bg="white"
           >
+            <Absolute
+              height="fullHeight"
+              width={0.96}
+              top="-50px"
+              zIndex={-1}
+            >
+              <Background
+                background={`url(${benefitsBackground})`}
+                backgroundSize="cover"
+                height="fullHeight"
+                width={1}
+              />
+            </Absolute>
             <Heading.h4
               fontSize={3}
               fontFamily='SoleilBk'
@@ -107,7 +131,7 @@ const HowToBeChampion = () => (
                 </Row>
               ))
             }
-          </Card>
+          </RelativeCard>
         </Box>
       </Flex>
     </Flex.column>

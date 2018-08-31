@@ -1,5 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
 import {
+  Absolute,
+  Background,
   Card,
   Column,
   Box,
@@ -11,11 +14,15 @@ import {
   HorizontalRule,
   ResponsiveStack,
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'
 import team from 'src/assets/images/team.png'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
+import benefitsBackground from 'src/assets/images/benefits-dots-background.png'
+
+const RelativeCard = styled(Card)`
+  position: relative;
+`;
 
 const benefitList = [
   'Quality healthcare, dental, and vision plans',
@@ -52,16 +59,30 @@ const HowWeOperate = () => (
         </Box>
 
         <Column
-          alignItems='flex-end'
           width={[1, 1, 0.5]}
+          alignItems='flex-end'
         >
-          <Card
+          <RelativeCard
             width={[1, 1, 9/10, 9/10, 7/10]}
             boxShadow='2px 2px 8px 0 #eaeaea'
             border='1px solid #eaeaea'
             px={4}
             py={3}
+            bg="white"
           >
+            <Absolute
+              height="fullHeight"
+              width={0.96}
+              top="-50px"
+              zIndex={-1}
+            >
+              <Background
+                background={`url(${benefitsBackground})`}
+                backgroundSize="cover"
+                height="fullHeight"
+                width={1}
+              />
+            </Absolute>
             <Heading.h4
               fontSize={3}
               fontFamily='SoleilBk'
@@ -92,7 +113,7 @@ const HowWeOperate = () => (
                 </Row>
               ))
             }
-          </Card>
+          </RelativeCard>
         </Column>
       </ResponsiveStack>
       <Box pt={[4, 4, 7]}>

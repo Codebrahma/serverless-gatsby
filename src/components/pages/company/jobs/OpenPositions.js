@@ -56,7 +56,7 @@ const jobs = [
 const OpenPositions = () => (
   <Background backgroundImage={['', '', `url(${backgroundImage})`]}>
     <AppContainer>
-      <Column py={5}>
+      <Column py={[4, 4, 7]}>
         <Flex justifyContent='center'>
           <Heading.h2 fontFamily='SoleilSb'>
             Open Positions

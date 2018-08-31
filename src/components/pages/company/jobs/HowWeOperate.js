@@ -27,7 +27,10 @@ const benefitList = [
 
 const HowWeOperate = () => (
   <AppContainer>
-    <Column>
+    <Column
+      pt={[6, 6, 8]}
+      pb={6}
+    >
       <TitleWithIcon>
         How We Operate
       </TitleWithIcon>
@@ -92,7 +95,7 @@ const HowWeOperate = () => (
           </Card>
         </Column>
       </ResponsiveStack>
-      <Box py={4}>
+      <Box pt={[4, 4, 7]}>
         <Image src={team} width={1} mt={4} />
       </Box>
     </Column>

@@ -11,7 +11,8 @@ const OurStory = () => (
   <AppContainer>
     <ResponsiveStack
       px={3}
-      my={4}
+      mt={10}
+      mb={6}
     >
       <Column
         width={[1, 1, 1/3]}

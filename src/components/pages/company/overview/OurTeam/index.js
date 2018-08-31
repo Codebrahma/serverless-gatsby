@@ -51,7 +51,11 @@ const teamMembers = [
 const OurTeam= () => (
   <AppContainer>
     <Flex flexDirection='column'>
-      <Flex justifyContent='center'>
+      <Flex
+        justifyContent='center'
+        mt={3}
+        mb={2}
+      >
         <TitleWithIcon>Our Team</TitleWithIcon>
       </Flex>
       <Flex flexWrap='wrap' justifyContent='center'>

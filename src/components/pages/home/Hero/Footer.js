@@ -18,13 +18,19 @@ const HomeHeroFooter = () => (
       flexDirection='row'
     >
       <InlineBlock ml={[0, 0, 1]} mr={[0, 0, 2]}>
-        <Image src={videoIcon} height='50px' width='auto' />
+        <Image
+          src={videoIcon}
+          height={['40px', '40px', '50px']}
+          width='auto'
+          maxWidth='none'
+        />
       </InlineBlock>
       <Heading.h4
         color='white'
         fontSize={[3, 3, 4]}
         mx={1}
         mb={0}
+        lineHeight={[3, 3, 0]}
         align='center'
       >
         watch the video to learn more

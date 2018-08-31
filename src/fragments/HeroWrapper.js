@@ -18,7 +18,7 @@ const HeroWrapper = ({ children, theme, ...otherProps }) => (
       ]}
     >
       <AppContainer>
-        <Box py={4}>
+        <Box px={[15, 15, 0]} py={4}>
           {children}
         </Box>
       </AppContainer>

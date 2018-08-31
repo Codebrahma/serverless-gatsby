@@ -1,10 +1,7 @@
 import React from 'react'
-
-import { Flex, TextWithIcon, Heading } from 'serverless-design-system/src'
-
+import { Flex } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
-import { TeamMemberImageCard } from 'src/fragments'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TeamMemberImageCard, TitleWithIcon } from 'src/fragments'
 import austin from 'src/assets/images/team/austin.png'
 import nick from 'src/assets/images/team/nick.png'
 import ganesh from 'src/assets/images/team/ganesh.png'
@@ -55,23 +52,7 @@ const OurTeam= () => (
   <AppContainer>
     <Flex flexDirection='column'>
       <Flex justifyContent='center'>
-        <TextWithIcon
-          iconSrc={redRectangleDots}
-          iconHeight="32px"
-          iconWidth="52px"
-          iconTop="5px"
-          iconLeft="-10px"
-          backgroundSize="contain"
-        >
-          <Heading.h1
-            fontFamily="SoleilBk"
-            lineHeight={0}
-            letterSpacing="h2"
-            mt={1}
-          >
-            Our Team
-          </Heading.h1>
-        </TextWithIcon>
+        <TitleWithIcon>Our Team</TitleWithIcon>
       </Flex>
       <Flex flexWrap='wrap' justifyContent='center'>
         {

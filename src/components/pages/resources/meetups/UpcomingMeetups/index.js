@@ -5,15 +5,12 @@ import {
   Heading,
   TextWithIcon
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
-import MeetupCard from 'src/fragments/UpcomingMeetupCard'
-
+import { MeetupCard, TitleWithIcon } from 'src/fragments'
 import meetupMember11 from 'src/assets/images/meetupMember11.png'
 import meetupMember12 from 'src/assets/images/meetupMember12.png'
 import meetupMember13 from 'src/assets/images/meetupMember13.png'
 import meetupMember14 from 'src/assets/images/meetupMember14.png'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 
 const meetupData = [
   {
@@ -51,21 +48,9 @@ const meetupData = [
 const UpcomingMeetups = () => (
   <AppContainer>
     <Column alignItems='center' py={5}>
-      <TextWithIcon
-        iconSrc={redRectangleDots}
-        iconHeight='32px'
-        iconWidth='70px'
-        iconTop='-5px'
-        iconLeft='-20px'
-      >
-        <Heading.h1
-          fontFamily="SoleilBk"
-          lineHeight={0}
-          letterSpacing="h2"
-        >
-          Upcoming Meetups
-        </Heading.h1>
-      </TextWithIcon>
+      <TitleWithIcon>
+        Upcoming Meetups
+      </TitleWithIcon>
       <ResponsiveStack
         flexWrap='wrap'
         justifyContent='center'

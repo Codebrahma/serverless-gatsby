@@ -1,5 +1,4 @@
 import React from 'react'
-
 import {
   Absolute,
   Background,
@@ -8,36 +7,18 @@ import {
   Box,
   P,
   Text,
-  TextWithIcon,
   Heading,
   Relative,
   ResponsiveStack,
 } from 'serverless-design-system/src'
-
+import { TitleWithIcon } from 'src/fragments'
 import JamesHall from 'src/assets/images/JamesHall.png'
-import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
 import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const WhyServerless = () => (
   <ResponsiveStack mt={6}>
     <Box width={[1, 1, 5/10]}>
-      <TextWithIcon
-        iconSrc={RedRectangleDots}
-        iconHeight="30px"
-        iconWidth="70px"
-        iconTop="-5px"
-        iconLeft="-15px"
-        backgroundSize="auto"
-      >
-        <Heading.h2
-          fontFamily="SoleilBk"
-          fontSize={[5, 5, 5, 7]}
-          lineHeight={0}
-          letterSpacing="0.5px"
-        >
-          Why Serverless
-        </Heading.h2>
-      </TextWithIcon>
+      <TitleWithIcon>Why Serverless</TitleWithIcon>
       <Box pt={2} />
       <P>
         Parallax’s regular stack is LAMP, built on top of CloudFront, Elastic Load Balancers and EC2 nodes. In order to accomplish their goal with this stack they would have to build a queueing system for the image generation, then spin up EC2 nodes dedicated to generating those images based on the throughput.

@@ -2,14 +2,11 @@ import React from 'react'
 import {
   Box,
   Column,
-  Heading,
   P,
   Background,
-  TextWithIcon,
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 
 const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
   <Box width={1}>
@@ -30,21 +27,9 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
             pt={['95%', '95%', 2, 8, '10vw']}
           >
             <Box mb={5}>
-              <TextWithIcon
-                iconSrc={redRectangleDots}
-                iconHeight='32px'
-                iconWidth='70px'
-                iconTop='-5px'
-                iconLeft='-20px'
-              >
-                <Heading.h1
-                  fontFamily="SoleilBk"
-                  lineHeight={0}
-                  letterSpacing="h2"
-                >
-                  { title }
-                </Heading.h1>
-              </TextWithIcon>
+              <TitleWithIcon>
+                { title }
+              </TitleWithIcon>
             </Box>
             {
               descriptions.map((description, index) => (

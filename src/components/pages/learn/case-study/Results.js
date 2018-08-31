@@ -1,15 +1,11 @@
 import React from 'react'
 import {
-  TextWithIcon,
   Flex,
-  Heading,
-  Box,
   P,
   Image
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
-import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 import learnCasestudyResults from 'src/assets/images/learnCasestudyResults.png'
 
 const Results = () => (
@@ -19,23 +15,7 @@ const Results = () => (
       mb={[300, 300, 14]}
     >
       <Flex justifyContent={['left', 'left', 'center']}>
-        <TextWithIcon
-          iconSrc={RedRectangleDots}
-          iconHeight="30px"
-          iconWidth="70px"
-          iconTop="-5px"
-          iconLeft="-15px"
-          backgroundSize="auto"
-        >
-          <Heading.h2
-            fontFamily="SoleilBk"
-            fontSize={[5, 5, 5, 7]}
-            lineHeight={0}
-            letterSpacing="0.5px"
-          >
-            The Results
-          </Heading.h2>
-        </TextWithIcon>
+        <TitleWithIcon>The Results</TitleWithIcon>
       </Flex>
       <Flex.center
         flexDirection="column"

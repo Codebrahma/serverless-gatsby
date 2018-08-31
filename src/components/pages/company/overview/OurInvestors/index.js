@@ -1,16 +1,12 @@
 import React from 'react'
-
 import {
   Column,
   Flex,
-  TextWithIcon,
-  Heading,
   Image,
   ResponsiveStack
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 import investorTrinity from 'src/assets/images/trinity.png'
 import investorHeavyBit from 'src/assets/images/heavybit.png'
 
@@ -18,23 +14,9 @@ const OurInvestors= () => (
   <AppContainer>
     <Column px={3}>
       <Flex.center>
-        <TextWithIcon
-          iconSrc={redRectangleDots}
-          iconHeight="32px"
-          iconWidth="52px"
-          iconTop="5px"
-          iconLeft="-10px"
-          backgroundSize="contain"
-        >
-          <Heading.h1
-            fontFamily="SoleilBk"
-            lineHeight={0}
-            letterSpacing="h2"
-            mt={1}
-          >
-            Our Investors
-          </Heading.h1>
-        </TextWithIcon>
+        <TitleWithIcon>
+          Our Investors
+        </TitleWithIcon>
       </Flex.center>
 
       <Flex.center>

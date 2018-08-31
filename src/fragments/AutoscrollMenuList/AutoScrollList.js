@@ -5,8 +5,6 @@ import {
   Box,
   Background,
   Flex,
-  TextWithIcon,
-  Heading,
   Image,
   List,
   ListItem,
@@ -18,7 +16,7 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
-import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 import sidebarBackground from 'src/assets/images/sidebar-background.png'
 
 const TitleWrapperWithLeadingSlash = withBeforeAfter(
@@ -61,23 +59,7 @@ class AutoScrollListItem extends React.Component {
         px={[0, 0, 3]}
       >
         <Box mb={5}>
-          <TextWithIcon
-            iconSrc={RedRectangleDots}
-            iconHeight="30px"
-            iconWidth="70px"
-            iconTop="-5px"
-            iconLeft="-15px"
-            backgroundSize="auto"
-          >
-            <Heading.h2
-              fontFamily="SoleilBk"
-              fontSize={[5, 5, 5, 7]}
-              lineHeight={0}
-              letterSpacing="0.5px"
-            >
-              {title}
-            </Heading.h2>
-          </TextWithIcon>
+          <TitleWithIcon>{title}</TitleWithIcon>
         </Box>
         <Image
           src={image}

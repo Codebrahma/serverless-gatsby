@@ -1,15 +1,11 @@
 import React from 'react'
-
 import {
   Column,
   P,
-  TextWithIcon,
-  Heading,
   ResponsiveStack,
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 
 const OurStory = () => (
   <AppContainer>
@@ -21,23 +17,9 @@ const OurStory = () => (
         width={[1, 1, 1/3]}
         alignItems="center"
       >
-        <TextWithIcon
-          iconSrc={redRectangleDots}
-          iconHeight="32px"
-          iconWidth="52px"
-          iconTop="-5px"
-          iconLeft="-10px"
-          backgroundSize="contain"
-        >
-          <Heading.h1
-            fontFamily="SoleilBk"
-            lineHeight={0}
-            letterSpacing="h2"
-            mt={1}
-          >
-            Our Story
-          </Heading.h1>
-        </TextWithIcon>
+        <TitleWithIcon>
+          Our Story
+        </TitleWithIcon>
       </Column>
       <Column width={[1, 1, 2/3]}>
         <P>

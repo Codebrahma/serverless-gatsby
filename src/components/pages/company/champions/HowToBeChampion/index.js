@@ -3,7 +3,6 @@ import {
   Card,
   Flex,
   Box,
-  TextWithIcon,
   Heading,
   P,
   Row,
@@ -11,9 +10,8 @@ import {
   Image,
   HorizontalRule,
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 import lionIcon from 'src/assets/images/lion-icon.png'
 
@@ -42,23 +40,9 @@ const HowToBeChampion = () => (
     <Flex.column pt={5}>
       <Flex flexDirection={['column', 'column', 'row']}>
         <Box width={[1, 1, 0.65]} px={2}>
-          <TextWithIcon
-            iconSrc={redRectangleDots}
-            iconHeight="32px"
-            iconWidth="52px"
-            iconTop="5px"
-            iconLeft="-10px"
-            backgroundSize="contain"
-          >
-            <Heading.h1
-              fontFamily="SoleilBk"
-              lineHeight={0}
-              letterSpacing="h2"
-              mt={1}
-            >
-              What does it take to become a Serverless Champion?
-            </Heading.h1>
-          </TextWithIcon>
+          <TitleWithIcon>
+            What does it take to become a Serverless Champion?
+          </TitleWithIcon>
           <Heading.h4 fontFamily="SoleilBk">
             Our Serverless Champions are:
           </Heading.h4>
@@ -109,10 +93,7 @@ const HowToBeChampion = () => (
 
             {
               memberReceivals.map((benefit, index) => (
-                <Row
-                  mt={3}
-                  alignItems="center"
-                >
+                <Row mt={3} alignItems="center">
                   <Box mr={2}>
                     <Image src={lionIcon} height="40px" minWidth="40px" />
                   </Box>

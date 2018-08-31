@@ -1,17 +1,14 @@
 import React from 'react'
-
 import {
   Box,
   Column,
-  TextWithIcon,
   Heading,
   P,
   ResponsiveStack,
   Text,
 } from 'serverless-design-system/src'
-
 import { AppContainer } from 'src/components'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 
 const contactUsContent = [
   { title: 'Media Inquiries', contents: ['media@serverless.com'] },
@@ -42,23 +39,7 @@ const OurStory = () => (
   <AppContainer>
     <Column px={3} pt={8} pb={[300, 300, 14]}>
       <Box>
-        <TextWithIcon
-          iconSrc={redRectangleDots}
-          iconHeight="32px"
-          iconWidth="52px"
-          iconTop="5px"
-          iconLeft="-10px"
-          backgroundSize="contain"
-        >
-          <Heading.h1
-            fontFamily="SoleilBk"
-            lineHeight={0}
-            letterSpacing="h2"
-            mt={1}
-          >
-            Contact Us
-          </Heading.h1>
-        </TextWithIcon>
+        <TitleWithIcon>Contact Us</TitleWithIcon>
       </Box>
       <Box>
         <Text.p

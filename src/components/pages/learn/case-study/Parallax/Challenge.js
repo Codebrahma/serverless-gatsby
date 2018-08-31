@@ -1,9 +1,7 @@
 import React from 'react'
-
-import { Column, P, Image, TextWithIcon, ResponsiveStack, Heading } from 'serverless-design-system/src'
-
+import { Column, P, Image, ResponsiveStack } from 'serverless-design-system/src'
+import { TitleWithIcon } from 'src/fragments'
 import Parallax from 'src/assets/images/parallax.png'
-import RedRectangleDots from 'src/assets/images/redRectangleDots.png'
 
 const Challenge = () => (
   <ResponsiveStack mt={[6, 6, 8]}>
@@ -26,23 +24,7 @@ const Challenge = () => (
       width={[1, 1, 4/9]}
       order={[1, 1, 3]}
     >
-      <TextWithIcon
-        iconSrc={RedRectangleDots}
-        iconHeight="30px"
-        iconWidth="70px"
-        iconTop="-5px"
-        iconLeft="-15px"
-        backgroundSize="auto"
-      >
-        <Heading.h2
-          fontFamily="SoleilBk"
-          fontSize={[5, 5, 5, 7]}
-          lineHeight={0}
-          letterSpacing="0.5px"
-        >
-          The Challenge
-        </Heading.h2>
-      </TextWithIcon>
+      <TitleWithIcon>The Challenge</TitleWithIcon>
       <P>
         Parallax needed to figure out a way of creating a virtual recording studio to enable a million unique fans to sing along with David Guetta - their voices would then be sorted and compiled for inclusion in the final song.
       </P>

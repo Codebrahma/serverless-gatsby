@@ -4,7 +4,6 @@ import {
   Column,
   Box,
   P,
-  TextWithIcon,
   Heading,
   Image,
   Row,
@@ -14,7 +13,7 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { TitleWithIcon } from 'src/fragments'
 import team from 'src/assets/images/team.png'
 import checkmarkIcon from 'src/assets/images/ok-icon.png'
 
@@ -29,24 +28,9 @@ const benefitList = [
 const HowWeOperate = () => (
   <AppContainer>
     <Column>
-      <TextWithIcon
-        iconSrc={redRectangleDots}
-        iconHeight="32px"
-        iconWidth="52px"
-        iconTop="5px"
-        iconLeft="-10px"
-        backgroundSize="contain"
-      >
-        <Heading.h1
-          fontSize={[6, 6, 6, 7]}
-          fontFamily="SoleilBk"
-          lineHeight={0}
-          letterSpacing="h2"
-          mt={1}
-        >
-          How We Operate
-        </Heading.h1>
-      </TextWithIcon>
+      <TitleWithIcon>
+        How We Operate
+      </TitleWithIcon>
 
       <ResponsiveStack>
         <Box width={[1, 1, 0.5]}>

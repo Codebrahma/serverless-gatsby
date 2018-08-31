@@ -17,6 +17,7 @@ import TextField from '../../enterprise/Form/TextField'
 import Checkbox from '../../enterprise/Form/Checkbox'
 import Label from '../../enterprise/Form/Label'
 import TextArea from '../../enterprise/Form/TextArea'
+import RadioButton from '../../enterprise/Form/RadioButton'
 
 export default () => (
   <AppContainer>
@@ -74,19 +75,19 @@ export default () => (
           <Box>
             <Label htmlFor="none">
               <Flex.verticallyCenter my="12px">
-                <Checkbox name="experience" id="none" />
+                <RadioButton name="experience" id="none" />
                 <InlineBlock>none</InlineBlock>
               </Flex.verticallyCenter>
             </Label>
             <Label htmlFor="played-around">
               <Flex.verticallyCenter my="12px">
-                <Checkbox name="experience" id="played-around" />
+                <RadioButton name="experience" id="played-around" />
                 <InlineBlock>i’ve played around with it</InlineBlock>
               </Flex.verticallyCenter>
             </Label>
             <Label htmlFor="serverless-in-prod">
               <Flex.verticallyCenter my="12px">
-                <Checkbox name="experience" id="serverless-in-prod" />
+                <RadioButton name="experience" id="serverless-in-prod" />
                 <InlineBlock>i run serverless in production</InlineBlock>
               </Flex.verticallyCenter>
             </Label>

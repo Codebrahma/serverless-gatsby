@@ -28,12 +28,16 @@ export default ({ data, selected }) => (
           }}
           tabContainerStyle={{
             minWidth: '120px',
-            px: 2,
-            py: '16px',
+            height: '46px',
+            justifyContent: 'center',
+            alignItems: 'center',
+            m: '2px',
           }}
           selectedTabContainerStyle={{
             background: `url(${selectedTabBackground})`,
-            backgroundSize: 'cover'
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
           }}
           selectedValue={selected}
           onTabSelect={onTabSelect}
@@ -41,7 +45,10 @@ export default ({ data, selected }) => (
       </Card>
     </Box>
 
-    <Box display={[ 'block', 'block', 'none' ]}>
+    <Box
+      display={[ 'block', 'block', 'none' ]}
+      maxWidth="320px"
+    >
       <DropDown
         options={data}
         value={selected}

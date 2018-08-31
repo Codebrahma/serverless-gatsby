@@ -5,8 +5,15 @@ import { InlineFlex, Column, Text } from 'serverless-design-system/src'
 const TabWrapper = styled(Column)`
   background: ${({ background }) => (background)};
   background-size: ${({ backgroundSize }) => (backgroundSize)};
+  background-position: ${({ backgroundPosition }) => (backgroundPosition)};
+  background-repeat: ${({ backgroundRepeat }) => (backgroundRepeat)};
   cursor: pointer;
-  margin: 2px;
+
+  &:hover {
+    span {
+      color: ${({ selected, theme: { colors } }) => selected ? colors.white  : colors.gray[3]};
+    }
+  }
 `;
 
 const Tab = ({ datum, onClick, selected, ...styles }) => {
@@ -23,6 +30,7 @@ const Tab = ({ datum, onClick, selected, ...styles }) => {
   return (
     <TabWrapper
       onClick={() => onClick(datum)}
+      selected={selected}
       { ...containerStyles }
     >
       <Text.span {...labelStyles}>

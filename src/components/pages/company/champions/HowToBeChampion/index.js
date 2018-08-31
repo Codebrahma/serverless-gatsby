@@ -45,7 +45,7 @@ const memberReceivals = [
 // TODO: SDS should have withespace property
 const HowToBeChampion = () => (
   <AppContainer>
-    <Flex.column pt={5}>
+    <Flex.column pt={[5, 5, 6, 8]}>
       <Flex flexDirection={['column', 'column', 'row']}>
         <Box width={[1, 1, 0.65]} px={2}>
           <Box mb={[2, 2, 3, 5]}>

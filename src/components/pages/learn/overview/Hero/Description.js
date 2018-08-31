@@ -27,7 +27,7 @@ const LeftSection = () => (
       mt={[3, 3, 5]}
       mb={3}
     >
-      Just like wireless internet has wires somewhere serverless architectures still have servers somewhere.
+      Just like wireless internet has wires somewhere, serverless architectures still have servers somewhere.
       <br />
       <br />
       What ‘serverless’ really means is that, as a developer you don’t have to think about those servers. You just focus on code.

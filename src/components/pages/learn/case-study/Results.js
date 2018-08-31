@@ -11,8 +11,8 @@ import learnCasestudyResults from 'src/assets/images/learnCasestudyResults.png'
 const Results = () => (
   <AppContainer>
     <Flex.column
-      mt={[4, 4, 6]}
-      mb={[300, 300, 14]}
+      mt={[6, 6, 8, 150]}
+      mb={[300, 300, 300, 350]}
     >
       <Flex justifyContent={['left', 'left', 'center']}>
         <TitleWithIcon>The Results</TitleWithIcon>
@@ -28,7 +28,12 @@ const Results = () => (
         <P>
           In the end the Serverless Framework, and a serverless approach in general, helped Parallax deliver an experience that would have been much much more difficult and much more expensive using a traditional application architecture.
         </P>
-        <Image src={learnCasestudyResults} alt='learn-results' mt={3}/>
+        <Flex width={1} mt={5}>
+          <Image
+            src={learnCasestudyResults}
+            alt='learn-results'
+          />
+        </Flex>
       </Flex.center>
     </Flex.column>
   </AppContainer>

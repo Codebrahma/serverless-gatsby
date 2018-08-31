@@ -74,19 +74,19 @@ export default () => (
           </TextWithIcon>
           <Box>
             <Label htmlFor="none">
-              <Flex.verticallyCenter my="12px">
+              <Flex.verticallyCenter my="8px">
                 <RadioButton name="experience" id="none" />
                 <InlineBlock>none</InlineBlock>
               </Flex.verticallyCenter>
             </Label>
             <Label htmlFor="played-around">
-              <Flex.verticallyCenter my="12px">
+              <Flex.verticallyCenter my="8px">
                 <RadioButton name="experience" id="played-around" />
                 <InlineBlock>i’ve played around with it</InlineBlock>
               </Flex.verticallyCenter>
             </Label>
             <Label htmlFor="serverless-in-prod">
-              <Flex.verticallyCenter my="12px">
+              <Flex.verticallyCenter my="8px">
                 <RadioButton name="experience" id="serverless-in-prod" />
                 <InlineBlock>i run serverless in production</InlineBlock>
               </Flex.verticallyCenter>

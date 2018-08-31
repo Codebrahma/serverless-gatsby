@@ -6,7 +6,7 @@ import {
   Column,
   Heading,
   P,
-  SecondaryButton,
+  TertiaryButton,
   Relative,
   ResponsiveStack,
   Text,
@@ -115,13 +115,12 @@ const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
                 `Dates for this workshop have not been finalized. Join the waitlist to get notified as soon as the dates are set.`
             }
           </P>
-          <SecondaryButton
-            background='white'
+          <TertiaryButton
             width={1}
             onClick={() => push('/resources/workshops/form')}
           >
             {isAvailable ? 'contact us' : 'join waitlist'}
-          </SecondaryButton>
+          </TertiaryButton>
         </Relative>
       </Column>
     </Background>

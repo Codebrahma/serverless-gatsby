@@ -27,7 +27,7 @@ const DeveloperMenu = () => (
     <MenuTitle name={'developers'} />
     <MenuDescription
       wrapperStyles={{
-        minWidth: [0, 0, '475px'],
+        minWidth: [0, 0, '498px'],
         px: 5,
       }}
     >

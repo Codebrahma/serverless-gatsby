@@ -14,7 +14,7 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
       background={`url(${imgSrc})`}
       backgroundRepeat="no-repeat"
       backgroundPosition={[`${imageAlignment} top`, `${imageAlignment} top`, imageAlignment]}
-      backgroundSize={["120%", "120%", "75%"]}
+      backgroundSize={["120%", "120%", "70%"]}
     >
       <AppContainer>
         <Column
@@ -23,8 +23,8 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
         >
           <Box
             width={[1, 1, 0.45]}
-            pb={[6, 6, 2, 8, '10vw']}
-            pt={['95%', '95%', 2, 8, '10vw']}
+            pb={[6, 6, 2, 8, '7vw']}
+            pt={['95%', '95%', 2, 8, '7vw']}
           >
             <Box mb={5}>
               <TitleWithIcon>

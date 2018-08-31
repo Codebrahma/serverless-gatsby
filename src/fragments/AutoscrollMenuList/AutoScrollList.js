@@ -80,9 +80,18 @@ class AutoScrollList extends React.Component {
 
   fixSidebar = () => {
     const container = ReactDOM.findDOMNode(this.container)
-    if (container) {
+    const lastItem = ReactDOM.findDOMNode(this[this.props.listData.length - 1])
+
+    if (container && lastItem) {
       const sidebarNode = ReactDOM.findDOMNode(this.sidebar)
-      sidebarNode.style.position = (container.offsetTop < window.pageYOffset) ? 'fixed' : 'relative'
+      const sidebarBackgroundNode = ReactDOM.findDOMNode(this.sidebarBackground)
+      const lastItemOffsetTop = (container.offsetTop + lastItem.offsetTop + sidebarNode.offsetHeight - 150)
+      const crossedHero = (container.offsetTop < window.pageYOffset)
+      const crossedLastItem = (lastItemOffsetTop < window.pageYOffset)
+
+      sidebarBackgroundNode.style.position = crossedHero ? 'fixed' : 'absolute'
+      sidebarNode.style.position = crossedHero && !crossedLastItem ? 'fixed' : 'relative'
+      sidebarNode.style.top = crossedLastItem ? `${lastItemOffsetTop - sidebarNode.offsetHeight - 250}px` : 0
     }
   }
 
@@ -97,9 +106,12 @@ class AutoScrollList extends React.Component {
     return (
       <Relative width={1} ref={(ref) => { this.container = ref }}>
         <Absolute
-          height="fullHeight"
-          width={[0, 0, 0, 0.36]}
+          height="100vh"
+          width={[0, 0, 0, "36vw"]}
+          top="0"
+          zIndex="-1"
           left={-25}
+          ref={(ref) => { this.sidebarBackground = ref }}
         >
           <Background
             height="fullHeight"
@@ -114,7 +126,7 @@ class AutoScrollList extends React.Component {
             <Box
               display={['none', 'none', 'none', 'block']}
               width={1/3}
-              pr={6}
+              pr={2}
             >
               <Relative
                 width={1}
@@ -123,9 +135,10 @@ class AutoScrollList extends React.Component {
                 ref={(ref) => { this.sidebar = ref }}
               >
                 <List
-                  my={[4, 4, 6, 8]}
+                  my={0}
                   mx={2}
-                  p={0}
+                  py={[4, 4, 6, 8]}
+                  px={0}
                 >
                   {
                     listData.map(({ title }, index) => (

@@ -22,6 +22,7 @@ const Introduction = () => (
         fontFamily="SoleilSb"
         lineHeight={3}
         letterSpacing="0"
+        align="center"
       >
         Find a Serverless meetup near you.
       </Heading.h2>
@@ -30,6 +31,7 @@ const Introduction = () => (
         color="gray.3"
         fontSize={2}
         lineHeight={4}
+        align="center"
       >
         Don't see a meetup in your city ? Contact us and start your own.
       </Heading.h6>

@@ -38,11 +38,12 @@ const Features = ({ title, description, features, leadingNumber }) => (
       </Box>
       <Row flexWrap='wrap' mt={3}>
         {
-          features.map(({ header, img, content }, index) => (
+          features.map(({ header, img, content, action }, index) => (
             <FeatureItem
               key={header}
               header={header}
               content={content}
+              action={action}
               img={img}
               rightAligned={index % 2 === 0}
               leadingNumber={leadingNumber}

@@ -1,10 +1,26 @@
 import React from 'react'
-import { Box } from 'serverless-design-system/src'
+import { Box, Button } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
+import { NavLink } from 'src/components'
 import resourcesOverviewBlog from 'src/assets/images/resourcesOverviewBlog.png'
 import resourcesOverviewForum from 'src/assets/images/resourcesOverviewForum.png'
 import resourcesOverviewMeetup from 'src/assets/images/resourcesOverviewMeetup.png'
 import resourcesOverviewWorkshop from 'src/assets/images/resourcesOverviewWorkshop.png'
+import { resources } from 'src/constants/urls'
+
+const Action = ({ name, link, options = {} }) => (
+  <NavLink
+    to={link}
+    {...options}
+  >
+    <Button>{name}</Button>
+  </NavLink>
+)
+
+Action.defaultProps = {
+  name: 'learn more',
+  options: { completed: true },
+}
 
 const featureItemsData = [
   {
@@ -12,24 +28,28 @@ const featureItemsData = [
     img: resourcesOverviewForum,
     content:
       'Getting stuck? Want advice? The Serverless Forums are a great place to start.',
+    action: (<Action link={resources.forum} options={{ crossDomain: true }} />),
   },
   {
     header: 'Meetups',
     img: resourcesOverviewMeetup,
     content:
       'Serverless Meetups are held locally in cities worldwide. Get together. Share what you know. Learn from the implementations of others.',
+    action: (<Action link={resources.meetups} />),
   },
   {
     header: 'Workshops',
     img: resourcesOverviewWorkshop,
     content:
       'Learn about testing, security and operations in our one-day Serverless Developer Workshops. These workshops will help you speed up operationalization of serverless architectures across your entire organization. Join the waitlist for your city.',
+    action: (<Action link={resources.workshops} />),
   },
   {
     header: 'Blog',
     img: resourcesOverviewBlog,
     content:
       `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    action: (<Action name="view the blog" link={resources.blog} />),
   },
 ]
 

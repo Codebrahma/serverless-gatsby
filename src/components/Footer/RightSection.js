@@ -17,9 +17,9 @@ import {
   instagramHandle,
   twitterHandle,
 } from 'src/constants/urls'
-import footerFb from 'src/assets/images/footerFb.png'
-import footerInsta from 'src/assets/images/footerInst.png'
-import footerTwitter from 'src/assets/images/footerTwitter.png'
+import facebookImage from 'src/assets/images/facebook.svg'
+import instagramImage from 'src/assets/images/instagram.svg'
+import twitterImage from 'src/assets/images/twitter.svg'
 
 // Renders the subscribe column
 const Subscribe = () => (
@@ -63,17 +63,17 @@ const Subscribe = () => (
     <Box py={3}>
       <NavLink to={facebookHandle} crossDomain>
         <InlineBlock mr={3}>
-          <Image src={footerFb} />
+          <Image src={facebookImage} />
         </InlineBlock>
       </NavLink>
       <NavLink to={instagramHandle} crossDomain>
         <InlineBlock mr={3}>
-          <Image src={footerInsta} />
+          <Image src={instagramImage} />
         </InlineBlock>
       </NavLink>
       <NavLink to={twitterHandle} crossDomain>
         <InlineBlock mr={3}>
-          <Image src={footerTwitter} />
+          <Image src={twitterImage} />
         </InlineBlock>
       </NavLink>
     </Box>

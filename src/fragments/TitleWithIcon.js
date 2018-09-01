@@ -5,10 +5,10 @@ import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 export default ({ children }) => (
   <TextWithIcon
     iconSrc={redRectangleDots}
-    iconHeight="30px"
-    iconWidth={["60px", "60px", "60px", "75px"]}
-    iconTop={["-10px", "-10px", "-10px", "-5px"]}
-    iconLeft={["-10px", "-10px", "-10px", "-5px"]}
+    iconHeight={["30px", "30px", "30px", "38px"]}
+    iconWidth={["60px", "60px", "60px", "98px"]}
+    iconTop={["-10px", "-10px", "-10px", "-10px"]}
+    iconLeft={["-10px", "-12px", "-14px", "-28px"]}
     backgroundSize="contain"
     backgroundPosition="center"
     backgroundRepeat="no-repeat"

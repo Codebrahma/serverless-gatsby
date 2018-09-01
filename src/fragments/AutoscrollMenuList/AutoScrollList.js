@@ -107,7 +107,7 @@ class AutoScrollList extends React.Component {
       <Relative width={1} ref={(ref) => { this.container = ref }}>
         <Absolute
           height="100vh"
-          width={[0, 0, 0, "36vw"]}
+          width={[0, 0, 0, "34vw", "32vw"]}
           top="0"
           zIndex="-1"
           left={-25}

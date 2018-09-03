@@ -38,8 +38,8 @@ exports.sourceNodes =  async ({ boundActionCreators }) => {
             frontmatter,
             content: String(file),
           }
-          console.log(frontmatter);
-          next();
+          createNode(blog)
+          next()
         });
     }, resolve);
   });
@@ -49,17 +49,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
     graphql(`
-        {
-          allBlog {
-            edges {
-              node {
-                id
-              }
+      {
+        allBlog {
+          edges {
+            node {
+              id
             }
           }
         }
-      `
-    ).then(result => {
+      }
+    `).then(result => {
       const blogs = result.data.allBlog.edges;
 
       for(let i = 0 ; i < blogs.length ; i += blogsPerPage ) {

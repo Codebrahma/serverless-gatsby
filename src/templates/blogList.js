@@ -1,10 +1,12 @@
 import React from 'react'
+import BlogLayout from '../layouts/Blog'
 
 export default class Blogs extends React.Component {
   render() {
-    console.log(this.props);
     return (
-      <h1>Blogs</h1>
+      <BlogLayout>
+        <h1>Blogs</h1>
+      </BlogLayout>
     )
   }
 }

@@ -1,12 +1,12 @@
 // Dynamic content generation for blogs
-
 const path = require('path')
 const crypto = require('crypto')
 const dir = require('node-dir')
 const matter = require('gray-matter')
-var unified = require('unified')
-var markdown = require('remark-parse')
-var html = require('remark-html')
+const unified = require('unified')
+const markdown = require('remark-parse')
+const html = require('remark-html')
+const blogsPerPage = 5
 
 exports.sourceNodes =  async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;
@@ -39,7 +39,6 @@ exports.sourceNodes =  async ({ boundActionCreators }) => {
             content: String(file),
           }
           console.log(frontmatter);
-          createNode(blog)
           next();
         });
     }, resolve);
@@ -50,27 +49,41 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   return new Promise((resolve, reject) => {
     graphql(`
-      {
-        allBlog {
-          edges {
-            node {
-              id
+        {
+          allBlog {
+            edges {
+              node {
+                id
+              }
             }
           }
         }
+      `
+    ).then(result => {
+      const blogs = result.data.allBlog.edges;
+
+      for(let i = 0 ; i < blogs.length ; i += blogsPerPage ) {
+        const page = i / blogsPerPage;
+        createPage({
+          path: `blog${ page === 0 ? '' : ('/page/' + page) }`,
+          component: path.resolve(`./src/templates/blogList.js`),
+          context: {
+            limit: 5,
+            start: i,
+          }
+        })
       }
-    `
-  ).then(result => {
-    result.data.allBlog.edges.forEach(({ node }) => {
-      createPage({
-        path: `blog/${node.id}`,
-        component: path.resolve(`./src/templates/blog.js`),
-        context: {
-          blogId: node.id
-        },
+
+      blogs.forEach(({ node }) => {
+        createPage({
+          path: `blog/${node.id}`,
+          component: path.resolve(`./src/templates/blog.js`),
+          context: {
+            blogId: node.id
+          },
+        })
       })
-    })
-    resolve()
+      resolve()
     })
   }).catch(error => {
     console.log(error)

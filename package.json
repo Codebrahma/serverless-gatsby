@@ -32,13 +32,27 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint ./src/ --ext .js --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:blog": "node scripts/blog/watch.js",
+    "components": "npm run transpile -- --watch",
+    "prepareContent": "node scripts/blog",
+    "dev": "npm run prepareContent && gatsby develop",
+    "syncLocal": "npm run postinstall",
+    "syncProd": "npm run syncProd:Blog",
+    "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
+    "prebuild": "npm run prepareContent"
   },
   "devDependencies": {
+    "async": "^2.6.1",
     "download": "^7.1.0",
+    "fs-extra": "^7.0.0",
     "gatsby-plugin-root-import": "^1.0.0",
+    "gray-matter": "^4.0.1",
+    "node-dir": "^0.1.17",
     "prettier": "^1.13.7",
-    "react-masonry-css": "^1.0.11"
+    "react-masonry-css": "^1.0.11",
+    "remark-html": "^8.0.0",
+    "yamljs": "^0.3.0"
   },
   "repository": {
     "type": "git",

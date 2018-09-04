@@ -6,6 +6,7 @@ const matter = require('gray-matter')
 const unified = require('unified')
 const markdown = require('remark-parse')
 const html = require('remark-html')
+const authors = require('./src/pages/blog/generated-authors.json')
 const blogsPerPage = 5
 
 exports.sourceNodes =  async ({ boundActionCreators }) => {
@@ -79,6 +80,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/blog.js`),
           context: {
             blogId: node.id
+          },
+        })
+      })
+
+      Object.keys(authors).forEach((authorKey) => {
+        createPage({
+          path: `author/${authorKey}`,
+          component: path.resolve(`./src/templates/author.js`),
+          context: {
+            authorId: [authorKey]
           },
         })
       })

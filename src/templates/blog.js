@@ -8,7 +8,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => (
   <BlogLayout>
     <AppContainer>
       <Column
-        width={[1, 1, 1, 0.6]}
+        width={[1, 1, 1, 0.65]}
         mx="auto"
         my={4}
         alignItems="center"
@@ -56,7 +56,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => (
         </Row>
       </Column>
       <Column
-        width={[1, 1, 1, 0.6]}
+        width={[1, 1, 1, 0.65]}
         mx="auto"
         dangerouslySetInnerHTML={{ __html: content }}
       />

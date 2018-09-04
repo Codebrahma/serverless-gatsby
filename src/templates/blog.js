@@ -11,8 +11,11 @@ import {
 } from 'serverless-design-system/src'
 import BlogLayout from 'src/layouts/Blog'
 import { AppContainer } from 'src/components'
-import dotGridHorizontal from 'src/assets/images/dot-grid-horizontal.png'
+import Card from 'src/components/pages/blog/Card'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
+import dotGridHorizontal from 'src/assets/images/dot-grid-horizontal.png'
+import glitchDivider from 'src/assets/images/glitch-divider.png'
+
 
 export default ({ data: { blog: { id, frontmatter, content } } }) => (
   <BlogLayout>
@@ -109,6 +112,32 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => (
         </Relative>
       </Row>
     </AppContainer>
+    <Relative my={5}>
+      <Background
+        width={1}
+        background={`url(${glitchDivider})`}
+        backgroundSize="contain"
+        backgroundRepeat="no-repeat"
+        backgroundPosition="center"
+      >
+        <AppContainer>
+          <Row justifyContent="space-between">
+            <Relative
+              width={0.49}
+              height={400}
+            >
+              <Card frontmatter={frontmatter} />
+            </Relative>
+            <Relative
+              width={0.49}
+              height={400}
+            >
+              <Card frontmatter={frontmatter} />
+            </Relative>
+          </Row>
+        </AppContainer>
+      </Background>
+    </Relative>
   </BlogLayout>
 );
 
@@ -118,6 +147,7 @@ export const query = graphql`
       id
       frontmatter {
         title
+        date,
         description
         authors
         thumbnail

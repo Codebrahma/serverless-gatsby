@@ -59,13 +59,6 @@ export default styled(Column)`
     margin-bottom: 15px;
   }
 
-  em {
-    background: #f7f7f7;
-    padding: 32px;
-    display: block;
-    font-style: normal;
-  }
-
   li {
     padding-top: 15px;
     padding-bottom: 8px;

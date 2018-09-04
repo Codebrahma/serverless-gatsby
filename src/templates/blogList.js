@@ -2,6 +2,7 @@ import React from 'react'
 import BlogLayout from 'src/layouts/Blog'
 import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
+import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
 import { Divider } from 'src/fragments'
 
 export default class Blogs extends React.Component {
@@ -9,12 +10,10 @@ export default class Blogs extends React.Component {
     const { data: { allBlog: { edges } } } = this.props
 
     return (
-      <BlogLayout>
+      <BlogLayout prefooter={BlogListPrefooter}>
         <HighlightedBlogs />
         <Divider />
-        <BlogPreview
-          blogs={edges.map(({ node }) => node)}
-        />
+        <BlogPreview blogs={edges.map(({ node }) => node)} />
       </BlogLayout>
     )
   }

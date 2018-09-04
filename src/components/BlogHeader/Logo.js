@@ -5,7 +5,7 @@ import { Logo } from 'serverless-design-system/src'
 import logo from 'src/assets/images/blog-logo.svg'
 
 const LogoComponent = () => (
-  <Link to='/'>
+  <Link to='/blog'>
     <Logo
       src={logo}
       height={['22px', '22px', '22px', '30px']}

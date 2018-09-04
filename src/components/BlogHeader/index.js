@@ -5,7 +5,7 @@ import {
   Flex,
   Text,
 } from 'serverless-design-system/src'
-
+import Link from 'gatsby-link'
 import HeaderWrapper from './Wrapper'
 import Logo from './Logo'
 import NewsLetterForm from './NewsLetterForm'
@@ -26,14 +26,16 @@ export default () => (
           <Box
             display={['none', 'none', 'block']}
           >
-            <Text.p
-              my={0}
-              fontSize={0}
-              color="white"
-              opacity={0.5}
-            >
-              &larr; serverless.com
-            </Text.p>
+            <Link to={'/'}>
+              <Text.p
+                my={0}
+                fontSize={0}
+                color="white"
+                opacity={0.5}
+              >
+                &larr; serverless.com
+              </Text.p>
+            </Link>
           </Box>
 
           <Flex.verticallyCenter

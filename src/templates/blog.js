@@ -14,13 +14,14 @@ import BlogLayout from 'src/layouts/Blog'
 import { AppContainer } from 'src/components'
 import ContentWrapper from 'src/components/pages/blog/ContentWrapper'
 import Card from 'src/components/pages/blog/Card'
+import Prefooter from 'src/components/pages/blog/Prefooter'
 import DisqusScript from 'src/components/pages/blog/DisqusScript'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
 import dotGridHorizontal from 'src/assets/images/dot-grid-horizontal.png'
 import glitchDivider from 'src/assets/images/glitch-divider.png'
 
 export default ({ data: { blog: { id, frontmatter, content } } }) => (
-  <BlogLayout>
+  <BlogLayout prefooter={Prefooter}>
     <AppContainer>
       <Column
         width={[1, 1, 1, 0.65]}

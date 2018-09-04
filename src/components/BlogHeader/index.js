@@ -30,6 +30,7 @@ export default () => (
               my={0}
               fontSize={0}
               color="white"
+              opacity={0.5}
             >
               &larr; serverless.com
             </Text.p>

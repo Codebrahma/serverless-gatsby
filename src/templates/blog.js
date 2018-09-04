@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import {
   Text,
   Heading,
@@ -12,10 +13,10 @@ import {
 import BlogLayout from 'src/layouts/Blog'
 import { AppContainer } from 'src/components'
 import Card from 'src/components/pages/blog/Card'
+import DisqusScript from 'src/components/pages/blog/DisqusScript'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
 import dotGridHorizontal from 'src/assets/images/dot-grid-horizontal.png'
 import glitchDivider from 'src/assets/images/glitch-divider.png'
-
 
 export default ({ data: { blog: { id, frontmatter, content } } }) => (
   <BlogLayout>
@@ -138,6 +139,13 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => (
         </AppContainer>
       </Background>
     </Relative>
+    <Column
+      width={[1, 1, 1, 0.65]}
+      mx="auto"
+      id="disqus_thread"
+    >
+    </Column>
+    <Helmet script={[{ type: 'text/javascript', innerHTML: DisqusScript }]} />
   </BlogLayout>
 );
 

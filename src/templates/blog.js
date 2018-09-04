@@ -1,7 +1,17 @@
 import React from 'react'
-import { Text, Heading, Column, Row, Image } from 'serverless-design-system/src'
+import {
+  Text,
+  Heading,
+  Column,
+  Row,
+  Image,
+  Relative,
+  Absolute,
+  Background,
+} from 'serverless-design-system/src'
 import BlogLayout from 'src/layouts/Blog'
 import { AppContainer } from 'src/components'
+import dotGridHorizontal from 'src/assets/images/dot-grid-horizontal.png'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
 
 export default ({ data: { blog: { id, frontmatter, content } } }) => (
@@ -60,6 +70,44 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => (
         mx="auto"
         dangerouslySetInnerHTML={{ __html: content }}
       />
+      <Row
+        width={[1, 1, 1, 0.65]}
+        mx="auto"
+        mt={4}
+      >
+        <Relative zIndex={-2}>
+          <Image
+            src={AuthorsData[frontmatter.authors[0]].avatar}
+            height={177}
+            width={177}
+          />
+        </Relative>
+        <Relative
+          width={[1, 1, 1, 0.6]}
+          mx={2}
+        >
+          <Absolute
+            height={38}
+            width={98}
+            top="14%"
+            left="-12%"
+            zIndex={-1}
+          >
+            <Background
+              height="fullHeight"
+              width={1}
+              background={`url(${dotGridHorizontal})`}
+              backgroundSize="cover"
+            />
+          </Absolute>
+          <Heading.h4>
+            {AuthorsData[frontmatter.authors[0]].name}
+          </Heading.h4>
+          <Text.p>
+            {AuthorsData[frontmatter.authors[0]].bio.long}
+          </Text.p>
+        </Relative>
+      </Row>
     </AppContainer>
   </BlogLayout>
 );

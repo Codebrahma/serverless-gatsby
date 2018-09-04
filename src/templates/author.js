@@ -14,7 +14,8 @@ import mediumIcon from 'src/assets/images/medium.svg'
 
 export default class Authors extends React.Component {
   render() {
-    const { data: { allBlog: { edges = [] } = {} }, pathContext: { authorId } } = this.props
+    const { data, pathContext: { authorId } } = this.props
+    const edges = data.allBlog ? (data.allBlog.edges || []) : []
     const author = AuthorsData[authorId]
 
     return (

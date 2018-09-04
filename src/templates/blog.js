@@ -9,7 +9,9 @@ import {
   Relative,
   Absolute,
   Background,
+  P,
 } from 'serverless-design-system/src'
+import { push } from 'gatsby-link'
 import BlogLayout from 'src/layouts/Blog'
 import { AppContainer } from 'src/components'
 import ContentWrapper from 'src/components/pages/blog/ContentWrapper'
@@ -83,6 +85,8 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
           width={[1, 1, 1, 0.65]}
           mx="auto"
           mt={4}
+          style={{ cursor: 'pointer' }}
+          onClick={() => push(`/author/${frontmatter.authors ? frontmatter.authors[0] : null }`)}
         >
           <Relative zIndex={-2}>
             <Image
@@ -109,12 +113,12 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
                 backgroundSize="cover"
               />
             </Absolute>
-            <Heading.h4>
+            <Heading.h4 mt={3} fontFamily="SoleilBk">
               {author ? author.name : null}
             </Heading.h4>
-            <Text.p>
+            <P fontFamily="SoleilBk">
               {author ? author.bio.long : null}
-            </Text.p>
+            </P>
           </Relative>
         </Row>
       </AppContainer>

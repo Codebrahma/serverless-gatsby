@@ -20,7 +20,7 @@ export default class Authors extends React.Component {
     return (
       <BlogLayout prefooter={BlogListPrefooter}>
         <AppContainer>
-          <Row mt={8} mb={2}>
+          <Row mt={7} mb={2}>
             <Column
               width={[1, 1, 1, 0.4]}
               alignItems="flex-end"

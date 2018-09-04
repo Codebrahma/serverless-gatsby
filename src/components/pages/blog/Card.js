@@ -52,7 +52,7 @@ export default ({ frontmatter }) => (
           lineHeight={3}
         >
           written by&nbsp;
-          { frontmatter.authors.map((id) => AuthorsData[id].name).join(', ') }
+          { (frontmatter.authors || []).map((id) => AuthorsData[id].name).join(', ') }
         </Text.p>
       </Relative>
     </Column>

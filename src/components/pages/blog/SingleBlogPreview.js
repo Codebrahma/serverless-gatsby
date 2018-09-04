@@ -34,7 +34,7 @@ export default ({ id, frontmatter }) => (
         lineHeight={3}
       >
         written by&nbsp;
-        { frontmatter.authors.map((id) => AuthorsData[id].name).join(', ') }
+        { (frontmatter.authors || []).map((id) => AuthorsData[id].name).join(', ') }
       </Text.p>
     </Box>
     <Box width={0.4}>

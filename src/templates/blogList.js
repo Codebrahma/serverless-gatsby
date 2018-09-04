@@ -1,14 +1,12 @@
 import React from 'react'
 import BlogLayout from 'src/layouts/Blog'
-import { BlogHeroWrapper } from 'src/fragments'
+import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 
 export default class Blogs extends React.Component {
   render() {
     return (
       <BlogLayout>
-        <BlogHeroWrapper>
-          <h1>Blogs</h1>
-        </BlogHeroWrapper>
+        <HighlightedBlogs />
       </BlogLayout>
     )
   }

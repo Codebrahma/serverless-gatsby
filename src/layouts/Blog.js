@@ -2,7 +2,6 @@ import React from 'react'
 import { withTheme } from 'styled-components'
 import { Box, Column } from 'serverless-design-system/src'
 import { BlogHeader as Header, Footer } from 'src/components'
-import './blog.css'
 
 const BlogLayout = ({ theme, children, prefooter, transparentHeader }) => (
   <Column width={1}>

@@ -12,6 +12,7 @@ import {
 } from 'serverless-design-system/src'
 import BlogLayout from 'src/layouts/Blog'
 import { AppContainer } from 'src/components'
+import ContentWrapper from 'src/components/pages/blog/ContentWrapper'
 import Card from 'src/components/pages/blog/Card'
 import DisqusScript from 'src/components/pages/blog/DisqusScript'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
@@ -69,7 +70,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => (
           </Text>
         </Row>
       </Column>
-      <Column
+      <ContentWrapper
         width={[1, 1, 1, 0.65]}
         mx="auto"
         dangerouslySetInnerHTML={{ __html: content }}

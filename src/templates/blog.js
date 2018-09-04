@@ -56,7 +56,8 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => (
         </Row>
       </Column>
       <Column
-        width={1}
+        width={[1, 1, 1, 0.6]}
+        mx="auto"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </AppContainer>

@@ -1,10 +1,15 @@
 import React from 'react'
 import { Background, Box, Row, Text, Heading, P } from 'serverless-design-system/src'
+import { push } from 'gatsby-link'
 import { formatDate } from 'src/utils'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
 
 export default ({ id, frontmatter }) => (
-  <Row my={3}>
+  <Row
+    my={3}
+    style={{ cursor: 'pointer' }}
+    onClick={() => push(`/blog/${id}`)}
+  >
     <Box
       width={[1, 1, 1, 0.6]}
       pr={[0, 0, 0, '10%']}

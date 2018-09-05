@@ -18,8 +18,13 @@ export default class Blogs extends React.Component {
 
     return (
       <BlogLayout prefooter={BlogListPrefooter}>
-        <HighlightedBlogs />
-        <Divider />
+        { currentPage === 0 && (
+            <React.Fragment>
+              <HighlightedBlogs />
+              <Divider visibleInSmallScreens />
+            </React.Fragment>
+          )
+        }
         <BlogPreview blogs={edges.map(({ node }) => node)} />
         <Pagination total={totalPages} current={currentPage} />
       </BlogLayout>

@@ -4,6 +4,7 @@ import HeaderWrapper from './Wrapper'
 import ServerlessLink from './ServerlessLink'
 import LogoAndOptions from './LogoAndOptions'
 import SearchBar from './SearchBar'
+import Categories from './MobileOptions/Categories'
 import BlogNavbarContext from './BlogNavbarContext'
 import AppContainer from './../AppContainer'
 
@@ -61,6 +62,7 @@ export default class BlogHeader extends React.Component {
               <ServerlessLink />
               <LogoAndOptions />
               <SearchBar />
+              <Categories />
             </BlogNavbarContext.Provider>
           </AppContainer>
         </Box>

@@ -59,7 +59,7 @@ export default class Pagination extends React.Component {
 
   renderButtons = (numbers) => (
     numbers.map((number) => {
-      const link = number === 0 ? '/blog' : `/blog/page/${number}`
+      const link = number === 0 ? '/blog' : `/blog/page/${(number + 1)}`
 
       return (
         <PaginationButton

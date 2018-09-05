@@ -65,7 +65,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       for(let i = 0 ; i < blogs.length ; i += blogsPerPage ) {
         const page = i / blogsPerPage;
         createPage({
-          path: `blog${ page === 0 ? '' : ('/page/' + page) }`,
+          path: `blog${ page === 0 ? '' : ('/page/' + (page + 1) ) }`,
           component: path.resolve(`./src/templates/blogList.js`),
           context: {
             limit: 5,

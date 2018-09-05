@@ -7,6 +7,7 @@ const unified = require('unified')
 const markdown = require('remark-parse')
 const html = require('remark-html')
 const authors = require('./src/pages/blog/generated-authors.json')
+const categories = require('./src/pages/blog/generated-categories.json')
 const blogsPerPage = 5
 
 exports.sourceNodes =  async ({ boundActionCreators }) => {
@@ -90,6 +91,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           component: path.resolve(`./src/templates/author.js`),
           context: {
             authorId: [authorKey]
+          },
+        })
+      })
+
+      Object.keys(categories).forEach((categoryKey) => {
+        createPage({
+          path: `category/${categoryKey}`,
+          component: path.resolve(`./src/templates/category.js`),
+          context: {
+            categoryId: categoryKey
           },
         })
       })

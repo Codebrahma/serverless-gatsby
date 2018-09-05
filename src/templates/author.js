@@ -99,7 +99,7 @@ export default class Authors extends React.Component {
             </Column>
           </ResponsiveStack>
         </AppContainer>
-        <Divider />
+        <Divider visibleInSmallScreens />
         <Flex.center py={2}>
           <Heading.h2
             fontSize={[4, 4, 6]}

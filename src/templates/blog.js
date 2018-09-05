@@ -64,7 +64,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
               written by &nbsp;
             </Text>
             <Image
-              src="https://avatars3.githubusercontent.com/u/15029531?v=4&s=460"
+              src={author ? author.avatar : null}
               height={33}
               width={33}
             />
@@ -74,7 +74,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
               color="gray.3"
               lineHeight={2}
             >
-              &nbsp; Adnan Rahic
+              &nbsp; { author ? author.name : null }
             </Text>
           </Row>
         </Column>

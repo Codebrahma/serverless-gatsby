@@ -3,16 +3,18 @@ import Link from 'gatsby-link'
 import { Box, Flex, Text } from 'serverless-design-system/src'
 import BlogNavbarContext from '../BlogNavbarContext'
 
-const Category = ({ children }) => (
+const Category = ({ children, link }) => (
   <Box py={1}>
-    <Text.span
-      color="white"
-      lineHeight={0}
-      letterSpacing="text"
-      align="center"
-    >
-      { children }
-    </Text.span>
+    <Link to={link}>
+      <Text.span
+        color="white"
+        lineHeight={0}
+        letterSpacing="text"
+        align="center"
+      >
+        { children }
+      </Text.span>
+    </Link>
   </Box>
 )
 
@@ -25,11 +27,11 @@ export default () => (
             flexDirection="column"
             py={3}
           >
-            <Category>application development</Category>
-            <Category>operations & observability</Category>
-            <Category>guides & tutorials</Category>
-            <Category>engineering culture</Category>
-            <Category>news</Category>
+            <Category link={'/category/application-development'}>application development</Category>
+            <Category link={'/category/operations-and-observability'}>operations & observability</Category>
+            <Category link={'/category/guides-and-tutorials'}>guides & tutorials</Category>
+            <Category link={'/category/engineering-culture'}>engineering culture</Category>
+            <Category link={'/category/news'}>news</Category>
             <Box pt={3}>
               <Link to="/">
                 <Text.p

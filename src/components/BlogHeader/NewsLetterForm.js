@@ -3,8 +3,8 @@ import { Box, TextField, Button } from 'serverless-design-system/src'
 
 export default () => (
   <Box
-    width={[1, 1, 1, 0.35]}
-    display={['none', 'none', 'none', 'block']}
+    width={[1, 1, 0.5, 0.35]}
+    display={['none', 'none', 'block']}
   >
     <TextField
       color='white'

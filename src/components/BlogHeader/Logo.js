@@ -1,18 +1,16 @@
 import React from 'react'
-import Link from 'gatsby-link'
-
+import { push } from 'gatsby-link'
 import { Logo } from 'serverless-design-system/src'
 import logo from 'src/assets/images/blog-logo.svg'
 
 const LogoComponent = () => (
-  <Link to='/blog'>
-    <Logo
-      src={logo}
-      height={['22px', '22px', '22px', '30px']}
-      width={['125px', '125px', '125px', '170px']}
-      alt='Serverless'
-    />
-  </Link>
+  <Logo
+    src={logo}
+    height={['20px', '20px', '20px', '30px']}
+    width={['150px', '150px', '150px', '170px']}
+    alt='Serverless Blog'
+    onClick={() => push('/blog')}
+  />
 )
 
 export default LogoComponent

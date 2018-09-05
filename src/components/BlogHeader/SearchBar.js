@@ -18,11 +18,12 @@ const placeholder = [
 ].join(' '.repeat(10))
 
 const SearchBar = ({ theme, isNavbarShrinked }) => (
-  <Wrapper height={isNavbarShrinked ? 0 : 'auto'}>
+  <Wrapper
+    height={[ 0, 0, isNavbarShrinked ? 0 : 'auto' ]}>
     <Flex
       width={1}
       pt={1}
-      pb={[1, 1, 1, 2]}
+      pb={[1, 1, 2]}
     >
       <TextField
         p={16}

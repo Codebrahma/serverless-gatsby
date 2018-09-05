@@ -9,8 +9,8 @@ const BlogLayout = ({ theme, children, prefooter, transparentHeader }) => (
     <Box
       width={1}
       pt={[
-        theme.navbarHeights.mobile,
-        theme.navbarHeights.mobile,
+        55,
+        55,
         196
       ]}
       pb={[6, 6, 6, 250]}

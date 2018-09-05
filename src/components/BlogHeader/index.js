@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from 'serverless-design-system/src'
 import HeaderWrapper from './Wrapper'
 import ServerlessLink from './ServerlessLink'
-import LogoAndNewsLetterForm from './LogoAndNewsLetterForm'
+import LogoAndOptions from './LogoAndOptions'
 import SearchBar from './SearchBar'
 import AppContainer from './../AppContainer'
 
@@ -40,12 +40,12 @@ export default class BlogHeader extends React.Component {
         oy={['scroll', 'scroll', 'visible']}
       >
         <Box
-          py={[2, 2, 1]}
+          py={[0, 0, 1]}
           bg="black"
         >
           <AppContainer>
             <ServerlessLink {...this.state} />
-            <LogoAndNewsLetterForm {...this.state} />
+            <LogoAndOptions {...this.state} />
             <SearchBar {...this.state} />
           </AppContainer>
         </Box>

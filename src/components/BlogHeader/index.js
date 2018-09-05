@@ -4,10 +4,18 @@ import HeaderWrapper from './Wrapper'
 import ServerlessLink from './ServerlessLink'
 import LogoAndOptions from './LogoAndOptions'
 import SearchBar from './SearchBar'
+import BlogNavbarContext from './BlogNavbarContext'
 import AppContainer from './../AppContainer'
 
 export default class BlogHeader extends React.Component {
-  state = { isNavbarShrinked: false }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isNavbarShrinked: false,
+      isNavbarActive: false,
+      toggleNavbarActiveness: this.toggleNavbarActiveness,
+    }
+  }
 
   componentDidMount() {
     document.addEventListener('scroll', this.scrollHandler)
@@ -32,6 +40,11 @@ export default class BlogHeader extends React.Component {
       isNavbarShrinked: !prevState.isNavbarShrinked,
     }))
 
+  toggleNavbarActiveness = () =>
+    this.setState(prevState => ({
+      isNavbarActive: !prevState.isNavbarActive
+    }))
+
   render() {
     return (
       <HeaderWrapper
@@ -44,9 +57,11 @@ export default class BlogHeader extends React.Component {
           bg="black"
         >
           <AppContainer>
-            <ServerlessLink {...this.state} />
-            <LogoAndOptions {...this.state} />
-            <SearchBar {...this.state} />
+            <BlogNavbarContext.Provider value={this.state}>
+              <ServerlessLink />
+              <LogoAndOptions />
+              <SearchBar />
+            </BlogNavbarContext.Provider>
           </AppContainer>
         </Box>
       </HeaderWrapper>

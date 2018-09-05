@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { withTheme } from 'styled-components'
 import { Box, Flex, Card, TextField, Image } from 'serverless-design-system/src'
+
+import BlogNavbarContext from './BlogNavbarContext'
 import searchIcon from 'src/assets/images/search-icon.svg'
 
 const Wrapper = styled(Box)`
@@ -17,9 +19,20 @@ const placeholder = [
   'news'
 ].join(' '.repeat(10))
 
-const SearchBar = ({ theme, isNavbarShrinked }) => (
-  <Wrapper
-    height={[ 0, 0, isNavbarShrinked ? 0 : 'auto' ]}>
+const SearchBarWrapper = ({ children }) => (
+  <BlogNavbarContext.Consumer>
+    {
+      ({ isNavbarShrinked }) => (
+        <Wrapper height={[ 0, 0, isNavbarShrinked ? 0 : 'auto' ]}>
+          {children}
+        </Wrapper>
+      )
+    }
+  </BlogNavbarContext.Consumer>
+)
+
+const SearchBar = ({ theme }) => (
+  <SearchBarWrapper>
     <Flex
       width={1}
       pt={1}
@@ -50,7 +63,7 @@ const SearchBar = ({ theme, isNavbarShrinked }) => (
         </Flex.center>
       </Card>
     </Flex>
-  </Wrapper>
+  </SearchBarWrapper>
 )
 
 export default withTheme(SearchBar)

@@ -146,14 +146,14 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
             >
               <Relative
                 width={[1, 1, 0.49]}
-                height={400}
+                height={[300, 300, 400]}
                 my={1}
               >
                 <Card frontmatter={frontmatter} />
               </Relative>
               <Relative
                 width={[1, 1, 0.49]}
-                height={400}
+                height={[300, 300, 400]}
                 my={1}
               >
                 <Card frontmatter={frontmatter} />
@@ -164,6 +164,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
       </Relative>
       <Column
         width={[1, 1, 1, 0.65]}
+        px={2}
         mx="auto"
         id="disqus_thread"
       >

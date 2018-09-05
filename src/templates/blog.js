@@ -32,7 +32,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
         <Column
           width={[1, 1, 1, 0.65]}
           mx="auto"
-          my={4}
+          my={[1, 1, 4]}
           alignItems="center"
         >
           <Text.p

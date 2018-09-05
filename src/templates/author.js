@@ -33,6 +33,7 @@ export default class Authors extends React.Component {
                   width={[1, 1, 280]}
                   src={(author.avatar || "").replace("140", "280")}
                 />
+                <Box height="10px" />
                 <Row alignItems="center">
                   <Column mr={1}>
                     <Image src={linkIcon} width="20px" maxHeight="24px" />

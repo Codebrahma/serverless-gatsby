@@ -14,7 +14,8 @@ const placeholder = [
 const SearchBar = ({ theme }) => (
   <Flex
     width={1}
-    py={1}
+    pt={1}
+    pb={[1, 1, 1, 2]}
   >
     <TextField
       p={16}

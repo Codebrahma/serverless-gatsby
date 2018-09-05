@@ -11,7 +11,7 @@ const BlogLayout = ({ theme, children, prefooter, transparentHeader }) => (
       pt={[
         theme.navbarHeights.mobile,
         theme.navbarHeights.mobile,
-        206
+        196
       ]}
       pb={[6, 6, 6, 250]}
     >

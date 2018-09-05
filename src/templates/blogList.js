@@ -4,16 +4,24 @@ import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
 import { Divider } from 'src/fragments'
+import { Pagination } from 'src/components'
 
 export default class Blogs extends React.Component {
   render() {
-    const { data: { allBlog: { edges } } } = this.props
+    const {
+      data: { allBlog: { edges, totalCount } },
+      pathContext: { start, limit }
+    } = this.props
+
+    const totalPages = Math.ceil(totalCount / limit)
+    const currentPage = start/limit
 
     return (
       <BlogLayout prefooter={BlogListPrefooter}>
         <HighlightedBlogs />
         <Divider />
         <BlogPreview blogs={edges.map(({ node }) => node)} />
+        <Pagination total={totalPages} current={currentPage} />
       </BlogLayout>
     )
   }

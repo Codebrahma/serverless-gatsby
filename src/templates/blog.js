@@ -5,6 +5,7 @@ import {
   Heading,
   Column,
   Row,
+  ResponsiveStack,
   Image,
   Relative,
   Absolute,
@@ -140,20 +141,24 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
           backgroundPosition="center"
         >
           <AppContainer>
-            <Row justifyContent="space-between">
+            <ResponsiveStack
+              justifyContent={["space-between"]}
+            >
               <Relative
-                width={0.49}
+                width={[1, 1, 0.49]}
                 height={400}
+                my={1}
               >
                 <Card frontmatter={frontmatter} />
               </Relative>
               <Relative
-                width={0.49}
+                width={[1, 1, 0.49]}
                 height={400}
+                my={1}
               >
                 <Card frontmatter={frontmatter} />
               </Relative>
-            </Row>
+            </ResponsiveStack>
           </AppContainer>
         </Background>
       </Relative>

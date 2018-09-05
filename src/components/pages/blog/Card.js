@@ -23,7 +23,7 @@ export default ({ frontmatter }) => (
       width={1}
       justifyContent="center"
     >
-      <Relative width={1} px={5}>
+      <Relative width={1} px={[2, 2, 5]}>
         <Text.p
           fontFamily="Serverless"
           fontSize={1}
@@ -38,10 +38,15 @@ export default ({ frontmatter }) => (
           fontFamily="SoleilBk"
           letterSpacing="h4"
           color="white"
+          fontSize={[3, 3, 3, 4]}
         >
           { frontmatter.title }
         </Heading.h3>
-        <P lineHeight={1.63}>
+        <P
+          fontSize={[1, 1, 1, 2]}
+          lineHeight={1.63}
+          color={['white', 'white', '']}
+        >
           { frontmatter.description }
         </P>
         <Text.p

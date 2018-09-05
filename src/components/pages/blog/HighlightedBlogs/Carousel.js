@@ -69,7 +69,7 @@ class Carousel extends React.Component {
             </Box>
             <Heading.h2
               fontFamily="SoleilBk"
-              fontSize={7}
+              fontSize={[4, 4, 5, 7]}
               align="center"
               lineHeight={0}
             >
@@ -83,6 +83,7 @@ class Carousel extends React.Component {
                 fontFamily="SoleilBk"
                 color="gray.3"
                 lineHeight={1.63}
+                mt={[0, 0, 10, 15]}
               >
                 A breakdown of the top serverless security risks, and steps you can take to secure your serverless applications.
               </Text.p>

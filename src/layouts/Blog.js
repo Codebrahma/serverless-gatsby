@@ -13,7 +13,7 @@ const BlogLayout = ({ theme, children, prefooter, transparentHeader }) => (
         55,
         196
       ]}
-      pb={[6, 6, 6, 250]}
+      pb={[300, 300, 300, 250]}
     >
       {children}
     </Box>

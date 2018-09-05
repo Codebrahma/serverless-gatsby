@@ -22,6 +22,7 @@ class Carousel extends React.Component {
           height={500}
           background={`url(https://raw.githubusercontent.com/adnanrahic/cdn/master/covers/catridingunicorn2.jpg)`}
           backgroundSize="cover"
+          backgroundPosition="center"
         >
           <Flex.horizontallyCenter
             flexDirection="row"
@@ -31,18 +32,18 @@ class Carousel extends React.Component {
             py={45}
           >
             {
-              [0, 1, 2, 3, 4].map((num, index) => (
-                <Box
-                  mx={15}
-                  key={`selector-${index}`}
-                >
-                  <Background
-                    height={15}
-                    width={15}
-                    background={num === 0 ? theme.colors.primaryColor : 'white'}
-                  />
-                </Box>
-              ))
+              // [0, 1, 2, 3, 4].map((num, index) => (
+              //   <Box
+              //     mx={15}
+              //     key={`selector-${index}`}
+              //   >
+              //     <Background
+              //       height={15}
+              //       width={15}
+              //       background={num === 0 ? theme.colors.primaryColor : 'white'}
+              //     />
+              //   </Box>
+              // ))
             }
           </Flex.horizontallyCenter>
         </Background>

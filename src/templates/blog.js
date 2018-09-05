@@ -43,6 +43,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
             { frontmatter.category || 'news' }
           </Text.p>
           <Heading.h1
+            fontSize={[4, 4, 4, 7]}
             fontFamily="SoleilBk"
             letterSpacing="h4"
             align="center"
@@ -91,16 +92,17 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
           <Relative zIndex={-2}>
             <Image
               src={author ? author.avatar : null}
-              height={177}
-              width={177}
+              height={['auto', 'auto', 'auto', 177]}
+              width={[55, 55, 55, 177]}
+              objectFit="contain"
             />
           </Relative>
           <Relative
             width={[1, 1, 1, 0.6]}
-            mx={2}
+            ml={[15, 15, 15, 2]}
           >
             <Absolute
-              height={38}
+              height={[0, 0, 0, 38]}
               width={98}
               top="14%"
               left="-12%"
@@ -113,10 +115,17 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
                 backgroundSize="cover"
               />
             </Absolute>
-            <Heading.h4 mt={3} fontFamily="SoleilBk">
-              {author ? author.name : null}
+            <Heading.h4
+              mt={[0, 0, 0, 3]}
+              fontFamily="SoleilBk"
+              fontSize={[3, 3, 3, 4]}
+            >
+              About {author ? author.name : null}
             </Heading.h4>
-            <P fontFamily="SoleilBk">
+            <P
+              fontFamily="SoleilBk"
+              fontSize={[0, 0, 0, 1]}
+            >
               {author ? author.bio.long : null}
             </P>
           </Relative>

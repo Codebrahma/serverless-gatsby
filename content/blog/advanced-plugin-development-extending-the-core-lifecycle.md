@@ -7,6 +7,7 @@ layout: Post
 authors:
     - FrankSchmid
 gitLink: /2017-03-02-advanced-plugin-development-extending-the-core-lifecycle.md
+category: engineering-culture
 ---
 # Introduction
 
@@ -66,7 +67,7 @@ start the plugin's defined lifecycle.
 The solution to this problem is the plugin manager that controls the lifecycle, runs commands and triggers the hooks.
 The plugin manager is available as property on the serverless object in every plugin, so we can use and access it from there.
 
-As lifecycles can only be started by invoking a command, and the plugin manager is able to run commands, we already have a 
+As lifecycles can only be started by invoking a command, and the plugin manager is able to run commands, we already have a
 feasible solution here.
 
 In short, we have to define an internal command, that defines our plugin lifecycle and that can be
@@ -144,7 +145,7 @@ hook chain. There are no limits to what you can do there.
 ## Prevent Invocation from the Outside (User)
 
 Serverless will show all defined commands in its help output and every shown command normally can also be executed.
-For our internal hook lifecycle both of these behaviors are issues, so we have to add a workaround - Serverless does 
+For our internal hook lifecycle both of these behaviors are issues, so we have to add a workaround - Serverless does
 not allow commands to not be exposed nor does it allow you to hide commands from the help output.
 
 We add a small description to our data command that will be shown on the help screen and a validate lifecycle event that
@@ -173,7 +174,7 @@ hook implementation and the new validate event as follows:
   ...
 ```
 
-Maybe the plugin manager can support some flag for internal commands in the future that prevents calling from the outside and 
+Maybe the plugin manager can support some flag for internal commands in the future that prevents calling from the outside and
 display on the help screen. Then the trigger check can be removed completely.
 
 # Conclusion

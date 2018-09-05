@@ -7,6 +7,7 @@ layout: Post
 authors:
     - DouweHomans
 gitLink: /2017-01-17-a-serverless-windclock-at-the-lake.md
+category: operations-and-observability
 ---
 
 Hi, I'm [Douwe Homans](https://www.douwehomans.com/). I'm a trained medical doctor, software engineer and entrepreneur in the Netherlands. I recently decided to turn an old weatherclock into an IoT project using a Particle Photon and the Serverless Framework. In this post I'll share how I did it.
@@ -36,7 +37,7 @@ It came down to 2 steps:
 2. Get the data to the clock
 
 
-### Connect the clock to the Internet 
+### Connect the clock to the Internet
 I decided to work with a Photon made by [Particle.io](https://www.particle.io/). It's a microprocessor that automatically connects to the Particle Cloud once set up. The device can be programmed in C.
 
 <p align="center">

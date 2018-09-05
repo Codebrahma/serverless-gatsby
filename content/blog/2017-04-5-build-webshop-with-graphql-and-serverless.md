@@ -7,6 +7,7 @@ layout: Post
 authors:
     - SorenBramer
 gitLink: /2017-04-5-build-webshop-with-graphql-and-serverless.md
+category: application-development
 ---
 
 The Serverless Framework has made it extremely easy to deploy business logic to scalable cloud infrastructure. The recent post [Building a REST API](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb/) by Shekhar Gulati goes into detail on how to expose business logic through a REST API. In this post we'll explore the benefits of GraphQL over REST, and build a feature rich webshop using [Graphcool](https://www.graph.cool/) and the Serverless Framework.
@@ -23,7 +24,7 @@ RESTful APIs is a well-understood architecture for web and app backends. In a RE
 
 Because `Users` and `Posts` are separate entities, they're availabe under different URLs. The code responsible for returning users doesn't have to know anything about posts and vice versa. In fact, as the application grows it's common to move the code to separate microservices, and even separate development teams. The fact that resources are exposed on a canonical URL makes it really easy to use standard HTTP headers to enable caching in the browser and network layer.
 
-This is great in theory, but unfortunately this model is no longer a great fit for the rich web and mobile apps we are building today. Consider the canonical Facebook Feed. In a RESTful paradigm we would have at least 4 endpoints: `/users`, `/feed`, `/posts`, and `/comments`. To fully render the first screen the app would have to: 
+This is great in theory, but unfortunately this model is no longer a great fit for the rich web and mobile apps we are building today. Consider the canonical Facebook Feed. In a RESTful paradigm we would have at least 4 endpoints: `/users`, `/feed`, `/posts`, and `/comments`. To fully render the first screen the app would have to:
 
 1. Query the `/feed` endpoint to retrieve the top 5 items for the current user
 2. For each item, query `/posts` to retrieve the actual post
@@ -31,13 +32,13 @@ This is great in theory, but unfortunately this model is no longer a great fit f
 
 This pattern results in a waterfall of network requests where the response from one request leads to additional requests. Because of network latency - which is especially bad on mobile networks - the fully RESTful approach leads to poor user experience.
 
-To work around this, developers have had to break away from the clean RESTful architecture and allow multiple resource types to be returned in a single request. Many patterns have emerged for how to implement this, but they all sacrifice one or more of the original benefits of RESTful APIs. 
+To work around this, developers have had to break away from the clean RESTful architecture and allow multiple resource types to be returned in a single request. Many patterns have emerged for how to implement this, but they all sacrifice one or more of the original benefits of RESTful APIs.
 
 The innovation of GraphQL is to embrace the fact that a RESTful architecture no longer works while acknowledging that the three benefits listed below are worth striving for:
 
  - GraphQL enables strong separation of concerns in the backend by introducing the concept of independent resolvers and a batching DataLoader
  - Clients such as Relay and Apollo enable flexible and super fine grained client side caching
- - GraphQL is an open standard, allowing the community to build advanced tooling such as clients, editor plugins, code generators as well as the awesome in-browser [GraphiQL query editor](https://github.com/graphql/graphiql)  
+ - GraphQL is an open standard, allowing the community to build advanced tooling such as clients, editor plugins, code generators as well as the awesome in-browser [GraphiQL query editor](https://github.com/graphql/graphiql)
 
 Nik Graf went into more detail in his recent webinar [Serverless & GraphQL: A Love Story](https://cloudacademy.com/webinars/serverless-graphql-love-story-46/)
 

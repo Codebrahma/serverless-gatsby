@@ -7,6 +7,7 @@ thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/graphq
 authors:
     - DrakeCosta
 gitLink: /2017-10-19-3rd-party-rest-api-to-graphql-serverless.md
+category: news
 ---
 # Introduction
 

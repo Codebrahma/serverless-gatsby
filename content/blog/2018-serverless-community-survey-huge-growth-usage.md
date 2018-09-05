@@ -7,6 +7,7 @@ thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-c
 authors:
     - AndreaPasswater
 gitLink: /2018-07-19-2018-serverless-community-survey-huge-growth-usage.md
+category: application-development
 ---
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/2018-community-survey/serverless-survey-header.jpg">

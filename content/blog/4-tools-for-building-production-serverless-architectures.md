@@ -6,6 +6,7 @@ layout: Post
 authors:
     - TaaviRehemagi
 gitLink: /2017-06-12-4-tools-for-building-production-serverless-architectures.md
+category: guides-and-tutorials
 ---
 
 The Serverless Framework offers one of the fastest and cheapest ways to produce scalable and modern backend applications.
@@ -18,7 +19,7 @@ It is also complicated to monitor the functions and have an overview of how each
 
 ## 1. Dashbird
 
-[Dashbird](https://dashbird.io) is a service made to **monitor, debug and improve lambda functions**. 
+[Dashbird](https://dashbird.io) is a service made to **monitor, debug and improve lambda functions**.
 
 It gives developers a real-time overview of all lambda executions and detects errored invocations in them.
 This allows users to easily to monitor traffic and ensure service quality.

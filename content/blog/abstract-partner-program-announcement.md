@@ -7,6 +7,7 @@ layout: Post
 authors:
     - StefanieMonge
 gitLink: /2017-03-17-abstract-partner-program-announcement.md
+category: engineering-culture
 ---
 Serverless architecture has opened a whole new world of possibilities for developers. We’re seeing so many cool projects being built with the Serverless Framework. The open-source Framework allows you to easily build web, mobile and IoT applications with serverless architectures using AWS Lambda, Azure Functions, OpenWhisk, Google Cloud Functions and more.
 

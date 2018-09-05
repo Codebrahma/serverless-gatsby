@@ -7,6 +7,7 @@ thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/twitte
 authors:
     - AndreaPasswater
 gitLink: /2017-08-16-10-serverless-experts-you-should-follow-on-twitter.md
+category: news
 ---
 
 This list was ordered more or less by a random number generator, so don’t take these as ranked recommendations. They’re all equally worth an add.

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Row, Column, Image, Text, P, Heading } from 'serverless-design-system/src'
+import { Box, Flex, Row, Column, Image, Text, P, Heading, ResponsiveStack } from 'serverless-design-system/src'
 import BlogLayout from 'src/layouts/Blog'
 import { AppContainer } from 'src/components'
 import BlogPreview from 'src/components/pages/blog/Preview'
@@ -21,16 +21,17 @@ export default class Authors extends React.Component {
     return (
       <BlogLayout prefooter={BlogListPrefooter}>
         <AppContainer>
-          <Row mt={7} mb={2}>
+          <ResponsiveStack mt={[2, 2, 5]}>
             <Column
-              width={[1, 1, 1, 0.4]}
-              alignItems="flex-end"
+              width={[1, 1, 0.4]}
+              alignItems={["center", "center", "flex-end"]}
+              my={2}
             >
               <Box>
                 <Image
-                  height={280}
-                  width={280}
-                  src={author.avatar}
+                  height={["auto", "auto", 280]}
+                  width={[1, 1, 280]}
+                  src={(author.avatar || "").replace("140", "280")}
                 />
                 <Row alignItems="center">
                   <Column mr={1}>
@@ -70,10 +71,11 @@ export default class Authors extends React.Component {
               </Box>
             </Column>
             <Column
-              width={[1, 1, 1, 0.6]}
+              width={[1, 1, 0.6]}
               alignItems="center"
+              my={2}
             >
-              <Box width={[1, 1, 1, 0.7]}>
+              <Box width={[1, 1, 0.7]}>
                 <TitleWithIcon>
                   {author.name}
                 </TitleWithIcon>
@@ -94,11 +96,12 @@ export default class Authors extends React.Component {
                 </P>
               </Box>
             </Column>
-          </Row>
+          </ResponsiveStack>
         </AppContainer>
         <Divider />
-        <Box py={2}>
+        <Flex.center py={2}>
           <Heading.h2
+            fontSize={[4, 4, 6]}
             fontFamily="SoleilSb"
             align="center"
             lineHeight={1.4}
@@ -106,7 +109,7 @@ export default class Authors extends React.Component {
           >
             Posts from {author.name.split(" ")[0]}
           </Heading.h2>
-        </Box>
+        </Flex.center>
         <BlogPreview blogs={edges.map(({ node }) => node)} />
       </BlogLayout>
     )

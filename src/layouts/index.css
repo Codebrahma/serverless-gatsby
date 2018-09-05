@@ -49,6 +49,7 @@ html {
 
 a {
   color: #aaaaaa;
+  text-decoration: none;
 
   &:hover {
     color: white;

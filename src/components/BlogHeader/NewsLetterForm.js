@@ -2,7 +2,10 @@ import React from 'react'
 import { Box, TextField, Button } from 'serverless-design-system/src'
 
 export default () => (
-  <Box>
+  <Box
+    width={[1, 1, 1, 0.35]}
+    display={['none', 'none', 'none', 'block']}
+  >
     <TextField
       color='white'
       bg='gray.3'

@@ -5,7 +5,9 @@ import { Row, Column, Text } from 'serverless-design-system/src'
 
 const pagesToShow = 7;
 const PaginationButton = styled(Column)`
-  cursor: pointer;
+  padding: 10px;
+  cursor: ${({ disabled }) => ( disabled ? 'auto' : 'pointer' )};
+
   ${
     ({ selected }) =>
       selected && `
@@ -63,7 +65,6 @@ export default class Pagination extends React.Component {
 
       return (
         <PaginationButton
-          p={1}
           key={link}
           onClick={() => push(link)}
           selected={number === this.props.current}
@@ -84,12 +85,9 @@ export default class Pagination extends React.Component {
       <Row justifyContent="center">
         {
           (current > 2) && (
-            <Column
-              p={1}
-              onClick={() => push(`/blog/page/${current - 1}`)}
-            >
+            <PaginationButton onClick={() => push(`/blog/page/${current - 1}`)}>
               &larr;
-            </Column>
+            </PaginationButton>
           )
         }
 
@@ -99,9 +97,9 @@ export default class Pagination extends React.Component {
               { this.renderButtons(pages) }
               {
                 (index !== this.pagesCollection.length - 1) && (
-                  <Column p={1}>
+                  <PaginationButton disabled>
                     ..
-                  </Column>
+                  </PaginationButton>
                 )
               }
             </React.Fragment>
@@ -109,12 +107,9 @@ export default class Pagination extends React.Component {
         }
         {
           (Math.abs(current - total) > 2) && (
-            <Column
-              p={1}
-              onClick={() => push(`/blog/page/${current+1}`)}
-            >
+            <PaginationButton onClick={() => push(`/blog/page/${current+1}`)}>
               &rarr;
-            </Column>
+            </PaginationButton>
           )
         }
       </Row>

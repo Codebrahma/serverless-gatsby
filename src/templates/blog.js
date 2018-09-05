@@ -20,6 +20,7 @@ import Card from 'src/components/pages/blog/Card'
 import Prefooter from 'src/components/pages/blog/Prefooter'
 import DisqusScript from 'src/components/pages/blog/DisqusScript'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
+import CategoryData from 'src/pages/blog/generated-categories.json'
 import dotGridHorizontal from 'src/assets/images/dot-grid-horizontal.png'
 import glitchDivider from 'src/assets/images/glitch-divider.png'
 
@@ -41,7 +42,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
             opacity="0.4"
             my={25}
           >
-            { frontmatter.category || 'news' }
+            { CategoryData[frontmatter.category] || 'news' }
           </Text.p>
           <Heading.h1
             fontSize={[4, 4, 4, 7]}

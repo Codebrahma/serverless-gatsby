@@ -3,6 +3,7 @@ import { Background, Box, Row, Text, Heading, P } from 'serverless-design-system
 import { push } from 'gatsby-link'
 import { formatDate } from 'src/utils'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
+import categoryData from 'src/pages/blog/generated-categories.json'
 
 export default ({ id, frontmatter }) => (
   <Row
@@ -20,7 +21,7 @@ export default ({ id, frontmatter }) => (
         opacity="0.4"
         mt={0}
       >
-        { frontmatter.category || 'news' }
+        { categoryData[frontmatter.category] || 'news' }
         &nbsp;-&nbsp;
         { formatDate(frontmatter.date, 'dd.mm.yy') }
       </Text.p>

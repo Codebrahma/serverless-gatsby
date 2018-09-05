@@ -1,2 +1,7 @@
 export { default as Header } from './Header'
 export { default as Footer } from './Footer'
+export { default as AppContainer } from './AppContainer'
+export { default as NavLink } from './NavLink'
+export { default as Tabs } from './Tabs'
+export { default as BlogHeader } from './BlogHeader'
+export { default as Pagination } from './Pagination'

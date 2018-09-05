@@ -9,15 +9,15 @@ const CompanyColumn = () => (
     listItems={[
       {
         name: 'team',
-        navProps: { to: company.team, completed: false },
+        navProps: { to: company.team, completed: true },
       },
       {
         name: 'jobs',
-        navProps: { to: company.jobs, crossDomain: true },
+        navProps: { to: company.jobs, completed: true },
       },
       {
         name: 'champions',
-        navProps: { to: company.champions, completed: false },
+        navProps: { to: company.champions, completed: true },
       },
       {
         name: 'contacts',

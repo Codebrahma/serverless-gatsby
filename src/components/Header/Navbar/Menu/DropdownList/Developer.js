@@ -64,7 +64,7 @@ const quickStartOptions = [
 
 const examplesOptions = [
   {
-    name: `api's`,
+    name: `APIs`,
     to: developers.examples,
     crossDomain: false,
     completed: false,
@@ -98,7 +98,7 @@ const Developer = () => (
       <SubMenu title='quick starts' options={quickStartOptions} />
     </Box>
     <Box width={[1, 1, 1 / 2]}>
-      <SubMenu title='example & guides' options={examplesOptions} />
+      <SubMenu title='examples & guides' options={examplesOptions} />
     </Box>
   </Flex>
 )

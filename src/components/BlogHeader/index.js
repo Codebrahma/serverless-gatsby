@@ -28,7 +28,7 @@ export default class BlogHeader extends React.Component {
 
   scrollHandler = () => {
     const { isNavbarShrinked } = this.state
-    if (window.scrollY >= 125 ) {
+    if (window.scrollY >= 5 ) {
       if (isNavbarShrinked) { return }
       this.toggleNavbarShrinkness()
     } else if (isNavbarShrinked) {
@@ -48,25 +48,31 @@ export default class BlogHeader extends React.Component {
 
   render() {
     return (
-      <HeaderWrapper
-        width={1}
-        maxHeight='100%'
-        oy={['scroll', 'scroll', 'visible']}
-      >
-        <Box
-          py={[0, 0, 1]}
-          bg="black"
+      <React.Fragment>
+        <HeaderWrapper
+          width={1}
+          maxHeight='100%'
+          oy={['scroll', 'scroll', 'visible']}
         >
-          <AppContainer>
-            <BlogNavbarContext.Provider value={this.state}>
-              <ServerlessLink />
-              <LogoAndOptions />
-              <SearchBar />
-              <Categories />
-            </BlogNavbarContext.Provider>
-          </AppContainer>
-        </Box>
-      </HeaderWrapper>
+          <Box
+            py={[0, 0, 1]}
+            bg="black"
+          >
+            <AppContainer>
+              <BlogNavbarContext.Provider value={this.state}>
+                <ServerlessLink />
+                <LogoAndOptions />
+                <SearchBar />
+                <Categories />
+              </BlogNavbarContext.Provider>
+            </AppContainer>
+          </Box>
+        </HeaderWrapper>
+        <Box
+          pt={[ 55, 55, this.state.isNavbarShrinked ? 74 : 196 ]}
+          bg="black"
+        />
+      </React.Fragment>
     )
   }
 }

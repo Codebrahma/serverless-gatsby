@@ -54,10 +54,11 @@ export default ({ id, frontmatter }) => (
       mt={[2, 2, 2, 0]}
     >
       <Background
-        height={[55, 55, 55, 200]}
+        height="auto"
         width={[55, 55, 55, 1]}
+        maxHeight={[55, 55, 55, 200]}
         background={`black url(${frontmatter.thumbnail})`}
-        backgroundSize="contain"
+        backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
       />

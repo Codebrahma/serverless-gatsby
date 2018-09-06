@@ -1,4 +1,5 @@
 import React from 'react'
+import { push } from 'gatsby-link'
 import {
   Box,
   Background,
@@ -48,6 +49,8 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
           flexDirection="column"
           width={[1, 1, 1, 0.65]}
           m="auto"
+          style={{ cursor: 'pointer' }}
+          onClick={() => push(`/blog/${id}`)}
         >
           <Box
             width={1}

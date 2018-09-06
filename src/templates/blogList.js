@@ -9,7 +9,7 @@ import { Pagination } from 'src/components'
 export default class Blogs extends React.Component {
   render() {
     const {
-      data: { allBlog: { edges, totalCount } },
+      data: { blogs: { edges, totalCount }, highlighted },
       pathContext: { start, limit }
     } = this.props
 
@@ -20,7 +20,7 @@ export default class Blogs extends React.Component {
       <BlogLayout prefooter={BlogListPrefooter}>
         { currentPage === 0 && (
             <React.Fragment>
-              <HighlightedBlogs />
+              <HighlightedBlogs blogs={highlighted.edges.map(({ node }) => node)} />
               <Divider visibleInSmallScreens />
             </React.Fragment>
           )
@@ -34,7 +34,7 @@ export default class Blogs extends React.Component {
 
 export const query = graphql`
   query Blogs($start: Int!, $limit: Int!) {
-    allBlog (skip: $start, limit: $limit) {
+    blogs: allBlog (skip: $start, limit: $limit) {
       edges {
         node {
           id
@@ -45,11 +45,26 @@ export const query = graphql`
             authors
             thumbnail
             category
-            featured
           }
         }
       }
       totalCount
+    }
+
+    highlighted: allBlog(filter: { frontmatter: { highlighted: { eq: true } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+            date
+            authors
+            category
+            thumbnail
+          }
+        }
+      }
     }
   }
 `

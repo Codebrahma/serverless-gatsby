@@ -7,6 +7,7 @@ authors:
     - TaaviRehemagi
 gitLink: /2017-06-12-4-tools-for-building-production-serverless-architectures.md
 category: guides-and-tutorials
+highlighted: true
 ---
 
 The Serverless Framework offers one of the fastest and cheapest ways to produce scalable and modern backend applications.

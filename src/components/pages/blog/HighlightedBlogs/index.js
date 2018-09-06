@@ -2,11 +2,8 @@ import React from 'react'
 import Carousel from './Carousel'
 import Item from './Item'
 
-export default () => (
+export default ({ blogs }) => (
   <Carousel>
-    <Item />
-    <Item />
-    <Item />
-    <Item />
+    { blogs.map((blog, index) => (<Item {...blog} key={`highlighted-${index}`} />)) }
   </Carousel>
 )

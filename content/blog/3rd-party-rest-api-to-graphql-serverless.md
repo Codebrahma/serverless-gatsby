@@ -8,6 +8,7 @@ authors:
     - DrakeCosta
 gitLink: /2017-10-19-3rd-party-rest-api-to-graphql-serverless.md
 category: news
+highlighted: true
 ---
 # Introduction
 

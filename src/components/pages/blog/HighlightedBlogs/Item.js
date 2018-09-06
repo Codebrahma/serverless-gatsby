@@ -32,9 +32,9 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
           {
             Array.apply(null, { length: numSlides }).map((_, index) => (
               <Box
-                height={15}
-                width={15}
-                mx={15}
+                height={["12px", "12px", "14px", 15]}
+                width={["12px", "12px", "14px", 15]}
+                mx={["12px", "12px", "14px", 15]}
                 bg={index === currentSlide ? theme.colors.primaryColor : 'white'}
                 key={`selector-${index}`}
                 onClick={() => goToSlide(index)}

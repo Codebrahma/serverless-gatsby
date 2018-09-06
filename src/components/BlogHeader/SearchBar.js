@@ -23,7 +23,7 @@ const SearchBarWrapper = ({ children }) => (
   <BlogNavbarContext.Consumer>
     {
       ({ isNavbarShrinked }) => (
-        <Wrapper height={[ 0, 0, isNavbarShrinked ? 0 : 'auto' ]}>
+        <Wrapper height={[ 0, 0, isNavbarShrinked ? 0 : 82 ]}>
           {children}
         </Wrapper>
       )

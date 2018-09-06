@@ -45,7 +45,7 @@ export default ({ frontmatter }) => (
         <P
           fontSize={[1, 1, 1, 2]}
           lineHeight={1.63}
-          color={['white', 'white', '']}
+          color='white'
         >
           { frontmatter.description }
         </P>

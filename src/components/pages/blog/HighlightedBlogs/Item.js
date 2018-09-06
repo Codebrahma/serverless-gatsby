@@ -10,7 +10,7 @@ import {
 import { AppContainer } from 'src/components'
 import { withTheme } from 'styled-components';
 
-class Carousel extends React.Component {
+class Item extends React.Component {
   state = { selected: 0 }
 
   render() {
@@ -32,18 +32,17 @@ class Carousel extends React.Component {
             py={45}
           >
             {
-              // [0, 1, 2, 3, 4].map((num, index) => (
-              //   <Box
-              //     mx={15}
-              //     key={`selector-${index}`}
-              //   >
-              //     <Background
-              //       height={15}
-              //       width={15}
-              //       background={num === 0 ? theme.colors.primaryColor : 'white'}
-              //     />
-              //   </Box>
-              // ))
+              Array.apply(null, { length: this.props.numSlides }).map((_, index) => (
+                <Box
+                  height={15}
+                  width={15}
+                  mx={15}
+                  bg={index === this.props.currentSlide ? theme.colors.primaryColor : 'white'}
+                  key={`selector-${index}`}
+                  onClick={() => this.props.goToSlide(index)}
+                  style={{ cursor: 'pointer' }}
+                />
+              ))
             }
           </Flex.horizontallyCenter>
         </Background>
@@ -119,4 +118,4 @@ class Carousel extends React.Component {
   }
 }
 
-export default withTheme(Carousel);
+export default withTheme(Item);

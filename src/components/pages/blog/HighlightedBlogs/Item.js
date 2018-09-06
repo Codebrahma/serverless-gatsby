@@ -73,7 +73,7 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
             { frontmatter.title }
           </Heading.h2>
           <Box
-            width={[1, 1, 1, 0.8]}
+            width={[1, 1, 1, 0.9]}
             px={[0, 0, 0, 4]}
           >
             <Text.p

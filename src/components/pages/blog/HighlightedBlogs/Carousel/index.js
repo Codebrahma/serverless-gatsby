@@ -1,5 +1,6 @@
-import React, { Component, Children, cloneElement } from 'react';
+import React, { Component, Children, cloneElement } from 'react'
 import Swipeable from 'react-swipeable'
+import { Box } from 'serverless-design-system/src'
 
 import CarouselContainer from './CarouselContainer'
 import Wrapper from './Wrapper'
@@ -125,7 +126,7 @@ class Carousel extends Component {
     )
 
     return (
-      <div>
+      <Box>
         <Swipeable
           onSwipingLeft={() => this.handleSwipe(true)}
           onSwipingRight={() => this.handleSwipe()}
@@ -151,7 +152,7 @@ class Carousel extends Component {
             </CarouselContainer>
           </Wrapper>
         </Swipeable>
-      </div>
+      </Box>
     )
   }
 }

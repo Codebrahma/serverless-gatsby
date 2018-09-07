@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { withTheme } from 'styled-components'
 import {
+  Absolute,
+  Relative,
   Box,
   Flex,
   Card,
@@ -13,9 +15,11 @@ import {
 
 import { BlockLink } from 'src/components'
 import BlogNavbarContext from './BlogNavbarContext'
-import searchIcon from 'src/assets/images/search-icon.svg'
 import { getCategoryLink } from 'src/utils/blog'
 import CategoriesData from 'src/pages/blog/generated-categories.json'
+import searchIcon from 'src/assets/images/search-icon.svg'
+import whiteSearchIcon from 'src/assets/images/white-search-icon.png'
+import closeIcon from 'src/assets/images/icon-close.png'
 
 const Wrapper = styled(Box)`
   overflow: hidden;
@@ -45,9 +49,10 @@ const SearchBarWrapper = ({ children }) => (
 class SearchBar extends React.Component {
   state = { isSearchBarActive: false }
 
-  toggleSearchBar = () => this.setState((prevState) => {
-    isSearchBarActive: !prevState.isSearchBarActive
-  })
+  toggleSearchBar = () =>
+    this.setState((prevState) => ({
+      isSearchBarActive: !prevState.isSearchBarActive
+    }))
 
   render() {
     const borderColor = this.props.theme.colors.gray[2];
@@ -61,59 +66,86 @@ class SearchBar extends React.Component {
         >
           {
             this.state.isSearchBarActive ? (
-              <TextField
-                p={16}
-                border={`1px solid ${borderColor}`}
-                width={1}
-                bg="white"
-                fontSize={1}
-                fontFamily="Serverless"
-                lineHeight={1}
-                opacity={0.6}
-                color="white"
-              />
+              <Relative width={1}>
+                <Absolute
+                  left="15px"
+                  top="18px"
+                >
+                  <Image
+                    src={whiteSearchIcon}
+                    height="16px"
+                    width="15px"
+                  />
+                </Absolute>
+                <TextField
+                  py={16}
+                  px={40}
+                  border={`1px solid white`}
+                  bg="transparent"
+                  width={1}
+                  fontSize={1}
+                  fontFamily="Serverless"
+                  lineHeight={1}
+                  opacity={0.6}
+                  color="white"
+                />
+                <Absolute
+                  right="15px"
+                  top="18px"
+                  onClick={this.toggleSearchBar}
+                >
+                  <Image
+                    src={closeIcon}
+                    height="16px"
+                    width="15px"
+                  />
+                </Absolute>
+              </Relative>
             ) : (
-              <Card
-                height="52px"
-                px={1}
-                py={16}
-                border={`1px solid ${borderColor}`}
-                width={1}
-              >
-                {
-                  Object.keys(CategoriesData).map((tab, index) => (
-                    <BlockLink to={getCategoryLink(tab)}>
-                      <InlineBlock
+              <React.Fragment>
+                <Card
+                  height="52px"
+                  px={1}
+                  py={16}
+                  border={`1px solid ${borderColor}`}
+                  width={1}
+                >
+                  {
+                    Object.keys(CategoriesData).map((tab, index) => (
+                      <BlockLink
                         key={`category-tab-${index}`}
-                        px={[1, 1, 2]}
+                        to={getCategoryLink(tab)}
                       >
-                        <LinkText
-                          fontSize={1}
-                          fontFamily="Serverless"
-                          lineHeight={1}
-                          color="white"
-                        >
-                          { CategoriesData[tab] }
-                        </LinkText>
-                      </InlineBlock>
-                    </BlockLink>
-                  ))
-                }
-              </Card>
+                        <InlineBlock px={[1, 1, 2]}>
+                          <LinkText
+                            fontSize={1}
+                            fontFamily="Serverless"
+                            lineHeight={1}
+                            color="white"
+                          >
+                            { CategoriesData[tab] }
+                          </LinkText>
+                        </InlineBlock>
+                      </BlockLink>
+                    ))
+                  }
+                </Card>
+                <Card
+                  border={`1px solid ${borderColor}`}
+                  borderLeft="0"
+                  onClick={this.toggleSearchBar}
+                >
+                  <Flex.center p={16}>
+                    <Image
+                      src={searchIcon}
+                      height={18}
+                      width={18}
+                    />
+                  </Flex.center>
+                </Card>
+              </React.Fragment>
             )
           }
-          <Card
-            border={`1px solid ${borderColor}`}
-            borderLeft="0"
-          >
-            <Flex.center p={16} onClick={this.toggleSearchBar}>
-              <Image
-                src={searchIcon}
-                height={18}
-                width={18}
-              />
-            </Flex.center>
-          </Card>
         </Flex>
       </SearchBarWrapper>
     )

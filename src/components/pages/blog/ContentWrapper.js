@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Column } from 'serverless-design-system/src'
+import redHighlighter from 'src/assets/images/red-highlighter.png'
 
 const ContentWrapper = styled(Column)`
   p, li {
@@ -34,7 +35,7 @@ const ContentWrapper = styled(Column)`
       height: 39px;
       top: 0;
       width: 20px;
-      background: url('https://i.imgur.com/8ngigUP.png');
+      background: url(${redHighlighter});
       background-size: cover;
       left: -40px;
     }

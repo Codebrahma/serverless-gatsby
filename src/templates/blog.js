@@ -106,7 +106,7 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
             <Absolute
               height={[0, 0, 0, 38]}
               width={98}
-              top="14%"
+              top="12%"
               left="-12%"
               zIndex={-1}
             >

@@ -15,9 +15,11 @@ const ContentWrapper = styled(Column)`
 
   blockquote {
     margin: 0;
+    margin-top: 10px;
     position: relative;
 
     & > p {
+      margin-top: 5px;
       font-family: SoleilBk;
       font-size: 24px;
       font-weight: normal;
@@ -29,8 +31,8 @@ const ContentWrapper = styled(Column)`
     &:before {
       content: ' ';
       position: absolute;
-      height: 48%;
-      top: 24%;
+      height: 39px;
+      top: 0;
       width: 20px;
       background: url('https://i.imgur.com/8ngigUP.png');
       background-size: cover;
@@ -68,6 +70,11 @@ const ContentWrapper = styled(Column)`
   li {
     padding-top: 15px;
     padding-bottom: 8px;
+  }
+
+  code {
+    max-width: 100%;
+    overflow-x: scroll;
   }
 `
 

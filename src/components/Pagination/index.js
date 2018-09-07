@@ -5,8 +5,12 @@ import { Row, Column, Text } from 'serverless-design-system/src'
 
 const pagesToShow = 7;
 const PaginationButton = styled(Column)`
-  padding: 10px;
+  padding: 10px 12px;
   cursor: ${({ disabled }) => ( disabled ? 'auto' : 'pointer' )};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primaryColor};
+  }
 
   ${
     ({ selected }) =>

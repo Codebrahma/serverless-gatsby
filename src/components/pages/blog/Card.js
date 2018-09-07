@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import {
   Background,
   Column,
@@ -7,18 +8,28 @@ import {
   Heading,
   P
 } from 'serverless-design-system/src'
+import { getLinkComponent } from 'src/components/BlockLink'
+import { getAuthorInfo, getBlogLink } from 'src/utils/blog'
 import { formatDate } from 'src/utils/date'
-import AuthorsData from 'src/pages/blog/generated-authors.json'
 
-export default ({ frontmatter }) => (
-  <Background
+const HoverableColumn = styled(Column)`
+  background-color: #fc5650e6;
+  &:hover {
+    background-color: #b73833e6;
+  }
+`
+
+const BackgroundWithLink = getLinkComponent(Background);
+
+export default ({ id, frontmatter }) => (
+  <BackgroundWithLink
+    to={getBlogLink(id)}
     height="fullHeight"
     width={1}
     background={`url(${frontmatter.thumbnail})`}
     backgroundSize="cover"
   >
-    <Column
-      bg="#fc5650e6"
+    <HoverableColumn
       height="fullHeight"
       width={1}
       justifyContent="center"
@@ -57,9 +68,9 @@ export default ({ frontmatter }) => (
           lineHeight={3}
         >
           written by&nbsp;
-          { (frontmatter.authors || []).map((id) => AuthorsData[id].name).join(', ') }
+          { getAuthorInfo({ frontmatter }).name }
         </Text.p>
       </Relative>
-    </Column>
-  </Background>
+    </HoverableColumn>
+  </BackgroundWithLink>
 )

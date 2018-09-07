@@ -150,14 +150,14 @@ export default ({ data: { blog: { id, frontmatter, content } } }) => {
                 height={[300, 300, 400]}
                 my={1}
               >
-                <Card frontmatter={frontmatter} />
+                <Card id={id} frontmatter={frontmatter} />
               </Relative>
               <Relative
                 width={[1, 1, 0.49]}
                 height={[300, 300, 400]}
                 my={1}
               >
-                <Card frontmatter={frontmatter} />
+                <Card id={id} frontmatter={frontmatter} />
               </Relative>
             </ResponsiveStack>
           </AppContainer>

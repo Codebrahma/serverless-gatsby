@@ -235,3 +235,53 @@ tfoot td {
   local("Soleil-Light"),
   url('../assets/fonts/soleil-lt.otf') format("opentype");
 }
+
+/*
+* Design for code block
+*/
+code.hljs {
+  display: inline-block;
+  width: 100%;
+  overflow-x: scroll;
+  padding-left: 78px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  border: 1px solid #dfe5e6;
+  font-family: Serverless;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: 0.1px;
+  color: #795da3;
+}
+
+code.hljs:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 56px;
+  background: #f7f7f7;
+}
+
+a.line {
+  text-decoration: none;
+  border: none;
+  position: absolute;
+  left: 0;
+  width: 56px;
+  text-align: center;
+  display: inline-block;
+  font-family: 'Serverless';
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.hljs{display:block;background:white;padding:0.5em;color:#333333;overflow-x:auto;border: 1px solid #ddd}.hljs-comment,.hljs-meta{color:#969896}.hljs-string,.hljs-variable,.hljs-template-variable,.hljs-strong,.hljs-emphasis,.hljs-quote{color:#fd5750}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-literal,.hljs-symbol,.hljs-bullet,.hljs-attribute{color:#0086b3}.hljs-section,.hljs-name{color:#63a35c}.hljs-tag{color:#333333}.hljs-title,.hljs-attr,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}

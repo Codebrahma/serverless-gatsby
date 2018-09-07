@@ -71,51 +71,6 @@ const ContentWrapper = styled(Column)`
     padding-top: 15px;
     padding-bottom: 8px;
   }
-
-  code.hljs {
-    display: inline-block;
-    width: 100%;
-    overflow-x: scroll;
-    padding-left: 78px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-    border: 1px solid #dfe5e6;
-    font-family: Serverless;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.67;
-    letter-spacing: 0.1px;
-    color: #795da3;
-  }
-
-  code.hljs:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 56px;
-    background: #f7f7f7;
-  }
-
-  a.line {
-    text-decoration: none;
-    border: none;
-    position: absolute;
-    left: 0;
-    width: 56px;
-    text-align: center;
-    display: inline-block;
-    font-family: 'Serverless';
-    font-size: 12px;
-    line-height: 1.67;
-    letter-spacing: 0.1px;
-    color: rgba(0, 0, 0, 0.2);
-  }
 `
 
 export default class BlogWrapper extends React.Component {

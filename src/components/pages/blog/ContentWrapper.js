@@ -71,6 +71,19 @@ const ContentWrapper = styled(Column)`
     padding-top: 15px;
     padding-bottom: 8px;
   }
+
+  @media screen and (max-width: 992px) {
+    blockquote {
+      & > p {
+        padding-left: 40px;
+      }
+
+      &:before {
+        left: 0;
+        top: 0;
+      }
+    }
+  }
 `
 
 export default class BlogWrapper extends React.Component {

@@ -1,5 +1,4 @@
 import React from 'react'
-import { push } from 'gatsby-link'
 import {
   Box,
   Background,
@@ -10,9 +9,18 @@ import {
 } from 'serverless-design-system/src'
 import { AppContainer, BlockLink } from 'src/components'
 import { withTheme } from 'styled-components'
-import AuthorsData from 'src/pages/blog/generated-authors.json'
+import {
+  getAuthorInfo,
+  getCategoryLink,
+  getCategoryNameById,
+  getBlogLink,
+  getAuthorLink
+} from 'src/utils/blog'
 
 const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) => {
+  const author = getAuthorInfo({ frontmatter })
+  const { category, title, description } = frontmatter
+
   return (
     <Box width={1}>
       <Background
@@ -50,22 +58,24 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
           width={[1, 1, 1, 0.65]}
           m="auto"
         >
-          <Box
-            width={1}
-            pt={3}
-            pb={1}
-          >
-            <Text.p
-              fontSize={1}
-              opacity={0.4}
-              lineHeight={1}
-              letterSpacing="text"
-              align="center"
+          <BlockLink to={getCategoryLink(category)}>
+            <Box
+              width={1}
+              pt={3}
+              pb={1}
             >
-              { frontmatter.category }
-            </Text.p>
-          </Box>
-          <BlockLink to={`/blog/${id}`}>
+              <Text.p
+                fontSize={1}
+                opacity={0.4}
+                lineHeight={1}
+                letterSpacing="text"
+                align="center"
+              >
+                { getCategoryNameById(category) }
+              </Text.p>
+            </Box>
+          </BlockLink>
+          <BlockLink to={getBlogLink(id)}>
             <Heading.h2
               fontFamily="SoleilBk"
               fontSize={[4, 4, 5, 7]}
@@ -86,32 +96,35 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
               mt={[0, 0, 10, 15]}
               align="center"
             >
-              { frontmatter.description }
+              { description }
             </Text.p>
           </Box>
-          <Flex alignItems="center">
-            <Text
-              fontFamily="Soleil"
-              fontSize={0}
-              color="gray.3"
-              lineHeight={2}
-            >
-              written by &nbsp;
-            </Text>
-            <Image
-              src={AuthorsData[frontmatter.authors[0]].avatar}
-              height={33}
-              width={33}
-            />
-            <Text
-              fontFamily="Soleil"
-              fontSize={0}
-              color="gray.3"
-              lineHeight={2}
-            >
-              &nbsp; { AuthorsData[frontmatter.authors[0]].name }
-            </Text>
-          </Flex>
+
+          <BlockLink to={getAuthorLink(author.id)}>
+            <Flex.center>
+              <Text
+                fontFamily="Soleil"
+                fontSize={0}
+                color="gray.3"
+                lineHeight={2}
+              >
+                written by &nbsp;
+              </Text>
+              <Image
+                src={author.avatar}
+                height={33}
+                width={33}
+              />
+              <Text
+                fontFamily="Soleil"
+                fontSize={0}
+                color="gray.3"
+                lineHeight={2}
+              >
+                &nbsp; {author.name}
+              </Text>
+            </Flex.center>
+          </BlockLink>
         </Flex.verticallyCenter>
       </AppContainer>
     </Box>

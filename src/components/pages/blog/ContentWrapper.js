@@ -1,8 +1,9 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Column } from 'serverless-design-system/src'
 
-export default styled(Column)`
+const ContentWrapper = styled(Column)`
   p, li {
     font-family: 'SoleilBk';
     font-size: 16px;
@@ -64,3 +65,24 @@ export default styled(Column)`
     padding-bottom: 8px;
   }
 `
+
+export default class BlogWrapper extends React.Component {
+  componentDidMount() {
+    const domNode = ReactDOM.findDOMNode(this.ref)
+    domNode.querySelectorAll("a > img").forEach((node) => {
+      const { parentNode } = node;
+      parentNode.style.border = 0;
+      parentNode.style.display = node.style.display = 'block';
+      node.style.margin = 'auto';
+    })
+  }
+
+  render() {
+    return (
+      <ContentWrapper
+        ref = {(ref) => { this.ref = ref }}
+        {...this.props}
+      />
+    )
+  }
+}

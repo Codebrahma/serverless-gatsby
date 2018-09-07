@@ -82,7 +82,7 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
               align="center"
               lineHeight={0}
             >
-              { frontmatter.title }
+              { title }
             </Heading.h2>
           </BlockLink>
           <Box

@@ -1,67 +1,90 @@
 import React from 'react'
-import { Background, Box, Row, Text, Heading, P } from 'serverless-design-system/src'
-import { push } from 'gatsby-link'
+import {
+  Background,
+  Box,
+  Row,
+  Text,
+  Heading,
+  P
+} from 'serverless-design-system/src'
+import { BlockLink } from 'src/components'
+import { getLinkComponent } from 'src/components/BlockLink'
+import {
+  getAuthorLink,
+  getBlogLink,
+  getCategoryLink,
+  getAuthorInfo,
+  getCategoryNameById,
+} from 'src/utils/blog'
 import { formatDate } from 'src/utils/date'
-import AuthorsData from 'src/pages/blog/generated-authors.json'
-import categoryData from 'src/pages/blog/generated-categories.json'
 
-export default ({ id, frontmatter }) => (
-  <Row
-    my={3}
-    style={{ cursor: 'pointer' }}
-    onClick={() => push(`/blog/${id}`)}
-  >
-    <Box
-      width={[1, 1, 1, 0.6]}
-      pr={[15, 15, 15, '10%']}
-    >
-      <Text.p
-        fontFamily="Serverless"
-        fontSize={[0, 0, 0, 1]}
-        opacity="0.4"
-        mt={0}
+const HyperLinkBackground = getLinkComponent(Background)
+
+export default ({ id, frontmatter }) => {
+  const { title, date, description, category, thumbnail } = frontmatter
+  const author = getAuthorInfo({ frontmatter })
+
+  return (
+    <Row my={3}>
+      <Box
+        width={[1, 1, 1, 0.6]}
+        pr={[15, 15, 15, '10%']}
       >
-        { categoryData[frontmatter.category] || 'news' }
-        &nbsp;-&nbsp;
-        { formatDate(frontmatter.date, 'dd.mm.yy') }
-      </Text.p>
-      <Heading.h3
-        fontSize={[3, 3, 3, 5]}
-        fontFamily="SoleilBk"
-        letterSpacing="h4"
+        <Text.p
+          fontSize={[0, 0, 0, 1]}
+          opacity="0.4"
+          mt={0}
+        >
+          <BlockLink to={getCategoryLink(category)}>
+            { getCategoryNameById(category) }
+          </BlockLink>
+          &nbsp;-&nbsp;
+          { formatDate(date, 'dd.mm.yy') }
+        </Text.p>
+        <BlockLink to={getBlogLink(id)}>
+          <Heading.h3
+            fontSize={[3, 3, 3, 5]}
+            fontFamily="SoleilBk"
+            letterSpacing="h4"
+          >
+            { title }
+          </Heading.h3>
+        </BlockLink>
+        <P
+          fontSize={[0, 0, 0, 1]}
+          lineHeight={1.63}
+        >
+          { description }
+        </P>
+        <BlockLink to={getAuthorLink(author.id)}>
+          <Text.p
+            fontFamily="Soleil"
+            fontSize={0}
+            color="gray.2"
+            lineHeight={3}
+          >
+            written by&nbsp;
+            { author.name }
+          </Text.p>
+        </BlockLink>
+      </Box>
+
+      <Row
+        justifyContent="center"
+        width={0.4}
+        mt={[2, 2, 2, 0]}
       >
-        { frontmatter.title }
-      </Heading.h3>
-      <P
-        fontSize={[0, 0, 0, 1]}
-        lineHeight={1.63}
-      >
-        { frontmatter.description }
-      </P>
-      <Text.p
-        fontFamily="Soleil"
-        fontSize={0}
-        color="gray.2"
-        lineHeight={3}
-      >
-        written by&nbsp;
-        { (frontmatter.authors || []).map((id) => AuthorsData[id].name).join(', ') }
-      </Text.p>
-    </Box>
-    <Row
-      justifyContent="center"
-      width={0.4}
-      mt={[2, 2, 2, 0]}
-    >
-      <Background
-        height="auto"
-        width={[55, 55, 55, 1]}
-        maxHeight={[55, 55, 55, 200]}
-        background={`black url(${frontmatter.thumbnail})`}
-        backgroundSize="cover"
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-      />
+        <HyperLinkBackground
+          height="auto"
+          width={[55, 55, 55, 1]}
+          maxHeight={[55, 55, 55, 200]}
+          background={`black url(${thumbnail})`}
+          backgroundSize="cover"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          to={getBlogLink(id)}
+        />
+      </Row>
     </Row>
-  </Row>
-)
+  )
+}

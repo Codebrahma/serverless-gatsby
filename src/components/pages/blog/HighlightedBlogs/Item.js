@@ -25,7 +25,7 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
     <Box width={1}>
       <Background
         width={1}
-        height={500}
+        height={[250, 250, 350, 500]}
         background={`url(https://raw.githubusercontent.com/adnanrahic/cdn/master/covers/catridingunicorn2.jpg)`}
         backgroundSize="cover"
         backgroundPosition="center"
@@ -65,7 +65,7 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
               pb={1}
             >
               <Text.p
-                fontSize={1}
+                fontSize={[2, 2, 2, 1]}
                 opacity={0.4}
                 lineHeight={1}
                 letterSpacing="text"
@@ -80,7 +80,7 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
               fontFamily="SoleilBk"
               fontSize={[4, 4, 5, 7]}
               align="center"
-              lineHeight={0}
+              lineHeight={[3, 3, 2, 0]}
             >
               { title }
             </Heading.h2>

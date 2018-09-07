@@ -4,10 +4,9 @@ import { withTheme } from 'styled-components'
 import {
   Absolute,
   Relative,
-  Box,
+  Overflow,
   Flex,
   Card,
-  TextField,
   Image,
   InlineBlock,
   Text,
@@ -20,9 +19,16 @@ import CategoriesData from 'src/pages/blog/generated-categories.json'
 import searchIcon from 'src/assets/images/search-icon.svg'
 import whiteSearchIcon from 'src/assets/images/white-search-icon.png'
 import closeIcon from 'src/assets/images/icon-close.png'
+import algoliasearch from 'algoliasearch/lite'
+import { InstantSearch } from 'react-instantsearch-dom'
+import AutoComplete from './AutoComplete'
 
-const Wrapper = styled(Box)`
-  overflow: hidden;
+const searchClient = algoliasearch(
+  'V3VM7IN3TH',
+  'd2dac557d1fd151223e78f3597d59e78'
+);
+
+const Wrapper = styled(Overflow)`
   transition: height 0.5s;
 `
 
@@ -38,7 +44,10 @@ const SearchBarWrapper = ({ children }) => (
   <BlogNavbarContext.Consumer>
     {
       ({ isNavbarShrinked }) => (
-        <Wrapper height={[ 0, 0, isNavbarShrinked ? 0 : 82 ]}>
+        <Wrapper
+          height={[ 0, 0, isNavbarShrinked ? 0 : 82 ]}
+          o={isNavbarShrinked ? 'hidden' : 'visible'}
+        >
           {children}
         </Wrapper>
       )
@@ -77,18 +86,12 @@ class SearchBar extends React.Component {
                     width="15px"
                   />
                 </Absolute>
-                <TextField
-                  py={16}
-                  px={40}
-                  border={`1px solid white`}
-                  bg="transparent"
-                  width={1}
-                  fontSize={1}
-                  fontFamily="Serverless"
-                  lineHeight={1}
-                  opacity={0.6}
-                  color="white"
-                />
+                <InstantSearch
+                  indexName="dev_BLOG_SEARCH"
+                  searchClient={searchClient}
+                >
+                  <AutoComplete />
+                </InstantSearch>
                 <Absolute
                   right="15px"
                   top="18px"

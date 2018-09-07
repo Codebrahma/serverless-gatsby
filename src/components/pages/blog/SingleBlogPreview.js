@@ -25,7 +25,7 @@ export default ({ id, frontmatter }) => {
   const author = getAuthorInfo({ frontmatter })
 
   return (
-    <Row my={5}>
+    <Row my={[3, 3, 4, 5]}>
       <Box
         width={[1, 1, 1, 0.6]}
         pr={[15, 15, 15, '10%']}
@@ -64,7 +64,7 @@ export default ({ id, frontmatter }) => {
             fontSize={0}
             color="gray.2"
             lineHeight={3}
-            mt={2}
+            mt={[1, 1, 1, 2]}
           >
             written by&nbsp;
             { author.name }

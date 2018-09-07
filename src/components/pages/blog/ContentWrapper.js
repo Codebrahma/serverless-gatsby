@@ -72,9 +72,49 @@ const ContentWrapper = styled(Column)`
     padding-bottom: 8px;
   }
 
-  code {
-    max-width: 100%;
+  code.hljs {
+    display: inline-block;
+    width: 100%;
     overflow-x: scroll;
+    padding-left: 78px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    border: 1px solid #dfe5e6;
+    font-family: Serverless;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: 0.1px;
+    color: #795da3;
+  }
+
+  code.hljs:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 56px;
+    background: #f7f7f7;
+  }
+
+  a.line {
+    text-decoration: none;
+    border: none;
+    position: absolute;
+    left: 0;
+    width: 56px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Serverless';
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.1px;
+    color: rgba(0, 0, 0, 0.2);
   }
 `
 
@@ -86,6 +126,14 @@ export default class BlogWrapper extends React.Component {
       parentNode.style.border = 0;
       parentNode.style.display = node.style.display = 'block';
       node.style.margin = 'auto';
+    })
+
+    domNode.querySelectorAll("code.hljs").forEach((code) => {
+      let number = 1;
+      const zero = `<a class="line">${number++}</a>`;
+      code.innerHTML = zero + code.innerHTML.replace(/\n/g, () => (
+        `\n<a class="line">${number++}</a>`
+      ))
     })
   }
 

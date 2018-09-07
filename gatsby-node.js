@@ -5,6 +5,7 @@ const dir = require('node-dir')
 const matter = require('gray-matter')
 const unified = require('unified')
 const markdown = require('remark-parse')
+const highlight = require('remark-highlight.js')
 const html = require('remark-html')
 const authors = require('./src/pages/blog/generated-authors.json')
 const categories = require('./src/pages/blog/generated-categories.json')
@@ -24,6 +25,7 @@ exports.sourceNodes =  async ({ boundActionCreators }) => {
 
       unified()
         .use(markdown)
+        .use(highlight)
         .use(html)
         .process(markdownContent, function(err, file) {
           const blog = {

@@ -84,6 +84,7 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
               color="gray.3"
               lineHeight={1.63}
               mt={[0, 0, 10, 15]}
+              align="center"
             >
               { frontmatter.description }
             </Text.p>

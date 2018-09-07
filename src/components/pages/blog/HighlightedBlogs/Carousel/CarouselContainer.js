@@ -1,8 +1,9 @@
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
+import { Transition } from 'serverless-design-system/src'
 
-const CarouselContainer = styled.div`
+const CarouselContainer = styled(Transition)`
   display: flex;
-  transition: ${(props) => props.sliding ? 'none' : 'transform 0.5s ease'};
 
   transform: ${(props) => {
     if (props.numSlides === 1) return 'translateX(0%)'
@@ -20,4 +21,13 @@ const CarouselContainer = styled.div`
   }};
 `
 
-export default CarouselContainer
+export default (props) => {
+  const transition = props.sliding ? 'none' : 'transform 0.5s ease';
+
+  return (
+    <CarouselContainer
+      transition={[transition, transition, 'none']}
+      {...props}
+    />
+  );
+}

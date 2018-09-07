@@ -9,7 +9,7 @@ const CarouselSlot = styled.div`
     if (props.numSlides === 2) return props.order === props.position ? 1 : 0.5
     return props.order === 1 ? 1 : 0.5
   }};
-  transition: opacity 0.5s ease;
+  transition: opacity 0.8s ease;
 `
 
 export default CarouselSlot;

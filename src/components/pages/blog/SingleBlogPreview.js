@@ -1,7 +1,7 @@
 import React from 'react'
 import { Background, Box, Row, Text, Heading, P } from 'serverless-design-system/src'
 import { push } from 'gatsby-link'
-import { formatDate } from 'src/utils'
+import { formatDate } from 'src/utils/date'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
 import categoryData from 'src/pages/blog/generated-categories.json'
 

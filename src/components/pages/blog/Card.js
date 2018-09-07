@@ -7,7 +7,7 @@ import {
   Heading,
   P
 } from 'serverless-design-system/src'
-import { formatDate } from 'src/utils'
+import { formatDate } from 'src/utils/date'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
 
 export default ({ frontmatter }) => (

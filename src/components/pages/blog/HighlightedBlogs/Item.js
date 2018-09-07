@@ -8,7 +8,7 @@ import {
   Text,
   Image
 } from 'serverless-design-system/src'
-import { AppContainer } from 'src/components'
+import { AppContainer, BlockLink } from 'src/components'
 import { withTheme } from 'styled-components'
 import AuthorsData from 'src/pages/blog/generated-authors.json'
 
@@ -49,8 +49,6 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
           flexDirection="column"
           width={[1, 1, 1, 0.65]}
           m="auto"
-          style={{ cursor: 'pointer' }}
-          onClick={() => push(`/blog/${id}`)}
         >
           <Box
             width={1}
@@ -67,14 +65,16 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
               { frontmatter.category }
             </Text.p>
           </Box>
-          <Heading.h2
-            fontFamily="SoleilBk"
-            fontSize={[4, 4, 5, 7]}
-            align="center"
-            lineHeight={0}
-          >
-            { frontmatter.title }
-          </Heading.h2>
+          <BlockLink to={`/blog/${id}`}>
+            <Heading.h2
+              fontFamily="SoleilBk"
+              fontSize={[4, 4, 5, 7]}
+              align="center"
+              lineHeight={0}
+            >
+              { frontmatter.title }
+            </Heading.h2>
+          </BlockLink>
           <Box
             width={[1, 1, 1, 0.9]}
             px={[0, 0, 0, 4]}

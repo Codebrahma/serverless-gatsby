@@ -52,12 +52,14 @@ export default () => (
               fontSize={1}
               lineHeight={4}
               placeholder="enter email address"
+              placeholderColor="white"
               fontFamily="Serverless"
               letterSpacing="text"
             />
             <TertiaryButton
               width={0.3}
               height={60}
+              fontSize={1}
             >
               sign up
             </TertiaryButton>
@@ -105,12 +107,14 @@ export default () => (
                 fontSize={1}
                 lineHeight={4}
                 placeholder="enter email address"
+                placeholderColor="white"
                 fontFamily="Serverless"
                 letterSpacing="text"
               />
               <Button
                 width={0.5}
                 height={60}
+                fontSize={1}
               >
                 sign up
               </Button>

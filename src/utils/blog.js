@@ -11,7 +11,7 @@ const getAuthorById = (authorId) => {
 }
 
 const getAuthorInfo = ({ frontmatter }) => (
-  frontmatter.authors.map(getAuthorById)[0]
+  (frontmatter.authors || []).map(getAuthorById)[0] || {}
 )
 
 const getAuthorLink = (id) => `/author/${id}`

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "algoliasearch": "^3.30.0",
     "babel-eslint": "^8.2.6",
     "eslint": "^5.3.0",
     "eslint-loader": "^2.1.0",

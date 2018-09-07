@@ -269,7 +269,7 @@ code.hljs:before {
   background: #f7f7f7;
 }
 
-a.line {
+code.hljs > a.line {
   text-decoration: none;
   border: none;
   position: absolute;

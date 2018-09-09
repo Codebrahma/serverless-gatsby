@@ -6,7 +6,7 @@ import {
 
 const LeftSection = () => (
   <Column
-    width={[1, 1, 0.65]}
+    width={[1, 1, 0.55]}
     pt={2}
     color='white'
   >

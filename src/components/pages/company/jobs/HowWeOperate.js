@@ -61,24 +61,25 @@ const HowWeOperate = () => (
         <Column
           width={[1, 1, 0.5]}
           alignItems='flex-end'
+          mt={[3, 3, 1, 0]}
         >
           <RelativeCard
             width={[1, 1, 9/10, 9/10, 7/10]}
             boxShadow='2px 2px 8px 0 #eaeaea'
             border='1px solid #eaeaea'
-            px={4}
+            px={[2, 2, 4]}
             py={3}
             bg="white"
           >
             <Absolute
               height="fullHeight"
-              width={0.96}
-              top="-50px"
+              width="100vw"
+              top={["-30px", "-30px", "-40px", "-50px"]}
               zIndex={-1}
             >
               <Background
                 background={`url(${benefitsBackground})`}
-                backgroundSize="cover"
+                backgroundSize="contain"
                 height="fullHeight"
                 width={1}
               />

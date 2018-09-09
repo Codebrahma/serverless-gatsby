@@ -34,7 +34,7 @@ const LeftColumn = ({ heading, sentences }) => (
         iconSrc={greyDotsSquare}
         iconHeight='100px'
         iconWidth='118px'
-        iconTop='-20px'
+        iconTop='-30px'
         iconLeft='-80px'
         backgroundSize={[0, 0, 'contain']}
       >

@@ -34,10 +34,7 @@ const featureItemsData = [
 ]
 
 const OverviewFeatures = () => (
-  <Box
-    pb={[12, 12, 10]}
-    mb={[4, 4, 0]}
-  >
+  <Box pb={[300, 300, 10]}>
     <Features
       title="Benefits of the Serverless Framework"
       description="These are the 4 core benefits of the Serverless Framework you should know about"

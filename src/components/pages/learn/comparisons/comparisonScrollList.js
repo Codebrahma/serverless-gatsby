@@ -1,5 +1,5 @@
 import React from 'react'
-import { P, HyperLink } from 'serverless-design-system/src'
+import { Box, P, HyperLink } from 'serverless-design-system/src'
 
 import { AutoScrollList } from 'src/fragments'
 import comparisionCloudFormation from 'src/assets/images/comparisionCloudFormation.png'
@@ -93,7 +93,12 @@ const comparisonData = [
 ]
 
 const ComparisionsScrollList = () => (
-  <AutoScrollList listData={comparisonData} />
+  <Box
+    width={1}
+    pb={[12, 12, 10]}
+  >
+    <AutoScrollList listData={comparisonData} />
+  </Box>
 )
 
 export default ComparisionsScrollList

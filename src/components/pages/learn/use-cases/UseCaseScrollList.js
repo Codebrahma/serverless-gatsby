@@ -177,8 +177,11 @@ const comparisonData = [
   },
 ]
 
-const UseCaseScrollList = () => (
-  <AutoScrollList listData={comparisonData} />
+export default () => (
+  <Box
+    width={1}
+    pb={[12, 12, 10]}
+  >
+    <AutoScrollList listData={comparisonData} />
+  </Box>
 )
-
-export default UseCaseScrollList

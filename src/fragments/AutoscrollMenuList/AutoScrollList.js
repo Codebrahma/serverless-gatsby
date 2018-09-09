@@ -58,15 +58,20 @@ class AutoScrollListItem extends React.Component {
         mb={[5, 5, 7, 8]}
         px={[0, 0, 3]}
       >
-        <Box mb={5}>
+        <Box mb={[2, 2, 3, 5]}>
           <TitleWithIcon>{title}</TitleWithIcon>
         </Box>
-        <Image
-          src={image}
-          alt={title}
+        <Box
           width={1}
-          height='auto'
-        />
+          mb={2}
+        >
+          <Image
+            src={image}
+            alt={title}
+            width={1}
+            height='auto'
+          />
+        </Box>
         { body }
       </Flex.column>
     )

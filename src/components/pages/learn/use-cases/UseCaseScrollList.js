@@ -29,7 +29,7 @@ const renderContents = (contents) => (
   <React.Fragment>
     {
       contents.map((content, index) => (
-        <P key={index} mt={3}>
+        <P key={index} mt={[16, 16, 2, 3]}>
           {content}
         </P>
       ))
@@ -180,7 +180,7 @@ const comparisonData = [
 export default () => (
   <Box
     width={1}
-    pb={[12, 12, 10]}
+    pb={[12, 12, 6, 5]}
   >
     <AutoScrollList listData={comparisonData} />
   </Box>

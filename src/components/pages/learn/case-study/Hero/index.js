@@ -8,7 +8,7 @@ import background from 'src/assets/images/case-studies-background.png'
 const UseCasesHero = () => (
   <HeroWrapper
     background={`url(${background})`}
-    backgroundSize="contain"
+    backgroundSize={["cover", "cover", "cover", "contain"]}
   >
     <Box mb={[2, 2, 7]}>
       <HeroTabs selected="case-studies" />

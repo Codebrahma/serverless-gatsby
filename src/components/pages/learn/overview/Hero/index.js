@@ -10,7 +10,7 @@ import LearnOverviewBg from 'src/assets/images/learnOverviewBg.png'
 const DashboardHero = () => (
   <HeroWrapper
     backgroundImage={`url(${LearnOverviewBg})`}
-    backgroundSize='contain'
+    backgroundSize={["cover", "cover", "cover", "contain"]}
   >
     <Box mb={[2, 2, 6]}>
       <HeroTabs selected="overview" />

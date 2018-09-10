@@ -2,7 +2,7 @@ import React from 'react'
 import { TextWithIcon, Heading } from 'serverless-design-system/src'
 import redRectangleDots from 'src/assets/images/redRectangleDots.png'
 
-export default ({ children }) => (
+export default ({ children, ...otherProps }) => (
   <TextWithIcon
     iconSrc={redRectangleDots}
     iconHeight={["30px", "30px", "30px", "38px"]}
@@ -18,6 +18,7 @@ export default ({ children }) => (
       fontSize={[5, 5, 5, 7]}
       lineHeight={0}
       letterSpacing="0.5px"
+      {...otherProps}
     >
       { children }
     </Heading.h2>

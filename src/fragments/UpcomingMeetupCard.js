@@ -11,12 +11,12 @@ import {
   Text,
 } from 'serverless-design-system/src'
 
-import verticalRedRectangleDots from '../assets/images/verticalRedRectangleDots.png'
+import verticalRedRectangleDots from 'src/assets/images/verticalRedRectangleDots.svg'
 
 const MeetupCard = ({ title, schedule, address, attending }) => (
   <Relative
     maxWidth='350px'
-    mx={2}
+    mx={[0, 0, 2]}
     my={[1, 1, 2]}
   >
     <Card
@@ -31,7 +31,11 @@ const MeetupCard = ({ title, schedule, address, attending }) => (
         zIndex={1}
       >
         <Background background="white">
-          <Image src={verticalRedRectangleDots} />
+          <Image
+            src={verticalRedRectangleDots}
+            height={[44, 44, 44, 60]}
+            width={[22, 22, 22, 28]}
+          />
         </Background>
       </Absolute>
       <Heading.h4

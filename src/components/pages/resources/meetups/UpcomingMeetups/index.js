@@ -47,8 +47,8 @@ const meetupData = [
 
 const UpcomingMeetups = () => (
   <AppContainer>
-    <Column alignItems='center' py={5}>
-      <TitleWithIcon>
+    <Column alignItems='center' py={[2, 2, 3, 5]}>
+      <TitleWithIcon fontSize={[4, 4, 6, 7, 8]}>
         Upcoming Meetups
       </TitleWithIcon>
       <ResponsiveStack

@@ -36,7 +36,7 @@ const GroupCard = ({ heading, title, location, link }) => (
       <Card
         boxShadow='2px 2px 8px 0 #eaeaea'
         border='1px solid #eaeaea'
-        p={[2, 2, 3]}
+        p={[1, 1, 2, 3]}
       >
         {
           heading ? (

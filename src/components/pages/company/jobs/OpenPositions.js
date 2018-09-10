@@ -14,10 +14,10 @@ import { ServerlessUserGroupStack } from 'src/fragments'
 import backgroundImage from 'src/assets/images/rectangle-19.png'
 
 const JobDetail = ({ location, status }) => (
-  <Row justifyContent="space-between">
+  <ResponsiveStack justifyContent="space-between">
     <Column>{location}</Column>
     <Column>{status}</Column>
-  </Row>
+  </ResponsiveStack>
 )
 
 const jobs = [
@@ -54,11 +54,11 @@ const jobs = [
 ]
 
 const OpenPositions = () => (
-  <Background backgroundImage={['', '', `url(${backgroundImage})`]}>
+  <Background backgroundImage={`url(${backgroundImage})`}>
     <AppContainer>
       <Column py={[4, 4, 7]}>
         <Flex justifyContent='center'>
-          <Heading.h2 fontFamily='SoleilSb'>
+          <Heading.h2 fontSize={[4, 4, 5, 6]} fontFamily='SoleilSb'>
             Open Positions
           </Heading.h2>
         </Flex>

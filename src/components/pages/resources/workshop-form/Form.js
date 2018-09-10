@@ -29,7 +29,9 @@ export default () => (
         <TextWithIcon
           iconSrc={dotGridGrey}
           iconHeight="35px"
-          iconWidth="45px"
+          iconWidth="65px"
+          iconLeft="-10px"
+          iconTop="-5px"
           backgroundSize="contain"
         >
           <Heading.h4
@@ -62,7 +64,9 @@ export default () => (
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
-            iconWidth="45px"
+            iconWidth="65px"
+            iconLeft="-10px"
+            iconTop="-5px"
             backgroundSize="contain"
           >
             <Heading.h4
@@ -97,7 +101,9 @@ export default () => (
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
-            iconWidth="45px"
+            iconWidth="65px"
+            iconLeft="-10px"
+            iconTop="-5px"
             backgroundSize="contain"
           >
             <Heading.h4
@@ -132,7 +138,9 @@ export default () => (
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
-            iconWidth="45px"
+            iconWidth="65px"
+            iconLeft="-10px"
+            iconTop="-5px"
             backgroundSize="contain"
           >
             <Heading.h4
@@ -191,7 +199,9 @@ export default () => (
           <TextWithIcon
             iconSrc={dotGridGrey}
             iconHeight="35px"
-            iconWidth="45px"
+            iconWidth="65px"
+            iconLeft="-10px"
+            iconTop="-5px"
             backgroundSize="contain"
           >
             <Heading.h4

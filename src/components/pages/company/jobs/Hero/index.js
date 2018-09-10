@@ -20,7 +20,7 @@ const JobsHero = () => (
     >
       <Box width={[1, 1, 1/2]}>
         <Text.p
-          fontSize={[7, 7, 7, 8]}
+          fontSize={[6, 6, 7, 8]}
           fontFamily="Soleil"
           lineHeight={1}
           letterSpacing={'-0.2'}

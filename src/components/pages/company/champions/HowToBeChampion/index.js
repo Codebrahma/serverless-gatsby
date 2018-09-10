@@ -81,13 +81,13 @@ const HowToBeChampion = () => (
         <Box
           width={[1, 1, 0.35]}
           mt={[5, 5, 6, 8]}
-          mb={[5, 5, 6, 0]}
+          mb={[5, 5, 4, 0]}
         >
           <RelativeCard
             width={1}
             boxShadow='2px 2px 8px 0 #eaeaea'
             border='1px solid #eaeaea'
-            px={[2, 2, 4]}
+            px={[2, 2, 2, 4]}
             py={3}
             bg="white"
           >

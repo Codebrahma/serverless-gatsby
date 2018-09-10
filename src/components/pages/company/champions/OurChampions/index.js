@@ -73,7 +73,7 @@ const ChampionCard = ({ name, image, position }) => (
 
 const OurChampions = () => (
   <AppContainer>
-    <Box py={[5, 5, 6]}>
+    <Box py={[5, 5, 4, 6]}>
       <Box my={[1, 2, 3, 4]}>
         <Heading.h2
           align="center"

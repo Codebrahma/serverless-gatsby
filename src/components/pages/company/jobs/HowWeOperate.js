@@ -102,7 +102,7 @@ const HowWeOperate = () => (
                   alignItems="center"
                 >
                   <InlineBlock mr={2}>
-                    <Image src={checkmarkIcon} height="40px" width="40px" />
+                    <Image src={checkmarkIcon} height="20px" width="20px" />
                   </InlineBlock>
                   <P
                     key={index}

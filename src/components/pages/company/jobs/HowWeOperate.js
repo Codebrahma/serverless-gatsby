@@ -35,8 +35,8 @@ const benefitList = [
 const HowWeOperate = () => (
   <AppContainer>
     <Column
-      pt={[6, 6, 8]}
-      pb={6}
+      pt={[3, 3, 3, 5, 8]}
+      pb={[3, 3, 3, 6]}
     >
       <TitleWithIcon>
         How We Operate
@@ -44,7 +44,7 @@ const HowWeOperate = () => (
 
       <ResponsiveStack>
         <Box width={[1, 1, 0.5]}>
-          <P>
+          <P mt={0}>
             We are a group of self-motivated hackers and creatives who believe that there is a better way to build applications. Our end goal is to make software development accessible to everyone, and we are starting by making it easier for software engineers. Our open source Framework has over 25,000 stars on Github (and counting).
           </P>
           <P>

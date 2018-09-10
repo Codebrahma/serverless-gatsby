@@ -54,7 +54,7 @@ const OurTeam= () => (
       <Flex
         justifyContent='center'
         mt={3}
-        mb={2}
+        mb={[0, 0, 1, 2]}
       >
         <TitleWithIcon>Our Team</TitleWithIcon>
       </Flex>

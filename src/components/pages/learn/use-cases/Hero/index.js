@@ -8,7 +8,8 @@ import background from 'src/assets/images/use-cases-background.png'
 const UseCasesHero = () => (
   <HeroWrapper
     background={`url(${background})`}
-    backgroundSize={["cover", "cover", "cover", "contain"]}
+    backgroundSize="cover"
+    backgroundPosition="center"
   >
     <Box mb={[2, 2, 7]}>
       <HeroTabs selected="use-cases" />

@@ -11,7 +11,8 @@ import HomePageHeroSectionBackground from 'src/assets/images/home.png'
 const HomeHeroComponent = () => (
   <HeroWrapper
     backgroundImage={`url(${HomePageHeroSectionBackground})`}
-    backgroundSize={["cover", "cover", "cover", "contain"]}
+    backgroundSize="cover"
+    backgroundPosition="center"
   >
     <HeroHeader />
     <HeroImage />

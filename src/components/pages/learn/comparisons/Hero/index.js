@@ -8,7 +8,8 @@ import background from 'src/assets/images/comparisons-background.png'
 const UseCasesHero = () => (
   <HeroWrapper
     background={`url(${background})`}
-    backgroundSize={["cover", "cover", "cover", "contain"]}
+    backgroundSize="cover"
+    backgroundPosition="center"
   >
     <Box mb={[2, 2, 7]}>
       <HeroTabs selected="comparisons" />

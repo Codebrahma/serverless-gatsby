@@ -41,43 +41,47 @@ const ChampionCard = ({ name, image, details }) => (
   <Relative
     width={[1, 1, 0.33]}
     maxWidth={400}
-    minHeight={390}
-    px={[0, 0, 2]}
+    px={[0, 0, 1, 2]}
     py={[2, 2, 2, 0]}
   >
-    <Image
-      src={image}
-      alt={name}
+    <Box
       width={1}
-      maxHeight={384}
-    />
-    <Absolute
-      bottom="15px"
-      left="25px"
-      zIndex={1}
+      minHeight={390}
     >
-      <Background
-        background={`url(${dotGridVertical})`}
-        height="152px"
-        width="80px"
-        backgroundSize="cover"
+      <Image
+        src={image}
+        alt={name}
+        width={1}
+        maxHeight={384}
       />
-    </Absolute>
-    <Flex justifyContent="flex-end">
-      <Box width={[0.6, 0.6, 0.9, 0.65]}>
-        <Heading.h4
-          mt={2}
-          fontFamily='SoleilBk'
-          fontSize={[3, 3, 3, 4]}
-        >
-          {name}
-        </Heading.h4>
+      <Absolute
+        bottom={[15, 15, 50, 15]}
+        left={25}
+        zIndex={1}
+      >
+        <Background
+          background={`url(${dotGridVertical})`}
+          height="152px"
+          width="80px"
+          backgroundSize="cover"
+        />
+      </Absolute>
+      <Flex justifyContent="flex-end">
+        <Box width={[0.6, 0.6, 0.9, 0.8, 0.65]}>
+          <Heading.h4
+            mt={2}
+            fontFamily='SoleilBk'
+            fontSize={[3, 3, 3, 4]}
+          >
+            {name}
+          </Heading.h4>
 
-        <P fontSize={[1, 1, 2]}>
-          { details.map((detail) => (<Box>{ detail }</Box>)) }
-        </P>
-      </Box>
-    </Flex>
+          <P fontSize={[1, 1, 2]}>
+            { details.map((detail) => (<Box>{ detail }</Box>)) }
+          </P>
+        </Box>
+      </Flex>
+    </Box>
   </Relative>
 )
 

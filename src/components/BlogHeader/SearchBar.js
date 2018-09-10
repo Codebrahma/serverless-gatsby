@@ -119,9 +119,9 @@ class SearchBar extends React.Component {
                         key={`category-tab-${index}`}
                         to={getCategoryLink(tab)}
                       >
-                        <InlineBlock px={[1, 1, 2]}>
+                        <InlineBlock px={[1, 1, "5px", 2]}>
                           <LinkText
-                            fontSize={1}
+                            fontSize={[1, 1, 0, 1]}
                             fontFamily="Serverless"
                             lineHeight={1}
                             color="white"

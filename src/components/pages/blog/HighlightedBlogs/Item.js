@@ -93,7 +93,7 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
               fontFamily="SoleilBk"
               color="gray.3"
               lineHeight={1.63}
-              mt={[0, 0, 10, 15]}
+              mt={[0, 0, 1, 15]}
               align="center"
             >
               { description }

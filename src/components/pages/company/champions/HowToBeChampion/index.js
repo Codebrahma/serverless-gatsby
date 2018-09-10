@@ -47,7 +47,7 @@ const HowToBeChampion = () => (
   <AppContainer>
     <Flex.column pt={[5, 5, 6, 8]}>
       <Flex flexDirection={['column', 'column', 'row']}>
-        <Box width={[1, 1, 0.65]} px={2}>
+        <Box width={[1, 1, 0.65]} px={[0, 0, 0, 2]}>
           <Box mb={[2, 2, 3, 5]}>
             <TitleWithIcon>
               What does it take to become a Serverless Champion?
@@ -81,7 +81,7 @@ const HowToBeChampion = () => (
         <Box
           width={[1, 1, 0.35]}
           mt={[5, 5, 6, 8]}
-          mb={[5, 5, 4, 0]}
+          mb={[2, 2, 3, 0]}
         >
           <RelativeCard
             width={1}

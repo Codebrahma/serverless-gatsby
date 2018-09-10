@@ -14,7 +14,7 @@ const renderContents = (contents) => (
   <React.Fragment>
     {
       contents.map((content, index) => (
-        <P key={index} mt={3}>
+        <P key={index} mt={[16, 16, 2, 3]}>
           {content}
         </P>
       ))

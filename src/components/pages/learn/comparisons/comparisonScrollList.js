@@ -95,7 +95,7 @@ const comparisonData = [
 const ComparisionsScrollList = () => (
   <Box
     width={1}
-    pb={[12, 12, 10]}
+    pb={[12, 12, 6, 0]}
   >
     <AutoScrollList listData={comparisonData} />
   </Box>

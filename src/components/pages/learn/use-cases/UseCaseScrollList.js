@@ -180,7 +180,7 @@ const comparisonData = [
 export default () => (
   <Box
     width={1}
-    pb={[12, 12, 6, 5]}
+    pb={[12, 12, 6, 0]}
   >
     <AutoScrollList listData={comparisonData} />
   </Box>

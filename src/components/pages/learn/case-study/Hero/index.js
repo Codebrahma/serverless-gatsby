@@ -15,7 +15,7 @@ const UseCasesHero = () => (
     </Box>
 
     <ResponsiveStack
-      mb={6}
+      mb={[2, 2, 4, 6]}
       color="white"
     >
       <Box width={[1, 1, 10/12, 11/12]}>

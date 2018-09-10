@@ -13,7 +13,7 @@ const HeroAdvantage = ({ title, description }) => (
         iconWidth='45px'
         iconTop='-5px'
         iconLeft='-10px'
-        backgroundSize='initial'
+        backgroundSize='cover'
       >
         <Text.span
           color='white'

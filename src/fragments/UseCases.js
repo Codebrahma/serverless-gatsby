@@ -12,13 +12,13 @@ const UseCases = ({ useCaseHeader, useCaseSubHeader, cases }) => {
             <Box mt={[5, 5, 8]} mb={2}>
               <P
                 align={['left', 'left', 'center']}
-                fontSize={6}
+                fontSize={[5, 5, 6]}
                 color='black'
-                m={1}
+                my={1}
               >
                 {useCaseHeader}
               </P>
-              <P align='center' fontSize={0}>
+              <P align={['left', 'left', 'center']} fontSize={0}>
                 {useCaseSubHeader}
               </P>
             </Box>

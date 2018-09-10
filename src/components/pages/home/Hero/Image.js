@@ -7,6 +7,7 @@ import {
   Relative,
   withBeforeAfter,
 } from 'serverless-design-system/src'
+import { getLinkComponent } from 'src/components/BlockLink'
 import frameworkIcon from 'src/assets/images/bolt.png'
 import dashboardIcon from 'src/assets/images/icon-dashboard.png'
 import gatewayIcon from 'src/assets/images/group-6.png'
@@ -41,8 +42,14 @@ const HeroImageWrapper = withBeforeAfter(
   afterBlockStyle
 )
 
-const ImageSection = ({ imgSrc, title, subtitle }) => (
-  <Flex.verticallyCenter flexDirection='column' width={[1, 1, 1 / 3]}>
+const ImageSectionWrapper = getLinkComponent(Flex.verticallyCenter)
+
+const ImageSection = ({ imgSrc, title, subtitle, to }) => (
+  <ImageSectionWrapper
+    flexDirection='column'
+    width={[1, 1, 1 / 3]}
+    to={to}
+  >
     <Relative>
       <Flex.verticallyCenter height='86px' my={2}>
         <Image src={imgSrc} maxHeight='86px' maxWidth='70px' />
@@ -57,7 +64,7 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
     >
       {subtitle}
     </Heading.h4>
-  </Flex.verticallyCenter>
+  </ImageSectionWrapper>
 )
 
 const HomeHeroImage = () => (
@@ -75,13 +82,20 @@ const HomeHeroImage = () => (
       imgSrc={frameworkIcon}
       title='serverless'
       subtitle='framework'
+      to='/framework'
     />
     <ImageSection
       imgSrc={dashboardIcon}
       title='serverless'
       subtitle='dashboard'
+      to='/dashboard'
     />
-    <ImageSection imgSrc={gatewayIcon} title='event' subtitle='gateway' />
+    <ImageSection
+      imgSrc={gatewayIcon}
+      title='event'
+      subtitle='gateway'
+      to='/event-gateway'
+    />
   </HeroImageWrapper>
 )
 

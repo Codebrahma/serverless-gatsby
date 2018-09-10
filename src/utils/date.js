@@ -1,9 +1,9 @@
 const formatDate = (input, format) => {
   const object = new Date(input);
-  const date = object.getDay().toString().padStart(2, '0');
-  const month = object.getMonth().toString().padStart(2, '0');
+  const date = `00${object.getDay().toString()}`.slice(-2);
+  const month = `00${object.getMonth().toString()}`.slice(-2);
   const fullYear = object.getFullYear();
-  const year = (object.getFullYear() % 100).toString().padStart(2, '0');
+  const year = `00${(object.getFullYear() % 100).toString()}`.slice(-2);
 
   return format
     .replace('dd', date)

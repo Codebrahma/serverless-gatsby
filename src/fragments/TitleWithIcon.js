@@ -1,6 +1,6 @@
 import React from 'react'
 import { TextWithIcon, Heading } from 'serverless-design-system/src'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
 
 export default ({ children, ...otherProps }) => (
   <TextWithIcon

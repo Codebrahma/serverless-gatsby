@@ -7,7 +7,6 @@ import Hero from 'src/components/pages/learn/overview/Hero'
 import Explanation from 'src/components/pages/learn/overview/Explanation'
 import ServerlessAppBenefits from 'src/components/pages/learn/overview/AppBenefits'
 import ServerlessFrameworkBenefits from 'src/components/pages/learn/overview/FrameworkBenefits'
-import AboutServerlessFramework from 'src/components/pages/learn/overview/AboutServerlessFramework'
 import GetStarted from 'src/components/pages/learn/overview/GetStarted'
 
 import { Divider } from 'src/fragments'
@@ -19,7 +18,6 @@ const Overview = () => (
     <GetStarted />
     <ServerlessAppBenefits />
     <Divider />
-    <AboutServerlessFramework />
     <ServerlessFrameworkBenefits/>
   </DefaultLayout>
 )

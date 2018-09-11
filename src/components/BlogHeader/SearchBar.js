@@ -40,13 +40,14 @@ const LinkText = styled(Text.span)`
   }
 `
 
-const SearchBarWrapper = ({ children }) => (
+const SearchBarWrapper = ({ children, ...otherProps }) => (
   <BlogNavbarContext.Consumer>
     {
       ({ isNavbarShrinked }) => (
         <Wrapper
           height={[ 0, 0, isNavbarShrinked ? 0 : 82 ]}
           o={isNavbarShrinked ? 'hidden' : 'visible'}
+          {...otherProps}
         >
           {children}
         </Wrapper>
@@ -66,7 +67,7 @@ class SearchBar extends React.Component {
   render() {
     const borderColor = this.props.theme.colors.gray[2];
     return (
-      <SearchBarWrapper>
+      <SearchBarWrapper display={['none', 'none', 'block']}>
         <Flex
           width={1}
           py={1}

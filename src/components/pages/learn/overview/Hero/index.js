@@ -9,7 +9,7 @@ import LearnOverviewBg from 'src/assets/images/learnOverviewBg.png'
 
 const DashboardHero = () => (
   <HeroWrapper
-    backgroundImage={`black url(${LearnOverviewBg})`}
+    background={`black url(${LearnOverviewBg})`}
     backgroundSize="cover"
     backgroundPosition="center"
   >

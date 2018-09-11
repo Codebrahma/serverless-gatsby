@@ -12,7 +12,7 @@ import { AppContainer } from 'src/components'
 
 const Features = ({ title, description, features, leadingNumber }) => (
   <AppContainer>
-    <Column px={[0, 0, 0, 3]}>
+    <Column px={[0, 0, 0, 45]}>
       <Box my={[0, 0, 0, 4]}>
         <Heading.h2
           align="center"

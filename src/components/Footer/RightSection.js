@@ -49,7 +49,8 @@ const Subscribe = () => (
         m={0}
         width={[1, 1, 0.6]}
         borderRadius={0}
-        boxSizing='border-box'
+        fontFamily="Serverless"
+        placeholderColor="white"
       />
       <Button
         width={['35%', '35%', '40%']}

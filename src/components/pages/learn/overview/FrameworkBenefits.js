@@ -2,10 +2,10 @@ import React from 'react'
 import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
 
-import cloudAgnostic from 'src/assets/images/cloud-agnostic.svg'
-import componentized from 'src/assets/images/componentized.svg'
-import codeForInfrastructure from 'src/assets/images/code-for-infrastructure.svg'
-import developmentExperience from 'src/assets/images/development-experience.svg'
+import cloudAgnostic from 'src/assets/images/icon-dash.svg'
+import componentized from 'src/assets/images/icon-component.svg'
+import codeForInfrastructure from 'src/assets/images/icon-infra.svg'
+import developmentExperience from 'src/assets/images/icon-visualize.svg'
 
 const featureItemsData = [
   {

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="244" viewBox="0 0 280 244">
+    <defs>
+        <linearGradient id="a" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity=".1"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="c" x1="100%" x2="0%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="b" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="d" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="e" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <path fill="#FFF" stroke="url(#a)" d="M.5.5h279v199H.5z"/>
+            <path fill="url(#c)" fill-opacity=".2" stroke="url(#b)" d="M.5.5h279v23H.5z"/>
+            <circle cx="17" cy="12" r="4" stroke="url(#d)"/>
+            <circle cx="33" cy="12" r="4" stroke="url(#d)"/>
+            <circle cx="49" cy="12" r="4" stroke="url(#d)"/>
+            <path fill="#FFF" stroke="url(#e)" d="M16.5 39.5h115v63h-115zM16.5 119.5h115v64h-115z"/>
+            <circle cx="112.5" cy="136.5" r="4.5" stroke="#FD5750"/>
+            <circle cx="92.5" cy="150.5" r="4.5" stroke="#FD5750"/>
+            <circle cx="103.5" cy="156.5" r="4.5" stroke="#FD5750"/>
+            <circle cx="67.5" cy="147.5" r="4.5" stroke="#FD5750"/>
+            <circle cx="59.5" cy="162.5" r="4.5" stroke="#FD5750"/>
+            <circle cx="46.5" cy="174.5" r="4.5" stroke="#FD5750"/>
+            <circle cx="82.5" cy="162.5" r="4.5" stroke="#FD5750"/>
+            <circle cx="42.5" cy="152.5" r="4.5" stroke="#FD5750"/>
+            <path fill="#FFF" stroke="url(#e)" d="M148.5 39.5v63h115v-63h-115zM148.5 119.5v64h115v-64h-115z"/>
+            <path stroke="#FD5750" d="M27 94.39l11.334-16.478 24.445 5.3 7.532-18.347 31.68-5.408L121.42 47M166 95V68M182 95V51M198 95V62M214 95V57M230 95V72M246 95V48M158 95V71M174 95V78M190 95V67M206 95V74M222 95V71M238 95V80M254 95V65M157 151.245l8.054 10.024 16.704 5.332 20.28-18.508L223.48 137l14.177 11.093L255.973 137"/>
+            <path stroke="#FD5750" d="M159 174.474l11.38-18.234 15.669-10.253 19.619-6.1 12.796 11.626 11.639-9.291L252.743 128"/>
+        </g>
+        <g stroke-width="1.5" transform="translate(96 156)">
+            <path fill="#FFF" stroke="#FD5750" d="M74.683 74.582c16.834-16.887 16.745-44.274-.2-61.164-16.946-16.89-44.332-16.89-61.165-.002-16.835 16.89-16.746 44.276.2 61.164 16.945 16.893 44.33 16.893 61.165.002z"/>
+            <rect width="47.5" height="31.5" x="20.75" y="25.75" stroke="#F15953" rx="3"/>
+            <rect width="50.5" height="34.5" x="18.75" y="28.75" fill="#FFF" stroke="#F15953" rx="3"/>
+            <path stroke="#FD5750" d="M25.114 56.049l8.973-9.835 7.974 3.866 6.001-8.963 6.964 2.983 8.138-8.96"/>
+        </g>
+    </g>
+</svg>

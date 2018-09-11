@@ -10,9 +10,9 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
-import frameworkImage from 'src/assets/images/illustration-1.png'
-import dashboardImage from 'src/assets/images/illustration-2.png'
-import gatewayImage from 'src/assets/images/illustration-3.png'
+import frameworkImage from 'src/assets/images/illustration-1.svg'
+import dashboardImage from 'src/assets/images/illustration-2.svg'
+import gatewayImage from 'src/assets/images/illustration-3.svg'
 
 const LearnMoreButton = ({ to }) => (
   <Flex.horizontallyCenter>

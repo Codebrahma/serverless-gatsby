@@ -7,9 +7,9 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
-import autoScalingIcon from 'src/assets/images/icon-vol.png'
-import payPerExecutionIcon from 'src/assets/images/icon-graph.png'
-import lowOverheadIcon from 'src/assets/images/icon-dash.png'
+import autoScalingIcon from 'src/assets/images/icon-vol.svg'
+import payPerExecutionIcon from 'src/assets/images/icon-graph.svg'
+import lowOverheadIcon from 'src/assets/images/icon-dash.svg'
 
 const cardList = [
   {

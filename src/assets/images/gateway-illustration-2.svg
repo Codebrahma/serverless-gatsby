@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="488" height="432" viewBox="0 0 488 432">
+    <defs>
+        <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="b" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="d" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="e" x1="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="f" x1="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" stroke="url(#a)" d="M468.977 33.662H468.935l-.044.002h-.468l-.03-.468C467.192 14.856 451.852.5 433.28.5c-11.52 0-22.1 5.549-28.668 14.71l-.196.272-.326-.077a28.268 28.268 0 0 0-6.506-.762c-15.511 0-28.085 12.505-28.085 27.928 0 15.424 12.574 27.929 28.085 27.929h71.392c10.23 0 18.523-8.247 18.523-18.419s-8.293-18.42-18.523-18.42z"/>
+        <path fill="#FFF" stroke="url(#b)" d="M237.028 369.08l-.055.002-.025.001-.064.001h-.468l-.03-.467C234.357 337.7 208.43 313.5 177.034 313.5c-19.471 0-37.356 9.354-48.459 24.796l-.195.271-.326-.077a47.976 47.976 0 0 0-11.012-1.285c-26.258 0-47.543 21.11-47.543 47.147 0 26.038 21.285 47.148 47.543 47.148h119.985c17.382 0 31.472-13.974 31.472-31.21 0-17.235-14.09-31.21-31.472-31.21z"/>
+        <path fill="#FFF" stroke="url(#c)" d="M134.422 51.338l-.04.001-.02.001h-.523l-.03-.467C132.188 25.983 111.49 6.5 86.427 6.5c-15.544 0-29.82 7.53-38.685 19.961l-.195.274-.327-.077a37.973 37.973 0 0 0-8.787-1.035C17.484 25.623.5 42.61.5 63.561.5 84.514 17.484 101.5 38.434 101.5h95.988c13.85 0 25.078-11.23 25.078-25.08 0-13.853-11.228-25.082-25.078-25.082z"/>
+        <g stroke="url(#d)" transform="translate(204 135)">
+            <path fill="#FFF" d="M.5.5h149v109H.5z"/>
+            <path fill="#FD5750" fill-opacity=".05" d="M.5.5h149v19H.5z"/>
+        </g>
+        <path fill="#FFF" d="M204 135h150v110H204z" opacity=".8"/>
+        <g stroke="url(#d)" transform="translate(212 143)">
+            <path fill="#FFF" d="M.5.5h149v109H.5z"/>
+            <path fill="#FD5750" fill-opacity=".05" d="M.5.5h149v19H.5z"/>
+        </g>
+        <path fill="#FFF" d="M212 143h150v110H212z" opacity=".4"/>
+        <path fill="#FFF" stroke="url(#b)" d="M16.5 16.5h149v109h-149z" transform="translate(204 135)"/>
+        <path fill="#FD5750" fill-opacity=".05" stroke="url(#d)" d="M16.5 16.5h149v19h-149z" transform="translate(204 135)"/>
+        <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5" transform="translate(204 135)">
+            <tspan x="24" y="30">serverless.yml</tspan>
+        </text>
+        <text fill="#000" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5" transform="translate(204 135)">
+            <tspan x="32" y="61">service: hello</tspan> <tspan x="32" y="75">functions:</tspan> <tspan x="32" y="89"> hello</tspan>
+        </text>
+        <path stroke="url(#e)" d="M302 261v138h-34"/>
+        <path stroke="url(#b)" d="M82 102v110h122"/>
+        <path stroke="url(#f)" d="M425 71v138h-55"/>
+        <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="14" letter-spacing=".583">
+            <tspan x="37" y="68">webhooks</tspan>
+        </text>
+        <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="14" letter-spacing=".583">
+            <tspan x="98" y="387">Business Events</tspan>
+        </text>
+        <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="14" letter-spacing=".583">
+            <tspan x="411" y="47">IoT</tspan>
+        </text>
+    </g>
+</svg>

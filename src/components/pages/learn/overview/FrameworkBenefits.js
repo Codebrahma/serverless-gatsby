@@ -35,7 +35,7 @@ const featureItemsData = [
 ]
 
 const OverviewFeatures = () => (
-  <Box pb={[300, 300, 10]}>
+  <Box>
     <Features
       title="Build with the Serverless Framework"
       description="At over 25,000 GitHub stars, the open source Serverless Framework is the number one tool for building and deploying serverless applications. It is:"

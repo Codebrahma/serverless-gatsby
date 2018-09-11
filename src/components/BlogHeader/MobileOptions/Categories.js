@@ -25,8 +25,7 @@ export default () => (
         isNavbarActive && (
           <Flex.center
             flexDirection="column"
-            pt={1}
-            pb={2}
+            py={3}
           >
             <Category link={'/category/application-development'}>application development</Category>
             <Category link={'/category/operations-and-observability'}>operations & observability</Category>

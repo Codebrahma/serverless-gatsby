@@ -22,7 +22,7 @@ const GetStarted = () => (
           justifyContent='center'
           alignItems='center'
           minHeight="280px"
-          width={0.65}
+          width={[1, 1, 1, 0.65]}
           px={25}
           py={4}
           m="auto"

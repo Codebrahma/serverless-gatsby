@@ -58,7 +58,7 @@ class AutoScrollListItem extends React.Component {
         mb={[4, 4, 5, 8]}
         px={[0, 0, 3]}
       >
-        <Box mb={[2, 2, 3, 5]}>
+        <Box mb={[2, 2, 3 ]}>
           <TitleWithIcon>{title}</TitleWithIcon>
         </Box>
         <Box

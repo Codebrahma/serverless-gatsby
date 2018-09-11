@@ -3,12 +3,12 @@ import { Box, P, HyperLink } from 'serverless-design-system/src'
 
 import { AutoScrollList } from 'src/fragments'
 import comparisionCloudFormation from 'src/assets/images/comparisionCloudFormation.png'
-import comparisionCustomTooling from 'src/assets/images/comparisionCustomTooling.png'
-import comparisionDocker from 'src/assets/images/comparisionDocker.png'
-import comparisionHeroku from 'src/assets/images/comparisionHeroku.png'
+import comparisionCustomTooling from 'src/assets/images/comparisionCustomTooling.svg'
+import comparisionDocker from 'src/assets/images/comparisionDocker.svg'
+import comparisionHeroku from 'src/assets/images/comparisionHeroku.svg'
 import comparisionSAM from 'src/assets/images/comparisionSAM.png'
-import comparisionTerraForm from 'src/assets/images/comparisionTerraForm.png'
-import comparisionZampa from 'src/assets/images/comparisionZampa.png'
+import comparisionTerraForm from 'src/assets/images/comparisionTerraForm.svg'
+import comparisionZampa from 'src/assets/images/comparisionZampa.svg'
 
 const renderContents = (contents) => (
   <React.Fragment>

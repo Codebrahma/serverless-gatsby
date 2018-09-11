@@ -73,7 +73,7 @@ const OurValues = () => (
   <Box pb={[ 300, 300, 12 ]}>
     <AppContainer>
       <Column px={[0, 0, 0, 45]}>
-        <Column my={[0, 0, 0, 4]} alignItems="center">
+        <Column mt={[0, 0, 0, 4]} alignItems="center">
           <TitleWithIcon>
             Our Values
           </TitleWithIcon>

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Fixed, Row, Image } from 'serverless-design-system/src'
 import OptionWrapper from './OptionWrapper'
 import AutoComplete from './AutoComplete'

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {
   Card,
   Relative,
-  Absolute,
+  Fixed,
   TextField,
   Text
 } from 'serverless-design-system/src'
@@ -44,6 +44,7 @@ class AutoComplete extends React.Component {
           bg="transparent"
           webkitAppearance="none"
           border="none"
+          borderRadius="0"
           color="white"
           fontFamily="Serverless"
           height={24}
@@ -52,9 +53,10 @@ class AutoComplete extends React.Component {
 
         {
           this.state.query && (
-            <Absolute
+            <Fixed
               top={42}
-              left="-33.25px"
+              left={0}
+              right={0}
               width="100vw"
               zIndex={2}
               style={{ maxHeight: '100vh', overflowY: 'scroll' }}
@@ -83,7 +85,7 @@ class AutoComplete extends React.Component {
                   ))
                 }
               </Card>
-            </Absolute>
+            </Fixed>
           )
         }
       </Relative>

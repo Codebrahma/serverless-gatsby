@@ -7,7 +7,7 @@ import background from 'src/assets/images/meetups-background.png'
 
 const MeetupsHero = () => (
   <HeroWrapper
-    background={`url(${background})`}
+    background={`black url(${background})`}
     backgroundSize="cover"
     backgroundPosition="center"
   >

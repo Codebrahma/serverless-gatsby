@@ -7,7 +7,7 @@ import background from 'src/assets/images/company-overview-background.png'
 
 const ChampionsHero = () => (
   <HeroWrapper
-    background={`url(${background})`}
+    background={`black url(${background})`}
     backgroundSize="cover"
     backgroundPosition="center"
   >

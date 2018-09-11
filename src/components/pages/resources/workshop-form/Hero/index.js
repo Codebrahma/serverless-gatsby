@@ -7,7 +7,7 @@ import background from 'src/assets/images/workshops-form-background.png'
 
 const WorkshopForm = () => (
   <HeroWrapper
-    background={`url(${background})`}
+    background={`black url(${background})`}
     backgroundSize="cover"
     backgroundPosition="center"
   >

@@ -7,7 +7,7 @@ import background from 'src/assets/images/use-cases-background.png'
 
 const UseCasesHero = () => (
   <HeroWrapper
-    background={`url(${background})`}
+    background={`black url(${background})`}
     backgroundSize="cover"
     backgroundPosition="center"
   >

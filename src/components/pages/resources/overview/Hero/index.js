@@ -7,7 +7,7 @@ import background from 'src/assets/images/resources-overview-background.png'
 
 const OverviewHero = () => (
   <HeroWrapper
-    background={`url(${background})`}
+    background={`black url(${background})`}
     backgroundSize="cover"
     backgroundPosition="center"
   >

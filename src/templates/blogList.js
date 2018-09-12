@@ -58,6 +58,7 @@ export const query = graphql`
             authors
             category
             thumbnail
+            heroImage
           }
         }
       }

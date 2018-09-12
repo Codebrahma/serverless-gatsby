@@ -11,8 +11,6 @@ import { AppContainer, BlockLink } from 'src/components'
 import { withTheme } from 'styled-components'
 import {
   getAuthorInfo,
-  getCategoryLink,
-  getCategoryNameById,
   getBlogLink,
   getAuthorLink
 } from 'src/utils/blog'
@@ -20,14 +18,14 @@ import Categories from '../Categories'
 
 const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) => {
   const author = getAuthorInfo({ frontmatter })
-  const { category: categoryIds, title, description } = frontmatter
+  const { category: categoryIds, title, description, heroImage } = frontmatter
 
   return (
     <Box width={1}>
       <Background
         width={1}
         height={[250, 250, 350, 500]}
-        background={`url(https://raw.githubusercontent.com/adnanrahic/cdn/master/covers/catridingunicorn2.jpg)`}
+        background={`black url(${heroImage})`}
         backgroundSize="cover"
         backgroundPosition="center"
       >

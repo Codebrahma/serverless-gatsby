@@ -2,7 +2,6 @@ import React from 'react'
 
 import {
   Background,
-  Row,
   Column,
   Flex,
   Heading,
@@ -11,14 +10,8 @@ import {
 
 import { AppContainer } from 'src/components'
 import { ServerlessUserGroupStack } from 'src/fragments'
+import JobDetail from './JobDetail'
 import backgroundImage from 'src/assets/images/rectangle-19.png'
-
-const JobDetail = ({ location, status }) => (
-  <ResponsiveStack justifyContent="space-between">
-    <Column>{location}</Column>
-    <Column>{status}</Column>
-  </ResponsiveStack>
-)
 
 const jobs = [
   {
@@ -53,7 +46,7 @@ const jobs = [
   },
 ]
 
-const OpenPositions = () => (
+export default () => (
   <Background backgroundImage={`url(${backgroundImage})`}>
     <AppContainer>
       <Column py={[4, 4, 7]}>
@@ -73,5 +66,3 @@ const OpenPositions = () => (
     </AppContainer>
   </Background>
 )
-
-export default OpenPositions

@@ -5,7 +5,7 @@ import { AppContainer } from 'src/components'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
 import { Divider, TitleWithIcon } from 'src/fragments'
-import AuthorsData from 'src/pages/blog/generated-authors.json'
+import AuthorsData from 'src/constants/generated-authors.json'
 
 import linkIcon from 'src/assets/images/link.svg'
 import twitterIcon from 'src/assets/images/twitter.svg'

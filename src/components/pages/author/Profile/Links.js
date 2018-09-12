@@ -7,7 +7,13 @@ import {
   Image,
   Text
 } from 'serverless-design-system/src'
-import { getLinkName } from 'src/utils/links'
+import {
+  getLinkName,
+  getGithubLink,
+  getTwitterLink,
+  getMediumLink,
+} from 'src/utils/links'
+
 import linkIcon from 'src/assets/images/link.svg'
 import twitterIcon from 'src/assets/images/twitter.svg'
 import githubIcon from 'src/assets/images/github.svg'
@@ -22,29 +28,27 @@ const Link = styled.a`
 `
 
 const renderLink = (image, link) => (
-  link && (
-    <Link href={link} target='_blank'>
-      <Row alignItems="center">
-        <Column mr={1}>
-          <Image
-            src={image}
-            width={20}
-            maxHeight={20}
-          />
-        </Column>
-        <Text.p fontSize={1}>
-          { getLinkName(link) }
-        </Text.p>
-      </Row>
-    </Link>
-  )
+  <Link href={link} target='_blank'>
+    <Row alignItems="center">
+      <Column mr={1}>
+        <Image
+          src={image}
+          width={20}
+          maxHeight={20}
+        />
+      </Column>
+      <Text.p fontSize={1}>
+        { getLinkName(link) }
+      </Text.p>
+    </Row>
+  </Link>
 )
 
-export default ({ personalWebsite, githubLink, twitterLink, mediumLink }) => (
+export default ({ personalWebsite, githubHandle, twitterHandle, mediumHandle }) => (
   <Box width={[1, 1, 280]}>
-    { renderLink(linkIcon, personalWebsite) }
-    { renderLink(githubIcon, githubLink) }
-    { renderLink(twitterIcon, twitterLink) }
-    { renderLink(mediumIcon, mediumLink) }
+    { personalWebsite && renderLink(linkIcon, personalWebsite) }
+    { githubHandle && renderLink(githubIcon, getGithubLink(githubHandle)) }
+    { twitterHandle && renderLink(twitterIcon, getTwitterLink(twitterHandle)) }
+    { mediumHandle && renderLink(mediumIcon, getMediumLink(mediumHandle)) }
   </Box>
 )

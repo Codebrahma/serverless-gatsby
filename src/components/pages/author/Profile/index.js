@@ -1,11 +1,6 @@
 import React from 'react'
 import { Column, ResponsiveStack } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
-import {
-  getGithubLink,
-  getTwitterLink,
-  getMediumLink,
-} from 'src/utils/links'
 
 import Avatar from './Avatar'
 import Bio from './Bio'
@@ -22,9 +17,9 @@ const Profile = ({ author }) => (
         <Avatar avatar={author.avatar} />
         <Links
           personalWebsite={author.personalWebsite}
-          githubLink={getGithubLink(author.github)}
-          twitterLink={getTwitterLink(author.twitter)}
-          mediumLink={getMediumLink(author.medium)}
+          githubHandle={author.github}
+          twitterHandle={author.twitter}
+          mediumHandle={author.medium}
         />
       </Column>
       <Column

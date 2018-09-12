@@ -1,16 +1,14 @@
 import React from 'react'
 import {
   Box,
-  Card,
-  Flex,
-  HorizontalRule,
-  Image,
   P,
   ResponsiveStack,
   Text,
 } from 'serverless-design-system/src'
 
 import { AutoScrollList } from 'src/fragments'
+import TechBox from './TechBox'
+
 import LearnUsecase01 from 'src/assets/images/learnUsecase01.svg'
 import LearnUsecase02 from 'src/assets/images/learnUsecase02.svg'
 import LearnUsecase03 from 'src/assets/images/learnUsecase03.png'
@@ -18,7 +16,6 @@ import LearnUsecase04 from 'src/assets/images/learnUsecase04.png'
 import LearnUsecase05 from 'src/assets/images/learnUsecase05.png'
 import LearnUsecase06 from 'src/assets/images/learnUsecase06.png'
 import LearnUsecase07 from 'src/assets/images/learnUsecase07.svg'
-
 import nodeJSImage from 'src/assets/images/nodejs.png'
 import expressImage from 'src/assets/images/express.png'
 import pythonImage from 'src/assets/images/python.png'
@@ -35,63 +32,6 @@ const renderContents = (contents) => (
       ))
     }
   </React.Fragment>
-)
-
-const TechBox = ({ upperImage, lowerImage }) => (
-  <Card
-    width={[ 1, 1, 1/3 ]}
-    maxWidth="250px"
-    height="176px"
-    my={[1, 1, 0]}
-    mr={2}
-    boxShadow="2px 2px 8px 0 #dfe5e6"
-    border="solid 1px #dfe5e6"
-  >
-    <Flex.center
-      flexDirection="column"
-      width={1}
-      height="fullHeight"
-      px={3}
-    >
-      <Flex.column
-        height="50px"
-        justifyContent="flex-end"
-      >
-        <Image
-          src={upperImage}
-          maxHeight="48px"
-          maxWidth="150px"
-          objectFit="contain"
-        />
-      </Flex.column>
-      {
-        lowerImage && (
-          <React.Fragment>
-            <Box
-              py={2}
-              width={1}
-            >
-              <HorizontalRule
-                height="1px"
-                color="#d8d8d8"
-              />
-            </Box>
-            <Flex.column
-              height="50px"
-              justifyContent="flex-start"
-            >
-              <Image
-                src={lowerImage}
-                maxHeight="48px"
-                maxWidth="150px"
-                objectFit="contain"
-              />
-            </Flex.column>
-          </React.Fragment>
-        )
-      }
-    </Flex.center>
-  </Card>
 )
 
 const comparisonData = [

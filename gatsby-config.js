@@ -14,6 +14,14 @@ module.exports = {
         path: `${__dirname}/src/assets/images/`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/examples`,
+        name: "example-pages",
+      },
+    },
+    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

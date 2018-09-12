@@ -19,6 +19,7 @@ export default {
     },
     examples: 'https://github.com/serverless/examples',
   },
+  examples: '/examples',
   learn: {
     useCases: '/learn/use-cases/',
     why: '/learn/overview',

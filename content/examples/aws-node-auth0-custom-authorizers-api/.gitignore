@@ -1,0 +1,5 @@
+node_modules
+.serverless
+secrets.json
+public_key
+/frontend/misc.md

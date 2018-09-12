@@ -25,7 +25,8 @@ exports.sourceNodes =  async ({ boundActionCreators }) => {
     }, (err, content, filename, next) => {
       if (err) throw err
 
-      const { data: frontmatter, content: markdownContent } = matter(content)
+      const { data, content: markdownContent } = matter(content)
+      const frontmatter = data.category ? data : { ...data, category: [] }
       const blogId = path.basename(filename, path.extname(filename))
 
       index.saveObject({
@@ -113,7 +114,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           path: `category/${categoryKey}`,
           component: path.resolve(`./src/templates/category.js`),
           context: {
-            categoryId: categoryKey
+            categoryId: [categoryKey]
           },
         })
       })

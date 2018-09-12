@@ -5,7 +5,6 @@ import BlogPreview from 'src/components/pages/blog/Preview'
 import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
 import CategoryData from 'src/constants/generated-categories.json'
 
-
 export default class Authors extends React.Component {
   render() {
     const { data, pathContext: { categoryId } } = this.props
@@ -32,8 +31,8 @@ export default class Authors extends React.Component {
 }
 
 export const query = graphql`
-  query CategoriesBlogs($categoryId: String!) {
-    allBlog (filter: { frontmatter: { category: {  eq: $categoryId } } }) {
+  query CategoriesBlogs($categoryId: [String]) {
+    allBlog (filter: { frontmatter: { category: {  in: $categoryId } } }) {
       edges {
         node {
           id

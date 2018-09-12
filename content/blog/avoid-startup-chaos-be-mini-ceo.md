@@ -2,18 +2,17 @@
 title: 'Embrace the mini CEO'
 description: 'Lessons learned in avoiding startup chaos. Embrace the mini CEO.'
 date: '2017-10-19'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/dane-deaner-334260.jpg'
 authors:
     - FelixDesroches
 gitLink: /2017-10-19-avoid-startup-chaos-be-mini-ceo.md
 ---
 
-If you’ve never worked at a venture-backed startup, well—I highly recommend it as an exercise in chaos readiness. There are few rules, fewer resources; no guidelines about who, how or when to get stuff done; and near-constant uncertainty when it comes to your company’s future. 
+If you’ve never worked at a venture-backed startup, well—I highly recommend it as an exercise in chaos readiness. There are few rules, fewer resources; no guidelines about who, how or when to get stuff done; and near-constant uncertainty when it comes to your company’s future.
 
 This, friends, is my 3rd such startup. I’m a masochist, I know.
 
-On the bright side! These experiences have led me to come up with a conveniently corny acronym for thriving in such chaos: **C.E.O.** These goals might not ensure success, but they'll at least give you a good shot at sanity. 
+On the bright side! These experiences have led me to come up with a conveniently corny acronym for thriving in such chaos: **C.E.O.** These goals might not ensure success, but they'll at least give you a good shot at sanity.
 
 # Communication
 

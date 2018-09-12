@@ -2,7 +2,6 @@
 title: 'The State of Serverless Multi-cloud'
 description: 'To multi-cloud, or not to multi-cloud? A frank discussion on the pros, cons and considerations.'
 date: '2017-11-06'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/multicloud.jpg'
 authors:
     - AndreaPasswater
@@ -31,7 +30,7 @@ And then, add failover into the mix.
 
 With serverless compute, you don’t have to worry about redundancy quite as much—Lambda, for instance, automatically scales across multiple availability zones for you. But entire regions can (and do) go down.
 
-While it’s a rare corner case, cloud outages can be devastating; we see larger companies caring more about this and moving to incorporate strategies for full cloud redundancy. 
+While it’s a rare corner case, cloud outages can be devastating; we see larger companies caring more about this and moving to incorporate strategies for full cloud redundancy.
 
 # Multi-cloud gives you pause
 

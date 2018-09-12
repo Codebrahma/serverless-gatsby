@@ -2,7 +2,6 @@
 title: 'How to use the Serverless Event Gateway: build a REST API and react to custom events'
 description: 'How to use the Serverless Event Gateway (part of the Serverless Platform) to build REST APIs and react to custom events.'
 date: '2018-08-07'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/event-gateway/event-gateway-thumb1.png'
 authors:
     - AlexDeBrie
@@ -78,7 +77,7 @@ With your application deployed, it's time to interact with your service.
 
 ## Using Event Gateway for a REST API
 
-One of the more popular use cases for the Event Gateway is to create a REST API. REST APIs have grown in popularity recently with the advent of single-page apps and microservices. 
+One of the more popular use cases for the Event Gateway is to create a REST API. REST APIs have grown in popularity recently with the advent of single-page apps and microservices.
 
 Functions-as-a-service (FaaS) providers like AWS Lambda, Google Cloud Functions, and Azure Function have made it easier than ever to deploy compute to production. With the Event Gateway, you can connect an HTTP path and method to a serverless function for your REST API.
 
@@ -155,7 +154,7 @@ Your AWS Lambda function will receive an event object in [CloudEvents format](ht
      "host": "mytenant-myapp.slsgateway.com",
      "path": "/users",
      "method": "POST",
-     "params": {} 
+     "params": {}
    }
 }
 ```

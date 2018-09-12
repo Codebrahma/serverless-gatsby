@@ -1,6 +1,5 @@
 ---
 title: 'Contritubing Guest Posts'
-layout: Default
 gitLink: /contribute.md
 ---
 

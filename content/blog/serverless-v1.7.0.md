@@ -2,7 +2,6 @@
 title: 'Trigger Lambda functions through CloudWatch Events with Serverless v1.7'
 description: 'CloudWatch Events support, CLI deprecation warnings, lower memory usage during zipping, bugfixes and improvements in the Serverless Framework v1.7 release.'
 date: '2017-02-14'
-layout: Post
 authors:
     - PhilippMuns
 gitLink: /2017-02-14-serverless-v1.7.0.md
@@ -85,19 +84,19 @@ This release contains lots of hard work from our awesome community and wouldn't 
 
 Here's a list of all the contributors who've PR'd changes for this release:
 
-- Andrey Tserkus 
-- Bruno Belotti 
-- Chris Selmer 
-- Dan Caddigan 
-- Francesc Rosas 
-- James Andersen 
-- James Thomas 
-- Joey van Dijk 
-- Marc Abramowitz 
-- Nikos Katsikanis 
-- Steve Persch 
-- Vlad Golubev 
-- dan moore 
+- Andrey Tserkus
+- Bruno Belotti
+- Chris Selmer
+- Dan Caddigan
+- Francesc Rosas
+- James Andersen
+- James Thomas
+- Joey van Dijk
+- Marc Abramowitz
+- Nikos Katsikanis
+- Steve Persch
+- Vlad Golubev
+- dan moore
 - horike37
 
 ### Get Involved

@@ -2,12 +2,9 @@
 title: '4 Tools For Building Production Serverless Architectures with Lambda'
 description: 'Working with serverless is great when you find the right tools that work for you. Check out these tools to take your lambdas to the next level!'
 date: '2017-06-12'
-layout: Post
 authors:
     - TaaviRehemagi
 gitLink: /2017-06-12-4-tools-for-building-production-serverless-architectures.md
-category: guides-and-tutorials
-highlighted: true
 ---
 
 The Serverless Framework offers one of the fastest and cheapest ways to produce scalable and modern backend applications.

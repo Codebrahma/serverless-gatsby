@@ -3,7 +3,6 @@ title: 'Test-Driven Serverless Application Development'
 description: 'Quick Start to Test-Driven Development with Serverless Framework.'
 date: '2017-02-28'
 thumbnail: 'https://cloud.githubusercontent.com/assets/4726921/23232988/fdabd3fa-f955-11e6-84bd-c8a939841360.png'
-layout: Post
 authors:
     - EetuTuomala
 gitLink: /2017-02-28-tdd-serverless.md
@@ -13,9 +12,9 @@ gitLink: /2017-02-28-tdd-serverless.md
 
 If you don’t possess the [magic](http://www.commitstrip.com/en/2017/02/08/where-are-the-tests/) that keeps your code working, the following instructions will help you start test-driven Serverless application development.
 
-What I like most about the Serverless Framework as a development tool is that it gathers together all of the cloud resources for a structured project. With the whole stack in the same project, it's convenient and easy to start writing tests. 
+What I like most about the Serverless Framework as a development tool is that it gathers together all of the cloud resources for a structured project. With the whole stack in the same project, it's convenient and easy to start writing tests.
 
-Usually for a new project I use the [SC5 Serverless boilerplate](https://github.com/sc5/sc5-serverless-boilerplate). It's a good setup to begin with. But in this tutorial, I start with an existing example [aws-node-simple-http-endpoint](https://github.com/serverless/examples/tree/master/aws-node-simple-http-endpoint) project, to show how easy it is to add Serverless testing plugin even to an existing project. 
+Usually for a new project I use the [SC5 Serverless boilerplate](https://github.com/sc5/sc5-serverless-boilerplate). It's a good setup to begin with. But in this tutorial, I start with an existing example [aws-node-simple-http-endpoint](https://github.com/serverless/examples/tree/master/aws-node-simple-http-endpoint) project, to show how easy it is to add Serverless testing plugin even to an existing project.
 
 Let’s start by installing the service, changing the directory to the one that `sls install` command creates, and installing dependencies that service requires to run.
 
@@ -111,7 +110,7 @@ When invoking tests with `sls invoke test` command, you should get the following
 
 ```bash
 AssertionError: expected 'Go Serverless v1.0! Your function executed successfully!'
-to match 
+to match
 /.*\s(Sun|Mon|Tue|Wed|Thu|Fri|Sat)\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s[0-3]\d{1}\s\d{4}\./
 ```
 

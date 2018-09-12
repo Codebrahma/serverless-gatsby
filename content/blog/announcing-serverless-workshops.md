@@ -2,7 +2,6 @@
 title: 'Announcing: Serverless Workshops!'
 description: 'Want to get even better at Serverless, and spread the skills across your whole team? Sign up for a Serverless Workshop!'
 date: '2017-11-07'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Serverless_logo.png'
 authors:
     - AndreaPasswater
@@ -15,7 +14,7 @@ Let's be honest—serverless is still new. Maybe you only recently started looki
 
 Maybe you've just deployed your first serverless API and you're dying to try it out on a larger scale.
 
-We designed these workshops to help you (and your whole team) get the best practices and how-tos straight from us. 
+We designed these workshops to help you (and your whole team) get the best practices and how-tos straight from us.
 
 # What you'll learn
 

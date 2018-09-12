@@ -2,7 +2,6 @@
 title: 'New in Serverless v1.12 - Package/Deploy Command Separation for Better CI/CD Support'
 description: 'New package command, Python 3.6 support, new OpenWhisk runtimes and more in the Serverless Framework v1.12 release.'
 date: '2017-04-26'
-layout: Post
 authors:
     - PhilippMuns
 gitLink: /2017-04-26-serverless-v1.12.0.md
@@ -46,9 +45,9 @@ The "simple" deployment process via `serverless deploy` has not changed. It will
 serverless deploy
 ```
 
-However, you're now able to use the `--package` option to specify which package you want to use for deployment:		
+However, you're now able to use the `--package` option to specify which package you want to use for deployment:
 
-**Note:** This package needs to be created (e.g. with the `serverless package` command) and available beforehand.	
+**Note:** This package needs to be created (e.g. with the `serverless package` command) and available beforehand.
 
 ```bash
 serverless deploy --package my-artifacts
@@ -172,11 +171,11 @@ The separation of the `package` and `deploy` command was a tough one since our g
 
 A huge thanks goes out to Frank for all his ideas and help here since these additions made it possible to introduce the package and deploy separation in a non-breaking way! (As a day-to-day Framework user you might not even notice a difference altough the whole system behind the scenes works entirely differently)
 
-This release includes the option to show a warning message if a plugin hooks into deprecated lifecycle events.		
-		
+This release includes the option to show a warning message if a plugin hooks into deprecated lifecycle events.
+
 Showing this warning message is disabled by default. You need to enable it by setting the `SLS_DEBUG=*` system environment variable.
 
-After setting this you'll see a message in the console every time your plugin uses an old lifecycle event.		
+After setting this you'll see a message in the console every time your plugin uses an old lifecycle event.
 
 **We encourage all plugin authors to enable the debugging information and check whether their plugin uses old, deprecated lifecycle events.**
 

@@ -2,7 +2,6 @@
 title: 'How you can avoid parking tickets with a Serverless reminder'
 description: 'How to build a simple Serverless app that reminds you about street sweeping days in your neighborhood. Never get a parking ticket again!'
 date: '2017-10-30'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/jordan-andrews-300359.jpg'
 authors:
     - NickGottlieb
@@ -27,13 +26,13 @@ This example uses the [Serverless Framework](https://www.serverless.com/framewor
 $ npm install -g serverless
 ```
 
-> **Note:** If you've never used these before, [here is a handy guide](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) for getting everything set up on your machine. 
+> **Note:** If you've never used these before, [here is a handy guide](https://serverless.com/framework/docs/providers/aws/guide/quick-start/) for getting everything set up on your machine.
 
 # Configure your Serverless service
 
 Once we're set up, we'll need to configure our Serverless service. In my neighborhood, the street sweeper comes on each second and fourth Wednesday, and each second and fourth Friday. I'll need to trigger a `schedule` event on each of those four days.
 
-Create a new directory. Then create a new `serverless.yml` file in your directory with the following configuration: 
+Create a new directory. Then create a new `serverless.yml` file in your directory with the following configuration:
 
 ```yml
 service: parking-reminder
@@ -47,7 +46,7 @@ functions:
   parkingReminder:
     handler: messenger.reminder
     events:
-    # triggers at 17:00 UTC on the second and fourth Wednesdays and Fridays. 
+    # triggers at 17:00 UTC on the second and fourth Wednesdays and Fridays.
       - schedule: cron(00 17 ? * 4#2 *)
       - schedule: cron(00 17 ? * 4#4 *)
       - schedule: cron(00 17 ? * 6#2 *)
@@ -62,7 +61,7 @@ Finally, we've configured four events to trigger this function. Each of the even
 
 > **Note:** AWS provides really some really useful expressions for describing your cron jobs. [Full documentation is available here](http://docs.aws.amazon.com/lambda/latest/dg/tutorial-scheduled-events-schedule-expressions.html).
 
-# Hooking into Twilio 
+# Hooking into Twilio
 
 Now, this service is only useful when it can actually send you a reminder. To do that, we're going to use Twilio inside our Lambda function. (If you don't have a [Twilio account](https://www.twilio.com/sms), you can set one up for free.)
 
@@ -78,21 +77,21 @@ Then, we'll write our `reminder` function in the `messenger.js` module:
 ```js
 // messenger.js
 
-// Twilio Credentials 
-var accountSid = 'ACCOUNTID'; 
+// Twilio Credentials
+var accountSid = 'ACCOUNTID';
 var authToken = 'AUTHTOKEN';
 
-//require the Twilio module 
+//require the Twilio module
 var twilio = require('twilio');
 var client = new twilio(accountSid, authToken);
 
 module.exports.reminder = (event, context, callback) => {
-  client.messages.create({ 
-    to: "YOUR NUMBER", 
+  client.messages.create({
+    to: "YOUR NUMBER",
     from: "TWILIO NUMBER",
-    body: "move your car! street sweeping!", 
-  }, function(err, message) { 
-    console.log(err); 
+    body: "move your car! street sweeping!",
+  }, function(err, message) {
+    console.log(err);
   });
 };
 ```
@@ -117,6 +116,6 @@ The example here would cost about $.0000002/month in Lambda fees and $.09/month 
 
 # See it on GitHub
 
-You now have a serverless service for reminding you to move your car for street sweeping! 
+You now have a serverless service for reminding you to move your car for street sweeping!
 
 Feel free to check out [the complete working example up on GitHub.](https://github.com/worldsoup/serverless-parking-reminder).

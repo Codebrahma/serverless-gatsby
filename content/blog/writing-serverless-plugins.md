@@ -3,7 +3,6 @@ title: 'How To Write Your First Plugin For The Serverless Framework - Part 1'
 description: 'Learn the basics of creating a Serverless plugin to extend the frameworks functionality'
 date: '2017-01-04'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/21665215/e3c9aae6-d2b0-11e6-9865-498d91318e7a.png'
-layout: Post
 authors:
     - AnnaDoubkova
 gitLink: /2017-01-04-writing-serverless-plugins.md

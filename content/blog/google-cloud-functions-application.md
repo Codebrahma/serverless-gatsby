@@ -2,7 +2,6 @@
 title: 'Building an image recognition endpoint with Serverless and Google Cloud Functions.'
 description: 'Use Serverless, Google Cloud Functions, and the Cloud Vision API to build an endpoint to classify images.'
 date: '2017-10-20'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/google-cloud-functions.png'
 authors:
     - AlexDeBrie
@@ -29,13 +28,13 @@ Next, you'll need to [create a new project](https://console.cloud.google.com/pro
 
 <img width="1092" alt="GCP Create Project" src="https://user-images.githubusercontent.com/6509926/31803620-6848b108-b51a-11e7-9cfb-ab6e1c744d3d.png">
 
-Once you have your project, you'll need to enable the required APIs. Navigate to the [API Dashboard](https://console.cloud.google.com/apis/dashboard), and click the link to **Enable APIs and Services**. 
+Once you have your project, you'll need to enable the required APIs. Navigate to the [API Dashboard](https://console.cloud.google.com/apis/dashboard), and click the link to **Enable APIs and Services**.
 
 <img width="1075" alt="Enable APIs" src="https://user-images.githubusercontent.com/6509926/31801835-4cb7f994-b510-11e7-82c4-dda75438b065.png">
 
 Search for "Google Cloud Functions", and click on the Google Cloud Functions API. Click Enable to enable it for your project. Then, do the same for the "Google Cloud Deployment Manager" API.
 
-Last step, we need to grab some credentials. Go to the [Credentials page](https://console.cloud.google.com/apis/credentials) in the API Dashboard. Click the "Create credentials" button, and choose the "Service Account Key" option. 
+Last step, we need to grab some credentials. Go to the [Credentials page](https://console.cloud.google.com/apis/credentials) in the API Dashboard. Click the "Create credentials" button, and choose the "Service Account Key" option.
 
 <img width="1090" alt="GCP Create Credentials" src="https://user-images.githubusercontent.com/6509926/31801859-6eb8b402-b510-11e7-91d0-df08fd59b9d6.png">
 
@@ -115,8 +114,8 @@ $ sls deploy
 
 Serverless: Packaging service...
 
- <snip> 
- 
+ <snip>
+
 Serverless: Done...
 
 Service Information
@@ -186,7 +185,7 @@ Next, we install the SDK for the Vision API into our project:
 $ npm install --save @google-cloud/vision
 ```
 
-Then, let's adjust our HTTP handler. The Vision API accepts a URI to a 
+Then, let's adjust our HTTP handler. The Vision API accepts a URI to a
 publicly-accessible image. Our handler will look for a `uri` query parameter with our request, then send that image URI to the Vision API:
 
 ```javascript
@@ -255,7 +254,7 @@ $ curl -G https://us-central1-cloud-functions-demo-183501.cloudfunctions.net/htt
 }
 ```
 
-Neat! It knows that I've sent it some pumpkins. 
+Neat! It knows that I've sent it some pumpkins.
 
 Let's try one more, with [everyone's favorite example](https://www.youtube.com/watch?v=ACmydtFDTGs):
 
@@ -291,10 +290,10 @@ In particular, I think Google Cloud Platform has some really great data stores f
 
 Additionally, GCP has some great supporting services as well. The machine learning services like the Vision API and the [Natural Language API](https://cloud.google.com/natural-language/). There are also some amazing data processing products like BigQuery, Cloud Dataflow, and Cloud Pub/Sub.
 
-There are a few areas I'd like to see Cloud Functions mature as well. 
+There are a few areas I'd like to see Cloud Functions mature as well.
 These are:
 
-- **A stable version.** Cloud Functions are still in beta -- I'd like to see a stable release before relying on it for production services. 
+- **A stable version.** Cloud Functions are still in beta -- I'd like to see a stable release before relying on it for production services.
 - **More language runtimes.** Python, please! 🐍. Right now, it's strictly Node.js.
 - **Better integrations with other services.** On the AWS side, we're seeing more and more hooks from AWS services into Lambda. I'd like to see the same in Google.
 - **API Gateway.** The GCF HTTP function feels like a single random endpoint for small demos. Contrast this with AWS, where endpoints feel more composed as a service. I can easily add custom domains to my Lambda endpoints and do HTTP validation and transformations before it hits my Lambda function.

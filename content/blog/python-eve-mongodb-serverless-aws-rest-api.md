@@ -3,16 +3,15 @@ title: 'Python EVE + MongoDB + Serverless + AWS = REST All Happiness'
 description: 'Learn how to build and deploy a Serverless REST API using Python EVE and MongoDB'
 date: '2017-04-04'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/24419938/9ed1b9f0-13b6-11e7-8531-66a49808d338.png'
-layout: Post
 authors:
     - NareshSurisetty
 gitLink: /2017-04-04-python-eve-mongodb-serverless-aws-rest-api.md
 ---
 <img align="right" src="http://python-eve.org/_static/eve-sidebar.png">
 
-Hi, I'm Naresh Surisetty, an enthusiastic Python developer based in India. I'm especially interested in developing scalable apps in the cloud - a main reason I'm drawn to experimenting with serverless architecture. In this post I'll share a Serverless project using [Python EVE](http://python-eve.org/) and [MongoDB](https://docs.mongodb.com/). 
+Hi, I'm Naresh Surisetty, an enthusiastic Python developer based in India. I'm especially interested in developing scalable apps in the cloud - a main reason I'm drawn to experimenting with serverless architecture. In this post I'll share a Serverless project using [Python EVE](http://python-eve.org/) and [MongoDB](https://docs.mongodb.com/).
 
-> **What is Python EVE?** Python EVE is an open source Python REST API framework. Python EVE allows for [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) (Hypermedia As The Engine Of Application State), and includes pagination support, support for multiple content types (JSON, XML, plain text, ...), if-Match/ETag and MongoDB GridFS. 
+> **What is Python EVE?** Python EVE is an open source Python REST API framework. Python EVE allows for [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) (Hypermedia As The Engine Of Application State), and includes pagination support, support for multiple content types (JSON, XML, plain text, ...), if-Match/ETag and MongoDB GridFS.
 
 # Get Started Progamming
 
@@ -22,7 +21,7 @@ We'll use pip to install **EVE**.
 ```bash
 pip install eve
 ```
-We'll create our MongoDB database using [mLab](https://mlab.com/). If you don't have an existing mLab account go ahead and create one as we'll be using mLab hosted database throughout the post. *(There's an option for a free Sandbox account.)* Make sure you create a database, as well. 
+We'll create our MongoDB database using [mLab](https://mlab.com/). If you don't have an existing mLab account go ahead and create one as we'll be using mLab hosted database throughout the post. *(There's an option for a free Sandbox account.)* Make sure you create a database, as well.
 
 > **What is mLab?** mLab is a fully managed cloud database service that hosts MongoDB databases. mLab runs on cloud providers Amazon, Google, and Microsoft Azure, and has partnered with PaaS (Platform-as-a-Service) providers. Find more help getting started in the [mLab Docs & Quick Start Guide](http://docs.mlab.com/).
 
@@ -34,15 +33,15 @@ Create a project named **eve-api-project**. Navigate to **eve-api-project** fold
   ```python
   import os
   from eve import Eve
-    
+
   # AWS lambda, sensible DB connection settings are stored in environment variables.
   MONGO_HOST = os.environ.get('MONGO_HOST')
   MONGO_PORT = os.environ.get('MONGO_PORT')
   MONGO_USERNAME = os.environ.get('MONGO_USERNAME')
   MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD')
   MONGO_DBNAME = os.environ.get('MONGO_DBNAME')
-    
-  # AWS 
+
+  # AWS
   api_settings = {
         'MONGO_HOST': MONGO_HOST,
         'MONGO_PORT': MONGO_PORT,
@@ -81,7 +80,7 @@ Create a project named **eve-api-project**. Navigate to **eve-api-project** fold
                     }
                 }
   }
-  app = Eve(settings=api_settings)  
+  app = Eve(settings=api_settings)
   ```
 
 ### Lets break down the **run.py** file.
@@ -90,7 +89,7 @@ Create a project named **eve-api-project**. Navigate to **eve-api-project** fold
       import os
       from eve import Eve
       ```
-  - **MONGO_HOST**, **MONGO_PORT**, **MONGO_USERNAME**, **MONGO_PASSWORD** and **MONGO_DBNAME** defines the variable for storing our MongoDB host, port, username, password and database name that we'll configure in our **serverless.yml** file as part of environment section. 
+  - **MONGO_HOST**, **MONGO_PORT**, **MONGO_USERNAME**, **MONGO_PASSWORD** and **MONGO_DBNAME** defines the variable for storing our MongoDB host, port, username, password and database name that we'll configure in our **serverless.yml** file as part of environment section.
   - **api_settings** dictionary defines all the **configs and schemas** for our **API**. You can use any name for defining your dictionary. For ease I've defined it as **api_settings**.
   - **DOMAIN** section under **api_settings** defines the **endpoints** and their respective **schemas** for API.
       ```python
@@ -130,7 +129,7 @@ Create a project named **eve-api-project**. Navigate to **eve-api-project** fold
 
 Create a file named **serverless.yml** under the same project directory.
 
-**serverless.yml** 
+**serverless.yml**
 ```yamlex
 service: eve-api
 
@@ -172,8 +171,8 @@ custom:
       npm install --save severless-wsgi
       ```
       > **What is Serverless WSGI?** The [Serverless WSGI plugin](https://github.com/logandk/serverless-wsgi) is used to deploy WSGI applications (Flask/Django/Pyramid etc.) and bundle Python packages.
-      
-## 4. Test the Service 
+
+## 4. Test the Service
 
 Fire up your console and run `serverless wsgi serve` in the project directory to see your live API at `http://localhost:5000`
 .
@@ -211,7 +210,7 @@ The response payload will look something like this:
 ```
 The **_items** list contains the requested data. Along with its own fields, other fields such as **_created, _updated, _etag, _id**, are automatically handled by the API (clients don’t need to provide them when adding/editing resources).
 
-The **_meta** field provides pagination data and will only be there if Pagination has been enabled (it is by default) and there is at least one document being returned. The **_links** list provides [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) directives. 
+The **_meta** field provides pagination data and will only be there if Pagination has been enabled (it is by default) and there is at least one document being returned. The **_links** list provides [HATEOAS](https://en.wikipedia.org/wiki/HATEOAS) directives.
 
 ## 5. Deploy the Service
 
@@ -220,4 +219,4 @@ Deploy the service with `serverless deploy`. If you need to setup Serverless, pl
 # Conclusion
 
 Python EVE and MongoDB enhanced with Serverless is an awesome bundle for REST API development. You can further enhance the REST API with more additions such as Adding **Authentication** , **OAuth2**, **Swaggger** documentation and even more. Check out more resources [on GitHub](https://github.com/pyeve).
- 
+

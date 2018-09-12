@@ -3,7 +3,6 @@ title: 'How To Schedule Posts for Static Site Generators (Jekyll, Hugo, Phenomic
 description: 'Open source static site scheduler tool built with serverless'
 date: '2017-03-07'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/post-scheduler-icon-clear.png'
-layout: Post
 authors:
     - DavidWells
 gitLink: /2017-03-07-static-site-post-scheduler.md

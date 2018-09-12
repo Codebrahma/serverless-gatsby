@@ -2,7 +2,6 @@
 title: 'AWS Lambda Power Tuning with AWS Step Functions'
 description: 'Alex Casalboni presents his Serverless Service powered by AWS Step Functions and the Serverless Framework to optimize your Lambda Functions performance and costs.'
 date: '2017-06-29'
-layout: Post
 thumbnail: 'https://github.com/alexcasalboni/aws-lambda-power-tuning/blob/master/state-machine-screenshot.png?raw=true'
 authors:
     - AlexCasalboni
@@ -31,14 +30,14 @@ Some functions just involve plain computation and get their job done in a few mi
 
 On the other hand, most functions are meant to interact with other functions and APIs, as a sort of glue code between services. Here is a brief list of the reasons why your functions may slow down:
 
- * **AWS SDK calls**: everytime you invoke an AWS API using the official SDK - for example, to read data from S3 or DynamoDB, or to publish a new SNS message. 
- 
+ * **AWS SDK calls**: everytime you invoke an AWS API using the official SDK - for example, to read data from S3 or DynamoDB, or to publish a new SNS message.
+
 These calls are usually pretty fast because they are executed locally within AWS's datacenters. You may try to perform bulk read/write operations and further optimize those services configuration, whenever possible.
 
  * **External HTTP calls**: By invoking external APIs, you might incur significant network latency unless the API is also hosted on AWS and provides regional endpoints. You may try to execute multiple calls in parallel and avoid serial execution, whenever possible (this is trivial in Node.js, but it might become a bit tricky to handle in Python and other languages).
- 
+
  * **Intense computation**: Complex algorithms might take a while to converge, especially if you use libraries that require loading a dataset into memory. For example: Natural Language Processing or Machine Learning models that need to manipulate and normalize textual data, invert matrices, process multimedia files, etc.
- 
+
  * **Cold starts**: These occur whenever you update your code,when your Lambda container gets cold, or even just when AWS decides to swap containers around. Unfortunately, you don't have much control on this, but luckily it happens every once in awhile, and we can keep this in mind when evaluating our Functions performance.
 
 ### How to achieve objectiveness and repeatability?
@@ -48,7 +47,7 @@ My goal was finding an objective way to analyze the performance of any given Lam
 Such a tool should be cheap and fast to execute, and it should provide repeatable results, taking into consideration the fluctuant trend of CPU, network, external resources, cold starts, etc.
 
 Here is the complete list of requirements I gathered initially:
- 
+
  * **Speed**: similarly to unit tests, you should be able to evaluate the impact of code changes as quickly as possible, which means the tool should run within seconds (not minutes or hours)
  * **Cost**: evaluating performance should be cheap enough to be executed automatically and as often as needed. In some critical and high-throughput scenarios, spending up to $1 could be more than acceptable since the resulting power optimization might generate considerable savings
  * **Complexity**: the tool should be easy to deploy, understand, extend, and visualize
@@ -56,7 +55,7 @@ Here is the complete list of requirements I gathered initially:
  * **Concreteness**: the tool should provide insights based on a real AWS environment, without limiting assumptions or mocks
  * **Statistical relevance**: the results should be relevant and robust to random fluctuations of measurement tools and external services
  * **Multi-language support**: the tool should be language agnostic and provide the same level of accuracy and relevance for Node.js, Java, Python, Ruby, Go, etc.
- 
+
 I easily solved the complexity issue by using the [Serverless Framework](https://serverless.com) for deploying and provisioning all the resources I needed.
 
 Since I wanted everything to run in a real AWS environment and generate statistically relevant results, I quickly realized I had to actually execute the Lambda Function provided as input, as opposed to computing a performance estimate based on code static analysis (which wouldn't be easy to achieve across languages).

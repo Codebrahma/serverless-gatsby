@@ -2,7 +2,6 @@
 title: 'Stream event improvements and custom roles for CloudFormation deployments with Serverless v1.9'
 description: 'Serverless variable system and stream event enhancements, CloudFormation services roles in the Serverless Framework v1.9 release.'
 date: '2017-03-14'
-layout: Post
 authors:
     - PhilippMuns
 gitLink: /2017-03-14-serverless-v1.9.0.md
@@ -192,7 +191,7 @@ We hope that you like the new release! Let us know if you have any questions or 
 
 ## Introducing the "Post Scheduler" project
 
-Our latest open source effort, ["Post Scheduler"](https://github.com/serverless/post-scheduler), was recently announced! 
+Our latest open source effort, ["Post Scheduler"](https://github.com/serverless/post-scheduler), was recently announced!
 
 It's a handy tool that makes it possible to automate the scheduling of blog posts and content updates for static site generators (like Jekyll, Hugo, Phenomic, etc.) through simple GitHub comments.
 

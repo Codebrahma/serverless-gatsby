@@ -2,7 +2,6 @@
 title: 'Introducing OpenWhisk support, Python for invoke local in Serverless Framework v1.6'
 description: 'Launching multi-provider support with the OpenWhisk provider plugin, Python for invoke local in the Serverless Framework v1.6 release.'
 date: '2017-01-30'
-layout: Post
 authors:
     - PhilippMuns
 gitLink: /2017-01-30-serverless-v1.6.0.md

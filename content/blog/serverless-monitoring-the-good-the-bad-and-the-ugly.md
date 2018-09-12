@@ -3,7 +3,6 @@ title: 'Serverless monitoring - the good, the bad and the ugly'
 description: 'How to re-wire your brain to learn Serverless monitoring.'
 date: '2017-09-26'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/good+bad+ugly.jpg'
-layout: Post
 authors:
     - AdnanRahic
 gitLink: /2017-09-26-serverless-monitoring-the-good-the-bad-and-the-ugly.md
@@ -64,7 +63,7 @@ Opening up CloudWatch I can see the logs clearly. All the function invocations a
 
 ![cloudwatch](https://github.com/adnanrahic/cdn/raw/master/serverless-good-bad-ugly/Selection_036.png)
 
-The logs are extensive, the only issue is I can't seem to make any sense of them. I can see the functions we're invoked, but not much else. Error messages for failing functions are not verbose enough, so they often go unnoticed. I'm also having a hard time finding functions that timed out. 
+The logs are extensive, the only issue is I can't seem to make any sense of them. I can see the functions we're invoked, but not much else. Error messages for failing functions are not verbose enough, so they often go unnoticed. I'm also having a hard time finding functions that timed out.
 
 I also tried logging through the command line. It shows possible errors a bit better, but still, not good enough to have peace of mind.
 
@@ -98,7 +97,7 @@ functions:
     ...
 ##############
 # Added these two lines!
-plugins: 
+plugins:
   - serverless-offline
 ```
 
@@ -114,21 +113,21 @@ I still can't get over the fact how bland the logs are. Not to mention the lack 
 
 What did I do? I went hunting. There has to be something out there on the web that can help me out. I was looking for a way to simulate the monitoring and logging of a server. I thought maybe there's a way to create a broader perspective over the whole serverless system. What I found blew me away, in a good way. A bunch of tools exist that parse and analyze logs from all functions in a system on the account level. Now that's cool.
 
-I decided to try our [Dashbird]() because it's free and seems promising. They're not asking for a credit card either, making it a "why not try it out" situation.
+I decided to try out [Dashbird](https://dashbird.io/) because it's [free](https://dashbird.io/pricing/) and seems promising. They're not asking for a credit card either, making it a "why not try it out" situation.
 
 They say it only takes 5 minutes to hook up with your AWS account and be ready to go, but hey. I'm a skeptic. I timed myself.
 
-The onboarding process was very straightforward. You just add a new policy and role on your AWS account, hook it to your Dashbird account and that's it. They even have a great [getting started tutorial](https://dashbird.io/help/getting-started/setting-up-dashbird/).
+The onboarding process was very straightforward. You just add a new policy and role on your AWS account, hook it to your Dashbird account and that's it. They even have a great [getting started tutorial](https://dashbird.io/docs/get-started/quick-start/).
 
 If you want to know, the timer stopped at 4 minutes. I'm impressed.
 
 However, I'm much more impressed with Dashbird. I can finally see what's going on.
 
-![dashbird dashboard](https://github.com/adnanrahic/cdn/raw/master/serverless-good-bad-ugly/dahbird-dashboard.png)
+![dashbird dashboard](https://cdn-images-1.medium.com/max/2000/1*QyGbyhcQtXJ-SiA2q6bbyQ.png)
 
-Errors are highlighted, and I can see the overall health of my system. I feel great all of a sudden. It also tracks the cost so I don't blow the budget. Even function tailing in real-time is included. Now that's just cool. 
+Errors are highlighted, and I can see the overall health of my system. I feel great all of a sudden. It also tracks the cost so I don't blow the budget. Even function tailing in real-time is included. Now that's just cool.
 
-![dashbird per function errors](https://github.com/adnanrahic/cdn/raw/master/serverless-good-bad-ugly/dashbird-per-function-errors.png)
+![dashbird per function errors](https://cdn-images-1.medium.com/max/2000/1*BpYTAJ_zKsUvFWDFJY1E5Q.png)
 
 With this watching my back I'd be comfortable with using Serverless for any large-scale application. The word relief comes to mind.
 

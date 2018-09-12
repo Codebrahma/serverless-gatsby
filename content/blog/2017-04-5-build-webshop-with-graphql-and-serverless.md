@@ -3,11 +3,9 @@ title: 'Building a Web Store with GraphQL, Stripe, Mailgun and the Serverless Fr
 description: 'Get familiar with GraphQL in this 30-minute tutorial on building an online store with Stripe, Mailgun and Serverless.'
 date: '2017-04-05'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/24682287/88250a60-195e-11e7-9c71-0b3241911641.png'
-layout: Post
 authors:
     - SorenBramer
 gitLink: /2017-04-5-build-webshop-with-graphql-and-serverless.md
-category: application-development
 ---
 
 The Serverless Framework has made it extremely easy to deploy business logic to scalable cloud infrastructure. The recent post [Building a REST API](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb/) by Shekhar Gulati goes into detail on how to expose business logic through a REST API. In this post we'll explore the benefits of GraphQL over REST, and build a feature rich webshop using [Graphcool](https://www.graph.cool/) and the Serverless Framework.

@@ -21,7 +21,7 @@ import { formatDate } from 'src/utils/date'
 const HyperLinkBackground = getLinkComponent(Background)
 
 export default ({ id, frontmatter }) => {
-  const { title, date, description, category, thumbnail } = frontmatter
+  const { title, date, description, category: categoryIds, thumbnail } = frontmatter
   const author = getAuthorInfo({ frontmatter })
 
   return (
@@ -30,17 +30,40 @@ export default ({ id, frontmatter }) => {
         width={[1, 1, 1, 0.6]}
         pr={[15, 15, 15, '10%']}
       >
-        <Text.p
-          fontSize={[0, 0, 0, 1]}
-          opacity="0.4"
-          mt={0}
-        >
-          <BlockLink to={getCategoryLink(category)}>
-            { getCategoryNameById(category) }
-          </BlockLink>
-          &nbsp;-&nbsp;
-          { formatDate(date, 'dd.mm.yy') }
-        </Text.p>
+        <Box width={[1, 1, 1, 0.75]}>
+          <Text.span
+            fontSize={[0, 0, 0, 1]}
+            lineHeight={4}
+            opacity={0.4}
+            letterSpacing="text"
+            mt={0}
+          >
+            {
+              categoryIds.map((categoryId, index) => (
+                <React.Fragment>
+                  <BlockLink to={getCategoryLink(categoryId)}>
+                    { getCategoryNameById(categoryId) }
+                  </BlockLink>
+                  {
+                    (index !== categoryIds.length-1) ? (
+                      <React.Fragment>
+                        ,&nbsp;
+                      </React.Fragment>
+                    ) : null
+                  }
+                </React.Fragment>
+              ))
+            }
+            {
+              categoryIds.length ? (
+                <React.Fragment>
+                  &nbsp;-&nbsp;
+                </React.Fragment>
+              ) : null
+            }
+            { formatDate(date, 'dd.mm.yy') }
+          </Text.span>
+        </Box>
         <BlockLink to={getBlogLink(id)}>
           <Box pt={1}>
             <Heading.h3

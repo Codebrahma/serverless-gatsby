@@ -2,14 +2,13 @@
 title: 'Writing an Event-driven Serverless Application with Full Local Development Experience'
 description: 'Learn how to write an event-driven serverless application with full local development experience using the Serverless Application Platform.'
 date: '2017-09-12'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/thumbnail_domino.jpg'
 authors:
     - RupakGanguly
 gitLink: /2017-09-12-event-driven-serverless-app-local-dev-exp.md
 ---
 
-In my previous post on [Anatomy of a Serverless Application](https://serverless.com/blog/anatomy-of-a-serverless-app/), I lay the foundation for building a very simple application with an email service using the Serverless Framework, deployed to AWS Lambda. 
+In my previous post on [Anatomy of a Serverless Application](https://serverless.com/blog/anatomy-of-a-serverless-app/), I lay the foundation for building a very simple application with an email service using the Serverless Framework, deployed to AWS Lambda.
 
 In this post, we will build `mailman`, an event-driven serverless application. The application has a simple frontend using `curl` that calls into a couple of backend services: a users service and an email service. The post will highlight event-driven application development with focus on full local development experience. We will look at services emitting, subscribing and reacting to events in a seamless manner using the Serverless Application Platform.
 
@@ -34,7 +33,7 @@ My choices:
     - [Serverless Framework](https://serverless.com/framework/) (**v1.20.0 or higher**)
     - [Serverless Event Gateway](https://serverless.com/event-gateway/), the central hub of event communication
     - [Serverless Emulator](https://github.com/serverless/emulator), the local serverless provider emulator
-    - [Serverless Functions Development Kit (FDK)](https://github.com/serverless/fdk), to enhance developer experience for writing severless applications 
+    - [Serverless Functions Development Kit (FDK)](https://github.com/serverless/fdk), to enhance developer experience for writing severless applications
 
 ## Setup
 
@@ -42,13 +41,13 @@ Let's install and setup the toolsets required for development.
 
 1. Install NodeJS (**v6.10.3**): [download](https://nodejs.org/en/download/) or [using package manager](https://nodejs.org/en/download/package-manager/#osx)
 1. Install the Serverless Framework (**v1.20.0 or higher**): `npm install -g serverless`
-1. **No need** for setting up any cloud provider account. YEAH! 
+1. **No need** for setting up any cloud provider account. YEAH!
 
 > Without the step (read hurdle) of setting up a cloud provider account you have already saved so much time and hassle.
 
 **Note**: You might wonder what happened to the **Event Gateway** and the **Emulator** setup. That's where the Serverless Framework makes it all come together. Keep reading.
 
-With Serverless Framework already installed, we will see how to use the Event Gateway and the Emulator in order to provide a centralized event hub and a much needed local development environment. The newly added `serverless run` command downloads and runs the necessary components. 
+With Serverless Framework already installed, we will see how to use the Event Gateway and the Emulator in order to provide a centralized event hub and a much needed local development environment. The newly added `serverless run` command downloads and runs the necessary components.
 
 Before we use the `serverless run` command, we need to first login to the Serverless Application Platform using the `serverless login` command:
 
@@ -67,14 +66,14 @@ Let's look at three core capabilities that we need to write, test and run a serv
 
 ### Event-driven Workflow
 
-The tenet of an event-driven application is that the components interact with each other asynchronously via events. The components are not aware of each other and rely on a central event communication hub for relaying events across the application.  
+The tenet of an event-driven application is that the components interact with each other asynchronously via events. The components are not aware of each other and rely on a central event communication hub for relaying events across the application.
 
-The Event Gateway serves as the central event communication fabric for serverless applications. It acts as the broker for all event communication and allows services to publish and subscribe to events. Additionally, it acts as an API Gateway for all HTTP communication. 
+The Event Gateway serves as the central event communication fabric for serverless applications. It acts as the broker for all event communication and allows services to publish and subscribe to events. Additionally, it acts as an API Gateway for all HTTP communication.
 
 The Event Gateway uses a special `http` event-type to recognize standard HTTP requests. It standardizes both pub/sub and HTTP communication to be represented as events, combining them into a single experience. Services can send custom events and the Event Gateway wraps them up in a standard event envelope passing the payload along as-is. Events from well-known SaaS providers will be recognized as first-class event-types in the near future. **"Everything as events" is the mantra.**
 
 > Read [Event Gateway - The Missing Piece of Serverless Architectures](https://serverless.com/blog/introducing-serverless-event-gateway) for more details.
- 
+
 ### Programmatic Access
 
 To write event-driven serverless applications, its individual services need to programmatically take advantage of all the goodness of the Event Gateway features. The Serverless SDK hands that capability to the developers. The developers have access to the Event Gateway API via code for registering & invoking functions, subscribing to and emitting events, and configuration.
@@ -87,7 +86,7 @@ One of the biggest challenges with developing serverless applications is to run 
 
 The Serverless Emulator emulates different cloud provider FaaS offerings (currently AWS Lambda or Google Cloud Functions) on your local machine in an offline-focused manner. It provides that missing piece of tooling that makes application development with serverless so productive and exciting. It enables deploying and invoking serverless functions without the requirement of setting up and deploying your serverless application to the cloud provider.
 
-> Check out the [Emulator source](https://github.com/serverless/emulator) for more details. 
+> Check out the [Emulator source](https://github.com/serverless/emulator) for more details.
 
 ### Seamless Developer Experience
 
@@ -113,7 +112,7 @@ where,
 - `services` folder holds the serverless service(s)
 
 > With `sls invoke` you could test one single function at a time. But with the Serverless Application Platform, you can run the full event-driven serverless application, with events interacting across the application, locally on your machine, without signup up for any cloud provider. YEAH!
- 
+
 Let's create a couple of the backend services and then we will explore the local experience when we run the application. The way the non-serverless frontend portion of the application is written is totally your choice. In this post, I will primarily focus on the serverless portion of the application inside the `services` folder, and use a basic `curl` script to simulate the frontend.
 
 ### Goals
@@ -156,14 +155,14 @@ functions:
           path: /users
           method: POST
 ...
-...          
+...
 ```
-Nothing different than what you are used to. 
+Nothing different than what you are used to.
 
-> The important aspect to note is that the Serverless Application Platform with all its new products and enhancements is still compatible with existing serverless applications that you have built. 
+> The important aspect to note is that the Serverless Application Platform with all its new products and enhancements is still compatible with existing serverless applications that you have built.
 
 **Behind the scenes**
- 
+
 Actually, there are a couple of things that the Serverless Application Platform does behind the scenes. The `serverless.yml` is parsed, and the `register` function from the `users` service is registered with the Event Gateway. Next, a subscription is created for the `http` event and the `register` function.
 
 We will visualize this when we run the service and talk about it in the next section.
@@ -242,7 +241,7 @@ functions:
 ```
 
 **Behind the scenes**
- 
+
 There are a couple of things that the Serverless Application Platform does behind the scenes. The `serverless.yml` is parsed, and the `sendWelcomeEmail` function from the `email` service is registered with the Event Gateway. Next, a subscription is created for the `user.registered` event and the `sendWelcomeEmail` function.
 
 We will visualize this when we run the service and talk about it in the next section.
@@ -350,7 +349,7 @@ To simulate an application user interface, we will use `curl` to call the user s
 Run the following `curl` command on the other pane:
 
 ```bash
-$ cd mailman/frontend 
+$ cd mailman/frontend
 $ curl -X POST \
   http://localhost:4000/users \
   -H 'content-type: application/json' \
@@ -367,7 +366,7 @@ Let's break it up and discuss what just happened.
 
     ```bash
      Event Gateway  Event 'http' received:
-    
+
       {
         "event": "http",
         "id": "825e723f-dc75-4368-bd43-abf26b28d46d",
@@ -402,9 +401,9 @@ Let's break it up and discuss what just happened.
 
     ```bash
      Serverless     Function 'users-register' triggered by event 'http'
-    
+
      Event Gateway  Event 'user.registered' received:
-    
+
       {
         "event": "user.registered",
         "id": "77071ceb-459e-4eb6-a8ba-813a75d39567",
@@ -422,9 +421,9 @@ Let's break it up and discuss what just happened.
 
     ```bash
      Serverless     Function 'email-service-sendWelcomeEmail' triggered by event 'user.registered'
-    
+
      Serverless     Function 'users-register' finished:
-    
+
       {
         "id": 79,
         "session": "e40e0d06ed05f17385dee72a56cfda48",
@@ -436,7 +435,7 @@ Let's break it up and discuss what just happened.
 
     ```bash
      Event Gateway  Event 'email.sent' received:
-    
+
       {
         "event": "email.sent",
         "id": "227979c0-667e-4b0f-a9e8-dae8d750fa85",
@@ -448,20 +447,20 @@ Let's break it up and discuss what just happened.
         },
         "dataType": "application/json"
       }
-    
+
      Serverless     Function 'email-service-sendWelcomeEmail' finished:
-    
+
       {
         "statusCode": 200,
         "body": "{\"message\":\"Email sent.\"}"
       }
-    ```  
+    ```
 
-That concludes the discussion about the application. 
+That concludes the discussion about the application.
 
 Hopefully, you followed the workflow I laid out and can see how easy it is to write an event-driven serverless application that can be tested and run locally.
 
-The terminal visualization during development is crucial to debugging and tracing async event-driven applications, and can greatly help speed up application development cycles. 
+The terminal visualization during development is crucial to debugging and tracing async event-driven applications, and can greatly help speed up application development cycles.
 
 > Code: Get the [full source code](https://github.com/rupakg/mailman) to the `mailman` application project on Github.
 

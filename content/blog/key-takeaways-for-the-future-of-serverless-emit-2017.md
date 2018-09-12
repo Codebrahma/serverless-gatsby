@@ -2,7 +2,6 @@
 title: 'Key takeaways for the future of serverless - Emit 2017 recap'
 description: 'Emit Conf 2017 has come and gone. Here are the key serverless takeaways you should know about.'
 date: '2017-08-25'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Emit+Recap/Emit+logo.png'
 authors:
     - NickGottlieb
@@ -15,7 +14,7 @@ We saw some killer presentations and had even better conversations, with topics 
 
 In case you couldn’t make it out, we compiled some of the most important takeaways and themes.
 
-## Event unification 
+## Event unification
 
 Serverless architectures provide a lot of incentives to go event-driven, so it’s not surprising that we got several talks on this topic.
 
@@ -24,7 +23,7 @@ In an event-driven world, all data are represented as events. Storing these even
 **Rob Gruhl**, Senior Manager of the Serverless Platform Team at [Nordstrom](http://shop.nordstrom.com/), talked about the unified event log approach that Nordstrom takes to record all application state changes. This approach, often known as an event-sourced architecture, results in a lot of events, which can potentially be put to use by developers deploying serverless functions. Rob’s talk did a great job of surfacing the potential of event-sourced architecture, and also talked about some hard, unsolved problems within it that his team has been working on.
 [See the slides.](https://s3-us-west-2.amazonaws.com/emit-website/2017-slides/Towards+a+serverless+event-sourced+Nordstrom.pdf)
 
-**Austen Collins**, CEO of [Serverless Inc.](https://serverless.com/), unveiled a new open-source project that is also focused on event unification. The [Event Gateway](https://serverless.com/event-gateway/) is designed to be the central piece of a serverless architecture. It collects all events in a system and exposes them to developers so they can be easily routed to functions. While many developers currently use systems like Kafka to accomplish this, the Event Gateway includes additional features, such as an API gateway, specifically designed to make it play nicely with a serverless architecture. 
+**Austen Collins**, CEO of [Serverless Inc.](https://serverless.com/), unveiled a new open-source project that is also focused on event unification. The [Event Gateway](https://serverless.com/event-gateway/) is designed to be the central piece of a serverless architecture. It collects all events in a system and exposes them to developers so they can be easily routed to functions. While many developers currently use systems like Kafka to accomplish this, the Event Gateway includes additional features, such as an API gateway, specifically designed to make it play nicely with a serverless architecture.
 [See the slides.](https://s3-us-west-2.amazonaws.com/emit-website/2017-slides/building+the+communication+fabric+for+serverless+architectures.pdf)
 
 ![](https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/Emit+Recap/Austen_Collens-Event_Gateway.png)
@@ -51,7 +50,7 @@ Everyone was in agreement that Serverless architectures remove complexity and le
 
 ## Definitions, standards and best practices
 
-Everyone at Emit was aware: serverless and event-driven architectures are new, and in many ways they are still being defined. 
+Everyone at Emit was aware: serverless and event-driven architectures are new, and in many ways they are still being defined.
 
 **Ajay Hair**, the Product Manager for [AWS Lambda](https://aws.amazon.com/lambda/), talked about the importance of being a good event-producer—something that is especially important for providers. When all data is represented as events, it’s imperative that we have some standards and best practices for how to expose these events. Otherwise, we risk ending up in an even more complicated software world than we live now.
 [See the slides.](https://s3-us-west-2.amazonaws.com/emit-website/2017-slides/Being+a+good+citizen+in+an+event+driven+world.pdf)

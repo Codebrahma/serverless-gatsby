@@ -3,7 +3,6 @@ title: 'How to plan a team retreat'
 description: 'Bi-annual retreats - how we improve communication and make remote teams work.'
 date: '2017-10-09'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/team-retreat/team-retreat-photo.JPG'
-layout: Post
 authors:
     - CaseyShultz
 gitLink: /2017-10-09-how-to-plan-a-team-retreat.md
@@ -17,13 +16,13 @@ Yeah. We decided early on to embrace having a largely remote team. The reason wa
 
 At this point, half our team works from another corner of the world. It’s been a fantastic challenge. Ever tried to find a good time to schedule all-hands meetings when your team spans 18 time zones?
 
-The most important thing we learned is that, in smaller companies, decisions get made at the lunch table. Our remote team members were missing out on daily small talk that turned out to be critical. Asynchronous comms over Slack and Github weren’t quite enough. 
+The most important thing we learned is that, in smaller companies, decisions get made at the lunch table. Our remote team members were missing out on daily small talk that turned out to be critical. Asynchronous comms over Slack and Github weren’t quite enough.
 
 So we did what seemed like the most reasonable thing: we brought everyone, the *entire* remote & local team members, together for a retreat. And how’d it go?
 
 It was so successful that we now do them twice a year. Our team chemistry got way better, and we’ve been able to collect tons of candid feedback about company culture and process that we wouldn’t have gotten otherwise.
 
-If you have a largely remote team, frankly we really recommend it. 
+If you have a largely remote team, frankly we really recommend it.
 
 But before you do, we've learned some important lessons about getting the best return on investment. So read on and learn from our mistakes.
 

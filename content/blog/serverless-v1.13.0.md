@@ -2,7 +2,6 @@
 title: 'Async variable support added in Serverless v1.13 for enhanced configuration & secret management'
 description: 'Async Serverless variables, Cross-Service communication, Lambda tags and more in the Serverless Framework v1.13 release.'
 date: '2017-05-10'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-v1.13.jpg'
 authors:
     - PhilippMuns

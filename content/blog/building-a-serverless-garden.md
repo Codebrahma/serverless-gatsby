@@ -1,5 +1,4 @@
 ---
-layout: Post
 title: 'Building A Serverless Garden Monitoring System with Lambda'
 description: 'Guest author John McKim writes about building a serverless garden monitoring system with the Serverless Framework and AWS Lambda.'
 date: '2016-10-25'

@@ -2,12 +2,13 @@
 title: '6 Things to Know Before Migrating An Existing Service to Serverless'
 description: 'Your cheatsheet to a seamless migration.'
 date: '2017-08-07'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/step.jpg'
+category:
+    - user-stories
+    - guides-and-tutorials
 authors:
     - MarciaVillalba
 gitLink: /2017-08-03-6-things-to-know-before-migrating-an-existing-service-to-serverless.md
-category: news
 ---
 
 Last year, my company decided to make the plunge. We were going to go Serverless! Except...most of the resources about serverless architectures are about how to start from scratch, not how to migrate existing services over.

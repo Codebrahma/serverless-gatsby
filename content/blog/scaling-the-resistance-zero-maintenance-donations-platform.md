@@ -2,7 +2,6 @@
 title: 'Scaling the Resistance - a Zero-maintenance Donations Platform with Serverless and AWS'
 description: 'To raise millions of dollars in donations, you need a zero-maintenance architecture that never turns a donor away'
 date: '2017-09-07'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/Movement-2018-logo-square.png'
 authors:
     - VictorStone
@@ -21,7 +20,7 @@ When we tried out the Serverless Framework, all that power and flexibility sudde
 
 Gamechanger Labs has grown up over the last few decades. We started as a scrappy little non-profit relying on part-time contractors and volunteer love; now we've become a concierge platform for major donors that moves [millions of dollars](https://movementvote.org) into the hands of nearly 100 different grassroots organizations.
 
-The rise in attention was overwhelming for our tiny, free-tier EC2 / Nodejs-React donations site. Too much energy was going to things like [chasing memory leaks in expressjs](https://github.com/expressjs/express/issues/2997) and (frankly) keeping the site from crashing. 
+The rise in attention was overwhelming for our tiny, free-tier EC2 / Nodejs-React donations site. Too much energy was going to things like [chasing memory leaks in expressjs](https://github.com/expressjs/express/issues/2997) and (frankly) keeping the site from crashing.
 
 ## Foreground
 
@@ -54,7 +53,7 @@ The server functions were moved into a new Git project called [bellman](https://
         |-serverless.yml
         |-handler.js
 ```
-Some of our services are CRUD, some are just straight up RPC APIs. For all cases I created a base class ([LambdaFunc](https://github.com/Movement-2016/bellman/blob/master/src/lib/LambdaFunc.js)) to encapsulate and normalize some of the more arcane AWS structures and methods. 
+Some of our services are CRUD, some are just straight up RPC APIs. For all cases I created a base class ([LambdaFunc](https://github.com/Movement-2016/bellman/blob/master/src/lib/LambdaFunc.js)) to encapsulate and normalize some of the more arcane AWS structures and methods.
 
 It was stunning to see how much of the previous code was http server plumbing versus functionality. When I started migrating from the Expressjs environment to Lambda, the code shrunk an order of magnitude and focused 100% on app functionality.
 
@@ -93,10 +92,10 @@ By passing the name of the DynamoDB table in the environment:
 ```yml
 service: users
 
-custom: 
+custom:
   stage: "${opt:stage, self:provider.stage}"
   tableName: ${self:service}-${self:custom.stage}
-resources:  
+resources:
   Resources:
     restTable:
       Type: AWS::DynamoDB::Table
@@ -104,7 +103,7 @@ resources:
         TableName: ${self:custom.tableName}
         AttributeDefinitions:
           - AttributeName: email
-            AttributeType: S  
+            AttributeType: S
 ```
 
 the default REST code reduced to almost none (this is the *entire* code for the CRUD interface for managing users):
@@ -126,7 +125,7 @@ module.exports = (new UserTableFunc()).exports;
 
 ### Client SDK
 
-It's important to encapsulate the API for browser consumers, so that when you install the `bellman` package it is very OOP/API-like. 
+It's important to encapsulate the API for browser consumers, so that when you install the `bellman` package it is very OOP/API-like.
 
 The API Gateway has a feature to generate a client SDK for your remote Lambda function. I generated that SDK, but it looked very much like a generic catch-all. Here's a hint: if the process to generate the client is 100% automated, it will feel like that to the caller. My old friend and mentor used to call this condition "implementation-bubble-up-itis."
 
@@ -173,9 +172,9 @@ const authorizationStuff = {
   sessionId,
   ...
   };
-  
+
  const users = bellman.prod.users(authorizationStuff);
- 
+
  users.list().then( users => users.forEach( ... ) );
  ```
 
@@ -183,7 +182,7 @@ const authorizationStuff = {
 
 Having moved our server code into Lambda, it was now possible to serve our website from a static S3 bucket.
 
-What I learned in this migration, however, is that AWS CodeBuild deploys to a directory off of the root of your bucket, but the Web hosting feature of S3 wants your `index.html` file to be at the root. CodeBuild also leaves the files encrypted, but the Web hoster wants the files to be *public* and *unencrypted*. 
+What I learned in this migration, however, is that AWS CodeBuild deploys to a directory off of the root of your bucket, but the Web hosting feature of S3 wants your `index.html` file to be at the root. CodeBuild also leaves the files encrypted, but the Web hoster wants the files to be *public* and *unencrypted*.
 
 I couldn't figure out a way to handle that with AWS services. So I wrote a couple of lines of script and pushed it [into our bellman API project](https://github.com/Movement-2016/bellman/tree/master/src/deploy). It gets triggered from the AWS CloudWatch event after the CodeBuild project is finalized.
 

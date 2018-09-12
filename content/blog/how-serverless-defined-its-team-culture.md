@@ -2,14 +2,13 @@
 title: 'How Serverless Defined Its Team Values'
 description: 'Follow us on our journey to create a resilient team culture that attracts world class talent to the Serverless team.'
 date: '2017-08-24'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/pound-it.jpg'
 authors:
     - CaseyShultz
 gitLink: /2017-08-24-how-serverless-defined-its-team-culture.md
 ---
 
-As a solo founder with a lot on his plate, it would have been so easy for our CEO, Austen Collins, to let values and culture take a back seat. But he didn’t. 
+As a solo founder with a lot on his plate, it would have been so easy for our CEO, Austen Collins, to let values and culture take a back seat. But he didn’t.
 
 Austen knew that having a strong mission was the key to attracting top talent, and from day one he was determined to have a clearly-defined culture that resonated with people.
 
@@ -20,7 +19,7 @@ Here’s how the serverless team worked to bring it all together.
 ## Dive below the iceberg
 Fun fact: when you see icebergs floating in the water, you’re really only seeing the top 10%. The other 90% is hidden beneath the surface of the water.
 
-This [cultural iceberg metaphor](https://www.languageandculture.com/cultural-iceberg) is one we use a lot when discussing values amongst our team. Organizational culture represents itself with language, artifacts and traditions (the visible piece of the iceberg)—but those things are only a manifestation of the core values that team members intuitively feel under the surface. 
+This [cultural iceberg metaphor](https://www.languageandculture.com/cultural-iceberg) is one we use a lot when discussing values amongst our team. Organizational culture represents itself with language, artifacts and traditions (the visible piece of the iceberg)—but those things are only a manifestation of the core values that team members intuitively feel under the surface.
 
 When you clearly define what lies under the surface of your team, it means that everyone can swiftly move towards the same end goal. Recruiting gets easier, as prospective team members easily get a sense of whether they will flourish in your environment. Existing team members have a much easier time prioritizing projects and feeling confident enough to initiate new projects that will propel the company forward.
 
@@ -58,20 +57,20 @@ What emerged were the final value statements that we all felt we would be empowe
 
 It takes the whole team working together to meet Serverless’ bold and ambitious goals. We help each other and strive to remove any roadblocks that slow our teammates down.
 
-We hold each other accountable and communicate expectations clearly through asynchronous communication (Slack, Github, Email) and ask for help when we need it. 
+We hold each other accountable and communicate expectations clearly through asynchronous communication (Slack, Github, Email) and ask for help when we need it.
 
 #### Keep our eyes on the prize
 
 It’s easy to get distracted when pioneering technology in a new space.
-We keep the team successful by setting clear goals that start at the company level and work their way down to each individual team member. We focus on results and celebrate success as a team. 
+We keep the team successful by setting clear goals that start at the company level and work their way down to each individual team member. We focus on results and celebrate success as a team.
 
 #### Blaze the trail
 
 As the first mover in the serverless space, our team is bold and ambitious. We are always looking for ways to embrace new technology of all stripes and make it accessible to our community.
 
-#### Open source forever 
+#### Open source forever
 
-The open source community is an integral strategy to our success. We will never forget where we came from and we pledge to always give back. 
+The open source community is an integral strategy to our success. We will never forget where we came from and we pledge to always give back.
 
 #### Simplicity is king
 

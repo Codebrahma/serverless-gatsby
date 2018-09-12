@@ -1,5 +1,4 @@
 ---
-layout: Post
 title: 'Releasing Serverless Framework V.1 & Fundraising'
 date: '2016-10-12'
 description: 'Serverless, Inc. has brought Serverless Framework V.1 out of beta and also closed a seed round from Trinity Ventures.'

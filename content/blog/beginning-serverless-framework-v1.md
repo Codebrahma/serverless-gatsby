@@ -2,8 +2,8 @@
 title: 'Beginning Serverless Framework V.1'
 description: 'How startups to large enterprises, are using serverless to develop and deploy serverless, event-driven architectures on AWS Lambda'
 date: '2016-05-25'
-layout: Post
-category: application-development
+category:
+    - application-development
 authors:
     - PhilippMuns
 gitLink: /2016-05-25-beginning-serverless-framework-v1.md

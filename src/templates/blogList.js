@@ -7,7 +7,7 @@ import { Divider } from 'src/fragments'
 import { Pagination } from 'src/components'
 
 export default ({
-  data: { blogs: { edges, totalCount }, highlighted },
+  data: { blogs: { edges, totalCount } },
   pathContext: { start, limit }
 }) => {
   const totalPages = Math.ceil(totalCount / limit)
@@ -15,13 +15,6 @@ export default ({
 
   return (
     <BlogLayout prefooter={BlogListPrefooter}>
-      { currentPage === 0 && (
-          <React.Fragment>
-            <HighlightedBlogs blogs={highlighted.edges.map(({ node }) => node)} />
-            <Divider visibleInSmallScreens />
-          </React.Fragment>
-        )
-      }
       <BlogPreview blogs={edges.map(({ node }) => node)} />
       <Pagination total={totalPages} current={currentPage} />
     </BlogLayout>
@@ -45,22 +38,6 @@ export const query = graphql`
         }
       }
       totalCount
-    }
-
-    highlighted: allBlog(filter: { frontmatter: { highlighted: { eq: true } } }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            description
-            date
-            authors
-            category
-            thumbnail
-          }
-        }
-      }
     }
   }
 `

@@ -1,5 +1,4 @@
 ---
-layout: Post
 title: 'Serverless CEO Austen Collins on The New Stack Makers Podcast'
 description: 'Austen talks about the Serverless Framework and the important role our open source community plays in shaping it'
 date: '2016-09-13'

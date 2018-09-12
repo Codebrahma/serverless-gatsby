@@ -3,7 +3,6 @@ title: 'Talking Serverless Framework Features & How To Use Them in a Webinar wit
 description: 'Serverless CEO Austen Collins chats with Cloud Academy about new framework features and gives an overview of basic application lifecycle management with Serverless.'
 date: '2017-01-12'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/21903668/9a097caa-d8b5-11e6-8f1b-e6062ebf4982.png'
-layout: Post
 authors:
     - StefanieMonge
 gitLink: /2017-01-12-serverless-cloud-academy-webinar.md

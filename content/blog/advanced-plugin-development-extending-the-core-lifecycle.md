@@ -3,11 +3,9 @@ title: 'Advanced Plugin Development - Extending The Serverless Core Lifecycle'
 description: 'Learn how to expose lifecycle hooks in a hook-driven Serverless plugin.'
 date: '2017-03-08'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/23727876/87005e18-041f-11e7-8bb0-cc8fd2c0ad0f.png'
-layout: Post
 authors:
     - FrankSchmid
 gitLink: /2017-03-02-advanced-plugin-development-extending-the-core-lifecycle.md
-category: engineering-culture
 ---
 # Introduction
 

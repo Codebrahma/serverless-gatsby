@@ -1,9 +1,10 @@
 ---
-layout: Post
 title: 'Introducing Serverless Partners: Meet Parallax'
 description: 'Learn how Parallax built An Infinitely Scalable Online Recording Campaign For David Guetta & UEFA'
 date: '2016-09-22'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/parallax.png'
+category:
+    - user-stories
 authors:
     - NickGottlieb
 gitLink: /2016-09-22-introducing-serverless-partners-meet-parallax.md

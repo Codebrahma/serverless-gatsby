@@ -2,7 +2,6 @@
 title: 'Run Serverless Functions at half the cost with Spotinst & Serverless Framework'
 description: 'Using the Spotinst provider integration for serverless you can run multi-region, cross-cloud functions at 50-80% the cost'
 date: '2017-09-06'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/spotinst-thumb.png'
 authors:
     - DavidWells
@@ -17,7 +16,7 @@ We've seen it time and time again: companies get tremendous cost savings when th
 - <a href="https://www.infoq.com/news/2016/08/serverless-autodesk" target="_blank">Costs a small fraction (~1%) of the traditional cloud approach</a>
 - <a href="https://medium.com/@PaulDJohnston/aws-lambda-9-million-api-calls-for-1-1134243c55d7" target="_blank">AWS Lambda: 9 million API calls for $1</a>
 
-What if I told you...it just got even cheaper?  
+What if I told you...it just got even cheaper?
 
 ## Serverless & Spotinst team up
 

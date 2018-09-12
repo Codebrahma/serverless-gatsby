@@ -2,7 +2,6 @@
 title: 'Serverless Ops 101 - Using CloudWatch Metrics & Alarms with Serverless Functions'
 description: 'Level up your serverless ops game with a walkthrough on CloudWatch metrics and alarms'
 date: '2017-08-11'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/cloudwatch+metrics.jpg'
 authors:
     - AlexDeBrie
@@ -45,7 +44,7 @@ custom:
     stages:
       - production
     topics:
-      alarm: 
+      alarm:
         topic: ${self:service}-${opt:stage}-alerts-alarm
         notifications:
           - protocol: email
@@ -121,7 +120,7 @@ custom:
     stages:
       - producton
     topics:
-      alarm: 
+      alarm:
         topic: ${self:service}-${opt:stage}-alerts-alarm
         notifications:
           - protocol: email

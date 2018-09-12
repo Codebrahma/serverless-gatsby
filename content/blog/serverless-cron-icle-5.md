@@ -3,7 +3,6 @@ title: 'Serverless (Cron)icle #5 - News from the Serverless Community'
 description: 'A roundup of links and videos from the serverless ecosystem that caught our attention this week.'
 date: '2017-07-21'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/25759320/8bb86c20-3197-11e7-8d3d-5479c197c049.png'
-layout: Post
 authors:
     - RupakGanguly
 gitLink: /2017-07-21-serverless-cron-icle-5.md

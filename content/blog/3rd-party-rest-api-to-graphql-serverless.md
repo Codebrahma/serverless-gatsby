@@ -2,13 +2,10 @@
 title: 'Creating a Serverless GraphQL Gateway on top of a 3rd Party REST API'
 description: 'Integrate GraphQL with Lambda; turn a 3rd party REST API to GraphQL. I built a microservice to interface with the Flickr API using Serverless, GraphQL and Hapi.js.'
 date: '2017-10-24'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/graphql.jpeg'
 authors:
     - DrakeCosta
 gitLink: /2017-10-19-3rd-party-rest-api-to-graphql-serverless.md
-category: news
-highlighted: true
 ---
 # Introduction
 

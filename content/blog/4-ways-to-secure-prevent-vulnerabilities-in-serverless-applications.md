@@ -3,11 +3,9 @@ title: '4 Ways to Secure & Prevent Vulnerabilities in Serverless Applications us
 description: 'The new Serverless Snyk plugin scans vulnerable open source packages and alerts of potential security risks.'
 date: '2016-11-03'
 thumbnail: 'http://res.cloudinary.com/snyk/image/upload/w_400/v1468845258/logo/snyk-avatar.png'
-layout: Post
 authors:
     - TimKadlec
 gitLink: /2016-11-03-4-ways-to-secure-prevent-vulnerabilities-in-serverless-applications.md
-category: guides-and-tutorials
 ---
 
 <img align="right" width="150" height="150" src="http://res.cloudinary.com/snyk/image/upload/w_400/v1468845258/logo/snyk-avatar.png">Serverless is a powerful new approach that enables developers to focus on building features instead of having to focus on the underlying architecture.

@@ -2,7 +2,6 @@
 title: 'Serverless v1.24 - Alexa Smart Home event source, Print content of resolved serverless config file'
 description: 'Alexa Smart Home event source, update checker, enhancements, bug fixes and more added in the Serverless Framework v1.24 release.'
 date: '2017-11-01'
-layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework_v1.24.jpg'
 authors:
     - PhilippMuns
@@ -82,7 +81,7 @@ functions:
   thermostat:
     handler: thermostat.handler
     events:
-      - alexaSmartHome: 
+      - alexaSmartHome:
            appId: amzn1.ask.skill.xx-xx-xx-xx
            enabled: false
 ```
@@ -179,7 +178,7 @@ This release also includes tons of other improvements and bug fixes.
 
 We hope that you enjoy this release! Feel free to provide some feedback in our [Forum](https://forum.serverless.com), via [Twitter](https://twitter.com/goserverless) or on [GitHub](https://github.com/serverless/serverless).
 
-### Contributors 
+### Contributors
 
 This release contains lots of hard work from our beloved community, and wouldn't have been possible without passionate people who decided to spend their time contributing back to make the Serverless Framework better.
 

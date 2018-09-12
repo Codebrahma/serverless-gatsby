@@ -3,7 +3,6 @@ title: 'Enhanced Analytics & Monitoring for your Serverless Apps with the IOpipe
 description: 'Activate analytics and alerts quickly by automatically wrapping your Serverless functions with IOpipe.'
 date: '2017-04-21'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/iopipe-public/iopipe-serverless-logo.png'
-layout: Post
 authors:
     - CoreyLight
 gitLink: /2017-04-21-introducing-serverless-plugin-iopipe.md

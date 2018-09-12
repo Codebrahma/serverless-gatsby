@@ -3,11 +3,9 @@ title: 'One Chatbot, Two Millions Fans - How AbstractAI Reduced Back-End Costs B
 description: 'How Serverless Partner AbstractAI leveraged the Serverless Framework and Lambda to reduce the cost of running back-end services by 95%.'
 date: '2017-03-17'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/24061595/08747a26-0b26-11e7-9faf-52c7e3ae3492.png'
-layout: Post
 authors:
     - StefanieMonge
 gitLink: /2017-03-17-abstract-partner-program-announcement.md
-category: engineering-culture
 ---
 Serverless architecture has opened a whole new world of possibilities for developers. We’re seeing so many cool projects being built with the Serverless Framework. The open-source Framework allows you to easily build web, mobile and IoT applications with serverless architectures using AWS Lambda, Azure Functions, OpenWhisk, Google Cloud Functions and more.
 

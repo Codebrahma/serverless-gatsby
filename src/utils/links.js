@@ -1,3 +1,5 @@
+import url from 'url'
+
 const getGithubLink = (githubHandle) => (
   `https://github.com/${githubHandle}`
 )
@@ -12,8 +14,8 @@ const getMediumLink = (mediumHandle) => (
 
 const getLinkName = (link) => {
   if (!link) { return '' }
-  const url = new URL(link)
-  return `${url.hostname}${url.pathname}`
+  const parsedURL = url.parse(link)
+  return `${parsedURL.hostname}${parsedURL.pathname}`
 }
 
 export {

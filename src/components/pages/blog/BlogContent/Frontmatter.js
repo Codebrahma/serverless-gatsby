@@ -23,7 +23,7 @@ const WrittenByText = ({ children }) => (
 
 export default ({ frontmatter }) => {
   const { category: categoryIds, authors, title } = frontmatter
-  const author = getAuthorById(authors[0])
+  const author = getAuthorById((authors || [])[0])
 
   return (
     <Column

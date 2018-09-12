@@ -9,7 +9,7 @@ const highlight = require('remark-highlight.js')
 const html = require('remark-html')
 const algoliasearch = require('algoliasearch')
 const authors = require('./src/constants/generated-authors.json')
-const categories = require('./src/categories/generated-categories.json')
+const categories = require('./src/constants/generated-categories.json')
 const blogsPerPage = 5
 
 var client = algoliasearch('V3VM7IN3TH', '9a3c539ada1e49ee00b670534c9c605f');

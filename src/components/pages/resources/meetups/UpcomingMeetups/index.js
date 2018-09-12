@@ -2,8 +2,6 @@ import React from 'react'
 import {
   Column,
   ResponsiveStack,
-  Heading,
-  TextWithIcon
 } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { MeetupCard, TitleWithIcon } from 'src/fragments'

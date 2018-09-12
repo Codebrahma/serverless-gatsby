@@ -23,7 +23,7 @@ export default ({
 
 export const query = graphql`
   query Blogs($start: Int!, $limit: Int!) {
-    blogs: allBlog (skip: $start, limit: $limit) {
+    blogs: allBlog (sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { date: { ne: null } } }, skip: $start, limit: $limit) {
       edges {
         node {
           id

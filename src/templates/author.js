@@ -24,7 +24,7 @@ export default ({ data, pathContext: { authorId } }) => {
 
 export const query = graphql`
   query AuthorsBlogs($authorId: [String]) {
-    allBlog (filter: { frontmatter: { authors: {  in: $authorId } } }) {
+    allBlog (sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { date: { ne: null }, authors: {  in: $authorId } } }) {
       edges {
         node {
           id

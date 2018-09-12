@@ -32,7 +32,7 @@ export default class Authors extends React.Component {
 
 export const query = graphql`
   query CategoriesBlogs($categoryId: [String]) {
-    allBlog (filter: { frontmatter: { category: {  in: $categoryId } } }) {
+    allBlog (sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { date: { ne: null }, category: {  in: $categoryId } } }) {
       edges {
         node {
           id

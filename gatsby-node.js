@@ -10,7 +10,9 @@ const html = require('remark-html')
 const algoliasearch = require('algoliasearch')
 const authors = require('./src/constants/generated-authors.json')
 const categories = require('./src/constants/generated-categories.json')
+const highlightedBlogs = require('./src/constants/highlighted-blogs.json')
 const blogsPerPage = 5
+const highlightedBlogsRegEx = new RegExp(highlightedBlogs.join("|"), 'gi')
 
 var client = algoliasearch('V3VM7IN3TH', '9a3c539ada1e49ee00b670534c9c605f');
 var index = client.initIndex('dev_BLOG_SEARCH');
@@ -85,6 +87,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           context: {
             limit: 5,
             start: i,
+            highlightedBlogsRegEx,
           }
         })
       }

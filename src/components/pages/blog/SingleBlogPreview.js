@@ -40,7 +40,7 @@ export default ({ id, frontmatter }) => {
           >
             {
               categoryIds.map((categoryId, index) => (
-                <React.Fragment>
+                <React.Fragment key={`${id}-${categoryId}`}>
                   <BlockLink to={getCategoryLink(categoryId)}>
                     { getCategoryNameById(categoryId) }
                   </BlockLink>

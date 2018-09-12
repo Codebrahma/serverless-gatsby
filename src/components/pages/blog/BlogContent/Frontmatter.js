@@ -6,13 +6,9 @@ import {
   Row,
   Image,
 } from 'serverless-design-system/src'
-import { BlockLink, LinkWithoutStyle } from 'src/components'
-import {
-  getCategoryLink,
-  getCategoryNameById,
-  getAuthorById,
-  getAuthorLink,
-} from 'src/utils/blog'
+import { BlockLink } from 'src/components'
+import { getAuthorById, getAuthorLink } from 'src/utils/blog'
+import Categories from '../Categories'
 
 const WrittenByText = ({ children }) => (
   <Text
@@ -23,21 +19,6 @@ const WrittenByText = ({ children }) => (
   >
     { children }
   </Text>
-)
-
-const CategoryDetail = ({ id, renderComma }) => (
-  <React.Fragment>
-    <Text.span
-      fontFamily="Serverless"
-      fontSize={1}
-      opacity={0.4}
-    >
-      <LinkWithoutStyle to={getCategoryLink(id)}>
-        { getCategoryNameById(id) }
-      </LinkWithoutStyle>
-      { renderComma ? (<React.Fragment>,&nbsp;</React.Fragment>) : '' }
-    </Text.span>
-  </React.Fragment>
 )
 
 export default ({ frontmatter }) => {
@@ -51,17 +32,7 @@ export default ({ frontmatter }) => {
       my={[1, 1, 4]}
       alignItems="center"
     >
-      <Row my={25}>
-        {
-          categoryIds.map((id, index) => (
-            <CategoryDetail
-              key={id}
-              id={id}
-              renderComma={index !== categoryIds.length-1}
-            />
-          ))
-        }
-      </Row>
+      <Categories categoryIds={categoryIds} />
       <Heading.h1
         fontSize={[4, 4, 4, 7]}
         fontFamily="SoleilBk"

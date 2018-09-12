@@ -16,10 +16,11 @@ import {
   getBlogLink,
   getAuthorLink
 } from 'src/utils/blog'
+import Categories from '../Categories'
 
 const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) => {
   const author = getAuthorInfo({ frontmatter })
-  const { category, title, description } = frontmatter
+  const { category: categoryIds, title, description } = frontmatter
 
   return (
     <Box width={1}>
@@ -57,30 +58,15 @@ const Item = ({ theme, id, frontmatter, numSlides, goToSlide, currentSlide }) =>
           flexDirection="column"
           width={[1, 1, 1, 0.65]}
           m="auto"
+          mt={4}
         >
-          <BlockLink to={getCategoryLink(category)}>
-            <Box
-              width={1}
-              pt={3}
-              pb={1}
-            >
-              <Text.p
-                fontSize={[2, 2, 2, 1]}
-                opacity={0.4}
-                lineHeight={1}
-                letterSpacing="text"
-                align="center"
-              >
-                { getCategoryNameById(category) }
-              </Text.p>
-            </Box>
-          </BlockLink>
+          <Categories categoryIds={categoryIds} />
           <BlockLink to={getBlogLink(id)}>
             <Heading.h2
               fontFamily="SoleilBk"
               fontSize={[4, 4, 5, 7]}
               align="center"
-              lineHeight={[3, 3, 2, 0]}
+              lineHeight={[3, 3, 2, 1]}
             >
               { title }
             </Heading.h2>

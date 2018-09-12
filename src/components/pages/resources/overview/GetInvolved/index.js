@@ -1,26 +1,12 @@
 import React from 'react'
-import { Box, Button } from 'serverless-design-system/src'
+import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
-import { NavLink } from 'src/components'
+import { resources } from 'src/constants/urls'
+import Action from './Action'
 import resourcesOverviewBlog from 'src/assets/images/icon-blog.svg'
 import resourcesOverviewForum from 'src/assets/images/icon-forum.svg'
 import resourcesOverviewMeetup from 'src/assets/images/icon-meetup.svg'
 import resourcesOverviewWorkshop from 'src/assets/images/icon-workshop.svg'
-import { resources } from 'src/constants/urls'
-
-const Action = ({ name, link, options = {} }) => (
-  <NavLink
-    to={link}
-    {...options}
-  >
-    <Button>{name}</Button>
-  </NavLink>
-)
-
-Action.defaultProps = {
-  name: 'learn more',
-  options: { completed: true },
-}
 
 const featureItemsData = [
   {

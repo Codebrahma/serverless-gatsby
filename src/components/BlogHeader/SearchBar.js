@@ -114,6 +114,21 @@ class SearchBar extends React.Component {
                   border={`1px solid ${borderColor}`}
                   width={1}
                 >
+                  <BlockLink
+                    key={`category-tab-all`}
+                    to="/blog"
+                  >
+                    <InlineBlock px={[1, 1, "5px", 1]}>
+                      <LinkText
+                        fontSize={[1, 1, 0, 1]}
+                        fontFamily="Serverless"
+                        lineHeight={1}
+                        color="white"
+                      >
+                        all
+                      </LinkText>
+                    </InlineBlock>
+                  </BlockLink>
                   {
                     Object.keys(CategoriesData).map((tab, index) => (
                       <BlockLink

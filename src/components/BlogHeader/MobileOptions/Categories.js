@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Box, Flex, Text } from 'serverless-design-system/src'
 import BlogNavbarContext from '../BlogNavbarContext'
+import CategoriesData from 'src/constants/generated-categories.json'
+import { getCategoryNameById } from 'src/utils/blog'
 
 const Category = ({ children, link }) => (
   <Box py={1}>
@@ -27,11 +29,16 @@ export default () => (
             flexDirection="column"
             py={3}
           >
-            <Category link={'/category/application-development'}>application development</Category>
-            <Category link={'/category/operations-and-observability'}>operations & observability</Category>
-            <Category link={'/category/guides-and-tutorials'}>guides & tutorials</Category>
-            <Category link={'/category/engineering-culture'}>engineering culture</Category>
-            <Category link={'/category/news'}>news</Category>
+            <Category link={`/blog`}>
+              all
+            </Category>
+            {
+              Object.keys(CategoriesData).map((key) => (
+                <Category link={`/category/${key}`}>
+                  { getCategoryNameById(key) }
+                </Category>
+              ))
+            }
             <Box pt={3}>
               <Link to="/">
                 <Text.p

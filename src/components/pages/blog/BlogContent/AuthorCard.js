@@ -25,7 +25,7 @@ export default ({ author }) => (
   >
     <Relative zIndex={-2}>
       <Image
-        src={author.avatar}
+        src={(author.avatar || '').replace("140", "280")}
         height={['auto', 'auto', 'auto', 177]}
         width={[55, 55, 55, 177]}
         objectFit="contain"

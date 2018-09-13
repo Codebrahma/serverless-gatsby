@@ -32,7 +32,7 @@ class AutoComplete extends React.Component {
     return (
       <Relative width={1}>
         <TextField
-          py={16}
+          py={17.5}
           px={40}
           border={`1px solid white`}
           bg="transparent"

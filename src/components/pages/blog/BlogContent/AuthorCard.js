@@ -20,7 +20,7 @@ export default ({ author }) => (
   <PointableRow
     width={[1, 1, 1, 0.65]}
     mx="auto"
-    mt={4}
+    pt={[4, 4, 5, 6]}
     onClick={() => push(getAuthorLink(author.id))}
   >
     <Relative zIndex={-2}>

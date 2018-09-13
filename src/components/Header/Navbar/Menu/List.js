@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Box, Button } from 'serverless-design-system/src'
 
 import MenuTitle from './Title'
@@ -63,7 +62,7 @@ const EnterpriseMenu = () => (
 )
 
 const SignupMenu = () => (
-  <Box>
+  <Box pt={[2, 2, 0]} pl={[1, 1, 0]}>
     <NavLink to={signup} crossDomain>
       <Button fontSize={'1.5rem'} px={2} py={'16px'} width='auto'>
         sign up

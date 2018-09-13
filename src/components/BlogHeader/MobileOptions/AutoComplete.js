@@ -49,6 +49,7 @@ class AutoComplete extends React.Component {
           fontFamily="Serverless"
           height={24}
           onChange={this.onQueryChange}
+          autoFocus
         />
 
         {

@@ -43,6 +43,7 @@ class AutoComplete extends React.Component {
           opacity={0.6}
           color="white"
           onChange={this.onQueryChange}
+          autoFocus
         />
 
         {

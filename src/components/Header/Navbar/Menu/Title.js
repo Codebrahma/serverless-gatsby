@@ -20,6 +20,7 @@ const TitleWrapperWithLeadingSlash = withBeforeAfter(
   `,
   ``,
   `
+    cursor: pointer;
     position: relative;
 
     &:hover {

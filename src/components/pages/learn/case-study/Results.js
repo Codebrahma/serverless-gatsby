@@ -6,7 +6,7 @@ import {
 } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { TitleWithIcon } from 'src/fragments'
-import learnCasestudyResults from 'src/assets/images/learn-results.svg'
+import learnCasestudyResults from 'src/assets/images/learn-results.png'
 
 const Results = () => (
   <AppContainer>

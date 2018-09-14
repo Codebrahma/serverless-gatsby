@@ -7,6 +7,7 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
+import { HeadingWithMaxWidth } from 'src/fragments'
 import autoScalingIcon from 'src/assets/images/icon-vol.svg'
 import payPerExecutionIcon from 'src/assets/images/icon-graph.svg'
 import lowOverheadIcon from 'src/assets/images/icon-dash.svg'
@@ -42,16 +43,11 @@ const EachBenefit = ({ img, title, description }) => (
 const HomeBenefits = () => (
   <AppContainer>
     <Box mx={2} mt={7}>
-      <Heading.h2
-        align='center'
-        fontFamily={'SoleilSb'}
-        fontSize={[5, 5, 6]}
-        lineHeight={1.63}
-      >
+      <HeadingWithMaxWidth>
         Build more, manage less.
         <br />
         Serverless lets you focus on driving business value.
-      </Heading.h2>
+      </HeadingWithMaxWidth>
     </Box>
     <Heading.h4
       fontFamily={'SoleilBk'}

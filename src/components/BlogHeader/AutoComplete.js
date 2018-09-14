@@ -69,9 +69,11 @@ class AutoComplete extends React.Component {
         {
           this.state.query && (
             <Absolute
-              top={48}
-              width={1}
+              top={52}
+              left={0}
+              right={0}
               zIndex={2}
+              style={{ maxHeight: '60vh', overflowY: 'scroll', paddingBottom: '5vh' }}
             >
               <Card border="1px solid #f7f7f7">
                 {

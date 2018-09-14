@@ -42,9 +42,14 @@ const EachBenefit = ({ img, title, description }) => (
 const HomeBenefits = () => (
   <AppContainer>
     <Box mx={2} mt={7}>
-      <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[5, 5, 6]}>
+      <Heading.h2
+        align='center'
+        fontFamily={'SoleilSb'}
+        fontSize={[5, 5, 6]}
+        lineHeight={1.63}
+      >
         Build more, manage less.
-        <br /><br />
+        <br />
         Serverless lets you focus on driving business value.
       </Heading.h2>
     </Box>

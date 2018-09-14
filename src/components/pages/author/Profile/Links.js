@@ -15,7 +15,7 @@ import {
 } from 'src/utils/links'
 
 import linkIcon from 'src/assets/images/link.svg'
-import twitterIcon from 'src/assets/images/twitter.svg'
+import twitterIcon from 'src/assets/images/twitter-black.svg'
 import githubIcon from 'src/assets/images/github.svg'
 import mediumIcon from 'src/assets/images/medium.svg'
 

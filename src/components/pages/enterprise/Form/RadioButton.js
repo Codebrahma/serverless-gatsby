@@ -5,14 +5,17 @@ import unCheckedRadio from 'src/assets/images/unchecked-radio.png'
 
 export default styled(RadioButton)`
   appearance: none;
+  height: 18px;
+  width: 18px;
+  margin-top: 2px;
 
   &:before {
     content: "";
     display: inline-block;
-    margin-top: 2px;
-    margin-left: -2px;
-    width: 18px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
+    margin-left: -2px
+    margin-top: -2px;
     background-position: center;
     background-size: contain;
     background-image: url(${unCheckedRadio});

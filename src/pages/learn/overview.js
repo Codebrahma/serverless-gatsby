@@ -7,8 +7,8 @@ import Hero from 'src/components/pages/learn/overview/Hero'
 import Explanation from 'src/components/pages/learn/overview/Explanation'
 import ServerlessAppBenefits from 'src/components/pages/learn/overview/AppBenefits'
 import ServerlessFrameworkBenefits from 'src/components/pages/learn/overview/FrameworkBenefits'
-import AboutServerlessFramework from 'src/components/pages/learn/overview/AboutServerlessFramework'
 import GetStarted from 'src/components/pages/learn/overview/GetStarted'
+import AdditionalFeatures from 'src/components/pages/learn/overview/AdditionalFeatures'
 
 import { Divider } from 'src/fragments'
 
@@ -18,9 +18,9 @@ const Overview = () => (
     <Explanation />
     <GetStarted />
     <ServerlessAppBenefits />
+    <ServerlessFrameworkBenefits />
     <Divider />
-    <AboutServerlessFramework />
-    <ServerlessFrameworkBenefits/>
+    <AdditionalFeatures />
   </DefaultLayout>
 )
 

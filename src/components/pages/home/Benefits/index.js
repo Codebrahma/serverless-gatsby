@@ -7,9 +7,10 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
-import autoScalingIcon from 'src/assets/images/icon-vol.png'
-import payPerExecutionIcon from 'src/assets/images/icon-graph.png'
-import lowOverheadIcon from 'src/assets/images/icon-dash.png'
+import { HeadingWithMaxWidth } from 'src/fragments'
+import autoScalingIcon from 'src/assets/images/icon-vol.svg'
+import payPerExecutionIcon from 'src/assets/images/icon-graph.svg'
+import lowOverheadIcon from 'src/assets/images/icon-dash.svg'
 
 const cardList = [
   {
@@ -42,11 +43,11 @@ const EachBenefit = ({ img, title, description }) => (
 const HomeBenefits = () => (
   <AppContainer>
     <Box mx={2} mt={7}>
-      <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[5, 5, 6]}>
+      <HeadingWithMaxWidth>
         Build more, manage less.
-        <br /><br />
+        <br />
         Serverless lets you focus on driving business value.
-      </Heading.h2>
+      </HeadingWithMaxWidth>
     </Box>
     <Heading.h4
       fontFamily={'SoleilBk'}

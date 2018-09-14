@@ -8,11 +8,11 @@ import {
   ImageList,
 } from 'serverless-design-system/src'
 
-import google from 'src/assets/images/cloudGoogle.png'
-import azure from 'src/assets/images/cloudAzure.png'
-import aws from 'src/assets/images/cloudAWS.png'
-import ibm from 'src/assets/images/cloudIBM.png'
-import kubernetes from 'src/assets/images/cloudKubernetes.png'
+import google from 'src/assets/images/cloud-google.svg'
+import azure from 'src/assets/images/cloud-azure.svg'
+import aws from 'src/assets/images/cloud-aws.svg'
+import ibm from 'src/assets/images/cloud-ibm.svg'
+import kubernetes from 'src/assets/images/cloud-kubernetes.svg'
 
 const CloudProvidersList = [
   { src: google, altText: 'google' },
@@ -24,10 +24,15 @@ const CloudProvidersList = [
 
 const CloudProviders = () => (
   <Box width={1}>
-    <Box px={15} width={1}>
+    <Box px={[0, 0, 15]} width={1}>
       <Flex.verticallyCenter flexDirection='column'>
         <Box>
-          <P fontSize={2} color='gray.3'>
+          <P
+            fontSize={3}
+            color='gray.3'
+            lineHeight={3}
+            letterSpacing="h6"
+          >
             Supports Top Cloud Providers
           </P>
         </Box>
@@ -39,8 +44,8 @@ const CloudProviders = () => (
           boxSizing='border-box'
         >
           <ImageList
-            maxHeight={['41px', '41px', '41px', '60px']}
-            maxWidth={['80%', '80%', '60%', '80%', '100%']}
+            maxHeight={['50px', '50px', '50px', '60px']}
+            maxWidth={['100%', '100%', '80%', '80%', '100%']}
             list={CloudProvidersList}
           />
         </ResponsiveStack.verticallyCenter>

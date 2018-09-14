@@ -6,12 +6,12 @@ import {
 
 const LeftSection = () => (
   <Column
-    width={[1, 1, 0.65]}
+    width={[1, 1, 0.55]}
     pt={2}
     color='white'
   >
     <Text.p
-      fontSize={[7, 7, 7, 8]}
+      fontSize={[6, 6, 7, 8]}
       fontFamily="Soleil"
       lineHeight={1}
       letterSpacing={'-0.2'}

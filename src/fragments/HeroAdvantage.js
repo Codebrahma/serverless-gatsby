@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { Column, Flex, P, TextWithIcon, Text } from 'serverless-design-system/src'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
 
 const HeroAdvantage = ({ title, description }) => (
   <Column width={[1, 1, 1 / 3]} px={2} mt={2}>
@@ -13,7 +13,7 @@ const HeroAdvantage = ({ title, description }) => (
         iconWidth='45px'
         iconTop='-5px'
         iconLeft='-10px'
-        backgroundSize='initial'
+        backgroundSize='cover'
       >
         <Text.span
           color='white'

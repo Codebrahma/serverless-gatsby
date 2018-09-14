@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="592" height="419" viewBox="0 0 592 419">
+    <defs>
+        <linearGradient id="a" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" stroke="url(#a)" d="M.5.5h344v327H.5z"/>
+        <path stroke="url(#a)" d="M.5.5h344v47H.5z"/>
+        <g transform="translate(16 17)">
+            <circle cx="6" cy="6" r="6" stroke="url(#b)"/>
+            <circle cx="30" cy="6" r="6" stroke="url(#b)"/>
+            <circle cx="54" cy="6" r="6" stroke="url(#b)"/>
+            <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+                <tspan x="254" y="12">terminal</tspan>
+            </text>
+        </g>
+        <text fill="#8C8C8C" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="84"># Install serverless globally</tspan>
+        </text>
+        <text fill="#8C8C8C" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="132"># Login to your Serverless account</tspan>
+        </text>
+        <text fill="#8C8C8C" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="180"># Create a serverless function</tspan>
+        </text>
+        <text fill="#8C8C8C" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="228"># Deploy to cloud provider</tspan>
+        </text>
+        <text fill="#8C8C8C" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="276"># Function deployed! Trigger with live URL</tspan>
+        </text>
+        <text fill="#000" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="102">$ npm install serverless -g</tspan>
+        </text>
+        <text fill="#000" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="150">$ serverless login</tspan>
+        </text>
+        <text fill="#000" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="198">$ serverless create --template hello-world</tspan>
+        </text>
+        <text fill="#000" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="246">$ serverless deploy</tspan>
+        </text>
+        <text fill="#000" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="16" y="294">$ http://xyz.amazonaws.com/hello-world</tspan>
+        </text>
+        <g>
+            <path fill="#FFF" stroke="url(#a)" d="M.5.5h344v335H.5z" transform="translate(247 83)"/>
+            <path stroke="url(#a)" d="M.5.5h344v47H.5z" transform="translate(247 83)"/>
+            <path fill="#FD5750" fill-opacity=".05" stroke="url(#a)" d="M.5 47.5h47v288H.5z" transform="translate(247 83)"/>
+            <g transform="translate(263 100)">
+                <circle cx="6" cy="6" r="6" stroke="url(#b)"/>
+                <circle cx="30" cy="6" r="6" stroke="url(#b)"/>
+                <circle cx="54" cy="6" r="6" stroke="url(#b)"/>
+                <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+                    <tspan x="282" y="12">yaml</tspan>
+                </text>
+            </g>
+            <text fill="#8C8C8C" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5" transform="translate(247 83)">
+                <tspan x="24.3" y="84">1</tspan> <tspan x="24.3" y="98">2</tspan> <tspan x="24.3" y="112">3</tspan> <tspan x="24.3" y="126">4</tspan> <tspan x="24.3" y="140">5</tspan> <tspan x="24.3" y="154">6</tspan> <tspan x="24.3" y="168">7</tspan> <tspan x="24.3" y="182">8</tspan> <tspan x="24.3" y="196">9</tspan> <tspan x="16.6" y="210">10</tspan> <tspan x="16.6" y="224">11</tspan> <tspan x="16.6" y="238">12</tspan> <tspan x="16.6" y="252">13</tspan> <tspan x="16.6" y="266">14</tspan> <tspan x="16.6" y="280">15</tspan> <tspan x="16.6" y="294">16</tspan> <tspan x="16.6" y="308">17</tspan>
+            </text>
+            <text font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5" transform="translate(311 153)">
+                <tspan x="0" y="12" fill="#7B1979">name:</tspan> <tspan x="34.9" y="12" fill="#000"> </tspan> <tspan x="39.6" y="12" fill="#009600">app-a</tspan>  <tspan x="0" y="26" fill="#7B1979">version:</tspan> <tspan x="53.692" y="26" fill="#000"> </tspan> <tspan x="58.392" y="26" fill="#009600">‘0.0.1’</tspan>  <tspan x="0" y="40" fill="#7B1979">license:</tspan> <tspan x="52.6" y="40" fill="#000"> </tspan> <tspan x="57.3" y="40" fill="#009600">MIT</tspan>  <tspan x="0" y="54" fill="#9C1200">#description: sample yaml</tspan>  <tspan x="0" y="68" fill="#7B1979">functions:</tspan>  <tspan x="0" y="82" fill="#7B1979"> myFunction:</tspan>  <tspan x="0" y="96" fill="#7B1979"> name:</tspan> <tspan x="53.7" y="96" fill="#000"> </tspan> <tspan x="58.4" y="96" fill="#009600">myFunction</tspan>  <tspan x="0" y="110" fill="#7B1979"> handler:</tspan> <tspan x="74.4" y="110" fill="#000"> </tspan> <tspan x="79.1" y="110" fill="#009600">handler.js:helloWorld</tspan>  <tspan x="0" y="124" fill="#7B1979"> source:</tspan> <tspan x="65.02" y="124" fill="#000"> </tspan> <tspan x="69.72" y="124" fill="#009600">./</tspan>  <tspan x="0" y="138" fill="#7B1979"> memory:</tspan> <tspan x="70.42" y="138" fill="#000"> </tspan> <tspan x="75.12" y="138" fill="#007879">512</tspan>  <tspan x="0" y="152" fill="#7B1979"> runtime:</tspan> <tspan x="74.04" y="152" fill="#000"> </tspan> <tspan x="78.74" y="152" fill="#009600">node@6.10</tspan>   <tspan x="0" y="180" fill="#7B1979"> events:</tspan>  <tspan x="0" y="194" fill="#000"> </tspan> <tspan x="28" y="194" fill="#009600">—</tspan> <tspan x="35.7" y="194" fill="#000"> </tspan> <tspan x="40.4" y="194" fill="#7B1979">type:</tspan> <tspan x="73.98" y="194" fill="#000"> </tspan> <tspan x="78.68" y="194" fill="#009600">http</tspan>  <tspan x="0" y="208" fill="#7B1979"> path:</tspan> <tspan x="76.12" y="208" fill="#000"> </tspan> <tspan x="80.82" y="208" fill="#009600">/integration</tspan>  <tspan x="0" y="222" fill="#7B1979"> config:</tspan>  <tspan x="0" y="236" fill="#7B1979"> method:</tspan> <tspan x="102.12" y="236" fill="#000"> </tspan> <tspan x="106.82" y="236" fill="#009600">GET</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

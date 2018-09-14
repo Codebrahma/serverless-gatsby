@@ -7,20 +7,21 @@ import background from 'src/assets/images/comparisons-background.png'
 
 const UseCasesHero = () => (
   <HeroWrapper
-    background={`url(${background})`}
-    backgroundSize="contain"
+    background={`black url(${background})`}
+    backgroundSize="cover"
+    backgroundPosition="center"
   >
     <Box mb={[2, 2, 7]}>
       <HeroTabs selected="comparisons" />
     </Box>
 
     <ResponsiveStack
-      mb={7}
+      mb={[2, 2, 4, 7]}
       color="white"
     >
       <Box width={[1, 1, 1/2]}>
         <Text.p
-          fontSize={[7, 7, 7, 8]}
+          fontSize={[6, 6, 7, 8]}
           fontFamily="Soleil"
           lineHeight={1}
           letterSpacing={'-0.2'}

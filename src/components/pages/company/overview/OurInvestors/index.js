@@ -12,7 +12,7 @@ import investorHeavyBit from 'src/assets/images/heavybit.png'
 
 const OurInvestors= () => (
   <AppContainer>
-    <Column px={3}>
+    <Column px={3} pt={[6, 6, 4, 2]}>
       <Flex.center>
         <TitleWithIcon>
           Our Investors
@@ -24,7 +24,7 @@ const OurInvestors= () => (
           flexWrap='wrap'
           width={[1, 1, 2/3, 2/3, 1/2]}
           justifyContent="space-between"
-          my={5}
+          my={[1, 1, 2, 4, 5]}
         >
           <Column m={[2, 2, 0]} alignItems="center">
             <Image src={investorTrinity} alt='trinity' height='63px' />

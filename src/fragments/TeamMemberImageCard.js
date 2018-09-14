@@ -12,13 +12,13 @@ import dotGridVertical from 'src/assets/images/dot-grid-vertical.png'
 
 const TeamMemberImageCard = ({ name, position, image }) => (
   <Relative
-    mt={4}
+    mt={[1, 1, 1, 4]}
     mx={[0, 1, '14px']}
-    width="176px"
+    width={[125, 125, 176]}
   >
     <Image
       src={image}
-      height='176px'
+      height={[125, 125, 176]}
       width={1}
     />
     <Column
@@ -53,8 +53,8 @@ const TeamMemberImageCard = ({ name, position, image }) => (
       zIndex={1}
     >
       <Background
-        height="152px"
-        width="20px"
+        height={[120, 120, 152]}
+        width={[18, 18, 20]}
         background={`url(${dotGridVertical})`}
         backgroundSize="cover"
       />

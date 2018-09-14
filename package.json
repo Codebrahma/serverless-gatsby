@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "algoliasearch": "^3.30.0",
     "babel-eslint": "^8.2.6",
     "eslint": "^5.3.0",
     "eslint-loader": "^2.1.0",
@@ -20,7 +21,10 @@
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-sharp": "^1.6.27",
     "react-helmet": "^5.2.0",
+    "react-instantsearch-dom": "^5.2.3",
+    "remark-highlight.js": "^5.0.0",
     "styled-components": "^3.3.3",
+    "url": "^0.11.0",
     "url-loader": "^1.0.1"
   },
   "keywords": [
@@ -32,12 +36,29 @@
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint ./src/ --ext .js --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:blog": "node scripts/blog/watch.js",
+    "components": "npm run transpile -- --watch",
+    "prepareContent": "node scripts/blog",
+    "dev": "npm run prepareContent && gatsby develop",
+    "syncLocal": "npm run postinstall",
+    "syncProd": "npm run syncProd:Blog",
+    "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
+    "prebuild": "npm run prepareContent"
   },
   "devDependencies": {
+    "async": "^2.6.1",
+    "download": "^7.1.0",
+    "fs-extra": "^7.0.0",
     "gatsby-plugin-root-import": "^1.0.0",
+    "gray-matter": "^4.0.1",
+    "node-dir": "^0.1.17",
     "prettier": "^1.13.7",
-    "react-masonry-css": "^1.0.11"
+    "react-masonry-css": "^1.0.11",
+    "remark-html": "^8.0.0",
+    "remark-parse": "^5.0.0",
+    "unified": "^7.0.0",
+    "yamljs": "^0.3.0"
   },
   "repository": {
     "type": "git",

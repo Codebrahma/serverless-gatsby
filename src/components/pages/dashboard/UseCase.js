@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { UseCases } from 'src/fragments'
-import dashboardIllustration1 from 'src/assets/images/illustration-use-case-1.png'
-import dashboardIllustration2 from 'src/assets/images/illustration-use-case-2.png'
-import dashboardIllustration3 from 'src/assets/images/illustration-use-case-3.png'
+import dashboardIllustration1 from 'src/assets/images/dashboard-use-case-1.svg'
+import dashboardIllustration2 from 'src/assets/images/dashboard-use-case-2.svg'
+import dashboardIllustration3 from 'src/assets/images/dashboard-use-case-3.svg'
 
 const cases = [
   {

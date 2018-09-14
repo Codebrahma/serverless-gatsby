@@ -4,8 +4,9 @@ import {
   Background,
   Column,
   Container,
-  SecondaryButton,
   Text,
+  Heading,
+  TertiaryButton,
 } from 'serverless-design-system/src'
 
 import learnOverviewGetStartedBg from 'src/assets/images/learnOverviewGetStarted.png'
@@ -21,23 +22,34 @@ const GetStarted = () => (
           justifyContent='center'
           alignItems='center'
           minHeight="280px"
+          width={[1, 1, 1, 0.65]}
           px={25}
-          pb={4}
+          py={4}
+          m="auto"
         >
+          <Heading.h2
+            align="center"
+            fontFamily="SoleilSb"
+            lineHeight="1.4"
+            color="white"
+            m={0}
+          >
+            The Serverless Platform
+          </Heading.h2>
+
           <Text.p
             align='center'
             color='white'
-            fontSize={5}
             lineHeight={4}
-            letterSpacing={"0.3px"}
-            mt={3}
-            mb={4}
+            letterSpacing="0.3px"
+            mt={1}
+            mb={3}
           >
-            focus on your business logic, not on your servers.
+            The Serverless Platform is a three-part toolkit that enables developers build, operate, and integrate their serverless applications on any cloud provider.
           </Text.p>
-          <SecondaryButton background='white'>
+          <TertiaryButton>
             get started
-          </SecondaryButton>
+          </TertiaryButton>
         </Column>
       </Background>
     </Box>

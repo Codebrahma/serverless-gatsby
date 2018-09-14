@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="62" viewBox="0 0 20 62">
+    <g fill="#FD5750" fill-rule="evenodd">
+        <circle cx="13" cy="1" r="1"/>
+        <circle cx="1" cy="1" r="1"/>
+        <circle cx="19" cy="1" r="1"/>
+        <circle cx="7" cy="1" r="1"/>
+        <circle cx="13" cy="37" r="1"/>
+        <circle cx="13" cy="61" r="1"/>
+        <circle cx="1" cy="37" r="1"/>
+        <circle cx="1" cy="61" r="1"/>
+        <circle cx="19" cy="37" r="1"/>
+        <circle cx="19" cy="61" r="1"/>
+        <circle cx="7" cy="37" r="1"/>
+        <circle cx="7" cy="61" r="1"/>
+        <circle cx="13" cy="19" r="1"/>
+        <circle cx="13" cy="43" r="1"/>
+        <circle cx="1" cy="19" r="1"/>
+        <circle cx="1" cy="43" r="1"/>
+        <circle cx="19" cy="19" r="1"/>
+        <circle cx="19" cy="43" r="1"/>
+        <circle cx="7" cy="19" r="1"/>
+        <circle cx="7" cy="43" r="1"/>
+        <circle cx="13" cy="7" r="1"/>
+        <circle cx="1" cy="7" r="1"/>
+        <circle cx="19" cy="7" r="1"/>
+        <circle cx="7" cy="7" r="1"/>
+        <circle cx="13" cy="25" r="1"/>
+        <circle cx="13" cy="49" r="1"/>
+        <circle cx="1" cy="25" r="1"/>
+        <circle cx="1" cy="49" r="1"/>
+        <circle cx="19" cy="25" r="1"/>
+        <circle cx="19" cy="49" r="1"/>
+        <circle cx="7" cy="25" r="1"/>
+        <circle cx="7" cy="49" r="1"/>
+        <circle cx="13" cy="13" r="1"/>
+        <circle cx="1" cy="13" r="1"/>
+        <circle cx="19" cy="13" r="1"/>
+        <circle cx="7" cy="13" r="1"/>
+        <circle cx="13" cy="31" r="1"/>
+        <circle cx="13" cy="55" r="1"/>
+        <circle cx="1" cy="31" r="1"/>
+        <circle cx="1" cy="55" r="1"/>
+        <circle cx="19" cy="31" r="1"/>
+        <circle cx="19" cy="55" r="1"/>
+        <circle cx="7" cy="31" r="1"/>
+        <circle cx="7" cy="55" r="1"/>
+    </g>
+</svg>

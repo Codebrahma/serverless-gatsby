@@ -10,9 +10,10 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
-import frameworkImage from 'src/assets/images/illustration-1.png'
-import dashboardImage from 'src/assets/images/illustration-2.png'
-import gatewayImage from 'src/assets/images/illustration-3.png'
+import { HeadingWithMaxWidth } from 'src/fragments'
+import frameworkImage from 'src/assets/images/illustration-1.svg'
+import dashboardImage from 'src/assets/images/illustration-2.svg'
+import gatewayImage from 'src/assets/images/illustration-3.svg'
 
 const LearnMoreButton = ({ to }) => (
   <Flex.horizontallyCenter>
@@ -38,19 +39,12 @@ const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
 const PlatformFeatures = () => (
   <AppContainer>
     <Box mx={2} mt={7}>
-      <Heading.h2
-        fontFamily='SoleilSb'
-        align='center'
-        fontSize={[5, 5, 6]}
-        lineHeight={[1, 1, 4]}
-      >
+      <HeadingWithMaxWidth>
         Serverless Platform empowers developers to build & deploy serverless
         applications, on any provider.
-      </Heading.h2>
+      </HeadingWithMaxWidth>
     </Box>
-    <ResponsiveStack.spaceBetween
-      my={[5, 5, 5, 6]}
-    >
+    <ResponsiveStack.spaceBetween my={5}>
       <PlatformFeature
         image={frameworkImage}
         title='Serverless Framework'

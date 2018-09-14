@@ -11,7 +11,8 @@ import CloudProviders from './CloudProviders'
 const FrameworkHero = () => (
   <HeroWrapper
     backgroundImage={`url(${FrameworkPageHeroSectionBackground})`}
-    backgroundSize='contain'
+    backgroundSize="cover"
+    backgroundPosition="center"
   >
     <Header />
     <HeroImage />

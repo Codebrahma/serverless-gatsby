@@ -16,7 +16,9 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'serverless, AWS Lambda' },
       ]}
     />
-    <ThemeProvider theme={theme}>{children()}</ThemeProvider>
+    <ThemeProvider theme={theme}>
+      { children() }
+    </ThemeProvider>
   </Flex>
 )
 

@@ -2,8 +2,6 @@ import React from 'react'
 import {
   Column,
   ResponsiveStack,
-  Heading,
-  TextWithIcon
 } from 'serverless-design-system/src'
 import { AppContainer } from 'src/components'
 import { MeetupCard, TitleWithIcon } from 'src/fragments'
@@ -47,8 +45,8 @@ const meetupData = [
 
 const UpcomingMeetups = () => (
   <AppContainer>
-    <Column alignItems='center' py={5}>
-      <TitleWithIcon>
+    <Column alignItems='center' py={[2, 2, 3, 5]}>
+      <TitleWithIcon fontSize={[4, 4, 6, 7]}>
         Upcoming Meetups
       </TitleWithIcon>
       <ResponsiveStack

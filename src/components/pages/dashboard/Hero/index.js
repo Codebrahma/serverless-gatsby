@@ -10,7 +10,8 @@ import Actions from './Actions'
 const DashboardHero = () => (
   <HeroWrapper
     backgroundImage={`url(${DashboardPageHeroSectionBackground})`}
-    backgroundSize='contain'
+    backgroundSize="cover"
+    backgroundPosition="center"
   >
     <Header />
     <Actions />

@@ -9,8 +9,9 @@ import LearnOverviewBg from 'src/assets/images/learnOverviewBg.png'
 
 const DashboardHero = () => (
   <HeroWrapper
-    backgroundImage={`url(${LearnOverviewBg})`}
-    backgroundSize='contain'
+    background={`black url(${LearnOverviewBg})`}
+    backgroundSize="cover"
+    backgroundPosition="center"
   >
     <Box mb={[2, 2, 6]}>
       <HeroTabs selected="overview" />
@@ -18,7 +19,8 @@ const DashboardHero = () => (
 
     <Flex
       flexDirection={['column', 'column', 'row']}
-      mb={[5, 5, 6]}
+      justifyContent="space-between"
+      mb={[2, 2, 4, 6]}
     >
       <Description />
       <Actions />

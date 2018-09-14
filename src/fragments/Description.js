@@ -18,15 +18,15 @@ const Description = ({ title, descriptions, imgSrc, imageAlignment }) => (
     >
       <AppContainer>
         <Column
-          mt={[5, 5, 5, 2]}
+          mt={2}
           alignItems={ imageAlignment === 'right' ? 'flex-start' : 'flex-end' }
         >
           <Box
             width={[1, 1, 0.45]}
-            pb={[6, 6, 2, 8, '7vw']}
+            pb={[1, 1, 2, 8, '7vw']}
             pt={['95%', '95%', 2, 8, '7vw']}
           >
-            <Box mb={5}>
+            <Box mb={[2, 2, 4, 5]}>
               <TitleWithIcon>
                 { title }
               </TitleWithIcon>

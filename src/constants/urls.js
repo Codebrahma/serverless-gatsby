@@ -31,7 +31,7 @@ export default {
     forum: 'https://forum.serverless.com/',
     meetups: '/resources/meetups/',
     slack:
-      'https://join.slack.com/t/serverless-contrib/shared_invite/enQtMzgxMTkxMzIzNTU3LTY0OGZlYWI2OTI4YTliMWQ0YWNlZGZjMDhkNDAyZGQyZDYwMzYwMTlmNmVmMzMzNmI4YzAyNjg0ZjZkYTdmMzU',
+      'https://join.slack.com/t/serverless-contrib/shared_invite/enQtNDI4MjM3MTIwMTgzLTE3Y2RkOTY1YTY1MTE0ZjA0YTBhYjA2NzNiMGUwODNlYWFjNjE3YTE1OGFjZjFiNmE1NTgzM2NjYzc5ZTNhM2Q',
     workshops: '/resources/workshops',
   },
   company: {

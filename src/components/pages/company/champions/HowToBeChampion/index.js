@@ -47,7 +47,7 @@ const HowToBeChampion = () => (
   <AppContainer>
     <Flex.column pt={[5, 5, 6, 8]}>
       <Flex flexDirection={['column', 'column', 'row']}>
-        <Box width={[1, 1, 0.65]} px={2}>
+        <Box width={[1, 1, 0.65]} px={[0, 0, 0, 2]}>
           <Box mb={[2, 2, 3, 5]}>
             <TitleWithIcon>
               What does it take to become a Serverless Champion?
@@ -81,25 +81,25 @@ const HowToBeChampion = () => (
         <Box
           width={[1, 1, 0.35]}
           mt={[5, 5, 6, 8]}
-          mb={[5, 5, 6, 0]}
+          mb={[2, 2, 3, 0]}
         >
           <RelativeCard
             width={1}
             boxShadow='2px 2px 8px 0 #eaeaea'
             border='1px solid #eaeaea'
-            px={4}
+            px={[2, 2, 2, 4]}
             py={3}
             bg="white"
           >
             <Absolute
               height="fullHeight"
-              width={0.96}
-              top="-50px"
+              width="100vw"
+              top={["-30px", "-30px", "-40px", "-50px"]}
               zIndex={-1}
             >
               <Background
                 background={`url(${benefitsBackground})`}
-                backgroundSize="cover"
+                backgroundSize="contain"
                 height="fullHeight"
                 width={1}
               />

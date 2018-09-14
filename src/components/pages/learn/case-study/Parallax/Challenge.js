@@ -4,7 +4,7 @@ import { TitleWithIcon } from 'src/fragments'
 import Parallax from 'src/assets/images/parallax.png'
 
 const Challenge = () => (
-  <ResponsiveStack mt={[6, 6, 8]}>
+  <ResponsiveStack mt={[4, 4, 5, 8]}>
     <Column
       width={[1, 1, 4/9]}
       order={[3, 3, 1]}

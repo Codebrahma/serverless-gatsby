@@ -1,6 +1,6 @@
 import React from 'react'
 import { ResponsiveStack, HeroAdvantage } from 'serverless-design-system/src'
-import RedRectangeDots from 'src/assets/images/redRectangleDots.png'
+import RedRectangeDots from 'src/assets/images/redRectangleDots.svg'
 
 const advantages = [
   {

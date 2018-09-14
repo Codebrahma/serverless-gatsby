@@ -10,9 +10,9 @@ import { TitleWithIcon } from 'src/fragments'
 const OurStory = () => (
   <AppContainer>
     <ResponsiveStack
-      px={3}
-      mt={10}
-      mb={6}
+      px={[0, 0, 0, 1, 3]}
+      mt={[5, 5, 6, 10]}
+      mb={[2, 2, 3, 6]}
     >
       <Column
         width={[1, 1, 1/3]}
@@ -23,7 +23,7 @@ const OurStory = () => (
         </TitleWithIcon>
       </Column>
       <Column width={[1, 1, 2/3]}>
-        <P>
+        <P mt={0}>
           In 2015 when we released the Serverless Framework open source project, we had no idea what the serverless movement would become, or how fast it would grow.
         </P>
         <P>

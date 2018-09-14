@@ -1,29 +1,20 @@
 import React from 'react'
 
 import { Description } from 'src/fragments'
-import learnOverviewUsecase1 from 'src/assets/images/learnOverviewUsecase1.png'
-import learnOverviewUsecase2 from 'src/assets/images/learnOverviewUsecase2.png'
+import serverlessMovement from 'src/assets/images/learn-serverless-movement.png'
 
 const data = [
   {
     title: 'The Serverless Movement',
     descriptions: [
-      'Serverless has become a movement about developer empowerment. As a technology, it abstracts away the most menial parts of building an application, leaving you free to actually spend your days coding.',
-      'What this means is that you, the developer, can rapidly build apps that handle production-ready traffic. You dont have to actively manage scaling for your applications. You dont have to provision servers, or pay for resources that go unused.',
-      'The technology is still early, but thousands of developers are already proving that serverless can enavle them to launch applications at record speed and cost.',
+      `Serverless abstracts away the most menial parts of building an application, leaving developers free to actually spend their days coding.`,
+      `What this means is that developers can single-handedly build apps that handle production-ready traffic. They don’t have to actively manage scaling for their applications. They don't have to provision servers, or pay for resources that go unused. They can just get projects off the ground with small, agile teams.`,
+      `Thousands of developers are already proving that serverless can enable them to launch applications at record speed and cost. Adoption has been fast, with companies like Coca-cola, Nordstrom, EA, and Expedia touting their number of serverless services in production.`,
+      `Ultimately, serverless is about focusing your efforts on what provides value to users. Upgrading your Linux distro does not provide value to users. Managing your RabbitMQ servers does not provide value to users. Shipping product provides value to users.`,
+      `That is the serverless maxim: focus on business logic, not servers. Serverless has become a movement about faster development and creative empowerment.`,
     ],
-    imgSrc: learnOverviewUsecase1,
+    imgSrc: serverlessMovement,
     imageAlignment: 'right',
-  },
-  {
-    title: 'What makes an application serverless?',
-    descriptions: [
-      'The serverless movement started with release of AWS Lambda, a Function-as-a-Service (FaaS) compute service. But serverless is much more than just FaaS.',
-      'Ultimately, serverless is about focusing your efforts on what provides value to your users. This means using managed services for databases, search indexes, queues, SMS messaging, and email delivery. It means trying these services together using stateless, ephemeral compute like the various Faas offerings.',
-      'Upgrading your Linux distro does not provide value for your users. MAnaging your RabbitMQ servers does not provide value to your users. Shipping product provides value to your users.',
-    ],
-    imgSrc: learnOverviewUsecase2,
-    imageAlignment: 'left',
   },
 ]
 

@@ -21,7 +21,7 @@ const ContactSection = ({ title, contents }) => (
   <Column
     width={[1, 1, 4/10, 22/100]}
     my={2}
-    mx={1}
+    mx={[0, 0, 1]}
     alignItems={['center', 'center', 'flex-start']}
   >
     <Heading.h4
@@ -37,15 +37,17 @@ const ContactSection = ({ title, contents }) => (
 
 const OurStory = () => (
   <AppContainer>
-    <Column px={3} pt={8} pb={[300, 300, 14]}>
-      <Box>
+    <Column px={[1, 1, 2, 3]} pt={[4, 4, 4, 8]} pb={[300, 300, 14]}>
+      <Column alignItems={['center', 'center', 'flex-start']}>
         <TitleWithIcon>Contact Us</TitleWithIcon>
-      </Box>
+      </Column>
       <Box>
         <Text.p
           fontFamily="SoleilLt"
-          fontSize={4}
+          fontSize={[3, 3, 4]}
           lineHeight={4}
+          align={['center', 'center', 'left']}
+          mt={0}
         >
           We’d love to hear from you.
           <br />

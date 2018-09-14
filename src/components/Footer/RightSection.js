@@ -46,13 +46,17 @@ const Subscribe = () => (
         placeholder='email address'
         px={[1, 1, 1]}
         py={2}
+        m={0}
         width={[1, 1, 0.6]}
-        boxSizing='border-box'
+        borderRadius={0}
+        fontFamily="Serverless"
+        placeholderColor="white"
       />
       <Button
         width={['35%', '35%', '40%']}
         px={[0, 0, 1]}
         py={2}
+        m={0}
         textAlign='center'
         border={0}
         fontSize={2}

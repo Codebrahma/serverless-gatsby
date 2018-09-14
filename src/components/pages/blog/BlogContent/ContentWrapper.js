@@ -84,6 +84,18 @@ const ContentWrapper = styled(Column)`
         top: 0;
       }
     }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+    }
+  }
+
+  @media screen and (max-width: 412px) {
+    iframe {
+      width: 100%;
+      height: auto;
+    }
   }
 `
 
@@ -91,15 +103,18 @@ export default class BlogWrapper extends React.Component {
   componentDidMount() {
     const domNode = ReactDOM.findDOMNode(this.ref)
     domNode.querySelectorAll("a > img").forEach((node) => {
-      const { parentNode } = node;
-      parentNode.style.border = 0;
-      parentNode.style.display = node.style.display = 'block';
-      node.style.margin = 'auto';
+      const { parentNode } = node
+      parentNode.style.border = 0
+      parentNode.style.display = node.style.display = 'block'
+      node.style.margin = 'auto'
     })
-
+    domNode.querySelectorAll("iframe").forEach((node) => {
+      node.style.display = 'block'
+      node.style.margin = 'auto'
+    })
     domNode.querySelectorAll("code.hljs").forEach((code) => {
       let number = 1;
-      const zero = `<a class="line">${number++}</a>`;
+      const zero = `<a class="line">${number++}</a>`
       code.innerHTML = zero + code.innerHTML.replace(/\n/g, () => (
         `\n<a class="line">${number++}</a>`
       ))

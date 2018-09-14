@@ -37,7 +37,8 @@ export default class Carousel extends React.Component {
                 width={1}
                 style={{
                   transition: "opacity 1s ease-in-out",
-                  opacity: index === currentIndex ? 1 : 0
+                  opacity: index === currentIndex ? 1 : 0,
+                  zIndex: index === currentIndex ? 0 : -1
                 }}
               >
                 { child }

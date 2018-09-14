@@ -4,7 +4,7 @@ import { Features } from 'src/fragments'
 import minimumConfiguration from 'src/assets/images/icon-logs.svg'
 import robustEcosystem from 'src/assets/images/icon-ecosystem.svg'
 import multiLingual from 'src/assets/images/icon-visualize.svg'
-import cloudAgnostic from 'src/assets/images/icon-dash.svg'
+import cloudAgnostic from 'src/assets/images/icon-dash-light.svg'
 
 const featureItemsData = [
   {

@@ -29,7 +29,7 @@ const Profile = ({ author }) => (
       >
         <Bio
           authorName={author.name}
-          bio={author.bio.long}
+          bio={author.bio.long || author.bio.short}
         />
       </Column>
     </ResponsiveStack>

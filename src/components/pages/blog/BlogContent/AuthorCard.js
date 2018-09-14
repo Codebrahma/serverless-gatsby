@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { push } from 'gatsby-link'
 import {
   Row,
   Relative,
@@ -60,7 +61,7 @@ export default ({ author }) => (
         fontFamily="SoleilBk"
         fontSize={[0, 0, 0, 1]}
       >
-        { author.bio ? author.bio.long : null }
+        { author.bio ? author.bio.short : null }
       </P>
     </Relative>
   </PointableRow>

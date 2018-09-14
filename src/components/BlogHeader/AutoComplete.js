@@ -20,6 +20,12 @@ const Option = styled(Relative)`
   }
 `
 
+const TextFieldWithNoOutline = styled(TextField)`
+  &:focus {
+    outline: none;
+  }
+`
+
 class AutoComplete extends React.Component {
   state = { query: '' }
 
@@ -31,7 +37,7 @@ class AutoComplete extends React.Component {
   render () {
     return (
       <Relative width={1}>
-        <TextField
+        <TextFieldWithNoOutline
           py={17.5}
           px={40}
           border={`1px solid white`}

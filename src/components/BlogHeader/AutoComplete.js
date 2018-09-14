@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { push } from 'gatsby-link'
 import {
   Card,
   Relative,
@@ -9,6 +10,7 @@ import {
 } from 'serverless-design-system/src'
 import { connectAutoComplete } from 'react-instantsearch-dom'
 import { BlockLink } from 'src/components'
+import { getBlogLink } from 'src/utils/blog'
 
 const Option = styled(Relative)`
   background: white;
@@ -26,12 +28,23 @@ const TextFieldWithNoOutline = styled(TextField)`
   }
 `
 
+const ENTER_KEY = 13 // enter key code.
+
 class AutoComplete extends React.Component {
   state = { query: '' }
 
   onQueryChange = ({ target: { value: query } }) =>{
     this.props.refine(query)
     this.setState({ query })
+  }
+
+  onKeyDown = ({ keyCode }) => {
+    if ( keyCode === ENTER_KEY ) {
+      const suggestion = this.props.hits[0]
+      if (suggestion) {
+        push(getBlogLink(suggestion.objectID))
+      }
+    }
   }
 
   render () {
@@ -49,6 +62,7 @@ class AutoComplete extends React.Component {
           opacity={0.6}
           color="white"
           onChange={this.onQueryChange}
+          onKeyDown={this.onKeyDown}
           autoFocus
         />
 
@@ -63,7 +77,7 @@ class AutoComplete extends React.Component {
                 {
                   this.props.hits.map(({ title, description, objectID }) => (
                     <BlockLink
-                      to={`/blog/${objectID}`}
+                      to={getBlogLink(objectID)}
                       key={objectID}
                     >
                       <Option p={15}>
@@ -90,5 +104,7 @@ class AutoComplete extends React.Component {
     )
   }
 }
+
+AutoComplete.defaultProps = { hits: [] }
 
 export default connectAutoComplete(AutoComplete);

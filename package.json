@@ -22,7 +22,6 @@
     "gatsby-transformer-sharp": "^1.6.27",
     "react-helmet": "^5.2.0",
     "react-instantsearch-dom": "^5.2.3",
-    "react-swipeable": "^4.3.0",
     "remark-highlight.js": "^5.0.0",
     "styled-components": "^3.3.3",
     "url": "^0.11.0",

@@ -1,16 +1,14 @@
 import React from 'react'
-
 import { Heading, TextWithIcon } from 'serverless-design-system/src'
-
-import dotGridBackground from 'src/assets/images/dot-grid.png'
+import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
 
 export default ({ children }) => (
   <TextWithIcon
-    iconSrc={dotGridBackground}
+    iconSrc={redRectangleDots}
     iconHeight='35px'
-    iconWidth='60px'
-    iconTop='-10px'
-    iconLeft='-10px'
+    iconWidth='80px'
+    iconTop='-12px'
+    iconLeft='-15px'
   >
     <Heading.h1
       fontFamily="SoleilBk"

@@ -3,6 +3,7 @@ title: 'How Droplr Scales to Millions With The Serverless Framework'
 description: 'Droplr is used to share 1000s of screencasts and files every day. Here''s how they empowered their growth with the Serverless Framework.'
 date: '2017-10-26'
 thumbnail: 'https://avatars2.githubusercontent.com/u/828077?s=400&v=4'
+heroImage: 'https://lh3.googleusercontent.com/HQiXu5X8EMwMB5HEWhjGHGyoWOVBvdtgGVOSoOtClJKXQjh66__BB5ed7ApI_iQyVE18AvBa_vC-blqhWNL_mOlMGaeb0GIEETGQ0fgNxiGUtx-bAMMwZVCFxoKISBx7jg6LAuGYlmhcJC3HspuKJb24edAqzQ4v0-78A9TnMvT0t3wFzwMJBVycxZGOM22hTP1mwCfPcAfZ2ymMF80AKUVNE9LhbemhMhCYlEfL5mh5DK-xId4bhg4yzYW99b6nJ4JR--YDk-Q7YN18ylsVQaRb0VoIXOgz0tpG-eLqPpOLqB8EkQGY9szibyVakF97KVRT0NtUwC7Rf7YFJ8ac5ZSKiDDlaro_EtDCyr7jqV4j08SPUwwB86h-hO-bgbx1jPedK_CszJRxFktgbVlnqAJp4EetBUiOPg3zH1_go658PGkwKC66nBFlNByIL1WEJRl0uf-luzHCU73ZQsCyuQsOXklrOJN-EPP0CYA72mT4-QqIMKYkDv09Rn2PXi4ghVFAovoKh_nf12Cp7EveUffvR3SbDXYnHVZFjmWkdZMq2W3CTxxxr_disCw1JAyNQT-biBmFxb6R_Zwie2C2S_gHXgnuX1RA=w2560-h1224'
 category:
     - user-stories
 authors:

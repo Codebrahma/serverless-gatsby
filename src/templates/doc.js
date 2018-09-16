@@ -1,13 +1,15 @@
 import React from 'react'
 import { Column } from 'serverless-design-system/src'
 import Default from 'src/layouts/Default'
-import DocsWrapper from '../components/pages/doc/DocsWrapper';
+import DocsWrapper from '../components/pages/doc/DocsWrapper'
+import Sidebar from '../components/pages/doc/Sidebar'
 
-export default (props) => (
+export default ({ data: { doc } }) => (
   <Default>
     <DocsWrapper>
+      <Sidebar head={doc.frontmatter} />
       <Column
-        dangerouslySetInnerHTML={{ __html: props.data.doc.content }}
+        dangerouslySetInnerHTML={{ __html: doc.content }}
         className="content"
       />
     </DocsWrapper>
@@ -25,6 +27,10 @@ export const query = graphql`
         menuOrder
         gitLink
         description
+        menuItems {
+          menuText
+          path
+        }
       }
       content
     }

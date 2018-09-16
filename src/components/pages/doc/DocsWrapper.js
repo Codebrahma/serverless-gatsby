@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { Column } from 'serverless-design-system/src'
+import { Row } from 'serverless-design-system/src'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
 
-export default styled(Column)`
+export default styled(Row)`
   p, li {
     font-family: 'SoleilBk';
     font-size: 16px;

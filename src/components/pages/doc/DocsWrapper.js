@@ -263,7 +263,7 @@ export default styled(Column)`
     padding-top: 3rem;
     max-width: 100%;
     min-height: 100vh;
-    padding-bottom: 723px;
+    padding-bottom: 100px;
     overflow: hidden;
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;

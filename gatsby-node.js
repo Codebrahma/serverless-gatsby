@@ -20,111 +20,175 @@ var index = client.initIndex('dev_BLOG_SEARCH');
 exports.sourceNodes =  async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;
 
-  return new Promise((resolve, reject) => {
-    dir.readFiles('./content/blog', {
-      match: /.md$/,
-      //exclude: /^\./
-    }, (err, content, filename, next) => {
-      if (err) throw err
+  return Promise.all([
+    new Promise((resolve, reject) => {
+      dir.readFiles('./content/blog', {
+        match: /.md$/,
+        //exclude: /^\./
+      }, (err, content, filename, next) => {
+        if (err) throw err
 
-      const { data, content: markdownContent } = matter(content)
-      const frontmatter = data.category ? data : { ...data, category: [] }
-      const blogId = path.basename(filename, path.extname(filename))
+        const { data, content: markdownContent } = matter(content)
+        const frontmatter = data.category ? data : { ...data, category: [] }
+        const blogId = path.basename(filename, path.extname(filename))
 
-      index.saveObject({
-        title: frontmatter.title,
-        description: frontmatter.description,
-        objectID: blogId,
-      });
-
-      unified()
-        .use(markdown)
-        .use(highlight)
-        .use(html)
-        .process(markdownContent, function(err, file) {
-          const blog = {
-            id: blogId,
-            parent: null,
-            children: [],
-            internal: {
-              type: `Blog`,
-              contentDigest: crypto
-                .createHash(`md5`)
-                .update(JSON.stringify(content))
-                .digest(`hex`),
-            },
-            frontmatter,
-            content: String(file),
-          }
-          createNode(blog)
-          next()
+        index.saveObject({
+          title: frontmatter.title,
+          description: frontmatter.description,
+          objectID: blogId,
         });
-    }, resolve);
-  });
+
+        unified()
+          .use(markdown)
+          .use(highlight)
+          .use(html)
+          .process(markdownContent, function(err, file) {
+            const blog = {
+              id: blogId,
+              parent: null,
+              children: [],
+              internal: {
+                type: `Blog`,
+                contentDigest: crypto
+                  .createHash(`md5`)
+                  .update(JSON.stringify(content))
+                  .digest(`hex`),
+              },
+              frontmatter,
+              content: String(file),
+            }
+            createNode(blog)
+            next()
+          });
+      }, resolve);
+    }),
+
+    new Promise((resolve, reject) => {
+      dir.readFiles('./content/framework', {
+        match: /.md$/,
+        //exclude: /^\./
+      }, (err, content, filename, next) => {
+        if (err) throw err
+
+        const { data: frontmatter, content: markdownContent } = matter(content)
+        const url = frontmatter.gitLink.replace(/\/README.md|.md/i, '/')
+        unified()
+          .use(markdown)
+          .use(highlight)
+          .use(html)
+          .process(markdownContent, function(err, file) {
+            const doc = {
+              id: url,
+              parent: null,
+              children: [],
+              internal: {
+                type: `Doc`,
+                contentDigest: crypto
+                  .createHash(`md5`)
+                  .update(JSON.stringify(content))
+                  .digest(`hex`),
+              },
+              frontmatter,
+              content: String(file),
+            }
+            createNode(doc)
+            next()
+          });
+      }, resolve);
+    })
+  ]);
 };
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
-  return new Promise((resolve, reject) => {
-    graphql(`
-      {
-        allBlog {
-          edges {
-            node {
-              id
+  return Promise.all([
+    new Promise((resolve, reject) => {
+      graphql(`
+        {
+          allBlog {
+            edges {
+              node {
+                id
+              }
             }
           }
         }
-      }
-    `).then(result => {
-      const blogs = result.data.allBlog.edges;
+      `).then(result => {
+        const blogs = result.data.allBlog.edges;
 
-      for(let i = 0 ; i < blogs.length ; i += blogsPerPage ) {
-        const page = i / blogsPerPage;
-        createPage({
-          path: `blog${ page === 0 ? '' : ('/page/' + (page + 1) ) }`,
-          component: path.resolve(`./src/templates/blogList.js`),
-          context: {
-            limit: 5,
-            start: i,
-            highlightedBlogsRegEx,
+        for(let i = 0 ; i < blogs.length ; i += blogsPerPage ) {
+          const page = i / blogsPerPage;
+          createPage({
+            path: `blog${ page === 0 ? '' : ('/page/' + (page + 1) ) }`,
+            component: path.resolve(`./src/templates/blogList.js`),
+            context: {
+              limit: 5,
+              start: i,
+              highlightedBlogsRegEx,
+            }
+          })
+        }
+
+        blogs.forEach(({ node }) => {
+          createPage({
+            path: `blog/${node.id}`,
+            component: path.resolve(`./src/templates/blog.js`),
+            context: {
+              blogId: node.id
+            },
+          })
+        })
+
+        Object.keys(authors).forEach((authorKey) => {
+          createPage({
+            path: `author/${authorKey}`,
+            component: path.resolve(`./src/templates/author.js`),
+            context: {
+              authorId: [authorKey]
+            },
+          })
+        })
+
+        Object.keys(categories).forEach((categoryKey) => {
+          createPage({
+            path: `category/${categoryKey}`,
+            component: path.resolve(`./src/templates/category.js`),
+            context: {
+              categoryId: [categoryKey]
+            },
+          })
+        })
+        resolve()
+      })
+    }).catch(error => {
+      console.log(error)
+      reject()
+    }),
+    new Promise((resolve, reject) => {
+      graphql(`
+        {
+          allDoc {
+            edges {
+              node {
+                id
+              }
+            }
           }
-        })
-      }
+        }
+      `).then(result => {
+        const docs = result.data.allDoc.edges
 
-      blogs.forEach(({ node }) => {
-        createPage({
-          path: `blog/${node.id}`,
-          component: path.resolve(`./src/templates/blog.js`),
-          context: {
-            blogId: node.id
-          },
+        docs.forEach(({ node }) => {
+          createPage({
+            path: `framework${node.id}`,
+            component: path.resolve(`./src/templates/doc.js`),
+            context: {
+              docId: node.id
+            },
+          })
         })
+        resolve()
       })
-
-      Object.keys(authors).forEach((authorKey) => {
-        createPage({
-          path: `author/${authorKey}`,
-          component: path.resolve(`./src/templates/author.js`),
-          context: {
-            authorId: [authorKey]
-          },
-        })
-      })
-
-      Object.keys(categories).forEach((categoryKey) => {
-        createPage({
-          path: `category/${categoryKey}`,
-          component: path.resolve(`./src/templates/category.js`),
-          context: {
-            categoryId: [categoryKey]
-          },
-        })
-      })
-      resolve()
     })
-  }).catch(error => {
-    console.log(error)
-    reject()
-  })
+  ])
 };

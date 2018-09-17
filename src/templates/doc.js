@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { Row, Column } from 'serverless-design-system/src'
 import Default from 'src/layouts/Default'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
@@ -7,6 +8,20 @@ import LiteHeader from '../components/pages/doc/LiteHeader'
 
 export default ({ data: { doc }, location: { pathname } }) => (
   <Default>
+    <Helmet
+      link={[
+        {
+          rel: 'stylesheet',
+          href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
+        }
+      ]}
+      script={[
+        {
+          src: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', type: 'text/javascript'
+        }
+      ]}
+    />
+
     <DocsWrapper>
       <LiteHeader url={pathname} />
       <Row>

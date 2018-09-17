@@ -22,7 +22,7 @@ export default ({ blogs }) => (
   <Relative my={5}>
     <Background
       width={1}
-      background={['', '', `url(${glitchDivider})`]}
+      backgroundImage={['', '', `url(${glitchDivider})`]}
       backgroundSize="contain"
       backgroundRepeat="no-repeat"
       backgroundPosition="center"

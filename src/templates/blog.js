@@ -6,21 +6,21 @@ import RelativeBlogs from 'src/components/pages/blog/RelativeBlogs'
 import Comments from 'src/components/pages/blog/Comments'
 import { Helmet } from 'src/fragments'
 
-export default ({ data: { blog } }) => (
+export default ({ data: { currentBlog, previousBlog, nextBlog } }) => (
   <BlogLayout prefooter={Prefooter}>
     <Helmet
-      title={blog.frontmatter.title}
-      description={blog.frontmatter.description}
+      title={currentBlog.frontmatter.title}
+      description={currentBlog.frontmatter.description}
     />
-    <BlogContent { ...blog } />
-    <RelativeBlogs blogs={[blog, blog]} />
+    <BlogContent { ...currentBlog } />
+    <RelativeBlogs blogs={[previousBlog, nextBlog]} />
     <Comments />
   </BlogLayout>
 )
 
 export const query = graphql`
-  query BlogDetails($blogId: String!) {
-    blog(id: { eq: $blogId }) {
+  query BlogDetails($blogId: String!, $previousBlogId: String!, $nextBlogId: String!) {
+    currentBlog: blog (id: { eq: $blogId }) {
       id
       frontmatter {
         title
@@ -32,6 +32,32 @@ export const query = graphql`
         category
       }
       content
+    }
+
+    previousBlog: blog(id: { eq: $previousBlogId }) {
+      id
+      frontmatter {
+        title
+        date,
+        description
+        authors
+        thumbnail
+        gitLink
+        category
+      }
+    }
+
+    nextBlog: blog(id: { eq: $nextBlogId }) {
+      id
+      frontmatter {
+        title
+        date,
+        description
+        authors
+        thumbnail
+        gitLink
+        category
+      }
     }
   }
 `

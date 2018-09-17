@@ -129,12 +129,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           })
         }
 
-        blogs.forEach(({ node }) => {
+        blogs.forEach(({ node }, index, records) => {
           createPage({
             path: `blog/${node.id}`,
             component: path.resolve(`./src/templates/blog.js`),
             context: {
-              blogId: node.id
+              blogId: node.id,
+              previousBlogId: (records[index - 1] || records[index + 2]).node.id,
+              nextBlogId: (records[index + 1] || records[index - 2]).node.id,
             },
           })
         })

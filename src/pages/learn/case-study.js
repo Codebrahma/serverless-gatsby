@@ -5,9 +5,11 @@ import Prefooter from 'src/components/pages/learn/case-study/Prefooter'
 import Hero from 'src/components/pages/learn/case-study/Hero'
 import Parallax from 'src/components/pages/learn/case-study/Parallax'
 import Results from 'src/components/pages/learn/case-study/Results'
+import { Helmet } from 'src/fragments'
 
 const CaseStudy = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
+    <Helmet title="Serverless Case Study" />
     <Hero />
     <Parallax />
     <Results />

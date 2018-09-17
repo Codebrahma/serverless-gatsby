@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Testimonial } from 'src/fragments'
+import { Testimonial, Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/Default'
 import Hero from 'src/components/pages/framework/Hero'
 import UseCase from 'src/components/pages/framework/UseCase'
@@ -9,6 +9,10 @@ import Prefooter from 'src/components/pages/framework/Prefooter'
 
 const FrameWorks = () => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
+    <Helmet
+      title="Serverless Framework - Build applications on AWS Lambda, Google CloudFunctions, Azure Functions, AWS Flourish and more"
+      description="The application framework for building web, mobile and IoT applications on AWS Lambda, Google CloudFunctions, Azure Functions, IBM OpenWhisk, AWS Flourish and more."
+    />
     <Hero />
     <UseCase />
     <Testimonial />

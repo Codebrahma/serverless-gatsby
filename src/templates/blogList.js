@@ -3,7 +3,7 @@ import BlogLayout from 'src/layouts/Blog'
 import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
-import { Divider } from 'src/fragments'
+import { Divider, Helmet } from 'src/fragments'
 import { Pagination } from 'src/components'
 
 export default ({
@@ -15,6 +15,10 @@ export default ({
 
   return (
     <BlogLayout prefooter={BlogListPrefooter}>
+      <Helmet
+        title="Serverless Blog"
+        description="Articles, resources, and posts on serverless architectures, best practices, and how-to"
+      />
       {
         currentPage === 0 && (
           <React.Fragment>

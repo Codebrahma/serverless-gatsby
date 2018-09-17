@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { push } from 'gatsby-link'
 
 import DefaultLayout from 'src/layouts/Default'
+import Helmet from 'src/fragments/Helmet'
 import Modal from 'src/components/Modal/Modal'
 
 const VideoPlayer = styled.iframe`
@@ -19,6 +20,10 @@ export default class OverviewVideo extends React.Component {
   render() {
     return (
       <DefaultLayout>
+        <Helmet
+          title="Serverless - The Serverless Application Framework powered by AWS Lambda, API Gateway, and more"
+          description="Build web, mobile and IoT applications using AWS Lambda and API Gateway, Azure Functions, Google Cloud Functions, and more."
+        />
         <Modal
           active
           onEscKeyDown={this.loadHome}

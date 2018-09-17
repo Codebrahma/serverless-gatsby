@@ -5,6 +5,7 @@ import Default from 'src/layouts/Default'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
+import { Helmet as SEOHelmet } from 'src/fragments'
 
 export default ({ data: { doc }, location: { pathname } }) => (
   <Default>
@@ -23,6 +24,7 @@ export default ({ data: { doc }, location: { pathname } }) => (
     />
 
     <DocsWrapper>
+      <SEOHelmet title={doc.frontmatter.title} description={doc.frontmatter.description} />
       <LiteHeader url={pathname} />
       <Row>
         <Sidebar head={doc.frontmatter} />

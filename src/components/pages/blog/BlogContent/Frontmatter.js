@@ -60,7 +60,6 @@ export default ({ frontmatter }) => {
           </WrittenByText>
         </Row>
       </BlockLink>
-
       {
         frontmatter.heroImage && (
           <Image src={frontmatter.heroImage} width={1} />

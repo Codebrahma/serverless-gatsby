@@ -14,6 +14,17 @@ const Pointer = styled(Box)`
 export default class Carousel extends React.Component {
   state = { currentIndex: 0 }
 
+  componentDidMount() {
+    this.intervalID = setInterval(() => {
+      const nextIndex = (this.state.currentIndex + 1) % this.props.children.length
+      this.setState({ currentIndex: nextIndex })
+    }, 5000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID)
+  }
+
   selectCarousel = (index) => {
     this.setState({
       currentIndex: index,

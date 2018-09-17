@@ -5,7 +5,7 @@ import { HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
 import background from 'src/assets/images/workshops-form-background.png'
 
-const WorkshopForm = () => (
+const WorkshopForm = ({ title }) => (
   <HeroWrapper
     background={`black url(${background})`}
     backgroundSize="cover"
@@ -27,7 +27,7 @@ const WorkshopForm = () => (
           letterSpacing={'-0.2'}
           m={0}
         >
-          London
+          { title }
         </Text.p>
         <Text.p
           fontSize={[2, 2, 4]}

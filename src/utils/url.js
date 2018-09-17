@@ -28,3 +28,25 @@ export function getCurrentUrl(url) {
   // for SSR
   return 'fakeURL'
 }
+
+export function getParams(queryString) {
+  var pairs = queryString.replace('?', '').split('&');
+  var result = {};
+  pairs.forEach(function(p) {
+      var pair = p.split('=')
+      var key = pair[0]
+      var value = decodeURIComponent(pair[1] || '')
+
+      if( result[key] ) {
+        if( Object.prototype.toString.call( result[key] ) === '[object Array]' ) {
+          result[key].push( value )
+        } else {
+          result[key] = [ result[key], value ]
+        }
+      } else {
+        result[key] = value
+      }
+  })
+
+  return JSON.parse(JSON.stringify(result))
+}

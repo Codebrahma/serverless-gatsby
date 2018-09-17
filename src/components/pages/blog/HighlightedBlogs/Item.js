@@ -36,7 +36,7 @@ const Item = ({ id, frontmatter }) => {
           zIndex={0}
           style={{ opacity: 0.35 }}
         />
-        <Absolute>
+        <Absolute width={1}>
           <AppContainer>
             <Flex.verticallyCenter
               flexDirection="column"

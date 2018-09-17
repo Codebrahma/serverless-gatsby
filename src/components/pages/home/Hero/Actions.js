@@ -5,10 +5,9 @@ import { HeroActions } from 'src/fragments'
 const HomeActions = () => (
   <HeroActions
     firstBtn={{
-      name: 'sign up',
-      to: 'https://dashboard.serverless.com/',
-      crossDomain: true,
-      completed: false,
+      name: 'start with framework',
+      to: '/framework/docs/getting-started/',
+      completed: true,
     }}
     secondBtn={{
       name: 'enterprise demo',

@@ -54,18 +54,10 @@ const ResourcesMenu = () => (
 )
 
 const EnterpriseMenu = () => (
-  <Box>
-    <NavLink to={enterprise} completed>
-      <MenuTitle name={'enterprise'} />
-    </NavLink>
-  </Box>
-)
-
-const SignupMenu = () => (
   <Box pt={[2, 2, 0]} pl={[1, 1, 0]}>
-    <NavLink to={signup} crossDomain>
+    <NavLink to={enterprise}>
       <Button fontSize={'1.5rem'} px={2} py={'16px'} width='auto'>
-        sign up
+        enterprise
       </Button>
     </NavLink>
   </Box>
@@ -77,5 +69,4 @@ export default [
   LearnMenu,
   ResourcesMenu,
   EnterpriseMenu,
-  SignupMenu,
 ]

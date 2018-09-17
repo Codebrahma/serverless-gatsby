@@ -33,10 +33,13 @@ const Item = ({ id, frontmatter }) => {
           height="fullHeight"
           width={1}
           bg="black"
-          zIndex={0}
-          style={{ opacity: 0.35 }}
+          zIndex={1}
+          style={{ opacity: 0.5 }}
         />
-        <Absolute width={1}>
+        <Absolute
+          width={1}
+          zIndex={2}
+        >
           <AppContainer>
             <Flex.verticallyCenter
               flexDirection="column"

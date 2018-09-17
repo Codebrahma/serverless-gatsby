@@ -24,8 +24,7 @@ const documentationOptions = [
   {
     name: 'framework',
     to: developers.documentation.framework,
-    crossDomain: false,
-    completed: false,
+    completed: true,
   },
   {
     name: 'platform',
@@ -39,26 +38,22 @@ const quickStartOptions = [
   {
     name: 'aws',
     to: developers.quickStart.aws,
-    crossDomain: false,
-    completed: false,
+    completed: true,
   },
   {
     name: 'azure',
     to: developers.quickStart.azure,
-    crossDomain: false,
-    completed: false,
+    completed: true,
   },
   {
     name: 'google',
     to: developers.quickStart.google,
-    crossDomain: false,
-    completed: false,
+    completed: true,
   },
   {
     name: 'others',
     to: developers.quickStart.others,
-    crossDomain: false,
-    completed: false,
+    completed: true,
   },
 ]
 
@@ -66,25 +61,25 @@ const examplesOptions = [
   {
     name: `APIs`,
     to: developers.examples,
-    crossDomain: false,
+    crossDomain: true,
     completed: false,
   },
   {
     name: 'cron jobs',
     to: developers.examples,
-    crossDomain: false,
+    crossDomain: true,
     completed: false,
   },
   {
     name: 'webhooks',
     to: developers.examples,
-    crossDomain: false,
+    crossDomain: true,
     completed: false,
   },
   {
     name: 'event processing',
     to: developers.examples,
-    crossDomain: false,
+    crossDomain: true,
     completed: false,
   },
 ]

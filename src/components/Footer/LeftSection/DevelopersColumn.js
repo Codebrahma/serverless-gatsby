@@ -15,15 +15,15 @@ const DevelopersColumn = () => (
     listItems={[
       {
         name: 'docs',
-        navProps: { to: docs, completed: false },
+        navProps: { to: docs, completed: true },
       },
       {
         name: 'quick starts',
-        navProps: { to: quickStarts, completed: false },
+        navProps: { to: quickStarts, completed: true },
       },
       {
         name: 'examples & guides',
-        navProps: { to: examplesAndGuides, completed: false },
+        navProps: { to: examplesAndGuides, completed: true },
       },
     ]}
   />

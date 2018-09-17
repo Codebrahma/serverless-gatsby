@@ -29,7 +29,8 @@ export default ({ frontmatter }) => {
     <Column
       width={[1, 1, 1, 0.65]}
       mx="auto"
-      my={[1, 1, 4]}
+      mt={[1, 1, 4]}
+      mb={[1, 1, 2]}
       alignItems="center"
     >
       <Categories categoryIds={categoryIds} />
@@ -59,6 +60,13 @@ export default ({ frontmatter }) => {
           </WrittenByText>
         </Row>
       </BlockLink>
+
+      {
+        frontmatter.heroImage && (
+          <Image src={frontmatter.heroImage} width={1} />
+        )
+      }
+
     </Column>
   )
 }

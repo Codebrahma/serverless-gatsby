@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "mkdir content && npm run syncProd && npm run prepareContent && gatsby build",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint ./src/ --ext .js --fix",

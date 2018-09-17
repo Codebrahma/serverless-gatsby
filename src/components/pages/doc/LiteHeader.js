@@ -9,7 +9,7 @@ export default ({ url }) => {
   }
   const breadCrumbContent = (
     <div className="versionNumber">
-      Docs Version: {process.env.DOCS_VERSION}
+      Docs Version: {process.env.GATSBY_DOCS_VERSION}
     </div>
   )
   return (

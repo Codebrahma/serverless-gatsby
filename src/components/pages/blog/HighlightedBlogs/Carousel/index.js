@@ -15,13 +15,21 @@ export default class Carousel extends React.Component {
   state = { currentIndex: 0 }
 
   componentDidMount() {
+    this.setSlideInterval()
+  }
+
+  componentWillUnmount() {
+    this.clearSlideInterval()
+  }
+
+  setSlideInterval = () => {
     this.intervalID = setInterval(() => {
       const nextIndex = (this.state.currentIndex + 1) % this.props.children.length
       this.setState({ currentIndex: nextIndex })
     }, 5000)
   }
 
-  componentWillUnmount() {
+  clearSlideInterval = () => {
     clearInterval(this.intervalID)
   }
 
@@ -30,6 +38,10 @@ export default class Carousel extends React.Component {
       currentIndex: index,
       animating: false,
     })
+    setTimeout(() => {
+      this.clearSlideInterval()
+      this.setSlideInterval()
+    }, 50)
   }
 
   render() {

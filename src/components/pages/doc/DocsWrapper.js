@@ -1,8 +1,10 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { Column } from 'serverless-design-system/src'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
 
-export default styled(Column)`
+const Wrapper = styled(Column)`
   * {
     font-family: 'SoleilBk';
   }
@@ -272,13 +274,7 @@ export default styled(Column)`
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
     padding-left: 70px;
-    pre code:global(.hljs) {
-      margin-left: -70px !important;
-      padding-left: 70px !important;
-      border-left: none;
-      border-right: none;
-      background: #f8f8f8 !important;
-    }
+    padding-right: 70px;
     $copyWidth: 45px;
 
     :global(.phenomic-HeadingAnchor) {
@@ -522,6 +518,7 @@ export default styled(Column)`
       pre code:global(.hljs) {
         margin-left: -30px !important;
         padding-left: 30px !important;
+        padding-right: 30px !important;
       }
       h1, h2, h3, h4, h5, h6, p {
         padding-right: 25px;
@@ -585,7 +582,7 @@ export default styled(Column)`
       flex-flow: column-reverse;
     }
     .content {
-      padding: 20px 0 0 13px;
+      padding: 20px 13px 0 13px;
       font-size: 14px;
       pre code:global(.hljs) {
         font-size: 11px;
@@ -627,3 +624,25 @@ export default styled(Column)`
     }
   }
 `
+
+export default class DocsWrapper extends React.Component {
+  componentDidMount() {
+    const domNode = ReactDOM.findDOMNode(this.ref)
+    domNode.querySelectorAll("code.hljs").forEach((code) => {
+      let number = 1;
+      const zero = `<a class="line">${number++}</a>`
+      code.innerHTML = zero + code.innerHTML.replace(/\n/g, () => (
+        `\n<a class="line">${number++}</a>`
+      ))
+    })
+  }
+
+  render() {
+    return (
+      <Wrapper
+        ref={(ref) => { this.ref = ref }}
+        {...this.props}
+      />
+    )
+  }
+}

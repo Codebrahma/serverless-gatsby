@@ -3,7 +3,7 @@ import BlogLayout from 'src/layouts/Blog'
 import HighlightedBlogs from 'src/components/pages/blog/HighlightedBlogs'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
-import { Divider, Helmet } from 'src/fragments'
+import { Helmet } from 'src/fragments'
 import { Pagination } from 'src/components'
 
 export default ({
@@ -23,7 +23,6 @@ export default ({
         currentPage === 0 && (
           <React.Fragment>
             <HighlightedBlogs blogs={highlighted.edges.map(({ node }) => node)} />
-            <Divider visibleInSmallScreens />
           </React.Fragment>
         )
       }

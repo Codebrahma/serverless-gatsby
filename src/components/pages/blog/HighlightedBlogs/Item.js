@@ -44,7 +44,10 @@ const Item = ({ id, frontmatter }) => {
               m="auto"
               pt={4}
             >
-              <Categories categoryIds={categoryIds} />
+              <Categories
+                categoryIds={categoryIds}
+                textStyleProps={{ color: 'white', opacity: 0.5 }}
+              />
               <BlockLink to={getBlogLink(id)}>
                 <Heading.h2
                   fontFamily="SoleilBk"

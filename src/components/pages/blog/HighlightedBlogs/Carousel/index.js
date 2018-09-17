@@ -63,6 +63,7 @@ export default class Carousel extends React.Component {
                   opacity: index === currentIndex ? 1 : 0,
                   zIndex: index === currentIndex ? 0 : -1
                 }}
+                key={`selector-${index}`}
               >
                 { child }
               </Absolute>
@@ -80,6 +81,7 @@ export default class Carousel extends React.Component {
             {
               this.props.children.map((_, index) => (
                 <Pointer
+                  key={`carousel-${index}`}
                   bg={index === currentIndex ? 'primaryColor' : 'white'}
                   height={[10, 10, 15]}
                   width={[10, 10, 15]}

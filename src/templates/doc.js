@@ -1,17 +1,21 @@
 import React from 'react'
-import { Column } from 'serverless-design-system/src'
+import { Row, Column } from 'serverless-design-system/src'
 import Default from 'src/layouts/Default'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
+import LiteHeader from '../components/pages/doc/LiteHeader'
 
-export default ({ data: { doc } }) => (
+export default ({ data: { doc }, location: { pathname } }) => (
   <Default>
     <DocsWrapper>
-      <Sidebar head={doc.frontmatter} />
-      <Column
-        dangerouslySetInnerHTML={{ __html: doc.content }}
-        className="content"
-      />
+      <LiteHeader url={pathname} />
+      <Row>
+        <Sidebar head={doc.frontmatter} />
+        <Column
+          dangerouslySetInnerHTML={{ __html: doc.content }}
+          className="content"
+        />
+      </Row>
     </DocsWrapper>
   </Default>
 )

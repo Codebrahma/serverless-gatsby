@@ -1,7 +1,8 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import generatedMenu from 'src/layouts/Doc/generated-menu-items'
-import Link from 'gatsby-link'
+import SearchBox from './SearchBox'
 
 export default class Sidebar extends React.Component {
 
@@ -53,21 +54,6 @@ export default class Sidebar extends React.Component {
     return items
   }
 
-  renderSearchBox() { // eslint-disable-line
-    return (
-      <div className='searchBumper'>
-        <div className='searchWrapper'>
-          <input
-            className='searchBox'
-            id='algolia-search'
-            placeholder='&#9889;  Search docs'
-            type='text'
-          />
-        </div>
-      </div>
-    )
-  }
-
   render() {
     const { __url } = this.props
     const items = this.renderList()
@@ -91,7 +77,7 @@ export default class Sidebar extends React.Component {
     let searchBox
 
     if (typeof window !== 'undefined' && window.outerWidth > 600) {
-      searchBox = this.renderSearchBox()
+      searchBox = (<SearchBox />)
     }
 
     return (

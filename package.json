@@ -32,7 +32,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run syncProd && npm run prepareContent && gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint ./src/ --ext .js --fix",
@@ -42,8 +42,9 @@
     "prepareContent": "node scripts/docs && node scripts/blog",
     "dev": "npm run prepareContent && gatsby develop",
     "syncLocal": "npm run postinstall",
-    "syncProd": "npm run syncProd:Blog",
+    "syncProd": "npm run syncProd:Blog && npm run syncProd:Docs",
     "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
+    "syncProd:Docs": "node scripts/docs/sync-docs-remote.js",
     "prebuild": "npm run prepareContent"
   },
   "devDependencies": {

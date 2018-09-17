@@ -3,6 +3,10 @@ import { Column } from 'serverless-design-system/src'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
 
 export default styled(Column)`
+  * {
+    font-family: 'SoleilBk';
+  }
+
   p, li {
     font-family: 'SoleilBk';
     font-size: 16px;

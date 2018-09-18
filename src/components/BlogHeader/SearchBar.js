@@ -29,7 +29,7 @@ const searchClient = algoliasearch(
 );
 
 const Wrapper = styled(Overflow)`
-  transition: height 0.5s;
+  transition: height 0.4s;
 `
 
 const LinkText = styled(Text.span)`

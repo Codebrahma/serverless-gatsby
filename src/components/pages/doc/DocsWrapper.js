@@ -631,6 +631,8 @@ const Wrapper = styled(Column)`
 
   }
 `
+const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
+const preventDefault = (e) => e.preventDefault()
 
 export default class DocsWrapper extends React.Component {
   componentDidMount() {
@@ -642,6 +644,54 @@ export default class DocsWrapper extends React.Component {
         `\n<a class="line">${number++}</a>`
       ))
     })
+    const { origin, pathname } = window.location
+    // disable anchor tags until they are removed
+    this.attachHandlers()
+    setTimeout(() => {
+      this.clipboardInstance = new Clipboard('.phenomic-HeadingAnchor', { // eslint-disable-line
+        text(trigger) { // eslint-disable-line
+          return `${origin}${pathname.replace(/\/$/, '')}#${trigger.parentNode.id}`
+        }
+      })
+    }, 10)
+  }
+
+  componentDidUpdate(previousProps, _prevState) {
+    if (previousProps.__url !== this.props.__url) {
+      this.dettachHandlers()
+      setTimeout(() => {
+        this.attachHandlers()
+      }, 0)
+    }
+  }
+
+  componentWillUnmount() {
+    this.clipboardInstance.destroy()
+    // disable anchor tags until they are removed
+    this.dettachHandlers()
+  }
+
+  attachHandlers = () => {
+    const html = document.documentElement
+    if (html && html.className.indexOf('safari') > -1) {
+      // clipboard doesnt work in safari
+      return false
+    }
+    const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', preventDefault, false)
+    }
+  }
+
+  dettachHandlers = () => {
+    const html = document.documentElement
+    if (html && html.className.indexOf('safari') > -1) {
+      return false
+    }
+    const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].removeEventListener('click', preventDefault, false)
+    }
   }
 
   render() {

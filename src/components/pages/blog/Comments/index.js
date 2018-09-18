@@ -8,7 +8,6 @@ export default () => (
     <Column
       width={[1, 1, 1, 0.65]}
       px={2}
-      pb={80}
       mx="auto"
       id="disqus_thread"
     >

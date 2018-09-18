@@ -5,6 +5,8 @@ import { Column } from 'serverless-design-system/src'
 import redHighlighter from 'src/assets/images/red-highlighter.png'
 
 const ContentWrapper = styled(Column)`
+  overflow: hidden;
+
   p, li {
     font-family: 'SoleilBk';
     font-size: 16px;

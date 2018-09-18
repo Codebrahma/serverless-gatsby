@@ -41,6 +41,7 @@ export default () => (
       display={['none', 'none', 'block']}
       top='-320px'
       mb='-290px'
+      id="newsletter-box"
     >
       <Background
         background={`url(${blogFooterBackground})`}

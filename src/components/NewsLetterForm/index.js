@@ -4,6 +4,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import { ResponsiveStack, Button } from 'serverless-design-system/src'
 import { setItemSync, getItemSync } from 'src/utils/storage'
+import { validateEmail } from 'src/utils/validator'
 import EmailField from './EmailField'
 
 const StyledForm = styled.form`
@@ -13,10 +14,6 @@ const StyledForm = styled.form`
 `
 
 const newsletterSubscribeAPI = "https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe"
-
-function validateEmail(value) {
-  return /^([\w_\.\-\+])+@([\w\-]+\.)+([\w]{2,10})+$/.test(value)
-}
 
 class NewsLetterForm extends React.Component {
   constructor(props, context) {

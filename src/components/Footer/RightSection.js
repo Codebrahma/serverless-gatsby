@@ -45,7 +45,7 @@ const Subscribe = () => (
         opacity='0.2'
         placeholder='email address'
         px={[1, 1, 1]}
-        py={2}
+        py={15}
         m={0}
         width={[1, 1, 0.6]}
         borderRadius={0}
@@ -55,13 +55,13 @@ const Subscribe = () => (
       <Button
         width={['35%', '35%', '40%']}
         px={[0, 0, 1]}
-        py={2}
+        py={15}
         m={0}
         textAlign='center'
         border={0}
         fontSize={2}
       >
-        Sign up
+        sign up
       </Button>
     </ResponsiveStack.horizontallyCenter>
     <Box py={3}>

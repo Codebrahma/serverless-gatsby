@@ -19,7 +19,7 @@ import Label from '../../enterprise/Form/Label'
 import TextArea from '../../enterprise/Form/TextArea'
 import RadioButton from '../../enterprise/Form/RadioButton'
 
-export default () => (
+export default ({ keyName }) => (
   <AppContainer>
     <Box
       mt={5}

@@ -49,6 +49,7 @@ const Subscribe = () => (
         m={0}
         width={[1, 1, 0.6]}
         borderRadius={0}
+        fontSize={3}
         fontFamily="Serverless"
         placeholderColor="white"
       />

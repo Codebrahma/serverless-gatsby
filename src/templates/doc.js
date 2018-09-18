@@ -27,7 +27,7 @@ export default ({ data: { doc }, location: { pathname } }) => (
     <DocsWrapper>
       <SEOHelmet title={doc.frontmatter.title} description={doc.frontmatter.description} />
       <LiteHeader url={pathname} />
-      <Row>
+      <Row className="docWrapper">
         <Sidebar head={doc.frontmatter} />
         <a title='Edit this page on github'
           rel='noopener noreferrer'

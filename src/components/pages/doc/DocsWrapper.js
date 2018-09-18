@@ -17,6 +17,10 @@ const Wrapper = styled(Column)`
     color: #5b5b5b;
   }
 
+  li {
+    line-height: 1.5;
+  }
+
   blockquote {
     margin: 0;
     margin-top: 10px;

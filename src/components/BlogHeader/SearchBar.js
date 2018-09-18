@@ -40,6 +40,25 @@ const LinkText = styled(Text.span)`
   }
 `
 
+const CardWithTransition = styled(Card)`
+  transition: height 0.4s;
+`
+
+const CardWithAnimation = ({ children, ...otherProps }) => (
+  <BlogNavbarContext.Consumer>
+    {
+      ({ isNavbarShrinked }) => (
+        <CardWithTransition
+          height={isNavbarShrinked ? 0 : 52}
+          {...otherProps}
+        >
+          {children}
+        </CardWithTransition>
+      )
+    }
+  </BlogNavbarContext.Consumer>
+)
+
 const SearchBarWrapper = ({ children, ...otherProps }) => (
   <BlogNavbarContext.Consumer>
     {
@@ -107,8 +126,7 @@ class SearchBar extends React.Component {
               </Relative>
             ) : (
               <React.Fragment>
-                <Card
-                  height="52px"
+                <CardWithAnimation
                   px={1}
                   py={16}
                   border={`1px solid ${borderColor}`}
@@ -148,8 +166,8 @@ class SearchBar extends React.Component {
                       </BlockLink>
                     ))
                   }
-                </Card>
-                <Card
+                </CardWithAnimation>
+                <CardWithAnimation
                   border={`1px solid ${borderColor}`}
                   borderLeft="0"
                   onClick={this.toggleSearchBar}
@@ -161,7 +179,7 @@ class SearchBar extends React.Component {
                       width={18}
                     />
                   </Flex.center>
-                </Card>
+                </CardWithAnimation>
               </React.Fragment>
             )
           }

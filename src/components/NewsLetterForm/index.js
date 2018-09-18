@@ -107,11 +107,15 @@ class NewsLetterForm extends React.Component {
     const {
       emailFieldProps,
       wrapperComponent: Wrapper,
-      wrapperProps
+      wrapperProps,
+      formStyles,
     } = this.props
 
     return (
-      <StyledForm onSubmit={this.handleSubmit}>
+      <StyledForm
+        onSubmit={this.handleSubmit}
+        style={formStyles}
+      >
         <Wrapper
           {...wrapperProps}
           ref={(ref) => {
@@ -134,6 +138,7 @@ class NewsLetterForm extends React.Component {
 NewsLetterForm.defaultProps = {
   emailFieldProps: {},
   submitBtnProps: {},
+  formStyles: {},
   wrapperProps: { color: 'white', fontFamily: 'SoleilBk' },
   btnComponent: null,
   wrapperComponent: ResponsiveStack,

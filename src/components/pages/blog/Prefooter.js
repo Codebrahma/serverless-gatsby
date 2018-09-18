@@ -15,7 +15,7 @@ import blogFooterBackground from 'src/assets/images/blog-footer-background.png'
 
 const SubmitButton = (props) => (
   <TertiaryButton
-    width={0.3}
+    width={0.4}
     height={60}
     fontSize={1}
     {...props}
@@ -71,6 +71,11 @@ export default () => (
               }}
               btnComponent={SubmitButton}
               wrapperProps={{ width: 1, color: 'white' }}
+              formStyles={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
             />
           </Flex>
         </ResponsiveStack>

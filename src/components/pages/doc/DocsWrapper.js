@@ -408,6 +408,10 @@ const Wrapper = styled(Column)`
     }
   }
   .editLink {
+    position: absolute;
+    right: 20px;
+    top: 130px;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -422,7 +426,7 @@ const Wrapper = styled(Column)`
       margin-left: 5px;
       padding-top: 1px;
     }
-    svg {
+    img {
       width: 17px;
       height: 17px;
     }
@@ -623,6 +627,8 @@ const Wrapper = styled(Column)`
     .subPageLink, .subPageLinkHeading {
       font-size: 16px;
     }
+
+
   }
 `
 

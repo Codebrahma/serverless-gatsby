@@ -51,7 +51,9 @@
     "syncProd": "npm run syncProd:Blog && npm run syncProd:Docs",
     "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",
     "syncProd:Docs": "node scripts/docs/sync-docs-remote.js",
-    "prebuild": "npm run prepareContent"
+    "prebuild": "npm run prepareContent",
+    "postbuildprod": "node scripts/redirects.js",
+    "postbuild": "node scripts/redirects.js"
   },
   "devDependencies": {
     "async": "^2.6.1",

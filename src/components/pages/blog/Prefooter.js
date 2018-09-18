@@ -5,8 +5,6 @@ import {
   Flex,
   Background,
   Heading,
-  TextField,
-  Button,
   TertiaryButton,
   Card,
 } from 'serverless-design-system/src'

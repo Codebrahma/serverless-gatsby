@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Box,
+  Column,
   InlineBlock,
   Absolute,
   Card,
@@ -20,7 +20,7 @@ const Icon = ({ link, icon }) => (
     m="5px"
   >
     <a href={link} target="_blank">
-      <Box
+      <Column
         height={44}
         width={44}
         p={1}
@@ -33,7 +33,7 @@ const Icon = ({ link, icon }) => (
           maxHeight={18}
           objectFit="contain"
         />
-      </Box>
+      </Column>
     </a>
   </Card>
 )

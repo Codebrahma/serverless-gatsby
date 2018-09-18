@@ -264,6 +264,7 @@ const Wrapper = styled(Column)`
 
   /* Docs Content */
   .content {
+    display: block;
     flex-grow: 1;
     position: relative;
     padding-top: 3rem;

@@ -5,6 +5,9 @@ const dir = require('node-dir')
 const matter = require('gray-matter')
 const unified = require('unified')
 const markdown = require('remark-parse')
+var slug = require('remark-slug')
+const autoLinkHeadings = require("remark-autolink-headings")
+
 const highlight = require('remark-highlight.js')
 const html = require('remark-html')
 const algoliasearch = require('algoliasearch')
@@ -74,8 +77,18 @@ exports.sourceNodes =  async ({ boundActionCreators }) => {
         const url = frontmatter.gitLink.replace(/\/README.md|.md/i, '/')
         unified()
           .use(markdown)
-          .use(highlight)
+          .use(slug) 
+          .use(autoLinkHeadings, {
+            content: {
+              type: "text",
+              value: "#",
+            },
+            linkProperties: {
+              className: "phenomic-HeadingAnchor",
+            },
+          })
           .use(html)
+          .use(highlight)
           .process(markdownContent, function(err, file) {
             const doc = {
               id: url,

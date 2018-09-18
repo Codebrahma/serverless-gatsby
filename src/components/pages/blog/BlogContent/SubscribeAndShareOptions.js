@@ -4,7 +4,7 @@ import { Position, Card, Column, Image, Button } from 'serverless-design-system/
 import { getBlogLink } from 'src/utils/blog'
 import facebookIcon from 'src/assets/images/facebook-black.svg'
 import twitterIcon from 'src/assets/images/twitter-black.svg'
-import linkedinIcon from 'src/assets/images/twitter-black.svg'
+import linkedinIcon from 'src/assets/images/linkedin-black.svg'
 
 const Icon = ({ link, icon }) => (
   <Card
@@ -130,7 +130,7 @@ export default class SubscribeAndShareIcons extends React.Component {
         >
           <Button
             py={1}
-            width={[180, 180, 180, 280]}
+            width={180}
             onClick={this.scrollIntoNewsLetter}
           >
             subscribe

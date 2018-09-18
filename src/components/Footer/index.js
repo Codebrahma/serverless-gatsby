@@ -10,15 +10,19 @@ import FooterIcon from './FooterIcon'
 import LeftSection from './LeftSection'
 import RightSection from './RightSection'
 
-import glitchEffect from '../../assets/images/glitchEffect.png'
+import glitchEffect from '../../assets/images/glitch-effect.png'
 
 // Self contained Root Renderer for footer
-const FooterWrapper = ({ prefooter }) => (
+const FooterWrapper = ({ prefooter, footerBackground }) => (
   <Column>
-    <Background
-      height={75}
-      backgroundImage={`url(${glitchEffect})`}
-    />
+    {
+      footerBackground && (
+        <Background
+          height={75}
+          backgroundImage={`url(${glitchEffect})`}
+        />
+      )
+    }
     <Background background='black'>
       <Box pt={[0, 0, 7]} pb={7}>
         <Row m='auto' flexWrap='wrap' maxWidth={1}>
@@ -36,5 +40,7 @@ const FooterWrapper = ({ prefooter }) => (
     </Background>
   </Column>
 )
+
+FooterWrapper.defaultProps = { footerBackground: true }
 
 export default FooterWrapper

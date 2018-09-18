@@ -9,7 +9,7 @@ import gitHubSvg from 'src/assets/images/githubIcon.svg'
 import { Helmet as SEOHelmet } from 'src/fragments'
 
 export default ({ data: { doc }, location: { pathname } }) => (
-  <Default>
+  <Default footerBackground={false}>
     <Helmet
       link={[
         {

@@ -14,6 +14,7 @@ const algoliasearch = require('algoliasearch')
 const authors = require('./src/constants/generated-authors.json')
 const categories = require('./src/constants/generated-categories.json')
 const highlightedBlogs = require('./src/constants/highlighted-blogs.json')
+const workshops = require('./src/constants/workshops.json')
 const blogsPerPage = 5
 const highlightedBlogsRegEx = new RegExp(highlightedBlogs.join("|"), 'gi')
 
@@ -204,6 +205,16 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         })
         resolve()
       })
+    }),
+    new Promise((resolve, reject) => {
+      Object.keys(workshops).forEach((key) => {
+        createPage({
+          path: `workshops/${key}`,
+          component: path.resolve(`./src/templates/workshop-form.js`),
+          context: { key },
+        })
+      })
+      resolve()
     })
   ])
 };

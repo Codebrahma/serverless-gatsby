@@ -11,6 +11,8 @@ import {
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
+import { company } from 'src/constants/urls'
+import workshops from 'src/constants/workshops.json'
 import SanFranciscoImage from 'src/assets/images/san-francisco.png'
 import SeattleImage from 'src/assets/images/seattle.png'
 import NewYorkImage from 'src/assets/images/new-york.png'
@@ -19,40 +21,15 @@ import LondonImage from 'src/assets/images/london.png'
 import PrivateWorkshopImage from 'src/assets/images/private-workshop.png'
 import verticalDotImage from 'src/assets/images/white-dots-grid-vertical.png'
 
-const workshopList = [
-  {
-    title: 'San Francisco',
-    img: SanFranciscoImage,
-    isAvailable: false,
-  },
-  {
-    title: 'Seattle',
-    img: SeattleImage,
-    isAvailable: false,
-  },
-  {
-    title: 'New York',
-    img: NewYorkImage,
-    isAvailable: false,
-  },
-  {
-    title: 'Atlanta',
-    img: AtlantaImage,
-    isAvailable: false,
-  },
-  {
-    title: 'London',
-    img: LondonImage,
-    isAvailable: false,
-  },
-  {
-    title: 'Private Workshop',
-    img: PrivateWorkshopImage,
-    isAvailable: true,
-  },
-]
+const data = {
+  'san-francisco' : SanFranciscoImage,
+  'seattle' : SeattleImage,
+  'new-york' : NewYorkImage,
+  'atlanta' : AtlantaImage,
+  'london' : LondonImage,
+}
 
-const WorkshopListItem = ({ title, img, isAvailable }) => (
+const WorkshopListItem = ({ keyName, title, img, isContactUs }) => (
   <Relative
     p="16px"
     width={[1, 1, 1/2, 0.33]}
@@ -93,9 +70,11 @@ const WorkshopListItem = ({ title, img, isAvailable }) => (
         <Relative>
           <TertiaryButton
             width={1}
-            onClick={() => push(`/resources/workshops/form?title=${title}`)}
+            onClick={() => {
+              isContactUs ? window.open(company.contact) : push(`/workshops/${keyName}`)
+            }}
           >
-            {isAvailable ? 'contact us' : 'join waitlist'}
+            {isContactUs ? 'contact us' : 'join waitlist'}
           </TertiaryButton>
         </Relative>
       </Column>
@@ -113,16 +92,21 @@ const WorkshopList = () => (
       justifyContent="center"
     >
       {
-        workshopList.map(({ title, cost, img, isAvailable }) => (
+        Object.keys(workshops).map((key) => (
           <WorkshopListItem
-            key={title}
-            title={title}
-            cost={cost}
-            img={img}
-            isAvailable={isAvailable}
+            key={key}
+            keyName={key}
+            title={workshops[key]}
+            img={data[key]}
+            isContactUs={false}
           />
         ))
       }
+      <WorkshopListItem
+        title="Private Workshop"
+        img={PrivateWorkshopImage}
+        isContactUs={true}
+      />
     </ResponsiveStack>
   </AppContainer>
 )

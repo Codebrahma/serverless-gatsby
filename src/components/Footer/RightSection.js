@@ -4,14 +4,12 @@ import {
   Box,
   Column,
   InlineBlock,
-  TextField,
-  Button,
   Image,
   P,
-  ResponsiveStack,
 } from 'serverless-design-system/src'
 
 import NavLink from '../NavLink'
+import NewsLetterForm from '../NewsLetterForm'
 import {
   facebookHandle,
   instagramHandle,
@@ -34,36 +32,7 @@ const Subscribe = () => (
         and happenings. #noSpamWePromise
       </P>
     </Box>
-    <ResponsiveStack.horizontallyCenter>
-      <TextField
-        color='white'
-        bg='gray.3'
-        border='none'
-        fontSize={3}
-        letterSpacing='textField'
-        lineHeight={4}
-        opacity='0.2'
-        placeholder='email address'
-        px={[1, 1, 1]}
-        py={2}
-        m={0}
-        width={[1, 1, 0.6]}
-        borderRadius={0}
-        fontFamily="Serverless"
-        placeholderColor="white"
-      />
-      <Button
-        width={['35%', '35%', '40%']}
-        px={[0, 0, 1]}
-        py={2}
-        m={0}
-        textAlign='center'
-        border={0}
-        fontSize={2}
-      >
-        Sign up
-      </Button>
-    </ResponsiveStack.horizontallyCenter>
+    <NewsLetterForm emailFieldProps={{ placeholder: 'email address' }} />
     <Box py={3}>
       <NavLink to={facebookHandle} crossDomain>
         <InlineBlock mr={3}>

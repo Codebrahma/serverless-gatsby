@@ -278,7 +278,7 @@ const Wrapper = styled(Column)`
     padding-right: 70px;
     $copyWidth: 45px;
 
-    :global(.phenomic-HeadingAnchor) {
+    .phenomic-HeadingAnchor {
       display: inline-block;
       position: absolute !important;
       text-align: left;
@@ -287,10 +287,10 @@ const Wrapper = styled(Column)`
       margin-left: -50px;
       /* line-height: 1.4rem; */
       text-decoration: none;
-      opacity: .1;
+      opacity: .2;
       line-height: inherit;
       color: transparent;
-      transition: opacity .2s;
+      transition: opacity .3s;
       border-bottom: none !important;
       &:before {
         content: "#";
@@ -379,7 +379,7 @@ const Wrapper = styled(Column)`
       font-size: 32px;
       &:first-of-type {
         margin-top: 0px;
-        :global(.phenomic-HeadingAnchor) {
+        .phenomic-HeadingAnchor {
           display:none;
         }
       }
@@ -418,7 +418,7 @@ const Wrapper = styled(Column)`
     font-size: 13px;
     color: #555;
     cursor: pointer;
-    :global(.SVGInline) {
+    .SVGInline {
       display: flex;
       height: 100%;
     }
@@ -595,7 +595,7 @@ const Wrapper = styled(Column)`
         padding-top: 10px;
         padding-bottom: 10px;
       }
-      :global(.phenomic-HeadingAnchor) {
+      .phenomic-HeadingAnchor {
         display: none;
       }
       ol, ul {

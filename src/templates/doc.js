@@ -29,7 +29,8 @@ export default ({ data: { doc }, location: { pathname } }) => (
       <LiteHeader url={pathname} />
       <Row className="docWrapper">
         <Sidebar head={doc.frontmatter} />
-        <a title='Edit this page on github'
+        <a
+          title='Edit this page on github'
           rel='noopener noreferrer'
           href={`https://github.com/serverless/serverless/edit/master${doc.frontmatter.gitLink}`}
         >

@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import debounce from 'lodash.debounce'
@@ -16,7 +17,7 @@ export default class Sidebar extends React.Component {
     if (window.outerWidth > 768) {
       window.addEventListener('scroll', this.getDebouncedHandler)
       window.addEventListener('resize', this.getDebouncedHandler)
-      this.sidebarNode = this.refs.sidebar
+      this.sidebarNode = ReactDOM.findDOMNode(this.sidebarRef)
       this.sidebarNodeOffset = this.sidebarNode.offsetTop
       this.handleScroll()
     }
@@ -125,7 +126,7 @@ export default class Sidebar extends React.Component {
 
     return (
       <div className="sidebar">
-        <div ref='sidebar' className="sidebarInner">
+        <div className="sidebarInner" ref={(ref) => { this.sidebarRef = ref; }}>
           {searchBox}
 
           <div className="pageContext">

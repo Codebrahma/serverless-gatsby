@@ -15,6 +15,7 @@ const Wrapper = styled(Column)`
     font-weight: normal;
     font-style: normal;
     color: #5b5b5b;
+    line-height: 1.33;
   }
 
   li {
@@ -575,6 +576,9 @@ const Wrapper = styled(Column)`
       top: inherit;
       right: inherit;
       display: none;
+    }
+    .editLink {
+      top: 175px;
     }
     .versionNumber {
       display: none;

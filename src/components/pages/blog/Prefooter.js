@@ -65,7 +65,8 @@ export default () => (
                 height: 60,
                 bg: "#ffffff33",
                 fontSize: 1,
-                placeholder: "enter email address"
+                placeholder: "enter email address",
+                id: "newsletter-emailfield"
               }}
               btnComponent={SubmitButton}
               wrapperProps={{ width: 1, color: 'white' }}
@@ -101,7 +102,8 @@ export default () => (
                 bg: "#8c8c8c33",
                 placeholder: "enter email address",
                 placeholderColor: "gray.3",
-                color: "gray.3"
+                color: "gray.3",
+                id: "newsletter-emailfield"
               }}
             />
           </ResponsiveStack>

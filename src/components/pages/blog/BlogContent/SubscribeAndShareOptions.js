@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Position, Card, Column, Image } from 'serverless-design-system/src'
+import { Position, Card, Column, Image, Button } from 'serverless-design-system/src'
 import { getBlogLink } from 'src/utils/blog'
 import facebookIcon from 'src/assets/images/facebook-black.svg'
 import twitterIcon from 'src/assets/images/twitter-black.svg'
@@ -86,6 +86,11 @@ export default class SubscribeAndShareIcons extends React.Component {
     }
   }
 
+  scrollIntoNewsLetter = () => {
+    const newsletterField =  document.getElementById('newsletter-emailfield')
+    newsletterField.scrollIntoView()
+  }
+
   render() {
     const { title } = this.props
     const { position } = this.state
@@ -95,7 +100,7 @@ export default class SubscribeAndShareIcons extends React.Component {
       <React.Fragment>
         <Position
           position={position}
-          top={isFixedPosition ? 375 : 850}
+          top={isFixedPosition ? 375 : 900}
           right={isFixedPosition ? '' : 20}
           left={isFixedPosition ? this.getLeftOffset() : ''}
           display={['none', 'none', 'none', 'block']}
@@ -115,6 +120,21 @@ export default class SubscribeAndShareIcons extends React.Component {
               link={`https://www.linkedin.com/shareArticle?mini=true&url=${this.blogLink}&title=${title}`}
             />
           </Column>
+        </Position>
+        <Position
+          position='fixed'
+          top={isFixedPosition ? 300 : 650}
+          right={0}
+          zIndex={10}
+          style={{ transform: 'rotate(270deg) translate(0, -100%)', transformOrigin: '100% 0' }}
+        >
+          <Button
+            py={1}
+            width={[180, 180, 180, 280]}
+            onClick={this.scrollIntoNewsLetter}
+          >
+            subscribe
+          </Button>
         </Position>
       </React.Fragment>
     )

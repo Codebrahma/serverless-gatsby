@@ -5,10 +5,11 @@ import Default from 'src/layouts/Default'
 import DocsWrapper from '../components/pages/doc/DocsWrapper'
 import Sidebar from '../components/pages/doc/Sidebar'
 import LiteHeader from '../components/pages/doc/LiteHeader'
+import gitHubSvg from 'src/assets/images/githubIcon.svg'
 import { Helmet as SEOHelmet } from 'src/fragments'
 
 export default ({ data: { doc }, location: { pathname } }) => (
-  <Default>
+  <Default footerBackground={false}>
     <Helmet
       link={[
         {
@@ -26,8 +27,18 @@ export default ({ data: { doc }, location: { pathname } }) => (
     <DocsWrapper>
       <SEOHelmet title={doc.frontmatter.title} description={doc.frontmatter.description} />
       <LiteHeader url={pathname} />
-      <Row>
+      <Row className="docWrapper">
         <Sidebar head={doc.frontmatter} />
+        <a
+          title='Edit this page on github'
+          rel='noopener noreferrer'
+          href={`https://github.com/serverless/serverless/edit/master${doc.frontmatter.gitLink}`}
+        >
+          <span className='editLink'>
+            <img src={gitHubSvg} />
+            <span className='text'>Edit on github</span>
+          </span>
+        </a>
         <Column
           dangerouslySetInnerHTML={{ __html: doc.content }}
           className="content"

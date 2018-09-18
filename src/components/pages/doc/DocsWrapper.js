@@ -15,6 +15,11 @@ const Wrapper = styled(Column)`
     font-weight: normal;
     font-style: normal;
     color: #5b5b5b;
+    line-height: 1.33;
+  }
+
+  li {
+    line-height: 1.5;
   }
 
   blockquote {
@@ -264,6 +269,7 @@ const Wrapper = styled(Column)`
 
   /* Docs Content */
   .content {
+    display: block;
     flex-grow: 1;
     position: relative;
     padding-top: 3rem;
@@ -277,7 +283,7 @@ const Wrapper = styled(Column)`
     padding-right: 70px;
     $copyWidth: 45px;
 
-    :global(.phenomic-HeadingAnchor) {
+    .phenomic-HeadingAnchor {
       display: inline-block;
       position: absolute !important;
       text-align: left;
@@ -286,10 +292,10 @@ const Wrapper = styled(Column)`
       margin-left: -50px;
       /* line-height: 1.4rem; */
       text-decoration: none;
-      opacity: .1;
+      opacity: .2;
       line-height: inherit;
       color: transparent;
-      transition: opacity .2s;
+      transition: opacity .3s;
       border-bottom: none !important;
       &:before {
         content: "#";
@@ -378,7 +384,7 @@ const Wrapper = styled(Column)`
       font-size: 32px;
       &:first-of-type {
         margin-top: 0px;
-        :global(.phenomic-HeadingAnchor) {
+        .phenomic-HeadingAnchor {
           display:none;
         }
       }
@@ -407,13 +413,17 @@ const Wrapper = styled(Column)`
     }
   }
   .editLink {
+    position: absolute;
+    right: 20px;
+    top: 130px;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 13px;
     color: #555;
     cursor: pointer;
-    :global(.SVGInline) {
+    .SVGInline {
       display: flex;
       height: 100%;
     }
@@ -421,7 +431,7 @@ const Wrapper = styled(Column)`
       margin-left: 5px;
       padding-top: 1px;
     }
-    svg {
+    img {
       width: 17px;
       height: 17px;
     }
@@ -567,6 +577,9 @@ const Wrapper = styled(Column)`
       right: inherit;
       display: none;
     }
+    .editLink {
+      top: 175px;
+    }
     .versionNumber {
       display: none;
     }
@@ -590,7 +603,7 @@ const Wrapper = styled(Column)`
         padding-top: 10px;
         padding-bottom: 10px;
       }
-      :global(.phenomic-HeadingAnchor) {
+      .phenomic-HeadingAnchor {
         display: none;
       }
       ol, ul {
@@ -622,8 +635,12 @@ const Wrapper = styled(Column)`
     .subPageLink, .subPageLinkHeading {
       font-size: 16px;
     }
+
+
   }
 `
+const Clipboard = (typeof window !== 'undefined') ? require('clipboard') : null
+const preventDefault = (e) => e.preventDefault()
 
 export default class DocsWrapper extends React.Component {
   componentDidMount() {
@@ -635,6 +652,54 @@ export default class DocsWrapper extends React.Component {
         `\n<a class="line">${number++}</a>`
       ))
     })
+    const { origin, pathname } = window.location
+    // disable anchor tags until they are removed
+    this.attachHandlers()
+    setTimeout(() => {
+      this.clipboardInstance = new Clipboard('.phenomic-HeadingAnchor', { // eslint-disable-line
+        text(trigger) { // eslint-disable-line
+          return `${origin}${pathname.replace(/\/$/, '')}#${trigger.parentNode.id}`
+        }
+      })
+    }, 10)
+  }
+
+  componentDidUpdate(previousProps, _prevState) {
+    if (previousProps.__url !== this.props.__url) {
+      this.dettachHandlers()
+      setTimeout(() => {
+        this.attachHandlers()
+      }, 0)
+    }
+  }
+
+  componentWillUnmount() {
+    this.clipboardInstance.destroy()
+    // disable anchor tags until they are removed
+    this.dettachHandlers()
+  }
+
+  attachHandlers = () => {
+    const html = document.documentElement
+    if (html && html.className.indexOf('safari') > -1) {
+      // clipboard doesnt work in safari
+      return false
+    }
+    const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].addEventListener('click', preventDefault, false)
+    }
+  }
+
+  dettachHandlers = () => {
+    const html = document.documentElement
+    if (html && html.className.indexOf('safari') > -1) {
+      return false
+    }
+    const elements = document.getElementsByClassName('phenomic-HeadingAnchor')
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].removeEventListener('click', preventDefault, false)
+    }
   }
 
   render() {

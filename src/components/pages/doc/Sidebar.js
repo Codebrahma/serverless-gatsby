@@ -1,10 +1,54 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
+import debounce from 'lodash.debounce'
 import generatedMenu from 'src/layouts/Doc/generated-menu-items'
 import SearchBox from './SearchBox'
 
 export default class Sidebar extends React.Component {
+  constructor(props, context) {
+    super(props, context)
+    this.sidebarNode = null
+    this.sidebarNodeOffset = null
+  }
+
+  componentDidMount() {
+    if (window.outerWidth > 768) {
+      window.addEventListener('scroll', this.getDebouncedHandler)
+      window.addEventListener('resize', this.getDebouncedHandler)
+      this.sidebarNode = ReactDOM.findDOMNode(this.sidebarRef)
+      this.sidebarNodeOffset = this.sidebarNode.offsetTop
+      this.handleScroll()
+    }
+  }
+
+  componentWillUnmount() {
+    if (window.outerWidth > 768) {
+      window.removeEventListener('scroll', this.getDebouncedHandler)
+      window.removeEventListener('resize', this.getDebouncedHandler)
+    }
+  }
+
+  getDebouncedHandler = () => debounce(this.handleScroll, 10)
+
+  handleScroll = (_event) => {
+    const offsetHeight = window.pageYOffset || document.documentElement.scrollTop
+    // TODO: refactor hardcoded nav height number to variable
+    const stickyNavHeight = 74
+    const cachedOffset = this.sidebarNodeOffset - stickyNavHeight
+    if (offsetHeight >= cachedOffset) {
+      if (this.sidebarNode.style.position !== 'fixed') {
+        this.sidebarNode.style.position = 'fixed'
+        this.sidebarNode.style.top = `${stickyNavHeight}px`
+        // this.sidebarNode.style.background = 'red'
+      }
+    } else {
+      this.sidebarNode.style.position = 'relative'
+      this.sidebarNode.style.top = '0px'
+      // this.sidebarNode.style.background = 'white'
+    }
+  }
 
   renderList() {
     const { __url, head } = this.props
@@ -82,7 +126,7 @@ export default class Sidebar extends React.Component {
 
     return (
       <div className="sidebar">
-        <div ref='sidebar' className="sidebarInner">
+        <div className="sidebarInner" ref={(ref) => { this.sidebarRef = ref; }}>
           {searchBox}
 
           <div className="pageContext">

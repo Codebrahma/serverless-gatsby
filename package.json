@@ -40,7 +40,7 @@
   "scripts": {
     "build": "gatsby build",
     "buildprod": "npm run update-design-system && npm run syncProd && npm run prepareContent && gatsby build",
-    "update-design-system": "git submodule update -f --init; cd serverless-design-system; npm install; cd .. ;",
+    "update-design-system": "git submodule update -f --init --recursive; cd serverless-design-system; npm install; cd .. ;",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "lint": "eslint ./src/ --ext .js --fix",
@@ -48,7 +48,7 @@
     "watch:blog": "node scripts/blog/watch.js",
     "components": "npm run transpile -- --watch",
     "prepareContent": "node scripts/docs && node scripts/blog && node scripts/build-config",
-    "dev": "npm run update-design-system && npm run prepareContent && gatsby develop",
+    "dev": "npm run update-design-system && npm run syncProd && npm run prepareContent && gatsby develop",
     "syncLocal": "npm run postinstall",
     "syncProd": "npm run syncProd:Blog && npm run syncProd:Docs",
     "syncProd:Blog": "node scripts/blog/sync-blog-remote.js",

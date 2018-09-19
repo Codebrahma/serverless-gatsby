@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Link from 'gatsby-link'
 import { getCurrentUrl, getParentUrl } from 'src/utils/url'
 import debounce from 'lodash.debounce'
-import generatedMenu from 'src/layouts/Doc/generated-menu-items'
+import generatedMenu from 'src/constants/generated-menu-items'
 import SearchBox from './SearchBox'
 
 export default class Sidebar extends React.Component {

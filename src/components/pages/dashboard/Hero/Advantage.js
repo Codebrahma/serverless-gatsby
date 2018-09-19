@@ -1,8 +1,6 @@
 import React from 'react'
-
 import { ResponsiveStack, HeroAdvantage } from 'serverless-design-system/src'
-
-import RedRectangeDots from '../../../../assets/images/redRectangleDots.png'
+import RedRectangeDots from 'src/assets/images/redRectangleDots.svg'
 
 const advantages = [
   {
@@ -24,9 +22,16 @@ const advantages = [
 
 const Advantages = () => (
   <ResponsiveStack flexWrap='wrap'>
-    {advantages.map(({ title, description }) => (
-      <HeroAdvantage key={title} title={title} description={description} img={RedRectangeDots} />
-    ))}
+    {
+      advantages.map(({ title, description }) => (
+        <HeroAdvantage
+          key={title}
+          title={title}
+          description={description}
+          img={RedRectangeDots}
+        />
+      ))
+    }
   </ResponsiveStack>
 )
 

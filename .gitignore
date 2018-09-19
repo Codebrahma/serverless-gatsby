@@ -7,3 +7,11 @@ yarn-error.log
 # Build directory
 /public
 .DS_Store
+
+# blogs
+serverless-blog
+serverless
+
+# dynamic config
+.env.development
+.env.production

@@ -20,7 +20,7 @@ const CompanyDetails = () => (
         </P>
       </Box>
 
-      <Flex color='gray.3' width={[1 / 2, 1 / 2, 1]}>
+      <Flex color='gray.3' width={1}>
         <Box>
           <NavLink to={termsOfService} crossDomain>
             <P fontSize={0}>terms of service</P>

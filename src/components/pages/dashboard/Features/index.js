@@ -1,12 +1,12 @@
 import React from 'react'
-
+import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
-import dashboardFeature1 from 'src/assets/images/dashboard-feature-1.png'
-import dashboardFeature2 from 'src/assets/images/dashboard-feature-2.png'
-import dashboardFeature3 from 'src/assets/images/dashboard-feature-3.png'
-import dashboardFeature4 from 'src/assets/images/dashboard-feature-4.png'
-import dashboardFeature5 from 'src/assets/images/dashboard-feature-5.png'
-import dashboardFeature6 from 'src/assets/images/dashboard-feature-6.png'
+import dashboardFeature1 from 'src/assets/images/icon-visualize.svg'
+import dashboardFeature2 from 'src/assets/images/icon-logs.svg'
+import dashboardFeature3 from 'src/assets/images/icon-access-control.svg'
+import dashboardFeature4 from 'src/assets/images/icon-graph-light.svg'
+import dashboardFeature5 from 'src/assets/images/icon-events.svg'
+import dashboardFeature6 from 'src/assets/images/icon-audit.svg'
 
 const featureItemsData = [
   {
@@ -47,6 +47,13 @@ const featureItemsData = [
   },
 ]
 
-const DashboardFeatures = () => <Features features={featureItemsData} />
+const DashboardFeatures = () => (
+  <Box
+    pb={[12, 12, 10]}
+    mb={[4, 4, 0]}
+  >
+    <Features features={featureItemsData} />
+  </Box>
+)
 
 export default DashboardFeatures

@@ -19,10 +19,13 @@ const getLinkStyle = ({ backgroundOnHover }) => `
         position: absolute;
         left: -10px;
         top: -5px;
-        z-index: -1;
         background: url(${dotGridBacground});
         background-size: cover;
         display: none;
+
+        @media screen and (max-width: 768px) {
+          background: none;
+        }
       }
 
       &:hover {
@@ -35,10 +38,10 @@ const getLinkStyle = ({ backgroundOnHover }) => `
   }
 `
 
-const A = styled.a`
+const A = styled(({ backgroundOnHover, ...props }) => (<a {...props} />))`
   ${getLinkStyle};
 `
-const StyledLink = styled(Link)`
+const StyledLink = styled(({ backgroundOnHover, ...props }) => (<Link {...props} />))`
   ${getLinkStyle};
 `
 

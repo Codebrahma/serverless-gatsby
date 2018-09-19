@@ -1,15 +1,16 @@
 import React from 'react'
-
 import {
   Box,
-  Container,
   Heading,
   ImageCard,
   ResponsiveStack,
 } from 'serverless-design-system/src'
-import autoScalingIcon from 'src/assets/images/icon-vol.png'
-import payPerExecutionIcon from 'src/assets/images/icon-graph.png'
-import lowOverheadIcon from 'src/assets/images/icon-dash.png'
+
+import { AppContainer } from 'src/components'
+import { HeadingWithMaxWidth } from 'src/fragments'
+import autoScalingIcon from 'src/assets/images/icon-vol.svg'
+import payPerExecutionIcon from 'src/assets/images/icon-graph.svg'
+import lowOverheadIcon from 'src/assets/images/icon-dash.svg'
 
 const cardList = [
   {
@@ -40,13 +41,13 @@ const EachBenefit = ({ img, title, description }) => (
 )
 
 const HomeBenefits = () => (
-  <Container mt='100px'>
-    <Box mx={2}>
-      <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[5, 5, 6]}>
+  <AppContainer>
+    <Box mx={2} mt={7}>
+      <HeadingWithMaxWidth>
         Build more, manage less.
-        <br /><br />
+        <br />
         Serverless lets you focus on driving business value.
-      </Heading.h2>
+      </HeadingWithMaxWidth>
     </Box>
     <Heading.h4
       fontFamily={'SoleilBk'}
@@ -68,7 +69,7 @@ const HomeBenefits = () => (
         ))
       }
     </ResponsiveStack.spaceBetween>
-  </Container>
+  </AppContainer>
 )
 
 export default HomeBenefits

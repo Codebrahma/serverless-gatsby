@@ -1,0 +1,13 @@
+-------------
+.MAKE_EDITS_IN_SERVERLESS-BLOG_DIRECTORY
+Notice to anyone working on the blog
+-------------
+
+Any local edits in this /Users/kamesh/Documents/Projects/serverless-gatsby/content/blog/ directory will not be saved
+
+These blog markdown files are pulled from ./serverless-blog directory
+
+Please make changes to blog posts in /Users/kamesh/Documents/Projects/serverless-gatsby/serverless-blog/posts/.
+
+Then you can push up those changes to the https://github.com/codebrahma/blog repo
+

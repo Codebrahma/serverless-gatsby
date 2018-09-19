@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { UseCases } from 'src/fragments'
-import scaleableAPI from 'src/assets/images/scalableAPI.png'
-import dataProcessing from 'src/assets/images/dataProcessing.png'
-import easyAutomation from 'src/assets/images/easyAutomation.png'
+import scaleableAPI from 'src/assets/images/scalableAPI.svg'
+import dataProcessing from 'src/assets/images/dataProcessing.svg'
+import easyAutomation from 'src/assets/images/easyAutomation.svg'
 
 const cases = [
   {

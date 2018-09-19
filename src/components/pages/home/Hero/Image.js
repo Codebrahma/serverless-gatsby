@@ -4,8 +4,10 @@ import {
   Flex,
   Heading,
   Image,
+  Relative,
   withBeforeAfter,
 } from 'serverless-design-system/src'
+import { getLinkComponent } from 'src/components/BlockLink'
 import frameworkIcon from 'src/assets/images/bolt.png'
 import dashboardIcon from 'src/assets/images/icon-dashboard.png'
 import gatewayIcon from 'src/assets/images/group-6.png'
@@ -19,6 +21,7 @@ const bulletMarkerStyle = `
   margin-top: -1px;
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: contain;
 `
 
 const beforeBlockStyle = `
@@ -40,11 +43,19 @@ const HeroImageWrapper = withBeforeAfter(
   afterBlockStyle
 )
 
-const ImageSection = ({ imgSrc, title, subtitle }) => (
-  <Flex.verticallyCenter flexDirection='column' width={[1, 1, 1 / 3]}>
-    <Flex.relative height='86px' alignItems='center' my={2}>
-      <Image src={imgSrc} maxHeight='86px' maxWidth='70px' />
-    </Flex.relative>
+const ImageSectionWrapper = getLinkComponent(Flex.verticallyCenter)
+
+const ImageSection = ({ imgSrc, title, subtitle, to }) => (
+  <ImageSectionWrapper
+    flexDirection='column'
+    width={[1, 1, 1 / 3]}
+    to={to}
+  >
+    <Relative>
+      <Flex.verticallyCenter height='86px' my={2}>
+        <Image src={imgSrc} maxHeight='86px' maxWidth='70px' />
+      </Flex.verticallyCenter>
+    </Relative>
     <Heading.h5 color='white'>{title}</Heading.h5>
     <Heading.h4
       color='white'
@@ -54,7 +65,7 @@ const ImageSection = ({ imgSrc, title, subtitle }) => (
     >
       {subtitle}
     </Heading.h4>
-  </Flex.verticallyCenter>
+  </ImageSectionWrapper>
 )
 
 const HomeHeroImage = () => (
@@ -65,20 +76,27 @@ const HomeHeroImage = () => (
     mb={[2, 2, 4]}
     beforeBoxHeight={[0, 0, '20px']}
     afterBoxHeight={[0, 0, '20px']}
-    beforeBoxWidth={[0, 0, '100px', '180px']}
-    afterBoxWidth={[0, 0, '100px', '180px']}
+    beforeBoxWidth={[0, 0, '80px', '150px', '180px']}
+    afterBoxWidth={[0, 0, '80px', '150px', '180px']}
   >
     <ImageSection
       imgSrc={frameworkIcon}
       title='serverless'
       subtitle='framework'
+      to='/framework'
     />
     <ImageSection
       imgSrc={dashboardIcon}
       title='serverless'
       subtitle='dashboard'
+      to='/dashboard'
     />
-    <ImageSection imgSrc={gatewayIcon} title='event' subtitle='gateway' />
+    <ImageSection
+      imgSrc={gatewayIcon}
+      title='event'
+      subtitle='gateway'
+      to='/event-gateway'
+    />
   </HeroImageWrapper>
 )
 

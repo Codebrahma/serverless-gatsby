@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Box, Button } from 'serverless-design-system/src'
 
 import MenuTitle from './Title'
@@ -27,7 +26,7 @@ const DeveloperMenu = () => (
     <MenuTitle name={'developers'} />
     <MenuDescription
       wrapperStyles={{
-        minWidth: [0, 0, '475px'],
+        minWidth: [0, 0, '498px'],
         px: 5,
       }}
     >
@@ -55,18 +54,10 @@ const ResourcesMenu = () => (
 )
 
 const EnterpriseMenu = () => (
-  <Box>
-    <NavLink to={enterprise}>
-      <MenuTitle name={'enterprise'} />
-    </NavLink>
-  </Box>
-)
-
-const SignupMenu = () => (
-  <Box>
-    <NavLink to={signup} crossDomain>
+  <Box pt={[2, 2, 0]} pl={[1, 1, 0]}>
+    <NavLink to={enterprise} completed>
       <Button fontSize={'1.5rem'} px={2} py={'16px'} width='auto'>
-        sign up
+        enterprise
       </Button>
     </NavLink>
   </Box>
@@ -78,5 +69,4 @@ export default [
   LearnMenu,
   ResourcesMenu,
   EnterpriseMenu,
-  SignupMenu,
 ]

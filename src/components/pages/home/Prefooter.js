@@ -1,22 +1,42 @@
 import React from 'react'
-
 import Prefooter from 'src/components/Prefooter'
 
 const sentences = [
-  'Check out all the different use cases for serverless applications. Take a peek at how the Serverless Framework compares to other software.',
-  "Or if you're ready, follow our step-by-step guide to start building a Serverless Application with your favorite language.",
+  'To get started, pop open your terminal & run:',
+  'npm install serverless -g',
 ]
 
 const actions = [
-  { name: 'use cases', navProps: { to: '/learn/use-cases', completed: false } },
   {
-    name: 'comparisions',
-    navProps: { to: '/learn/comparisions', completed: false },
+    name: 'documentation',
+    navProps: {
+      to: '/framework/docs',
+      completed: false,
+    },
+  },
+  {
+    name: 'serverless examples',
+    navProps: {
+      to: '/framework/docs/providers/aws/examples/',
+      completed: false,
+    },
+  },
+  {
+    name: 'serverless plugins',
+    navProps: {
+      to: 'https://github.com/serverless/serverless',
+      crossDomain: true,
+      completed: false,
+    },
   },
 ]
 
 const HomePrefooter = () => (
-  <Prefooter heading='Next Steps' sentences={sentences} actions={actions} />
+  <Prefooter
+    heading='New to serverless?'
+    sentences={sentences}
+    actions={actions}
+  />
 )
 
 export default HomePrefooter

@@ -11,6 +11,7 @@ const Learn = () => (
         navProps={{
           to: learn.why,
           backgroundOnHover: true,
+          completed: true,
         }}
       >
         why?
@@ -21,19 +22,32 @@ const Learn = () => (
         navProps={{
           to: learn.useCases,
           backgroundOnHover: true,
+          completed: true,
         }}
       >
         use cases
       </SubMenuItem>
     </ListItem.noStyleType>
-    <ListItem.noStyleType>
+    <ListItem.noStyleType mb={2}>
       <SubMenuItem
         navProps={{
-          to: learn.comparisions,
+          to: learn.comparisons,
           backgroundOnHover: true,
+          completed: true,
         }}
       >
         comparisons
+      </SubMenuItem>
+    </ListItem.noStyleType>
+    <ListItem.noStyleType>
+      <SubMenuItem
+        navProps={{
+          to: learn.caseStudy,
+          backgroundOnHover: true,
+          completed: true,
+        }}
+      >
+        case studies
       </SubMenuItem>
     </ListItem.noStyleType>
   </List>

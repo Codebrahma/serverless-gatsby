@@ -1,54 +1,59 @@
 import React from 'react'
+import styled from 'styled-components'
 import Link from 'gatsby-link'
-
 import {
   Box,
-  Button,
-  Container,
+  Button,Column,
   Flex,
-  Heading,
   ImageCard,
   ResponsiveStack,
 } from 'serverless-design-system/src'
-import frameworkImage from 'src/assets/images/illustration-1.png'
-import dashboardImage from 'src/assets/images/illustration-2.png'
-import gatewayImage from 'src/assets/images/illustration-3.png'
+
+import { AppContainer } from 'src/components'
+import { HeadingWithMaxWidth } from 'src/fragments'
+import frameworkImage from 'src/assets/images/illustration-1.svg'
+import dashboardImage from 'src/assets/images/illustration-2.svg'
+import gatewayImage from 'src/assets/images/illustration-3.svg'
+
+const ButtonWrapper = styled(Flex.horizontallyCenter)`
+  overflow-x: hidden;
+`
 
 const LearnMoreButton = ({ to }) => (
-  <Flex.horizontallyCenter>
+  <ButtonWrapper>
     <Link to={to}>
-      <Button width={['280px', '280px', '245px', '280px']}>learn more</Button>
+      <Button width={['280px', '280px', '240px', '280px']}>
+        learn more
+      </Button>
     </Link>
-  </Flex.horizontallyCenter>
+  </ButtonWrapper>
 )
 
 const PlatformFeature = ({ image, title, description, learnMoreLink }) => (
-  <Box width={[1, 1, 1 / 3]} my={2}>
+  <Column
+    justifyContent="space-between"
+    width={[1, 1, 1 / 3]}
+    my={2}
+  >
     <ImageCard
       img={image}
       imgProps={{ height: ['200px', '200px', '175px', '245px'] }}
       title={title}
       description={description}
-    >
-      <LearnMoreButton to={learnMoreLink} />
-    </ImageCard>
-  </Box>
+    />
+    <LearnMoreButton to={learnMoreLink} />
+  </Column>
 )
 
 const PlatformFeatures = () => (
-  <Container mt={7}>
-    <Box mx={2}>
-      <Heading.h2
-        fontFamily='SoleilSb'
-        align='center'
-        fontSize={[5, 5, 6]}
-        lineHeight={[1, 1, 4]}
-      >
+  <AppContainer>
+    <Box mx={2} mt={7}>
+      <HeadingWithMaxWidth>
         Serverless Platform empowers developers to build & deploy serverless
         applications, on any provider.
-      </Heading.h2>
+      </HeadingWithMaxWidth>
     </Box>
-    <ResponsiveStack.spaceBetween my={6}>
+    <ResponsiveStack.spaceBetween my={5}>
       <PlatformFeature
         image={frameworkImage}
         title='Serverless Framework'
@@ -68,7 +73,7 @@ const PlatformFeatures = () => (
         learnMoreLink='/event-gateway'
       />
     </ResponsiveStack.spaceBetween>
-  </Container>
+  </AppContainer>
 )
 
 export default PlatformFeatures

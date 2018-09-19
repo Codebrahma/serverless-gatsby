@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Flex, P, TextWithIcon, Text } from 'serverless-design-system/src'
-import redRectangleDots from 'src/assets/images/redRectangleDots.png'
+import { Column, Flex, P, TextWithIcon, Text } from 'serverless-design-system/src'
+import redRectangleDots from 'src/assets/images/redRectangleDots.svg'
 
 const HeroAdvantage = ({ title, description }) => (
-  <Flex.column width={[1, 1, 1 / 3]} px={2} mt={2}>
+  <Column width={[1, 1, 1 / 3]} px={2} mt={2}>
     <Flex justifyContent={['center', 'center', 'left']}>
       <TextWithIcon
         iconSrc={redRectangleDots}
@@ -13,7 +13,7 @@ const HeroAdvantage = ({ title, description }) => (
         iconWidth='45px'
         iconTop='-5px'
         iconLeft='-10px'
-        backgroundSize='initial'
+        backgroundSize='cover'
       >
         <Text.span
           color='white'
@@ -26,7 +26,7 @@ const HeroAdvantage = ({ title, description }) => (
       </TextWithIcon>
     </Flex>
     <P color='gray.3'>{description}</P>
-  </Flex.column>
+  </Column>
 )
 
 HeroAdvantage.propTypes = {

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="293" height="243" viewBox="0 0 293 243">
+    <defs>
+        <linearGradient id="a" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity=".2"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="c" x1="100%" x2="1.398%" y1="50%" y2="50%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+        <linearGradient id="b" x1="100%" x2="0%" y1="100%" y2="0%">
+            <stop offset="0%" stop-color="#FF9088" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#FD5750"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" stroke="url(#a)" d="M.5.5h149v109H.5z" transform="translate(72)"/>
+        <path fill="url(#c)" fill-opacity=".2" stroke="url(#b)" d="M.5.5h149v19H.5z" transform="translate(72)"/>
+        <path fill="#FFF" fill-opacity=".7" d="M72 0h150v110H72z"/>
+        <path fill="#FFF" stroke="url(#a)" d="M.5.5h149v109H.5z" transform="translate(48 88)"/>
+        <path fill="url(#c)" fill-opacity=".2" stroke="url(#b)" d="M.5.5h149v19H.5z" transform="translate(48 88)"/>
+        <path fill="#FFF" fill-opacity=".7" d="M48 88h150v110H48z"/>
+        <path fill="#FFF" stroke="url(#a)" d="M.5.5h149v109H.5z" transform="translate(0 48)"/>
+        <path fill="url(#c)" fill-opacity=".2" stroke="url(#b)" d="M.5.5h149v19H.5z" transform="translate(0 48)"/>
+        <path fill="#FFF" fill-opacity=".7" d="M0 48h150v110H0z"/>
+        <path fill="#FFF" stroke="url(#a)" d="M.5.5h149v109H.5z" transform="translate(128 48)"/>
+        <path fill="url(#c)" fill-opacity=".2" stroke="url(#b)" d="M.5.5h149v19H.5z" transform="translate(128 48)"/>
+        <path fill="#FFF" fill-opacity=".7" d="M128 48h150v110H128z"/>
+        <g stroke-width="1.2">
+            <path fill="#FFF" stroke="url(#a)" d="M.6.6h148.8v108.8H.6z" transform="translate(24 32)"/>
+            <path fill="url(#c)" fill-opacity=".2" stroke="url(#b)" d="M.6.6h148.8v18.8H.6z" transform="translate(24 32)"/>
+        </g>
+        <g stroke-width="1.2">
+            <path fill="#FFF" stroke="url(#a)" d="M.6.6h148.8v108.8H.6z" transform="translate(143 63)"/>
+            <path fill="url(#c)" fill-opacity=".2" stroke="url(#b)" d="M.6.6h148.8v18.8H.6z" transform="translate(143 63)"/>
+        </g>
+        <path fill="#FFF" stroke="#FD5750" stroke-width="1.5" d="M176.683 229.582c16.834-16.887 16.745-44.274-.2-61.164-16.946-16.89-44.332-16.89-61.165-.002-16.835 16.89-16.746 44.276.2 61.164 16.945 16.893 44.33 16.893 61.165.002z"/>
+        <path stroke="#F15953" stroke-width="1.5" d="M153.84 193.139l5.428-8.487.076-6.583-.086-.069c-8.563 6.807-18.686 14.965-27.25 21.772.013.025.01 1.335-.008 3.927l10.122-1.543c-3.495 5.347-7.158 11.191-7.158 11.191l.022 6.653L160 198.971l-.077-6.469s-4.51.465-6.084.637z"/>
+        <path stroke="#F15953" stroke-width="1.5" d="M159.997 192.689l-25.16 21.308a.01.01 0 0 1-.016-.013l10.056-15.9-12.866 1.799a.01.01 0 0 1-.008-.018l27.313-21.864a.01.01 0 0 1 .015.014l-10.859 15.903 11.517-1.247a.01.01 0 0 1 .008.018z"/>
+        <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="32" y="46">serverless.yml</tspan>
+        </text>
+        <text fill="#5B5B5B" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="40" y="77">service: hello</tspan> <tspan x="40" y="91">functions:</tspan> <tspan x="40" y="105"> hello</tspan>
+        </text>
+        <text fill="#FD5750" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="151" y="77">terminal</tspan>
+        </text>
+        <text fill="#5B5B5B" font-family="Serverless-Regular, Serverless" font-size="12" letter-spacing=".5">
+            <tspan x="159" y="108">$ serverless </tspan> <tspan x="159" y="122">deploy</tspan>
+        </text>
+    </g>
+</svg>

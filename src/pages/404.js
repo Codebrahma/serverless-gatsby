@@ -1,5 +1,9 @@
 import React from 'react'
+import { ThemeProvider } from 'styled-components'
+
 import { Background } from 'serverless-design-system/src'
+import theme from 'serverless-design-system/src/theme'
+
 import Prefooter from 'src/components/Prefooter'
 import DefaultLayout from 'src/layouts/Default'
 import notFoundBackground from 'src/assets/images/404-background.jpg'
@@ -41,14 +45,16 @@ const prefooter = () => (
 )
 
 const NotFoundPage = () => (
-  <DefaultLayout prefooter={prefooter}>
-    <Background
-      backgroundImage={`url(${notFoundBackground})`}
-      backgroundSize="contain"
-      height="850px"
-    >
-    </Background>
-  </DefaultLayout>
+  <ThemeProvider theme={theme}>
+    <DefaultLayout prefooter={prefooter}>
+      <Background
+        backgroundImage={`url(${notFoundBackground})`}
+        backgroundSize="contain"
+        height="850px"
+      >
+      </Background>
+    </DefaultLayout>
+  </ThemeProvider>
 )
 
 export default NotFoundPage

@@ -4,15 +4,14 @@ import { HeroActions } from 'src/fragments'
 const FrameworkHeroActions = () => (
   <HeroActions
     firstBtn={{
-      name: 'quick start',
+      name: 'start with framework',
       to: '/framework/docs/getting-started/',
-      completed: false,
+      completed: true,
     }}
     secondBtn={{
-      name: 'sign up',
-      to: 'https://dashboard.serverless.com/',
-      crossDomain: true,
-      completed: false,
+      name: 'enterprise demo',
+      to: '/enterprise/',
+      completed: true,
     }}
   />
 )

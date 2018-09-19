@@ -10,19 +10,17 @@ import ServerlessNews from 'src/components/pages/company/overview/ServerlessNews
 import ContactUs from 'src/components/pages/company/overview/ContactUs'
 import Prefooter from 'src/components/pages/home/Prefooter'
 
-const Home = () => {
-  return (
-    <DefaultLayout prefooter={Prefooter} transparentHeader>
-      <Helmet title="About Serverless Inc" />
-      <Hero />
-      <OurStory />
-      <OurTeam />
-      <Divider />
-      <OurInvestors />
-      <ServerlessNews />
-      <ContactUs />
-    </DefaultLayout>
-  )
-}
+const Company = ({ location }) => (
+  <DefaultLayout prefooter={Prefooter} transparentHeader>
+    <Helmet title="About Serverless Inc" location={location} />
+    <Hero />
+    <OurStory />
+    <OurTeam />
+    <Divider />
+    <OurInvestors />
+    <ServerlessNews />
+    <ContactUs />
+  </DefaultLayout>
+)
 
-export default Home
+export default Company

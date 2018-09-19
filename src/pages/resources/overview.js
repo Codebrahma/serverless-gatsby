@@ -6,9 +6,9 @@ import GetInvolved from 'src/components/pages/resources/overview/GetInvolved'
 import Prefooter from 'src/components/pages/resources/Prefooter'
 import { Helmet } from 'src/fragments'
 
-const ResourcesOverview = () => (
+const ResourcesOverview = ({ location }) => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
-    <Helmet title="Serverless Community" />
+    <Helmet title="Serverless Community" location={location} />
     <Hero />
     <GetInvolved />
   </DefaultLayout>

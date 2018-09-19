@@ -8,16 +8,14 @@ import OurValues from 'src/components/pages/company/jobs/OurValues'
 import Prefooter from 'src/components/pages/home/Prefooter'
 import { Helmet } from 'src/fragments'
 
-const Home = () => {
-  return (
-    <DefaultLayout prefooter={Prefooter} transparentHeader>
-      <Helmet title="Jobs" />
-      <Hero />
-      <OpenPositions />
-      <HowWeOperate />
-      <OurValues />
-    </DefaultLayout>
-  )
-}
+const Jobs = ({ location }) => (
+  <DefaultLayout prefooter={Prefooter} transparentHeader>
+    <Helmet title="Jobs" location={location} />
+    <Hero />
+    <OpenPositions />
+    <HowWeOperate />
+    <OurValues />
+  </DefaultLayout>
+)
 
-export default Home
+export default Jobs

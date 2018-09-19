@@ -9,7 +9,8 @@ import HighlightedBlogList from 'src/constants/featured-blogs.json'
 
 export default ({
   data: { blogs: { edges, totalCount }, highlighted },
-  pathContext: { start, limit }
+  pathContext: { start, limit },
+  location,
 }) => {
   const totalPages = Math.ceil(totalCount / limit)
   const currentPage = start/limit
@@ -28,6 +29,7 @@ export default ({
       <Helmet
         title="Serverless Blog"
         description="Articles, resources, and posts on serverless architectures, best practices, and how-to"
+        location={location}
       />
       {
         currentPage === 0 && (

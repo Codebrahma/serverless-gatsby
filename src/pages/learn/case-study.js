@@ -7,9 +7,9 @@ import Parallax from 'src/components/pages/learn/case-study/Parallax'
 import Results from 'src/components/pages/learn/case-study/Results'
 import { Helmet } from 'src/fragments'
 
-const CaseStudy = () => (
+const CaseStudy = ({ location }) => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
-    <Helmet title="Serverless Case Study" />
+    <Helmet title="Serverless Case Study" location={location} />
     <Hero />
     <Parallax />
     <Results />

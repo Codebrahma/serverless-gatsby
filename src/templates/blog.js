@@ -6,11 +6,11 @@ import RelativeBlogs from 'src/components/pages/blog/RelativeBlogs'
 import Comments from 'src/components/pages/blog/Comments'
 import { Helmet } from 'src/fragments'
 
-export default ({ data: { currentBlog, previousBlog, nextBlog } }) => (
+export default ({ data: { currentBlog, previousBlog, nextBlog }, location }) => (
   <BlogLayout prefooter={Prefooter}>
     <Helmet
-      title={currentBlog.frontmatter.title}
-      description={currentBlog.frontmatter.description}
+      {...currentBlog.frontmatter}
+      location={location}
     />
     <BlogContent { ...currentBlog } />
     <RelativeBlogs blogs={[previousBlog, nextBlog]} />

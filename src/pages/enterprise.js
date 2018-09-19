@@ -6,14 +6,14 @@ import DefaultLayout from 'src/layouts/Default'
 import Content from 'src/components/pages/enterprise/Content'
 import Prefooter from 'src/components/pages/enterprise/Prefooter'
 
-const Home = () => {
+const Enterprise = ({ location }) => {
   return (
     <DefaultLayout prefooter={Prefooter}>
-      <Helmet title="Serverless Enterprise" />
+      <Helmet title="Serverless Enterprise" location={location} />
       <Content />
       <TrustedClients />
     </DefaultLayout>
   )
 }
 
-export default Home
+export default Enterprise

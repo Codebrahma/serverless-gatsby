@@ -7,16 +7,14 @@ import { Divider, Helmet } from 'src/fragments'
 import OurChampions from 'src/components/pages/company/champions/OurChampions'
 import Prefooter from 'src/components/pages/home/Prefooter'
 
-const Home = () => {
-  return (
-    <DefaultLayout prefooter={Prefooter} transparentHeader>
-      <Helmet title="Serverless Champions" />
-      <Hero />
-      <HowToBeChampion />
-      <Divider />
-      <OurChampions />
-    </DefaultLayout>
-  )
-}
+const Champions = ({ location }) => (
+  <DefaultLayout prefooter={Prefooter} transparentHeader>
+    <Helmet title="Serverless Champions" location={location} />
+    <Hero />
+    <HowToBeChampion />
+    <Divider />
+    <OurChampions />
+  </DefaultLayout>
+)
 
-export default Home
+export default Champions

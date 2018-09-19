@@ -10,11 +10,12 @@ import GetStarted from 'src/components/pages/learn/overview/GetStarted'
 import AdditionalFeatures from 'src/components/pages/learn/overview/AdditionalFeatures'
 import { Divider, Helmet } from 'src/fragments'
 
-const Overview = () => (
+const Overview = ({ location }) => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
     <Helmet
       title="Why Serverless?"
       description="What is the Serverless movement about and why does it matter?"
+      location={location}
     />
     <Hero/>
     <Explanation />

@@ -8,7 +8,7 @@ import LiteHeader from '../components/pages/doc/LiteHeader'
 import gitHubSvg from 'src/assets/images/githubIcon.svg'
 import { Helmet as SEOHelmet } from 'src/fragments'
 
-export default ({ data: { doc }, location: { pathname } }) => (
+export default ({ data: { doc }, location }) => (
   <Default footerBackground={false}>
     <Helmet
       link={[
@@ -25,8 +25,11 @@ export default ({ data: { doc }, location: { pathname } }) => (
     />
 
     <DocsWrapper>
-      <SEOHelmet title={doc.frontmatter.title} description={doc.frontmatter.description} />
-      <LiteHeader url={pathname} />
+      <SEOHelmet
+        {...doc.frontmatter}
+        location={location}
+      />
+      <LiteHeader url={location.pathname} />
       <Row className="docWrapper">
         <Sidebar head={doc.frontmatter} />
         <a

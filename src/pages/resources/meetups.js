@@ -8,9 +8,9 @@ import UpcomingMeetups from 'src/components/pages/resources/meetups/UpcomingMeet
 import Prefooter from 'src/components/pages/resources/meetups/Prefooter'
 import { Helmet } from 'src/fragments'
 
-const ResourcesMeetups = () => (
+const ResourcesMeetups = ({ location }) => (
   <DefaultLayout prefooter={Prefooter} transparentHeader>
-    <Helmet title="Serverless Meetups" />
+    <Helmet title="Serverless Meetups" location={location} />
     <Hero />
     <Introduction />
     <UpcomingMeetups />

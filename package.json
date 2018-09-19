@@ -24,6 +24,7 @@
     "gatsby-transformer-sharp": "^1.6.27",
     "localforage": "^1.7.2",
     "lodash.debounce": "^4.0.8",
+    "react-ga": "^2.5.3",
     "react-helmet": "^5.2.0",
     "react-instantsearch-dom": "^5.2.3",
     "remark-autolink-headings": "^5.0.0",

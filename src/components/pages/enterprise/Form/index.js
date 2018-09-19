@@ -10,6 +10,7 @@ import SelectField from './SelectField'
 import Checkbox from './Checkbox'
 import TextArea from './TextArea'
 import SubTitle from './../Pros/SubTitle'
+import track from 'src/utils/analytics/track'
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -87,6 +88,7 @@ export default class Form extends React.Component {
     const { loading, success } = this.state
 
     if (success) {
+      track('site:enterprise_contact', { category: 'Contact Form' })
       return (
         <Box>
           <P>

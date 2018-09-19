@@ -21,6 +21,7 @@ const bulletMarkerStyle = `
   margin-top: -1px;
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: contain;
 `
 
 const beforeBlockStyle = `
@@ -75,8 +76,8 @@ const HomeHeroImage = () => (
     mb={[2, 2, 4]}
     beforeBoxHeight={[0, 0, '20px']}
     afterBoxHeight={[0, 0, '20px']}
-    beforeBoxWidth={[0, 0, '100px', '180px']}
-    afterBoxWidth={[0, 0, '100px', '180px']}
+    beforeBoxWidth={[0, 0, '80px', '150px', '180px']}
+    afterBoxWidth={[0, 0, '80px', '150px', '180px']}
   >
     <ImageSection
       imgSrc={frameworkIcon}

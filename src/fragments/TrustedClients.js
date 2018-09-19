@@ -45,7 +45,7 @@ const TrustedClients = () => (
         </Heading.h5>
         <ImageList
           maxHeight={['41px', '41px', '41px', '50px']}
-          maxWidth={['100%', '100%', '90%', '80%', '100%']}
+          maxWidth={['100%', '100%', '85%', '80%', '100%']}
           objectFit='contain'
           containerProps={{ maxWidth: '200px' }}
           list={TrustedClientList}

@@ -2,11 +2,13 @@
 title: 'Deploy a REST API using Serverless, Express and Node.js'
 description: 'Learn how to use the popular Express.js framework to deploy a REST API with Serverless, DynamoDB and API Gateway.'
 date: '2017-10-04'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/header+images/serverless-express-rest-api.jpg'
 authors:
     - AlexDeBrie
 category:
     - guides-and-tutorials
+featured: guides-and-tutorials
 gitLink: /2017-10-04-serverless-express-rest-api.md
 ---
 

@@ -1,7 +1,8 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
-  siteMetadata: {
-    title: 'Serverless - The serverless application framework powered by AWS Lambda, API gateway and more',
-  },
   plugins: [
     'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',

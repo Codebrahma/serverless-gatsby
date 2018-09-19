@@ -3,6 +3,7 @@ title: 'How Shifter Introduced Serverless Hosting to WordPress Using AWS, Dynamo
 description: 'Learn how Shifter transforms WordPress blogs and websites into static sites to make them faster, more secure and scalable in this guest post.'
 date: '2016-12-20'
 thumbnail: 'https://s3.amazonaws.com/shifter-serverless-blog/shifter-square.png'
+layout: Post
 authors:
     - Shifter
 gitLink: /2016-12-20-serverless-wordpress-hosting-with-shifter.md
@@ -10,7 +11,7 @@ gitLink: /2016-12-20-serverless-wordpress-hosting-with-shifter.md
 
 <img align="right" width="250" height="250" src="https://s3.amazonaws.com/shifter-serverless-blog/shifter-square.png">
 
-[Shifter](https://getshifter.io) is a SaaS hosting product that turns any type of WordPress website or blog into a static site. In one click your site can be converted into static HTML files, moved to S3 and delivered through CloudFront. In this post the Shifter team will share more about our motivation for building this project along with a sneak peek at the backend.
+[Shifter](https://getshifter.io) is a SaaS hosting product that turns any type of WordPress website or blog into a static site. In one click your site can be converted into static HTML files, moved to S3 and delivered through CloudFront. In this post the Shifter team will share more about our motivation for building this project along with a sneak peek at the backend. 
 
 ## Introducing Microservices to WordPress
 
@@ -20,11 +21,11 @@ The Shifter team consists of WordPress pros who contribute to the project active
 
 ## Solving the Scalability Issue
 
-Maintaining WordPress sites demands significantly more time and attention as the website gains popularity (and more traffic) or the number of websites you manage increases. In some cases, the amount of time spent maintaining the backend can exceed the work put into new content. This can cause major problems for WordPress users as their websites grow.
+Maintaining WordPress sites demands significantly more time and attention as the website gains popularity (and more traffic) or the number of websites you manage increases. In some cases, the amount of time spent maintaining the backend can exceed the work put into new content. This can cause major problems for WordPress users as their websites grow. 
 
-Shifter addresses these issues by converting a dynamic WordPress site into static files.
+Shifter addresses these issues by converting a dynamic WordPress site into static files. 
 
-What if you want to make changes to your site? WordPress is there when you need it, on demand, running from a Docker container that only you can see. After you’ve made your changes Shifter goes to work generating those updates, delivering them across a global CDN, and the Docker container and WordPress backend will vanish again. Shifter brings the simplicity and benefits of serverless architecture to WordPress.
+What if you want to make changes to your site? WordPress is there when you need it, on demand, running from a Docker container that only you can see. After you’ve made your changes Shifter goes to work generating those updates, delivering them across a global CDN, and the Docker container and WordPress backend will vanish again. Shifter brings the simplicity and benefits of serverless architecture to WordPress. 
 
 Now, we'll share some of the architecture of the Shifter backend and a few lessons learned.
 
@@ -65,7 +66,7 @@ exports.handler = (event, context, cb) => {
       Promise.resolve()
       .then(() => projects.get())
       .then((data) => cb(null, data))
-      .catch((error) => errorHandle(error, cb));
+      .catch((error) => errorHandle(error, cb));     
       break;
     case 'DELETE':
       Promise.resolve()

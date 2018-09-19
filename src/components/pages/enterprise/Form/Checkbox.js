@@ -18,4 +18,8 @@ export default styled(Checkbox)`
       background-image: url(https://serverless.com/_/src/assets/images/checked.9db08fa8d6d38e9292f0fac4f019d043.png);
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 `

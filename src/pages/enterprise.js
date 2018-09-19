@@ -1,18 +1,19 @@
 import React from 'react'
 
-import TrustedClients from 'src/fragments/TrustedClients'
+import { TrustedClients, Helmet } from 'src/fragments'
 import DefaultLayout from 'src/layouts/Default'
 
 import Content from 'src/components/pages/enterprise/Content'
 import Prefooter from 'src/components/pages/enterprise/Prefooter'
 
-const Home = () => {
+const Enterprise = ({ location }) => {
   return (
     <DefaultLayout prefooter={Prefooter}>
+      <Helmet title="Serverless Enterprise" location={location} />
       <Content />
       <TrustedClients />
     </DefaultLayout>
   )
 }
 
-export default Home
+export default Enterprise

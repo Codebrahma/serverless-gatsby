@@ -2,6 +2,7 @@
 title: 'Use These 5 AWS Learning Resources to Master the Cloud'
 description: '5 must-see AWS Learning Resources'
 date: '2017-08-14'
+layout: Post
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/24940473/2bdb229a-1ef8-11e7-9e8d-8f75b5461748.png'
 authors:
     - DavidWells

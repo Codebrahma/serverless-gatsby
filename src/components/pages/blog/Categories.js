@@ -6,12 +6,13 @@ import {
   getCategoryNameById,
 } from 'src/utils/blog'
 
-const CategoryDetail = ({ id, renderComma }) => (
+const CategoryDetail = ({ id, renderComma, textStyleProps }) => (
   <React.Fragment>
     <Text.span
       fontFamily="Serverless"
       fontSize={1}
       opacity={0.4}
+      { ...textStyleProps }
     >
       <LinkWithoutStyle to={getCategoryLink(id)}>
         { getCategoryNameById(id) }
@@ -21,13 +22,14 @@ const CategoryDetail = ({ id, renderComma }) => (
   </React.Fragment>
 )
 
-export default ({ categoryIds }) => (
+export default ({ categoryIds, textStyleProps = {} }) => (
   <Row my={25}>
     {
       categoryIds.map((id, index) => (
         <CategoryDetail
           key={id}
           id={id}
+          textStyleProps={textStyleProps}
           renderComma={index !== categoryIds.length-1}
         />
       ))

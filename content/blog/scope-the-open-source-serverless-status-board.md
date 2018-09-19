@@ -3,12 +3,13 @@ title: 'How to gain more visiblity into your Github Projects using Scope'
 description: 'Learn how you can get a quick bird''s eye view of your project.'
 date: '2017-02-08'
 thumbnail: 'https://cloud.githubusercontent.com/assets/532272/22729200/9248f46e-ed96-11e6-8cb4-7e2e76ac7d72.jpg'
+layout: Post
 authors:
     - DavidWells
 gitLink: /2017-02-08-scope-the-open-source-serverless-status-board.md
 ---
 
-Let's face it, large GitHub projects are **hard to follow**.
+Let's face it, large GitHub projects are **hard to follow**. 
 
 They have tons of issues and PRs flooding your inbox and it's hard to sift through them on GitHub.
 

@@ -2,6 +2,7 @@
 title: 'Event-driven processing with Serverless and DynamoDB streams'
 description: 'Learn how to use DynamoDB streams and AWS Lambda to keep your search indexes and CRM tools up to date.'
 date: '2017-06-21'
+layout: Post
 thumbnail: 'https://user-images.githubusercontent.com/6509926/27362413-f40e4968-55f3-11e7-9c68-65dc1b06f335.jpg'
 authors:
     - AlexDeBrie
@@ -234,7 +235,7 @@ def index_users(event, context):
                 fullname=fullname,
                 date_of_birth=date_of_birth
             )
-
+			
             logger.info('Indexed user Id {}'.format(user_id)
         elif record.get('eventName') == 'DELETE':
             user_id = record['Keys']['userId']['N']
@@ -279,7 +280,7 @@ def index_users(event, context):
                 mark_user_as_deleted(email=email)
 
                 logger.info('Marked {} as deleted in CRM'.format(email)
-
+		
     except Exception as e:
         logger.error("Failed to update {email} in CRM. Error: {error}".format(email=email, error=str(e))
 

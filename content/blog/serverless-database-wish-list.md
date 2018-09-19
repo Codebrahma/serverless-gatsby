@@ -3,6 +3,7 @@ title: 'Serverless Database Wish List - What''s Missing Today'
 description: 'A wish list for bringing databases up to speed in the era of serverless application development.'
 date: '2017-05-03'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/25672643/253110f4-2ffa-11e7-8e26-65643382f15b.png'
+layout: Post
 authors:
     - MaciejWinnicki
 gitLink: /2017-05-03-serverless-database-wish-list.md
@@ -12,7 +13,7 @@ The rise of serverless infrastructure hugely simplified the process of deploying
 
 Furthermore, serverless enables developers to build globally distributed services with ease. You can now deploy code to numerous data centers around the world, providing low-latency access to your services for many customers with just a few commands. There's a problem though. Existing cloud databases just aren't a good fit for serverless applications.
 
-The number of cloud database offerings continues to grow - from hosted open source databases ([Compose](https://www.compose.com/), [Amazon RDS](https://aws.amazon.com/rds/), [Google SQL](https://cloud.google.com/sql/docs/) to proprietary NoSQL solutions from major cloud vendors ([DynamoDB](https://aws.amazon.com/dynamodb/), [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/), [Datastore](https://cloud.google.com/appengine/docs/standard/java/datastore/)).
+The number of cloud database offerings continues to grow - from hosted open source databases ([Compose](https://www.compose.com/), [Amazon RDS](https://aws.amazon.com/rds/), [Google SQL](https://cloud.google.com/sql/docs/) to proprietary NoSQL solutions from major cloud vendors ([DynamoDB](https://aws.amazon.com/dynamodb/), [DocumentDB](https://azure.microsoft.com/en-us/services/documentdb/), [Datastore](https://cloud.google.com/appengine/docs/standard/java/datastore/)). 
 
 But these solutions were created for applications that are largely:
  - Running continuously for many days

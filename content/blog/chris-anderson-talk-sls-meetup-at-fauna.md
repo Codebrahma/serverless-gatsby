@@ -2,6 +2,7 @@
 title: 'Real World Security for your Serverless Apps with FaunaDB [Video]'
 description: 'FaunaDB''s Chris Anderson walks through extending the popular todo list serverless-crud example app to allow sharing and collaboration on lists.'
 date: '2017-05-04'
+layout: Post
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/23813615/4b53e4fc-05a5-11e7-8214-e34c2c02b949.png'
 authors:
     - ChrisAnderson
@@ -17,7 +18,7 @@ gitLink: /2017-05-04-chris-anderson-talk-sls-meetup-at-fauna.md
 
 ## Transcript
 
-**Chris:** I'm Director of Developer Experience at FaunaDB, Chris Anderson. I don't have a slide about me, but you can find me on Twitter, [@jchris](https://twitter.com/jchris). And I've been working with Fauna for a few months now, focusing on the developer experience and like really, just getting up to my eyeballs as a user of the database and recently, as a user of the Serverless Framework, putting them together to write some application code, sort of just to see how apps are written in 2017.
+**Chris:** I'm Director of Developer Experience at FaunaDB, Chris Anderson. I don't have a slide about me, but you can find me on Twitter, [@jchris](https://twitter.com/jchris). And I've been working with Fauna for a few months now, focusing on the developer experience and like really, just getting up to my eyeballs as a user of the database and recently, as a user of the Serverless Framework, putting them together to write some application code, sort of just to see how apps are written in 2017. 
 
 My background, I've done various iterations of that at different database companies and open source projects and stuff over the years, so I really enjoy seeing what a new platform can bring to the table. And today we're gonna talk about my adventure making the popular TodoMVC Example App into a real application.
 
@@ -65,7 +66,7 @@ Well, with update, you already know what you're gonna do, so I'll just show you 
 
 We are creating a Todo. And I'll skip some of the noise and just go to the FaunaDB part. What we've got here is, we're grabbing this little atom of query language stuff. It's kinda neat. So this doesn't execute in terms of going to the server and figuring out who this reference is and getting them and selecting that field off of it. Instead, the return value of all this is just some abstract syntax tree of the query. And so now we just have a little query item in this me variable.
 
-So we're gonna say the Todo.user is me and we're also gonna say the permissions involve me. And, essentially, that's just taking that query snippet and dropping it in all those places. So when the query runs, the server runs all this code, rather Fauna runs all this code and doesn't know that I used to have it decomposed into a variable. So that's one of the fun things about having essentially a query builder as your SDK because then you can use these little query built things and reuse them.
+So we're gonna say the Todo.user is me and we're also gonna say the permissions involve me. And, essentially, that's just taking that query snippet and dropping it in all those places. So when the query runs, the server runs all this code, rather Fauna runs all this code and doesn't know that I used to have it decomposed into a variable. So that's one of the fun things about having essentially a query builder as your SDK because then you can use these little query built things and reuse them. 
 
 Your question?
 

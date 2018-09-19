@@ -2,6 +2,7 @@
 title: 'Azure Functions Support with Serverless v1.8'
 description: 'Azure functions provider plugin, inline policies, bug fixes and improvements in the Serverless Framework v1.8 release.'
 date: '2017-02-28'
+layout: Post
 authors:
     - PhilippMuns
 gitLink: /2017-02-28-serverless-v1.8.0.md

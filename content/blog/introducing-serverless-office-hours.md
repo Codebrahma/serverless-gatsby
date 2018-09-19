@@ -3,6 +3,7 @@ title: 'Introducing Serverless Office Hours'
 description: 'Join the Serverless team in our first edition of Office Hours for a live chat to answer all your questions about the latest release.'
 date: '2016-10-27'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/19769976/25c14630-9c23-11e6-9698-8cda3b8809d8.jpg'
+layout: Post
 authors:
     - StefanieMonge
 gitLink: /2016-10-27-introducing-serverless-office-hours.md

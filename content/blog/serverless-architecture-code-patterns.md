@@ -1,4 +1,5 @@
 ---
+layout: Post
 title: 'Serverless Code Patterns'
 date: '2016-09-15'
 description: 'Learn the best ways to structure your Serverless applications by applying theses architectural patterns'

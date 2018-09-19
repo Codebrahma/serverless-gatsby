@@ -2,6 +2,7 @@
 title: 'New in Serverless v1.11 - Trigger Functions with CloudWatch Events'
 description: 'Trigger Lambdas through CloudWatch Logs, plus more new features in the Serverless Framework v1.11 release.'
 date: '2017-04-12'
+layout: Post
 authors:
     - PhilippMuns
 gitLink: /2017-04-12-serverless-v1.11.0.md

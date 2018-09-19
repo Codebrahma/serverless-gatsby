@@ -2,6 +2,7 @@
 title: 'How to manage your AWS Step Functions with Serverless'
 description: 'Managing complex workflows with Serverless and AWS Step Functions.'
 date: '2017-09-18'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/step-functions.png'
 authors:
     - TakahiroHorike

@@ -2,6 +2,7 @@
 title: 'Event-driven Influencers - A Cloud Guru'
 description: 'Keeping with the serverless pulse.'
 date: '2017-07-28'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/ACloudGuru.png'
 authors:
     - AndreaPasswater
@@ -12,7 +13,7 @@ gitLink: /2017-07-28-event-driven-influencers-a-cloud-guru.md
 
 ## Background
 
-There is a lot of value on the table for enterprises who go serverless, but the problem is: it’s a rapidly-changing space. Very few terms are lined out in concrete, and even the most established experts are still debating about things like what an ‘event’ really is.
+There is a lot of value on the table for enterprises who go serverless, but the problem is: it’s a rapidly-changing space. Very few terms are lined out in concrete, and even the most established experts are still debating about things like what an ‘event’ really is. 
 
 [A Cloud Guru](https://www.acloud.guru/) saw early on that there was a disparity in what people could do in the cloud, and what people knew they could do in the cloud. They stepped up to fill in those educational gaps, with a hard focus on serverless computing and the event-driven mindset it facilitates.
 

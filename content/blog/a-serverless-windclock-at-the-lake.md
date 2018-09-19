@@ -3,6 +3,7 @@ title: 'A Serverless Weatherclock To Monitor My Favorite Kiteboarding Spot At Th
 description: 'This post illustrates how I use Serverless to update a `windclock` that shows me the wind speed and direction at my favorite kiteboarding spot.'
 date: '2017-01-17'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/22045696/720957f4-dce1-11e6-9a5e-15f34c8c6ec6.jpg'
+layout: Post
 authors:
     - DouweHomans
 gitLink: /2017-01-17-a-serverless-windclock-at-the-lake.md
@@ -35,7 +36,7 @@ It came down to 2 steps:
 2. Get the data to the clock
 
 
-### Connect the clock to the Internet
+### Connect the clock to the Internet 
 I decided to work with a Photon made by [Particle.io](https://www.particle.io/). It's a microprocessor that automatically connects to the Particle Cloud once set up. The device can be programmed in C.
 
 <p align="center">

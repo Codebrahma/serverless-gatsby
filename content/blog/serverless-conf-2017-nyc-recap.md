@@ -2,6 +2,7 @@
 title: 'ServerlessConf 2017 Recap - NYC'
 description: 'Breakdowns of our favorite ServerlessConf talks, plus some high-level takeaways for the serverless community.'
 date: '2017-10-10'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/slsconf_nyc.jpg'
 authors:
     - AndreaPasswater
@@ -188,7 +189,7 @@ As a community, let's band together and make sure that happens.
 ## Why the Fuss About Serverless?
 by [Simon Wardley](https://twitter.com/swardley)
 
-Simon regaled the crowd with a thoughtful appraisal of how we think about systems—and what this all means for serverless. Here are some of his key points:
+Simon regaled the crowd with a thoughtful appraisal of how we think about systems—and what this all means for serverless. Here are some of his key points: 
 
 **Maps don’t equal Diagrams**<br>
 Maps help us better conceptualize problem spaces; we should all be making them. But what most developers call 'maps' (systems maps, anyone?), aren't actually maps.
@@ -236,7 +237,7 @@ Productivity, plain and simple. But what we need to remember about productivity 
 
 When your infrastructure is an extension of your code code (as it is with Serverless), that means you have to treat your infrastructure as well as your code. This responsibility falls to developers.
 
-<img width="600" src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/slsconf+2017+recap/infra-as-code.jpg">
+<img width="600" src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/slsconf+2017+recap/infra-as-code.jpg">                                                                        
 We need to cultivate a culture of focus on Insight, Resource Management and Operations. If you can't answer questions about your deployed resources in less than 3 seconds, it's a problem. If you don't have resource management automated, it might as well not exist because it's not repeatable.
 
 The Cloud has made our infrastructure standardized, but needs aren't uniform; in that case, customize your tools. It's easier now than it's ever been.
@@ -244,9 +245,9 @@ The Cloud has made our infrastructure standardized, but needs aren't uniform; in
 ## Global Resiliency when going Serverless
 by [Jared Short](https://twitter.com/shortjared)
 
-Jared came at us with some very practical advice. So you're serverless? Be resilient about it. You need failover, and here are some ways he's explored doing it.
+Jared came at us with some very practical advice. So you're serverless? Be resilient about it. You need failover, and here are some ways he's explored doing it. 
 
-He breaks down resiliency into **active + passive** and **active + active**.
+He breaks down resiliency into **active + passive** and **active + active**. 
 
 **Active + passive resiliency**<br>
 The easiest possible scenario, if your business case allows it, is read-only failover. Using AWS CloudFront, you can swap one APIG to another APIG; takes about 3 minutes to fully roll out and is completely invisible to clients.
@@ -302,7 +303,7 @@ They typically will auto scale for you and maintenance is less of a burden.
 - faster time to market. Spin up instances very quickly
 
 **Downsides:**
-- Less developer familiarity
+- Less developer familiarity 
 - Can be harder to query if data models aren't setup correctly
 - vendor lock-in and harder migrations to other non proprietary database engines
 

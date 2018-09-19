@@ -3,13 +3,14 @@ title: 'New Event Sources and Other Updates in v0.5.0 of the OpenWhisk Plugin fo
 description: 'The official OpenWhisk plugin for Serverless now includes support for Cloudant DB and IBM Message Hub events, exporting Web Actions and more.'
 date: '2017-03-21'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/22410455/110d1f36-e65e-11e6-8db8-87e834504e13.jpg'
+layout: Post
 authors:
     - StefanieMonge
 gitLink: /2017-03-21-updated-openwhisk-plugin.md
 ---
 Multi-provider support was a goal we laid out following the [Serverless Framework v1 release](https://serverless.com/blog/serverless-post-1.0/). Since then we've been working towards simplifying the process of moving applications between cloud providers to enable the development of multi-cloud Serverless apps. All while keeping the Serverless workflow and developer experience consistent across providers so you don't need to learn custom commands or syntax for each platform.
 
-OpenWhisk integration [launched ealier this year](https://serverless.com/blog/openwhisk-integration-with-serverless/). The official OpenWhisk provider plugin allows developers to build, deploy and manage apps running on the OpenWhisk platform using the Serverless Framework.
+OpenWhisk integration [launched ealier this year](https://serverless.com/blog/openwhisk-integration-with-serverless/). The official OpenWhisk provider plugin allows developers to build, deploy and manage apps running on the OpenWhisk platform using the Serverless Framework. 
 
 ***Special shout out to [James Thomas (@thomasj)](https://twitter.com/thomasj) at IBM for his awesome contribution spearheading this effort!***
 

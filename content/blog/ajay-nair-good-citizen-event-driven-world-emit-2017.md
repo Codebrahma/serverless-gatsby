@@ -2,6 +2,7 @@
 title: 'Ajay Nair - being a good citizen in an event-driven world'
 description: 'We''re posting the full videos and transcripts from Emit 2017! Here''s Ajay from AWS on being a good citizen in an event-driven world.'
 date: '2017-10-31'
+layout: Post
 thumbnail: 'http://www.emitconference.com/assets/images/speaker-ajay-nair.jpg'
 authors:
     - AndreaPasswater
@@ -30,21 +31,21 @@ To stay in the loop about Emit Conf, follow us at [@emitconf](https://twitter.co
 
 # Transcript
 
-**Ajay:** All right. That's my cue. I was told if I see purple, I should go. Apparently good advice for life. All right, folks. Hi, Ajay. Hi people. I'm [Ajay](https://twitter.com/ajaynairthinks). I lead the PM team for [AWS Lambda](https://aws.amazon.com/lambda/). I'm really excited to see how many people are excited about how this whole event thing that got sorted out.
+**Ajay:** All right. That's my cue. I was told if I see purple, I should go. Apparently good advice for life. All right, folks. Hi, Ajay. Hi people. I'm [Ajay](https://twitter.com/ajaynairthinks). I lead the PM team for [AWS Lambda](https://aws.amazon.com/lambda/). I'm really excited to see how many people are excited about how this whole event thing that got sorted out. 
 
 In the course of the conversations today a lot of us have been talking about event of an architecture, the serverless and serverless event of an architectures. I'm taking an opinion in this talk which is while all serverless architectures tend to be event driven not all events of an architectures are serverless. So, I'm gonna try and stick to the word event driven as much as possible but pardon me if I slip up a little bit.
 
-So, to kind of get into it a little bit, we're all here because we're kind of excited about this movement around event driven architecture that this push to serverless has triggered. All of us are excited about the kind of architectures we have seen shared today from Nordstrom and Capital One. There's one that I really like to kick off talks with which is a company called Uber.
+So, to kind of get into it a little bit, we're all here because we're kind of excited about this movement around event driven architecture that this push to serverless has triggered. All of us are excited about the kind of architectures we have seen shared today from Nordstrom and Capital One. There's one that I really like to kick off talks with which is a company called Uber. 
 
 Many of you may have seen some of their Twitter posts and others. This is the architecture that we kind of talk about as the before of serverless architectures, your conventional load balancers, a few [inaudible 00:02:04] servers talking to a standard database and this is the future of serverless as some people start talking about it.
 
-Austin showed up a simpler version of this but this is serverless in all its glory. This particular customer has 170 functions and [inaudible 00:02:20]. Their deployment time dropped from 30 minutes to seconds. Their cost savings moved about 95% reduction in costs while shipping about 15 times more features every month than what they were previously doing.
+Austin showed up a simpler version of this but this is serverless in all its glory. This particular customer has 170 functions and [inaudible 00:02:20]. Their deployment time dropped from 30 minutes to seconds. Their cost savings moved about 95% reduction in costs while shipping about 15 times more features every month than what they were previously doing. 
 
 So, cost-benefits, agility, time-to-market all of those things are values that we're starting to realize with this. Apparently, my clicker isn't working. I'm sorry. This is what I was trying to talk to. All right. And, we're seeing this part on being spread across a wide variety of scenarios. We've heard customers talk about web applications and frameworks coming out for building, floss base and express based ones using simple synchronous invocations within a [inaudible 00:03:03] Lambda all the way to very complex data processing applications. Something like what Nordstrom was talking about with events sourcing and auto manipulation and recommendation engines to something as complex as big data processing even trending towards what you would call HPC.
 
 If folks haven't checked it out, check out this framework called Pyron that one of the folks at UC Berkeley has put together for running massively distributed data processing app that allows you to do 25 trillion floating point operations over a billion records. But, the point is all of these are new scenarios and applications enable following what actually boils down to a very simple or grossly simplified architecture pattern. One where we say all logic is embodied as functions that are some things called events that trigger these functions and then the functions then talk to something downstream which in turn in themselves may be event sources or actors that act on that particular thing.
 
-Something that's common across events or architectures is the fact that every communication ideally happens through events in APIs. The execution layer is stateless and ephemeral which means there is no concept of anything being retained over there. And that's clear almost a forcing function of separation of logic, data, and state.
+Something that's common across events or architectures is the fact that every communication ideally happens through events in APIs. The execution layer is stateless and ephemeral which means there is no concept of anything being retained over there. And that's clear almost a forcing function of separation of logic, data, and state. 
 
 So, we've been so far kind of standard events or architectures. One thing Austin told me when I was talking about this talk was he says, "Well, you can get on stage but you can't talk about Lambda," which cuts out 90% of my material that I have. So, what I'll talk about today was how do you go about being an effective event source provider in this particular model? And the reason I bring this up is many of you will be creating SaaS companies or ISPs or products of your own. And at some point, you're gonna be emitting events which you want to participate in applications that other people build.
 
@@ -56,7 +57,7 @@ So, one is the event source itself, the component which is responsible for ident
 
 Some examples of these particular pieces within AWS just to kind of bring the point home, the services on the right, sorry, I get mixed up, on the right acts as event sources. So, data stores like Dynamo, S3, even EC2 instances all emit events. So, for example, EC2 can emit an event that says my instance responds up or down. Dynamo can say my record has been updated. S3 says a new object has been shown up or deleted and then you have various ways to route them to actors. Most commonly Lambda functions but you can imagine it being routed to a container service to get deployed which could be SNS which is a general POP subconstruct, CloudWatch events which allows you to map arbitrary events to various destinations like SNS, Lambda has this concept of event source mapping, so on and so forth, right.
 
-I'm not trying to be comprehensive in explaining these things just to give you a real-life example of what I mean by these two types. Okay. So, with me so far? Okay. So, the first decision you would make is what actually goes into your payload. And here there's these two distinct patterns that we kind of realize even when we are building our ecosystem of event sources.
+I'm not trying to be comprehensive in explaining these things just to give you a real-life example of what I mean by these two types. Okay. So, with me so far? Okay. So, the first decision you would make is what actually goes into your payload. And here there's these two distinct patterns that we kind of realize even when we are building our ecosystem of event sources. 
 
 There's one thing which is common, which is sort of a standard baseline which is all your events must contain provenance information. And, by provenance I mean who's the source, what was the relevance of the event that happened and when it happened, right? More often than not times time information is something that you will find useful in terms of determining both.
 
@@ -88,7 +89,7 @@ So, God forbid your next, next Uber doesn't show up and is down for some reason 
 
 The flip side of it is you have potential additional storage, retention, and complexity of another component being introduced over there. Previously you were dealing with this thing that emitted events and thing that reacted to events and now you have this thing in the middle that is retaining and potentially shifting events around over there.
 
-So, now again I'm gonna stress this again, you don't need it in sort of two cases. Don't worry about it in the S3 model if state is already present over there. Don't worry about it in the case where state is passed back and this is a fancy way of saying if it's a synchronous invocation don't bother.
+So, now again I'm gonna stress this again, you don't need it in sort of two cases. Don't worry about it in the S3 model if state is already present over there. Don't worry about it in the case where state is passed back and this is a fancy way of saying if it's a synchronous invocation don't bother. 
 
 So, let's kind of use a couple of real examples of it because there are a couple of event store models that you can go down. One is the streams model, the advantage being your events can be potentially processed in order. You have this concept of broadcast showing up but you have multiple providers actually being able to act against it. The downside is you start dealing with things like Rob was talking about in his first talk about how do you deal with sharing or distribution off your events across all these different collections that you have within your stream.
 
@@ -134,7 +135,7 @@ So, this may be kind of a bigger example but you can replace any one of those co
 
 All right. So, to kind of quickly bring it together be smart about what goes into your payload. Don't overstuff it with information you don't need. Have a good thought process about what your scenario is for it to be happening. If it needs your service to be involved in it make it a notification. If it's something that you can just pass on forward and then be completely disconnected but the payload in there.
 
-Second, surface an event store where appropriate. And, I believe things like event streams are probably critical components moving forward although there are scenarios where they're optional. But queues and streams give you a durable and potentially reliable way for events to be replayed, re-created and otherwise to move forward over there. And finally, think about routers as I wouldn't always recommend that you have to go and build routers.
+Second, surface an event store where appropriate. And, I believe things like event streams are probably critical components moving forward although there are scenarios where they're optional. But queues and streams give you a durable and potentially reliable way for events to be replayed, re-created and otherwise to move forward over there. And finally, think about routers as I wouldn't always recommend that you have to go and build routers. 
 
 My hope is that folks like serverless and all of us together enhance the particular router construct over there. But, if you have to build one there are a few guidelines that you can follow around sort of having multiple support for doing secure access across the two, supporting for filtering, and making sure that you have clear semantics for failures and success that you can actually push forward on.
 

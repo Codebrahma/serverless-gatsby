@@ -1,4 +1,5 @@
 ---
+layout: Post
 title: 'Introducing Serverless Partners: Meet Parallax'
 description: 'Learn how Parallax built An Infinitely Scalable Online Recording Campaign For David Guetta & UEFA'
 date: '2016-09-22'

@@ -3,6 +3,7 @@ title: 'State of the Serverless Community Survey Results'
 description: 'Results of the State of the Serverless Community survey and what we learned.'
 date: '2016-11-29'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/20676598/dfc90252-b555-11e6-84a7-ea320f6ca210.png'
+layout: Post
 scripts:
     - 'https://www.gstatic.com/charts/loader.js'
     - 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/scripts/state-of-serverless.js'

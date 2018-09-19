@@ -2,6 +2,7 @@
 title: 'The Serverless guide to AWS re:Invent 2017'
 description: 'Going to re:Invent 2017? Here''s our suggested track for getting the most info on serverless and Lambda.'
 date: '2017-11-09'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/awsreinvent.jpg'
 authors:
     - AndreaPasswater
@@ -16,7 +17,7 @@ Never been to re:Invent before? Here's what you're in for.
 
 The venues are pretty spread out, so getting from one to the other can be time-consuming. Try to plan your day such that you stay in the same building if you can.
 
-It's tempting to be ambitious and keep your days jam packed, but really, don't wear yourself out. Aim to hit 3-4 sessions a day. If you're familiar with serverless already, stick with the 300+ level classes. The 200s tend to be more basic.
+It's tempting to be ambitious and keep your days jam packed, but really, don't wear yourself out. Aim to hit 3-4 sessions a day. If you're familiar with serverless already, stick with the 300+ level classes. The 200s tend to be more basic. 
 
 Remember that the biggest value you'll get out of re:Invent are the conversations you'll have there. So during the breaks, meet people! We really can't emphasize this one enough.
 
@@ -49,12 +50,12 @@ How do you get from on-premise to cloud-native environments? They'll present mig
 Includes: API Gateway, Lambda, Cognito, SQS, SNS
 
 **SRV302 - Building CI/CD Pipelines for Serverless Applications** | Aria<br>
-Automate serverless application deployment! We get asked about CI/CD pipelines a lot, so here's your chance to learn 'em. This session is run by Chris Munns and Ben Kehoe—both big names in serverless.
+Automate serverless application deployment! We get asked about CI/CD pipelines a lot, so here's your chance to learn 'em. This session is run by Chris Munns and Ben Kehoe—both big names in serverless. 
 
 Includes: CodePipeline, CodeBuild, CodeStar, best practices straight from iRobot
 
 **SRV330 - Workshop: Serverless DevOps to the Rescue** | Aria<br>
-As was said over and over at ServerlessConf, it's not #NoOps, but rather #DiffOps. Learn what that means in this workshop.
+As was said over and over at ServerlessConf, it's not #NoOps, but rather #DiffOps. Learn what that means in this workshop. 
 
 You'll join the DevOps team for a popular ride-sharing application. Build, test and deploy changes to their serverless app.
 

@@ -1,4 +1,5 @@
 ---
+layout: Post
 title: 'Interview with Peter Sbarski of Serverlessconf London + Registration Discount'
 description: 'Peter Sbarski discusses how Serverlessconf came to be and what it''s future holds'
 date: '2016-09-09'

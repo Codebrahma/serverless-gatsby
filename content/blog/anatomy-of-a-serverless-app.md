@@ -2,18 +2,19 @@
 title: 'Anatomy of a Serverless Application'
 description: 'A step-by-step look at the development of a serverless application.'
 date: '2017-07-27'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/small-thumb.jpg'
 authors:
     - RupakGanguly
 gitLink: /2017-07-24-anatomy-of-a-serverless-app.md
 ---
-
+ 
 We've all been new to serverless before. In this post, I'll walk you through how to get up and running on your first application. Let's cut through the docs, shall we?
 
 This application will be a backend email service that can be called over HTTP from a simple frontend like `curl`. You will learn how to:
 
 * Setup the development environment
-* Create an application project
+* Create an application project 
 * Create a serverless service using a boilerplate template
 * Run and test the service locally
 * Deploy the service
@@ -116,7 +117,7 @@ service: email-service
 provider:
   name: aws
   runtime: nodejs6.10
-
+  
 functions:
   send:
     handler: handler.sendEmail
@@ -147,7 +148,7 @@ functions:
 
 In our example, `handler: handler.sendEmail` in the `serverless.yml` file points to `module.exports.sendEmail` in the `handler.js` file.
 
-Also, note that while the handler method defined in `handler.js` file is `sendEmail`, the function name defined in `serverless.yml` file is `send`. The `serverless.yml` file provides the glue for that mapping.
+Also, note that while the handler method defined in `handler.js` file is `sendEmail`, the function name defined in `serverless.yml` file is `send`. The `serverless.yml` file provides the glue for that mapping. 
 
 ### Invoke Locally
 
@@ -175,7 +176,7 @@ service: email-service
 provider:
   name: aws
   runtime: nodejs6.10
-
+  
 functions:
   send:
     handler: handler.sendEmail
@@ -211,7 +212,7 @@ $ serverless invoke local --function send
 
 ### Deploy to AWS
 
-Now, let's deploy it to AWS Lambda, so we can invoke the function over the HTTP endpoint we created.
+Now, let's deploy it to AWS Lambda, so we can invoke the function over the HTTP endpoint we created. 
 
 ```bash
 $ sls deploy
@@ -302,11 +303,11 @@ So, we have come full circle - starting with some boilerplate code, customizing 
 
 To remove the service, you can simply do `sls remove`.
 
-> **Takeaway**: We did all this without thinking about servers or infrastructure, or how we will deploy the service after we are done with development. It just happened as part of our development workflow. The developer just focused on coding their business requirements, experimenting with features, and getting a quick feedback cycle - without worrying about deployment or provisioning infrastructure. That is the power and essence of serverless development.
+> **Takeaway**: We did all this without thinking about servers or infrastructure, or how we will deploy the service after we are done with development. It just happened as part of our development workflow. The developer just focused on coding their business requirements, experimenting with features, and getting a quick feedback cycle - without worrying about deployment or provisioning infrastructure. That is the power and essence of serverless development. 
 
 ### Implementing the Email Service
 
-Let's implement the email functionality and finish up our email service. At the end of it, we will have a fully functional service that can send emails.
+Let's implement the email functionality and finish up our email service. At the end of it, we will have a fully functional service that can send emails. 
 
 #### Setting up Mailgun
 
@@ -316,7 +317,7 @@ We will use [Mailgun](https://www.mailgun.com/) as our backend email service pro
 
 #### Configuring the Service
 
-Let's go back to our handler method `sendEmails` in `handler.js` file and update it. We will use the Node.js module [mailgun_js](https://www.npmjs.com/package/mailgun-js) for sending emails using the Mailgun API.
+Let's go back to our handler method `sendEmails` in `handler.js` file and update it. We will use the Node.js module [mailgun_js](https://www.npmjs.com/package/mailgun-js) for sending emails using the Mailgun API. 
 
 Let's add the dependency. **Note**: You can `npm init` and follow the prompts to create your initial `package.json` file.
 
@@ -350,7 +351,7 @@ We need a place to store our configuration settings that the service can use. We
 
 **Note:** Make sure that you **DON'T** check-in the `config.prod.json` config file with your secrets into source control.
 
-Let's look at some updates to the configuration settings in the `serverless.yml` file.
+Let's look at some updates to the configuration settings in the `serverless.yml` file. 
 
 - add `custom` section for custom settings
 - add `environment` section to add the Mailgun settings
@@ -362,7 +363,7 @@ custom:
   defaultStage: prod
   currentStage: ${opt:stage, self:custom.defaultStage}
   currentRegion: ${file(./config.${self:custom.currentStage}.json):region}
-
+  
 provider:
   ...
   stage: ${self:custom.currentStage}
@@ -463,9 +464,9 @@ module.exports.sendEmail = (event, context, callback) => {
     callback(null, err);
   }
 };
-```
+``` 
 
-First, we define the handler method `sendEmail` that is mapped to the function `send` in the `serverless.yml` file. This method does some basic validation and then calls the `mailgun.messages().send()` API method passing in the required data via the `emailData` structure.
+First, we define the handler method `sendEmail` that is mapped to the function `send` in the `serverless.yml` file. This method does some basic validation and then calls the `mailgun.messages().send()` API method passing in the required data via the `emailData` structure. 
 
 We define some basic error handling code block, and if there is no error, it returns an appropriate response back. In case of an error, an appropriate error response is returned.
 
@@ -473,7 +474,7 @@ Note that the `event.body` holds the input data that is passed in by the caller.
 
 #### Testing Locally
 
-Before we deploy our function, let's test it locally first.
+Before we deploy our function, let's test it locally first. 
 
 To make it easier to test, let's create a data file `send-email-data.json` that mocks the `event` data structure passed in by the API Gateway:
 
@@ -508,7 +509,7 @@ $ sls invoke local --function send -p send-email-data.json
 }
 ```
 
-Note, that we pass the mock `event` structure in the `send-email-data.json` file via the `-p` flag. The `event` structure contains the email address required by our function in the `body` attribute.
+Note, that we pass the mock `event` structure in the `send-email-data.json` file via the `-p` flag. The `event` structure contains the email address required by our function in the `body` attribute.  
 
 And, now you should have an email in your inbox:
 
@@ -653,7 +654,7 @@ REPORT RequestId: 0eb38aeb-6d9d-11e7-9787-2996c7e3fdb0	Duration: 339.84 ms	Bille
 
 ```
 
-**Note**: We have been passing in data via the `-p` flag in our previous examples but you can also pass in data using the `--data` flag.
+**Note**: We have been passing in data via the `-p` flag in our previous examples but you can also pass in data using the `--data` flag. 
 
 Leaving an exception unhandled is not acceptable, so let's refactor the code to return a proper HTTP response.
 

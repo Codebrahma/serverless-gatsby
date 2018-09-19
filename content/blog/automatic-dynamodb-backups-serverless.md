@@ -2,6 +2,7 @@
 title: 'Automate your DynamoDB backups with Serverless in less than 5 minutes'
 description: 'Using the Serverless Framework, you can set up automatic backups of your DynamoDB table.'
 date: '2017-12-12'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/dynamodb.png'
 authors:
     - AlexDeBrie
@@ -12,9 +13,9 @@ The good news: AWS announced [DynamoDB backups](https://aws.amazon.com/blogs/aws
 
 The bad news? You can't schedule and automate your backups. You need to manually click in the console to create your backup.
 
-**Have no fear, an automated solution is here.**
+**Have no fear, an automated solution is here.** 
 
-Use the power of [Serverless](https://serverless.com) to automatically backup your DynamoDB tables on a schedule!
+Use the power of [Serverless](https://serverless.com) to automatically backup your DynamoDB tables on a schedule! 
 
 Follow the steps below to use our project to backup your DynamoDB tables.
 
@@ -36,7 +37,7 @@ You'll need AWS credentials configured in your terminal. Want help with these? [
 $ sls install --url https://github.com/alexdebrie/serverless-dynamodb-backups && cd serverless-dynamodb-backups
 ```
 
-Edit the configuration in the `custom` block of `serverless.yml` to match your configuration. This includes setting the `tableName` of your DynamoDB table, the `backupRate` at which you want to create backups, the AWS region where your table is located, and optionally a `slackWebhook` to send Slack notifications.
+Edit the configuration in the `custom` block of `serverless.yml` to match your configuration. This includes setting the `tableName` of your DynamoDB table, the `backupRate` at which you want to create backups, the AWS region where your table is located, and optionally a `slackWebhook` to send Slack notifications. 
 
 > Want help setting up a Slack webhook? Check out [the walkthrough](#setting-up-a-slack-webhook).
 
@@ -75,7 +76,7 @@ That's it - your service will create DynamoDB backups on your desired schedule! 
 
 # Setting up a Slack Webhook
 
-If you want fancy Slack notifications when a backup succeeds or fails, follow the steps below.
+If you want fancy Slack notifications when a backup succeeds or fails, follow the steps below. 
 
 In the end, you'll receive notifications like:
 
@@ -87,7 +88,7 @@ First, go to the channel you want to send notifications to and click **Add an ap
 
 In the page that opens, search for `Incoming Webhooks` and click on it. Then click `Add Configuration`. It should show your selected channel in the box. Then click `Add Incoming WebHooks Integration`.
 
-Once you've created it, the page will show your Webhook URL:
+Once you've created it, the page will show your Webhook URL: 
 
 <img width="1000" alt="Webhook URL" src="https://user-images.githubusercontent.com/6509926/33862256-6bc2b624-dea7-11e7-9fe0-b993e8692494.png">
 

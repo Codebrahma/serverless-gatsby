@@ -22,6 +22,10 @@ const getLinkStyle = ({ backgroundOnHover }) => `
         background: url(${dotGridBacground});
         background-size: cover;
         display: none;
+
+        @media screen and (max-width: 768px) {
+          background: none;
+        }
       }
 
       &:hover {

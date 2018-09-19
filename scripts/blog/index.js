@@ -10,6 +10,7 @@ const copyFiles = require('../utils/copy-files')
 const removeDateFromFileName = require('./remove-date-from-filename')
 const updateBlogFileContents = require('./update-blog-yaml')
 const generateAuthorData = require('./generate-author-data')
+const copyCategoriesAndFeaturedBlogsData = require('./copy-categories-and-featured-blogs-data')
 const userNotice = require('./notice')
 
 asyncLib.waterfall([
@@ -46,6 +47,7 @@ asyncLib.waterfall([
     console.log('err', err)
   }
   generateAuthorData()
+  copyCategoriesAndFeaturedBlogsData()
   userNotice()
   console.log('Finished processing Blog posts')
 })

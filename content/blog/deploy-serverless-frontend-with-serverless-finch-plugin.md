@@ -2,6 +2,7 @@
 title: 'Deploy a Serverless Frontend with the Serverless Finch Plugin'
 description: 'Learn how to deploy a static website to AWS with the Serverless Finch Plugin.'
 date: '2018-08-06'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-fich-plugin/serverless-finch-thumb.png'
 authors:
     - FernandoMedinaCorey
@@ -10,7 +11,7 @@ gitLink: /2018-08-06-deploy-serverless-frontend-with-serverless-finch-plugin.md
 
 <img src="https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-fich-plugin/serverless-finch-plugin.jpg">
 
-If you've already been using [the Serverless Framework](https://serverless.com/framework/) for your development projects on AWS, you may have realized that deploying the frontend portion of your applications isn't built in.
+If you've already been using [the Serverless Framework](https://serverless.com/framework/) for your development projects on AWS, you may have realized that deploying the frontend portion of your applications isn't built in. 
 
 Fortunately for you, the Serverless Framework is extensible. Meaning, there's a plugin for that: [Serverless Finch](https://github.com/fernando-mc/serverless-finch).
 
@@ -21,7 +22,7 @@ In this post, I'll show you how you can use the Serverless Finch plugin to deplo
 First off, if you haven't already, you'll need to:
 
 1. install the [Serverless Framework](https://serverless.com)
-2. configure AWS API keys that at least give you broad S3 permissions (If you've done any work with the Serverless Framework, you probably already have these)
+2. configure AWS API keys that at least give you broad S3 permissions (If you've done any work with the Serverless Framework, you probably already have these) 
 3. install Node.js and npm (I'm using node v6.10.3, but more modern versions should work too)
 4. prepare some static website files and put them in a folder called `client/dist` in the same folder as your Serverless Framework project
 5. create an `index.html` and an `error.html` file to deploy to S3 as a default landing page and error page
@@ -34,7 +35,7 @@ After you've completed the initial steps above, the deployment process should be
 
 From within an existing Serverless Framework project directory, install the Serverless Finch plugin with `npm install --save serverless-finch`.
 
-Then, update your `serverless.yml` file by adding this:
+Then, update your `serverless.yml` file by adding this: 
 
 ```yaml
 plugins:
@@ -49,7 +50,7 @@ custom:
 
 Now, warning step completed, run `serverless client deploy` and see the magic happen! Remember that _by default_ the plugin looks for your already-built frontend code in `./client/dist`.
 
-Don't have an `index.html` or other website files yet? Here's a quick script you can run before `serverless client deploy` just to give yourself a barebones page and see how things work:
+Don't have an `index.html` or other website files yet? Here's a quick script you can run before `serverless client deploy` just to give yourself a barebones page and see how things work: 
 
 ```bash
 mkdir -p client/dist
@@ -92,7 +93,7 @@ Keep in mind that this path is relative to the location of `serverless.yml`.
 
 **Can I set custom index and error documents?**
 
-Yes! Just add a line to serverless.yml for each:
+Yes! Just add a line to serverless.yml for each: 
 
 ```yaml
 custom:
@@ -107,7 +108,7 @@ Keep in mind that you will need to put these inside whatever distribution folder
 
 **How does Serverless Finch integrate with custom domains?**
 
-Great question! We're currently considering additional functionality to help manage custom domains. Currently, you can register your own domain on Route 53 and then point that domain to the S3 bucket using an AWS A record alias (this requires the bucket to share the name with the custom domain).
+Great question! We're currently considering additional functionality to help manage custom domains. Currently, you can register your own domain on Route 53 and then point that domain to the S3 bucket using an AWS A record alias (this requires the bucket to share the name with the custom domain). 
 
 You can also create a CloudFront Distribution to cache the files in your S3 bucket, and then point your custom domain to that CloudFront distribution with a Route 53 A record alias. The benefit of CloudFront is that you can also get a free HTTPS certificate and you can name your S3 bucket whatever you want.
 
@@ -115,7 +116,7 @@ Either way, I'd recommend you determine how to setup your custom domain based on
 
 **What other customizations can I make?**
 
-Lots! For a full list of features, you can [view the project on GitHub](https://github.com/fernando-mc/serverless-finch#configuration-parameters). Don't see something that you think would be a useful feature? We are happy to add in your contributions!
+Lots! For a full list of features, you can [view the project on GitHub](https://github.com/fernando-mc/serverless-finch#configuration-parameters). Don't see something that you think would be a useful feature? We are happy to add in your contributions! 
 
 ## Final Thoughts
 

@@ -2,6 +2,7 @@
 title: 'Future of Serverless after 1.0'
 description: 'The future of Serverless and more on Service Composition Discovery, & Communication, Security Controls, plus Multi Provider Support'
 date: '2016-10-20'
+layout: Post
 authors:
     - NickGottlieb
 gitLink: /2016-10-20-serverless-post-1.0.md

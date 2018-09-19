@@ -1,4 +1,5 @@
 ---
+layout: Post
 title: 'Building A Serverless Screenshot Service with Lambda'
 description: 'Guest author Sander van de Graaf writes about building a serverless screenshot service with the Serverless Framework and AWS Lambda.'
 date: '2016-10-14'

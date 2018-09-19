@@ -2,6 +2,7 @@
 title: 'IoT event support, Cognito user pool authorizer & install service with a name in Serverless Framework v1.5'
 description: 'IoT event support, Cognito user pool authorizer and the ability to install your service with a name in the Serverless Framework v1.5 release.'
 date: '2017-01-05'
+layout: Post
 authors:
     - PhilippMuns
 gitLink: /2017-01-05-serverless-v1.5.0.md

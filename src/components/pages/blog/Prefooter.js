@@ -5,12 +5,33 @@ import {
   Flex,
   Background,
   Heading,
-  TextField,
-  Button,
   TertiaryButton,
   Card,
 } from 'serverless-design-system/src'
+import { NewsLetterForm } from 'src/components'
 import blogFooterBackground from 'src/assets/images/blog-footer-background.png'
+
+const SubmitButton = (props) => (
+  <TertiaryButton
+    width={0.4}
+    height={60}
+    fontSize={1}
+    {...props}
+  >
+    sign up
+  </TertiaryButton>
+)
+
+const Title = ({ component: HeadingComp, color }) => (
+  <HeadingComp
+    color={color}
+    fontFamily="SoleilLt"
+    letterSpacing="0"
+    lineHeight={2}
+  >
+    Join 12,000+ other serverless devs &amp; keep up to speed on the latest serverless trends.
+  </HeadingComp>
+)
 
 export default () => (
   <React.Fragment>
@@ -18,6 +39,7 @@ export default () => (
       display={['none', 'none', 'block']}
       top='-320px'
       mb='-290px'
+      id="newsletter-box"
     >
       <Background
         background={`url(${blogFooterBackground})`}
@@ -29,40 +51,30 @@ export default () => (
             p={[1, 1, 5, 7]}
             pr={2}
           >
-            <Heading.h4
-              color="white"
-              fontFamily="SoleilLt"
-              letterSpacing="0"
-              lineHeight={2}
-            >
-              Join 12,000+ other serverless devs &amp; keep up to speed on the latest serverless trends.
-            </Heading.h4>
+            <Title component={Heading.h4} color="white" />
           </Flex>
           <Flex
             justifyContent="flex-end"
+            alignItems="center"
             width={[1, 1, 0.5]}
-            p={[1, 1, 5, 7]}
+            p={[1, 1, 4, 4, 7]}
           >
-            <TextField
-              width={0.6}
-              height={60}
-              bg="#ffffff33"
-              border="none"
-              px={2}
-              fontSize={1}
-              lineHeight={4}
-              placeholder="enter email address"
-              placeholderColor="white"
-              fontFamily="Serverless"
-              letterSpacing="text"
+            <NewsLetterForm
+              emailFieldProps={{ width: 0.6,
+                height: 60,
+                bg: "#ffffff33",
+                fontSize: 1,
+                placeholder: "enter email address",
+                id: "newsletter-emailfield"
+              }}
+              btnComponent={SubmitButton}
+              wrapperProps={{ width: 1, color: 'white' }}
+              formStyles={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
             />
-            <TertiaryButton
-              width={0.3}
-              height={60}
-              fontSize={1}
-            >
-              sign up
-            </TertiaryButton>
           </Flex>
         </ResponsiveStack>
       </Background>
@@ -85,40 +97,19 @@ export default () => (
               px={2}
               pb={2}
             >
-              <Heading.h5
-                fontFamily="SoleilLt"
-                letterSpacing="0"
-                lineHeight={2}
-              >
-                Join 12,000+ other serverless devs &amp; keep up to speed on the latest serverless trends.
-              </Heading.h5>
+              <Title component={Heading.h5} />
             </Flex>
-            <Flex.column
-              alignItems="center"
-              width={1}
-              px={2}
-            >
-              <TextField
-                width={1}
-                height={60}
-                bg="#8c8c8c33"
-                border="none"
-                px={2}
-                fontSize={1}
-                lineHeight={4}
-                placeholder="enter email address"
-                placeholderColor="white"
-                fontFamily="Serverless"
-                letterSpacing="text"
-              />
-              <Button
-                width={0.5}
-                height={60}
-                fontSize={1}
-              >
-                sign up
-              </Button>
-            </Flex.column>
+            <NewsLetterForm
+              wrapper={Flex.column}
+              wrapperProps={{ alignItems: 'center', width: 1, px: 2 }}
+              emailFieldProps={{
+                bg: "#8c8c8c33",
+                placeholder: "enter email address",
+                placeholderColor: "gray.3",
+                color: "gray.3",
+                id: "newsletter-emailfield"
+              }}
+            />
           </ResponsiveStack>
         </Background>
       </Card>

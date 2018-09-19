@@ -2,6 +2,7 @@
 title: 'Serverless v1.21 - Kubeless provider support, AWS credentials management and invoke improvements added'
 description: 'Kubeless support, AWS credentials management, new AWS service templates, invoke improvements, enhancements, bug fixes and more added in the Serverless Framework v1.21 release.'
 date: '2017-08-31'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-framework-v1.21.png'
 authors:
     - PhilippMuns
@@ -129,7 +130,7 @@ This release also includes tons of other improvements and bug fixes.
 
 We hope that you enjoy this release! Feel free to provide some feedback in our [Forum](https://forum.serverless.com), via [Twitter](https://twitter.com/goserverless) or on [GitHub](https://github.com/serverless/serverless).
 
-### Contributors
+### Contributors 
 
 This release contains lots of hard work from our beloved community, and wouldn't have been possible without passionate people who decided to spend their time contributing back to make the Serverless Framework better.
 

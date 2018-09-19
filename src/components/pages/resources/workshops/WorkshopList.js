@@ -5,14 +5,14 @@ import {
   Background,
   Column,
   Heading,
-  P,
   TertiaryButton,
   Relative,
   ResponsiveStack,
-  Text,
 } from 'serverless-design-system/src'
 
 import { AppContainer } from 'src/components'
+import { company } from 'src/constants/urls'
+import workshops from 'src/constants/workshops.json'
 import SanFranciscoImage from 'src/assets/images/san-francisco.png'
 import SeattleImage from 'src/assets/images/seattle.png'
 import NewYorkImage from 'src/assets/images/new-york.png'
@@ -21,46 +21,15 @@ import LondonImage from 'src/assets/images/london.png'
 import PrivateWorkshopImage from 'src/assets/images/private-workshop.png'
 import verticalDotImage from 'src/assets/images/white-dots-grid-vertical.png'
 
-const workshopList = [
-  {
-    title: 'SanFrancisco',
-    cost: '$1095/person',
-    img: SanFranciscoImage,
-    isAvailable: false,
-  },
-  {
-    title: 'Seattle',
-    cost: '$1095/person',
-    img: SeattleImage,
-    isAvailable: false,
-  },
-  {
-    title: 'New York',
-    cost: '$1095/person',
-    img: NewYorkImage,
-    isAvailable: false,
-  },
-  {
-    title: 'Atlanta',
-    cost: '$1095/person',
-    img: AtlantaImage,
-    isAvailable: false,
-  },
-  {
-    title: 'London',
-    cost: '$1095/person',
-    img: LondonImage,
-    isAvailable: false,
-  },
-  {
-    title: 'Private Workshop',
-    cost: '$1095/person',
-    img: PrivateWorkshopImage,
-    isAvailable: true,
-  },
-]
+const data = {
+  'san-francisco' : SanFranciscoImage,
+  'seattle' : SeattleImage,
+  'new-york' : NewYorkImage,
+  'atlanta' : AtlantaImage,
+  'london' : LondonImage,
+}
 
-const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
+const WorkshopListItem = ({ keyName, title, img, isContactUs }) => (
   <Relative
     p="16px"
     width={[1, 1, 1/2, 0.33]}
@@ -97,29 +66,15 @@ const WorkshopListItem = ({ title, cost, img, isAvailable }) => (
           >
             {title}
           </Heading.h3>
-          <Text.p
-            color="white"
-            fontSize={1}
-            lineHeight={1}
-            letterSpacing="text"
-          >
-            {cost}
-          </Text.p>
         </Relative>
         <Relative>
-          <P fontSize={0} color='white'>
-            {
-              isAvailable ?
-                `We’ll work with you privately in a one on one session to empower your team with serverless knowledge.`
-              :
-                `Dates for this workshop have not been finalized. Join the waitlist to get notified as soon as the dates are set.`
-            }
-          </P>
           <TertiaryButton
             width={1}
-            onClick={() => push('/resources/workshops/form')}
+            onClick={() => {
+              isContactUs ? window.open(company.contact) : push(`/workshops/${keyName}`)
+            }}
           >
-            {isAvailable ? 'contact us' : 'join waitlist'}
+            {isContactUs ? 'contact us' : 'join waitlist'}
           </TertiaryButton>
         </Relative>
       </Column>
@@ -137,16 +92,21 @@ const WorkshopList = () => (
       justifyContent="center"
     >
       {
-        workshopList.map(({ title, cost, img, isAvailable }) => (
+        Object.keys(workshops).map((key) => (
           <WorkshopListItem
-            key={title}
-            title={title}
-            cost={cost}
-            img={img}
-            isAvailable={isAvailable}
+            key={key}
+            keyName={key}
+            title={workshops[key]}
+            img={data[key]}
+            isContactUs={false}
           />
         ))
       }
+      <WorkshopListItem
+        title="Private Workshop"
+        img={PrivateWorkshopImage}
+        isContactUs={true}
+      />
     </ResponsiveStack>
   </AppContainer>
 )

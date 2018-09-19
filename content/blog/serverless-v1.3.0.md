@@ -2,6 +2,7 @@
 title: 'Function metrics, easier AWS credential setup, and Lambda versioning in Serverless Framework v1.3'
 description: 'Function metrics, easier AWS credential setup, and Lambda versioning now available in Serverless v1.3'
 date: '2016-12-02'
+layout: Post
 authors:
     - PhilippMuns
 gitLink: /2016-12-02-serverless-v1.3.0.md

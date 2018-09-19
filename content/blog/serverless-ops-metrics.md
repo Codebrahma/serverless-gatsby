@@ -3,6 +3,8 @@ title: 'Serverless Ops 101 - Using CloudWatch Metrics & Alarms with Serverless F
 description: 'Level up your serverless ops game with a walkthrough on CloudWatch metrics and alarms'
 date: '2017-08-11'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/cloudwatch+metrics.jpg'
+category:
+    - operations-and-observability
 authors:
     - AlexDeBrie
 gitLink: /2017-08-11-serverless-ops-metrics.md

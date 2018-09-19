@@ -3,6 +3,7 @@ title: 'Using Serverless Authentication Boilerplate with FaunaDB'
 description: 'Use FaunaDB''s secure database features with AWS API Gateway to run Lambdas with the capabilities of the authenticated user.'
 date: '2017-03-15'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/23813615/4b53e4fc-05a5-11e7-8214-e34c2c02b949.png'
+layout: Post
 authors:
     - ChrisAnderson
 gitLink: /2017-03-15-faunadb-serverless-authentication.md

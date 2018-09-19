@@ -3,6 +3,7 @@ title: 'Introducing Serverless (Cron)icle - News from the Serverless Ecosystem'
 description: 'A roundup of serverless and FaaS links that caught our attention this week.'
 date: '2017-05-05'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/25759320/8bb86c20-3197-11e7-8d3d-5479c197c049.png'
+layout: Post
 authors:
     - StefanieMonge
 gitLink: /2017-05-05-introducing-serverless-cron-icle.md

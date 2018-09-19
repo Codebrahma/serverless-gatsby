@@ -2,6 +2,7 @@
 title: '4 Tools For Building Production Serverless Architectures with Lambda'
 description: 'Working with serverless is great when you find the right tools that work for you. Check out these tools to take your lambdas to the next level!'
 date: '2017-06-12'
+layout: Post
 authors:
     - TaaviRehemagi
 gitLink: /2017-06-12-4-tools-for-building-production-serverless-architectures.md
@@ -17,7 +18,7 @@ It is also complicated to monitor the functions and have an overview of how each
 
 ## 1. Dashbird
 
-[Dashbird](https://dashbird.io) is a service made to **monitor, debug and improve lambda functions**.
+[Dashbird](https://dashbird.io) is a service made to **monitor, debug and improve lambda functions**. 
 
 It gives developers a real-time overview of all lambda executions and detects errored invocations in them.
 This allows users to easily to monitor traffic and ensure service quality.

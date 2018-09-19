@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from 'serverless-design-system/src'
 import { Features } from 'src/fragments'
-import gatewayFeature1 from 'src/assets/images/icon-gateway.svg'
+import gatewayFeature1 from 'src/assets/images/icon-dash-light.svg'
 import gatewayFeature2 from 'src/assets/images/icon-component.svg'
 import gatewayFeature3 from 'src/assets/images/icon-infra.svg'
 import gatewayFeature4 from 'src/assets/images/icon-platform-agnostic.svg'

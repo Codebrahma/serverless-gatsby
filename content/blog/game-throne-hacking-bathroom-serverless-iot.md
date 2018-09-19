@@ -4,7 +4,6 @@ description: 'Miss our October Serverless SF Meetup? Here''s the video! Learn ho
 date: '2017-11-21'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/game_throne.jpg'
 category:
-    - user-stories
     - guides-and-tutorials
 authors:
     - AndreaPasswater

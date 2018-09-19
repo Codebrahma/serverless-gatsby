@@ -3,7 +3,7 @@ import { Flex, Heading } from 'serverless-design-system/src'
 import BlogLayout from 'src/layouts/Blog'
 import BlogPreview from 'src/components/pages/blog/Preview'
 import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
-import CategoryData from 'src/constants/generated-categories.json'
+import CategoryData from 'src/constants/categories.json'
 
 export default class Authors extends React.Component {
   render() {

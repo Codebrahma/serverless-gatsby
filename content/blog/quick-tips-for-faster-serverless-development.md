@@ -3,6 +3,7 @@ title: '3 Steps To Faster Serverless Development'
 description: 'Sometimes the development feedback loop can be slow when working with serverless functions. This posts walks through some quick tips I use to speed things up'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/sls-speed.jpg'
 date: '2017-06-29'
+layout: Post
 authors:
     - DavidWells
 gitLink: /2017-06-29-quick-tips-for-faster-serverless-development.md
@@ -63,7 +64,7 @@ Having 2 terminal windows open and combining `sls deploy function -f funcName` f
 
 ## 3. Offline Emulation
 
-Now you might be asking, what about offline emulation? It's absolutely a way to speed up dev cycles without having to re-deploy anything.
+Now you might be asking, what about offline emulation? It's absolutely a way to speed up dev cycles without having to re-deploy anything.  
 
 With the [serverless offline plugin](https://github.com/dherault/serverless-offline) you can speed up local dev is by emulating AWS lambda and API Gateway locally when developing your Serverless project.
 

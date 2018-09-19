@@ -3,12 +3,13 @@ title: 'Serverless monitoring - the good, the bad and the ugly'
 description: 'How to re-wire your brain to learn Serverless monitoring.'
 date: '2017-09-26'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/good+bad+ugly.jpg'
+layout: Post
 authors:
     - AdnanRahic
 gitLink: /2017-09-26-serverless-monitoring-the-good-the-bad-and-the-ugly.md
 ---
 
-<img align="right" src='https://media.giphy.com/media/VtR7L2GCNQB56/giphy.gif' width="20%">
+<img align="right" src='https://media.giphy.com/media/VtR7L2GCNQB56/giphy.gif' width="20%"> 
 
 Not so long ago, a job requirement pushed me into the world of FaaS, and I was thrilled. I had dreams of abstraction -- eliminating all that tedious work no developer likes doing. "We are not operations engineers!" I exclaimed proudly. "We should not need to dabble in the dark arts of the Linux Shell."
 
@@ -63,7 +64,7 @@ Opening up CloudWatch I can see the logs clearly. All the function invocations a
 
 ![cloudwatch](https://github.com/adnanrahic/cdn/raw/master/serverless-good-bad-ugly/Selection_036.png)
 
-The logs are extensive, the only issue is I can't seem to make any sense of them. I can see the functions we're invoked, but not much else. Error messages for failing functions are not verbose enough, so they often go unnoticed. I'm also having a hard time finding functions that timed out.
+The logs are extensive, the only issue is I can't seem to make any sense of them. I can see the functions we're invoked, but not much else. Error messages for failing functions are not verbose enough, so they often go unnoticed. I'm also having a hard time finding functions that timed out. 
 
 I also tried logging through the command line. It shows possible errors a bit better, but still, not good enough to have peace of mind.
 
@@ -97,7 +98,7 @@ functions:
     ...
 ##############
 # Added these two lines!
-plugins:
+plugins: 
   - serverless-offline
 ```
 
@@ -125,7 +126,7 @@ However, I'm much more impressed with Dashbird. I can finally see what's going o
 
 ![dashbird dashboard](https://cdn-images-1.medium.com/max/2000/1*QyGbyhcQtXJ-SiA2q6bbyQ.png)
 
-Errors are highlighted, and I can see the overall health of my system. I feel great all of a sudden. It also tracks the cost so I don't blow the budget. Even function tailing in real-time is included. Now that's just cool.
+Errors are highlighted, and I can see the overall health of my system. I feel great all of a sudden. It also tracks the cost so I don't blow the budget. Even function tailing in real-time is included. Now that's just cool. 
 
 ![dashbird per function errors](https://cdn-images-1.medium.com/max/2000/1*BpYTAJ_zKsUvFWDFJY1E5Q.png)
 

@@ -2,6 +2,7 @@
 title: 'Serverless v1.16 - S3 server-side encryption and default exclusion of Node.js dev dependencies added'
 description: 'S3 server-side encryption, support for API Gateway usage plans, default exclusion of Node.js dev dependencies and more in the Serverless Framework v1.16 release.'
 date: '2017-06-22'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-v116.png'
 authors:
     - PhilippMuns
@@ -129,7 +130,7 @@ The Serverless Framework's `package` plugin includes a sophisticated zipping uti
 
 Most of the time the functions you work on rely on different 3rd party packages whether they're production relevant packages or packages used to streamline the development process (e.g. test runners, offline utilities, etc.).
 
-In recent versions, Serverless included all your Node.js dependencies by default. This means that your production dependencies as well as your development dependencies are included in the final `.zip` artifact and uploaded to your deployment bucket.
+In recent versions, Serverless included all your Node.js dependencies by default. This means that your production dependencies as well as your development dependencies are included in the final `.zip` artifact and uploaded to your deployment bucket. 
 
 Such deployment artifacts can easily get quite large in size.
 
@@ -147,7 +148,7 @@ This release also includes lots of bug fixes and several other enhancements.
 
 > Thank you very much for reporting bugs and opening issues!
 
-### Contributors
+### Contributors 
 
 This release contains lots of hard work from our awesome community, and wouldn't have been possible without passionate people who decided to spend their time contributing to make Serverless better.
 

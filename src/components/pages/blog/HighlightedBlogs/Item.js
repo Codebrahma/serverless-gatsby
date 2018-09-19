@@ -7,7 +7,10 @@ import {
   Heading,
   Text,
   Image,
+  Row,
+  Column,
 } from 'serverless-design-system/src'
+import { getLinkComponent } from 'src/components/BlockLink'
 import { AppContainer, BlockLink } from 'src/components'
 import { withTheme } from 'styled-components'
 import {
@@ -17,8 +20,11 @@ import {
 } from 'src/utils/blog'
 import Categories from '../Categories'
 
+const LinkImage = getLinkComponent(Image)
+
 const Item = ({ id, frontmatter }) => {
   const author = getAuthorInfo({ frontmatter })
+  const authorURL = getAuthorLink(author.id)
   const { title, category: categoryIds, description, heroImage } = frontmatter
 
   return (
@@ -33,10 +39,13 @@ const Item = ({ id, frontmatter }) => {
           height="fullHeight"
           width={1}
           bg="black"
-          zIndex={0}
-          style={{ opacity: 0.35 }}
+          zIndex={1}
+          style={{ opacity: 0.5 }}
         />
-        <Absolute>
+        <Absolute
+          width={1}
+          zIndex={2}
+        >
           <AppContainer>
             <Flex.verticallyCenter
               flexDirection="column"
@@ -44,7 +53,10 @@ const Item = ({ id, frontmatter }) => {
               m="auto"
               pt={4}
             >
-              <Categories categoryIds={categoryIds} />
+              <Categories
+                categoryIds={categoryIds}
+                textStyleProps={{ color: 'white', opacity: 0.5 }}
+              />
               <BlockLink to={getBlogLink(id)}>
                 <Heading.h2
                   fontFamily="SoleilBk"
@@ -71,31 +83,48 @@ const Item = ({ id, frontmatter }) => {
                 </Text.p>
               </Box>
 
-              <BlockLink to={getAuthorLink(author.id)}>
-                <Flex.center>
-                  <Text
-                    fontFamily="Soleil"
-                    fontSize={0}
-                    color="white"
-                    lineHeight={2}
-                  >
-                    written by &nbsp;
-                  </Text>
-                  <Image
-                    src={author.avatar}
-                    height={33}
-                    width={33}
-                  />
-                  <Text
-                    fontFamily="Soleil"
-                    fontSize={0}
-                    color="white"
-                    lineHeight={2}
-                  >
-                    &nbsp; {author.name}
-                  </Text>
-                </Flex.center>
-              </BlockLink>
+              <Row width={1}>
+                <Column
+                  width={1}
+                  alignItems="flex-end"
+                  justifyContent="center"
+                >
+                  <BlockLink to={authorURL}>
+                    <Text
+                      fontFamily="Soleil"
+                      fontSize={0}
+                      color="white"
+                      lineHeight={2}
+                    >
+                      written by &nbsp;
+                    </Text>
+                  </BlockLink>
+                </Column>
+
+                <LinkImage
+                  src={author.avatar}
+                  height={33}
+                  width={33}
+                  to={authorURL}
+                />
+
+                <Column
+                  width={1}
+                  alignItems="flex-start"
+                  justifyContent="center"
+                >
+                  <BlockLink to={authorURL}>
+                    <Text
+                      fontFamily="Soleil"
+                      fontSize={0}
+                      color="white"
+                      lineHeight={2}
+                    >
+                      &nbsp; {author.name}
+                    </Text>
+                  </BlockLink>
+                </Column>
+              </Row>
             </Flex.verticallyCenter>
           </AppContainer>
         </Absolute>

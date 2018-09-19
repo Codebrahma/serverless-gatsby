@@ -2,6 +2,7 @@
 title: 'Kubeless brings functions as a service to Kubernetes & on-prem'
 description: 'Kubeless is a Kubernetes-native way to deploy and manage your serverless functions via the serverless framework'
 date: '2017-08-30'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/kubernetes.png'
 authors:
     - DavidWells

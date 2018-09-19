@@ -3,6 +3,7 @@ title: 'Azure Functions Support & Possibility'
 description: 'Announcing Azure Functions support with the Serverless Framework'
 date: '2017-02-23'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/azure-functions-thumbnail.png'
+layout: Post
 authors:
     - AustenCollins
 gitLink: /2017-02-23-azure-functions-and-possibility.md
@@ -13,7 +14,7 @@ Fortunately,  tools couldn't be better right now.  The cloud providers are compe
 
 Meanwhile, getting started is easier than ever.  If you want to adopt a cloud provider and utilize these new services immediately, put some code there, in the form of a *Serverless Function*.
 
-No doubt the cloud providers have recognized this, given there are now serverless compute offerings from AWS, Google, Azure, IBM and more.  Serverless functions are a gateway drug into their platforms.  However, a side effect has our attention...
+No doubt the cloud providers have recognized this, given there are now serverless compute offerings from AWS, Google, Azure, IBM and more.  Serverless functions are a gateway drug into their platforms.  However, a side effect has our attention... 
 
 > Serverless Functions don't only break down the barriers between adopting a cloud.  Serverless Functions break down the barriers between adopting all clouds, simultaneously.
 

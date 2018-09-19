@@ -2,6 +2,7 @@
 title: 'Serverless v1.20 - Enhancements, bug fixes and tweaks added'
 description: 'Enhancements, bug fixes and more added in the Serverless Framework v1.20 release.'
 date: '2017-08-17'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-release1.20.png'
 authors:
     - PhilippMuns
@@ -20,7 +21,7 @@ You can find a complete list of all the updates in the [CHANGELOG.md](https://gi
 
 Thoughts or questions about the release? Feel free to provide some feedback in our [Forum](https://forum.serverless.com), via [Twitter](https://twitter.com/goserverless) or on [GitHub](https://github.com/serverless/serverless).
 
-### Contributors
+### Contributors 
 
 This release contains lots of hard work from our beloved community, and wouldn't have been possible without passionate people who decided to spend their time contributing back to make the Serverless Framework better.
 

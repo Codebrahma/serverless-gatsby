@@ -7,8 +7,8 @@ import { InstantSearch } from 'react-instantsearch-dom'
 import searchIcon from 'src/assets/images/white-search-icon.svg'
 
 const searchClient = algoliasearch(
-  'V3VM7IN3TH',
-  'd2dac557d1fd151223e78f3597d59e78'
+  process.env.GATSBY_ALGOLIA_APP_ID,
+  process.env.GATSBY_ALGOLIA_SEARCH_KEY
 );
 
 export default class Search extends React.Component {
@@ -54,7 +54,7 @@ export default class Search extends React.Component {
                   />
                 </OptionWrapper>
                 <InstantSearch
-                  indexName="dev_BLOG_SEARCH"
+                  indexName={process.env.GATSBY_ALGOLIA_BLOG_INDEX}
                   searchClient={searchClient}
                 >
                   <AutoComplete />

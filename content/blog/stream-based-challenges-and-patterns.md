@@ -2,6 +2,7 @@
 title: 'Challenges and patterns for building event-driven architectures'
 description: 'Learn some tips and tricks as you move to an event-driven architecture'
 date: '2017-07-19'
+layout: Post
 thumbnail: 'https://user-images.githubusercontent.com/6509926/27362413-f40e4968-55f3-11e7-9c68-65dc1b06f335.jpg'
 authors:
     - AlexDeBrie
@@ -19,7 +20,7 @@ In our user creation example from the last post, we've been saving the user's fi
 
 How do we handle these issues? There's no real silver bullet, but there are a few ways to address this both from the producer and consumer sides. As a producer, focus on being a polite producer. Treat your event schemas just like you would treat your REST API responses. See if you can make your events backward-compatible, in the sense of not removing or redefining existing fields. In the example above, perhaps the new event would write `firstname`, `lastname`, and `fullname`. This could give your downstream consumers time to switch to the new event format. If this is impossible or infeasible, you could notify your downstream consumers. The AWS CLI has a command for [listing event source mappings](http://docs.aws.amazon.com/cli/latest/reference/lambda/list-event-source-mappings.html), which shows which Lambda functions are triggered by a given DynamoDB stream. If you're a producer that's changing your Item structure, give a heads up to the owners of consuming functions.
 
-As a consumer of streams, focus on being a resilient consumer. Consider the assumptions you're making in your function and how you should respond if those assumptions aren't satisfied. We'll discuss different failure handling strategies below, but you shouldn't just rely on producers to handle this for you.
+As a consumer of streams, focus on being a resilient consumer. Consider the assumptions you're making in your function and how you should respond if those assumptions aren't satisfied. We'll discuss different failure handling strategies below, but you shouldn't just rely on producers to handle this for you. 
 
 #### How to handle failure
 
@@ -57,7 +58,7 @@ def lambda_handler(event, context):
 
 Our main handler function is very short and simple. Each record is passed through a `handle_record` function, which contains our actual business logic. If any unexpected exception is raised, the record and exception are passed to a `handle_failed_record` function, which is shown below:
 
-```python
+```python		
 # service.py
 
 import json
@@ -118,7 +119,7 @@ while True:
                 ReceiptHandle=message.get('ReceiptHandle')
             )
         except Exception as e:
-            logger.error(e)
+            logger.error(e)		
 ```
 
 This is a simple reprocessing script that you can run locally or invoke with a reprocessing Lambda. It reads messages from the SQS queue and parses out the `record` object, which is the same as the `record` input from a batch of records from the DynamoDB stream. This record is passed into the updated `handle_record` function and the queue message is deleted if the operation is successful. This pattern isn't perfect, but I've found it to be a nice compromise between the two extremes of the failure spectrum when processing streams with Lambda.

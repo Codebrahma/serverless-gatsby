@@ -1,4 +1,5 @@
 ---
+layout: Post
 title: 'Building A Better Australian Census Website with Serverless Architecture'
 date: '2016-09-20'
 description: 'Two students built an alternative Australian Bureau of Statistics Census website for 

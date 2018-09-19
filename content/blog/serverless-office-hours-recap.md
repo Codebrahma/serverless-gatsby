@@ -3,6 +3,7 @@ title: 'Talking re:Invent & the Latest Serverless Framework Features in the Dec.
 description: 'Developer Evangelist David Wells & Core Framework Engineer Eslam Hefnawy recap Lambda announcements from re:Invent and answer questions in the 2nd edition of Serverless Office Hours.'
 date: '2016-12-15'
 thumbnail: 'https://cloud.githubusercontent.com/assets/20538501/21226296/73f5269e-c29a-11e6-99f0-f7d34f858e7c.png'
+layout: Post
 authors:
     - StefanieMonge
 gitLink: /2016-12-15-serverless-office-hours-recap.md

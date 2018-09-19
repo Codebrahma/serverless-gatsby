@@ -2,6 +2,7 @@
 title: 'Serverless Typography'
 description: 'This is a dummy post with typography'
 date: '2016-05-24'
+layout: Post
 authors:
     - DavidWells
 gitLink: /2016-05-24-typography.md

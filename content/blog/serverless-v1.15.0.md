@@ -2,6 +2,7 @@
 title: 'Serverless v1.15 - CLI autocomplete & Cognito User Pool trigger events added'
 description: 'CLI autocomplete, Cognito User Pool Trigger event source, KMS Key support and more in the Serverless Framework v1.15 release.'
 date: '2017-06-09'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/framework-v115.png'
 authors:
     - PhilippMuns
@@ -158,7 +159,7 @@ This release also includes a bunch of bug fixes and several enhancements.
 
 > Thanks for reporting bugs and opening issues!
 
-### Contributors
+### Contributors 
 
 This release contains lots of hard work from our awesome community, and wouldn't have been possible without passionate people who decided to spend their time contributing to make Serverless better.
 

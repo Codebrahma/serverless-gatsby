@@ -1,5 +1,5 @@
 import AuthorData from 'src/constants/generated-authors.json'
-import CategoryData from 'src/constants/generated-categories.json'
+import CategoryData from 'src/constants/categories.json'
 
 const getAuthorById = (authorId) => {
   const author = AuthorData[authorId] || {}

@@ -2,6 +2,7 @@
 title: 'Serverless v1.22 - CLI-based plugin discovery, encrypted variables support and new provider SpotInst'
 description: 'CLI based plugin management, SSM via Serverless Variables, Spotinst Functions support, enhancements, bug fixes and more added in the Serverless Framework v1.22 release.'
 date: '2017-09-14'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/serverless-framework-v1.22.png'
 authors:
     - PhilippMuns
@@ -110,7 +111,7 @@ custom:
   bar: ${ssm:bar~true}
   fooBar: ${ssm:/foo/bar}
   barFoo: ${ssm:/bar/foo~true}
-
+  
 # ...snip...
 ```
 
@@ -150,7 +151,7 @@ This release also includes tons of other improvements and bug fixes.
 
 We hope that you enjoy this release! Feel free to provide some feedback in our [Forum](https://forum.serverless.com), via [Twitter](https://twitter.com/goserverless) or on [GitHub](https://github.com/serverless/serverless).
 
-### Contributors
+### Contributors 
 
 This release contains lots of hard work from our beloved community, and wouldn't have been possible without passionate people who decided to spend their time contributing back to make the Serverless Framework better.
 

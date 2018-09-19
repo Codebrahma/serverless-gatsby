@@ -4,8 +4,9 @@ import { Box, Text, ResponsiveStack } from 'serverless-design-system/src'
 import { HeroWrapper } from 'src/fragments'
 import HeroTabs from '../../HeroTabs'
 import background from 'src/assets/images/workshops-form-background.png'
+import workshops from 'src/constants/workshops.json'
 
-const WorkshopForm = () => (
+const WorkshopForm = ({ keyName }) => (
   <HeroWrapper
     background={`black url(${background})`}
     backgroundSize="cover"
@@ -27,7 +28,7 @@ const WorkshopForm = () => (
           letterSpacing={'-0.2'}
           m={0}
         >
-          London
+          { workshops[keyName] }
         </Text.p>
         <Text.p
           fontSize={[2, 2, 4]}

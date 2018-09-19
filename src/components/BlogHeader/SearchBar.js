@@ -15,7 +15,7 @@ import {
 import { BlockLink } from 'src/components'
 import BlogNavbarContext from './BlogNavbarContext'
 import { getCategoryLink } from 'src/utils/blog'
-import CategoriesData from 'src/constants/generated-categories.json'
+import CategoriesData from 'src/constants/categories.json'
 import searchIcon from 'src/assets/images/search-icon.svg'
 import whiteSearchIcon from 'src/assets/images/white-search-icon.png'
 import closeIcon from 'src/assets/images/icon-close.png'
@@ -24,12 +24,12 @@ import { InstantSearch } from 'react-instantsearch-dom'
 import AutoComplete from './AutoComplete'
 
 const searchClient = algoliasearch(
-  'V3VM7IN3TH',
-  'd2dac557d1fd151223e78f3597d59e78'
+  process.env.GATSBY_ALGOLIA_APP_ID,
+  process.env.GATSBY_ALGOLIA_SEARCH_KEY
 );
 
 const Wrapper = styled(Overflow)`
-  transition: height 0.5s;
+  transition: height 0.4s;
 `
 
 const LinkText = styled(Text.span)`
@@ -39,6 +39,25 @@ const LinkText = styled(Text.span)`
     opacity: 1;
   }
 `
+
+const CardWithTransition = styled(Card)`
+  transition: height 0.4s;
+`
+
+const CardWithAnimation = ({ children, ...otherProps }) => (
+  <BlogNavbarContext.Consumer>
+    {
+      ({ isNavbarShrinked }) => (
+        <CardWithTransition
+          height={isNavbarShrinked ? 0 : 52}
+          {...otherProps}
+        >
+          {children}
+        </CardWithTransition>
+      )
+    }
+  </BlogNavbarContext.Consumer>
+)
 
 const SearchBarWrapper = ({ children, ...otherProps }) => (
   <BlogNavbarContext.Consumer>
@@ -88,7 +107,7 @@ class SearchBar extends React.Component {
                   />
                 </Absolute>
                 <InstantSearch
-                  indexName="dev_BLOG_SEARCH"
+                  indexName={process.env.GATSBY_ALGOLIA_BLOG_INDEX}
                   searchClient={searchClient}
                 >
                   <AutoComplete />
@@ -107,8 +126,7 @@ class SearchBar extends React.Component {
               </Relative>
             ) : (
               <React.Fragment>
-                <Card
-                  height="52px"
+                <CardWithAnimation
                   px={1}
                   py={16}
                   border={`1px solid ${borderColor}`}
@@ -148,8 +166,8 @@ class SearchBar extends React.Component {
                       </BlockLink>
                     ))
                   }
-                </Card>
-                <Card
+                </CardWithAnimation>
+                <CardWithAnimation
                   border={`1px solid ${borderColor}`}
                   borderLeft="0"
                   onClick={this.toggleSearchBar}
@@ -161,7 +179,7 @@ class SearchBar extends React.Component {
                       width={18}
                     />
                   </Flex.center>
-                </Card>
+                </CardWithAnimation>
               </React.Fragment>
             )
           }

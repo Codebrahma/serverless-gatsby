@@ -2,6 +2,7 @@
 title: 'Webtasks brings node 8, no cold starts, and streamlined on-boarding to Serverless'
 description: 'Eliminate cold starts and get from zero to deploy in under 3 minutes with the Auth0 Webtasks provider integration'
 date: '2017-09-21'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/blog/webtasks-icon.png'
 authors:
     - DavidWells

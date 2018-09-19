@@ -4,7 +4,6 @@ description: 'How to supercharge your serverless with CRDTs at the edge. Your co
 date: '2017-11-13'
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/crdt/kuihro-logo.png'
 category:
-    - user-stories
     - guides-and-tutorials
     - operations-and-observability
 authors:

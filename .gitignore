@@ -10,3 +10,8 @@ yarn-error.log
 
 # blogs
 serverless-blog
+serverless
+
+# dynamic config
+.env.development
+.env.production

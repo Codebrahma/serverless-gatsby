@@ -2,6 +2,7 @@
 title: 'Serverless panel - the future of event-driven compute'
 description: 'We''re posting the full videos and transcripts from Emit 2017! Here''s our panel on the future of event-driven compute.'
 date: '2017-11-07'
+layout: Post
 thumbnail: 'https://s3-us-west-2.amazonaws.com/assets.blog.serverless.com/emit_square.png'
 authors:
     - AndreaPasswater
@@ -106,7 +107,7 @@ We see emerging from academia where they might need to do a huge amount of proce
 
 **Jason:** And the third is sort of more of a fringe use case at this point. You know, smaller numbers of customers, large amounts of compute, but not for extended periods of time.
 
-**Austen:** Interesting. Chris?
+**Austen:** Interesting. Chris? 
 
 **Chris:** Yeah, I mean I actually liked, and I made sure I got a picture of it. One of the slides which you put up there in terms of just... It's been amazing how many different types of scenarios people have come in there and tried to use it. I haven't found it getting pigeonholed in any one particular scenario. There's clearly, you know, we can see that HTTP is the most popular in terms of number of functions, we see that as well. And in terms of, you know, compute time, it's you know, stream processing, for the most part, stream processing very, very high-scale stream processing consumes the most, you know, amount of compute.
 

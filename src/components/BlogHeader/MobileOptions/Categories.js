@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Box, Flex, Text } from 'serverless-design-system/src'
 import BlogNavbarContext from '../BlogNavbarContext'
-import CategoriesData from 'src/constants/generated-categories.json'
+import CategoriesData from 'src/constants/categories.json'
 import { getCategoryNameById } from 'src/utils/blog'
 
 const Category = ({ children, link }) => (

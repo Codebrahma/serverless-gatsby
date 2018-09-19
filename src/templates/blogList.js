@@ -5,7 +5,7 @@ import BlogPreview from 'src/components/pages/blog/Preview'
 import BlogListPrefooter from 'src/components/pages/blog/ListPrefooter'
 import { Helmet } from 'src/fragments'
 import { Pagination } from 'src/components'
-import HighlightedBlogList from 'src/constants/highlighted-blogs.json'
+import HighlightedBlogList from 'src/constants/featured-blogs.json'
 
 export default ({
   data: { blogs: { edges, totalCount }, highlighted },

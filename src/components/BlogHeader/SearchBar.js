@@ -15,7 +15,7 @@ import {
 import { BlockLink } from 'src/components'
 import BlogNavbarContext from './BlogNavbarContext'
 import { getCategoryLink } from 'src/utils/blog'
-import CategoriesData from 'src/constants/generated-categories.json'
+import CategoriesData from 'src/constants/categories.json'
 import searchIcon from 'src/assets/images/search-icon.svg'
 import whiteSearchIcon from 'src/assets/images/white-search-icon.png'
 import closeIcon from 'src/assets/images/icon-close.png'

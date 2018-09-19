@@ -1,12 +1,12 @@
 import React from 'react'
-
 import {
   Box,
-  Container,
   Heading,
   ImageCard,
   ResponsiveStack,
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import autoScalingIcon from 'src/assets/images/icon-vol.png'
 import payPerExecutionIcon from 'src/assets/images/icon-graph.png'
 import lowOverheadIcon from 'src/assets/images/icon-dash.png'
@@ -40,8 +40,8 @@ const EachBenefit = ({ img, title, description }) => (
 )
 
 const HomeBenefits = () => (
-  <Container mt='100px'>
-    <Box mx={2}>
+  <AppContainer>
+    <Box mx={2} mt={7}>
       <Heading.h2 fontFamily={'SoleilSb'} align='center' fontSize={[5, 5, 6]}>
         Build more, manage less.
         <br /><br />
@@ -68,7 +68,7 @@ const HomeBenefits = () => (
         ))
       }
     </ResponsiveStack.spaceBetween>
-  </Container>
+  </AppContainer>
 )
 
 export default HomeBenefits

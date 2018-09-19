@@ -10,9 +10,9 @@ const DashboardHeroActions = () => (
       completed: false,
     }}
     secondBtn={{
-      name: 'contact sales',
+      name: 'enterprise demo',
       to: '/enterprise/',
-      completed: false,
+      completed: true,
     }}
   />
 )

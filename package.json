@@ -36,7 +36,8 @@
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^1.0.0",
-    "prettier": "^1.13.7"
+    "prettier": "^1.13.7",
+    "react-masonry-css": "^1.0.11"
   },
   "repository": {
     "type": "git",

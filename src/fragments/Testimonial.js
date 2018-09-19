@@ -1,17 +1,17 @@
 import React from 'react'
-
 import {
-  Box,
-  Container,
+  Relative,
   withBeforeAfter,
   Testimonial,
 } from 'serverless-design-system/src'
+
+import { AppContainer } from 'src/components'
 import testimonialBackground from 'src/assets/images/glitch-effect.png'
 import cocaColaLogo from 'src/assets/images/cocacola-logo.png'
 
 const TestimonialWrapper = withBeforeAfter(
-  Box.relative,
-  `& > ${Box}`,
+  Relative,
+  `& > ${Relative}`,
   `
     content: " ";
     height: 80px;
@@ -29,8 +29,8 @@ const TestimonialWrapper = withBeforeAfter(
 
 const TestimonialComponent = () => (
   <TestimonialWrapper>
-    <Box.relative mx={3} my={4}>
-      <Container>
+    <Relative my={4}>
+      <AppContainer>
         <Testimonial
           img={cocaColaLogo}
           name='Patrick Brandt'
@@ -41,8 +41,8 @@ const TestimonialComponent = () => (
           Company's initiative to reduce IT operational costs and deploy
           services faster."
         </Testimonial>
-      </Container>
-    </Box.relative>
+      </AppContainer>
+    </Relative>
   </TestimonialWrapper>
 )
 

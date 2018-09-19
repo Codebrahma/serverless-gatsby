@@ -9,15 +9,19 @@ const LearnColumn = () => (
     listItems={[
       {
         name: 'why?',
-        navProps: { to: learn.why, completed: false },
+        navProps: { to: learn.why, completed: true },
       },
       {
         name: 'use cases',
-        navProps: { to: learn.useCases, completed: false },
+        navProps: { to: learn.useCases, completed: true },
       },
       {
         name: 'comparisions',
-        navProps: { to: learn.comparisions, completed: false },
+        navProps: { to: learn.comparisons, completed: true },
+      },
+      {
+        name: 'case studies',
+        navProps: { to: learn.caseStudy, completed: true },
       },
     ]}
   />

@@ -6,6 +6,7 @@ import {
   InlineBlock,
   List,
   ListItem,
+  Relative,
 } from 'serverless-design-system/src'
 
 import NavLink from 'src/components/NavLink'
@@ -18,9 +19,9 @@ const platformMenuConfig = [
   {
     imgProps: {
       src: frameworkIcon,
-      maxHeight: '52px',
+      height: '52px',
       ml: '8px',
-      mr: '43px',
+      mr: ['15px', '15px', '15px', '30px'],
     },
     text: 'framework',
     to: platform.framework,
@@ -30,8 +31,8 @@ const platformMenuConfig = [
   {
     imgProps: {
       src: gatewayIcon,
-      maxHeight: '40px',
-      mr: '30px',
+      height: '40px',
+      mr: ['15px', '15px', '15px', '30px'],
     },
     text: 'event gateway',
     to: platform.eventGateway,
@@ -41,8 +42,8 @@ const platformMenuConfig = [
   {
     imgProps: {
       src: dashboardIcon,
-      maxHeight: '40px',
-      mr: '30px',
+      height: '40px',
+      mr: ['15px', '15px', '15px', '30px'],
     },
     text: 'dashboard',
     to: platform.dashboard,
@@ -52,9 +53,9 @@ const platformMenuConfig = [
 ]
 
 const Platform = () => (
-  <List m={0} ml={[4, 4, 0]} p={0}>
+  <List m={0} ml={[2, 2, 0]} p={0}>
     {platformMenuConfig.map(
-      ({ imgProps, text, to, crossDomain, completed }, index) => (
+      ({ imgProps: { src, height, ...imgContainerProps }, text, to, crossDomain, completed }, index) => (
         <NavLink
           key={index}
           to={to}
@@ -62,32 +63,39 @@ const Platform = () => (
           completed={completed}
         >
           <ListItem.noStyleType key={text}>
-            <Flex.relative
-              mb={platformMenuConfig.length - 1 === index ? 0 : 2}
-              justifyContent='center'
-            >
-              <Image {...imgProps} />
-              <InlineBlock minWidth='155px'>
-                <Heading.h6
-                  fontFamily='Serverless'
-                  fontSize='1.5rem'
-                  lineHeight={0.7}
-                  letterSpacing='5'
-                  m={0}
-                >
-                  serverless
-                </Heading.h6>
-                <Heading.h6
-                  fontFamily='Serverless'
-                  fontSize='2rem'
-                  lineHeight={1.7}
-                  letterSpacing={0.8}
-                  m={0}
-                >
-                  {text}
-                </Heading.h6>
-              </InlineBlock>
-            </Flex.relative>
+            <Relative>
+              <Flex.horizontallyCenter
+                mb={platformMenuConfig.length - 1 === index ? 0 : 2}
+              >
+                <InlineBlock {...imgContainerProps}>
+                  <Image
+                    src={src}
+                    height={height}
+                    width="auto"
+                  />
+                </InlineBlock>
+                <InlineBlock minWidth='155px'>
+                  <Heading.h6
+                    fontFamily='Serverless'
+                    fontSize='1.5rem'
+                    lineHeight={0.7}
+                    letterSpacing='5'
+                    m={0}
+                  >
+                    serverless
+                  </Heading.h6>
+                  <Heading.h6
+                    fontFamily='Serverless'
+                    fontSize='2rem'
+                    lineHeight={1.7}
+                    letterSpacing={0.8}
+                    m={0}
+                  >
+                    {text}
+                  </Heading.h6>
+                </InlineBlock>
+              </Flex.horizontallyCenter>
+            </Relative>
           </ListItem.noStyleType>
         </NavLink>
       )

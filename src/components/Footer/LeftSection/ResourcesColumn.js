@@ -8,6 +8,10 @@ const ResourceColumn = () => (
     header='resources'
     listItems={[
       {
+        name: 'overview',
+        navProps: { to: resources.overview, completed: true },
+      },
+      {
         name: 'blog',
         navProps: { to: resources.blog, completed: true },
       },
@@ -17,7 +21,7 @@ const ResourceColumn = () => (
       },
       {
         name: 'meetups',
-        navProps: { to: resources.meetups, completed: false },
+        navProps: { to: resources.meetups, completed: true },
       },
       {
         name: 'slack',
@@ -25,7 +29,7 @@ const ResourceColumn = () => (
       },
       {
         name: 'workshops',
-        navProps: { to: resources.workshops, completed: false },
+        navProps: { to: resources.workshops, completed: true },
       },
     ]}
   />

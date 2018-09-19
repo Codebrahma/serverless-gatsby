@@ -245,7 +245,7 @@ export default class Form extends React.Component {
           </Box>
 
           <Box my={4}>
-            <Button width="120px">
+            <Button width="120px" disabled={loading}>
               { loading ? 'Loading' : 'submit' }
             </Button>
           </Box>

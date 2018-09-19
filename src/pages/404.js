@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { Background } from 'serverless-design-system/src'
 import theme from 'serverless-design-system/src/theme'
 
+import { Helmet } from 'src/fragments'
 import Prefooter from 'src/components/Prefooter'
 import DefaultLayout from 'src/layouts/Default'
 import notFoundBackground from 'src/assets/images/404-background.jpg'
@@ -47,12 +48,12 @@ const prefooter = () => (
 const NotFoundPage = () => (
   <ThemeProvider theme={theme}>
     <DefaultLayout prefooter={prefooter}>
+      <Helmet title="404 - Page not found" />
       <Background
         backgroundImage={`url(${notFoundBackground})`}
         backgroundSize="contain"
         height="850px"
-      >
-      </Background>
+      />
     </DefaultLayout>
   </ThemeProvider>
 )

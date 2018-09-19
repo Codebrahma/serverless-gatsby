@@ -19,7 +19,7 @@ const siteConfig = (isProduction) => {
       ALGOLIA_ADMIN: process.env.ALGOLIA_ADMIN || '1f21cf7b86876a3ac23e35b2657894aa',
       ALGOLIA_BLOG_INDEX: (isProduction) ? 'prod_BLOG_SEARCH' : 'dev_BLOG_SEARCH',
       ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID || 'V3VM7IN3TH',
-      ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY || '9a3c539ada1e49ee00b670534c9c605f',
+      ALGOLIA_SEARCH_KEY: process.env.ALGOLIA_SEARCH_KEY || 'd2dac557d1fd151223e78f3597d59e78',
       // SEGMENT_KEY: process.env.SEGMENT_KEY || 'gNftvcGllpKZTe5PcAxF8pEoenLq32H0',
       CUSTOMER_IO_KEY: process.env.CUSTOMER_IO_KEY || '219fca0102ab3451a96a',
       LOGO_ICON: 'https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless-logo.svg',

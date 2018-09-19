@@ -13,7 +13,7 @@ const StyledForm = styled.form`
   width: 100%;
 `
 
-const newsletterSubscribeAPI = "https://3upqirwiuc.execute-api.us-west-2.amazonaws.com/dev/subscribe"
+const newsletterSubscribeAPI = process.env.GATSBY_NEWSLETTER_API
 
 class NewsLetterForm extends React.Component {
   constructor(props, context) {

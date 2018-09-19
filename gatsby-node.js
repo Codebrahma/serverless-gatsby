@@ -18,8 +18,8 @@ const workshops = require('./src/constants/workshops.json')
 const blogsPerPage = 5
 const highlightedBlogsRegEx = new RegExp(highlightedBlogs.join("|"), 'gi')
 
-var client = algoliasearch('V3VM7IN3TH', '9a3c539ada1e49ee00b670534c9c605f');
-var index = client.initIndex('dev_BLOG_SEARCH');
+var client = algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, '9a3c539ada1e49ee00b670534c9c605f');
+var index = client.initIndex(process.env.GATSBY_ALGOLIA_BLOG_INDEX);
 
 exports.sourceNodes =  async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators;

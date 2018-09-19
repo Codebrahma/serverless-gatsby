@@ -1,5 +1,5 @@
 import axios from 'axios'
-const FORMS_API = "https://d3ul21vxig.execute-api.us-west-2.amazonaws.com/prod/handle-entry"
+const FORMS_API = process.env.GATSBY_FORMS_API
 
 export default function formHandler(fields) {
   return axios({

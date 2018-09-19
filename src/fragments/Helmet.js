@@ -20,10 +20,10 @@ export default class CustomHelmet extends React.Component {
       { property: 'og:title', content: metaTitle },
       { property: 'og:url', content: uri },
       { property: 'og:description', content: description },
-      { property: 'og:image', content: `${process.env.S3_BUCKET}logos/Serverless_mark_black_400x400_v3%402x.jpg` },
+      { property: 'og:image', content: `${process.env.GATSBY_S3_BUCKET}logos/Serverless_mark_black_400x400_v3%402x.jpg` },
       { name: 'twitter:card', content: 'summary' },
       { name: 'twitter:title', content: metaTitle },
-      { name: 'twitter:creator', content: `@${process.env.TWITTER}` },
+      { name: 'twitter:creator', content: `@${process.env.GATSBY_TWITTER}` },
       { name: 'twitter:description', content: description },
       { name: 'description', content: description },
     ]
